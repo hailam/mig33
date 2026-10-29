@@ -1,0 +1,264 @@
+{
+  "research_date": "2026-10-28",
+  "scope": "Historical typed colour codes and profile/WAP formatting. Primary guide text recovered; no fabricated historical grammar.",
+  "retrieved_at": "2026-10-28T09:57:11.780080+00:00",
+  "feed_sha256": "f37cb49c354dc53a00b729e0b099868bea3a84e8c80bbf06a55c8f23d84a25f5",
+  "sources": [
+    {
+      "id": "mig-info-8599335730176565388",
+      "title": "Trik Kreasikan Background Profile",
+      "kind": "primary_first_person_guide",
+      "url": "https://mig-info.blogspot.com/2010/09/trik-kreasikan-background-profile.html",
+      "readable_url": "https://mig-info.blogspot.com/2010/09/trik-kreasikan-background-profile.html?m=1",
+      "published": "2010-09-18T23:17:00.061+07:00",
+      "updated": "2010-09-24T15:45:29.659+07:00",
+      "retrieved_at": "2026-10-28T09:57:11.780080+00:00",
+      "retrieval": "Original public Blogger JSON feed; mobile article view independently readable",
+      "feed_url": "https://mig-info.blogspot.com/feeds/posts/default?alt=json&published-min=2010-09-01T00:00:00Z&published-max=2010-10-01T00:00:00Z&max-results=100",
+      "entry_id": "tag:blogger.com,1999:blog-4936523606286207353.post-8599335730176565388",
+      "content_html_sha256": "50f65e638760c3b69a9d015afff6e3fd11aa444ce7fa2bdb4e31d175684f5571",
+      "summary": "Author describes testing profile customization via the image identifier. Effects include image sizing, background colour, underline/italic/large text, coloured paragraph text and native navigation links. Square brackets are expressly publication notation to replace with angle brackets, not a claimed BBCode dialect.",
+      "limits": [
+        "Community author report, not an official mig33 specification",
+        "No exact v4.62 or authenticated server response attribution"
+      ],
+      "short_syntax_fragments": [
+        "<body bgcolor=\"ff0000\">",
+        "<p style=\"color:yellow\">",
+        "<u>",
+        "<i>",
+        "<big>",
+        "?w=48&h=48&c=1&a=1",
+        "mig33:joinChatroom(Anime People)",
+        "mig33:privateChat(bahangbatis)",
+        "/my/profile/?v=midlet"
+      ]
+    },
+    {
+      "id": "mig-info-417994984751442718",
+      "title": "Update Kreasikan Background Profile",
+      "kind": "primary_first_person_followup",
+      "url": "https://mig-info.blogspot.com/2010/09/update-kreasikan-background-profile.html",
+      "readable_url": "https://mig-info.blogspot.com/2010/09/update-kreasikan-background-profile.html?m=1",
+      "published": "2010-09-24T15:45:00.021+07:00",
+      "updated": "2010-09-30T11:46:49.628+07:00",
+      "retrieved_at": "2026-10-28T09:57:11.780080+00:00",
+      "retrieval": "Original public Blogger JSON feed; mobile article view independently readable",
+      "feed_url": "https://mig-info.blogspot.com/feeds/posts/default?alt=json&published-min=2010-09-01T00:00:00Z&published-max=2010-10-01T00:00:00Z&max-results=100",
+      "entry_id": "tag:blogger.com,1999:blog-4936523606286207353.post-417994984751442718",
+      "content_html_sha256": "61345965b6f088fa40da26f41cb19af50c9ecda799e2c63b0531c575c273c39b",
+      "summary": "Updated profile-picture URL syntax after a reported server change. Reader comments report inconsistent results; the author says a particular store client still worked on September24. This is evidence of a time-sensitive workaround rather than a stable supported API.",
+      "limits": [
+        "Community author report, not an official mig33 specification",
+        "No exact v4.62 or authenticated server response attribution"
+      ]
+    },
+    {
+      "id": "mig-info-4955678206657126949",
+      "title": "Kreasikan Background Profile Via Wap",
+      "kind": "primary_first_person_followup",
+      "url": "https://mig-info.blogspot.com/2010/09/kreasikan-background-profile-via-wap.html",
+      "readable_url": "https://mig-info.blogspot.com/2010/09/kreasikan-background-profile-via-wap.html?m=1",
+      "published": "2010-09-30T11:42:00.015+07:00",
+      "updated": "2010-10-05T19:21:11.567+07:00",
+      "retrieved_at": "2026-10-28T09:57:11.780080+00:00",
+      "retrieval": "Original public Blogger JSON feed; mobile article view independently readable",
+      "feed_url": "https://mig-info.blogspot.com/feeds/posts/default?alt=json&published-min=2010-09-01T00:00:00Z&published-max=2010-10-01T00:00:00Z&max-results=100",
+      "entry_id": "tag:blogger.com,1999:blog-4936523606286207353.post-4955678206657126949",
+      "content_html_sha256": "d0d977319fb8a80c2ff451d772653ac73b153ffae2d1828c12dcf380d516d0fa",
+      "summary": "Further workaround described after author-reported changes on September21 and27. Repeats HTML styling effects. This research did not follow its cookie-export or external-editor instructions and recovered no authenticated historical server response.",
+      "limits": [
+        "Community author report, not an official mig33 specification",
+        "No exact v4.62 or authenticated server response attribution"
+      ]
+    },
+    {
+      "id": "mig-info-6341677615125005083",
+      "title": "Mig33 v4.20 Store Background",
+      "kind": "primary_first_person_client_guide",
+      "url": "https://mig-info.blogspot.com/2010/09/mig33-v420-store-background.html",
+      "readable_url": "https://mig-info.blogspot.com/2010/09/mig33-v420-store-background.html?m=1",
+      "published": "2010-09-07T10:50:00.014+07:00",
+      "updated": "2010-09-07T14:16:33.392+07:00",
+      "retrieved_at": "2026-10-28T09:57:11.780080+00:00",
+      "retrieval": "Original public Blogger JSON feed; mobile article view independently readable",
+      "feed_url": "https://mig-info.blogspot.com/feeds/posts/default?alt=json&published-min=2010-09-01T00:00:00Z&published-max=2010-10-01T00:00:00Z&max-results=100",
+      "entry_id": "tag:blogger.com,1999:blog-4936523606286207353.post-6341677615125005083",
+      "content_html_sha256": "6e6b8a0bfb5f66d2a63dfc8397b4e477eb7fca897749c37654760299ec09a0e2",
+      "summary": "Describes a modified v4.20 store client and profile background-picture customization. Establishes that the accompanying screen family need not be stock v4.62.",
+      "limits": [
+        "Community author report, not an official mig33 specification",
+        "No exact v4.62 or authenticated server response attribution"
+      ]
+    },
+    {
+      "id": "howardforums-2007-chat-colours",
+      "kind": "contemporary_first_person_report",
+      "url": "https://www.howardforums.com/threads/mig33-new-version-released-instant-messenger-for-j2me-mobiles.1138507/",
+      "published": "2007-04-13",
+      "locator": "post14 by arbindo",
+      "summary": "Describes earlier special-symbol chat colour codes and altered displayed sender names. No exact code sequence or affected build is supplied.",
+      "confidence": "Historical usage report only; not an executable format contract"
+    },
+    {
+      "id": "pakmig33-2011-chat-colours",
+      "kind": "contemporary_usage_guide",
+      "url": "https://pakmig33.wordpress.com/2011/02/25/mig33-text-colour-changind-codes/",
+      "readable_url": "https://pakmig33.wordpress.com/2011/02/",
+      "published": "2011-02-25",
+      "summary": "Describes pasted characters yielding red, green and blue chat text and characterizes them as client bugs. The code portion has been replaced by an editorial marker.",
+      "comment_feed": "https://pakmig33.wordpress.com/2011/02/25/mig33-text-colour-changind-codes/feed/",
+      "comment_finding": {
+        "published": "2011-04-05",
+        "locator": "comment21 by smokemig33",
+        "summary": "A symbol and private-use-character string survives in an author reply. It supplies no colour values, delimiter grammar or matching client build; it is not established as working colour syntax."
+      },
+      "confidence": "Typed-code usage reported; no reproducible colour grammar recovered"
+    },
+    {
+      "id": "amcomig33-wap-html-report",
+      "kind": "secondary_compilation_with_source_credit",
+      "url": "https://amcomig33.blogspot.com/2010/08/tips-1.html",
+      "published": "2010-08",
+      "summary": "Reports HTML styling at wap.mig33.com/member2/t.php, naming bold, italic, underline, large/blinking text and font colour. Credits a2009 bellamybuzz compilation. It supplies no historical request fields, response capture or Java-recipient mapping.",
+      "confidence": "Endpoint and capabilities reported; browser/server contract reconstruction required"
+    }
+  ],
+  "images": [
+    {
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikYjtqSLMKHjn4uQ_bwAQx_XbOAXGQOLybgV1vT2EN0g5rx4qVqLloStJHVSI6Iqne4oME6xUKy7hvximoWnSPMAayaN6LyTQn7KIJIQnb6ELE4D7PvnpZQ_Br1wDlFSEGW1nD2rA5Ipk/s400/merah.jpg",
+      "bytes": 26455,
+      "sha256": "e3590ae751efba91ab5bc8504df78cefc3a89297d85afb67347b5611e7bc22de",
+      "local_path": "research/applets/v4/artifacts/historical-formatting/profile-red-background.jpg",
+      "source_id": "mig-info-417994984751442718",
+      "retrieved_at": "2026-10-28T09:57:11.780080+00:00",
+      "visual_inspection": "Red profile background with black italic status, blue links and grey Wall heading.",
+      "width": 240,
+      "height": 320,
+      "format": "JPEG",
+      "attribution_limit": "Historical community-author screenshot. Exact build/handset not established; one capture explicitly identifies a modified4.20-store client."
+    },
+    {
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipmYIwEpIJd8t-3UVEC_HmDiGLi5XWF6Kz4lQpxFhIHflnAGIU7CUaHREIlQqUmduTqaXS7nFJrjHfIuUm0Dh-rcH3YVpzdi-A4Te1zn5DefA9x2pM8GgOHuttQWHOgkj9W2PCA-Cdyt8/s400/96337fecbc4a40e197582ece2c6e4b55.jpg",
+      "bytes": 15971,
+      "sha256": "2fb5ed18e6c7fd05503f570b7e8663bbd58474876805a910388fc9f0c6f2e006",
+      "local_path": "research/applets/v4/artifacts/historical-formatting/profile-custom-background-small.jpg",
+      "source_id": "mig-info-417994984751442718",
+      "retrieved_at": "2026-10-28T09:57:11.780080+00:00",
+      "visual_inspection": "Small composite profile image and pink margin; device/build not identified.",
+      "width": 200,
+      "height": 150,
+      "format": "JPEG",
+      "attribution_limit": "Historical community-author screenshot. Exact build/handset not established; one capture explicitly identifies a modified4.20-store client."
+    },
+    {
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhe8_mmqGIZeJjHOjzO0Rc4_8Z-05AjTMAmZsM8Mt1L0_ih7CEuY1zRyFP9ZFynkI8uximIs10nv6E85GMXWc4-WwvFCsnMpzcYG0sLmxGGrE6RuiM77h1w7PrVQXqR4Ya93kHhv5Jb98g/s400/propil.jpg",
+      "bytes": 42894,
+      "sha256": "95fc12c9fbc57d2b776bd7bb8b785706f208817e8def73def57889aa51a335ef",
+      "local_path": "research/applets/v4/artifacts/historical-formatting/profile-my-profile-link.jpg",
+      "source_id": "mig-info-417994984751442718",
+      "retrieved_at": "2026-10-28T09:57:11.780080+00:00",
+      "visual_inspection": "Native profile link above ordinary profile fields over a background image.",
+      "width": 240,
+      "height": 320,
+      "format": "JPEG",
+      "attribution_limit": "Historical community-author screenshot. Exact build/handset not established; one capture explicitly identifies a modified4.20-store client."
+    },
+    {
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPpnvI_OPuHIkFhElvluzm3ZpGMNFqG0w22FTxoWGjlttrLay2_orbOX1pCqNXSClho2i2Eva0Tr6vYtYQq7LUZ11e9adS0cPb_wJw0o2KS2BR3lHAzbMk1E0z19y2BYWHU2kANrRKmkY/s400/e110fd48a947408c8188126e7860c5c2.jpg",
+      "bytes": 45101,
+      "sha256": "9d62ce5555b62bf7babd0dbebaed0e2acbc5d09095afaf785fe588e90855eb80",
+      "local_path": "research/applets/v4/artifacts/historical-formatting/profile-room-link.jpg",
+      "source_id": "mig-info-417994984751442718",
+      "retrieved_at": "2026-10-28T09:57:11.780080+00:00",
+      "visual_inspection": "Native room link above profile fields over a background image.",
+      "width": 240,
+      "height": 320,
+      "format": "JPEG",
+      "attribution_limit": "Historical community-author screenshot. Exact build/handset not established; one capture explicitly identifies a modified4.20-store client."
+    },
+    {
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5AzxtenIFOKsJ4UogetI3rnspimB-R-quSl5YnorFufEqsz9l_laCnYwBl8dMQpBgop29BPlwq8Put53vIwkwGG87G9_XEX_gWoDdYy9U_tvJpkC0dI9UzQuPunCvgV3Vub7ZleJ_PJ0/s400/private.jpg",
+      "bytes": 34414,
+      "sha256": "ecb7f9034c2abbae95aad153fa5916d6ee60b0eb847784dd6bb0e187412272ae",
+      "local_path": "research/applets/v4/artifacts/historical-formatting/profile-private-chat-link.jpg",
+      "source_id": "mig-info-417994984751442718",
+      "retrieved_at": "2026-10-28T09:57:11.780080+00:00",
+      "visual_inspection": "Native private-chat link on a modified client visibly titled mig33v42-store.",
+      "width": 240,
+      "height": 320,
+      "format": "JPEG",
+      "attribution_limit": "Historical community-author screenshot. Exact build/handset not established; one capture explicitly identifies a modified4.20-store client."
+    },
+    {
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-gMyUjKdHp9e0uwpIcG606mdykDkex-LPWHBvS-LfvDpGfiLbfRK30lTQYwgDXsvFt1OgksLfN8bmZl5kobMuj64o0OwtG-DFS7Y8y3scPa9hIzoTdjLW0q2ElOxuPlQPweA1t6S7E3s/s400/warna+teks.jpg",
+      "bytes": 45371,
+      "sha256": "e4a55223e3385a55bcd1ef859a4aac290e3767419cf86f89f3917a06514ef664",
+      "local_path": "research/applets/v4/artifacts/historical-formatting/profile-yellow-text.jpg",
+      "source_id": "mig-info-417994984751442718",
+      "retrieved_at": "2026-10-28T09:57:11.780080+00:00",
+      "visual_inspection": "Yellow italic custom text over a profile background image; ordinary profile controls remain.",
+      "width": 240,
+      "height": 320,
+      "format": "JPEG",
+      "attribution_limit": "Historical community-author screenshot. Exact build/handset not established; one capture explicitly identifies a modified4.20-store client."
+    },
+    {
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjh6hLqt_SkwnQKjFbZ2QluOkDPYqRZGpOizbJdTGTVeZvqRd9bSJQJPZjgqL95Vf6WXgA-7cd4dq94EE6wvCKCXg4AdsyC06aUog3AL_vUAhJi-4_oe-V79U3DO0nJULaMa0m_RQb8FFU/s400/e879bf25d5c5430c8e8217e79ab8522a.jpg",
+      "bytes": 45265,
+      "sha256": "6ae7677baf13a7714409ebf24e6b94ab5a11f7fa59ad16dff59668b3f76b1c99",
+      "local_path": "research/applets/v4/artifacts/historical-formatting/profile-large-text.jpg",
+      "source_id": "mig-info-417994984751442718",
+      "retrieved_at": "2026-10-28T09:57:11.780080+00:00",
+      "visual_inspection": "Large black text on green background, including exposed malformed image attribute text.",
+      "width": 240,
+      "height": 320,
+      "format": "JPEG",
+      "attribution_limit": "Historical community-author screenshot. Exact build/handset not established; one capture explicitly identifies a modified4.20-store client."
+    }
+  ],
+  "client_findings": [
+    {
+      "version": "3.08",
+      "evidence": "research/applets/v3/artifacts/bytecode/v.txt:864",
+      "finding": "Message bodies replace U+00A4 and U+00B1 before internal rendering. The internal colour delimiter does not establish user input syntax."
+    },
+    {
+      "version": "4.62",
+      "evidence": "research/applets/v4/artifacts/normal-flow/s.java:676",
+      "finding": "Message bodies replace U+00A4,U+00B1,U+03A9,U+00B5,U+2663,U+25B2,U+222B before internal rendering."
+    },
+    {
+      "version": "4.62",
+      "evidence": "research/applets/v4/artifacts/normal-flow/y.java:1774",
+      "finding": "Embedded pages tokenize literal angle-bracket HTML; typed square-bracket parsing is not present here."
+    }
+  ],
+  "implementation_guidance": {
+    "recoverable_profile_effects": [
+      "background colour",
+      "owned background image",
+      "text colour",
+      "underline",
+      "italic",
+      "large text",
+      "profile/room/private-chat links"
+    ],
+    "wap_browser_effects": [
+      "constrained HTML text styling",
+      "font colour translated into supported rendered markup"
+    ],
+    "native_chat_fallback": "Plain body plus a single RGB metadata value is established. Multiple styled runs, bold/italic/underline or arbitrary HTML cannot be asserted for native chat500. Preserve original source/structured formatting separately if adding a reconstruction WAP service.",
+    "unrecovered": [
+      "Complete pre-v3 typed colour grammar and affected versions",
+      "Historical BBCode server preprocessing",
+      "Historical WAP request/response fields and cross-client styled delivery",
+      "Authenticated original profile HTML responses"
+    ],
+    "do_not_claim": [
+      "Native v4 BBCode support",
+      "All screenshots are stock4.62",
+      "Historical injection bugs are a stable supported customization interface"
+    ]
+  }
+}

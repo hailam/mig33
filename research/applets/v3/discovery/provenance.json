@@ -1,0 +1,17 @@
+{
+  "recovered_at_utc": "2026-10-25T12:39:44.664337+00:00",
+  "artifact": "research/candidates/mig33v3_08-archive-original.jar",
+  "sha256": "2b416199dca5f6593eefe8fa1c9b84ec4be6cdc36f68bcf17e1a94193bfd2934",
+  "size_bytes": 115314,
+  "manifest": "Manifest-Version: 1.0\r\nMIDlet-Vendor: Project Goth, inc.\r\nMIDlet-Version: 3.08\r\nMIDlet-1: mig33v3,MiG33.png,com.projectgoth.Roshan.Main\r\nMicroEdition-Configuration: CLDC-1.0\r\nMIDlet-Name: mig33v3\r\nMicroEdition-Profile: MIDP-2.0\r\n\r\n",
+  "archive_capture": "20090417052259",
+  "original_url": "http://wap.mig33.com:80/v3_08/mig33v3.jar",
+  "retrieval_url": "https://web.archive.org/web/20090417052259id_/http://wap.mig33.com:80/v3_08/mig33v3.jar",
+  "matching_mirror": "https://kemongers.jw.lt/hp/mig33v3_08.jar",
+  "mirror_referer": "https://kemongers.jw.lt/migori",
+  "mirror_sha256": "2b416199dca5f6593eefe8fa1c9b84ec4be6cdc36f68bcf17e1a94193bfd2934",
+  "other_archived_official_url": "http://www.mig33.com:80/wap2/v3_08/mig33v3.jar",
+  "other_archive_capture": "20100623000021",
+  "archive_cdx_sha1_base32": "NWOF7EBZ4HUHASIYU4CO7YB6EEVEWCDS",
+  "note": "Jar was inspected as ZIP and not executed. CDX digest of both official URLs matches; 2009 payload downloaded and SHA256 compared against mirror."
+}

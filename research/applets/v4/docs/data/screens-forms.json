@@ -1,0 +1,220 @@
+{
+  "version": "4.62",
+  "description": "Nonempty built-in form constructor branches. Raw and string-resolved source preserve order, dynamic values and branch conditions; all other IDs in this constructor are no-op/default.",
+  "forms": [
+    {
+      "id": 1,
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2738",
+      "constructor_java": "         case 1:\n            this.j = 2;\n            this.a.addElement(new bj(false, null, 2, e(188)));\n            Vector var8 = new Vector();\n            if (aj.aS != null && !aj.aS.isEmpty()) {\n               Enumeration var9 = aj.aS.elements();\n\n               while (var9.hasMoreElements()) {\n                  bj var7 = (bj)var9.nextElement();\n                  if (var7.f == 2) {\n                     var8.addElement(new bj(var7.a, \"\" + var7.d, false));\n                  }\n               }\n            }\n\n            this.a(0, var8, 0, e(188));\n            this.a.addElement(new bj(false, null, 2, e(328)));\n            this.a.addElement(new bj(false, var3, 0, e(328)));\n            this.a.addElement(new bj(false, null, 2, e(17)));\n            this.a(0, a(var4), 0, e(134));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 5, e(10)));",
+      "localized_java": "         case 1:\n            this.j = 2;\n            this.a.addElement(new bj(false, null, 2, \"IM\"));\n            Vector var8 = new Vector();\n            if (aj.aS != null && !aj.aS.isEmpty()) {\n               Enumeration var9 = aj.aS.elements();\n\n               while (var9.hasMoreElements()) {\n                  bj var7 = (bj)var9.nextElement();\n                  if (var7.f == 2) {\n                     var8.addElement(new bj(var7.a, \"\" + var7.d, false));\n                  }\n               }\n            }\n\n            this.a(0, var8, 0, \"IM\");\n            this.a.addElement(new bj(false, null, 2, \"Username\"));\n            this.a.addElement(new bj(false, var3, 0, \"Username\"));\n            this.a.addElement(new bj(false, null, 2, \"Add to Group\"));\n            this.a(0, a(var4), 0, \"Group:\");\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 5, \"Add\"));",
+      "localization_ids": [
+        10,
+        17,
+        134,
+        188,
+        328
+      ]
+    },
+    {
+      "id": 9,
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2807",
+      "constructor_java": "         case 9:\n            this.b(e(104), null);\n            this.b(e(197), null);\n            this.c(e(199));\n            this.a.addElement(new bj(false, null, 9, e(199)));\n            String[] var6 = aj.E();\n            if (var6 != null && var6.length > 0) {\n               for (int var25 = 0; var25 < var6.length; var25++) {\n                  this.b(var6[var25], null);\n               }\n            }\n\n            this.a.addElement(new bj(false, null, 5, e(322)));\n            break;",
+      "localized_java": "         case 9:\n            this.b(\"Display Name\", null);\n            this.b(\"mig33 Username\", null);\n            this.c(\"Mobile Number\");\n            this.a.addElement(new bj(false, null, 9, \"Mobile Number\"));\n            String[] var6 = aj.E();\n            if (var6 != null && var6.length > 0) {\n               for (int var25 = 0; var25 < var6.length; var25++) {\n                  this.b(var6[var25], null);\n               }\n            }\n\n            this.a.addElement(new bj(false, null, 5, \"Update\"));\n            break;",
+      "localization_ids": [
+        104,
+        197,
+        199,
+        322
+      ]
+    },
+    {
+      "id": 13,
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2821",
+      "constructor_java": "         case 13:\n            this.b(e(285), bc.e);\n            this.b(e(233), bc.f);\n            var1 = e(306);\n            boolean var23;\n            if (aj.b == 2) {\n               var23 = true;\n            } else {\n               var23 = false;\n            }\n\n            this.a(var1, var23, e(306));\n            var1 = e(148);\n            if (aj.b != 1) {\n               var23 = false;\n            } else {\n               var23 = true;\n            }\n\n            this.a(var1, var23, e(148));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 5, e(82)));\n            break;",
+      "localized_java": "         case 13:\n            this.b(\"Server\", bc.e);\n            this.b(\"Port\", bc.f);\n            var1 = \"TCP\";\n            boolean var23;\n            if (aj.b == 2) {\n               var23 = true;\n            } else {\n               var23 = false;\n            }\n\n            this.a(var1, var23, \"TCP\");\n            var1 = \"HTTP\";\n            if (aj.b != 1) {\n               var23 = false;\n            } else {\n               var23 = true;\n            }\n\n            this.a(var1, var23, \"HTTP\");\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 5, \"Connect\"));\n            break;",
+      "localization_ids": [
+        82,
+        148,
+        233,
+        285,
+        306
+      ]
+    },
+    {
+      "id": 14,
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2844",
+      "constructor_java": "         case 14:\n            this.c(e(355));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(true, aj.o, 9, e(199)));\n            this.a.addElement(new bj(false, null, 5, e(88)));\n            break;",
+      "localized_java": "         case 14:\n            this.c(\"Your username and password will be sent by SMS to your mobile phone.\");\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(true, aj.o, 9, \"Mobile Number\"));\n            this.a.addElement(new bj(false, null, 5, \"Continue\"));\n            break;",
+      "localization_ids": [
+        88,
+        199,
+        355
+      ]
+    },
+    {
+      "id": 15,
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2850",
+      "constructor_java": "         case 15:\n            this.b(e(328), null);\n            this.a.addElement(new bj(false, null, 2, e(227)));\n            this.a.addElement(new bj(false, null, 1, e(227)));\n            var1 = e(252);\n            boolean var19;\n            if (j.a.d((short)8) != 1) {\n               var19 = false;\n            } else {\n               var19 = true;\n            }\n\n            this.a(var1, var19, e(252));\n            var1 = e(27);\n            if (j.a.d((short)5) == 1) {\n               var19 = true;\n            } else {\n               var19 = false;\n            }\n\n            this.a(var1, var19, e(27));\n            var1 = e(184);\n            if (j.a.d((short)7) != 1) {\n               var19 = false;\n            } else {\n               var19 = true;\n            }\n\n            this.a(var1, var19, e(184));\n            var1 = e(417);\n            if (j.b(25) == 1) {\n               var19 = true;\n            } else {\n               var19 = false;\n            }\n\n            this.a(var1, var19, e(416));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 5, e(183)));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 10, e(127)));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 10, e(247)));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 10, e(86)));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 10, e(56)));\n            break;",
+      "localized_java": "         case 15:\n            this.b(\"Username\", null);\n            this.a.addElement(new bj(false, null, 2, \"Password\"));\n            this.a.addElement(new bj(false, null, 1, \"Password\"));\n            var1 = \"Remember Login\";\n            boolean var19;\n            if (j.a.d((short)8) != 1) {\n               var19 = false;\n            } else {\n               var19 = true;\n            }\n\n            this.a(var1, var19, \"Remember Login\");\n            var1 = \"Auto Login\";\n            if (j.a.d((short)5) == 1) {\n               var19 = true;\n            } else {\n               var19 = false;\n            }\n\n            this.a(var1, var19, \"Auto Login\");\n            var1 = \"Login As Invisible\";\n            if (j.a.d((short)7) != 1) {\n               var19 = false;\n            } else {\n               var19 = true;\n            }\n\n            this.a(var1, var19, \"Login As Invisible\");\n            var1 = \"Show Chatroom Avatars\";\n            if (j.b(25) == 1) {\n               var19 = true;\n            } else {\n               var19 = false;\n            }\n\n            this.a(var1, var19, \"Chatroom Avatars\");\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 5, \"Login\"));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 10, \"Forgot password?\"));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 10, \"Register as a new user.\"));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 10, \"Connection Settings\"));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 10, \"Change Language\"));\n            break;",
+      "localization_ids": [
+        27,
+        56,
+        86,
+        127,
+        183,
+        184,
+        227,
+        247,
+        252,
+        328,
+        416,
+        417
+      ]
+    },
+    {
+      "id": 23,
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2898",
+      "constructor_java": "         case 23:\n            this.c(e(161));\n            this.c(e(199));\n            this.a.addElement(new bj(false, null, 9, e(199)));\n            this.b(e(357), j.a.f((short)1));\n            this.a.addElement(new bj(false, null, 5, e(156)));\n            break;",
+      "localized_java": "         case 23:\n            this.c(\"Invite your friends to join mig33! Get bonus credit when they activate their account.\");\n            this.c(\"Mobile Number\");\n            this.a.addElement(new bj(false, null, 9, \"Mobile Number\"));\n            this.b(\"Your Name\", j.a.f((short)1));\n            this.a.addElement(new bj(false, null, 5, \"Invite\"));\n            break;",
+      "localization_ids": [
+        156,
+        161,
+        199,
+        357
+      ]
+    },
+    {
+      "id": 30,
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2905",
+      "constructor_java": "         case 30:\n            this.c(\"2\", \"3\");\n            if (var3 != null) {\n               var1 = e(328);\n               this.a.addElement(new bj(false, null, 2, var1));\n               this.a.addElement(new bj(false, var3, 2, var3));\n               this.a.addElement(new bj(false, null, 4, null));\n            } else {\n               this.b(e(328), null);\n            }\n\n            this.a.addElement(new bj(false, null, 2, e(227)));\n            this.a.addElement(new bj(false, null, 1, e(227)));\n            this.a.addElement(new bj(false, null, 2, e(199) + \"*\"));\n            this.a.addElement(new bj(true, this.d, 9, e(199)));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 2, e(116)));\n            this.a.addElement(new bj(false, null, 16, e(268)));\n            if (this.p != null) {\n               this.m = this.p.getHeight();\n            } else {\n               this.m = 0;\n            }\n\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a(e(150), true, \"TC\");\n            this.a.addElement(new bj(false, null, 10, e(307)));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 5, e(304)));\n            this.a.addElement(new bj(false, null, 10, e(145)));\n            this.c(e(229));\n            break;",
+      "localized_java": "         case 30:\n            this.c(\"2\", \"3\");\n            if (var3 != null) {\n               var1 = \"Username\";\n               this.a.addElement(new bj(false, null, 2, var1));\n               this.a.addElement(new bj(false, var3, 2, var3));\n               this.a.addElement(new bj(false, null, 4, null));\n            } else {\n               this.b(\"Username\", null);\n            }\n\n            this.a.addElement(new bj(false, null, 2, \"Password\"));\n            this.a.addElement(new bj(false, null, 1, \"Password\"));\n            this.a.addElement(new bj(false, null, 2, \"Mobile Number\" + \"*\"));\n            this.a.addElement(new bj(true, this.d, 9, \"Mobile Number\"));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 2, \"Enter Security Code\"));\n            this.a.addElement(new bj(false, null, 16, \"Security Code\"));\n            if (this.p != null) {\n               this.m = this.p.getHeight();\n            } else {\n               this.m = 0;\n            }\n\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a(\"I agree to the terms and conditions (see www.mig33.com).\", true, \"TC\");\n            this.a.addElement(new bj(false, null, 10, \"Terms and Conditions\"));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 5, \"Submit\"));\n            this.a.addElement(new bj(false, null, 10, \"Help\"));\n            this.c(\"*Your phone number is used to enable the free services within mig33. It will not be shared with any other party outside mig33.\");\n            break;",
+      "localization_ids": [
+        116,
+        145,
+        150,
+        199,
+        227,
+        229,
+        268,
+        304,
+        307,
+        328
+      ]
+    },
+    {
+      "id": 36,
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2938",
+      "constructor_java": "         case 36:\n            var2 = 0;\n\n            while (var2 < var3.length()) {\n               int var5 = var3.indexOf(\"\\n\", var2);\n               if (var5 == -1) {\n                  this.c(var3.substring(var2, var3.length()));\n                  break label196;\n               }\n\n               if (var3.substring(var2, var5) != null && var3.substring(var2, var5).length() != 0) {\n                  this.c(var3.substring(var2, var5));\n               } else {\n                  this.a.addElement(new bj(false, null, 4, null));\n               }\n\n               var2 = var5 + 1;\n            }\n            break;",
+      "localized_java": "         case 36:\n            var2 = 0;\n\n            while (var2 < var3.length()) {\n               int var5 = var3.indexOf(\"\\n\", var2);\n               if (var5 == -1) {\n                  this.c(var3.substring(var2, var3.length()));\n                  break label196;\n               }\n\n               if (var3.substring(var2, var5) != null && var3.substring(var2, var5).length() != 0) {\n                  this.c(var3.substring(var2, var5));\n               } else {\n                  this.a.addElement(new bj(false, null, 4, null));\n               }\n\n               var2 = var5 + 1;\n            }\n            break;",
+      "localization_ids": []
+    },
+    {
+      "id": 40,
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2957",
+      "constructor_java": "         case 40:\n            this.c(e(310));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(true, aj.o, 9, e(199)));\n            this.a.addElement(new bj(false, null, 5, e(88)));\n            break;",
+      "localized_java": "         case 40:\n            this.c(\"This is your mobile number. Please change it if it is incorrect.\");\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(true, aj.o, 9, \"Mobile Number\"));\n            this.a.addElement(new bj(false, null, 5, \"Continue\"));\n            break;",
+      "localization_ids": [
+        88,
+        199,
+        310
+      ]
+    },
+    {
+      "id": 41,
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2963",
+      "constructor_java": "         case 41:\n            this.c(\"3\", \"3\");\n            this.a.addElement(new bj(false, null, 4, null));\n            this.b(e(387), null);\n            this.a.addElement(new bj(false, null, 5, e(412)));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 10, e(262)));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 10, e(410)));\n            break;",
+      "localized_java": "         case 41:\n            this.c(\"3\", \"3\");\n            this.a.addElement(new bj(false, null, 4, null));\n            this.b(\"Verification Code\", null);\n            this.a.addElement(new bj(false, null, 5, \"Activate\"));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 10, \"Resend Code\"));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 10, \"Activate later\"));\n            break;",
+      "localization_ids": [
+        262,
+        387,
+        410,
+        412
+      ]
+    },
+    {
+      "id": 43,
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2973",
+      "constructor_java": "         case 43:\n            bj var10000 = new bj(false, null, 15, \"\");\n            var10000.a = d(122);\n            var10000.l = 17;\n            this.a.addElement(var10000);\n            this.c(e(408));\n            this.a.addElement(new bj(false, null, 5, e(183)));\n            this.a.addElement(new bj(false, null, 5, e(248)));\n            this.a.addElement(new bj(false, null, 5, e(56)));\n            break;",
+      "localized_java": "         case 43:\n            bj var10000 = new bj(false, null, 15, \"\");\n            var10000.a = d(122);\n            var10000.l = 17;\n            this.a.addElement(var10000);\n            this.c(\"Join mig33 and meet new friends, chat and play games and much more!\");\n            this.a.addElement(new bj(false, null, 5, \"Login\"));\n            this.a.addElement(new bj(false, null, 5, \"Registration\"));\n            this.a.addElement(new bj(false, null, 5, \"Change Language\"));\n            break;",
+      "localization_ids": [
+        56,
+        183,
+        248,
+        408
+      ]
+    },
+    {
+      "id": 49,
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2983",
+      "constructor_java": "         case 49:\n            this.c(e(341));\n            break;",
+      "localized_java": "         case 49:\n            this.c(\"Thanks for launching mig33 for the first time. We are about to run a few tests to ensure your phone is configured correctly.\");\n            break;",
+      "localization_ids": [
+        341
+      ]
+    },
+    {
+      "id": 52,
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2986",
+      "constructor_java": "         case 52:\n            this.a.addElement(new bj(false, null, 2, e(228)));\n            this.a.addElement(new bj(false, null, 9, e(199)));\n            this.j = 1;\n            this.b(e(212), null);\n            this.a.addElement(new bj(false, null, 2, e(17)));\n            this.a(0, a(var4), 0, e(134));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 5, e(10)));\n            break;",
+      "localized_java": "         case 52:\n            this.a.addElement(new bj(false, null, 2, \"Phone Number:\"));\n            this.a.addElement(new bj(false, null, 9, \"Mobile Number\"));\n            this.j = 1;\n            this.b(\"Name\", null);\n            this.a.addElement(new bj(false, null, 2, \"Add to Group\"));\n            this.a(0, a(var4), 0, \"Group:\");\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 5, \"Add\"));\n            break;",
+      "localization_ids": [
+        10,
+        17,
+        134,
+        199,
+        212,
+        228
+      ]
+    },
+    {
+      "id": 54,
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2996",
+      "constructor_java": "         case 54:\n            this.c(e(414));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 5, e(306)));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 5, e(148)));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 5, e(189)));\n            break;",
+      "localized_java": "         case 54:\n            this.c(\"Please select your connection type below. If you are unsure, try TCP first.\");\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 5, \"TCP\"));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 5, \"HTTP\"));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 5, \"Manual\"));\n            break;",
+      "localization_ids": [
+        148,
+        189,
+        306,
+        414
+      ]
+    },
+    {
+      "id": 57,
+      "source": "research/applets/v4/artifacts/vineflower/y.java:3005",
+      "constructor_java": "         case 57:\n            this.a.addElement(new bj(false, null, 2, e(197)));\n            this.a.addElement(new bj(false, var3, 0, e(328)));\n            this.j = 1;\n            this.a.addElement(new bj(false, null, 2, e(17)));\n            this.a(0, a(var4), 0, e(134));\n            this.a(e(290), false, e(289));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 5, e(10)));\n            break;",
+      "localized_java": "         case 57:\n            this.a.addElement(new bj(false, null, 2, \"mig33 Username\"));\n            this.a.addElement(new bj(false, var3, 0, \"Username\"));\n            this.j = 1;\n            this.a.addElement(new bj(false, null, 2, \"Add to Group\"));\n            this.a(0, a(var4), 0, \"Group:\");\n            this.a(\"Share my mobile number\", false, \"Share Mobile\");\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 5, \"Add\"));\n            break;",
+      "localization_ids": [
+        10,
+        17,
+        134,
+        197,
+        289,
+        290,
+        328
+      ]
+    },
+    {
+      "id": 60,
+      "source": "research/applets/v4/artifacts/vineflower/y.java:3015",
+      "constructor_java": "         case 60:\n            this.c(this.d);\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 16, e(268)));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 5, e(281)));\n            break;",
+      "localized_java": "         case 60:\n            this.c(this.d);\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 16, \"Security Code\"));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 4, null));\n            this.a.addElement(new bj(false, null, 5, \"Send\"));\n            break;",
+      "localization_ids": [
+        268,
+        281
+      ]
+    },
+    {
+      "id": 62,
+      "source": "research/applets/v4/artifacts/vineflower/y.java:3024",
+      "constructor_java": "         case 62:\n            this.c(\"1\", \"3\");\n            if (var4 != null) {\n               this.a.addElement(new bj(false, null, 2, e(392)));\n            }\n\n            this.a.addElement(new bj(false, null, 2, e(394)));\n            if (var3 != null) {\n               this.b(e(328), var3);\n            } else {\n               this.b(e(328), null);\n            }\n\n            if (var4 != null) {\n               var2 = 0;\n               this.a.addElement(new bj(false, null, 2, e(393)));\n\n               while (var2 < var4.size()) {\n                  this.a.addElement(new bj(false, null, 10, var4.elementAt(var2).toString()));\n                  var2++;\n               }\n            }\n\n            this.a.addElement(new bj(false, null, 5, e(391)));",
+      "localized_java": "         case 62:\n            this.c(\"1\", \"3\");\n            if (var4 != null) {\n               this.a.addElement(new bj(false, null, 2, \"Username is already in use\"));\n            }\n\n            this.a.addElement(new bj(false, null, 2, \"Select a username\"));\n            if (var3 != null) {\n               this.b(\"Username\", var3);\n            } else {\n               this.b(\"Username\", null);\n            }\n\n            if (var4 != null) {\n               var2 = 0;\n               this.a.addElement(new bj(false, null, 2, \"Suggested Names\"));\n\n               while (var2 < var4.size()) {\n                  this.a.addElement(new bj(false, null, 10, var4.elementAt(var2).toString()));\n                  var2++;\n               }\n            }\n\n            this.a.addElement(new bj(false, null, 5, \"Check Availability\"));",
+      "localization_ids": [
+        328,
+        391,
+        392,
+        393,
+        394
+      ]
+    }
+  ]
+}

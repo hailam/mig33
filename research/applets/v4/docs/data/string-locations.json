@@ -1,0 +1,5718 @@
+[
+  {
+    "source": "artifacts/vineflower/ac.java:13",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/ac.java:20",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/ac.java:24",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/ac.java:25",
+    "java_literal": "\"img.mig33.com\""
+  },
+  {
+    "source": "artifacts/vineflower/ac.java:34",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/ac.java:35",
+    "java_literal": "\"=\""
+  },
+  {
+    "source": "artifacts/vineflower/ac.java:40",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/ac.java:42",
+    "java_literal": "\"; \""
+  },
+  {
+    "source": "artifacts/vineflower/ac.java:52",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/ac.java:81",
+    "java_literal": "\";\""
+  },
+  {
+    "source": "artifacts/vineflower/ac.java:86",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/ac.java:87",
+    "java_literal": "\"=\""
+  },
+  {
+    "source": "artifacts/vineflower/ac.java:93",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/af.java:9",
+    "java_literal": "\"id\""
+  },
+  {
+    "source": "artifacts/vineflower/af.java:9",
+    "java_literal": "\"org.jetbrains.java.decompiler.modules.decompiler.flow.FlattenStatementsHelper.getDirectNode(org.jetbrains.java.decompiler.modules.decompiler.stats.Statement)\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:27",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:49",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:861",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:2233",
+    "java_literal": "\"/sites/index.php?c=profile&a=home&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:2238",
+    "java_literal": "\"/sites/index.php?c=group&v=midlet&a=list_my_groups&e=3\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:2335",
+    "java_literal": "\"/sites/index.php?c=migworld&v=midlet&a=get_mobpage\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:2340",
+    "java_literal": "\"/sites/index.php?c=group&v=midlet&a=list_groups_home&e=3\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:2346",
+    "java_literal": "\"/sites/index.php?c=profile&a=home&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:2351",
+    "java_literal": "\"/sites/index.php?c=group&v=midlet&a=list_groups_home&e=3\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:2356",
+    "java_literal": "\"/sites/index.php?c=migworld&v=midlet&a=get_mobpage\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:2363",
+    "java_literal": "\"/sites/index.php?c=group&v=midlet&a=list_groups_home&e=3\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:2370",
+    "java_literal": "\"/sites/index.php?c=profile&a=home&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:2375",
+    "java_literal": "\"/sites/index.php?c=group&v=midlet&a=list_groups_home&e=3\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:2385",
+    "java_literal": "\"/sites/index.php?c=migworld&v=midlet&a=get_mobpage\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:2820",
+    "java_literal": "\")\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:2828",
+    "java_literal": "\"(\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:2999",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3002",
+    "java_literal": "\"/sites/index.php?c=account&v=midlet&a=transfer_credit&recipient_username=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3012",
+    "java_literal": "\"/sites/index.php?c=account&v=midlet&a=transfer_credit\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3022",
+    "java_literal": "\"/sites/index.php?c=sms&a=home&v=midlet&f=sms&to_number=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3046",
+    "java_literal": "\"/sites/index.php?c=call&a=home&v=midlet&f=call&number_to_call=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3120",
+    "java_literal": "\"/sites/index.php?c=profile&v=midlet&a=home&username=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3154",
+    "java_literal": "\"/sites/index.php?c=store&v=midlet&a=home&e=3&ty=1&username=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3180",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3525",
+    "java_literal": "\"/sites/index.php?c=sms&a=home&v=midlet&f=sms&to_number=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3536",
+    "java_literal": "\"/sites/index.php?c=sms&a=home&v=midlet&f=sms&to_number=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3550",
+    "java_literal": "\"/sites/index.php?c=call&a=home&v=midlet&f=call&number_to_call=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3561",
+    "java_literal": "\"/sites/index.php?c=call&a=home&v=midlet&f=call&number_to_call=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3596",
+    "java_literal": "\"/sites/index.php?c=profile&v=midlet&a=home&username=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3607",
+    "java_literal": "\"/sites/index.php?c=store&v=midlet&a=home&e=3&ty=1&username=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3618",
+    "java_literal": "\"/sites/index.php?c=lookout&a=home&v=midlet%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3621",
+    "java_literal": "\"&cid=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3626",
+    "java_literal": "\"&pres=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3645",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3648",
+    "java_literal": "\"/sites/index.php?c=account&v=midlet&a=transfer_credit&recipient_username=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3659",
+    "java_literal": "\"/sites/index.php?c=account&v=midlet&a=transfer_credit\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3694",
+    "java_literal": "\"/sites/index.php?c=chatroom&v=midlet&a=setup&roomName=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3710",
+    "java_literal": "\"/sites/index.php?c=group&v=midlet&a=add_to_group&roomName=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3737",
+    "java_literal": "\"/sites/index.php?c=chatroom&a=search&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3747",
+    "java_literal": "\"/sites/index.php?c=store&v=midlet&a=main&id=111\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3822",
+    "java_literal": "\"/sites/index.php?c=chatroom&v=midlet&a=setup&roomName=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3869",
+    "java_literal": "\"/sites/index.php?c=report&a=report_abuse&v=midlet&type=4&subject=Group%20Chat&subject_id=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3882",
+    "java_literal": "\"/sites/index.php?c=report&a=report_abuse&v=midlet&type=4&subject=Chatroom&subject_id=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3975",
+    "java_literal": "\"&cid=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:3983",
+    "java_literal": "\"/sites/index.php?c=group&v=midlet&a=list_chatrooms\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:4007",
+    "java_literal": "\"&cid=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:4015",
+    "java_literal": "\"/sites/index.php?c=group&v=midlet&a=members\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:4039",
+    "java_literal": "\"&cid=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:4047",
+    "java_literal": "\"/sites/index.php?c=group&v=midlet&a=view_forum\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:4070",
+    "java_literal": "\"&cid=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:4078",
+    "java_literal": "\"/sites/index.php?c=group&v=midlet&a=home\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:4116",
+    "java_literal": "\"imType=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:4121",
+    "java_literal": "\"&cid=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:4131",
+    "java_literal": "\"gcid=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:4141",
+    "java_literal": "\"roomName=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:4222",
+    "java_literal": "\"/sites/index.php?c=photo&v=midlet&a=home&f=sendfromphoto\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:4232",
+    "java_literal": "\"/sites/index.php?c=photo&a=home&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:4341",
+    "java_literal": "\"/sites/index.php?c=im&a=setup_im&im=%s&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:4541",
+    "java_literal": "\"cid=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:4547",
+    "java_literal": "\"&pres=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:4578",
+    "java_literal": "\"gid=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5182",
+    "java_literal": "\"/sites/index.php?c=account&v=midlet&a=transfer_credit&recipient_username=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5194",
+    "java_literal": "\"/sites/index.php?c=account&v=midlet&a=transfer_credit\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5204",
+    "java_literal": "\"/sites/index.php?c=account&v=midlet&a=transfer_credit\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5229",
+    "java_literal": "\"/sites/index.php?c=settings&a=change_tab_order&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5239",
+    "java_literal": "\"/sites/index.php?c=settings&v=midlet&a=change_mobile\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5249",
+    "java_literal": "\"/sites/index.php?c=settings&a=change_password&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5259",
+    "java_literal": "\"/sites/index.php?c=account&a=home&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5269",
+    "java_literal": "\"/sites/index.php?c=account&a=get_history&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5279",
+    "java_literal": "\"/sites/index.php?c=account&a=recharge_credit&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5297",
+    "java_literal": "\"/sites/index.php?c=lookout&a=home&v=midlet%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5300",
+    "java_literal": "\"&cid=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5306",
+    "java_literal": "\"&pres=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5329",
+    "java_literal": "\"/sites/index.php?c=buzz&a=home&v=midlet%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5332",
+    "java_literal": "\"&cid=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5338",
+    "java_literal": "\"&pres=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5365",
+    "java_literal": "\"/sites/index.php?c=photo&v=midlet&username=%s&a=home\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5377",
+    "java_literal": "\"/sites/index.php?c=photo&v=midlet&username=%s&a=home\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5429",
+    "java_literal": "\"/sites/index.php?c=chatroom&a=create&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5439",
+    "java_literal": "\"/sites/index.php?c=group&v=midlet&a=add_to_group&roomName=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5457",
+    "java_literal": "\"/sites/index.php?c=chatroom&a=search&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5467",
+    "java_literal": "\"/sites/index.php?c=settings&a=block_list&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5477",
+    "java_literal": "\"/sites/index.php?c=settings&a=call_by_name&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5487",
+    "java_literal": "\"/sites/index.php?c=settings&a=view_update_settings&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5497",
+    "java_literal": "\"/sites/index.php?c=settings&a=profile_privacy_settings&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5507",
+    "java_literal": "\"/sites/index.php?c=merchant&v=midlet&a=dashboard\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5517",
+    "java_literal": "\"/sites/index.php?c=help&a=contact_us&v=midlet%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5520",
+    "java_literal": "\"&to=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5535",
+    "java_literal": "\"/sites/index.php?c=store&v=midlet&a=main&id=111\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5545",
+    "java_literal": "\"/sites/index.php?c=migworld&v=midlet&a=get_mobpage\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5555",
+    "java_literal": "\"/sites/index.php?c=photo&v=midlet&username=%s&a=home\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5567",
+    "java_literal": "\"/sites/index.php?c=avatar&v=midlet&a=home\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5577",
+    "java_literal": "\"/sites/index.php?c=profile&a=home&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5626",
+    "java_literal": "\"http://www.mig33.com/sites/resources/language/v4.6/l\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5682",
+    "java_literal": "\"%\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5885",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5928",
+    "java_literal": "\"/sites/index.php?c=group&v=midlet&a=list_my_groups&e=3\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:5938",
+    "java_literal": "\"/sites/index.php?c=store&a=home&e=3&ty=5&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:6133",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:6212",
+    "java_literal": "\"/sites/index.php?c=sms&a=home&v=midlet&f=sms&to_number=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:6260",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:6279",
+    "java_literal": "\"/sites/index.php?c=call&a=home&v=midlet&f=call&number_to_call=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:6325",
+    "java_literal": "\"/sites/index.php?c=profile&a=edit&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:6335",
+    "java_literal": "\"/sites/index.php?c=bot&a=bot_list&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:6345",
+    "java_literal": "\"/sites/index.php?c=help&a=main&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:6445",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:6542",
+    "java_literal": "\"/sites/index.php?c=email&a=compose&v=midlet%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:6543",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:6560",
+    "java_literal": "\"/sites/index.php?c=im&a=setup_im&im=%s&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:6806",
+    "java_literal": "\"/sites/index.php?c=profile&v=midlet&a=home&username=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:6822",
+    "java_literal": "\"HOME\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:6842",
+    "java_literal": "\"/sites/index.php?c=store&v=midlet&a=home&e=3&ty=1&username=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:6862",
+    "java_literal": "\"/sites/index.php?c=email&a=compose&v=midlet%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:6865",
+    "java_literal": "\"&to=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:7039",
+    "java_literal": "\"/sites/index.php?c=chatroom&v=midlet&a=setup&roomName=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:7091",
+    "java_literal": "\"/sites/index.php?c=migworld&a=get_mobpage&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:7101",
+    "java_literal": "\"/sites/index.php?c=leaderboard&v=midlet&a=home\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:7111",
+    "java_literal": "\"/sites/index.php?c=profile&a=user_blog_posts&v=midlet&username=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:7125",
+    "java_literal": "\"/sites/index.php?c=photos&a=wall&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:7135",
+    "java_literal": "\"/sites/index.php?c=profile&a=search&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:7145",
+    "java_literal": "\"/sites/index.php?c=migworld&v=midlet&a=get_mobpage\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:7155",
+    "java_literal": "\"/sites/index.php?c=group&v=midlet&a=add_to_group&roomName=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:7173",
+    "java_literal": "\"/sites/index.php?c=group&v=midlet&a=list_groups_home&e=3\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:7225",
+    "java_literal": "\"/sites/index.php?c=settings&a=chat_privacy&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:7298",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:7423",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:7658",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:7701",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:7803",
+    "java_literal": "\"2\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:7981",
+    "java_literal": "\"0\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:7987",
+    "java_literal": "\"1\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:7993",
+    "java_literal": "\"4\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:8018",
+    "java_literal": "\"mig33:\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:8333",
+    "java_literal": "\"http://www.mig33.com/sites/resources/language/v4.6/l\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:8619",
+    "java_literal": "\"+\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:8672",
+    "java_literal": "\"TC\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:9242",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:9409",
+    "java_literal": "\"http://\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:9413",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:9421",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:9429",
+    "java_literal": "\"http://\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:9456",
+    "java_literal": "\"http://www.mig33.com/sites/index.php?c=registration_api&v=midlet&a=check_username&username=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:9649",
+    "java_literal": "\"http://www.mig33.com/sites/index.php?c=help&v=wap&a=tc\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:9699",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:9719",
+    "java_literal": "\"http://gateway.mig33.com/\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:9798",
+    "java_literal": "\"http://www.mig33.com/sites/resources/language/v4.6/l\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:10119",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:10163",
+    "java_literal": "\"0\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:10238",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:10431",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:10472",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:10524",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:10732",
+    "java_literal": "\"25\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:10834",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:10872",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:11394",
+    "java_literal": "\"http://www.mig33.com/sites/index.php?c=help&v=wap&a=apn\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:11454",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:11467",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:11541",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:11650",
+    "java_literal": "\"en-US\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:11681",
+    "java_literal": "\"en-US\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:11705",
+    "java_literal": "\"http://www.mig33.com/sites/index.php?c=help&v=wap&a=apn\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12022",
+    "java_literal": "\"mig33:\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12023",
+    "java_literal": "\"mig33:\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12024",
+    "java_literal": "\"(\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12025",
+    "java_literal": "\"(\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12026",
+    "java_literal": "\"checkIn\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12027",
+    "java_literal": "\"reorderHomeTab\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12028",
+    "java_literal": "\"auth\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12035",
+    "java_literal": "\"sendScrapbookPhoto\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12070",
+    "java_literal": "\"uploadPhotoToScrapbook\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12076",
+    "java_literal": "\"invokeNativeBrowser\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12081",
+    "java_literal": "\"setDisplayPicture\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12087",
+    "java_literal": "\"inviteToMig33\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12092",
+    "java_literal": "\"inviteFriend\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12097",
+    "java_literal": "\"privateChat\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12098",
+    "java_literal": "\"call\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12099",
+    "java_literal": "\"/sites/index.php?c=call&a=home&v=midlet&f=call&number_to_call=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12103",
+    "java_literal": "\"sms\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12104",
+    "java_literal": "\"/sites/index.php?c=sms&a=home&v=midlet&f=sms&to_number=%s\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12108",
+    "java_literal": "\"updateStatus\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12113",
+    "java_literal": "\"joinGroupChatroom\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12114",
+    "java_literal": "\",\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12118",
+    "java_literal": "\"joinChatroom\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12123",
+    "java_literal": "\"closeTab\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12146",
+    "java_literal": "\"focusTab\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12191",
+    "java_literal": "\"close\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12196",
+    "java_literal": "\"newBrowser\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12201",
+    "java_literal": "\"imMenu\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12249",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12253",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12257",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12314",
+    "java_literal": "\"[\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12314",
+    "java_literal": "\",\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12664",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12712",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:12827",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13293",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13325",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13329",
+    "java_literal": "\"http\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13329",
+    "java_literal": "\"?w=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13329",
+    "java_literal": "\"&h=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13329",
+    "java_literal": "\"&a=1&c=1\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13333",
+    "java_literal": "\"http\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13333",
+    "java_literal": "\"?w=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13333",
+    "java_literal": "\"&h=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13333",
+    "java_literal": "\"&a=1&c=1\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13347",
+    "java_literal": "\"tel:\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13750",
+    "java_literal": "\"capture://image\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13760",
+    "java_literal": "\"capture://video\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13768",
+    "java_literal": "\"VideoControl\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13783",
+    "java_literal": "\"EricssonW300c\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13799",
+    "java_literal": "\"&width=320&height=240\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13802",
+    "java_literal": "\"&width=240&height=320\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13805",
+    "java_literal": "\"&width=352&height=288\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13808",
+    "java_literal": "\"&width=160&height=120\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13811",
+    "java_literal": "\"&width=480&height=640\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13814",
+    "java_literal": "\"&width=288&height=352\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13817",
+    "java_literal": "\"&width=120&height=160\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13820",
+    "java_literal": "\"&width=640&height=480\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13827",
+    "java_literal": "\"encoding=jpeg\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13865",
+    "java_literal": "\"%\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13917",
+    "java_literal": "\"40\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:13978",
+    "java_literal": "\"/default-avatar.png\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14084",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14092",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14093",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14131",
+    "java_literal": "\"25\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14305",
+    "java_literal": "\"microedition.hostname\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14310",
+    "java_literal": "\"MIDlet-Version\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14315",
+    "java_literal": "\"BUILD\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14333",
+    "java_literal": "\"Server\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14383",
+    "java_literal": "\"51\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14407",
+    "java_literal": "\"microedition.platform\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14431",
+    "java_literal": "\"audio\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14446",
+    "java_literal": "\"j2me\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14449",
+    "java_literal": "\"device.name\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14461",
+    "java_literal": "\"Sony\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14473",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14477",
+    "java_literal": "\" (\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14482",
+    "java_literal": "\"Unknown\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14487",
+    "java_literal": "\") kBrowser\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14503",
+    "java_literal": "\"allemo\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14513",
+    "java_literal": "\"freqmo\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14515",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14525",
+    "java_literal": "\",\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14621",
+    "java_literal": "\"...\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14625",
+    "java_literal": "\"...\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14629",
+    "java_literal": "\"(25/25)\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14633",
+    "java_literal": "\"(25/25)\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14637",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14847",
+    "java_literal": "\"45\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14867",
+    "java_literal": "\"45\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14873",
+    "java_literal": "\"en-US\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14874",
+    "java_literal": "\"en-US\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14875",
+    "java_literal": "\"1\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14878",
+    "java_literal": "\"en-US\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14879",
+    "java_literal": "\"en-US\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14898",
+    "java_literal": "\"33\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14912",
+    "java_literal": "\"default_v2\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14918",
+    "java_literal": "\"33\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14919",
+    "java_literal": "\"37\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14924",
+    "java_literal": "\"default_v2\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14938",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14983",
+    "java_literal": "\"CT:\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14983",
+    "java_literal": "\":\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:14990",
+    "java_literal": "\"41\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15065",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15206",
+    "java_literal": "\"http\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15219",
+    "java_literal": "\"i\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15226",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15309",
+    "java_literal": "\"40\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15430",
+    "java_literal": "\"52\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15478",
+    "java_literal": "\"41\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15549",
+    "java_literal": "\"52\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15603",
+    "java_literal": "\"42\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15659",
+    "java_literal": "\"17\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15662",
+    "java_literal": "\"18\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15665",
+    "java_literal": "\"19\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15668",
+    "java_literal": "\"20\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15671",
+    "java_literal": "\"21\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15674",
+    "java_literal": "\"22\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15677",
+    "java_literal": "\"23\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15680",
+    "java_literal": "\"24\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15687",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15714",
+    "java_literal": "\"17\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15717",
+    "java_literal": "\"18\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15720",
+    "java_literal": "\"19\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15723",
+    "java_literal": "\"20\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15726",
+    "java_literal": "\"21\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15729",
+    "java_literal": "\"22\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15732",
+    "java_literal": "\"23\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15735",
+    "java_literal": "\"24\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15743",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15815",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15848",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15863",
+    "java_literal": "\"#\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:15915",
+    "java_literal": "\"#\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16271",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16272",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16298",
+    "java_literal": "\"/sites/index.php?c=location&a=checkin&v=midlet&f=\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16412",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16420",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16428",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16436",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16452",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16466",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16469",
+    "java_literal": "\"120x160\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16479",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16482",
+    "java_literal": "\"240x320\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16492",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16495",
+    "java_literal": "\"288x352\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16503",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16508",
+    "java_literal": "\"480x640\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16516",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16521",
+    "java_literal": "\"160x120\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16529",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16534",
+    "java_literal": "\"320x240\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16542",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16547",
+    "java_literal": "\"352x288\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16557",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16560",
+    "java_literal": "\"640x480\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16757",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16764",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16773",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16779",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16781",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16837",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16874",
+    "java_literal": "\"e\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16906",
+    "java_literal": "\"43\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16907",
+    "java_literal": "\"44\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16929",
+    "java_literal": "\"45\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:16941",
+    "java_literal": "\"45\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17196",
+    "java_literal": "\"allemo\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17304",
+    "java_literal": "\"allemo\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17342",
+    "java_literal": "\"P\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17679",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17684",
+    "java_literal": "\"phone.lac\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17687",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17687",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17687",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17693",
+    "java_literal": "\"com.nokia.mid.lac\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17697",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17697",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17697",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17700",
+    "java_literal": "\"com.sonyericsson.net.lac\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17704",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17704",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17704",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17707",
+    "java_literal": "\"com.samsung.cellid\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17711",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17711",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17711",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17714",
+    "java_literal": "\"lac\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17718",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17718",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17718",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17721",
+    "java_literal": "\"LocAreaCode\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17725",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17725",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17725",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17728",
+    "java_literal": "\"locareacode\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17734",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17738",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17743",
+    "java_literal": "\"IMSI\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17746",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17746",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17746",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17752",
+    "java_literal": "\"com.nokia.mid.mobinfo.IMSI\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17756",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17756",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17756",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17759",
+    "java_literal": "\"com.nokia.mid.imsi\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17765",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17765",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17765",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17771",
+    "java_literal": "\"phone.imsi\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17775",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17775",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17775",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17778",
+    "java_literal": "\"imsi\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17782",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17782",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17782",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17785",
+    "java_literal": "\"IMSI\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17791",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17795",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17800",
+    "java_literal": "\"Cell-ID\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17803",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17803",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17803",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17809",
+    "java_literal": "\"com.nokia.mid.cellid\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17813",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17813",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17813",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17816",
+    "java_literal": "\"com.nokia.mid.cellID\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17822",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17822",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17822",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17828",
+    "java_literal": "\"com.sonyericsson.net.cellid\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17832",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17832",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17832",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17835",
+    "java_literal": "\"com.samsung.cellid\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17841",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17841",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17841",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17847",
+    "java_literal": "\"com.samsung.cellID\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17853",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17853",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17853",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17859",
+    "java_literal": "\"com.samsung.cellId\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17865",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17865",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17865",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17871",
+    "java_literal": "\"com.siemens.cellid\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17875",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17875",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17875",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17878",
+    "java_literal": "\"CellID\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17884",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17884",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17884",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17890",
+    "java_literal": "\"phone.cid\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17896",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17896",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17896",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17902",
+    "java_literal": "\"phone.cID\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17908",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17908",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17908",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17914",
+    "java_literal": "\"phone.CellID\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17920",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17920",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17920",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17926",
+    "java_literal": "\"phone.Cellid\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17932",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17932",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17932",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17938",
+    "java_literal": "\"phone.Cell-ID\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17943",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17943",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17943",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17944",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17949",
+    "java_literal": "\"CellID\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17954",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17958",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17962",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17962",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17962",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17962",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17962",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17962",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17963",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17965",
+    "java_literal": "\"com.nokia.mid.mnc\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17971",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17971",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17971",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17977",
+    "java_literal": "\"com.nokia.mid.networkID\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17983",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17983",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17983",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17989",
+    "java_literal": "\"com.nokia.mid.networkid\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17995",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17995",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:17995",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18001",
+    "java_literal": "\"com.sonyericsson.net.cmnc\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18005",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18005",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18005",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18008",
+    "java_literal": "\"com.sonyericsson.net.mnc\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18014",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18014",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18014",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18020",
+    "java_literal": "\"phone.mnc\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18024",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18024",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18024",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18027",
+    "java_literal": "\"mnc\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18032",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18032",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18032",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18033",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18038",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18041",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18047",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18051",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18056",
+    "java_literal": "\"phone.mcc\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18059",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18059",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18059",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18065",
+    "java_literal": "\"com.sonyericsson.net.cmcc\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18069",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18069",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18069",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18072",
+    "java_literal": "\"com.sonyericsson.net.mcc\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18076",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18076",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18076",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18079",
+    "java_literal": "\"com.nokia.mid.mcc\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18085",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18085",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18085",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18091",
+    "java_literal": "\"com.nokia.mid.countrycode\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18097",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18097",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18097",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18103",
+    "java_literal": "\"com.nokia.mid.networkID\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18107",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18107",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18107",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18110",
+    "java_literal": "\"com.nokia.mid.networkid\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18116",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18116",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18116",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18122",
+    "java_literal": "\"mcc\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18127",
+    "java_literal": "\"null\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18127",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18127",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18128",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18133",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18136",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/aj.java:18142",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/ao.java:99",
+    "java_literal": "\" ,.;?!\""
+  },
+  {
+    "source": "artifacts/vineflower/ao.java:226",
+    "java_literal": "\"id\""
+  },
+  {
+    "source": "artifacts/vineflower/ao.java:226",
+    "java_literal": "\"org.jetbrains.java.decompiler.modules.decompiler.flow.FlattenStatementsHelper.getDirectNode(org.jetbrains.java.decompiler.modules.decompiler.stats.Statement)\""
+  },
+  {
+    "source": "artifacts/vineflower/ao.java:350",
+    "java_literal": "\" ERR:01 \""
+  },
+  {
+    "source": "artifacts/vineflower/ao.java:394",
+    "java_literal": "\"file:///\""
+  },
+  {
+    "source": "artifacts/vineflower/ao.java:399",
+    "java_literal": "\"...\""
+  },
+  {
+    "source": "artifacts/vineflower/ao.java:401",
+    "java_literal": "\"...\""
+  },
+  {
+    "source": "artifacts/vineflower/ao.java:421",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/ao.java:422",
+    "java_literal": "\".mp3\""
+  },
+  {
+    "source": "artifacts/vineflower/ao.java:423",
+    "java_literal": "\".gif\""
+  },
+  {
+    "source": "artifacts/vineflower/ao.java:423",
+    "java_literal": "\".jpeg\""
+  },
+  {
+    "source": "artifacts/vineflower/ao.java:423",
+    "java_literal": "\".jpg\""
+  },
+  {
+    "source": "artifacts/vineflower/ao.java:423",
+    "java_literal": "\".png\""
+  },
+  {
+    "source": "artifacts/vineflower/ao.java:425",
+    "java_literal": "\"...\""
+  },
+  {
+    "source": "artifacts/vineflower/ao.java:490",
+    "java_literal": "\"file:///\""
+  },
+  {
+    "source": "artifacts/vineflower/ao.java:553",
+    "java_literal": "\" ERR02: \""
+  },
+  {
+    "source": "artifacts/vineflower/ao.java:571",
+    "java_literal": "\" ERR02: \""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:599",
+    "java_literal": "\"32\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:604",
+    "java_literal": "\"30\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:609",
+    "java_literal": "\"31\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:933",
+    "java_literal": "\"11\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:975",
+    "java_literal": "\"99\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:977",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1018",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1021",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1125",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1138",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1151",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1160",
+    "java_literal": "\"99\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1168",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1181",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1199",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1232",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1241",
+    "java_literal": "\"99\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1252",
+    "java_literal": "\"99\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1276",
+    "java_literal": "\"99\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1304",
+    "java_literal": "\"99\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1336",
+    "java_literal": "\"  \""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1737",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1738",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1754",
+    "java_literal": "\"31\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1788",
+    "java_literal": "\"30\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1823",
+    "java_literal": "\"30\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1850",
+    "java_literal": "\"30\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1885",
+    "java_literal": "\"31\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1916",
+    "java_literal": "\"31\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:1952",
+    "java_literal": "\"31\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:2001",
+    "java_literal": "\"30\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:2055",
+    "java_literal": "\"30\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:2110",
+    "java_literal": "\"31\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:2203",
+    "java_literal": "\"31\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:2209",
+    "java_literal": "\"30\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:2237",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:2245",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:2392",
+    "java_literal": "\" - \""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:2631",
+    "java_literal": "\" (\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:2631",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:2631",
+    "java_literal": "\")\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:2640",
+    "java_literal": "\" (\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:2640",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:2640",
+    "java_literal": "\")\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:2758",
+    "java_literal": "\"...\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:2760",
+    "java_literal": "\"...\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:2814",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/au.java:2837",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:61",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:61",
+    "java_literal": "\"-\""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:64",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:67",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:70",
+    "java_literal": "\"< 1\""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:369",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:392",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:436",
+    "java_literal": "\":\""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:444",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:450",
+    "java_literal": "\"<a\""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:451",
+    "java_literal": "\"</a>\""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:463",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:475",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:477",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:482",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:482",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:484",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:517",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:530",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:539",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:560",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:564",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:581",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:602",
+    "java_literal": "\"href=\""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:684",
+    "java_literal": "\"id\""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:684",
+    "java_literal": "\"org.jetbrains.java.decompiler.modules.decompiler.flow.FlattenStatementsHelper.getDirectNode(org.jetbrains.java.decompiler.modules.decompiler.stats.Statement)\""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:791",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:817",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/av.java:842",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/ay.java:86",
+    "java_literal": "\"Invalid packet id:2\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:10",
+    "java_literal": "\"http://gateway.mig33.com/\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:11",
+    "java_literal": "\"gateway.mig33.com\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:12",
+    "java_literal": "\"25\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:120",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:123",
+    "java_literal": "\"25\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:124",
+    "java_literal": "\"25\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:125",
+    "java_literal": "\"26\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:127",
+    "java_literal": "\"gateway.mig33.com\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:128",
+    "java_literal": "\"25\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:283",
+    "java_literal": "\"<html><head><title>\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:283",
+    "java_literal": "\"</title></head><body><p>[\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:283",
+    "java_literal": "\"] \""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:283",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:293",
+    "java_literal": "\" & \""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:296",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:297",
+    "java_literal": "\"&\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:299",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:302",
+    "java_literal": "\"=\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:304",
+    "java_literal": "\"<input type=\\\"hidden\\\" name=\\\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:305",
+    "java_literal": "\"=\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:306",
+    "java_literal": "\"\\\" value=\\\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:307",
+    "java_literal": "\"=\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:308",
+    "java_literal": "\"\\\">\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:310",
+    "java_literal": "\"<input type=\\\"hidden\\\" name=\\\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:310",
+    "java_literal": "\"\\\" value=\\\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:310",
+    "java_literal": "\"\\\">\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:317",
+    "java_literal": "\"</p><br><form method=\\\"POST\\\" action=\\\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:319",
+    "java_literal": "\"\\\">\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:321",
+    "java_literal": "\"<input type=\\\"submit\\\" value=\\\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:323",
+    "java_literal": "\".\\\"></form></body></html>\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:325",
+    "java_literal": "\"</p><br><a href=\\\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:325",
+    "java_literal": "\"\\\">\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:325",
+    "java_literal": "\".</a>\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:325",
+    "java_literal": "\"</body></html>\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:477",
+    "java_literal": "\":D12:EX:\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:507",
+    "java_literal": "\":D12-EX:\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:542",
+    "java_literal": "\":D5:EX:\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:558",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:583",
+    "java_literal": "\":D5-EX:\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:670",
+    "java_literal": "\"25\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:684",
+    "java_literal": "\"http://\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:689",
+    "java_literal": "\"http://\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:705",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:708",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:711",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:750",
+    "java_literal": "\"26\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:753",
+    "java_literal": "\"26\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:755",
+    "java_literal": "\"9119\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:758",
+    "java_literal": "\"25\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:761",
+    "java_literal": "\"9119\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:767",
+    "java_literal": "\"25\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:770",
+    "java_literal": "\"25\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:773",
+    "java_literal": "\"26\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:777",
+    "java_literal": "\"gateway.mig33.com\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:779",
+    "java_literal": "\"25\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:909",
+    "java_literal": "\":D4:PS:\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:914",
+    "java_literal": "\":(1):\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:967",
+    "java_literal": "\":SD:RC:\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1021",
+    "java_literal": "\"(1):D7\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1036",
+    "java_literal": "\"(2):D8\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1052",
+    "java_literal": "\":D1:PS:\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1057",
+    "java_literal": "\":\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1067",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1082",
+    "java_literal": "\"EX:\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1120",
+    "java_literal": "\":RNC:RC\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1189",
+    "java_literal": "\":D4-EX:\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1202",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1270",
+    "java_literal": "\":PNR\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1437",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1473",
+    "java_literal": "\"J2MEv\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1551",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1552",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1562",
+    "java_literal": "\"J2MEv\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1564",
+    "java_literal": "\".\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1564",
+    "java_literal": "\".\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1689",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1840",
+    "java_literal": "\"PR:\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1843",
+    "java_literal": "\"RP:OK:\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1858",
+    "java_literal": "\"RT:\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:1865",
+    "java_literal": "\":\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:2097",
+    "java_literal": "\"/sites/index.php?c=chatroom&a=search&v=midlet\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:2156",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:2684",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:2685",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:2819",
+    "java_literal": "\";\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:2877",
+    "java_literal": "\"http://\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:2888",
+    "java_literal": "\"25\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:2892",
+    "java_literal": "\"25\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:2895",
+    "java_literal": "\"26\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:3041",
+    "java_literal": "\"(\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:3050",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:3059",
+    "java_literal": "\")\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:3641",
+    "java_literal": "\"http://\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:3652",
+    "java_literal": "\"25\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:3656",
+    "java_literal": "\"25\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:3659",
+    "java_literal": "\"26\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:3794",
+    "java_literal": "\"32\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:4124",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:4148",
+    "java_literal": "\"0\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:4310",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:4600",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:4704",
+    "java_literal": "\";\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:4744",
+    "java_literal": "\";\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:4802",
+    "java_literal": "\";\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:4860",
+    "java_literal": "\"(\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:4865",
+    "java_literal": "\")\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:5848",
+    "java_literal": "\":ERNM:RC\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:6123",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:6183",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:6410",
+    "java_literal": "\"/sites/index.php?c=photo&v=midlet&username=%s&a=home\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:6499",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:7284",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:7292",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:7351",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:7359",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:7618",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:8217",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:8453",
+    "java_literal": "\"41\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:8536",
+    "java_literal": "\"PR:\""
+  },
+  {
+    "source": "artifacts/vineflower/bc.java:8539",
+    "java_literal": "\"RC:\""
+  },
+  {
+    "source": "artifacts/vineflower/bd.java:14",
+    "java_literal": "\".mid\""
+  },
+  {
+    "source": "artifacts/vineflower/bd.java:15",
+    "java_literal": "\".mp3\""
+  },
+  {
+    "source": "artifacts/vineflower/bd.java:32",
+    "java_literal": "\"audio/x-wav\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:16",
+    "java_literal": "\"ACTION_NA\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:17",
+    "java_literal": "\"ACTION_WELCOME1STTIMEUSER_PAGE\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:18",
+    "java_literal": "\"ACTION_WELCOME_PAGE\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:19",
+    "java_literal": "\"ACTION_REGISTER_STEP1_PAGE\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:20",
+    "java_literal": "\"ACTION_LOGIN_PAGE\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:21",
+    "java_literal": "\"ACTION_CHANGELANGUAGE_PAGE\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:22",
+    "java_literal": "\"ACTION_REGISTER_STEP2_PAGE\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:23",
+    "java_literal": "\"ACTION_REGISTER_STEP3_PAGE\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:24",
+    "java_literal": "\"ACTION_CONNECTIONSETTING_PAGE\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:25",
+    "java_literal": "\"ACTION_REGISTER_STEP1_NAMEXIST\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:26",
+    "java_literal": "\"ACTION_REGISTER_STEP1_USEDSUGGESTEDNAME\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:27",
+    "java_literal": "\"ACTION_REGISTER_STEP2_FAILED\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:28",
+    "java_literal": "\"ACTION_REGISTER_STEP3_CODEACTIVATED\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:29",
+    "java_literal": "\"ACTION_REGISTER_STEP3_RESENDSMSCODE\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:30",
+    "java_literal": "\"ACTION_REGISTER_STEP3_REMINDLATER\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:31",
+    "java_literal": "\"ACTION_REGISTER_STEP2_SUCCESS\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:416",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:521",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:524",
+    "java_literal": "\"µ\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:526",
+    "java_literal": "\"µ\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:528",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:539",
+    "java_literal": "\"▲\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:541",
+    "java_literal": "\"▲\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:544",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:545",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:548",
+    "java_literal": "\"♣\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:549",
+    "java_literal": "\"♣\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:564",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:570",
+    "java_literal": "\"gamerz-\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:580",
+    "java_literal": "\"id\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:580",
+    "java_literal": "\"org.jetbrains.java.decompiler.modules.decompiler.flow.FlattenStatementsHelper.getDirectNode(org.jetbrains.java.decompiler.modules.decompiler.stats.Statement)\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:666",
+    "java_literal": "\"utmr=\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:674",
+    "java_literal": "\"&utmp=\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:686",
+    "java_literal": "\"http://www.mig33.com/sites/lib/ga_midlet.php?\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:690",
+    "java_literal": "\"&utmvid=\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:695",
+    "java_literal": "\"&hash=\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:700",
+    "java_literal": "\"gamerz-\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:751",
+    "java_literal": "\"sw\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:761",
+    "java_literal": "\"sh\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:771",
+    "java_literal": "\"cellid\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:776",
+    "java_literal": "\"lac\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:781",
+    "java_literal": "\"mnc\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:786",
+    "java_literal": "\"mcc\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:791",
+    "java_literal": "\"ver\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:796",
+    "java_literal": "\"lang\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:803",
+    "java_literal": "\"epoch\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:815",
+    "java_literal": "\"User-Agent\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:820",
+    "java_literal": "\"GET\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:844",
+    "java_literal": "\"Location\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:862",
+    "java_literal": "\"Content-Length\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:868",
+    "java_literal": "\"0\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:937",
+    "java_literal": "\"1\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:1062",
+    "java_literal": "\"[\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:1062",
+    "java_literal": "\"] \""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:1792",
+    "java_literal": "\"/sites/index.php?c=group&v=midlet&a=list_my_groups&e=3\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:1898",
+    "java_literal": "\"UTF-8\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:1906",
+    "java_literal": "\"UTF-8\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:1939",
+    "java_literal": "\"UTF-8\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:1943",
+    "java_literal": "\"UTF-8\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:2371",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:2642",
+    "java_literal": "\"UTF-8\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:2659",
+    "java_literal": "\"UTF-8\""
+  },
+  {
+    "source": "artifacts/vineflower/bj.java:2826",
+    "java_literal": "\"UTF-8\""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:121",
+    "java_literal": "\"P\""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:121",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:169",
+    "java_literal": "\"<prefetch\""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:174",
+    "java_literal": "\"url=\""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:268",
+    "java_literal": "\"local:\""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:269",
+    "java_literal": "\":\""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:270",
+    "java_literal": "\"migbotLoading\""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:274",
+    "java_literal": "\"migbotHappy\""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:276",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:281",
+    "java_literal": "\"/icon_dialog_happy.png\""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:319",
+    "java_literal": "\"UTF-8\""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:351",
+    "java_literal": "\"id\""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:351",
+    "java_literal": "\"org.jetbrains.java.decompiler.modules.decompiler.flow.FlattenStatementsHelper.getDirectNode(org.jetbrains.java.decompiler.modules.decompiler.stats.Statement)\""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:410",
+    "java_literal": "\"id\""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:410",
+    "java_literal": "\"org.jetbrains.java.decompiler.modules.decompiler.flow.FlattenStatementsHelper.getDirectNode(org.jetbrains.java.decompiler.modules.decompiler.stats.Statement)\""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:432",
+    "java_literal": "\"http://www.mig33.com/sites/c=migworld&v=midlet&a=new_home\""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:445",
+    "java_literal": "\"http://www.mig33.com/sites/c=migworld&v=midlet&a=new_home\""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:470",
+    "java_literal": "\"http://www.mig33.com/sites/c=migworld&v=midlet&a=new_home\""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:475",
+    "java_literal": "\"http://www.mig33.com/sites/c=migworld&v=midlet&a=new_home\""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:488",
+    "java_literal": "\"id\""
+  },
+  {
+    "source": "artifacts/vineflower/bl.java:488",
+    "java_literal": "\"org.jetbrains.java.decompiler.modules.decompiler.flow.FlattenStatementsHelper.getDirectNode(org.jetbrains.java.decompiler.modules.decompiler.stats.Statement)\""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:41",
+    "java_literal": "\"encoding=jpeg\""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:54",
+    "java_literal": "\"encoding=jpeg\""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:74",
+    "java_literal": "\"ERR06: \""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:76",
+    "java_literal": "\"ERR05: \""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:78",
+    "java_literal": "\"ERR04: \""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:80",
+    "java_literal": "\"ERR03: \""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:85",
+    "java_literal": "\"TotalMEM: \""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:85",
+    "java_literal": "\" FreeMEM: \""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:90",
+    "java_literal": "\"ERR02: \""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:98",
+    "java_literal": "\"ERR01: \""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:113",
+    "java_literal": "\"&width=120&height=160\""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:115",
+    "java_literal": "\"&width=320&height=240\""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:119",
+    "java_literal": "\"&width=120&height=160\""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:122",
+    "java_literal": "\"&width=240&height=320\""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:125",
+    "java_literal": "\"&width=288&height=352\""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:128",
+    "java_literal": "\"&width=480&height=640\""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:131",
+    "java_literal": "\"&width=160&height=120\""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:134",
+    "java_literal": "\"&width=320&height=240\""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:137",
+    "java_literal": "\"&width=352&height=288\""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:140",
+    "java_literal": "\"&width=640&height=480\""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:147",
+    "java_literal": "\"capture://image\""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:149",
+    "java_literal": "\"capture://video\""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:162",
+    "java_literal": "\"VideoControl\""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:165",
+    "java_literal": "\"EricssonW300c\""
+  },
+  {
+    "source": "artifacts/vineflower/d.java:179",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/h.java:54",
+    "java_literal": "\":D5A:EX:\""
+  },
+  {
+    "source": "artifacts/vineflower/h.java:70",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/h.java:96",
+    "java_literal": "\":D5A-EX:\""
+  },
+  {
+    "source": "artifacts/vineflower/h.java:195",
+    "java_literal": "\":D1A:PS:\""
+  },
+  {
+    "source": "artifacts/vineflower/h.java:200",
+    "java_literal": "\":\""
+  },
+  {
+    "source": "artifacts/vineflower/h.java:226",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/h.java:241",
+    "java_literal": "\"EX:\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:33",
+    "java_literal": "\"32\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:41",
+    "java_literal": "\"32\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:49",
+    "java_literal": "\"32\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:195",
+    "java_literal": "\"50\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:209",
+    "java_literal": "\"50\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:319",
+    "java_literal": "\"49\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:326",
+    "java_literal": "\"49\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:358",
+    "java_literal": "\"46\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:386",
+    "java_literal": "\"33\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:388",
+    "java_literal": "\"37\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:397",
+    "java_literal": "\"33\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:424",
+    "java_literal": "\"37\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:455",
+    "java_literal": "\"37\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:489",
+    "java_literal": "\"32\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:574",
+    "java_literal": "\"49\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:623",
+    "java_literal": "\"50\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:664",
+    "java_literal": "\"46\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:688",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:699",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:710",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:721",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:732",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:754",
+    "java_literal": "\"en-US\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:787",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:798",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/j.java:831",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:192",
+    "java_literal": "\"id\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:192",
+    "java_literal": "\"org.jetbrains.java.decompiler.modules.decompiler.flow.FlattenStatementsHelper.getDirectNode(org.jetbrains.java.decompiler.modules.decompiler.stats.Statement)\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:542",
+    "java_literal": "\"/sites/index.php?c=migworld&v=midlet&a=get_mobpage\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:646",
+    "java_literal": "\"tabOrdering[\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:646",
+    "java_literal": "\"]: \""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:758",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:860",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1092",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1268",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1277",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1290",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1299",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1334",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1365",
+    "java_literal": "\"search for contact\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1371",
+    "java_literal": "\"search for contact\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1375",
+    "java_literal": "\"search for contact: Cannot find it in contact list\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1385",
+    "java_literal": "\"search for contact: FOUND contact \""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1398",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1450",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1459",
+    "java_literal": "\"0\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1469",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:300",
+    "java_literal": "\"▲\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:300",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:300",
+    "java_literal": "\"▲\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:439",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:651",
+    "java_literal": "\"-2\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:656",
+    "java_literal": "\"-2\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:661",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:681",
+    "java_literal": "\"-2\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:686",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:731",
+    "java_literal": "\"-2\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:736",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:800",
+    "java_literal": "\"-2\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:805",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:823",
+    "java_literal": "\"-2\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:958",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:964",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:968",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:970",
+    "java_literal": "\"∫\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:979",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1018",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1026",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1030",
+    "java_literal": "\"0\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1033",
+    "java_literal": "\"0\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1034",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1044",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1047",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1048",
+    "java_literal": "\"±\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1049",
+    "java_literal": "\"Ω\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1050",
+    "java_literal": "\"µ\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1051",
+    "java_literal": "\"♣\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1052",
+    "java_literal": "\"▲\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1053",
+    "java_literal": "\"∫\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1056",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1057",
+    "java_literal": "\": \""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1059",
+    "java_literal": "\": \""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1063",
+    "java_literal": "\"¤¤¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1064",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1065",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1070",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1070",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1072",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1077",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1077",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1080",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1088",
+    "java_literal": "\"µ\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1088",
+    "java_literal": "\"µ\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1093",
+    "java_literal": "\"-1\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1110",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1129",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1143",
+    "java_literal": "\"±\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1143",
+    "java_literal": "\"±\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1151",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1152",
+    "java_literal": "\"±\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1154",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1157",
+    "java_literal": "\"µ-2µ\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1223",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1223",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1223",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1227",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1227",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1227",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1249",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1249",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1249",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1252",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1252",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1252",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1278",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1278",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1278",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1282",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1282",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1282",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1314",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1314",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1314",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1318",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1318",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1318",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1330",
+    "java_literal": "\"±\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1341",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1341",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1341",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1343",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1343",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1343",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1353",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1354",
+    "java_literal": "\"±\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1370",
+    "java_literal": "\"-2\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1380",
+    "java_literal": "\"-2\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1382",
+    "java_literal": "\"0\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1410",
+    "java_literal": "\"-2\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1412",
+    "java_literal": "\"0\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1452",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1456",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1458",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1459",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1473",
+    "java_literal": "\"∫\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1484",
+    "java_literal": "\"±\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1491",
+    "java_literal": "\"±\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1520",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1532",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1827",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1834",
+    "java_literal": "\"&\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1837",
+    "java_literal": "\"=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1854",
+    "java_literal": "\"&\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1857",
+    "java_literal": "\"=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1864",
+    "java_literal": "\"&\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1867",
+    "java_literal": "\"=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1874",
+    "java_literal": "\"&\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1877",
+    "java_literal": "\"=on\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1885",
+    "java_literal": "\"&\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1888",
+    "java_literal": "\"=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1895",
+    "java_literal": "\"&\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1898",
+    "java_literal": "\"=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1903",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1903",
+    "java_literal": "\"%20\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1904",
+    "java_literal": "\"1\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1905",
+    "java_literal": "\"get\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1906",
+    "java_literal": "\"?\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:1939",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2088",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2091",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2222",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2235",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2261",
+    "java_literal": "\"</html>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2261",
+    "java_literal": "\"</head>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2261",
+    "java_literal": "\"</body>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2261",
+    "java_literal": "\"</style>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2265",
+    "java_literal": "\"<html>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2269",
+    "java_literal": "\"<title>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2273",
+    "java_literal": "\"</title>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2278",
+    "java_literal": "\"</textarea>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2298",
+    "java_literal": "\"<b>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2298",
+    "java_literal": "\"<strong>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2298",
+    "java_literal": "\"<em>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2303",
+    "java_literal": "\"<big>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2308",
+    "java_literal": "\"<small>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2313",
+    "java_literal": "\"<u>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2318",
+    "java_literal": "\"</u>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2319",
+    "java_literal": "\"</i>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2320",
+    "java_literal": "\"</b>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2321",
+    "java_literal": "\"</big>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2322",
+    "java_literal": "\"</small>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2323",
+    "java_literal": "\"</strong>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2324",
+    "java_literal": "\"</em>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2325",
+    "java_literal": "\"<i>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2330",
+    "java_literal": "\"<center>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2335",
+    "java_literal": "\"</center>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2336",
+    "java_literal": "\"</form>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2341",
+    "java_literal": "\"</div>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2348",
+    "java_literal": "\"</p>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2349",
+    "java_literal": "\"</a>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2360",
+    "java_literal": "\"</span>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2365",
+    "java_literal": "\"</menu>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2374",
+    "java_literal": "\"<br>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2390",
+    "java_literal": "\"</\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2391",
+    "java_literal": "\"<\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2399",
+    "java_literal": "\"&#\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2434",
+    "java_literal": "\"&copy;\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2434",
+    "java_literal": "\"(c)\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2434",
+    "java_literal": "\"&amp;\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2434",
+    "java_literal": "\"&\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2434",
+    "java_literal": "\"&lt;\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2434",
+    "java_literal": "\"<\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2434",
+    "java_literal": "\"&gt;\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2434",
+    "java_literal": "\">\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2434",
+    "java_literal": "\"&nbsp;\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2434",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2441",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2475",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2484",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2485",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2511",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2517",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2526",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2618",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2619",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2640",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2650",
+    "java_literal": "\"<textarea\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2651",
+    "java_literal": "\"<div\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2652",
+    "java_literal": "\"<body\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2658",
+    "java_literal": "\"bgcolor=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2659",
+    "java_literal": "\"background=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2668",
+    "java_literal": "\"stretched\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2680",
+    "java_literal": "\"<prefetch\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2683",
+    "java_literal": "\"url=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2690",
+    "java_literal": "\"<p\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2691",
+    "java_literal": "\"<span\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2692",
+    "java_literal": "\"<a\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2693",
+    "java_literal": "\"<img\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2694",
+    "java_literal": "\"<form\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2695",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2696",
+    "java_literal": "\"get\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2700",
+    "java_literal": "\"method=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2701",
+    "java_literal": "\"action=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2712",
+    "java_literal": "\"<input\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2713",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2714",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2715",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2717",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2722",
+    "java_literal": "\"type=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2723",
+    "java_literal": "\"name=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2724",
+    "java_literal": "\"value=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2725",
+    "java_literal": "\"checked\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2726",
+    "java_literal": "\"alt=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2727",
+    "java_literal": "\"size=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2748",
+    "java_literal": "\"text\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2751",
+    "java_literal": "\"hidden\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2758",
+    "java_literal": "\"text\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2758",
+    "java_literal": "\"password\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2759",
+    "java_literal": "\"submit\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2759",
+    "java_literal": "\"reset\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2760",
+    "java_literal": "\"checkbox\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2823",
+    "java_literal": "\"password\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2868",
+    "java_literal": "\"<select\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2869",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2875",
+    "java_literal": "\"name=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2876",
+    "java_literal": "\"size=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2890",
+    "java_literal": "\"<option\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2892",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2896",
+    "java_literal": "\"value=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2897",
+    "java_literal": "\"selected\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2910",
+    "java_literal": "\"<menu \""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2913",
+    "java_literal": "\"title=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2921",
+    "java_literal": "\"<menuitem\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2928",
+    "java_literal": "\"label=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2929",
+    "java_literal": "\"href=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2947",
+    "java_literal": "\"<style\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2949",
+    "java_literal": "\"midletTheme\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2958",
+    "java_literal": "\"<table\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2959",
+    "java_literal": "\"<tr\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2972",
+    "java_literal": "\"cols=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:2986",
+    "java_literal": "\"<td\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3031",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3037",
+    "java_literal": "\"src=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3038",
+    "java_literal": "\"style=\\\"float:\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3039",
+    "java_literal": "\"right\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3042",
+    "java_literal": "\"hspace=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3043",
+    "java_literal": "\"vspace=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3044",
+    "java_literal": "\"width=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3045",
+    "java_literal": "\"height=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3117",
+    "java_literal": "\"href=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3119",
+    "java_literal": "\"mig33:\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3123",
+    "java_literal": "\".wav\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3123",
+    "java_literal": "\".mid\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3123",
+    "java_literal": "\".mp3\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3143",
+    "java_literal": "\"style=\\\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3149",
+    "java_literal": "\"color:\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3150",
+    "java_literal": "\"background-color:\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3151",
+    "java_literal": "\";\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3162",
+    "java_literal": "\";\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3231",
+    "java_literal": "\"style=\\\"color:\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3242",
+    "java_literal": "\"style=\\\"\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3248",
+    "java_literal": "\"color:\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3249",
+    "java_literal": "\"background-color:\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3250",
+    "java_literal": "\"display:\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3251",
+    "java_literal": "\";\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3257",
+    "java_literal": "\";\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3265",
+    "java_literal": "\"block\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3269",
+    "java_literal": "\";\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3278",
+    "java_literal": "\";\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3321",
+    "java_literal": "\"name=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3322",
+    "java_literal": "\"rows=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3323",
+    "java_literal": "\"cols=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3324",
+    "java_literal": "\"alt=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3325",
+    "java_literal": "\"size=\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3363",
+    "java_literal": "\"</option>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3368",
+    "java_literal": "\"</select>\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3401",
+    "java_literal": "\"</table\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3428",
+    "java_literal": "\"</tr\""
+  },
+  {
+    "source": "artifacts/vineflower/s.java:3429",
+    "java_literal": "\"</td\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:149",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:154",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:161",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:168",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:175",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:189",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:133",
+    "java_literal": "\"socket://\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:133",
+    "java_literal": "\":\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:212",
+    "java_literal": "\"Set-Cookie\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:226",
+    "java_literal": "\"Set-Cookie\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:250",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:256",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:257",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:257",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:261",
+    "java_literal": "\"<\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:268",
+    "java_literal": "\"<\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:272",
+    "java_literal": "\">\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:279",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:282",
+    "java_literal": "\"<\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:282",
+    "java_literal": "\">\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:298",
+    "java_literal": "\"sw\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:298",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:299",
+    "java_literal": "\"sh\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:299",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:300",
+    "java_literal": "\"cellid\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:301",
+    "java_literal": "\"lac\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:302",
+    "java_literal": "\"mnc\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:303",
+    "java_literal": "\"mcc\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:304",
+    "java_literal": "\"ver\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:305",
+    "java_literal": "\"lang\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:306",
+    "java_literal": "\"epoch\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:306",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:308",
+    "java_literal": "\"sid\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:313",
+    "java_literal": "\"User-Agent\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:313",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:315",
+    "java_literal": "\"User-Agent\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:321",
+    "java_literal": "\"Cookie\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:325",
+    "java_literal": "\"Pragma\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:325",
+    "java_literal": "\"no-cache\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:332",
+    "java_literal": "\"id\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:332",
+    "java_literal": "\"org.jetbrains.java.decompiler.modules.decompiler.flow.FlattenStatementsHelper.getDirectNode(org.jetbrains.java.decompiler.modules.decompiler.stats.Statement)\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:371",
+    "java_literal": "\":D11:RDF:\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:400",
+    "java_literal": "\":D9:PR:\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:406",
+    "java_literal": "\":EX:\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:508",
+    "java_literal": "\"Content-Type\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:508",
+    "java_literal": "\"application/x-www-form-urlencoded\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:509",
+    "java_literal": "\"POST\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:510",
+    "java_literal": "\"Content-Length\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:514",
+    "java_literal": "\"GET\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:525",
+    "java_literal": "\"Content-Length\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:565",
+    "java_literal": "\"https\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:599",
+    "java_literal": "\"Content-Type\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:599",
+    "java_literal": "\"application/x-www-form-urlencoded\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:600",
+    "java_literal": "\"POST\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:602",
+    "java_literal": "\"Content-Length\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:606",
+    "java_literal": "\"GET\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:621",
+    "java_literal": "\"Location\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:629",
+    "java_literal": "\"Content-Length\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:631",
+    "java_literal": "\"0\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:671",
+    "java_literal": "\"ERR01: \""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:671",
+    "java_literal": "\" url:\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:675",
+    "java_literal": "\" :\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:680",
+    "java_literal": "\"ERR02: \""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:680",
+    "java_literal": "\" :\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:680",
+    "java_literal": "\" url:\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:706",
+    "java_literal": "\"http://\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:707",
+    "java_literal": "\"http://\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:713",
+    "java_literal": "\"Content-Type\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:713",
+    "java_literal": "\"image/gif\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:714",
+    "java_literal": "\"POST\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:716",
+    "java_literal": "\"Content-Length\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:718",
+    "java_literal": "\"data to send\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:721",
+    "java_literal": "\"GET\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:727",
+    "java_literal": "\"ERR03: \""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:727",
+    "java_literal": "\":Response Code: \""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:727",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:731",
+    "java_literal": "\"Content-Length\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:732",
+    "java_literal": "\"0\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:758",
+    "java_literal": "\"ERR04: \""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:765",
+    "java_literal": "\"ERR05: \""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:765",
+    "java_literal": "\" :\""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:772",
+    "java_literal": "\"ERR06: \""
+  },
+  {
+    "source": "artifacts/vineflower/u.java:772",
+    "java_literal": "\" :\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:720",
+    "java_literal": "\"+\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:959",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:963",
+    "java_literal": "\"\\n\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:989",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1011",
+    "java_literal": "\"\\n\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1015",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1027",
+    "java_literal": "\"http\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1079",
+    "java_literal": "\"%s\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1230",
+    "java_literal": "\"47\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1268",
+    "java_literal": "\"47\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1674",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1689",
+    "java_literal": "\"black\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1693",
+    "java_literal": "\"blue\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1697",
+    "java_literal": "\"cyan\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1701",
+    "java_literal": "\"gray\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1701",
+    "java_literal": "\"grey\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1705",
+    "java_literal": "\"green\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1709",
+    "java_literal": "\"magenta\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1713",
+    "java_literal": "\"red\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1717",
+    "java_literal": "\"white\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1721",
+    "java_literal": "\"yellow\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1722",
+    "java_literal": "\"#\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1726",
+    "java_literal": "\"0x\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1746",
+    "java_literal": "\":\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1749",
+    "java_literal": "\"0\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1751",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1754",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1756",
+    "java_literal": "\"PM\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1758",
+    "java_literal": "\"AM\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1802",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1813",
+    "java_literal": "\"%20\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1825",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1840",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1844",
+    "java_literal": "\"<\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1851",
+    "java_literal": "\"<\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1855",
+    "java_literal": "\">\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1862",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1865",
+    "java_literal": "\"<\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1865",
+    "java_literal": "\">\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1944",
+    "java_literal": "\"%a\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1944",
+    "java_literal": "\"%b\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1993",
+    "java_literal": "\"microedition.media.version\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1995",
+    "java_literal": "\"supports.video.capture\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1996",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:1998",
+    "java_literal": "\"supports.video.capture\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:2001",
+    "java_literal": "\"true\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:2013",
+    "java_literal": "\"microedition.io.file.FileConnection.version\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:2359",
+    "java_literal": "\" ,.;?!\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:2446",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:2748",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:2906",
+    "java_literal": "\"2\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:2906",
+    "java_literal": "\"3\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:2918",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:2931",
+    "java_literal": "\"TC\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:2942",
+    "java_literal": "\"\\n\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:2964",
+    "java_literal": "\"3\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:2964",
+    "java_literal": "\"3\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:2974",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3025",
+    "java_literal": "\"1\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3025",
+    "java_literal": "\"3\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3101",
+    "java_literal": "\"zh-CN\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3104",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3108",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3118",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3119",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3124",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3125",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3168",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3171",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3177",
+    "java_literal": "\"zh-CN\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3181",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3182",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3187",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3188",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3210",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3211",
+    "java_literal": "\":\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3215",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3215",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3218",
+    "java_literal": "\"http\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3220",
+    "java_literal": "\"http://\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3223",
+    "java_literal": "\"http://\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3226",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3228",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3229",
+    "java_literal": "\"?\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3230",
+    "java_literal": "\"?\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3234",
+    "java_literal": "\"#\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3235",
+    "java_literal": "\"#\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3239",
+    "java_literal": "\"//\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3240",
+    "java_literal": "\"http:\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3243",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3247",
+    "java_literal": "\"..\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3248",
+    "java_literal": "\".\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3249",
+    "java_literal": "\".\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3250",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3253",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3257",
+    "java_literal": "\".\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3258",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3268",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3271",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3273",
+    "java_literal": "\"..\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3274",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3275",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3280",
+    "java_literal": "\"..\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3281",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3289",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3294",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3299",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3310",
+    "java_literal": "\"= \""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3310",
+    "java_literal": "\"=\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3310",
+    "java_literal": "\"<\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3310",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3310",
+    "java_literal": "\"/>\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3310",
+    "java_literal": "\">\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3310",
+    "java_literal": "\">\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3310",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3311",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3351",
+    "java_literal": "\"\\\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3361",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3365",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3436",
+    "java_literal": "\"...\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3439",
+    "java_literal": "\"...\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3446",
+    "java_literal": "\"...\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3448",
+    "java_literal": "\"...\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3459",
+    "java_literal": "\"...\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3461",
+    "java_literal": "\"...\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3495",
+    "java_literal": "\":\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3496",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3496",
+    "java_literal": "\".\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3498",
+    "java_literal": "\"//\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3499",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3504",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3510",
+    "java_literal": "\":\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3510",
+    "java_literal": "\"http\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3510",
+    "java_literal": "\"http://\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3512",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3519",
+    "java_literal": "\"http://\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3520",
+    "java_literal": "\"https://\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3531",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3537",
+    "java_literal": "\"https://\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3539",
+    "java_literal": "\"http://\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3550",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3554",
+    "java_literal": "\"http\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3555",
+    "java_literal": "\"http://\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3556",
+    "java_literal": "\"http://\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3559",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3560",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3562",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3562",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3581",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3612",
+    "java_literal": "\"allemo\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3614",
+    "java_literal": "\"allemo\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3971",
+    "java_literal": "\"id\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3971",
+    "java_literal": "\"org.jetbrains.java.decompiler.modules.decompiler.flow.FlattenStatementsHelper.getDirectNode(org.jetbrains.java.decompiler.modules.decompiler.stats.Statement)\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:3999",
+    "java_literal": "\"40\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:4003",
+    "java_literal": "\"40\""
+  }
+]

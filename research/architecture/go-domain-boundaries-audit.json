@@ -1,0 +1,3965 @@
+{
+  "application_method_definitions": {
+    "AllowPacket": {
+      "exported": true,
+      "file": "internal/services/native_port.go",
+      "line": 10
+    },
+    "BeginResponse": {
+      "exported": true,
+      "file": "internal/services/native_port.go",
+      "line": 16
+    },
+    "BeginWrite": {
+      "exported": true,
+      "file": "internal/services/native_port.go",
+      "line": 9
+    },
+    "BrowserPage": {
+      "exported": true,
+      "file": "internal/services/browser.go",
+      "line": 76
+    },
+    "Catalog": {
+      "exported": true,
+      "file": "internal/services/product_catalog.go",
+      "line": 154
+    },
+    "ChangeOperatorCategory": {
+      "exported": true,
+      "file": "internal/services/browser.go",
+      "line": 184
+    },
+    "ChatGroups": {
+      "exported": true,
+      "file": "internal/services/history.go",
+      "line": 10
+    },
+    "ChatHistory": {
+      "exported": true,
+      "file": "internal/services/history.go",
+      "line": 31
+    },
+    "Close": {
+      "exported": true,
+      "file": "internal/services/application.go",
+      "line": 140
+    },
+    "ConfigureOperators": {
+      "exported": true,
+      "file": "internal/services/operator.go",
+      "line": 19
+    },
+    "ContactsSnapshot": {
+      "exported": true,
+      "file": "internal/services/contact_api.go",
+      "line": 9
+    },
+    "DropSession": {
+      "exported": true,
+      "file": "internal/services/application.go",
+      "line": 582
+    },
+    "FeaturePage": {
+      "exported": true,
+      "file": "internal/services/page_service.go",
+      "line": 11
+    },
+    "FinishWrite": {
+      "exported": true,
+      "file": "internal/services/native_port.go",
+      "line": 13
+    },
+    "Handle": {
+      "exported": true,
+      "file": "internal/services/application.go",
+      "line": 188
+    },
+    "Initialize": {
+      "exported": true,
+      "file": "internal/services/application.go",
+      "line": 113
+    },
+    "LanguageResource": {
+      "exported": true,
+      "file": "internal/services/native_services.go",
+      "line": 258
+    },
+    "ListReports": {
+      "exported": true,
+      "file": "internal/services/reports.go",
+      "line": 165
+    },
+    "LoginBrowser": {
+      "exported": true,
+      "file": "internal/services/browser.go",
+      "line": 14
+    },
+    "LoginOperator": {
+      "exported": true,
+      "file": "internal/services/browser.go",
+      "line": 95
+    },
+    "LogoutBrowser": {
+      "exported": true,
+      "file": "internal/services/browser.go",
+      "line": 59
+    },
+    "LogoutOperator": {
+      "exported": true,
+      "file": "internal/services/browser.go",
+      "line": 154
+    },
+    "MarkChatRead": {
+      "exported": true,
+      "file": "internal/services/transcripts.go",
+      "line": 55
+    },
+    "Media": {
+      "exported": true,
+      "file": "internal/services/media.go",
+      "line": 222
+    },
+    "OperatorDashboard": {
+      "exported": true,
+      "file": "internal/services/browser.go",
+      "line": 205
+    },
+    "OperatorSession": {
+      "exported": true,
+      "file": "internal/services/browser.go",
+      "line": 141
+    },
+    "OperatorsEnabled": {
+      "exported": true,
+      "file": "internal/services/browser.go",
+      "line": 89
+    },
+    "PublicURL": {
+      "exported": true,
+      "file": "internal/services/session_service.go",
+      "line": 10
+    },
+    "PushQueue": {
+      "exported": true,
+      "file": "internal/services/native_port.go",
+      "line": 18
+    },
+    "ReportDetails": {
+      "exported": true,
+      "file": "internal/services/reports.go",
+      "line": 183
+    },
+    "ReviewOperatorItem": {
+      "exported": true,
+      "file": "internal/services/browser.go",
+      "line": 169
+    },
+    "ReviewReport": {
+      "exported": true,
+      "file": "internal/services/reports.go",
+      "line": 174
+    },
+    "Run": {
+      "exported": true,
+      "file": "internal/services/presence.go",
+      "line": 14
+    },
+    "SendChatMessage": {
+      "exported": true,
+      "file": "internal/services/transcripts.go",
+      "line": 94
+    },
+    "Session": {
+      "exported": true,
+      "file": "internal/services/session_service.go",
+      "line": 27
+    },
+    "SetRoomModerator": {
+      "exported": true,
+      "file": "internal/services/application.go",
+      "line": 341
+    },
+    "SyncChat": {
+      "exported": true,
+      "file": "internal/services/transcripts.go",
+      "line": 31
+    },
+    "TryBeginResponse": {
+      "exported": true,
+      "file": "internal/services/native_port.go",
+      "line": 17
+    },
+    "accountNames": {
+      "exported": false,
+      "file": "internal/services/identity.go",
+      "line": 134
+    },
+    "active": {
+      "exported": false,
+      "file": "internal/services/application.go",
+      "line": 172
+    },
+    "activityPacket": {
+      "exported": false,
+      "file": "internal/services/native_activities.go",
+      "line": 52
+    },
+    "activityPageOwner": {
+      "exported": false,
+      "file": "internal/services/native_activities.go",
+      "line": 23
+    },
+    "allowActivityPacket": {
+      "exported": false,
+      "file": "internal/services/native_activities.go",
+      "line": 146
+    },
+    "allowPacket": {
+      "exported": false,
+      "file": "internal/services/delivery.go",
+      "line": 161
+    },
+    "applyStoreTheme": {
+      "exported": false,
+      "file": "internal/services/store_themes.go",
+      "line": 44
+    },
+    "beginResponse": {
+      "exported": false,
+      "file": "internal/services/contact_ordering.go",
+      "line": 24
+    },
+    "beginWrite": {
+      "exported": false,
+      "file": "internal/services/delivery.go",
+      "line": 27
+    },
+    "blockListPage": {
+      "exported": false,
+      "file": "internal/services/blocking.go",
+      "line": 51
+    },
+    "blockUser": {
+      "exported": false,
+      "file": "internal/services/blocking.go",
+      "line": 13
+    },
+    "blocksIncoming": {
+      "exported": false,
+      "file": "internal/services/blocking.go",
+      "line": 85
+    },
+    "broadcastActivity": {
+      "exported": false,
+      "file": "internal/services/native_activities.go",
+      "line": 127
+    },
+    "broadcastAvatar": {
+      "exported": false,
+      "file": "internal/services/media.go",
+      "line": 200
+    },
+    "broadcastContactStatus": {
+      "exported": false,
+      "file": "internal/services/contacts.go",
+      "line": 383
+    },
+    "broadcastPresence": {
+      "exported": false,
+      "file": "internal/services/application.go",
+      "line": 380
+    },
+    "browserSessionCapacity": {
+      "exported": false,
+      "file": "internal/services/browser.go",
+      "line": 37
+    },
+    "cacheIdentity": {
+      "exported": false,
+      "file": "internal/services/identity.go",
+      "line": 109
+    },
+    "canContact": {
+      "exported": false,
+      "file": "internal/services/identity.go",
+      "line": 274
+    },
+    "canReadPhoto": {
+      "exported": false,
+      "file": "internal/services/media.go",
+      "line": 126
+    },
+    "canViewActivity": {
+      "exported": false,
+      "file": "internal/services/service_pages.go",
+      "line": 126
+    },
+    "canViewProfile": {
+      "exported": false,
+      "file": "internal/services/identity.go",
+      "line": 291
+    },
+    "cancelBlockedDeliveries": {
+      "exported": false,
+      "file": "internal/services/blocking.go",
+      "line": 30
+    },
+    "cancelGroupDeliveries": {
+      "exported": false,
+      "file": "internal/services/delivery.go",
+      "line": 224
+    },
+    "cancelKickVote": {
+      "exported": false,
+      "file": "internal/services/votes.go",
+      "line": 122
+    },
+    "cancelRoomDeliveries": {
+      "exported": false,
+      "file": "internal/services/delivery.go",
+      "line": 213
+    },
+    "catalogEmoticon": {
+      "exported": false,
+      "file": "internal/services/emoticons.go",
+      "line": 147
+    },
+    "catalogPage": {
+      "exported": false,
+      "file": "internal/services/page_routes.go",
+      "line": 84
+    },
+    "ccURL": {
+      "exported": false,
+      "file": "internal/services/community_pages.go",
+      "line": 95
+    },
+    "changeMobilePage": {
+      "exported": false,
+      "file": "internal/services/identity_pages.go",
+      "line": 369
+    },
+    "changePasswordPage": {
+      "exported": false,
+      "file": "internal/services/identity_pages.go",
+      "line": 340
+    },
+    "clearKickVote": {
+      "exported": false,
+      "file": "internal/services/votes.go",
+      "line": 116
+    },
+    "commercePage": {
+      "exported": false,
+      "file": "internal/services/commerce_pages.go",
+      "line": 63
+    },
+    "communityPage": {
+      "exported": false,
+      "file": "internal/services/community_pages.go",
+      "line": 145
+    },
+    "contactFailure": {
+      "exported": false,
+      "file": "internal/services/contacts.go",
+      "line": 155
+    },
+    "contactOperation": {
+      "exported": false,
+      "file": "internal/services/contacts.go",
+      "line": 188
+    },
+    "contactPacket": {
+      "exported": false,
+      "file": "internal/services/contacts.go",
+      "line": 36
+    },
+    "contactPrefix": {
+      "exported": false,
+      "file": "internal/services/contact_ordering.go",
+      "line": 47
+    },
+    "contactSync": {
+      "exported": false,
+      "file": "internal/services/contacts.go",
+      "line": 69
+    },
+    "deliveryGate": {
+      "exported": false,
+      "file": "internal/services/delivery.go",
+      "line": 16
+    },
+    "editIdentityPage": {
+      "exported": false,
+      "file": "internal/services/identity_pages.go",
+      "line": 300
+    },
+    "enqueue": {
+      "exported": false,
+      "file": "internal/services/delivery.go",
+      "line": 51
+    },
+    "expandCommand": {
+      "exported": false,
+      "file": "internal/services/commands.go",
+      "line": 57
+    },
+    "expireSessions": {
+      "exported": false,
+      "file": "internal/services/presence.go",
+      "line": 85
+    },
+    "featureURL": {
+      "exported": false,
+      "file": "internal/services/service_pages.go",
+      "line": 69
+    },
+    "finishWrite": {
+      "exported": false,
+      "file": "internal/services/delivery.go",
+      "line": 333
+    },
+    "flushEmoticonCatalog": {
+      "exported": false,
+      "file": "internal/services/emoticons.go",
+      "line": 225
+    },
+    "flushOwnMessages": {
+      "exported": false,
+      "file": "internal/services/delivery.go",
+      "line": 275
+    },
+    "flushPending": {
+      "exported": false,
+      "file": "internal/services/delivery.go",
+      "line": 122
+    },
+    "formattedProfileResult": {
+      "exported": false,
+      "file": "internal/services/profile_formatting.go",
+      "line": 111
+    },
+    "friendSearchPage": {
+      "exported": false,
+      "file": "internal/services/friend_pages.go",
+      "line": 21
+    },
+    "gameCatalogContent": {
+      "exported": false,
+      "file": "internal/services/game_catalog.go",
+      "line": 68
+    },
+    "giftCommand": {
+      "exported": false,
+      "file": "internal/services/gift_commands.go",
+      "line": 23
+    },
+    "groupOperation": {
+      "exported": false,
+      "file": "internal/services/groups.go",
+      "line": 15
+    },
+    "groupSystem": {
+      "exported": false,
+      "file": "internal/services/groups.go",
+      "line": 142
+    },
+    "identityChallenge": {
+      "exported": false,
+      "file": "internal/services/identity.go",
+      "line": 168
+    },
+    "identityPacket": {
+      "exported": false,
+      "file": "internal/services/identity.go",
+      "line": 239
+    },
+    "identityPage": {
+      "exported": false,
+      "file": "internal/services/identity_pages.go",
+      "line": 127
+    },
+    "identityPreferencePage": {
+      "exported": false,
+      "file": "internal/services/identity_pages.go",
+      "line": 402
+    },
+    "identityProfilePage": {
+      "exported": false,
+      "file": "internal/services/identity_pages.go",
+      "line": 271
+    },
+    "identityPublicPacket": {
+      "exported": false,
+      "file": "internal/services/identity.go",
+      "line": 211
+    },
+    "identityURL": {
+      "exported": false,
+      "file": "internal/services/identity_pages.go",
+      "line": 102
+    },
+    "initialEmoticonCatalog": {
+      "exported": false,
+      "file": "internal/services/emoticons.go",
+      "line": 161
+    },
+    "initialNativeServices": {
+      "exported": false,
+      "file": "internal/services/native_services.go",
+      "line": 48
+    },
+    "initializeContacts": {
+      "exported": false,
+      "file": "internal/services/contacts.go",
+      "line": 17
+    },
+    "initializeIdentities": {
+      "exported": false,
+      "file": "internal/services/identity.go",
+      "line": 69
+    },
+    "invalidateIdentitySessions": {
+      "exported": false,
+      "file": "internal/services/identity.go",
+      "line": 308
+    },
+    "kickVoteMemberLeft": {
+      "exported": false,
+      "file": "internal/services/votes.go",
+      "line": 177
+    },
+    "logError": {
+      "exported": false,
+      "file": "internal/services/application.go",
+      "line": 156
+    },
+    "mediaToken": {
+      "exported": false,
+      "file": "internal/services/media.go",
+      "line": 137
+    },
+    "message": {
+      "exported": false,
+      "file": "internal/services/application.go",
+      "line": 399
+    },
+    "messagePacket": {
+      "exported": false,
+      "file": "internal/services/delivery.go",
+      "line": 98
+    },
+    "messageWithFormatting": {
+      "exported": false,
+      "file": "internal/services/application.go",
+      "line": 407
+    },
+    "messageWithRequest": {
+      "exported": false,
+      "file": "internal/services/application.go",
+      "line": 403
+    },
+    "nativeProviderMessage": {
+      "exported": false,
+      "file": "internal/services/native_services.go",
+      "line": 72
+    },
+    "nativeServicePackets": {
+      "exported": false,
+      "file": "internal/services/native_services.go",
+      "line": 120
+    },
+    "newBrowserSession": {
+      "exported": false,
+      "file": "internal/services/browser.go",
+      "line": 47
+    },
+    "operatorDashboard": {
+      "exported": false,
+      "file": "internal/services/operator.go",
+      "line": 42
+    },
+    "ownMessagePacket": {
+      "exported": false,
+      "file": "internal/services/delivery.go",
+      "line": 262
+    },
+    "page": {
+      "exported": false,
+      "file": "internal/services/application.go",
+      "line": 508
+    },
+    "pageForm": {
+      "exported": false,
+      "file": "internal/services/application.go",
+      "line": 512
+    },
+    "pagePacket": {
+      "exported": false,
+      "file": "internal/services/application.go",
+      "line": 532
+    },
+    "pageUsers": {
+      "exported": false,
+      "file": "internal/services/application.go",
+      "line": 499
+    },
+    "performRoomKick": {
+      "exported": false,
+      "file": "internal/services/votes.go",
+      "line": 199
+    },
+    "photoPage": {
+      "exported": false,
+      "file": "internal/services/media.go",
+      "line": 19
+    },
+    "photoResult": {
+      "exported": false,
+      "file": "internal/services/media.go",
+      "line": 74
+    },
+    "prepareChatPhoto": {
+      "exported": false,
+      "file": "internal/services/media.go",
+      "line": 103
+    },
+    "presence": {
+      "exported": false,
+      "file": "internal/services/application.go",
+      "line": 366
+    },
+    "productContent": {
+      "exported": false,
+      "file": "internal/services/product_catalog.go",
+      "line": 83
+    },
+    "productListing": {
+      "exported": false,
+      "file": "internal/services/product_catalog.go",
+      "line": 122
+    },
+    "productURL": {
+      "exported": false,
+      "file": "internal/services/product_catalog.go",
+      "line": 66
+    },
+    "profileFormattingPage": {
+      "exported": false,
+      "file": "internal/services/profile_formatting.go",
+      "line": 64
+    },
+    "providerPage": {
+      "exported": false,
+      "file": "internal/services/service_pages.go",
+      "line": 352
+    },
+    "pruneKickVote": {
+      "exported": false,
+      "file": "internal/services/votes.go",
+      "line": 133
+    },
+    "publishContacts": {
+      "exported": false,
+      "file": "internal/services/contacts.go",
+      "line": 365
+    },
+    "pushQueue": {
+      "exported": false,
+      "file": "internal/services/application.go",
+      "line": 590
+    },
+    "recoveryPage": {
+      "exported": false,
+      "file": "internal/services/identity_pages.go",
+      "line": 213
+    },
+    "refreshEmoticonCatalog": {
+      "exported": false,
+      "file": "internal/services/emoticons.go",
+      "line": 216
+    },
+    "registerIdentity": {
+      "exported": false,
+      "file": "internal/services/identity.go",
+      "line": 172
+    },
+    "registrationPage": {
+      "exported": false,
+      "file": "internal/services/identity_pages.go",
+      "line": 195
+    },
+    "releaseActivityPacket": {
+      "exported": false,
+      "file": "internal/services/native_activities.go",
+      "line": 170
+    },
+    "releasePacket": {
+      "exported": false,
+      "file": "internal/services/delivery.go",
+      "line": 238
+    },
+    "rememberActivityPacket": {
+      "exported": false,
+      "file": "internal/services/native_activities.go",
+      "line": 80
+    },
+    "removeSession": {
+      "exported": false,
+      "file": "internal/services/delivery.go",
+      "line": 36
+    },
+    "reportContext": {
+      "exported": false,
+      "file": "internal/services/reports.go",
+      "line": 56
+    },
+    "reportPage": {
+      "exported": false,
+      "file": "internal/services/reports.go",
+      "line": 97
+    },
+    "requireOperator": {
+      "exported": false,
+      "file": "internal/services/browser.go",
+      "line": 123
+    },
+    "requireSession": {
+      "exported": false,
+      "file": "internal/services/session_service.go",
+      "line": 13
+    },
+    "resolveProfileFormatting": {
+      "exported": false,
+      "file": "internal/services/profile_formatting.go",
+      "line": 17
+    },
+    "responseGate": {
+      "exported": false,
+      "file": "internal/services/contact_ordering.go",
+      "line": 12
+    },
+    "restoreGroups": {
+      "exported": false,
+      "file": "internal/services/delivery.go",
+      "line": 65
+    },
+    "restoreStoreTheme": {
+      "exported": false,
+      "file": "internal/services/store_themes.go",
+      "line": 72
+    },
+    "roomBroadcast": {
+      "exported": false,
+      "file": "internal/services/rooms.go",
+      "line": 324
+    },
+    "roomControlCommand": {
+      "exported": false,
+      "file": "internal/services/room_commands.go",
+      "line": 20
+    },
+    "roomControlQueuesReady": {
+      "exported": false,
+      "file": "internal/services/room_commands.go",
+      "line": 226
+    },
+    "roomEntry": {
+      "exported": false,
+      "file": "internal/services/rooms.go",
+      "line": 285
+    },
+    "roomFavorite": {
+      "exported": false,
+      "file": "internal/services/rooms.go",
+      "line": 157
+    },
+    "roomInfoPage": {
+      "exported": false,
+      "file": "internal/services/room_management.go",
+      "line": 16
+    },
+    "roomKickVote": {
+      "exported": false,
+      "file": "internal/services/votes.go",
+      "line": 48
+    },
+    "roomLeave": {
+      "exported": false,
+      "file": "internal/services/rooms.go",
+      "line": 335
+    },
+    "roomLeaveSession": {
+      "exported": false,
+      "file": "internal/services/rooms.go",
+      "line": 346
+    },
+    "roomMessage": {
+      "exported": false,
+      "file": "internal/services/room_messages.go",
+      "line": 14
+    },
+    "roomModeration": {
+      "exported": false,
+      "file": "internal/services/rooms.go",
+      "line": 215
+    },
+    "roomOperation": {
+      "exported": false,
+      "file": "internal/services/rooms.go",
+      "line": 17
+    },
+    "roomPage": {
+      "exported": false,
+      "file": "internal/services/room_pages.go",
+      "line": 97
+    },
+    "roomPageAction": {
+      "exported": false,
+      "file": "internal/services/room_pages.go",
+      "line": 87
+    },
+    "roomParticipants": {
+      "exported": false,
+      "file": "internal/services/rooms.go",
+      "line": 307
+    },
+    "roomSettingsPage": {
+      "exported": false,
+      "file": "internal/services/room_settings.go",
+      "line": 14
+    },
+    "roomView": {
+      "exported": false,
+      "file": "internal/services/room_pages.go",
+      "line": 91
+    },
+    "servicePage": {
+      "exported": false,
+      "file": "internal/services/service_pages.go",
+      "line": 140
+    },
+    "sessionView": {
+      "exported": false,
+      "file": "internal/services/session_service.go",
+      "line": 24
+    },
+    "setPhotoAvatar": {
+      "exported": false,
+      "file": "internal/services/media.go",
+      "line": 191
+    },
+    "storePage": {
+      "exported": false,
+      "file": "internal/services/commerce_pages.go",
+      "line": 179
+    },
+    "subscribeActivity": {
+      "exported": false,
+      "file": "internal/services/native_activities.go",
+      "line": 91
+    },
+    "tryBeginResponse": {
+      "exported": false,
+      "file": "internal/services/contact_ordering.go",
+      "line": 32
+    },
+    "uploadPhoto": {
+      "exported": false,
+      "file": "internal/services/media.go",
+      "line": 256
+    },
+    "usernameAvailability": {
+      "exported": false,
+      "file": "internal/services/identity_pages.go",
+      "line": 162
+    },
+    "validateEmoticonMessage": {
+      "exported": false,
+      "file": "internal/services/emoticons.go",
+      "line": 181
+    },
+    "validateProviderTarget": {
+      "exported": false,
+      "file": "internal/services/service_pages.go",
+      "line": 466
+    },
+    "wakeMaintenance": {
+      "exported": false,
+      "file": "internal/services/presence.go",
+      "line": 77
+    },
+    "wapDirectory": {
+      "exported": false,
+      "file": "internal/services/wap.go",
+      "line": 181
+    },
+    "wapPage": {
+      "exported": false,
+      "file": "internal/services/wap.go",
+      "line": 33
+    },
+    "wapSend": {
+      "exported": false,
+      "file": "internal/services/wap.go",
+      "line": 148
+    },
+    "wapURL": {
+      "exported": false,
+      "file": "internal/services/wap.go",
+      "line": 29
+    }
+  },
+  "files": [
+    {
+      "path": "internal/services/application.go",
+      "physical_lines": 598,
+      "sha256": "5cfc40b4f5a81adaf5a3e098688af1abadad3fd832d26dc3cce23b3d9912b0b1",
+      "functions": 21,
+      "receiver_methods": {
+        "Application": 17
+      },
+      "application_methods": [
+        "Initialize",
+        "Close",
+        "logError",
+        "active",
+        "Handle",
+        "SetRoomModerator",
+        "presence",
+        "broadcastPresence",
+        "message",
+        "messageWithRequest",
+        "messageWithFormatting",
+        "pageUsers",
+        "page",
+        "pageForm",
+        "pagePacket",
+        "DropSession",
+        "pushQueue"
+      ],
+      "application_calls": {
+        "accountNames": 1,
+        "active": 4,
+        "blockUser": 1,
+        "broadcastContactStatus": 1,
+        "broadcastPresence": 2,
+        "canContact": 1,
+        "cancelKickVote": 1,
+        "catalogPage": 1,
+        "clearKickVote": 1,
+        "contactOperation": 1,
+        "contactSync": 1,
+        "deliveryGate": 1,
+        "expandCommand": 1,
+        "flushPending": 2,
+        "giftCommand": 1,
+        "groupOperation": 1,
+        "identityPacket": 1,
+        "identityPublicPacket": 1,
+        "initializeContacts": 1,
+        "initializeIdentities": 1,
+        "logError": 2,
+        "mediaToken": 1,
+        "message": 1,
+        "messageWithFormatting": 1,
+        "messageWithRequest": 1,
+        "nativeProviderMessage": 1,
+        "nativeServicePackets": 1,
+        "pageForm": 2,
+        "pagePacket": 1,
+        "photoResult": 1,
+        "prepareChatPhoto": 1,
+        "presence": 2,
+        "removeSession": 8,
+        "restoreStoreTheme": 1,
+        "roomControlCommand": 1,
+        "roomMessage": 1,
+        "roomOperation": 1,
+        "subscribeActivity": 1,
+        "uploadPhoto": 1,
+        "validateEmoticonMessage": 1,
+        "wapPage": 1
+      },
+      "repository_calls": {
+        "ContactByUsername": 1,
+        "Contacts": 1,
+        "DeletePhoto": 1,
+        "LatestMessageID": 1,
+        "Room": 1,
+        "SaveMessage": 1,
+        "SetRoomModerator": 1,
+        "UpdateIdentityField": 1
+      },
+      "state_field_selectors": {
+        "accounts": 8,
+        "base": 5,
+        "closed": 3,
+        "initialized": 2,
+        "kickVotes": 2,
+        "logger": 1,
+        "mu": 12,
+        "sessions": 8,
+        "stop": 2,
+        "store": 8
+      },
+      "imports": [
+        "context",
+        "crypto/rand",
+        "encoding/hex",
+        "errors",
+        "fmt",
+        "log/slog",
+        "net/url",
+        "strings",
+        "sync",
+        "time",
+        "unicode/utf8",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/formatting",
+        "mig33.local/reconstruction/internal/pages",
+        "mig33.local/reconstruction/internal/ports",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/blocking.go",
+      "physical_lines": 95,
+      "sha256": "bdf741282ab1647b11f3d1a872db3715876ec0878250e001516be28050df0c86",
+      "functions": 5,
+      "receiver_methods": {
+        "Application": 4
+      },
+      "application_methods": [
+        "blockUser",
+        "cancelBlockedDeliveries",
+        "blockListPage",
+        "blocksIncoming"
+      ],
+      "application_calls": {
+        "cancelBlockedDeliveries": 1,
+        "logError": 3
+      },
+      "repository_calls": {
+        "BlockedUsers": 1,
+        "IsBlocked": 1,
+        "SetBlocked": 2
+      },
+      "state_field_selectors": {
+        "accounts": 3,
+        "base": 1,
+        "deliveries": 2,
+        "store": 4
+      },
+      "imports": [
+        "context",
+        "crypto/subtle",
+        "net/url",
+        "strings",
+        "mig33.local/reconstruction/internal/pages",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/browser.go",
+      "physical_lines": 217,
+      "sha256": "21c0a52a060465a7a302c7f4d5f06b208edab98ce43490723141fc5854aa92cb",
+      "functions": 13,
+      "receiver_methods": {
+        "Application": 13
+      },
+      "application_methods": [
+        "LoginBrowser",
+        "browserSessionCapacity",
+        "newBrowserSession",
+        "LogoutBrowser",
+        "BrowserPage",
+        "OperatorsEnabled",
+        "LoginOperator",
+        "requireOperator",
+        "OperatorSession",
+        "LogoutOperator",
+        "ReviewOperatorItem",
+        "ChangeOperatorCategory",
+        "OperatorDashboard"
+      ],
+      "application_calls": {
+        "active": 2,
+        "broadcastPresence": 1,
+        "browserSessionCapacity": 2,
+        "newBrowserSession": 2,
+        "operatorDashboard": 1,
+        "removeSession": 3,
+        "requireOperator": 5,
+        "requireSession": 2,
+        "sessionView": 3,
+        "wapPage": 1
+      },
+      "repository_calls": {
+        "ManageRoomCategory": 1,
+        "ReviewWorkItem": 1,
+        "SetRoomCategory": 1
+      },
+      "state_field_selectors": {
+        "accounts": 2,
+        "mu": 20,
+        "operators": 4,
+        "sessions": 4,
+        "store": 3
+      },
+      "imports": [
+        "context",
+        "crypto/subtle",
+        "net/url",
+        "strings",
+        "time",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/commands.go",
+      "physical_lines": 149,
+      "sha256": "eed1917862965ae379c4023eb6fbac68509cfe7d35fd349218e87978f15f9c54",
+      "functions": 2,
+      "receiver_methods": {
+        "Application": 1
+      },
+      "application_methods": [
+        "expandCommand"
+      ],
+      "application_calls": {
+        "roomParticipants": 1
+      },
+      "repository_calls": {
+        "Group": 1,
+        "IsRoomMuted": 1,
+        "Room": 1
+      },
+      "state_field_selectors": {
+        "accounts": 1,
+        "store": 3
+      },
+      "imports": [
+        "context",
+        "crypto/rand",
+        "fmt",
+        "math/big",
+        "strings",
+        "unicode",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/services/commerce_pages.go",
+      "physical_lines": 302,
+      "sha256": "14f390656ee07fe947e67c888d5aa31a2c9fd18f81ea685c83ec05c615f49526",
+      "functions": 4,
+      "receiver_methods": {
+        "Application": 2
+      },
+      "application_methods": [
+        "commercePage",
+        "storePage"
+      ],
+      "application_calls": {
+        "applyStoreTheme": 1,
+        "blocksIncoming": 1,
+        "canContact": 1,
+        "ccURL": 9,
+        "flushPending": 1,
+        "productListing": 1,
+        "refreshEmoticonCatalog": 1,
+        "storePage": 1,
+        "validateEmoticonMessage": 1
+      },
+      "repository_calls": {
+        "CreditBalance": 2,
+        "CreditHistory": 1,
+        "CreditOperation": 2,
+        "CreditOperationWithNote": 1,
+        "GiftNote": 1,
+        "OwnedStoreItems": 1,
+        "RateGift": 1,
+        "SelectedStoreTheme": 1
+      },
+      "state_field_selectors": {
+        "accounts": 4,
+        "sessions": 1,
+        "store": 10
+      },
+      "imports": [
+        "context",
+        "crypto/subtle",
+        "fmt",
+        "net/url",
+        "strconv",
+        "strings",
+        "time",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/pages"
+      ]
+    },
+    {
+      "path": "internal/services/community_pages.go",
+      "physical_lines": 421,
+      "sha256": "1bf90fc86783f9ac7e8252c522aebd2716fadfb3981d2c4041e603336467cfc5",
+      "functions": 11,
+      "receiver_methods": {
+        "Application": 2
+      },
+      "application_methods": [
+        "ccURL",
+        "communityPage"
+      ],
+      "application_calls": {
+        "ccURL": 12
+      },
+      "repository_calls": {
+        "AddCommunityPost": 1,
+        "Communities": 2,
+        "Community": 2,
+        "CommunityMembers": 1,
+        "CommunityMembership": 1,
+        "CommunityPosts": 1,
+        "CommunityRole": 3,
+        "CommunityRooms": 1,
+        "CreateCommunity": 1,
+        "LinkCommunityRoom": 1,
+        "Room": 1,
+        "SearchRooms": 1
+      },
+      "state_field_selectors": {
+        "accounts": 1,
+        "base": 1,
+        "store": 16
+      },
+      "imports": [
+        "context",
+        "crypto/subtle",
+        "encoding/hex",
+        "errors",
+        "net/url",
+        "strconv",
+        "strings",
+        "unicode/utf8",
+        "github.com/a-h/templ",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/pages"
+      ]
+    },
+    {
+      "path": "internal/services/contact_api.go",
+      "physical_lines": 42,
+      "sha256": "82edaeeb1714f2effccb616a9b5346a01f92c79fd9e227b6e51bb8729febae2f",
+      "functions": 1,
+      "receiver_methods": {
+        "Application": 1
+      },
+      "application_methods": [
+        "ContactsSnapshot"
+      ],
+      "application_calls": {
+        "presence": 1,
+        "requireSession": 1
+      },
+      "repository_calls": {
+        "Contacts": 1
+      },
+      "state_field_selectors": {
+        "accounts": 1,
+        "mu": 2,
+        "store": 1
+      },
+      "imports": [
+        "context",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/services/contact_ordering.go",
+      "physical_lines": 57,
+      "sha256": "bd201e10bc2d8bf92ad66d5fdc5d655285bc2e97d9d82a720b95b1e16ae73774",
+      "functions": 4,
+      "receiver_methods": {
+        "Application": 4
+      },
+      "application_methods": [
+        "responseGate",
+        "beginResponse",
+        "tryBeginResponse",
+        "contactPrefix"
+      ],
+      "application_calls": {
+        "responseGate": 2
+      },
+      "state_field_selectors": {
+        "mu": 2,
+        "sessions": 1
+      },
+      "imports": [
+        "sync",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/contacts.go",
+      "physical_lines": 397,
+      "sha256": "d2d234c2d3a8f2505552ee5b4a4b12a166045c343c48c93447f9e1b6fa004797",
+      "functions": 11,
+      "receiver_methods": {
+        "Application": 7
+      },
+      "application_methods": [
+        "initializeContacts",
+        "contactPacket",
+        "contactSync",
+        "contactFailure",
+        "contactOperation",
+        "publishContacts",
+        "broadcastContactStatus"
+      ],
+      "application_calls": {
+        "accountNames": 2,
+        "contactFailure": 4,
+        "contactPacket": 4,
+        "contactPrefix": 2,
+        "flushPending": 1,
+        "initialNativeServices": 1,
+        "logError": 2,
+        "presence": 2,
+        "publishContacts": 1,
+        "restoreGroups": 1
+      },
+      "repository_calls": {
+        "AddContact": 1,
+        "AddContactGroup": 1,
+        "Contact": 2,
+        "ContactByIdentity": 1,
+        "ContactByUsername": 1,
+        "ContactChanges": 1,
+        "Contacts": 3,
+        "DeleteContact": 1,
+        "DeleteContactGroup": 1,
+        "EnsureContacts": 1,
+        "PhotoAvatar": 2,
+        "RenameContactGroup": 1,
+        "UpdateContact": 2
+      },
+      "state_field_selectors": {
+        "accounts": 5,
+        "sessions": 2,
+        "store": 18
+      },
+      "imports": [
+        "context",
+        "errors",
+        "fmt",
+        "strings",
+        "time",
+        "unicode/utf8",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/delivery.go",
+      "physical_lines": 342,
+      "sha256": "7ef4eaa7f25f7cc6362b3a23c3526494095aa5ee71462dab99ebc4d32bfc4f74",
+      "functions": 14,
+      "receiver_methods": {
+        "Application": 14
+      },
+      "application_methods": [
+        "deliveryGate",
+        "beginWrite",
+        "removeSession",
+        "enqueue",
+        "restoreGroups",
+        "messagePacket",
+        "flushPending",
+        "allowPacket",
+        "cancelRoomDeliveries",
+        "cancelGroupDeliveries",
+        "releasePacket",
+        "ownMessagePacket",
+        "flushOwnMessages",
+        "finishWrite"
+      ],
+      "application_calls": {
+        "active": 1,
+        "allowActivityPacket": 1,
+        "blocksIncoming": 1,
+        "broadcastPresence": 1,
+        "deliveryGate": 1,
+        "flushEmoticonCatalog": 1,
+        "flushOwnMessages": 1,
+        "logError": 6,
+        "messagePacket": 2,
+        "ownMessagePacket": 1,
+        "releaseActivityPacket": 1,
+        "releasePacket": 6,
+        "restoreGroups": 1,
+        "roomLeaveSession": 1
+      },
+      "repository_calls": {
+        "ContactByUsername": 2,
+        "Group": 4,
+        "Groups": 1,
+        "MarkDelivered": 1,
+        "OwnMessagesAfter": 1,
+        "Pending": 1,
+        "PhotoAvatar": 1
+      },
+      "state_field_selectors": {
+        "accounts": 1,
+        "deliveries": 11,
+        "mu": 6,
+        "sessions": 5,
+        "store": 11
+      },
+      "imports": [
+        "context",
+        "errors",
+        "fmt",
+        "sort",
+        "strings",
+        "sync",
+        "time",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/emoticons.go",
+      "physical_lines": 236,
+      "sha256": "edf68957d05088092bc098da4ecc27cb66b1ca818f8b03c330546bf0b4c08d52",
+      "functions": 11,
+      "receiver_methods": {
+        "Application": 5
+      },
+      "application_methods": [
+        "catalogEmoticon",
+        "initialEmoticonCatalog",
+        "validateEmoticonMessage",
+        "refreshEmoticonCatalog",
+        "flushEmoticonCatalog"
+      ],
+      "application_calls": {
+        "flushEmoticonCatalog": 1,
+        "initialEmoticonCatalog": 1,
+        "logError": 1
+      },
+      "repository_calls": {
+        "HasStoreItem": 2
+      },
+      "state_field_selectors": {
+        "sessions": 1,
+        "store": 2
+      },
+      "imports": [
+        "bytes",
+        "context",
+        "embed",
+        "encoding/binary",
+        "fmt",
+        "image",
+        "image/draw",
+        "image/png",
+        "math",
+        "strings",
+        "sync",
+        "mig33.local/reconstruction/internal/catalog",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/friend_pages.go",
+      "physical_lines": 51,
+      "sha256": "0e45b2d339d22746314f3530fa2cf7eb126531b3571eb914705727f23f44d7f1",
+      "functions": 2,
+      "receiver_methods": {
+        "Application": 1
+      },
+      "application_methods": [
+        "friendSearchPage"
+      ],
+      "application_calls": {
+        "canViewProfile": 1,
+        "pageUsers": 1
+      },
+      "state_field_selectors": {
+        "base": 1
+      },
+      "imports": [
+        "context",
+        "net/url",
+        "strings",
+        "unicode/utf8",
+        "mig33.local/reconstruction/internal/pages"
+      ]
+    },
+    {
+      "path": "internal/services/game_catalog.go",
+      "physical_lines": 112,
+      "sha256": "926f84b3b3bb4cdf316a6fa4da72d17a8171d2d815f88bb700005e2f2c65b9a2",
+      "functions": 3,
+      "receiver_methods": {
+        "Application": 1
+      },
+      "application_methods": [
+        "gameCatalogContent"
+      ],
+      "application_calls": {
+        "featureURL": 1
+      },
+      "imports": [
+        "strings",
+        "github.com/a-h/templ",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/pages"
+      ]
+    },
+    {
+      "path": "internal/services/gift_commands.go",
+      "physical_lines": 308,
+      "sha256": "052f3117b9d318f1c4e69d354eda52a5290f02aa863450c9c0e02937f1995ae7",
+      "functions": 8,
+      "receiver_methods": {
+        "Application": 1
+      },
+      "application_methods": [
+        "giftCommand"
+      ],
+      "application_calls": {
+        "blocksIncoming": 1,
+        "canContact": 1,
+        "flushPending": 1,
+        "messagePacket": 1,
+        "validateEmoticonMessage": 1
+      },
+      "repository_calls": {
+        "ContactByUsername": 1,
+        "CreditOperationWithNote": 1,
+        "GiftNote": 1,
+        "GiftRating": 1,
+        "Group": 1,
+        "OwnedStoreItems": 1,
+        "RateGift": 1,
+        "Room": 1
+      },
+      "state_field_selectors": {
+        "accounts": 1,
+        "sessions": 1,
+        "store": 8
+      },
+      "imports": [
+        "context",
+        "errors",
+        "fmt",
+        "regexp",
+        "sort",
+        "strconv",
+        "strings",
+        "unicode",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/groups.go",
+      "physical_lines": 148,
+      "sha256": "f2d0e4b4c1d6cfa1735dce9410010073a70b4b7aaeb413f17bf02c11c716d9cb",
+      "functions": 4,
+      "receiver_methods": {
+        "Application": 2
+      },
+      "application_methods": [
+        "groupOperation",
+        "groupSystem"
+      ],
+      "application_calls": {
+        "canContact": 3,
+        "cancelGroupDeliveries": 1,
+        "enqueue": 2,
+        "groupSystem": 3
+      },
+      "repository_calls": {
+        "CreateGroup": 1,
+        "Group": 2,
+        "Invite": 1,
+        "Leave": 1
+      },
+      "state_field_selectors": {
+        "accounts": 3,
+        "sessions": 1,
+        "store": 5
+      },
+      "imports": [
+        "context",
+        "errors",
+        "strings",
+        "time",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/history.go",
+      "physical_lines": 95,
+      "sha256": "d9ff05cbdeba77dec622da89f45f125d08453109dba6607b3e58a3c08ed50fde",
+      "functions": 4,
+      "receiver_methods": {
+        "Application": 2
+      },
+      "application_methods": [
+        "ChatGroups",
+        "ChatHistory"
+      ],
+      "application_calls": {
+        "requireSession": 2
+      },
+      "repository_calls": {
+        "ConversationRead": 1,
+        "Groups": 1,
+        "History": 1,
+        "Room": 1
+      },
+      "state_field_selectors": {
+        "mu": 4,
+        "store": 4
+      },
+      "imports": [
+        "context",
+        "errors",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/services/identity.go",
+      "physical_lines": 340,
+      "sha256": "9a017b4039a7356f26a446b52948e9e9e2a272ef80ff909c37718efd485277e7",
+      "functions": 17,
+      "receiver_methods": {
+        "Application": 10
+      },
+      "application_methods": [
+        "initializeIdentities",
+        "cacheIdentity",
+        "accountNames",
+        "identityChallenge",
+        "registerIdentity",
+        "identityPublicPacket",
+        "identityPacket",
+        "canContact",
+        "canViewProfile",
+        "invalidateIdentitySessions"
+      ],
+      "application_calls": {
+        "cacheIdentity": 4,
+        "identityChallenge": 1,
+        "registerIdentity": 1,
+        "removeSession": 1
+      },
+      "repository_calls": {
+        "ActivateIdentity": 1,
+        "ContactByUsername": 2,
+        "CreateIdentityChallenge": 1,
+        "FailIdentityChallenge": 1,
+        "Identities": 1,
+        "IdentityChallenge": 1,
+        "IdentityPreference": 2,
+        "RegisterIdentity": 1,
+        "SeedIdentity": 1,
+        "SetIdentityMobile": 1
+      },
+      "state_field_selectors": {
+        "accounts": 10,
+        "base": 1,
+        "sessions": 1,
+        "store": 12
+      },
+      "imports": [
+        "bytes",
+        "context",
+        "crypto/rand",
+        "crypto/sha256",
+        "crypto/subtle",
+        "fmt",
+        "image",
+        "image/color",
+        "image/png",
+        "sort",
+        "strings",
+        "sync",
+        "time",
+        "unicode/utf16",
+        "unicode/utf8",
+        "golang.org/x/crypto/pbkdf2",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/identity_pages.go",
+      "physical_lines": 430,
+      "sha256": "1431d45de9971dfa346bd6f207efc9cc0ed397c4e805edb673143c819f2d80d8",
+      "functions": 17,
+      "receiver_methods": {
+        "Application": 10
+      },
+      "application_methods": [
+        "identityURL",
+        "identityPage",
+        "usernameAvailability",
+        "registrationPage",
+        "recoveryPage",
+        "identityProfilePage",
+        "editIdentityPage",
+        "changePasswordPage",
+        "changeMobilePage",
+        "identityPreferencePage"
+      ],
+      "application_calls": {
+        "broadcastContactStatus": 1,
+        "cacheIdentity": 4,
+        "canViewProfile": 1,
+        "changeMobilePage": 1,
+        "changePasswordPage": 1,
+        "editIdentityPage": 1,
+        "formattedProfileResult": 1,
+        "identityChallenge": 4,
+        "identityPreferencePage": 1,
+        "identityProfilePage": 1,
+        "identityURL": 12,
+        "invalidateIdentitySessions": 2,
+        "presence": 1,
+        "profileFormattingPage": 1,
+        "recoveryPage": 1,
+        "registerIdentity": 1,
+        "registrationPage": 1,
+        "usernameAvailability": 1
+      },
+      "repository_calls": {
+        "ConsumeIdentityChallenge": 1,
+        "FailIdentityChallenge": 1,
+        "Identity": 1,
+        "IdentityByMobile": 1,
+        "IdentityChallenge": 1,
+        "IdentityPreference": 1,
+        "ReplaceIdentityPassword": 2,
+        "SetIdentityMobile": 1,
+        "SetIdentityPreference": 1,
+        "UpdateIdentityField": 1
+      },
+      "state_field_selectors": {
+        "accounts": 9,
+        "base": 1,
+        "store": 11
+      },
+      "imports": [
+        "context",
+        "crypto/subtle",
+        "fmt",
+        "net/url",
+        "strings",
+        "unicode/utf8",
+        "github.com/a-h/templ",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/pages"
+      ]
+    },
+    {
+      "path": "internal/services/media.go",
+      "physical_lines": 267,
+      "sha256": "2d6358f76cf9b3f6dae343ed4940a667fa574eb20457fa69d4427aea85a02541",
+      "functions": 12,
+      "receiver_methods": {
+        "Application": 9
+      },
+      "application_methods": [
+        "photoPage",
+        "photoResult",
+        "prepareChatPhoto",
+        "canReadPhoto",
+        "mediaToken",
+        "setPhotoAvatar",
+        "broadcastAvatar",
+        "Media",
+        "uploadPhoto"
+      ],
+      "application_calls": {
+        "active": 1,
+        "blocksIncoming": 1,
+        "broadcastAvatar": 1,
+        "canReadPhoto": 2,
+        "canViewProfile": 3,
+        "catalogEmoticon": 1,
+        "enqueue": 1,
+        "featureURL": 1,
+        "photoResult": 1,
+        "setPhotoAvatar": 1
+      },
+      "repository_calls": {
+        "AddPhoto": 3,
+        "ContactByUsername": 1,
+        "DeletePhoto": 1,
+        "Photo": 3,
+        "PhotoSharedWith": 1,
+        "Photos": 1,
+        "SetPhotoAvatar": 1
+      },
+      "state_field_selectors": {
+        "accounts": 1,
+        "base": 3,
+        "mu": 2,
+        "sessions": 1,
+        "store": 11
+      },
+      "imports": [
+        "bytes",
+        "context",
+        "fmt",
+        "image",
+        "image/png",
+        "net/url",
+        "strconv",
+        "strings",
+        "time",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/pages",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/native_activities.go",
+      "physical_lines": 174,
+      "sha256": "d35fb1ddef0dff95b446fcd51cf23865b9a70807a18867b72ce028fd4c763647",
+      "functions": 7,
+      "receiver_methods": {
+        "Application": 7
+      },
+      "application_methods": [
+        "activityPageOwner",
+        "activityPacket",
+        "rememberActivityPacket",
+        "subscribeActivity",
+        "broadcastActivity",
+        "allowActivityPacket",
+        "releaseActivityPacket"
+      ],
+      "application_calls": {
+        "active": 1,
+        "activityPacket": 2,
+        "canViewActivity": 3,
+        "featureURL": 1,
+        "logError": 1,
+        "releaseActivityPacket": 1,
+        "rememberActivityPacket": 2
+      },
+      "repository_calls": {
+        "ActivityEntries": 1,
+        "Contacts": 1,
+        "PhotoAvatar": 1,
+        "ServiceEntryByID": 1
+      },
+      "state_field_selectors": {
+        "base": 1,
+        "mu": 2,
+        "sessions": 2,
+        "store": 4
+      },
+      "imports": [
+        "context",
+        "fmt",
+        "net/url",
+        "strconv",
+        "strings",
+        "time",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/pages",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/native_port.go",
+      "physical_lines": 20,
+      "sha256": "0791e1adae0d7564021d86f7cbfb87c32bb8ba69c680bc7a611ae76e3da014ca",
+      "functions": 6,
+      "receiver_methods": {
+        "Application": 6
+      },
+      "application_methods": [
+        "BeginWrite",
+        "AllowPacket",
+        "FinishWrite",
+        "BeginResponse",
+        "TryBeginResponse",
+        "PushQueue"
+      ],
+      "application_calls": {
+        "allowPacket": 1,
+        "beginResponse": 1,
+        "beginWrite": 1,
+        "finishWrite": 1,
+        "pushQueue": 1,
+        "tryBeginResponse": 1
+      },
+      "imports": [
+        "context",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/native_services.go",
+      "physical_lines": 277,
+      "sha256": "660f8af075aed1055f7925e26d771594e3b22db9dbf1cd3c45998142480e8058",
+      "functions": 7,
+      "receiver_methods": {
+        "Application": 4
+      },
+      "application_methods": [
+        "initialNativeServices",
+        "nativeProviderMessage",
+        "nativeServicePackets",
+        "LanguageResource"
+      ],
+      "application_calls": {
+        "blocksIncoming": 1,
+        "broadcastAvatar": 1,
+        "canContact": 1,
+        "initialEmoticonCatalog": 1,
+        "logError": 1,
+        "setPhotoAvatar": 1,
+        "validateProviderTarget": 1
+      },
+      "repository_calls": {
+        "AddServiceEntry": 2,
+        "ClearPhotoAvatar": 1,
+        "RemoveIMLabels": 1,
+        "SetLanguage": 1
+      },
+      "state_field_selectors": {
+        "accounts": 1,
+        "base": 1,
+        "store": 5
+      },
+      "imports": [
+        "bytes",
+        "context",
+        "crypto/sha256",
+        "embed",
+        "encoding/hex",
+        "fmt",
+        "strconv",
+        "strings",
+        "unicode/utf8",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/operator.go",
+      "physical_lines": 143,
+      "sha256": "e7489dbdb229bdaa0079c97d0baa8a0be692cc6f952351c4de4f0db5c53fc8d8",
+      "functions": 3,
+      "receiver_methods": {
+        "Application": 2
+      },
+      "application_methods": [
+        "ConfigureOperators",
+        "operatorDashboard"
+      ],
+      "repository_calls": {
+        "OperatorReports": 1,
+        "OperatorReviews": 1,
+        "OperatorSupport": 1,
+        "Report": 1,
+        "ReportReviews": 1,
+        "RoomCategories": 1,
+        "ServiceEntryByID": 1
+      },
+      "state_field_selectors": {
+        "accounts": 1,
+        "mu": 2,
+        "operators": 1,
+        "store": 7
+      },
+      "imports": [
+        "context",
+        "fmt",
+        "net/url",
+        "strconv",
+        "strings",
+        "time",
+        "github.com/a-h/templ",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/pages"
+      ]
+    },
+    {
+      "path": "internal/services/page_routes.go",
+      "physical_lines": 87,
+      "sha256": "638bf166d0bb58ed2a33b2c97661d13a4e3aba11a15b0ebd02bc1776eb1af082",
+      "functions": 4,
+      "receiver_methods": {
+        "Application": 1
+      },
+      "application_methods": [
+        "catalogPage"
+      ],
+      "application_calls": {
+        "blockListPage": 1,
+        "catalogPage": 2,
+        "pageUsers": 1,
+        "presence": 1
+      },
+      "state_field_selectors": {
+        "accounts": 1
+      },
+      "imports": [
+        "context",
+        "net/url",
+        "sort",
+        "mig33.local/reconstruction/internal/pages"
+      ]
+    },
+    {
+      "path": "internal/services/page_service.go",
+      "physical_lines": 28,
+      "sha256": "a629bf46940c65ba86cdba756c17cea940d23b815160f3bb665aed5cd731917a",
+      "functions": 1,
+      "receiver_methods": {
+        "Application": 1
+      },
+      "application_methods": [
+        "FeaturePage"
+      ],
+      "application_calls": {
+        "active": 1,
+        "pageForm": 1
+      },
+      "state_field_selectors": {
+        "mu": 2
+      },
+      "imports": [
+        "context",
+        "time",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/services/presence.go",
+      "physical_lines": 89,
+      "sha256": "da74e2267097a29edcd33791debe39a0c9a8d174bfa2f477d0eb8a05b355ccae",
+      "functions": 3,
+      "receiver_methods": {
+        "Application": 3
+      },
+      "application_methods": [
+        "Run",
+        "wakeMaintenance",
+        "expireSessions"
+      ],
+      "application_calls": {
+        "active": 1,
+        "expireSessions": 1,
+        "logError": 1,
+        "pruneKickVote": 1
+      },
+      "state_field_selectors": {
+        "closed": 2,
+        "initialized": 1,
+        "kickVotes": 2,
+        "maintenance": 2,
+        "mu": 9,
+        "running": 3,
+        "sessions": 1,
+        "stop": 1
+      },
+      "imports": [
+        "context",
+        "fmt",
+        "time"
+      ]
+    },
+    {
+      "path": "internal/services/product_catalog.go",
+      "physical_lines": 176,
+      "sha256": "13e4476782263c0086bc752c29799ddcb529a76279eb1ebe7d1fbfde09b5f087",
+      "functions": 5,
+      "receiver_methods": {
+        "Application": 4
+      },
+      "application_methods": [
+        "productURL",
+        "productContent",
+        "productListing",
+        "Catalog"
+      ],
+      "application_calls": {
+        "ccURL": 1,
+        "productContent": 2,
+        "productURL": 6
+      },
+      "repository_calls": {
+        "GiftRating": 1
+      },
+      "state_field_selectors": {
+        "base": 2,
+        "store": 1
+      },
+      "imports": [
+        "context",
+        "fmt",
+        "net/url",
+        "strconv",
+        "strings",
+        "unicode/utf8",
+        "github.com/a-h/templ",
+        "mig33.local/reconstruction/internal/catalog",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/pages"
+      ]
+    },
+    {
+      "path": "internal/services/profile_formatting.go",
+      "physical_lines": 124,
+      "sha256": "4a86bc0d444115e992e5341b09f81496f810a8661994fbaf7b7008f58a4f4487",
+      "functions": 3,
+      "receiver_methods": {
+        "Application": 3
+      },
+      "application_methods": [
+        "resolveProfileFormatting",
+        "profileFormattingPage",
+        "formattedProfileResult"
+      ],
+      "application_calls": {
+        "canReadPhoto": 1,
+        "identityURL": 2,
+        "resolveProfileFormatting": 2
+      },
+      "repository_calls": {
+        "Photo": 1,
+        "Photos": 1,
+        "ProfileFormatting": 2,
+        "SetProfileFormatting": 1
+      },
+      "state_field_selectors": {
+        "base": 1,
+        "store": 5
+      },
+      "imports": [
+        "context",
+        "fmt",
+        "net/url",
+        "strconv",
+        "strings",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/formatting",
+        "mig33.local/reconstruction/internal/pages"
+      ]
+    },
+    {
+      "path": "internal/services/reports.go",
+      "physical_lines": 195,
+      "sha256": "f72ec1906e5b4a8b13511ac271603678f24a227bdf7ca5b1d9138652642e8991",
+      "functions": 8,
+      "receiver_methods": {
+        "Application": 5
+      },
+      "application_methods": [
+        "reportContext",
+        "reportPage",
+        "ListReports",
+        "ReviewReport",
+        "ReportDetails"
+      ],
+      "application_calls": {
+        "reportContext": 1,
+        "roomParticipants": 1
+      },
+      "repository_calls": {
+        "Group": 1,
+        "Report": 1,
+        "ReportReviews": 1,
+        "Reports": 1,
+        "ReviewReport": 1,
+        "Room": 1,
+        "SubmitReport": 1
+      },
+      "state_field_selectors": {
+        "accounts": 1,
+        "base": 1,
+        "mu": 6,
+        "store": 7
+      },
+      "imports": [
+        "context",
+        "crypto/hmac",
+        "crypto/sha256",
+        "crypto/subtle",
+        "encoding/hex",
+        "errors",
+        "net/url",
+        "sort",
+        "strings",
+        "unicode/utf8",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/pages"
+      ]
+    },
+    {
+      "path": "internal/services/room_commands.go",
+      "physical_lines": 235,
+      "sha256": "7a16d61fde2879279b5a8ea6e107f31ea8625cfb7fc82d63dc017c47df7ee80d",
+      "functions": 2,
+      "receiver_methods": {
+        "Application": 2
+      },
+      "application_methods": [
+        "roomControlCommand",
+        "roomControlQueuesReady"
+      ],
+      "application_calls": {
+        "blocksIncoming": 1,
+        "canContact": 1,
+        "cancelKickVote": 1,
+        "performRoomKick": 1,
+        "roomBroadcast": 2,
+        "roomControlQueuesReady": 2
+      },
+      "repository_calls": {
+        "CommunityRole": 1,
+        "CommunityRooms": 1,
+        "GroupRoomAccess": 1,
+        "GroupRoomControls": 1,
+        "IsRoomMuted": 1,
+        "ManageGroupRoom": 1,
+        "PlayRoomBot": 1,
+        "Room": 1,
+        "RoomBotScores": 1
+      },
+      "state_field_selectors": {
+        "accounts": 1,
+        "kickVotes": 1,
+        "sessions": 1,
+        "store": 9
+      },
+      "imports": [
+        "context",
+        "crypto/rand",
+        "errors",
+        "fmt",
+        "math/big",
+        "strings",
+        "time",
+        "unicode",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/room_management.go",
+      "physical_lines": 79,
+      "sha256": "03bccb91e55839c0ed7e00f0963ff1f4f1b691ae75ecc4b0356c9feb92df080b",
+      "functions": 1,
+      "receiver_methods": {
+        "Application": 1
+      },
+      "application_methods": [
+        "roomInfoPage"
+      ],
+      "application_calls": {
+        "roomModeration": 1,
+        "roomParticipants": 1,
+        "roomView": 1
+      },
+      "repository_calls": {
+        "IsRoomModerator": 1,
+        "RoomModerators": 1,
+        "RoomMuted": 1
+      },
+      "state_field_selectors": {
+        "store": 3
+      },
+      "imports": [
+        "context",
+        "crypto/subtle",
+        "encoding/hex",
+        "net/url",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/pages",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/room_messages.go",
+      "physical_lines": 79,
+      "sha256": "d1410fc1f617ec7c3b51b3fa9c0d86e5c0cfbf1400b2b100ea997c49d7f14af8",
+      "functions": 1,
+      "receiver_methods": {
+        "Application": 1
+      },
+      "application_methods": [
+        "roomMessage"
+      ],
+      "application_calls": {
+        "blocksIncoming": 2,
+        "logError": 1,
+        "messagePacket": 1,
+        "roomParticipants": 1
+      },
+      "repository_calls": {
+        "GroupRoomAccess": 1,
+        "IsRoomMuted": 1,
+        "Room": 1,
+        "SaveMessage": 1
+      },
+      "state_field_selectors": {
+        "deliveries": 1,
+        "sessions": 2,
+        "store": 4
+      },
+      "imports": [
+        "context",
+        "errors",
+        "time",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/room_pages.go",
+      "physical_lines": 208,
+      "sha256": "614a9e0bf70f000897ff084ba179679ffeb7ff8927785779c457b1d48013f13a",
+      "functions": 7,
+      "receiver_methods": {
+        "Application": 3
+      },
+      "application_methods": [
+        "roomPageAction",
+        "roomView",
+        "roomPage"
+      ],
+      "application_calls": {
+        "roomInfoPage": 1,
+        "roomPageAction": 4,
+        "roomParticipants": 1,
+        "roomSettingsPage": 1,
+        "roomView": 2
+      },
+      "repository_calls": {
+        "CreateRoom": 1,
+        "Room": 1,
+        "SearchRoomsFiltered": 1
+      },
+      "state_field_selectors": {
+        "base": 1,
+        "store": 3
+      },
+      "imports": [
+        "context",
+        "crypto/subtle",
+        "encoding/hex",
+        "errors",
+        "net/url",
+        "strconv",
+        "strings",
+        "unicode/utf8",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/pages"
+      ]
+    },
+    {
+      "path": "internal/services/room_settings.go",
+      "physical_lines": 141,
+      "sha256": "917cd628bd78012dd843014c1ae7fd561be0e15655e73ee40ce35e27ec64850e",
+      "functions": 1,
+      "receiver_methods": {
+        "Application": 1
+      },
+      "application_methods": [
+        "roomSettingsPage"
+      ],
+      "application_calls": {
+        "cancelKickVote": 4,
+        "performRoomKick": 1,
+        "roomLeave": 1,
+        "roomPageAction": 2,
+        "roomParticipants": 1
+      },
+      "repository_calls": {
+        "DeleteOwnedRoom": 1,
+        "GroupRoomControls": 1,
+        "IsRoomModerator": 1,
+        "ManageRoom": 1,
+        "Room": 2,
+        "RoomBans": 1,
+        "RoomBotScores": 1,
+        "RoomChanges": 1,
+        "RoomSettings": 1
+      },
+      "state_field_selectors": {
+        "accounts": 1,
+        "kickVotes": 2,
+        "sessions": 1,
+        "store": 10
+      },
+      "imports": [
+        "context",
+        "net/url",
+        "strconv",
+        "strings",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/pages",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/rooms.go",
+      "physical_lines": 350,
+      "sha256": "f1ae80c3b5996c657fd0309acd6470d37bb41c63d9d3a0c7b91c89a6a7488099",
+      "functions": 12,
+      "receiver_methods": {
+        "Application": 8
+      },
+      "application_methods": [
+        "roomOperation",
+        "roomFavorite",
+        "roomModeration",
+        "roomEntry",
+        "roomParticipants",
+        "roomBroadcast",
+        "roomLeave",
+        "roomLeaveSession"
+      ],
+      "application_calls": {
+        "cancelKickVote": 1,
+        "cancelRoomDeliveries": 1,
+        "kickVoteMemberLeft": 1,
+        "performRoomKick": 1,
+        "roomBroadcast": 3,
+        "roomEntry": 4,
+        "roomFavorite": 1,
+        "roomKickVote": 1,
+        "roomLeave": 2,
+        "roomModeration": 1,
+        "roomParticipants": 5
+      },
+      "repository_calls": {
+        "AddRoomFavorite": 1,
+        "FavoriteRooms": 1,
+        "GroupRoomAccess": 1,
+        "IsRoomModerator": 2,
+        "IsRoomMuted": 1,
+        "RecordRoomEvent": 1,
+        "RemoveRoomFavorite": 1,
+        "Room": 2,
+        "RoomBanned": 1,
+        "RoomCategories": 2,
+        "RoomModerators": 1,
+        "RoomMuted": 1,
+        "Rooms": 1,
+        "SetRoomMuted": 1
+      },
+      "state_field_selectors": {
+        "accounts": 1,
+        "kickVotes": 1,
+        "sessions": 2,
+        "store": 17
+      },
+      "imports": [
+        "context",
+        "errors",
+        "sort",
+        "strings",
+        "time",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/service_pages.go",
+      "physical_lines": 506,
+      "sha256": "882e7f6cb28e39ce70b3efe7d5a771edaa6575c2b9e96118f90b7973ecf295b0",
+      "functions": 14,
+      "receiver_methods": {
+        "Application": 5
+      },
+      "application_methods": [
+        "featureURL",
+        "canViewActivity",
+        "servicePage",
+        "providerPage",
+        "validateProviderTarget"
+      ],
+      "application_calls": {
+        "activityPageOwner": 1,
+        "blocksIncoming": 2,
+        "broadcastActivity": 1,
+        "canContact": 2,
+        "canViewActivity": 2,
+        "canViewProfile": 3,
+        "featureURL": 2,
+        "gameCatalogContent": 1,
+        "photoPage": 1,
+        "providerPage": 1,
+        "validateProviderTarget": 3
+      },
+      "repository_calls": {
+        "ActivityEntries": 1,
+        "AddServiceEntry": 3,
+        "DeleteServiceEntry": 1,
+        "IdentityPreference": 2,
+        "ServiceEntries": 5,
+        "ServiceEntryByNonce": 1
+      },
+      "state_field_selectors": {
+        "accounts": 5,
+        "base": 4,
+        "store": 13
+      },
+      "imports": [
+        "context",
+        "crypto/rand",
+        "crypto/subtle",
+        "encoding/hex",
+        "errors",
+        "fmt",
+        "math/big",
+        "net/mail",
+        "net/url",
+        "sort",
+        "strconv",
+        "strings",
+        "unicode/utf8",
+        "github.com/a-h/templ",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/pages",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/session_service.go",
+      "physical_lines": 39,
+      "sha256": "a95118dc820e117d7ad264d062a6169d3f82e528abe09e639a227faac4d3a947",
+      "functions": 5,
+      "receiver_methods": {
+        "Application": 4
+      },
+      "application_methods": [
+        "PublicURL",
+        "requireSession",
+        "sessionView",
+        "Session"
+      ],
+      "application_calls": {
+        "active": 1,
+        "requireSession": 1,
+        "sessionView": 1
+      },
+      "state_field_selectors": {
+        "base": 1,
+        "mu": 2,
+        "operators": 1
+      },
+      "imports": [
+        "context",
+        "time",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/services/store_themes.go",
+      "physical_lines": 90,
+      "sha256": "ad8f61be8fdf9eed8072d8afe61a4e78971473d5a47ff2459a7f4597980d476f",
+      "functions": 3,
+      "receiver_methods": {
+        "Application": 2
+      },
+      "application_methods": [
+        "applyStoreTheme",
+        "restoreStoreTheme"
+      ],
+      "repository_calls": {
+        "ResetStoreTheme": 1,
+        "SelectStoreTheme": 1,
+        "SelectedStoreTheme": 1
+      },
+      "state_field_selectors": {
+        "sessions": 2,
+        "store": 3
+      },
+      "imports": [
+        "bytes",
+        "context",
+        "embed",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/transcripts.go",
+      "physical_lines": 158,
+      "sha256": "c40a6ff254ce3e8b25bb3a940e78cd6a3c0dcd3c714d010228827d04675390fa",
+      "functions": 4,
+      "receiver_methods": {
+        "Application": 3
+      },
+      "application_methods": [
+        "SyncChat",
+        "MarkChatRead",
+        "SendChatMessage"
+      ],
+      "application_calls": {
+        "messageWithFormatting": 1,
+        "requireSession": 3
+      },
+      "repository_calls": {
+        "ConversationRead": 1,
+        "MarkConversationRead": 1,
+        "RequestedMessage": 2,
+        "Room": 1,
+        "Transcript": 1
+      },
+      "state_field_selectors": {
+        "mu": 6,
+        "store": 6
+      },
+      "imports": [
+        "context",
+        "crypto/sha256",
+        "encoding/hex",
+        "encoding/json",
+        "errors",
+        "strconv",
+        "strings",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/formatting",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/votes.go",
+      "physical_lines": 217,
+      "sha256": "28e4401f7bf1e695292082e0921f94f83cd811033e24c89cbe9310e91fad72f3",
+      "functions": 7,
+      "receiver_methods": {
+        "Application": 6
+      },
+      "application_methods": [
+        "roomKickVote",
+        "clearKickVote",
+        "cancelKickVote",
+        "pruneKickVote",
+        "kickVoteMemberLeft",
+        "performRoomKick"
+      ],
+      "application_calls": {
+        "cancelKickVote": 6,
+        "clearKickVote": 2,
+        "logError": 3,
+        "performRoomKick": 1,
+        "pruneKickVote": 1,
+        "roomBroadcast": 5,
+        "roomLeave": 1,
+        "roomParticipants": 2,
+        "wakeMaintenance": 1
+      },
+      "repository_calls": {
+        "IsRoomModerator": 1,
+        "IsRoomMuted": 2,
+        "RecordRoomEvent": 5,
+        "RoomSettings": 1
+      },
+      "state_field_selectors": {
+        "kickVotes": 7,
+        "sessions": 1,
+        "store": 9,
+        "voteCooldowns": 4
+      },
+      "imports": [
+        "context",
+        "fmt",
+        "time",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/services/wap.go",
+      "physical_lines": 207,
+      "sha256": "73941ba1848491f7905c409ac3fbeb6ee7903ced880d299460346d9fe877fe58",
+      "functions": 5,
+      "receiver_methods": {
+        "Application": 4
+      },
+      "application_methods": [
+        "wapURL",
+        "wapPage",
+        "wapSend",
+        "wapDirectory"
+      ],
+      "application_calls": {
+        "accountNames": 1,
+        "blocksIncoming": 1,
+        "canViewProfile": 1,
+        "identityURL": 1,
+        "messageWithFormatting": 1,
+        "roomOperation": 1,
+        "wapDirectory": 1,
+        "wapSend": 1,
+        "wapURL": 5
+      },
+      "repository_calls": {
+        "Group": 1,
+        "Groups": 1,
+        "History": 1,
+        "RequestedMessage": 1,
+        "Room": 1,
+        "Rooms": 1
+      },
+      "state_field_selectors": {
+        "accounts": 1,
+        "base": 2,
+        "store": 6
+      },
+      "imports": [
+        "context",
+        "crypto/sha256",
+        "encoding/hex",
+        "encoding/json",
+        "errors",
+        "fmt",
+        "net/url",
+        "strconv",
+        "strings",
+        "unicode/utf8",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/formatting",
+        "mig33.local/reconstruction/internal/pages",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/domain/application.go",
+      "physical_lines": 86,
+      "sha256": "53d32f5f987507a6607f6af08641996011b589520ae75af21da3142b5bd7ca50",
+      "functions": 5,
+      "receiver_methods": {
+        "ServiceError": 2
+      },
+      "imports": [
+        "net/url",
+        "time"
+      ]
+    },
+    {
+      "path": "internal/domain/browser.go",
+      "physical_lines": 49,
+      "sha256": "447269a483f1c46174a54e3324c3905eaa14baae00ce5162e1385e4c9486f17a",
+      "functions": 0,
+      "receiver_methods": {},
+      "imports": null
+    },
+    {
+      "path": "internal/domain/catalog.go",
+      "physical_lines": 6,
+      "sha256": "c732f6f4b741e0dcf02558c52bca34bd235b01b16d0cc00266dd08fd4f412f46",
+      "functions": 2,
+      "receiver_methods": {},
+      "imports": [
+        "mig33.local/reconstruction/internal/catalog"
+      ]
+    },
+    {
+      "path": "internal/domain/catalog_api.go",
+      "physical_lines": 44,
+      "sha256": "18f708da9209bce32008782c59522dd5189b774f895849a8f00f7b31a0056d9a",
+      "functions": 0,
+      "receiver_methods": {},
+      "imports": null
+    },
+    {
+      "path": "internal/domain/chat_api.go",
+      "physical_lines": 73,
+      "sha256": "49c85238e4fc2660e43bd6c2cb8e407ab59f71ded79a0802d226368bd7e5f2d0",
+      "functions": 0,
+      "receiver_methods": {},
+      "imports": null
+    },
+    {
+      "path": "internal/domain/commerce.go",
+      "physical_lines": 23,
+      "sha256": "7bdf5b858c22bf63638b599fe26c1a1ddb7456432b8cbff97aa0317a253fda77",
+      "functions": 0,
+      "receiver_methods": {},
+      "imports": [
+        "mig33.local/reconstruction/internal/catalog"
+      ]
+    },
+    {
+      "path": "internal/domain/community.go",
+      "physical_lines": 16,
+      "sha256": "c7998e415b351213a8af50b7915f225e87e265764811ab03f5a9b70384a64cf9",
+      "functions": 0,
+      "receiver_methods": {},
+      "imports": null
+    },
+    {
+      "path": "internal/domain/contacts.go",
+      "physical_lines": 48,
+      "sha256": "cecc36558bee00cfd353da219560e9ec5b68b3f5e7a61479937e66ec9ef01b8d",
+      "functions": 2,
+      "receiver_methods": {},
+      "imports": null
+    },
+    {
+      "path": "internal/domain/gifts.go",
+      "physical_lines": 32,
+      "sha256": "1b9272595a194fc201445c439ba0adf53e9e82b66fc683416f09b356b43082da",
+      "functions": 1,
+      "receiver_methods": {},
+      "imports": [
+        "strings",
+        "unicode",
+        "unicode/utf8"
+      ]
+    },
+    {
+      "path": "internal/domain/groups.go",
+      "physical_lines": 8,
+      "sha256": "1653559dc81c35bd30119090ac4ba200841eec6de4fd88c78da628102afc34a7",
+      "functions": 0,
+      "receiver_methods": {},
+      "imports": null
+    },
+    {
+      "path": "internal/domain/identity.go",
+      "physical_lines": 18,
+      "sha256": "659c34e790e7a8250175fceff3dd81df4f6012a9ff67a5d49e8c0574bc17c7f4",
+      "functions": 0,
+      "receiver_methods": {},
+      "imports": null
+    },
+    {
+      "path": "internal/domain/messages.go",
+      "physical_lines": 21,
+      "sha256": "6df533f0608f47f5f4da98668a475de9f4cebf507d3ebf64778b1d138a35fc7e",
+      "functions": 0,
+      "receiver_methods": {},
+      "imports": [
+        "time"
+      ]
+    },
+    {
+      "path": "internal/domain/operator.go",
+      "physical_lines": 13,
+      "sha256": "a6e59ed15a1dbc265d2d01bd06e5cede90fbca1911c214a7a61210461e052c66",
+      "functions": 0,
+      "receiver_methods": {},
+      "imports": null
+    },
+    {
+      "path": "internal/domain/reports.go",
+      "physical_lines": 37,
+      "sha256": "9a74cbe497a109f9ecf4e8ba56c7cdeae7e98cbe1c17a144d71d9fa7f08ab0ff",
+      "functions": 1,
+      "receiver_methods": {},
+      "imports": null
+    },
+    {
+      "path": "internal/domain/room_completion.go",
+      "physical_lines": 20,
+      "sha256": "64d28a7aa6ad68f53a852c1660b557d260224d79cfcd521847a6b7634f0938d7",
+      "functions": 0,
+      "receiver_methods": {},
+      "imports": null
+    },
+    {
+      "path": "internal/domain/room_discovery.go",
+      "physical_lines": 23,
+      "sha256": "690d667575a4d315c9a467a7f439b0477453e42bb24eaed2316c9edb1cd7bfe8",
+      "functions": 1,
+      "receiver_methods": {},
+      "imports": [
+        "strings"
+      ]
+    },
+    {
+      "path": "internal/domain/room_settings.go",
+      "physical_lines": 12,
+      "sha256": "a7c68a26c4249aea4ef0783dace5e59bdf7a65e58627888f9770c9fb29ef4fd4",
+      "functions": 0,
+      "receiver_methods": {},
+      "imports": null
+    },
+    {
+      "path": "internal/domain/rooms.go",
+      "physical_lines": 10,
+      "sha256": "706b3698bb1e201b0dd76b2dab3d3633a66f6df1da1c1ad5d8ace6f3f150aac4",
+      "functions": 0,
+      "receiver_methods": {},
+      "imports": null
+    },
+    {
+      "path": "internal/domain/services.go",
+      "physical_lines": 15,
+      "sha256": "a474461a34b3593125a43b8b94b3ac93acbcbc91f111a4d2d6fc324c534177d8",
+      "functions": 0,
+      "receiver_methods": {},
+      "imports": null
+    },
+    {
+      "path": "internal/domain/store.go",
+      "physical_lines": 17,
+      "sha256": "fc6508609b3150793847b41f50253eb6d668001f0fab11d8873245eac01219e9",
+      "functions": 0,
+      "receiver_methods": {},
+      "imports": [
+        "errors"
+      ]
+    },
+    {
+      "path": "internal/ports/administration.go",
+      "physical_lines": 16,
+      "sha256": "8c6d89fba09b65c347b865f0b2501e44ba6415e8db2e25e396fb982f49128a17",
+      "functions": 0,
+      "receiver_methods": {},
+      "imports": [
+        "context",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/ports/browser.go",
+      "physical_lines": 25,
+      "sha256": "dded1bfa6f68d33083d2ee3c4b9750f24d0c2fa939ad70e838a75e469af77f49",
+      "functions": 0,
+      "receiver_methods": {},
+      "imports": [
+        "context",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/ports/chat_services.go",
+      "physical_lines": 24,
+      "sha256": "47fc1d7af66aae190ad94d5e92604267a1451f87a46bda699d5eb877e4256f4e",
+      "functions": 0,
+      "receiver_methods": {},
+      "imports": [
+        "context",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/ports/repositories.go",
+      "physical_lines": 172,
+      "sha256": "498abef758cd941ba6ac3b16ba35a3eaffb8c4fe7518d6084cae077b8c711c06",
+      "functions": 0,
+      "receiver_methods": {},
+      "imports": [
+        "context",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/ports/services.go",
+      "physical_lines": 45,
+      "sha256": "7bb1901b2a9f8e7270c5d6693a4255dce46e1c99b2dbf289989a0deac46c6202",
+      "functions": 0,
+      "receiver_methods": {},
+      "imports": [
+        "context",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/blocks.go",
+      "physical_lines": 79,
+      "sha256": "d6edd3ca916b5f8ed2c78cb8ed204ef0e1e36a4ed09eeffcabba3d2d9c4ffda8",
+      "functions": 5,
+      "receiver_methods": {
+        "Store": 3
+      },
+      "imports": [
+        "context",
+        "database/sql",
+        "fmt",
+        "time",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/commerce.go",
+      "physical_lines": 227,
+      "sha256": "2045e87c0035453a176a3c603a1e150fe4cbdbe8192aa7f1ee3c8600ee8a2762",
+      "functions": 10,
+      "receiver_methods": {
+        "Store": 7
+      },
+      "imports": [
+        "context",
+        "database/sql",
+        "errors",
+        "time",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc",
+        "mig33.local/reconstruction/internal/catalog",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/community.go",
+      "physical_lines": 345,
+      "sha256": "b874f1b88cfd564fc142f14f96d057a6d9df94ef6cf687d494a8e21bd1dff9a3",
+      "functions": 12,
+      "receiver_methods": {
+        "Store": 10
+      },
+      "imports": [
+        "context",
+        "database/sql",
+        "errors",
+        "strings",
+        "time",
+        "unicode/utf8",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/contacts.go",
+      "physical_lines": 553,
+      "sha256": "c13e8cc1b60bc116041d56051ffbd777abddfae9f8e94c6538a4272ebf32c8eb",
+      "functions": 29,
+      "receiver_methods": {
+        "Store": 13
+      },
+      "imports": [
+        "context",
+        "database/sql",
+        "encoding/json",
+        "fmt",
+        "math",
+        "slices",
+        "strings",
+        "time",
+        "unicode/utf8",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/gifts.go",
+      "physical_lines": 102,
+      "sha256": "168eba582e89d48f990f5d14c7db13c65f99d0b5104b6c73e7832b41249aece7",
+      "functions": 6,
+      "receiver_methods": {
+        "Store": 3
+      },
+      "imports": [
+        "context",
+        "database/sql",
+        "errors",
+        "time",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/groups.go",
+      "physical_lines": 256,
+      "sha256": "d5fd6fab6ba776679c6a50fe93c95f86df96d6bbe6529c880a977cf35b3f22e7",
+      "functions": 8,
+      "receiver_methods": {
+        "Store": 5
+      },
+      "imports": [
+        "context",
+        "database/sql",
+        "errors",
+        "fmt",
+        "sort",
+        "time",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/identity.go",
+      "physical_lines": 311,
+      "sha256": "1696364af641f474119372c4cc9888d39c67a77fdf6560858bf58c379f463922",
+      "functions": 18,
+      "receiver_methods": {
+        "Store": 15
+      },
+      "imports": [
+        "context",
+        "database/sql",
+        "errors",
+        "fmt",
+        "strings",
+        "time",
+        "unicode/utf8",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/messages.go",
+      "physical_lines": 295,
+      "sha256": "aea3775dc9a302845a3599d8d3b83cb4f1a13cc451aee82eea290b3fe6c05e28",
+      "functions": 6,
+      "receiver_methods": {
+        "Store": 4
+      },
+      "imports": [
+        "context",
+        "database/sql",
+        "errors",
+        "fmt",
+        "time",
+        "unicode/utf8",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/formatting"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/moderation.go",
+      "physical_lines": 176,
+      "sha256": "00bbe9e498a26f7ad31290b570209768a67b2bcf05ee1b12282589b9d9befc51",
+      "functions": 9,
+      "receiver_methods": {
+        "Store": 8
+      },
+      "imports": [
+        "context",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/native_services.go",
+      "physical_lines": 75,
+      "sha256": "b7442f4a3bdb6f0234ecb4216efc179d99dd1f9d86fab0e50078ecadf0d49382",
+      "functions": 6,
+      "receiver_methods": {
+        "Store": 5
+      },
+      "imports": [
+        "context",
+        "database/sql",
+        "errors",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/operator.go",
+      "physical_lines": 120,
+      "sha256": "39e060f61f198fc2ce9bb0007d9f9cd60d0d2e9d55159e913a3f03aad4e0578b",
+      "functions": 4,
+      "receiver_methods": {
+        "Store": 4
+      },
+      "imports": [
+        "context",
+        "database/sql",
+        "errors",
+        "time",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/ports.go",
+      "physical_lines": 18,
+      "sha256": "7010bf283a8893c04a9aa778cfe8eaf05d2926dc9bf0d4079b291dacb1b14d58",
+      "functions": 0,
+      "receiver_methods": {},
+      "imports": [
+        "mig33.local/reconstruction/internal/ports"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/profile_formatting.go",
+      "physical_lines": 32,
+      "sha256": "d5f4a41d30d23fedff194a4179fd033320a2e0b84aa8f901b891bc4450d7e038",
+      "functions": 2,
+      "receiver_methods": {
+        "Store": 2
+      },
+      "imports": [
+        "context",
+        "database/sql",
+        "errors",
+        "fmt",
+        "strings",
+        "unicode/utf8",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/queries.go",
+      "physical_lines": 38,
+      "sha256": "7a0a54a6412d2b3f3d9fcac7a8a786fc899e2c9a526d8aee226a3198f703e01e",
+      "functions": 3,
+      "receiver_methods": {},
+      "imports": [
+        "context",
+        "database/sql",
+        "errors",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/reports.go",
+      "physical_lines": 181,
+      "sha256": "2480ec63ec9415f13cf3f843331241411966a60c77c8fc2fb2f36e7ea4c98be6",
+      "functions": 11,
+      "receiver_methods": {
+        "Store": 5
+      },
+      "imports": [
+        "context",
+        "errors",
+        "strings",
+        "time",
+        "unicode/utf8",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/room_completion.go",
+      "physical_lines": 342,
+      "sha256": "d3877903b35cb80aa761dd96f1e554cd49499d146637f9809746c00936da4e89",
+      "functions": 13,
+      "receiver_methods": {
+        "Store": 10
+      },
+      "imports": [
+        "context",
+        "crypto/rand",
+        "database/sql",
+        "encoding/hex",
+        "errors",
+        "strconv",
+        "strings",
+        "time",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/room_discovery.go",
+      "physical_lines": 185,
+      "sha256": "3126d63aa7d666fd4bbd46aa6deca34caff48551e182843187708048fdad9b49",
+      "functions": 7,
+      "receiver_methods": {
+        "Store": 6
+      },
+      "imports": [
+        "context",
+        "errors",
+        "strings",
+        "time",
+        "unicode/utf8",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/room_settings.go",
+      "physical_lines": 149,
+      "sha256": "6a898a4879111d9d94ce319bea4335ada807d4e1571283072bc092bc7971013e",
+      "functions": 5,
+      "receiver_methods": {
+        "Store": 5
+      },
+      "imports": [
+        "context",
+        "fmt",
+        "strconv",
+        "strings",
+        "time",
+        "unicode/utf8",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/rooms.go",
+      "physical_lines": 51,
+      "sha256": "5e126fb91ffd2a63eb678d6c31f59731b3715b2767feda09cce3d0ac69469ac8",
+      "functions": 5,
+      "receiver_methods": {
+        "Store": 2
+      },
+      "imports": [
+        "context",
+        "fmt",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/services.go",
+      "physical_lines": 219,
+      "sha256": "e5c46945534b7025744cc59f16777a38ee0503d3b565c098ff4f50cbb58742f1",
+      "functions": 14,
+      "receiver_methods": {
+        "Store": 13
+      },
+      "imports": [
+        "bytes",
+        "context",
+        "database/sql",
+        "errors",
+        "fmt",
+        "image",
+        "image/jpeg",
+        "image/png",
+        "strings",
+        "time",
+        "unicode/utf8",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/store.go",
+      "physical_lines": 110,
+      "sha256": "ca1f370e58214e6c413b00d088b4e00be960fa7a7a7823c044b401594a15be21",
+      "functions": 5,
+      "receiver_methods": {
+        "Store": 1
+      },
+      "imports": [
+        "context",
+        "database/sql",
+        "fmt",
+        "net/url",
+        "os",
+        "path/filepath",
+        "strings",
+        "unicode/utf8",
+        "github.com/mattn/go-sqlite3",
+        "mig33.local/reconstruction/internal/adapters/sqlite/migrations",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/theme_default.go",
+      "physical_lines": 22,
+      "sha256": "d44a5825f53a4494a67d46db023f14ec56fc70b02d3763bab9003aa01a922697",
+      "functions": 1,
+      "receiver_methods": {
+        "Store": 1
+      },
+      "imports": [
+        "context",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc"
+      ]
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/transcripts.go",
+      "physical_lines": 119,
+      "sha256": "4c618fbb626259c944952afaf62ed3a85cf2d8f845c0fa74eef52a832e8a02cf",
+      "functions": 7,
+      "receiver_methods": {
+        "Store": 6
+      },
+      "imports": [
+        "context",
+        "database/sql",
+        "errors",
+        "strings",
+        "time",
+        "mig33.local/reconstruction/internal/adapters/sqlite/sqlc"
+      ]
+    },
+    {
+      "path": "internal/controllers/browser.go",
+      "physical_lines": 126,
+      "sha256": "dd4e4675b2991149d11f60303552c20a2863e2e06642c45a86720fe16c8d333f",
+      "functions": 6,
+      "receiver_methods": {
+        "Controller": 1
+      },
+      "imports": [
+        "crypto/subtle",
+        "errors",
+        "mime",
+        "net/http",
+        "net/url",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/pages"
+      ]
+    },
+    {
+      "path": "internal/controllers/catalog.go",
+      "physical_lines": 45,
+      "sha256": "a6810ab14deddff697b89eec1da34495af4209fb04d4db2f7191765d94003460",
+      "functions": 4,
+      "receiver_methods": {
+        "Controller": 4
+      },
+      "imports": [
+        "net/http",
+        "mig33.local/reconstruction/internal/adapters/httpapi"
+      ]
+    },
+    {
+      "path": "internal/controllers/chat.go",
+      "physical_lines": 238,
+      "sha256": "a5315de1c4b822e88c678ed80c6713dcb3a96138bac30f31d9cd45fccd6933b5",
+      "functions": 13,
+      "receiver_methods": {
+        "Controller": 7
+      },
+      "imports": [
+        "encoding/json",
+        "io",
+        "mime",
+        "net/http",
+        "strconv",
+        "mig33.local/reconstruction/internal/adapters/httpapi",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/controllers/contacts.go",
+      "physical_lines": 42,
+      "sha256": "cccf9c2ce3b3bdc676f96fe1bc3516dac302c5d543959271c311ad9776153289",
+      "functions": 2,
+      "receiver_methods": {
+        "Controller": 2
+      },
+      "imports": [
+        "net/http",
+        "mig33.local/reconstruction/internal/adapters/httpapi"
+      ]
+    },
+    {
+      "path": "internal/controllers/controller.go",
+      "physical_lines": 73,
+      "sha256": "ab48497dbef14c58c9f95561e7c7952da0c142ebdbccdafa3d8d5310049ab270",
+      "functions": 7,
+      "receiver_methods": {},
+      "imports": [
+        "crypto/rand",
+        "encoding/hex",
+        "encoding/json",
+        "errors",
+        "net/http",
+        "mig33.local/reconstruction/internal/adapters/httpapi",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/ports"
+      ]
+    },
+    {
+      "path": "internal/controllers/media.go",
+      "physical_lines": 54,
+      "sha256": "4b789f66d39e6343091ecc2323faed8430eaf7e4f42accee2072fcdf096262d7",
+      "functions": 2,
+      "receiver_methods": {
+        "Controller": 2
+      },
+      "imports": [
+        "errors",
+        "io",
+        "net/http",
+        "strings",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    },
+    {
+      "path": "internal/controllers/native.go",
+      "physical_lines": 117,
+      "sha256": "beb505988ac9c24e3a6f230b7b3c395f6e25a341a092229c40b556d6a6539bb5",
+      "functions": 2,
+      "receiver_methods": {
+        "Controller": 1
+      },
+      "imports": [
+        "bytes",
+        "context",
+        "errors",
+        "io",
+        "net/http",
+        "strings",
+        "time",
+        "mig33.local/reconstruction/internal/ports",
+        "mig33.local/reconstruction/internal/protocol"
+      ]
+    },
+    {
+      "path": "internal/controllers/operator.go",
+      "physical_lines": 156,
+      "sha256": "896fda9d24a36aecd6502f6c95599fecb37f1623b68e357af59f3dd92c7e457c",
+      "functions": 2,
+      "receiver_methods": {
+        "Controller": 1
+      },
+      "imports": [
+        "errors",
+        "fmt",
+        "net/http",
+        "strconv",
+        "mig33.local/reconstruction/internal/domain",
+        "mig33.local/reconstruction/internal/pages"
+      ]
+    },
+    {
+      "path": "internal/controllers/pages.go",
+      "physical_lines": 32,
+      "sha256": "e14d5e50b6ba3c2acb10a02e67939d4575025fbdae70469de5d0b653fed4e3bd",
+      "functions": 1,
+      "receiver_methods": {
+        "Controller": 1
+      },
+      "imports": [
+        "mime",
+        "net/http",
+        "net/url",
+        "mig33.local/reconstruction/internal/domain"
+      ]
+    }
+  ],
+  "interfaces": {
+    "AdministrationService": [
+      "ListReports",
+      "ReportDetails",
+      "ReviewReport",
+      "SetRoomModerator"
+    ],
+    "BrowserService": [
+      "BrowserPage",
+      "LoginBrowser",
+      "LogoutBrowser"
+    ],
+    "CatalogService": [
+      "Catalog"
+    ],
+    "ChatRepository": [
+      "ConversationRead",
+      "CreateGroup",
+      "Group",
+      "Groups",
+      "History",
+      "Invite",
+      "LatestMessageID",
+      "Leave",
+      "MarkConversationRead",
+      "MarkDelivered",
+      "OwnMessagesAfter",
+      "Pending",
+      "RequestedMessage",
+      "SaveMessage",
+      "Transcript"
+    ],
+    "ChatService": [
+      "ChatGroups",
+      "ChatHistory",
+      "MarkChatRead",
+      "SendChatMessage",
+      "SyncChat"
+    ],
+    "CommerceRepository": [
+      "CreditBalance",
+      "CreditHistory",
+      "CreditOperation",
+      "CreditOperationWithNote",
+      "GiftNote",
+      "GiftRating",
+      "OwnedStoreItems",
+      "RateGift",
+      "ResetStoreTheme",
+      "SelectStoreTheme",
+      "SelectedStoreTheme"
+    ],
+    "CommunityRepository": [
+      "AddCommunityPost",
+      "Communities",
+      "Community",
+      "CommunityMembers",
+      "CommunityMembership",
+      "CommunityPosts",
+      "CommunityRole",
+      "CommunityRooms",
+      "CreateCommunity",
+      "LinkCommunityRoom"
+    ],
+    "ContactsRepository": [
+      "AddContact",
+      "AddContactGroup",
+      "BlockedUsers",
+      "Contact",
+      "ContactByIdentity",
+      "ContactByUsername",
+      "ContactChanges",
+      "Contacts",
+      "DeleteContact",
+      "DeleteContactGroup",
+      "EnsureContacts",
+      "IsBlocked",
+      "RenameContactGroup",
+      "SetBlocked",
+      "UpdateContact"
+    ],
+    "ContactsService": [
+      "ContactsSnapshot"
+    ],
+    "IdentityRepository": [
+      "ActivateIdentity",
+      "ConsumeIdentityChallenge",
+      "CreateIdentityChallenge",
+      "FailIdentityChallenge",
+      "Identities",
+      "Identity",
+      "IdentityByMobile",
+      "IdentityChallenge",
+      "IdentityPreference",
+      "ProfileFormatting",
+      "RegisterIdentity",
+      "ReplaceIdentityPassword",
+      "SeedIdentity",
+      "SetIdentityMobile",
+      "SetIdentityPreference",
+      "SetProfileFormatting",
+      "UpdateIdentityField"
+    ],
+    "MediaService": [
+      "LanguageResource",
+      "Media"
+    ],
+    "NativeService": [
+      "AllowPacket",
+      "BeginResponse",
+      "BeginWrite",
+      "DropSession",
+      "FinishWrite",
+      "Handle",
+      "PushQueue",
+      "TryBeginResponse"
+    ],
+    "OperatorService": [
+      "ChangeOperatorCategory",
+      "LoginOperator",
+      "LogoutOperator",
+      "OperatorDashboard",
+      "OperatorSession",
+      "OperatorsEnabled",
+      "ReviewOperatorItem"
+    ],
+    "PageService": [
+      "FeaturePage"
+    ],
+    "ReportsRepository": [
+      "OperatorReports",
+      "OperatorReviews",
+      "OperatorSupport",
+      "Report",
+      "ReportReviews",
+      "Reports",
+      "ReviewReport",
+      "ReviewWorkItem",
+      "SubmitReport"
+    ],
+    "RoomsRepository": [
+      "AddRoomFavorite",
+      "CreateRoom",
+      "DeleteOwnedRoom",
+      "FavoriteRooms",
+      "GroupRoomAccess",
+      "GroupRoomControls",
+      "IsRoomModerator",
+      "IsRoomMuted",
+      "ManageGroupRoom",
+      "ManageRoom",
+      "ManageRoomCategory",
+      "PlayRoomBot",
+      "RecordRoomEvent",
+      "RemoveRoomFavorite",
+      "Room",
+      "RoomBanned",
+      "RoomBans",
+      "RoomBotScores",
+      "RoomCategories",
+      "RoomChanges",
+      "RoomModerators",
+      "RoomMuted",
+      "RoomSettings",
+      "Rooms",
+      "SearchRooms",
+      "SearchRoomsFiltered",
+      "SetRoomCategory",
+      "SetRoomModerator",
+      "SetRoomMuted"
+    ],
+    "ServicesRepository": [
+      "ActivityEntries",
+      "AddPhoto",
+      "AddServiceEntry",
+      "ClearPhotoAvatar",
+      "DeletePhoto",
+      "DeleteServiceEntry",
+      "HasStoreItem",
+      "Language",
+      "Photo",
+      "PhotoAvatar",
+      "PhotoSharedWith",
+      "Photos",
+      "RemoveIMLabels",
+      "ServiceEntries",
+      "ServiceEntryByID",
+      "ServiceEntryByNonce",
+      "SetLanguage",
+      "SetPhotoAvatar"
+    ],
+    "SessionService": [
+      "PublicURL",
+      "Session"
+    ]
+  },
+  "method": "Go AST counts, physical lines including comments/blank lines; selector analysis syntactic, not whole-program type inference",
+  "packages": {
+    "internal/adapters/sqlite/repositories": {
+      "production_files": 23,
+      "production_lines": 4005,
+      "test_files": 15,
+      "test_lines": 3204
+    },
+    "internal/controllers": {
+      "production_files": 9,
+      "production_lines": 883,
+      "test_files": 2,
+      "test_lines": 178
+    },
+    "internal/domain": {
+      "production_files": 20,
+      "production_lines": 571,
+      "test_files": 0,
+      "test_lines": 0
+    },
+    "internal/ports": {
+      "production_files": 5,
+      "production_lines": 282,
+      "test_files": 2,
+      "test_lines": 311
+    },
+    "internal/services": {
+      "production_files": 41,
+      "production_lines": 8229,
+      "test_files": 40,
+      "test_lines": 8858
+    }
+  },
+  "summary": {
+    "application_methods": 182,
+    "exported_application_methods": 38,
+    "one_application_type": "internal/services/application.go:72",
+    "repository_capabilities": {
+      "ChatRepository": 15,
+      "CommerceRepository": 11,
+      "CommunityRepository": 10,
+      "ContactsRepository": 15,
+      "IdentityRepository": 17,
+      "ReportsRepository": 9,
+      "RoomsRepository": 29,
+      "ServicesRepository": 18
+    },
+    "domain_functions": 12,
+    "fields_accessed_from_number_of_service_files": {
+      "mu": 14,
+      "store": 33,
+      "accounts": 23,
+      "sessions": 19,
+      "deliveries": 3,
+      "kickVotes": 6,
+      "operators": 3
+    },
+    "compatibility_imports_number_of_service_files": {
+      "pages": 19,
+      "protocol": 24,
+      "domain": 34,
+      "catalog": 2,
+      "formatting": 4
+    },
+    "application_method_call_sites_crossing_source_files": 238,
+    "notes": "Source-file count is not service count; these41 production files form one Go package and one service object. Cross-file selector counts are syntactic evidence of coupling, not independent runtime service calls."
+  },
+  "semantic_distinctions": [
+    {
+      "concept": "Private chat group",
+      "model": "internal/domain/groups.go:4",
+      "identity": "string conversation ID",
+      "membership": "explicit durable conversation members",
+      "behavior": "DM-like durable audience/pending/history; invitation and leave"
+    },
+    {
+      "concept": "Public chat room",
+      "model": "internal/domain/rooms.go:4",
+      "identity": "canonical room name",
+      "membership": "live session participation plus persistent owner/moderator/bans/settings",
+      "behavior": "capacity, occupancy, room moderation and votes; room traffic excluded from offline Pending"
+    },
+    {
+      "concept": "Community Group",
+      "model": "internal/domain/community.go:4",
+      "identity": "int64 community ID",
+      "membership": "owner/moderator/member/pending community roles",
+      "behavior": "community/forum posts and optional links to rooms; different from private chat groups"
+    }
+  ],
+  "coupling_evidence": [
+    {
+      "path": "internal/services/application.go:28",
+      "finding": "account owns credential snapshot plus deliveryGate; session owns authentication, presence, room membership, contact revision, transient activities, durable inflight reservation and own-message cursor, responseGate and emoticon refresh. These are concurrent shared state, not just common DTOs."
+    },
+    {
+      "path": "internal/services/application.go:72",
+      "finding": "Application holds one state mutex, all accounts/sessions, composite124-method repository, packet delivery map, room kick ballots/cooldowns and operator role set."
+    },
+    {
+      "path": "internal/services/application.go:188",
+      "finding": "Handle acquires account deliveryGate before state mutex for personal-block opcode417; ordinary native operations hold Application.mu while dispatching use cases. Package extraction alone must not alter this lock order."
+    },
+    {
+      "path": "internal/services/blocking.go:13",
+      "finding": "Persisting block invokes cancelBlockedDeliveries; direct effects across contact graph and chat queues enforce no incoming messages after a block."
+    },
+    {
+      "path": "internal/services/transcripts.go:94",
+      "finding": "Modern SendChatMessage already has typed domain input/output but translates to protocol.Packet then delegates native messageWithFormatting under global mutex; protocol decoupling is a real seam to improve, independently of folder layout."
+    },
+    {
+      "path": "internal/services/room_commands.go:20",
+      "finding": "Room commands cross live room participation, persistent room controls, CommunityRole, linked rooms, identity existence/privacy, bot results and native packet dispatch."
+    },
+    {
+      "path": "internal/services/reports.go:56",
+      "finding": "Reporting authorizes either live room membership or durable private-group membership; operator review also administers room categories. Moderation crosses domain boundaries and needs explicit capabilities."
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/messages.go:28",
+      "finding": "SaveMessage atomically validates group membership/block policy/photo ownership or room mute state, inserts message, immutable audience and request key. Domain splitting must retain transactionally consistent audience selection."
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/commerce.go:55",
+      "finding": "CreditOperationWithNote one transaction includes nonce replay, permission checks, credit debit/ledger, gift note, inventory and durable gift chat message/audience through saveGiftMessage. Naively calling commerce repo then messaging repo would break existing atomicity."
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/gifts.go:20",
+      "finding": "Gift authorization reads block list, identity privacy and contact graph inside the same debit transaction."
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/identity.go:135",
+      "finding": "RegisterIdentity atomically consumes challenge and creates identity, roster and default Friends group. Explicit cross-capability consistency requirement; asynchronous roster setup would regress immediate login readiness."
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/community.go:219",
+      "finding": "LinkCommunityRoom validates both community role and room ownership under one transaction."
+    },
+    {
+      "path": "internal/services/product_catalog.go:153",
+      "finding": "Public Catalog only needs public base origin and static product/emoticon/game metadata, no account/session/store state; low-risk service extraction example, though internal/catalog already owns static products."
+    }
+  ],
+  "candidate_modules": [
+    {
+      "name": "identity/accounts",
+      "responsibilities": [
+        "credentials, registration/recovery, activation",
+        "account profile/preferences and committed credential cache"
+      ],
+      "boundary_warning": "Authentication/session transport state currently shares realtime core; keep shared session ownership explicit."
+    },
+    {
+      "name": "contacts",
+      "responsibilities": [
+        "roster and contact groups",
+        "friend graph and personal blocking"
+      ],
+      "boundary_warning": "Block commit and delivery queue invalidation are ordered together; registration initializes roster atomically."
+    },
+    {
+      "name": "messaging",
+      "responsibilities": [
+        "DMs and private chat groups",
+        "audience/history/idempotency/read state",
+        "durable and own-session delivery"
+      ],
+      "boundary_warning": "Keep session/presence/room realtime coordination co-owned initially. Not one microservice per conversation kind."
+    },
+    {
+      "name": "rooms",
+      "responsibilities": [
+        "room directory/settings",
+        "live membership/capacity/moderation",
+        "kick ballots and room policy"
+      ],
+      "boundary_warning": "High coupling to session ownership, delivery gates and community room permissions; extract pure rules before live state."
+    },
+    {
+      "name": "community",
+      "responsibilities": [
+        "community Groups/roles/membership",
+        "forums/posts",
+        "room associations"
+      ],
+      "boundary_warning": "Room linking and Group-room authorization require explicit cross-capability contracts."
+    },
+    {
+      "name": "commerce",
+      "responsibilities": [
+        "credit ledger, inventory, purchases/gifts",
+        "catalog ownership and ratings"
+      ],
+      "boundary_warning": "Gift purchase includes messaging persistence in one transaction; keep specialized atomic operation or deliberate shared transaction mechanism."
+    },
+    {
+      "name": "media / ancillary capabilities",
+      "responsibilities": [
+        "photos/avatar/resource policies",
+        "provider requests, local inbox, activity/social pages, support/operator review"
+      ],
+      "boundary_warning": "Current ServicesRepository is a mixed18-operation bucket, not one cohesive domain; subdivide from real use cases rather than replicate its name."
+    },
+    {
+      "name": "legacy compatibility (technical module)",
+      "responsibilities": [
+        "native packet translations",
+        "historical URL/HTML forms",
+        "theme/language/emoticon serializers"
+      ],
+      "boundary_warning": "This is an adapter boundary, not a business bounded context. Gradually map it to typed application commands/results shared with modern API."
+    }
+  ],
+  "recommendation": {
+    "approach": "Incremental domain-oriented modular monolith in one Go module, one SQLite database, shared realtime state owner initially. Domain boundaries are candidates justified by responsibilities/invariants, not automatic by41-file threshold.",
+    "first_steps": [
+      "Name and document capabilities, invariants and cross-module transactions; do not rename directories first.",
+      "Keep stable HTTP/controller and native compatibility facade. Extract typed policy/use-case functions that do not receive *Application or expose session maps.",
+      "Start with a narrow low-state capability such as public catalog, then typed read models/reports/commerce use cases behind consumer-owned ports. Keep identity credential/session synchronization explicit.",
+      "Reduce each extracted service dependency from ports.Repositories to only its required methods; move owned types next to capability gradually, retaining only truly shared primitives/errors centrally.",
+      "Leave DM/private-group/room/presence delivery coordination together until lock/ordering ownership is redesigned and validated; then extract room policy or state behind a single owner.",
+      "Keep sqlc-generated code and database/sql inside adapters; preserve specialized atomic operations for registration, message save and gift purchase across logical modules.",
+      "Add dependency/import guards between modules and focused tests that preserve transaction/locking/outbox invariants; retain original-client acceptance."
+    ],
+    "avoid": [
+      "One domain package per source file or table",
+      "Giving each new service its own copy of session maps/mutexes",
+      "A shared god-package or interface exposing all124 repository methods to every module",
+      "Microservices, separate databases or separate go.mod files solely to reduce folder/file counts",
+      "Replacing current synchronous cross-feature transactions with in-memory events or sequential independent repository commits",
+      "Passing *sql.Tx or sqlc types through business service ports",
+      "Changing physical concurrency ownership in the same mechanical package move"
+    ]
+  }
+}

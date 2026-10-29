@@ -1,0 +1,456 @@
+{
+  "version": "4.62",
+  "common": {
+    "scope": "All17 literal /sites/ templates containing%s plus assembled group/location/photo routes and dynamic extension rules. Analysis-only normal-flow references are corroborated by original javap; no live legacy requests were made.",
+    "base_and_substitution": {
+      "rule": "y.e(path,value) returns null if aj.Q==null, even when path is absolute. Otherwise if path does not case-sensitively start with http, y.c(path,Q) joins slash boundaries; non-null value replaces FIRST occurrence of literal%s. Null value leaves%s unchanged. Empty value removes that occurrence. There is no generic printf or query encoder.",
+      "sources": [
+        "research/applets/v4/artifacts/vineflower/y.java:1025",
+        "research/applets/v4/artifacts/vineflower/y.java:1078",
+        "research/applets/v4/artifacts/vineflower/y.java:3553",
+        "research/applets/v4/artifacts/vineflower/y.java:3570"
+      ],
+      "bytecode": [
+        "research/applets/v4/artifacts/bytecode/y.txt:3811",
+        "research/applets/v4/artifacts/bytecode/y.txt:3932",
+        "research/applets/v4/artifacts/bytecode/y.txt:11800",
+        "research/applets/v4/artifacts/bytecode/y.txt:11876"
+      ]
+    },
+    "base_source": {
+      "rule": "aj.Q is server-supplied after login: field26.substring(0,field26.indexOf(\"/\",7)+1). It is origin-like, not a hardcoded www host or a session-token query. The concatenator only recognizes http:// on base and prefixes http:// otherwise, so reproduce exact helper if compatibility is required.",
+      "sources": [
+        "research/applets/v4/artifacts/normal-flow/bc.java:1967",
+        "research/applets/v4/artifacts/vineflower/y.java:3554"
+      ]
+    },
+    "escaping": {
+      "rule": "y.g replaces only ASCII U+0020 with%20; aj.a(url,body,...) applies it to non-P-prefixed URLs. Raw username/room/query substitutions do NOT escape &,=,+,#,%, non-ASCII or slashes. Page form builder concatenates fields directly then replaces spaces with%20; this is not standards-complete application/x-www-form-urlencoded encoding.",
+      "sources": [
+        "research/applets/v4/artifacts/vineflower/y.java:1806",
+        "research/applets/v4/artifacts/normal-flow/aj.java:8530",
+        "research/applets/v4/artifacts/vineflower/s.java:1819"
+      ],
+      "bytecode": [
+        "research/applets/v4/artifacts/bytecode/y.txt:5983",
+        "research/applets/v4/artifacts/bytecode/aj.txt:24265",
+        "research/applets/v4/artifacts/bytecode/s.txt:4297"
+      ]
+    },
+    "initial_page_method": {
+      "rule": "Built-in menu route calls pass null body, therefore logical GET (opcode922 field1 byte1, field2 URL, nofield3). Non-null body selects byte2 and field3, logical POST. This can be proxied via the binary connection; it does NOT imply the handset always performs direct HTTP to every page.",
+      "sources": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:8530",
+        "research/applets/v4/artifacts/normal-flow/bl.java:367",
+        "research/applets/v4/artifacts/normal-flow/bc.java:989"
+      ],
+      "bytecode": [
+        "research/applets/v4/artifacts/bytecode/bl.txt:1102",
+        "research/applets/v4/artifacts/bytecode/bc.txt:3244"
+      ]
+    },
+    "page_forms": {
+      "rule": "Remote<form> method defaults get and is lowercased. Literal get produces action+\"?\"+body (even if action already has a query); all other method values produce action with non-null body. Hidden/nonempty text/select/submit inputs and checkedcheckbox=on are serialized in page control order. Body encoding only replaces spaces%20. Redirect URLs remain server-driven.",
+      "sources": [
+        "research/applets/v4/artifacts/vineflower/s.java:1819",
+        "research/applets/v4/artifacts/vineflower/s.java:1902",
+        "research/applets/v4/artifacts/vineflower/s.java:2694"
+      ]
+    },
+    "direct_http": {
+      "rule": "u sees922 URLs starting https and uses direct helper. Also direct922 HTTP path when aj.b==1 and caller mode==2. In both, body!=null meansPOST application/x-www-form-urlencoded; otherwiseGET. The first helper declares Content-Length as String.length but writes getBytes(); other path declares byte length. Binary HTTP tunnel is separate: packet!=null→POST image/gif; poll null→GET.",
+      "sources": [
+        "research/applets/v4/artifacts/vineflower/u.java:494",
+        "research/applets/v4/artifacts/vineflower/u.java:565",
+        "research/applets/v4/artifacts/vineflower/u.java:582",
+        "research/applets/v4/artifacts/vineflower/u.java:702"
+      ],
+      "bytecode": [
+        "research/applets/v4/artifacts/bytecode/u.txt:941",
+        "research/applets/v4/artifacts/bytecode/u.txt:1123"
+      ]
+    },
+    "static_fetches": {
+      "rule": "1001(language list),1003(language resource),1005(username availability) are dispatched into direct HTTP GET helpers. Language list/resource URLs may be server-supplied and are resolved using y.d(gatewayBase,url). Packaged en-US/default_v2 do not require HTTP. MIDlet-Install-Notify is installer metadata, not an implemented client web request.",
+      "sources": [
+        "research/applets/v4/artifacts/normal-flow/bc.java:365",
+        "research/applets/v4/artifacts/normal-flow/bc.java:374",
+        "research/applets/v4/artifacts/normal-flow/u.java:149",
+        "research/applets/v4/artifacts/normal-flow/u.java:162",
+        "research/applets/v4/artifacts/normal-flow/u.java:388"
+      ]
+    }
+  },
+  "routes": {
+    "http://www.mig33.com/sites/index.php?c=registration_api&v=midlet&a=check_username&username=%s": {
+      "expansion": "Replace first %s directly with the Username field (var22). Uses y.b rather than y.e, so does not depend on aj.Q. Username editor normally lowercases input. No percent-encoding in substitution. bc.g queues1005 and u performs direct GET.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:2640"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:10868"
+      ],
+      "initial_request": "GET"
+    },
+    "/sites/index.php?c=im&a=setup_im&im=%s&v=midlet": {
+      "expansion": "Replace %s with decimal selected external service ID h(ao).d, then y.e(result,null) resolves the base. Used for unconfigured service and Edit Login.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:3253",
+        "research/applets/v4/artifacts/normal-flow/aj.java:4098"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:5708",
+        "research/applets/v4/artifacts/bytecode/aj.txt:7927"
+      ]
+    },
+    "/sites/index.php?c=sms&a=home&v=midlet&f=sms&to_number=%s": {
+      "expansion": "Private chat: peer mobile s.c() when non-null, otherwise peer mig33 username s.f(). Roster SMS: selected contact mobile aq.d. Participant submenu action108: selected participant name var65. mig33:sms(argument): raw argument. Despite parameter name to_number, value can therefore be a username.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:3396",
+        "research/applets/v4/artifacts/normal-flow/aj.java:3407",
+        "research/applets/v4/artifacts/normal-flow/aj.java:3827",
+        "research/applets/v4/artifacts/normal-flow/aj.java:4221",
+        "research/applets/v4/artifacts/normal-flow/aj.java:5257"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:4389",
+        "research/applets/v4/artifacts/bytecode/aj.txt:4892",
+        "research/applets/v4/artifacts/bytecode/aj.txt:4903",
+        "research/applets/v4/artifacts/bytecode/aj.txt:7579",
+        "research/applets/v4/artifacts/bytecode/aj.txt:13832"
+      ]
+    },
+    "/sites/index.php?c=call&a=home&v=midlet&f=call&number_to_call=%s": {
+      "expansion": "Private chat: peer mobile s.c() when non-null, otherwise peer username s.f(). Roster Call: selected contact mobile. Participant submenu action106 also reads the CURRENT ROSTER selection mobile aq.d rather than var65; preserve that observed distinction. mig33:call(argument): raw argument.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:3419",
+        "research/applets/v4/artifacts/normal-flow/aj.java:3430",
+        "research/applets/v4/artifacts/normal-flow/aj.java:3820",
+        "research/applets/v4/artifacts/normal-flow/aj.java:4188",
+        "research/applets/v4/artifacts/normal-flow/aj.java:5252"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:4413",
+        "research/applets/v4/artifacts/bytecode/aj.txt:4917",
+        "research/applets/v4/artifacts/bytecode/aj.txt:4928",
+        "research/applets/v4/artifacts/bytecode/aj.txt:7646",
+        "research/applets/v4/artifacts/bytecode/aj.txt:13842"
+      ]
+    },
+    "/sites/index.php?c=profile&v=midlet&a=home&username=%s": {
+      "expansion": "Private User Profile: peer username s.f(); participant submenu102: selected participant name var65; roster View Profile/User Profiles/User Profile: current contact mig33 username t.e.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:3449",
+        "research/applets/v4/artifacts/normal-flow/aj.java:3789",
+        "research/applets/v4/artifacts/normal-flow/aj.java:4033"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:4487",
+        "research/applets/v4/artifacts/bytecode/aj.txt:4963",
+        "research/applets/v4/artifacts/bytecode/aj.txt:8173"
+      ]
+    },
+    "/sites/index.php?c=store&v=midlet&a=home&e=3&ty=1&username=%s": {
+      "expansion": "Give a Gift: private peer username s.f(), participant submenu100 selected name var65, or selected roster contact mig33 username aq.e.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:3461",
+        "research/applets/v4/artifacts/normal-flow/aj.java:3779",
+        "research/applets/v4/artifacts/normal-flow/aj.java:4013"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:4521",
+        "research/applets/v4/artifacts/bytecode/aj.txt:4974",
+        "research/applets/v4/artifacts/bytecode/aj.txt:8209"
+      ]
+    },
+    "/sites/index.php?c=lookout&a=home&v=midlet%s": {
+      "expansion": "Whole suffix replacement, not scalar: &cid=<contactID>&pres=<presenceByte>. Roster branch uses aq.a and aq.j. Private conversation branch uses s.e() (peer contact ID) but still cached aq.j for presence; do not silently substitute a newly inferred peer presence.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:3473",
+        "research/applets/v4/artifacts/normal-flow/aj.java:4724"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:4985",
+        "research/applets/v4/artifacts/bytecode/aj.txt:6664"
+      ],
+      "expanded_template": "/sites/index.php?c=lookout&a=home&v=midlet&cid={contact_id}&pres={presence}"
+    },
+    "/sites/index.php?c=account&v=midlet&a=transfer_credit&recipient_username=%s": {
+      "expansion": "Private conversation uses peer username s.f(); participant submenu1000 uses selected name var65. Roster Transfer Credit uses aq.c (DISPLAY NAME) if non-null, not aq.e (mig33 username); this is actual code despite query parameter name. Credits menu and absent recipient use separate no-recipient route.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:3485",
+        "research/applets/v4/artifacts/normal-flow/aj.java:3832",
+        "research/applets/v4/artifacts/normal-flow/aj.java:4758"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:4369",
+        "research/applets/v4/artifacts/bytecode/aj.txt:5015",
+        "research/applets/v4/artifacts/bytecode/aj.txt:6549"
+      ]
+    },
+    "/sites/index.php?c=chatroom&v=midlet&a=setup&roomName=%s": {
+      "expansion": "Room Info in current conversation uses s.b room name. Rooms-list Room Info and Change Chat Room Themes branch use selected room-list item .c; the latter does not use a separate theme route.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:3516",
+        "research/applets/v4/artifacts/normal-flow/aj.java:3584",
+        "research/applets/v4/artifacts/normal-flow/aj.java:3959"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:5061",
+        "research/applets/v4/artifacts/bytecode/aj.txt:5189",
+        "research/applets/v4/artifacts/bytecode/aj.txt:8406"
+      ]
+    },
+    "/sites/index.php?c=group&v=midlet&a=add_to_group&roomName=%s": {
+      "expansion": "Replace first %s using y.b with current conversation s.b room name, then resolve resulting relative path with y.e(...,null).",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:3529",
+        "research/applets/v4/artifacts/normal-flow/aj.java:3890",
+        "research/applets/v4/artifacts/normal-flow/aj.java:4650"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:5077",
+        "research/applets/v4/artifacts/bytecode/aj.txt:6806",
+        "research/applets/v4/artifacts/bytecode/aj.txt:8522"
+      ]
+    },
+    "/sites/index.php?c=report&a=report_abuse&v=midlet&type=4&subject=Group%20Chat&subject_id=%s": {
+      "expansion": "Group-chat Report Abuse uses current conversation s.b (group chat identifier) for%s. Group%20Chat is already escaped in literal; no additional component encoding.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:3603"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:5236"
+      ]
+    },
+    "/sites/index.php?c=report&a=report_abuse&v=midlet&type=4&subject=Chatroom&subject_id=%s": {
+      "expansion": "Chatroom Report Abuse uses current conversation s.b (room name) for%s.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:3618"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:5249"
+      ]
+    },
+    "/sites/index.php?c=profile&a=user_blog_posts&v=midlet&username=%s": {
+      "expansion": "My Blog substitutes current signed-in username from RMS profile field1 via y.b, then resolves base via y.e(...,null).",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:3916"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:8478"
+      ]
+    },
+    "/sites/index.php?c=email&a=compose&v=midlet%s": {
+      "expansion": "Send Email substitutes whole suffix &to=<selected contact mig33 username aq.e>. Compose Email substitutes EMPTY STRING, removing%s. Empty string is distinct from null (null would leave%s literal).",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:4007",
+        "research/applets/v4/artifacts/normal-flow/aj.java:4114"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:7909",
+        "research/applets/v4/artifacts/bytecode/aj.txt:8229"
+      ],
+      "expanded_templates": [
+        "/sites/index.php?c=email&a=compose&v=midlet&to={username}",
+        "/sites/index.php?c=email&a=compose&v=midlet"
+      ]
+    },
+    "/sites/index.php?c=photo&v=midlet&username=%s&a=home": {
+      "expansion": "My Photos uses current username RMS1. View Photos uses selected contact aq.e when non-null, otherwise current username. IMPORTANT opcode504 fallback (normal bc1537) calls y.e(template,null): if Q exists it sends the URL with literal%s UNREPLACED. Record this as observed client behavior, not a missing inferred username.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:4570",
+        "research/applets/v4/artifacts/normal-flow/aj.java:4687",
+        "research/applets/v4/artifacts/normal-flow/aj.java:4697",
+        "research/applets/v4/artifacts/normal-flow/bc.java:1537"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/bc.txt:8488",
+        "research/applets/v4/artifacts/bytecode/aj.txt:6732",
+        "research/applets/v4/artifacts/bytecode/aj.txt:6744",
+        "research/applets/v4/artifacts/bytecode/aj.txt:6922"
+      ],
+      "null_substitution_case": "Opcode504 response with no field1 URL and saved request field5==0; sends literal username=%s if Q non-null."
+    },
+    "/sites/index.php?c=help&a=contact_us&v=midlet%s": {
+      "expansion": "Contact Us substitutes whole suffix &to=<current signed-in username RMS1>. It is NOT a recipient field supplied by user input.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:4593"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:6884"
+      ],
+      "expanded_template": "/sites/index.php?c=help&a=contact_us&v=midlet&to={self_username}"
+    },
+    "/sites/index.php?c=buzz&a=home&v=midlet%s": {
+      "expansion": "Buzz substitutes whole suffix &cid=<selected contact aq.a>&pres=<selected contact aq.j>. cid is contact ID; pres is presence byte.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:4710"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:6696"
+      ],
+      "expanded_template": "/sites/index.php?c=buzz&a=home&v=midlet&cid={contact_id}&pres={presence}"
+    },
+    "/sites/index.php?c=group&v=midlet&a=list_chatrooms": {
+      "expansion": "Append &cid=<current conversation s.a>, the community/group ID. list_chatrooms and members append after y.e(...,null); view_forum and home concatenate before y.e. No query delimiter is synthesized beyond the explicit &cid=.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:3655"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:5350"
+      ],
+      "expanded_template": "/sites/index.php?c=group&v=midlet&a=list_chatrooms&cid={community_id}"
+    },
+    "/sites/index.php?c=group&v=midlet&a=members": {
+      "expansion": "Append &cid=<current conversation s.a>, the community/group ID. list_chatrooms and members append after y.e(...,null); view_forum and home concatenate before y.e. No query delimiter is synthesized beyond the explicit &cid=.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:3665"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:5382"
+      ],
+      "expanded_template": "/sites/index.php?c=group&v=midlet&a=members&cid={community_id}"
+    },
+    "/sites/index.php?c=group&v=midlet&a=view_forum": {
+      "expansion": "Append &cid=<current conversation s.a>, the community/group ID. list_chatrooms and members append after y.e(...,null); view_forum and home concatenate before y.e. No query delimiter is synthesized beyond the explicit &cid=.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:3671"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:5414"
+      ],
+      "expanded_template": "/sites/index.php?c=group&v=midlet&a=view_forum&cid={community_id}"
+    },
+    "/sites/index.php?c=group&v=midlet&a=home": {
+      "expansion": "Append &cid=<current conversation s.a>, the community/group ID. list_chatrooms and members append after y.e(...,null); view_forum and home concatenate before y.e. No query delimiter is synthesized beyond the explicit &cid=.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:3676"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:5445"
+      ],
+      "expanded_template": "/sites/index.php?c=group&v=midlet&a=home&cid={community_id}"
+    },
+    "/sites/index.php?c=location&a=checkin&v=midlet&f=": {
+      "expansion": "Append raw l(String) argument after f=. Self-menu Check In passes literal HOME; mig33:checkIn(argument) passes its argument unchanged. Whole URL later has ASCII spaces replaced with%20.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:7738"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:21935"
+      ],
+      "expanded_templates": [
+        "/sites/index.php?c=location&a=checkin&v=midlet&f=HOME",
+        "/sites/index.php?c=location&a=checkin&v=midlet&f={bridge_argument}"
+      ]
+    },
+    "/sites/index.php?c=photo&v=midlet&a=home&f=sendfromphoto": {
+      "expansion": "From My Photo when aO!=55 opens this page. Before navigation store current tab type in bl and recipient/chat key in bm (group tab4 uses s.b; others s.h()). Selected photo/link or mig33:sendScrapbookPhoto(argument) later sends message content type5 to saved conversation; this page request itself has no POST body.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:3325"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:5589"
+      ]
+    },
+    "/sites/index.php?c=photo&a=home&v=midlet": {
+      "expansion": "From My Photo when aO==55 (display picture context) opens this page; selecting returned picture sends display-picture update and restores Friends. No username query is appended in this branch.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:3329"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:5599"
+      ]
+    },
+    "http://www.mig33.com/sites/resources/language/v4.6/l": {
+      "expansion": "Change Language requests this absolute language-list URL via bc.b→1001. u.a(short,String,false) resolves against gateway base if needed, then direct GET, parsing response as a language-list packet1002.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:2124",
+        "research/applets/v4/artifacts/normal-flow/aj.java:2679",
+        "research/applets/v4/artifacts/normal-flow/aj.java:4530"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:6993",
+        "research/applets/v4/artifacts/bytecode/aj.txt:9731",
+        "research/applets/v4/artifacts/bytecode/aj.txt:11210"
+      ],
+      "initial_request": "GET"
+    },
+    "http://www.mig33.com/sites/index.php?c=help&v=wap&a=apn": {
+      "expansion": "Passed to native browser/platformRequest by aj.k. Client does not implement the browser HTTP transaction; do not treat this as an embedded922 form or infer a POST body.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:1615",
+        "research/applets/v4/artifacts/normal-flow/aj.java:1683"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:12904",
+        "research/applets/v4/artifacts/bytecode/aj.txt:13215"
+      ],
+      "initial_request": "native browser delegation"
+    },
+    "http://www.mig33.com/sites/index.php?c=help&v=wap&a=tc": {
+      "expansion": "Passed to native browser/platformRequest by aj.k. Client does not implement the browser HTTP transaction; do not treat this as an embedded922 form or infer a POST body.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:2649"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:11061"
+      ],
+      "initial_request": "native browser delegation"
+    },
+    "http://www.mig33.com/sites/c=migworld&v=midlet&a=new_home": {
+      "expansion": "Synthetic/internal home-document cache key in bl.c(); lacks index.php? and is NOT a normal HTTP fetch in that method. It creates/caches a local s model and updates browser history. Distinguish from server-supplied actual home URL.",
+      "source_refs": [
+        "research/applets/v4/artifacts/normal-flow/bl.java:351",
+        "research/applets/v4/artifacts/normal-flow/bl.java:353",
+        "research/applets/v4/artifacts/normal-flow/bl.java:361",
+        "research/applets/v4/artifacts/normal-flow/bl.java:362"
+      ],
+      "original_bytecode_refs": [
+        "research/applets/v4/artifacts/bytecode/bl.txt:1048",
+        "research/applets/v4/artifacts/bytecode/bl.txt:1061",
+        "research/applets/v4/artifacts/bytecode/bl.txt:1086",
+        "research/applets/v4/artifacts/bytecode/bl.txt:1091"
+      ],
+      "initial_request": "no request at this call site"
+    }
+  },
+  "dynamic_routes": [
+    {
+      "kind": "server conversation-menu URL",
+      "expansion": "URL prefix + imType=<s.g()>&cid=<s.e()> forprivate; prefix+gcid=<s.b> forgroup; prefix+roomName=<s.b> forroom. No ? or & separator is inserted before first appended key; server prefix must supply it. Normal page opening handles spaces only.",
+      "sources": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:3334"
+      ]
+    },
+    {
+      "kind": "server contact/group-menu URL",
+      "expansion": "Overlay1:prefix+cid=<selectedcontact.a>&pres=<selectedcontact.j>. Overlay2:prefix+gid=<selectedgroup.b>. Other custom menu URLs used unchanged. No separator inserted before cid/gid.",
+      "sources": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:3862"
+      ]
+    },
+    {
+      "kind": "notification/mail/update URL",
+      "expansion": "Notification roster row t.u is opened directly; Read Email uses server variable aj.P; Updates ClickLink uses ac.h() and bridge dispatcher, allowing mig33: commands. None is a fixed literal endpoint and no automatic recipient/presence suffix is added for these plain actions.",
+      "sources": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:4901",
+        "research/applets/v4/artifacts/normal-flow/aj.java:4017",
+        "research/applets/v4/artifacts/normal-flow/aj.java:4913",
+        "research/applets/v4/artifacts/normal-flow/aj.java:5172"
+      ]
+    },
+    {
+      "kind": "avatar/image URL",
+      "expansion": "If not starting http: RMSfield9 image base + suppliedimagepath + ?w=<width>&h=<height>&a=1&c=1. Displayavatar helper uses G for both dimensions. Absolute http-prefixed values unchanged. No awareness of existing query delimiter.",
+      "sources": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:6306",
+        "research/applets/v4/artifacts/normal-flow/aj.java:6310"
+      ],
+      "bytecode": [
+        "research/applets/v4/artifacts/bytecode/aj.txt:16911"
+      ]
+    }
+  ]
+}

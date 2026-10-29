@@ -1,0 +1,1602 @@
+---
+openapi: 3.0.3
+info:
+  title: mig33 reconstruction HTTP contract
+  version: 1.0.0
+  description: Current local mig33 4.62 reconstruction HTTP surface. Modern JSON endpoints
+    are reconstruction extensions, not recovered historical URLs. Legacy pages retain
+    their real query-based URLs. TCP packet opcodes remain in protocol documentation.
+    Public URLs and listen addresses are configurable; this contract does not imply
+    real SMS/email/payment providers. Generated HTTP DTOs belong only to the transport
+    adapter.
+  license:
+    name: Project-local reconstruction documentation
+servers:
+- url: http://127.0.0.1:8080
+  description: Default local HTTP endpoint; override for your configured public URL.
+tags:
+- name: modern-json
+  description: Typed reconstruction JSON endpoints; selected for Go HTTP adapter generation.
+- name: media
+  description: Raw uploads and authorized image resources.
+- name: resources
+  description: Original applet resources.
+- name: legacy-pages
+  description: Historical query-selector HTML page envelope.
+- name: browser
+  description: WAP browser interface.
+- name: operator
+  description: Allowlisted local operator browser interface.
+- name: native-gateway
+  description: Original binary protocol over HTTP; TCP is documented separately.
+paths:
+  "/healthz":
+    get:
+      operationId: ReadHealth
+      summary: Read local backend health
+      tags:
+      - modern-json
+      security: []
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/Health"
+        default:
+          "$ref": "#/components/responses/TextError"
+  "/api/catalog":
+    get:
+      operationId: GetCatalog
+      summary: Read static reconstruction catalog
+      tags:
+      - modern-json
+      security: []
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/Catalog"
+        default:
+          "$ref": "#/components/responses/TextError"
+      description: Public metadata only. All query parameters are rejected. Product
+        evidence distinguishes historical names from local pricing/artwork.
+  "/api/contacts":
+    get:
+      operationId: GetContacts
+      summary: Read authoritative contact snapshot
+      tags:
+      - modern-json
+      security:
+      - SessionHeader: []
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/Contacts"
+        default:
+          "$ref": "#/components/responses/TextError"
+  "/api/chat/session":
+    get:
+      operationId: GetChatSession
+      summary: Read current session metadata
+      tags:
+      - modern-json
+      security:
+      - SessionHeader: []
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/ChatSession"
+        default:
+          "$ref": "#/components/responses/TextError"
+      description: Requires an already authenticated sid header. This does not log
+        in or create a session; native protocol and WAP login are separate flows.
+  "/api/chat/sync":
+    get:
+      operationId: SyncChat
+      summary: Read authorized transcript after a cursor
+      tags:
+      - modern-json
+      security:
+      - SessionHeader: []
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/MessagePage"
+        default:
+          "$ref": "#/components/responses/TextError"
+      parameters:
+      - "$ref": "#/components/parameters/AfterID"
+      - "$ref": "#/components/parameters/Limit"
+  "/api/chat/history":
+    get:
+      operationId: GetChatHistory
+      summary: Read one conversation history
+      tags:
+      - modern-json
+      security:
+      - SessionHeader: []
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HistoryPage"
+        default:
+          "$ref": "#/components/responses/TextError"
+      parameters:
+      - "$ref": "#/components/parameters/Kind"
+      - "$ref": "#/components/parameters/Target"
+      - "$ref": "#/components/parameters/AfterID"
+      - "$ref": "#/components/parameters/Limit"
+      description: Room history requires this session to be currently joined. Private/group
+        historical access follows stored audience grants. Response message.kind is
+        numeric although request kind is textual.
+  "/api/chat/groups":
+    get:
+      operationId: GetChatGroups
+      summary: Read private group conversations
+      tags:
+      - modern-json
+      security:
+      - SessionHeader: []
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/ChatGroups"
+        default:
+          "$ref": "#/components/responses/TextError"
+      description: These are private chat groups, distinct from public rooms and community
+        Groups.
+  "/api/chat/messages":
+    post:
+      operationId: SendMessage
+      summary: Send an idempotent chat message
+      tags:
+      - modern-json
+      security:
+      - SessionHeader: []
+      responses:
+        '201':
+          description: New message saved
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/MessageResult"
+        '200':
+          description: Existing message returned for matching retry
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/MessageResult"
+        '409':
+          "$ref": "#/components/responses/TextError"
+        default:
+          "$ref": "#/components/responses/TextError"
+      parameters:
+      - "$ref": "#/components/parameters/CSRF"
+      - "$ref": "#/components/parameters/Idempotency"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/MessageInput"
+        description: One JSON object, at most 96 KiB.
+  "/api/chat/read":
+    post:
+      operationId: MarkChatRead
+      summary: Advance a conversation read position
+      tags:
+      - modern-json
+      security:
+      - SessionHeader: []
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/ReadPosition"
+        default:
+          "$ref": "#/components/responses/TextError"
+      parameters:
+      - "$ref": "#/components/parameters/CSRF"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/ReadInput"
+  "/api/photos":
+    post:
+      operationId: UploadPhoto
+      summary: Upload a local photo
+      tags:
+      - media
+      security:
+      - SessionHeader: []
+      responses:
+        '201':
+          description: Success
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/PhotoResult"
+        default:
+          "$ref": "#/components/responses/MixedError"
+      parameters:
+      - "$ref": "#/components/parameters/CSRF"
+      - "$ref": "#/components/parameters/Idempotency"
+      - name: caption
+        in: query
+        required: false
+        schema:
+          type: string
+      requestBody:
+        required: true
+        description: Raw PNG/JPEG bytes, not multipart; at most 1 MiB. Image contents
+          are validated, regardless of Content-Type.
+        content:
+          image/png:
+            schema:
+              type: string
+              format: binary
+          image/jpeg:
+            schema:
+              type: string
+              format: binary
+      description: Successful retries return the saved photo with 201. Upload and
+        media errors may be HTML or plain text.
+  "/assets/photos/{id}":
+    get:
+      operationId: GetPhoto
+      summary: Read an authorized photo or preview
+      tags:
+      - media
+      security:
+      - SessionHeader: []
+      - WAPCookie: []
+      responses:
+        '200':
+          description: Original image or PNG preview when w is supplied
+          content:
+            image/png:
+              schema:
+                type: string
+                format: binary
+            image/jpeg:
+              schema:
+                type: string
+                format: binary
+        default:
+          "$ref": "#/components/responses/MixedError"
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+          minimum: 1
+      - name: w
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int64
+          minimum: 1
+          maximum: 240
+  "/sites/resources/language/v4.6/l":
+    get:
+      operationId: GetLanguageCatalog
+      summary: Protocol 1002 frame describing the English resource
+      tags:
+      - resources
+      security: []
+      responses:
+        '200':
+          description: Protocol 1002 frame describing the English resource
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        default:
+          "$ref": "#/components/responses/TextError"
+  "/sites/resources/language/v4.6/en-US":
+    get:
+      operationId: GetEnglishLanguage
+      summary: Original English language resource bytes
+      tags:
+      - resources
+      security: []
+      responses:
+        '200':
+          description: Original English language resource bytes
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+        default:
+          "$ref": "#/components/responses/TextError"
+  "/sites/index.php":
+    x-legacy-routes:
+      catalog: "../internal/pages/routes.json"
+      catalogKind: historical-recognition
+      selectorParameters:
+      - c
+      - a
+      - v
+      implementation: "../internal/services/page_routes.go"
+      dispatch: "../internal/services/application.go#pageForm"
+      publicSelectors:
+      - c: registration_api
+        a: check_username
+        v: midlet
+      - c: registration
+        a: home
+        v: midlet
+      - c: account
+        a: recover
+        v: midlet
+      formDocumentation:
+      - "../docs/service-pages.md"
+      - "../docs/identity.md"
+      - "../docs/community-commerce.md"
+      - "../docs/room-completion.md"
+    get:
+      operationId: GetLegacyPage
+      summary: Read a historical embedded page
+      tags:
+      - legacy-pages
+      security:
+      - {}
+      - SessionHeader: []
+      - WAPCookie: []
+      responses:
+        '200':
+          description: Selected page or public username check
+          content:
+            text/html:
+              schema:
+                type: string
+            text/plain:
+              schema:
+                type: string
+        default:
+          "$ref": "#/components/responses/MixedError"
+      parameters:
+      - "$ref": "#/components/parameters/Controller"
+      - "$ref": "#/components/parameters/Action"
+      - "$ref": "#/components/parameters/View"
+      description: 'One actual URL is shared by all historical c/a/v variants. Public
+        selectors: registration_api/check_username, registration/home, account/recover.
+        All other pages require a session. Additional query and form fields depend
+        on the selected page. The historical catalog declares recognition, not implementation.
+        Unknown routes return 404 and catalogued but unavailable fallback routes may
+        return 501. Opcode 922 calls the same page dispatcher directly and wraps its
+        response in opcode 923.'
+    post:
+      operationId: SubmitLegacyPage
+      summary: Submit a historical embedded-page form
+      tags:
+      - legacy-pages
+      security:
+      - {}
+      - SessionHeader: []
+      - WAPCookie: []
+      responses:
+        '200':
+          description: Selected page or public username check
+          content:
+            text/html:
+              schema:
+                type: string
+            text/plain:
+              schema:
+                type: string
+        default:
+          "$ref": "#/components/responses/MixedError"
+      parameters:
+      - "$ref": "#/components/parameters/Controller"
+      - "$ref": "#/components/parameters/Action"
+      - "$ref": "#/components/parameters/View"
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              "$ref": "#/components/schemas/LegacyForm"
+        description: At most 8192 bytes. Browser form encoding applies; native packet922
+          uses its own compatibility decoder.
+      description: 'One actual URL is shared by all historical c/a/v variants. Public
+        selectors: registration_api/check_username, registration/home, account/recover.
+        All other pages require a session. Additional query and form fields depend
+        on the selected page. The historical catalog declares recognition, not implementation.
+        Unknown routes return 404 and catalogued but unavailable fallback routes may
+        return 501. Opcode 922 calls the same page dispatcher directly and wraps its
+        response in opcode 923. Mutations generally require the session csrf and route-specific
+        nonce/binding fields.'
+  "/member2/t.php":
+    get:
+      operationId: GetWAPChat
+      summary: Read WAP login, directory or conversation
+      tags:
+      - browser
+      security:
+      - {}
+      - SessionHeader: []
+      - WAPCookie: []
+      responses:
+        '200':
+          description: HTML login/directory/chat
+          content:
+            text/html:
+              schema:
+                type: string
+        default:
+          "$ref": "#/components/responses/MixedError"
+      parameters:
+      - name: kind
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - private
+          - group
+          - room
+      - name: target
+        in: query
+        required: false
+        schema:
+          type: string
+      - "$ref": "#/components/parameters/AfterID"
+      description: Unauthenticated GET sets mig33_wap_login for the subsequent login
+        form. Authenticated conversation requests use kind and target; directory requires
+        no query parameters.
+    post:
+      operationId: SubmitWAPChat
+      summary: Log in or submit a WAP chat action
+      tags:
+      - browser
+      security:
+      - {}
+      - SessionHeader: []
+      - WAPCookie: []
+      responses:
+        '200':
+          description: HTML chat result
+          content:
+            text/html:
+              schema:
+                type: string
+        '303':
+          description: Redirect after successful action
+          headers:
+            Location:
+              schema:
+                type: string
+            Set-Cookie:
+              schema:
+                type: string
+              description: One or more session/login-CSRF cookie headers may be emitted.
+        default:
+          "$ref": "#/components/responses/MixedError"
+      parameters:
+      - name: kind
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - private
+          - group
+          - room
+      - name: target
+        in: query
+        required: false
+        schema:
+          type: string
+      - "$ref": "#/components/parameters/AfterID"
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              "$ref": "#/components/schemas/WAPForm"
+      description: At most 32 KiB. Login requires mig33_wap_login cookie matching
+        form csrf. Other operations use session csrf. Origin, when supplied, must
+        equal configured public URL. Forms reject duplicate fields. Browser sessions
+        use mig33_wap; native SID is also supported.
+  "/operator":
+    get:
+      operationId: GetOperatorDashboard
+      summary: Read operator queues or item details
+      tags:
+      - operator
+      security:
+      - SessionHeader: []
+      - OperatorCookie: []
+      responses:
+        '200':
+          description: HTML dashboard
+          content:
+            text/html:
+              schema:
+                type: string
+        '303':
+          description: Redirect after successful action
+          headers:
+            Location:
+              schema:
+                type: string
+            Set-Cookie:
+              schema:
+                type: string
+              description: One or more session/login-CSRF cookie headers may be emitted.
+        default:
+          "$ref": "#/components/responses/MixedError"
+      parameters:
+      - name: kind
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - report
+          - support
+      - name: id
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int64
+          minimum: 1
+      - name: report_before
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int64
+          minimum: 0
+      - name: support_before
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int64
+          minimum: 0
+      description: Disabled with 404 unless operators are configured. Requires an
+        allowlisted account. Missing session redirects GET requests to /operator/login.
+  "/operator/":
+    get:
+      operationId: GetOperatorDashboardSlash
+      summary: Read operator queues or item details
+      tags:
+      - operator
+      security:
+      - SessionHeader: []
+      - OperatorCookie: []
+      responses:
+        '200':
+          description: HTML dashboard
+          content:
+            text/html:
+              schema:
+                type: string
+        '303':
+          description: Redirect after successful action
+          headers:
+            Location:
+              schema:
+                type: string
+            Set-Cookie:
+              schema:
+                type: string
+              description: One or more session/login-CSRF cookie headers may be emitted.
+        default:
+          "$ref": "#/components/responses/MixedError"
+      parameters:
+      - name: kind
+        in: query
+        required: false
+        schema:
+          type: string
+          enum:
+          - report
+          - support
+      - name: id
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int64
+          minimum: 1
+      - name: report_before
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int64
+          minimum: 0
+      - name: support_before
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int64
+          minimum: 0
+      description: Disabled with 404 unless operators are configured. Requires an
+        allowlisted account. Missing session redirects GET requests to /operator/login.
+  "/operator/login":
+    get:
+      operationId: GetOperatorLogin
+      summary: Read operator login form
+      tags:
+      - operator
+      security: []
+      responses:
+        '200':
+          description: Login form; sets mig33_operator_login CSRF cookie
+          headers:
+            Set-Cookie:
+              schema:
+                type: string
+          content:
+            text/html:
+              schema:
+                type: string
+        default:
+          "$ref": "#/components/responses/TextError"
+    post:
+      operationId: LoginOperator
+      summary: Create an operator browser session
+      tags:
+      - operator
+      security: []
+      responses:
+        '303':
+          description: Redirect after successful action
+          headers:
+            Location:
+              schema:
+                type: string
+            Set-Cookie:
+              schema:
+                type: string
+              description: One or more session/login-CSRF cookie headers may be emitted.
+        default:
+          "$ref": "#/components/responses/TextError"
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              "$ref": "#/components/schemas/OperatorLogin"
+      description: Requires mig33_operator_login cookie matching form csrf and an
+        allowlisted existing account. Successful login sets mig33_operator. Disabled
+        with 404 when no operators are configured.
+  "/operator/logout":
+    post:
+      operationId: LogoutOperator
+      summary: End operator session
+      tags:
+      - operator
+      security:
+      - SessionHeader: []
+      - OperatorCookie: []
+      responses:
+        '303':
+          description: Redirect after successful action
+          headers:
+            Location:
+              schema:
+                type: string
+            Set-Cookie:
+              schema:
+                type: string
+              description: One or more session/login-CSRF cookie headers may be emitted.
+        default:
+          "$ref": "#/components/responses/MixedError"
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              "$ref": "#/components/schemas/CSRFForm"
+      description: Requires session csrf in the form. Forms are limited to 8192 bytes,
+        reject duplicate fields and require matching Origin when supplied.
+  "/operator/review":
+    post:
+      operationId: ReviewOperatorItem
+      summary: Review a report or support item
+      tags:
+      - operator
+      security:
+      - SessionHeader: []
+      - OperatorCookie: []
+      responses:
+        '303':
+          description: Redirect after successful action
+          headers:
+            Location:
+              schema:
+                type: string
+            Set-Cookie:
+              schema:
+                type: string
+              description: One or more session/login-CSRF cookie headers may be emitted.
+        default:
+          "$ref": "#/components/responses/MixedError"
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              "$ref": "#/components/schemas/OperatorReview"
+      description: Requires session csrf in the form. Forms are limited to 8192 bytes,
+        reject duplicate fields and require matching Origin when supplied.
+  "/operator/categories":
+    post:
+      operationId: ManageRoomCategories
+      summary: Create, update, delete or assign room categories
+      tags:
+      - operator
+      security:
+      - SessionHeader: []
+      - OperatorCookie: []
+      responses:
+        '303':
+          description: Redirect after successful action
+          headers:
+            Location:
+              schema:
+                type: string
+            Set-Cookie:
+              schema:
+                type: string
+              description: One or more session/login-CSRF cookie headers may be emitted.
+        default:
+          "$ref": "#/components/responses/MixedError"
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              "$ref": "#/components/schemas/OperatorCategory"
+      description: Requires session csrf in the form. Forms are limited to 8192 bytes,
+        reject duplicate fields and require matching Origin when supplied.
+  "/":
+    get:
+      operationId: PollNativeRoot
+      summary: Poll native packet delivery
+      tags:
+      - native-gateway
+      security:
+      - SessionHeader: []
+      responses:
+        '200':
+          description: Zero or more native packets
+          content:
+            image/gif:
+              schema:
+                type: string
+                format: binary
+        default:
+          "$ref": "#/components/responses/TextError"
+      parameters:
+      - "$ref": "#/components/parameters/OptionalSID"
+      description: Original binary packet tunnel. The response MIME is historically
+        image/gif although bytes are NOT a GIF. POST contains one or more native framed
+        packets; errors within valid protocol packets normally remain HTTP 200 and
+        use protocol opcode 0. GET drains queued packets immediately and may return
+        an empty body. Authentication and registration are protocol operations. TCP
+        9119 uses the same packet codec and is documented separately, outside OpenAPI.
+        GET requires an authenticated session from the path or sid header.
+    post:
+      operationId: PostNativeRoot
+      summary: Submit native binary packets
+      tags:
+      - native-gateway
+      security: []
+      responses:
+        '200':
+          description: Native replies and queued delivery frames
+          content:
+            image/gif:
+              schema:
+                type: string
+                format: binary
+        default:
+          "$ref": "#/components/responses/TextError"
+      parameters:
+      - "$ref": "#/components/parameters/OptionalSID"
+      requestBody:
+        required: true
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+        description: The implementation does not enforce request Content-Type. Maximum
+          body size equals protocol.MaxFrameSize.
+      description: Original binary packet tunnel. The response MIME is historically
+        image/gif although bytes are NOT a GIF. POST contains one or more native framed
+        packets; errors within valid protocol packets normally remain HTTP 200 and
+        use protocol opcode 0. GET drains queued packets immediately and may return
+        an empty body. Authentication and registration are protocol operations. TCP
+        9119 uses the same packet codec and is documented separately, outside OpenAPI.
+  "/{sid}":
+    get:
+      operationId: PollNativeSession
+      summary: Poll native packet delivery
+      tags:
+      - native-gateway
+      security: []
+      responses:
+        '200':
+          description: Zero or more native packets
+          content:
+            image/gif:
+              schema:
+                type: string
+                format: binary
+        default:
+          "$ref": "#/components/responses/TextError"
+      parameters:
+      - "$ref": "#/components/parameters/SIDPath"
+      - "$ref": "#/components/parameters/OptionalSID"
+      description: Original binary packet tunnel. The response MIME is historically
+        image/gif although bytes are NOT a GIF. POST contains one or more native framed
+        packets; errors within valid protocol packets normally remain HTTP 200 and
+        use protocol opcode 0. GET drains queued packets immediately and may return
+        an empty body. Authentication and registration are protocol operations. TCP
+        9119 uses the same packet codec and is documented separately, outside OpenAPI.
+        GET requires an authenticated session from the path or sid header.
+    post:
+      operationId: PostNativeSession
+      summary: Submit native binary packets
+      tags:
+      - native-gateway
+      security: []
+      responses:
+        '200':
+          description: Native replies and queued delivery frames
+          content:
+            image/gif:
+              schema:
+                type: string
+                format: binary
+        default:
+          "$ref": "#/components/responses/TextError"
+      parameters:
+      - "$ref": "#/components/parameters/SIDPath"
+      - "$ref": "#/components/parameters/OptionalSID"
+      requestBody:
+        required: true
+        content:
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+        description: The implementation does not enforce request Content-Type. Maximum
+          body size equals protocol.MaxFrameSize.
+      description: Original binary packet tunnel. The response MIME is historically
+        image/gif although bytes are NOT a GIF. POST contains one or more native framed
+        packets; errors within valid protocol packets normally remain HTTP 200 and
+        use protocol opcode 0. GET drains queued packets immediately and may return
+        an empty body. Authentication and registration are protocol operations. TCP
+        9119 uses the same packet codec and is documented separately, outside OpenAPI.
+components:
+  securitySchemes:
+    SessionHeader:
+      type: apiKey
+      in: header
+      name: sid
+      description: Existing authenticated gateway session token. Obtain via native
+        protocol login; GET /api/chat/session only reads metadata.
+    WAPCookie:
+      type: apiKey
+      in: cookie
+      name: mig33_wap
+      description: Browser session created by WAP form login.
+    OperatorCookie:
+      type: apiKey
+      in: cookie
+      name: mig33_operator
+      description: Allowlisted operator session created by /operator/login.
+  parameters:
+    AfterID:
+      name: after_id
+      in: query
+      required: false
+      schema:
+        type: integer
+        format: int64
+        minimum: 0
+        default: 0
+    Limit:
+      name: limit
+      in: query
+      required: false
+      schema:
+        type: integer
+        format: int64
+        minimum: 1
+        maximum: 200
+        default: 50
+    Kind:
+      name: kind
+      in: query
+      required: true
+      schema:
+        "$ref": "#/components/schemas/ConversationKind"
+    Target:
+      name: target
+      in: query
+      required: true
+      schema:
+        type: string
+        minLength: 1
+    CSRF:
+      name: X-CSRF-Token
+      in: header
+      required: true
+      schema:
+        "$ref": "#/components/schemas/Token"
+      description: Use csrf_token returned by GET /api/chat/session for this authenticated
+        SID.
+    Idempotency:
+      name: Idempotency-Key
+      in: header
+      required: true
+      schema:
+        "$ref": "#/components/schemas/Token"
+      description: Account-scoped retry key. Repeating a message request with changed
+        input returns 409.
+    OptionalSID:
+      name: sid
+      in: header
+      required: false
+      schema:
+        "$ref": "#/components/schemas/Token"
+      description: May replace the path SID; if both are supplied they must agree.
+        Native login/registration requests may omit it.
+    SIDPath:
+      name: sid
+      in: path
+      required: true
+      schema:
+        "$ref": "#/components/schemas/Token"
+    Controller:
+      name: c
+      in: query
+      required: true
+      schema:
+        type: string
+      description: Exactly one controller selector; see x-legacy-routes.
+    Action:
+      name: a
+      in: query
+      required: true
+      schema:
+        type: string
+      description: Exactly one action selector; interpreted together with c.
+    View:
+      name: v
+      in: query
+      required: true
+      schema:
+        type: string
+        enum:
+        - midlet
+      description: Exactly one view selector. Parameter order does not affect routing.
+  responses:
+    TextError:
+      description: Failure. Most handlers return newline-terminated plain text, not
+        a JSON error object.
+      content:
+        text/plain:
+          schema:
+            type: string
+    MixedError:
+      description: Failure. Validation/authentication may return plain text; service
+        and storage failures may return rendered HTML.
+      content:
+        text/plain:
+          schema:
+            type: string
+        text/html:
+          schema:
+            type: string
+  schemas:
+    Token:
+      type: string
+      pattern: "^[0-9a-f]{48}$"
+      minLength: 48
+      maxLength: 48
+    ConversationKind:
+      type: string
+      enum:
+      - private
+      - group
+      - room
+    Message:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        kind:
+          type: integer
+          format: int64
+          enum:
+          - 1
+          - 2
+          - 3
+          description: 1 = direct message, 2 = private group conversation, 3 = public
+            room.
+        conversation:
+          type: string
+        sender:
+          type: string
+        body:
+          type: string
+        markup:
+          type: string
+        action:
+          type: boolean
+        photo_id:
+          type: integer
+          format: int64
+        color:
+          type: integer
+          format: int64
+          minimum: 0
+          maximum: 16777215
+        created_at:
+          type: string
+          format: date-time
+      required:
+      - id
+      - kind
+      - conversation
+      - sender
+      - body
+      - created_at
+    MessagePage:
+      type: object
+      properties:
+        messages:
+          type: array
+          items:
+            "$ref": "#/components/schemas/Message"
+        next_after_id:
+          type: integer
+          format: int64
+          minimum: 0
+        has_more:
+          type: boolean
+      required:
+      - messages
+      - next_after_id
+      - has_more
+    HistoryPage:
+      type: object
+      properties:
+        messages:
+          type: array
+          items:
+            "$ref": "#/components/schemas/Message"
+        next_after_id:
+          type: integer
+          format: int64
+          minimum: 0
+        has_more:
+          type: boolean
+        read_through_id:
+          type: integer
+          format: int64
+          minimum: 0
+      required:
+      - messages
+      - next_after_id
+      - has_more
+      - read_through_id
+    ChatSession:
+      type: object
+      properties:
+        username:
+          type: string
+        csrf_token:
+          "$ref": "#/components/schemas/Token"
+      required:
+      - username
+      - csrf_token
+    ChatGroup:
+      type: object
+      properties:
+        id:
+          type: string
+        creator:
+          type: string
+        members:
+          type: array
+          items:
+            type: string
+      required:
+      - id
+      - creator
+      - members
+    ChatGroups:
+      type: object
+      properties:
+        groups:
+          type: array
+          items:
+            "$ref": "#/components/schemas/ChatGroup"
+      required:
+      - groups
+    MessageInput:
+      type: object
+      properties:
+        kind:
+          "$ref": "#/components/schemas/ConversationKind"
+        target:
+          type: string
+          minLength: 1
+        body:
+          type: string
+          x-go-type-skip-optional-pointer: true
+        color:
+          type: integer
+          format: int32
+          minimum: 0
+          maximum: 16777215
+          nullable: true
+        photo_id:
+          type: integer
+          format: int64
+          minimum: 0
+          x-go-type-skip-optional-pointer: true
+        markup:
+          type: string
+          x-go-type-skip-optional-pointer: true
+      additionalProperties: false
+      description: Use ordinary text body with optional color, or photo_id, or markup.
+        A nonempty markup excludes nonempty body, non-null color and nonzero photo_id.
+        A positive photo_id excludes nonempty body. Empty body is permitted at the
+        JSON decoder but may fail message validation. Unknown properties and multiple
+        JSON objects are rejected. Only ordinary messages and supported core action
+        commands are accepted; use room controls for moderation.
+      required:
+      - kind
+      - target
+    MessageResult:
+      type: object
+      properties:
+        message:
+          "$ref": "#/components/schemas/Message"
+        replayed:
+          type: boolean
+      required:
+      - message
+      - replayed
+    ReadInput:
+      type: object
+      properties:
+        kind:
+          "$ref": "#/components/schemas/ConversationKind"
+        target:
+          type: string
+          minLength: 1
+        through_id:
+          type: integer
+          format: int64
+          minimum: 1
+      additionalProperties: false
+      required:
+      - kind
+      - target
+      - through_id
+    ReadPosition:
+      type: object
+      properties:
+        read_through_id:
+          type: integer
+          format: int64
+          minimum: 0
+      required:
+      - read_through_id
+    ContactExternal:
+      type: object
+      properties:
+        service:
+          type: integer
+          format: int64
+          minimum: 0
+          maximum: 255
+        username:
+          type: string
+        presence:
+          type: integer
+          format: int64
+          minimum: 0
+          maximum: 255
+      required:
+      - service
+      - username
+      - presence
+    Contact:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        group_id:
+          type: integer
+          format: int32
+        kind:
+          type: string
+        username:
+          type: string
+        display:
+          type: string
+        mobile:
+          type: string
+        share_mobile:
+          type: boolean
+        external:
+          type: array
+          items:
+            "$ref": "#/components/schemas/ContactExternal"
+        presence:
+          type: integer
+          format: int64
+          minimum: 0
+          maximum: 255
+        status:
+          type: string
+      required:
+      - id
+      - group_id
+      - kind
+      - display
+      - share_mobile
+      - presence
+    ContactGroup:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        name:
+          type: string
+      required:
+      - id
+      - name
+    Contacts:
+      type: object
+      properties:
+        revision:
+          type: integer
+          format: int64
+        checkpoint:
+          type: integer
+          format: int64
+        groups:
+          type: array
+          items:
+            "$ref": "#/components/schemas/ContactGroup"
+        contacts:
+          type: array
+          items:
+            "$ref": "#/components/schemas/Contact"
+      required:
+      - revision
+      - checkpoint
+      - groups
+      - contacts
+    Product:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        kind:
+          type: string
+        description:
+          type: string
+        category:
+          type: string
+        category_evidence:
+          type: string
+        name_evidence:
+          type: string
+        artwork_evidence:
+          type: string
+        price_evidence:
+          type: string
+        price:
+          type: integer
+          format: int64
+        source_urls:
+          type: array
+          items:
+            type: string
+      required:
+      - id
+      - name
+      - kind
+      - price
+      - description
+      - category
+      - category_evidence
+      - name_evidence
+      - artwork_evidence
+      - price_evidence
+      - source_urls
+    Game:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        availability:
+          type: string
+        evidence:
+          type: string
+        historical_charging:
+          type: string
+        description:
+          type: string
+        source_url:
+          type: string
+        play_target:
+          type: string
+      required:
+      - id
+      - name
+      - availability
+      - evidence
+      - description
+    Emoticon:
+      type: object
+      properties:
+        token:
+          type: string
+        label:
+          type: string
+        pack:
+          type: string
+        type:
+          type: integer
+          format: int64
+          minimum: 0
+          maximum: 255
+      required:
+      - token
+      - label
+      - pack
+      - type
+    Catalog:
+      type: object
+      properties:
+        version:
+          type: integer
+          format: int64
+        target:
+          type: string
+        mode:
+          type: string
+        credit_unit:
+          type: string
+        products:
+          type: array
+          items:
+            "$ref": "#/components/schemas/Product"
+        default_theme:
+          type: object
+          properties: {}
+          additionalProperties:
+            type: string
+        emoticons:
+          type: array
+          items:
+            "$ref": "#/components/schemas/Emoticon"
+        games:
+          type: array
+          items:
+            "$ref": "#/components/schemas/Game"
+        languages:
+          type: array
+          items:
+            type: object
+            properties: {}
+            additionalProperties:
+              type: string
+        providers:
+          type: object
+          properties: {}
+          additionalProperties:
+            type: string
+        availability:
+          type: string
+      required:
+      - version
+      - target
+      - mode
+      - credit_unit
+      - products
+      - default_theme
+      - emoticons
+      - games
+      - languages
+      - providers
+      - availability
+    Health:
+      type: object
+      properties:
+        status:
+          type: string
+        mode:
+          type: string
+      required:
+      - status
+      - mode
+    PhotoResult:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        url:
+          type: string
+          format: uri
+      required:
+      - id
+      - url
+    LegacyForm:
+      type: object
+      properties:
+        csrf:
+          "$ref": "#/components/schemas/Token"
+        op:
+          type: string
+        nonce:
+          "$ref": "#/components/schemas/Token"
+      additionalProperties:
+        type: string
+      description: Form fields vary by c/a and operation. This envelope intentionally
+        permits additional string fields. See the historical page catalog and service
+        documentation; it is not a complete per-page form schema.
+    WAPForm:
+      type: object
+      properties:
+        csrf:
+          "$ref": "#/components/schemas/Token"
+        op:
+          type: string
+          enum:
+          - login
+          - logout
+          - send
+          - join
+          - leave
+        username:
+          type: string
+        password:
+          type: string
+          format: password
+        nonce:
+          "$ref": "#/components/schemas/Token"
+        format:
+          type: string
+        body:
+          type: string
+      additionalProperties: false
+      description: login needs username/password and the login-CSRF cookie; send needs
+        nonce/format and optional body; logout/join/leave only accept csrf/op. Session
+        and operation determine required fields.
+      required:
+      - csrf
+      - op
+    OperatorLogin:
+      type: object
+      properties:
+        csrf:
+          "$ref": "#/components/schemas/Token"
+        username:
+          type: string
+        password:
+          type: string
+          format: password
+      required:
+      - csrf
+      - username
+      - password
+    OperatorReview:
+      type: object
+      properties:
+        csrf:
+          "$ref": "#/components/schemas/Token"
+        kind:
+          type: string
+          enum:
+          - report
+          - support
+        id:
+          type: integer
+          format: int64
+          minimum: 1
+        status:
+          type: string
+        expected:
+          type: string
+        nonce:
+          "$ref": "#/components/schemas/Token"
+        note:
+          type: string
+      required:
+      - csrf
+      - kind
+      - id
+      - status
+      - expected
+      - nonce
+      - note
+    OperatorCategory:
+      type: object
+      properties:
+        csrf:
+          "$ref": "#/components/schemas/Token"
+        op:
+          type: string
+          enum:
+          - save
+          - delete
+          - assign
+        id:
+          type: integer
+          format: int64
+          minimum: -32768
+          maximum: 32767
+        name:
+          type: string
+        room:
+          type: string
+      description: save uses name, assign uses room, delete uses neither; application
+        checks category restrictions.
+      required:
+      - csrf
+      - op
+      - id
+    CSRFForm:
+      type: object
+      properties:
+        csrf:
+          "$ref": "#/components/schemas/Token"
+      required:
+      - csrf
+x-protocol-documentation: "../docs/protocol.md"

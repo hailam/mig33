@@ -1,0 +1,268 @@
+{
+  "checked_on": "2026-10-29",
+  "scope": "Dependency construction and process lifecycle options for mig33; research only, no implementation changes",
+  "local_findings": [
+    {
+      "files": [
+        "internal/bootstrap/app.go:25",
+        "internal/services/application.go:89",
+        "internal/controllers/controller.go:19"
+      ],
+      "finding": "The runtime dependency graph is small: one SQLite Store feeds one stateful services.Application, then the HTTP controller/router and socket adapter. Many feature files do not yet represent many independently constructed services."
+    },
+    {
+      "files": [
+        "cmd/http/main.go",
+        "cmd/socket/main.go",
+        "cmd/omni/main.go",
+        "cmd/cli/main.go"
+      ],
+      "finding": "Four executable compositions share bootstrap.Open. HTTP/socket/omni select explicit transport descriptors; CLI uses administration without a listener. This composition boundary can remain under any DI choice."
+    },
+    {
+      "files": [
+        "internal/services/application.go:87",
+        "internal/services/application.go:111",
+        "internal/ports/repositories.go:156"
+      ],
+      "finding": "Repository ownership currently transfers to services.Application only after successful construction. Application.Close owns the repository and session timer cleanup. The constructor starts a session sweep timer, so construction already has lifecycle effects."
+    },
+    {
+      "files": [
+        "internal/ports/services.go:35",
+        "internal/ports/repositories.go:156"
+      ],
+      "finding": "Controller and application constructors accept large aggregate interfaces. A DI container would not narrow these contracts or split the shared core automatically."
+    },
+    {
+      "files": [
+        "go.mod:3"
+      ],
+      "finding": "The project declares Go1.25.0; no Fx, Dig, Wire, errgroup or oklog/run dependency is currently present."
+    }
+  ],
+  "sources": [
+    {
+      "id": "go-di",
+      "url": "https://go.dev/blog/wire",
+      "authority": "Go project",
+      "facts": "Ordinary constructor arguments are dependency injection. The article identifies growing dependency graphs and repetitive ordered initialization as reasons to automate wiring; it also explains generated-code DI."
+    },
+    {
+      "id": "go-interfaces",
+      "url": "https://go.dev/wiki/CodeReviewComments#interfaces",
+      "authority": "Go project",
+      "facts": "Interfaces generally belong to consumers. Implementations normally return concrete types. Avoid unused speculative interfaces and implementor-side interfaces created solely for mocking."
+    },
+    {
+      "id": "google-options",
+      "url": "https://google.github.io/styleguide/go/best-practices#function-argument-lists",
+      "authority": "Google Go style maintainers",
+      "facts": "Large signatures may use an options struct or variadic options; expected call sites, clarity and least mechanism govern the choice. Options structs name fields and can grow without changing call syntax. Guidance is explicitly not universal or normative."
+    },
+    {
+      "id": "uber-options",
+      "url": "https://github.com/uber-go/guide/blob/master/style.md#functional-options",
+      "authority": "Uber Go maintainers",
+      "facts": "Functional options are recommended for optional parameters in expandable public APIs. This does not imply required repository/service dependencies should become optional settings. The guide also favors injected state over mutable globals."
+    },
+    {
+      "id": "fx-readme",
+      "url": "https://github.com/uber-go/fx",
+      "authority": "Fx maintainers",
+      "facts": "Fx is a dependency-injection application framework, uses stable v1 SemVer, and is used broadly within Uber according to its maintainers. Adoption demonstrates a real usage context, not superiority for every Go application."
+    },
+    {
+      "id": "fx-modules",
+      "url": "https://uber-go.github.io/fx/modules.html",
+      "authority": "Fx maintainers",
+      "facts": "Modules group providers and can scope outputs with fx.Private. Maintainers recommend thin framework integration, callable exported boundaries, providing only owned types, and deliberate invokes. Provide is lazy; Invoke forces its dependency graph. An independent module should not silently bundle a dependency's module."
+    },
+    {
+      "id": "fx-lifecycle",
+      "url": "https://uber-go.github.io/fx/lifecycle.html",
+      "authority": "Fx maintainers",
+      "facts": "Initialization registers providers/decorators and executes invokes. Execution runs startup hooks in registration order and shutdown hooks in reverse. Hooks have time budgets and should schedule long-running background work rather than block forever."
+    },
+    {
+      "id": "fx-api",
+      "url": "https://pkg.go.dev/go.uber.org/fx",
+      "authority": "Fx maintainers' package documentation",
+      "facts": "ValidateApp checks graph wiring without invoking functions. Start supports startup rollback; Stop reverses successfully reached lifecycle hooks. App.Run owns signals/exit behavior, while Start/Stop support external control. Shutdowner can signal a running app. The framework does not make arbitrary background goroutine errors or resource ownership disappear."
+    },
+    {
+      "id": "fx-groups",
+      "url": "https://uber-go.github.io/fx/value-groups/index.html",
+      "authority": "Fx maintainers",
+      "facts": "Value groups aggregate outputs from multiple constructors. Their order is randomized. Strict groups force producers; soft groups include outputs only when producers were otherwise instantiated."
+    },
+    {
+      "id": "fx-annotations",
+      "url": "https://uber-go.github.io/fx/annotate.html",
+      "authority": "Fx maintainers",
+      "facts": "Annotations adapt ordinary Go constructors, including interface bindings and grouped values, without putting Fx parameter/result types in every business constructor."
+    },
+    {
+      "id": "fx-tests",
+      "url": "https://pkg.go.dev/go.uber.org/fx/fxtest",
+      "authority": "Fx maintainers",
+      "facts": "fxtest offers application and lifecycle helpers, including RequireStart/RequireStop. Graph validation and actual lifecycle/integration tests solve different problems."
+    },
+    {
+      "id": "dig",
+      "url": "https://github.com/uber-go/dig",
+      "authority": "Dig maintainers",
+      "facts": "Dig is reflection-based object-graph resolution. Maintainers position it as a framework building block and startup graph resolver, and explicitly discourage treating it as an application framework, resolving dependencies after startup, or exposing a service locator."
+    },
+    {
+      "id": "wire-status",
+      "url": "https://github.com/google/wire",
+      "authority": "Wire maintainers/GitHub repository status",
+      "facts": "Repository archived August25,2025. Official README states no longer maintained. This outweighs old articles that present Wire as a current default recommendation."
+    },
+    {
+      "id": "wire-guide",
+      "url": "https://raw.githubusercontent.com/google/wire/main/docs/guide.md",
+      "authority": "Wire maintainers",
+      "facts": "Wire generates ordinary Go initialization from provider sets and injectors. Providers can return cleanup functions; generated cleanup reverses dependencies and handles later constructor failure. It is wiring/codegen, not a complete server lifecycle supervisor."
+    },
+    {
+      "id": "errgroup",
+      "url": "https://pkg.go.dev/golang.org/x/sync/errgroup",
+      "authority": "Go project",
+      "facts": "WithContext cancels on the first nonnil task error or when Wait returns. Wait waits for every task and returns the first nonnil error. It supplies task coordination, not listener binding, HTTP draining, forced connection close, or dependency construction."
+    },
+    {
+      "id": "oklog-run",
+      "url": "https://raw.githubusercontent.com/oklog/run/master/group.go",
+      "authority": "oklog/run maintainers",
+      "facts": "Each actor pairs execute and interrupt callbacks. Any actor return interrupts all actors, then Run waits for every actor and returns the first result. Interrupt must make execute return and remain safe after execute exits. The implementation calls interrupts sequentially and has no intrinsic shutdown deadline."
+    },
+    {
+      "id": "http-shutdown",
+      "url": "https://pkg.go.dev/net/http#Server.Shutdown",
+      "authority": "Go standard library",
+      "facts": "Shutdown closes listeners and idle connections, then waits for active connections until its context expires. Serve returns ErrServerClosed before shutdown necessarily finishes, so the owner must wait for Shutdown. Hijacked connections need separate handling."
+    },
+    {
+      "id": "sync-current-go",
+      "url": "https://raw.githubusercontent.com/golang/sync/v0.24.0/go.mod",
+      "authority": "Go project",
+      "facts": "golang.org/x/sync v0.24.0 requires Go1.26.0. v0.23.0 does too."
+    },
+    {
+      "id": "sync-compatible-go",
+      "url": "https://raw.githubusercontent.com/golang/sync/v0.22.0/go.mod",
+      "authority": "Go project",
+      "facts": "golang.org/x/sync v0.22.0 requires Go1.25.0. It is a verified compatible candidate if errgroup is selected without upgrading this project's declared toolchain."
+    }
+  ],
+  "alternatives": [
+    {
+      "option": "Plain constructor DI plus explicit bootstrap composition",
+      "assessment": "Recommended for the current graph",
+      "benefits": "Compiler-visible construction, direct tests, no reflection or generator dependency, obvious ownership and executable selection.",
+      "costs": "Wiring and rollback remain application code; complexity grows with independently composed resources.",
+      "reasoning": "The small number of constructed components does not currently justify a runtime container. Keep bootstrap a composition root rather than evolving a homegrown generic service locator."
+    },
+    {
+      "option": "Fx",
+      "assessment": "Credible conditional alternative",
+      "benefits": "Composable module providers, lifecycle ordering, private outputs, groups, startup graph validation and test helpers.",
+      "costs": "Graph errors move to initialization/tests; reflection and framework concepts add debugging surface. Async server failure propagation, resource ownership, and bind/drain policy still require application design.",
+      "adoption_trigger": "Many independently owned feature packages/resources and repeated lifecycle wiring across executable compositions; measure concrete maintenance pain rather than count files.",
+      "boundary": "Keep Fx in bootstrap/integration wrappers; retain ordinary service/controller/repository constructors. Executables select base+HTTP, base+socket, both, or CLI. Use Start/Stop if executable code must own signals; do not hide fx.App.Run inside a reusable bootstrap API."
+    },
+    {
+      "option": "Dig",
+      "assessment": "Not justified here",
+      "benefits": "Runtime dependency resolution without committing to a complete framework.",
+      "costs": "Still requires custom lifecycle, validation and orchestration. Maintainers discourage replacing an application framework with it.",
+      "adoption_trigger": "Building a custom framework whose explicit purpose is to embed a DI resolver; this repository is an application, not such a framework."
+    },
+    {
+      "option": "Google Wire",
+      "assessment": "Do not add to this new composition",
+      "benefits": "Generated inspectable Go, static graph analysis at generation, no runtime container, generated cleanup.",
+      "costs": "Official project is archived/unmaintained; adds generator and compatibility maintenance. Still needs runtime lifecycle.",
+      "notes": "Existing generated Go remains ordinary code. Community forks require their own maintenance review; their existence does not restore official support."
+    },
+    {
+      "option": "errgroup",
+      "assessment": "Potential small lifecycle implementation helper, independent of DI",
+      "benefits": "Well-defined task waiting/error propagation/context cancellation from Go's x/sync module.",
+      "costs": "No bounded kill; Wait cannot finish if a task ignores cancellation. Nil task exit does not immediately cancel peers. HTTP needs Shutdown/Close and a fresh shutdown context, plus bind-before-serve rollback. Latest module raises toolchain requirement."
+    },
+    {
+      "option": "oklog/run",
+      "assessment": "Reasonable alternative for heterogeneous closable actors",
+      "benefits": "Explicit interruption accommodates listeners/readers that do not consume contexts; any actor exit initiates teardown.",
+      "costs": "Interrupt callbacks must promptly stop execution; sequential interruption and unbounded wait need deliberate budget/drain design. Does not replace dependency construction."
+    }
+  ],
+  "application_specific_recommendations": [
+    "Preserve four explicit executable compositions and one shared services.Application per process so HTTP/socket sessions remain shared.",
+    "Preserve exactly one resource owner. Current Application ownership transfer is documented and valid. A future split into multiple services should move shared repository ownership to the composition root, not let every service Close the same Store.",
+    "Before introducing Fx, address sessionSweep startup in the constructor: constructor failure after allocation must not bypass cleanup merely because OnStart was never reached. Either separate start from construction or implement explicit initialization rollback.",
+    "Keep OS arguments/signals/exit policy at cmd; parse YAML/overlays/env once at the edge, validate, and pass typed settings. Do not use a container or context as a service locator.",
+    "Narrow interfaces as actual service consumers are extracted. A central application-owned ports package is a layering convention; it should not justify giant universal interfaces. Keep generated HTTP interface ownership in the generated adapter boundary.",
+    "Use explicit parameters for required dependencies and small config structs for coherent settings. Introduce functional options for truly optional, evolving API knobs only when call sites benefit.",
+    "If Fx groups represent servers/routes, do not infer ordering from group order. Keep protocol-specific route precedence explicit and preserve all-listeners-bound-before-serving as a separate policy.",
+    "Test all executable compositions, startup rollback, shared HTTP/socket sessions, active-request draining and deadline behavior regardless of DI selection; graph validation alone cannot cover real network/database behavior."
+  ],
+  "release_status": [
+    {
+      "repository": "uber-go/fx",
+      "sources": [
+        "https://api.github.com/repos/uber-go/fx",
+        "https://api.github.com/repos/uber-go/fx/releases/latest"
+      ],
+      "archived": false,
+      "pushed_at": "2025-12-27T14:09:36Z",
+      "repository_url": "https://github.com/uber-go/fx",
+      "release": "v1.24.0",
+      "published_at": "2025-05-13T22:13:57Z",
+      "release_url": "https://github.com/uber-go/fx/releases/tag/v1.24.0"
+    },
+    {
+      "repository": "uber-go/dig",
+      "sources": [
+        "https://api.github.com/repos/uber-go/dig",
+        "https://api.github.com/repos/uber-go/dig/releases/latest"
+      ],
+      "archived": false,
+      "pushed_at": "2025-05-13T20:09:41Z",
+      "repository_url": "https://github.com/uber-go/dig",
+      "release": "v1.19.0",
+      "published_at": "2025-05-13T19:45:36Z",
+      "release_url": "https://github.com/uber-go/dig/releases/tag/v1.19.0"
+    },
+    {
+      "repository": "oklog/run",
+      "sources": [
+        "https://api.github.com/repos/oklog/run",
+        "https://api.github.com/repos/oklog/run/releases/latest"
+      ],
+      "archived": false,
+      "pushed_at": "2025-06-27T14:04:45Z",
+      "repository_url": "https://github.com/oklog/run",
+      "release": "v1.2.0",
+      "published_at": "2025-06-27T14:03:23Z",
+      "release_url": "https://github.com/oklog/run/releases/tag/v1.2.0"
+    },
+    {
+      "repository": "google/wire",
+      "sources": [
+        "https://api.github.com/repos/google/wire",
+        "https://api.github.com/repos/google/wire/releases/latest"
+      ],
+      "archived": true,
+      "pushed_at": "2025-08-22T13:56:56Z",
+      "repository_url": "https://github.com/google/wire",
+      "release": "v0.7.0",
+      "published_at": "2025-08-22T13:56:56Z",
+      "release_url": "https://github.com/google/wire/releases/tag/v0.7.0"
+    }
+  ],
+  "retention_note": "Original research observations before the user selected Go 1.27.3. Earlier Go 1.25 baseline and compatibility constraints are superseded by go-backend-architecture.md and go-toolchain.json. Architecture implementation remains paused."
+}

@@ -1,0 +1,61 @@
+# Local application state, builds and fresh emulator/test output.
+/bin/
+/data/
+# Default outputs from go build ./cmd/<entrypoint>.
+/http
+/socket
+/omni
+/cli
+/http.exe
+/socket.exe
+/omni.exe
+/cli.exe
+*.test
+.DS_Store
+__pycache__/
+*.py[cod]
+*.class
+
+# Databases selected with -db or MIG33_DATABASE_PATH outside data/.
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite-journal
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.sqlite3-journal
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+
+# JVM diagnostics can be written into the working directory.
+hs_err_pid*.log
+replay_pid*.log
+java_pid*.hprof
+
+# Downloaded applets and third-party Java tools stay on this machine.
+*.jar
+*.jar.download
+*.jad
+
+# All applet artifacts are local. Research catalogs live in docs/data/.
+/research/applets/*/artifacts/
+# Old embedded resource location must not reintroduce recovered applet bytes.
+# Runtime extraction now writes beneath the ignored /data/ directory.
+/internal/adapters/nativecodec/assets/
+
+# Keep discovery provenance, not downloaded pages or candidate binaries.
+/research/applets/*/discovery/**
+!/research/applets/*/discovery/**/
+!/research/applets/*/discovery/**/*.json
+!/research/applets/*/discovery/**/*.md
+/research/applets/*/docs/data/*.txt
+
+# Retained execution captures, databases, binaries and source snapshots.
+/research/acceptance/*/runs/
+/research/architecture/evidence/*.tar.gz
+/research/architecture/evidence/*.zip
+/research/architecture/evidence/*.log
+/research/relocation-manifest.json.gz

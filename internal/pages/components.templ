@@ -1,0 +1,64 @@
+package pages
+
+import "strconv"
+
+templ Document(title string, body templ.Component) {
+	<html><head><title>{ title }</title></head><body>@body</body></html>
+}
+
+templ Stack(parts ...templ.Component) {
+	for _, part := range parts {
+		if part != nil {
+			@part
+		}
+	}
+}
+
+templ Paragraph(text string) {
+	<p>{ text }</p>
+}
+
+templ Heading(text string) {
+	<p><b>{ text }</b></p>
+}
+
+templ Link(href string, label string) {
+	<p><a href={ legacyURL(href) }>{ label }</a></p>
+}
+
+templ Form(action string, hidden []HiddenField, controls templ.Component, submit string) {
+	<form method="post" action={ legacyURL(action) }>
+		for _, field := range hidden {
+			<input type="hidden" name={ field.Name } value={ field.Value }/>
+		}
+		if controls != nil {
+			@controls
+		}
+		<input type="submit" value={ submit }/>
+	</form>
+}
+
+templ Input(name string, label string, kind string, value string, size int) {
+	if label != "" {
+		@Paragraph(label)
+	}
+	<input type={ kind } name={ name } value={ value } size={ strconv.Itoa(size) }/>
+}
+
+templ TextArea(name string, label string, value string, limit int) {
+	if label != "" {
+		@Paragraph(label)
+	}
+	<textarea name={ name } rows="4" cols="10" if limit > 0 { size={ strconv.Itoa(limit) } }>{ value }</textarea>
+}
+
+templ Checkbox(name string, label string, checked bool) {
+	<input type="checkbox" name={ name } checked?={ checked }/>
+	if label != "" {
+		@Paragraph(label)
+	}
+}
+
+templ Picture(src string, width int, height int) {
+	<img src={ legacyURL(src) } width={ strconv.Itoa(width) } height={ strconv.Itoa(height) }/>
+}

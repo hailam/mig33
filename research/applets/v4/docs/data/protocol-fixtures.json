@@ -1,0 +1,183 @@
+{
+  "source": "Original 4.62 ay/bj serialization with synthetic content; no MIDlet startup/network",
+  "packets": [
+    {
+      "name": "ping",
+      "opcode": 2,
+      "transaction": 1,
+      "fields": [],
+      "original_java_hex": "020002000100000000"
+    },
+    {
+      "name": "error",
+      "opcode": 0,
+      "transaction": 1,
+      "fields": [
+        {
+          "tag": 2,
+          "type": "T",
+          "value": "Bad"
+        }
+      ],
+      "original_java_hex": "020000000100000009000200000003426164"
+    },
+    {
+      "name": "ack",
+      "opcode": 1,
+      "transaction": 1,
+      "fields": [],
+      "original_java_hex": "020001000100000000"
+    },
+    {
+      "name": "chat_utf8",
+      "opcode": 500,
+      "transaction": 3,
+      "fields": [
+        {
+          "tag": 1,
+          "type": "B",
+          "value": 1
+        },
+        {
+          "tag": 2,
+          "type": "T",
+          "value": "alice"
+        },
+        {
+          "tag": 3,
+          "type": "B",
+          "value": 1
+        },
+        {
+          "tag": 4,
+          "type": "T",
+          "value": "bob"
+        },
+        {
+          "tag": 5,
+          "type": "I",
+          "value": 42
+        },
+        {
+          "tag": 6,
+          "type": "S",
+          "value": 1
+        },
+        {
+          "tag": 8,
+          "type": "T",
+          "value": "Hello \u2713 \ud83d\ude00"
+        }
+      ],
+      "original_java_hex": "0201f400030000004800080000000e48656c6c6f20e29c9320f09f988000060000000200010005000000040000002a000400000003626f6200030000000101000200000005616c69636500010000000101"
+    },
+    {
+      "name": "registration_duplicate_tag",
+      "opcode": 101,
+      "transaction": 5,
+      "fields": [
+        {
+          "tag": 1,
+          "type": "I",
+          "value": 320
+        }
+      ],
+      "original_java_hex": "02006500050000000a00010000000400000140"
+    },
+    {
+      "name": "contact_delta_long",
+      "opcode": 419,
+      "transaction": 6,
+      "fields": [
+        {
+          "tag": 1,
+          "type": "L",
+          "value": 1234567890123
+        }
+      ],
+      "original_java_hex": "0201a300060000000e0001000000080000011f71fb04cb"
+    },
+    {
+      "name": "contact_string_array",
+      "opcode": 407,
+      "transaction": 7,
+      "fields": [
+        {
+          "tag": 1,
+          "type": "I",
+          "value": 42
+        },
+        {
+          "tag": 30,
+          "type": "TA",
+          "value": [
+            "alice@example.test",
+            "bob"
+          ]
+        },
+        {
+          "tag": 31,
+          "type": "X",
+          "value": "0204"
+        }
+      ],
+      "original_java_hex": "02019700070000002e001f000000020204001e00000016616c696365406578616d706c652e7465737400626f620001000000040000002a"
+    },
+    {
+      "name": "colored_room_message",
+      "opcode": 500,
+      "transaction": 8,
+      "fields": [
+        {
+          "tag": 1,
+          "type": "B",
+          "value": 1
+        },
+        {
+          "tag": 2,
+          "type": "T",
+          "value": "alice"
+        },
+        {
+          "tag": 3,
+          "type": "B",
+          "value": 3
+        },
+        {
+          "tag": 4,
+          "type": "T",
+          "value": "fixture room"
+        },
+        {
+          "tag": 6,
+          "type": "S",
+          "value": 1
+        },
+        {
+          "tag": 8,
+          "type": "T",
+          "value": "hello"
+        },
+        {
+          "tag": 13,
+          "type": "I",
+          "value": 1122867
+        }
+      ],
+      "original_java_hex": "0201f400080000004800080000000568656c6c6f000600000002000100040000000c6669787475726520726f6f6d00030000000103000d0000000400112233000200000005616c69636500010000000101"
+    },
+    {
+      "name": "avatar_duplicate_tag",
+      "opcode": 602,
+      "transaction": 9,
+      "fields": [
+        {
+          "tag": 1,
+          "type": "T",
+          "value": "old-avatar"
+        }
+      ],
+      "original_java_hex": "02025a00090000001000010000000a6f6c642d617661746172"
+    }
+  ]
+}

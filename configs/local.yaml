@@ -1,0 +1,3 @@
+# Select with -env local or MIG33_ENV=local. The existing local account is
+# allowed to review reports through /operator; all other defaults are inherited.
+operators: [hailam]

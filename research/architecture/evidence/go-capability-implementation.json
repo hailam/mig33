@@ -1,0 +1,211 @@
+{
+  "status": "complete",
+  "recorded_at_utc": "2026-10-28T22:43:55.839279+00:00",
+  "scope": "Capability modular monolith, typed native and legacy web adapters, focused realtime state owner; no schema or historical API redesign.",
+  "package_graph": "docs/backend.md#composition-routing-and-persistence",
+  "test_migration_inventory": "docs/research/evidence/capability-test-migration.json",
+  "original_service_test_count": 179,
+  "unmapped_original_service_test_names": [],
+  "removed_packages": [
+    "internal/services",
+    "internal/domain"
+  ],
+  "removed_aggregate_ports": [
+    "ports.Repositories",
+    "ports.Services"
+  ],
+  "preserved_contracts": [
+    "historical URL selectors and native framing",
+    "one generated SQLite sqlc DBTX package",
+    "atomic registration and initial roster",
+    "atomic message audience and request replay",
+    "atomic gift ledger/inventory/durable message",
+    "single realtime gate/queue owner",
+    "canonical message-input JSON order"
+  ],
+  "completed_checks": [
+    {
+      "command": "go test ./internal/ports",
+      "result": "passed after removing obsolete packages and aggregates"
+    },
+    {
+      "command": "go test ./... -run '^$'",
+      "result": "passed; compilation of all production and test packages only"
+    },
+    {
+      "command": "isolated owned realtime workflow suites",
+      "result": "54 migrated contact/room/group/vote/slash tests passed against the real adapter graph before final integration"
+    },
+    {
+      "command": "python3 scripts/validate_reference.py",
+      "result": "passed; original JAR/resources, 120 historical images, 52 page templates and local reference links verified"
+    },
+    {
+      "command": "recursive Markdown local-link check: README.md, docs/**/*.md, v4/docs/**/*.md",
+      "result": "passed; 42 documents, 773 local links, zero broken links",
+      "counts": {
+        "documents": 42,
+        "local_links": 773,
+        "broken": []
+      }
+    }
+  ],
+  "pending_final_checks": [],
+  "final_checks": {
+    "race": {
+      "command": "go test -race -timeout 120s ./...",
+      "exit_code": 0,
+      "log": "docs/research/evidence/capability-race-final.log"
+    },
+    "vet": {
+      "command": "go vet ./...",
+      "exit_code": 0,
+      "log": "docs/research/evidence/capability-vet-final.log"
+    },
+    "contract_preservation": {
+      "result": "passed",
+      "protected_file_count": 58,
+      "changed_files": [],
+      "evidence": "docs/research/evidence/capability-contract-preservation.json"
+    },
+    "generator_drift": {
+      "result": "passed",
+      "generated_output_count": 17,
+      "changed_outputs": [],
+      "evidence": "docs/research/evidence/capability-generator-check.json"
+    },
+    "schema": {
+      "command": "python3 scripts/export-sqlc-schema.py --check",
+      "exit_code": 0,
+      "evidence": "docs/research/evidence/capability-generator-check.json"
+    },
+    "test_migration": {
+      "result": "passed",
+      "original_tests": 179,
+      "mapped_current_tests": 179,
+      "unmapped": [],
+      "evidence": "docs/research/evidence/capability-test-migration.json"
+    },
+    "formatting": {
+      "command": "rg --files cmd internal configs db -g '*.go' -0 | xargs -0 gofmt -l",
+      "corrections": [
+        {
+          "path": "internal/accounts/service.go",
+          "before": "d437a600e82b32fcbb67748b5ecb42c8581c4191f3e63d2bbf82a8929235412b",
+          "after": "c25663d95ee70288f1f057a0497da2de20cac882a4fad978ffb330866b6609d2"
+        },
+        {
+          "path": "internal/pages/pages.go",
+          "before": "b4048930d8a282f1829ad9fdaaba152264d47ffa35a448bb2a8630bc02aba0fd",
+          "after": "2b92ad89a0be6888da7d56a2e8323c4259bab836c5b627725f72d5ba6c02fbd2"
+        }
+      ],
+      "result": "passed; no unformatted Go files"
+    },
+    "native_acceptance": {
+      "result": "passed",
+      "evidence": "docs/research/evidence/capability-native-acceptance.json",
+      "raw_evidence": "v4/scripts/integration/hexagonal-out/evidence-summary.json",
+      "suite_count": 17,
+      "client_scenarios": 48,
+      "wire_frames": 3625,
+      "screenshots": 570,
+      "database_integrity_checks": 17,
+      "foreign_key_violations": 0,
+      "source_unchanged": true,
+      "binary_sha256": "5bf1954f88e4cc71f93fc443ce81970753ad4d6a657341a1859706d9680d2891",
+      "source_manifest_sha256": "ac5d55b77024436c377ad48d19e7e5449fd49fd2d4525a3c0644f0ed7f8cbd92",
+      "jar_sha256": "dbf12ffbd44bc6e48d09cf35863736731c87c078877f76ed4b780a4dc5eff92c",
+      "native_build_inputs_verified": 231,
+      "resumption_note": "Nine suites passed before an isolated presence-helper correction; the remaining eight passed after it. Every suite used the same final source and binary. Original suite sources and publisher JAR are untouched; correction manifests and failed attempts are retained."
+    },
+    "reference_validation": {
+      "command": "python3 scripts/validate_reference.py",
+      "exit_code": 0,
+      "evidence": "docs/research/evidence/capability-reference-final.json"
+    },
+    "documentation_links": {
+      "result": "passed",
+      "evidence": "docs/research/evidence/capability-links-final.json",
+      "documents": 43,
+      "local_links": 790,
+      "broken": []
+    },
+    "source_verification": {
+      "result": "passed",
+      "all_production_go_files": 204,
+      "native_build_inputs": 231,
+      "protected_contract_files": 58,
+      "changed_files": [],
+      "binary_and_jar_hashes_match": true
+    }
+  },
+  "prior_lifecycle_baseline": "docs/research/evidence/go-architecture-implementation.json",
+  "note": "Complete capability refactor with retained research, original test migration, full race/vet verification, reproducible generated code, final-source native acceptance, and documented regression/harness diagnoses. Provider mocks and frontend scope are unchanged.",
+  "legacy_source_archive": {
+    "path": "docs/research/evidence/capability-before-source.tar.gz",
+    "sha256": "7ce316122bdbe1de35e5e74ee2b9a10f67f92c7241dba1590b863228fafe6a5b",
+    "bytes": 209992
+  },
+  "go_version": "go version go1.27.3 darwin/arm64",
+  "production_file_hashes": {
+    "path": "docs/research/evidence/capability-production-hashes.json",
+    "count": 204,
+    "sha256": "e59777d7a74179e39fdbebefbb00e7ee3f446098fdb8986250c25a91b52fb167"
+  },
+  "regressions_found_and_fixed": [
+    {
+      "problem": "A committed account update could report failure when a subsequent read observed cancellation.",
+      "fix": "Apply and render the committed identity returned by the capability workflow, without requiring a post-commit read.",
+      "coverage": "Migrated context-cancellation tests cover profile, status, biography, country, mobile and credential updates."
+    },
+    {
+      "problem": "Changing configured operators did not update the extracted review service.",
+      "fix": "Synchronize review operator configuration with the coordinator and protect reads/updates.",
+      "coverage": "Operator revocation and trusted administration regression tests."
+    },
+    {
+      "problem": "Session cleanup could discard transport associations for committed native acknowledgments, including concurrent logout and shared TCP/HTTP sessions.",
+      "fix": "Transport owns each emitted frame through write completion; the coordinator separately denies deliveries to revoked sessions. Unwritten batch members release their reservations on socket failure.",
+      "coverage": [
+        "internal/adapters/native/logout_test.go",
+        "internal/adapters/native/shared_session_cleanup_test.go",
+        "internal/adapters/socket/server_test.go"
+      ],
+      "first_failed_native_run": "v4/scripts/integration/hexagonal-first-attempt-out/evidence-summary.json"
+    }
+  ],
+  "harness_issues_found": [
+    {
+      "suites": [
+        "room-discovery",
+        "reconnect"
+      ],
+      "problem": "Historical creation limit is 15 characters; two shell fixtures still generated 24-character names. The pre-refactor backend applied the same limit.",
+      "correction": "Isolated harness uses D or R, a space, and a 12-digit timestamp (14 characters), preserving names-with-spaces assertions. Original scripts, Java assertions and JAR remain unchanged.",
+      "production_change": false,
+      "retained_failed_attempt": "v4/scripts/integration/hexagonal-preformat-out/failed-attempts/room-discovery-1",
+      "evidence": "v4/scripts/integration/hexagonal-preformat-out/fixture-corrections-2.json"
+    },
+    {
+      "suites": [
+        "slash"
+      ],
+      "problem": "The presence helper checked only the latest global 404 frame. Bob offline followed by Carol offline could make the later Bob check time out despite receipt of both correct frames.",
+      "evidence": "v4/scripts/integration/hexagonal-out/slash-presence-failure-analysis.json",
+      "retained_failed_attempt": "v4/scripts/integration/hexagonal-out/failed-attempts/slash-1",
+      "correction": "The isolated Java helper selects the latest captured 404 for the requested contact ID and still requires presence 99 plus the peer logout marker. Original Java source and publisher JAR remain untouched.",
+      "correction_manifest": "v4/scripts/integration/hexagonal-out/fixture-corrections-2.json",
+      "production_change": false
+    }
+  ],
+  "preformat_client_verification": {
+    "evidence": "v4/scripts/integration/hexagonal-preformat-out/evidence-summary.json",
+    "result": "passed",
+    "suites": 17,
+    "clients": 48,
+    "frames": 3624,
+    "screenshots": 570,
+    "note": "Complete passing run before two gofmt-only corrections; superseded by final acceptance against the delivered source."
+  }
+}

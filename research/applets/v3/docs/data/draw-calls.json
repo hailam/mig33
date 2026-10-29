@@ -1,0 +1,1286 @@
+[
+  {
+    "source": "artifacts/vineflower/aa.java:18",
+    "java": "var1.setColor(this.e);"
+  },
+  {
+    "source": "artifacts/vineflower/aa.java:19",
+    "java": "var1.fillRect(this.a + var2, this.b + var3, this.c - this.a, this.d - this.b);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:290",
+    "java": "var1.setColor(var6[0], var6[1], var6[2]);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:291",
+    "java": "var1.drawLine(0, var5, a, var5);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:294",
+    "java": "var1.setColor(59, 97, 156);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:295",
+    "java": "var1.drawLine(0, b - 1, a, b - 1);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:305",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:306",
+    "java": "var1.drawLine(1, var11 - 4, 5, var11 - 8);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:307",
+    "java": "var1.drawLine(5, var11 - 8, 5, var11);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:308",
+    "java": "var1.drawLine(5, var11, 1, var11 - 4);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:310",
+    "java": "var1.setColor(255, 128, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:311",
+    "java": "var1.drawLine(2, var11 - 4, 2, var11 - 4);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:312",
+    "java": "var1.drawLine(3, var11 - 5, 3, var11 - 3);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:313",
+    "java": "var1.drawLine(4, var11 - 6, 4, var11 - 2);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:327",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:328",
+    "java": "var1.drawLine(a - 2, var13 - 4, a - 6, var13 - 8);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:329",
+    "java": "var1.drawLine(a - 6, var13 - 8, a - 6, var13);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:330",
+    "java": "var1.drawLine(a - 6, var13, a - 2, var13 - 4);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:332",
+    "java": "var1.setColor(255, 128, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:333",
+    "java": "var1.drawLine(a - 5, var13 - 6, a - 5, var13 - 2);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:334",
+    "java": "var1.drawLine(a - 4, var13 - 5, a - 4, var13 - 3);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:335",
+    "java": "var1.drawLine(a - 3, var13 - 4, a - 3, var13 - 4);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:346",
+    "java": "var4.setColor(59, 97, 156);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:347",
+    "java": "var4.drawLine(var1, b - 1, var1 + b - 1, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:348",
+    "java": "var4.drawLine(var1 + b - 1, 0, var1 + var5, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:349",
+    "java": "var4.drawLine(var1 + var5, 0, var1 + var5, b - 1);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:350",
+    "java": "var4.setColor(255, 255, 255);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:351",
+    "java": "var4.drawLine(var1 + 2, b - 2, var1 + b - 1, 1);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:352",
+    "java": "var4.drawLine(var1 + b - 1, 1, var1 + var5 - 1, 1);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:353",
+    "java": "var4.drawLine(var1 + var5 - 1, 2, var1 + var5 - 1, var3 ? b - 1 : b - 2);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:365",
+    "java": "var4.setColor(var6[0], var6[1], var6[2]);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:366",
+    "java": "var4.drawLine(var1 + b + 1 - var7, var7, var1 + var5 - 2, var7);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:370",
+    "java": "var4.setColor(142, 179, 231);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:371",
+    "java": "var4.drawLine(var1 + 2, b - 1, var1 + var5 - 1, b - 1);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:372",
+    "java": "var4.setColor(255, 255, 255);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:373",
+    "java": "var4.drawLine(var1 + 1, b - 1, var1 + 1, b - 1);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:374",
+    "java": "var4.drawLine(var1 + var5 - 1, b - 1, var1 + var5 - 1, b - 1);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:377",
+    "java": "var4.setFont(Font.getFont(64, var3 ? 1 : 0, 8));"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:390",
+    "java": "var4.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:391",
+    "java": "var4.drawString(var9, var1 + b + (var5 - b) / 2 - var4.getFont().stringWidth(var9) / 2, 2, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/ad.java:18",
+    "java": "var1.setFont(Font.getFont(64, this.a, this.d));"
+  },
+  {
+    "source": "artifacts/vineflower/ad.java:20",
+    "java": "var1.setColor(14017530);"
+  },
+  {
+    "source": "artifacts/vineflower/ad.java:21",
+    "java": "var1.fillRect(var2, var3, var1.getFont().stringWidth(this.b), var1.getFont().getHeight());"
+  },
+  {
+    "source": "artifacts/vineflower/ad.java:22",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/ad.java:24",
+    "java": "var1.drawRect(var2, var3, var1.getFont().stringWidth(this.b), var1.getFont().getHeight());"
+  },
+  {
+    "source": "artifacts/vineflower/ad.java:29",
+    "java": "var1.setColor(this.c);"
+  },
+  {
+    "source": "artifacts/vineflower/ad.java:30",
+    "java": "var1.drawString(this.b, var2, var3, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/c.java:147",
+    "java": "var1.drawRGB(com.projectgoth.Roshan.c.a(((q)this.h.elementAt(this.j)).a), 0, 12, this.n, com.projectgoth.Roshan.c.b / 2 - 6, 12, 12, true);"
+  },
+  {
+    "source": "artifacts/vineflower/c.java:148",
+    "java": "var1.setFont(com.projectgoth.Roshan.c.aU);"
+  },
+  {
+    "source": "artifacts/vineflower/c.java:149",
+    "java": "var1.drawString("
+  },
+  {
+    "source": "artifacts/vineflower/c.java:155",
+    "java": "var1.setFont(com.projectgoth.Roshan.c.aQ.getFont());"
+  },
+  {
+    "source": "artifacts/vineflower/c.java:159",
+    "java": "var1.drawRGB(com.projectgoth.Roshan.c.a(((q)this.h.elementAt(var4)).a), 0, 12, this.n, var3, 12, 12, true);"
+  },
+  {
+    "source": "artifacts/vineflower/c.java:160",
+    "java": "var1.drawString(com.projectgoth.Roshan.c.a(((q)this.h.elementAt(var4)).d, this.m - 2 * this.n - 12, var1), 2 * this.n + 12, var3, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/c.java:172",
+    "java": "var1.drawRGB(com.projectgoth.Roshan.c.a(((q)this.h.elementAt(var6)).a), 0, 12, this.n, var3, 12, 12, true);"
+  },
+  {
+    "source": "artifacts/vineflower/c.java:173",
+    "java": "var1.drawString(com.projectgoth.Roshan.c.a(((q)this.h.elementAt(var6)).d, this.m - 2 * this.n - 12, var1), 2 * this.n + 12, var3, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/c.java:187",
+    "java": "var1.drawImage(this.e, -this.p, this.k - this.o, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/c.java:189",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/c.java:190",
+    "java": "var1.drawString(this.f, com.projectgoth.Roshan.c.a / 2, com.projectgoth.Roshan.c.b / 2 - (var1.getFont().getHeight() + 4) / 2, 17);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:195",
+    "java": "aQ.setFont(Font.getFont(64, 0, 8));"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:469",
+    "java": "var1.drawRGB(a(42), 0, aC, a / 2 - aC / 2, b / 2 - aD / 2, aC, aD, true);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:470",
+    "java": "var1.drawString(\"Loading...\", a / 2, b / 2, 17);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:498",
+    "java": "var1.setColor(142, 179, 231);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:499",
+    "java": "var1.fillRect(0, c, a, b - c);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:500",
+    "java": "var1.setColor(255, 255, 255);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:501",
+    "java": "var1.fillRect(2, c + 2, a - 4, d - 4);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:502",
+    "java": "var1.setClip(2, c + 2, a - 4, d - 4);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:518",
+    "java": "var1.setColor(51, 85, 153);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:519",
+    "java": "var1.drawLine(2, c + d - 2, 2, c + 2);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:520",
+    "java": "var1.drawLine(2, c + 2, a - 2, c + 2);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:521",
+    "java": "var1.setColor(136, 170, 221);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:522",
+    "java": "var1.drawLine(a - 2, c + 2, a - 2, c + d - 2);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:523",
+    "java": "var1.drawLine(a - 2, c + d - 2, 2, c + d - 2);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:652",
+    "java": "var1.setColor(160, 160, 160);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:653",
+    "java": "var1.fillRect((a - var10.d) / 2 + 3, (d - var10.e) / 2 + c + 3, var10.d, var10.e);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:654",
+    "java": "var1.setClip((a - var10.d) / 2, (d - var10.e) / 2 + c, var10.d, var10.e);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:4023",
+    "java": "var0.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:4026",
+    "java": "var0.drawLine(var1, var2, var1 + 1 + 2 * var3, var2);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:4031",
+    "java": "var0.setColor(aB);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:4036",
+    "java": "var0.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:4040",
+    "java": "var0.drawLine(var1, var2, var1 + 1 + 2 * var3, var2);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:4045",
+    "java": "var0.setColor(aB);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:4050",
+    "java": "var0.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:4053",
+    "java": "var0.drawLine(var1, var2, var1, var2 + 2 * var3 + 1);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:4058",
+    "java": "var0.setColor(aB);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:4063",
+    "java": "var0.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:4067",
+    "java": "var0.drawLine(var1, var2, var1, var2 + 2 * var3 + 1);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:4072",
+    "java": "var0.setColor(aB);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:64",
+    "java": "var0.setColor(255, 255, 255);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:65",
+    "java": "var0.fillRect(0, 0, var1, var2);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:66",
+    "java": "var0.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:74",
+    "java": "var0.setFont(Font.getFont(64, 0, 8));"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:75",
+    "java": "var0.setColor(255, 255, 255);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:76",
+    "java": "var0.fillRect(0, 0, com.projectgoth.Roshan.c.a, var2);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:77",
+    "java": "var0.setColor(170, 204, 238);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:78",
+    "java": "var0.fillRect(2, 2, com.projectgoth.Roshan.c.a - 3, var2 - 1);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:80",
+    "java": "var0.fillRect(0, com.projectgoth.Roshan.c.b - var2, com.projectgoth.Roshan.c.a, var2);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:83",
+    "java": "var0.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:84",
+    "java": "var0.drawString(var1, com.projectgoth.Roshan.c.a / 2, var2 / 2 - com.projectgoth.Roshan.c.a(var0) / 2, 17);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:85",
+    "java": "var0.drawRect(0, 0, com.projectgoth.Roshan.c.a - 1, var2);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:86",
+    "java": "var0.drawRect(0, 0, com.projectgoth.Roshan.c.a - 1, com.projectgoth.Roshan.c.b - 1);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:90",
+    "java": "var0.setColor(16777215);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:91",
+    "java": "var0.fillRect(var1, var3 + 1, var2 - var1, var4 - var3 - 2);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:92",
+    "java": "var0.setColor(148, 149, 162);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:93",
+    "java": "var0.drawLine(var1, var4 - 1, var1, var3 + 1);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:94",
+    "java": "var0.drawLine(var1 + 1, var3, var2 - 1, var3);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:95",
+    "java": "var0.setColor(90, 91, 100);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:96",
+    "java": "var0.drawLine(var2, var3 + 1, var2, var4 - 1);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:97",
+    "java": "var0.drawLine(var2 - 1, var4, var1 + 1, var4);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:105",
+    "java": "var0.setColor(var12[0], var12[1], var12[2]);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:106",
+    "java": "var0.drawLine(var1 + 1, var11, var2 - 1, var11);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:111",
+    "java": "var0.setColor(251, 202, 106);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:112",
+    "java": "var0.drawRect(var1, var3 + 1, var2 - var1, var4 - var3 - 2);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:116",
+    "java": "var0.setColor(255, 240, 207);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:117",
+    "java": "var0.drawLine(var1 + 1, var3 + 1, var2 - 1, var3 + 1);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:118",
+    "java": "var0.setColor(253, 216, 137);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:119",
+    "java": "var0.drawLine(var1 + 1, var3 + 2, var2 - 1, var3 + 2);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:120",
+    "java": "var0.setColor(251, 202, 106);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:121",
+    "java": "var0.drawRect(var1 + 1, var3 + 2, 1, var4 - var3 - 3);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:122",
+    "java": "var0.drawRect(var2 - 2, var3 + 2, 1, var4 - var3 - 3);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:123",
+    "java": "var0.setColor(248, 179, 48);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:124",
+    "java": "var0.drawLine(var1 + 1, var4 - 2, var2 - 1, var4 - 2);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:125",
+    "java": "var0.setColor(229, 151, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:126",
+    "java": "var0.drawLine(var1 + 1, var4 - 1, var2 - 1, var4 - 1);"
+  },
+  {
+    "source": "artifacts/vineflower/d.java:19",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/d.java:20",
+    "java": "var1.setFont(Font.getFont(64, 0, 8));"
+  },
+  {
+    "source": "artifacts/vineflower/d.java:45",
+    "java": "var1.drawChar(var14, var13, var12, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:249",
+    "java": "var1.setFont(Font.getFont(64, 0, 8));"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:283",
+    "java": "var1.setColor(255, 255, 255);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:284",
+    "java": "var1.fillRect(var2, var3, this.d, this.e);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:286",
+    "java": "var1.setColor(255, 128, 128);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:288",
+    "java": "var1.setColor(170, 204, 238);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:291",
+    "java": "var1.fillRect(var2 + 2, var3 + 2, this.d - 3, f - 2);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:292",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:293",
+    "java": "var1.drawString(this.b, var2 + this.d / 2, var3 + f / 2 - var4 / 2, 17);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:304",
+    "java": "var1.setColor(242, 245, 251);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:305",
+    "java": "var1.fillRect(var7 + 1, var3 + var5 + 2, var1.getFont().stringWidth(this.a(var6)) + 3, h - 3);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:306",
+    "java": "var1.setColor(51, 85, 153);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:307",
+    "java": "var1.drawRect(var7, var3 + var5 + 1, var1.getFont().stringWidth(this.a(var6)) + 4, h - 2);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:310",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:312",
+    "java": "var1.drawRGB(com.projectgoth.Roshan.c.a(this.g(var6)), 0, 12, var2 + i, var3 + var5 + (h - 12) / 2, 12, 12, true);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:314",
+    "java": "var1.setColor(192, 192, 192);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:317",
+    "java": "var1.drawString(this.a(var6), var2 + i * 2 + 12, var3 + var5 + h / 2 - var4 / 2, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:319",
+    "java": "var1.drawString(this.d(var6), var2 + this.d - 8, var3 + var5 + h / 2 - var4 / 2, 24);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:324",
+    "java": "var1.setColor(160, 160, 160);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:325",
+    "java": "var1.drawLine(var2 + 4, var3 + var5 + 1, var2 + this.d - 4, var3 + var5 + 1);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:329",
+    "java": "var1.setColor(192, 192, 192);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:332",
+    "java": "var1.drawString(this.a(var6), var2 + i * 2, var3 + var5 + h / 2 - var4 / 2, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:334",
+    "java": "var1.drawString(this.d(var6), var2 + this.d - 8, var3 + var5 + h / 2 - var4 / 2, 24);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:344",
+    "java": "var1.drawString((String)this.k.elementAt(var6), var2 + this.d / 2, var3 + var5 + h / 2 - var4 / 2, 17);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:364",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:365",
+    "java": "var1.drawRect(var2, var3, this.d - 1, this.e - 1);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:366",
+    "java": "var1.drawRect(var2, var3, this.d, f);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:371",
+    "java": "var1.setColor(255, 255, 255);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:372",
+    "java": "var1.fillRect(var2, var3, this.d, this.e);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:375",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:385",
+    "java": "var1.setColor(242, 245, 251);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:386",
+    "java": "var1.fillRect(var7 + 1, var3 + var5 + 2 - h, var1.getFont().stringWidth(this.a(var6)) + 3, h - 3);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:387",
+    "java": "var1.setColor(51, 85, 153);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:388",
+    "java": "var1.drawRect(var7, var3 + var5 + 1 - h, var1.getFont().stringWidth(this.a(var6)) + 4, h - 2);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:391",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:394",
+    "java": "var1.drawRGB(com.projectgoth.Roshan.c.a(this.g(var6)), 0, 12, var2 + i, var3 + var5 + (h - 12) / 2, 12, 12, true);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:395",
+    "java": "var1.drawString(this.a(var6), var2 + i * 2 + 12, var3 + var5 + h / 2 - var4 / 2, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:397",
+    "java": "var1.drawString(this.d(var6), var2 + this.d - 8, var3 + var5 + h / 2 - var4 / 2, 24);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:400",
+    "java": "var1.setColor(160, 160, 160);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:402",
+    "java": "var1.drawLine(var2 + 4, var3 + var5 + 1, var2 + this.d - 4, var3 + var5 + 1);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:406",
+    "java": "var1.setColor(192, 192, 192);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:409",
+    "java": "var1.drawString(this.a(var6), var2 + i * 2, var3 + var5 + h / 2 - var4 / 2, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:411",
+    "java": "var1.drawString(this.d(var6), var2 + this.d - 8, var3 + var5 + h / 2 - var4 / 2, 24);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:418",
+    "java": "var1.drawString((String)this.k.elementAt(var6), var2 + this.d / 2, var3 + var8 + h / 2 - var4 / 2, 17);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:425",
+    "java": "var1.setColor(255, 128, 128);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:427",
+    "java": "var1.setColor(170, 204, 238);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:430",
+    "java": "var1.fillRect(var2 + 2, var3 + 2, this.d - 3, h - 2);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:431",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:432",
+    "java": "var1.drawString(this.b, var2 + this.d / 2, var3 + h / 2 - var4 / 2, 17);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:443",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:444",
+    "java": "var1.drawRect(var2, var3, this.d - 1, this.e - 1);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:445",
+    "java": "var1.drawRect(var2, var3, this.d, h);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:455",
+    "java": "var1.drawRGB(com.projectgoth.Roshan.c.a(7), 0, 12, var5 + 16 * var7, var6, 12, 12, true);"
+  },
+  {
+    "source": "artifacts/vineflower/e.java:457",
+    "java": "var1.drawRGB(com.projectgoth.Roshan.c.a(6), 0, 12, var5 + 16 * var7, var6, 12, 12, true);"
+  },
+  {
+    "source": "artifacts/vineflower/g.java:14",
+    "java": "var1.drawRGB(com.projectgoth.Roshan.c.a(this.b ? 3 : 2), 0, 12, var2, var3 + 1, 12, 12, true);"
+  },
+  {
+    "source": "artifacts/vineflower/g.java:16",
+    "java": "var1.drawRGB(com.projectgoth.Roshan.c.a(this.b ? 1 : 0), 0, 12, var2, var3 + 1, 12, 12, true);"
+  },
+  {
+    "source": "artifacts/vineflower/h.java:15",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/h.java:16",
+    "java": "var1.setFont(Font.getFont(64, 0, 8));"
+  },
+  {
+    "source": "artifacts/vineflower/h.java:22",
+    "java": "var1.setColor(var8[0], var8[1], var8[2]);"
+  },
+  {
+    "source": "artifacts/vineflower/h.java:23",
+    "java": "var1.drawLine(var2 + 1, var7, var4 - 1, var7);"
+  },
+  {
+    "source": "artifacts/vineflower/h.java:31",
+    "java": "var1.setFont(Font.getFont(64, 0, 8));"
+  },
+  {
+    "source": "artifacts/vineflower/h.java:32",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/h.java:33",
+    "java": "var1.drawString(this.b, var2 + 6, var3 + 1, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/i.java:371",
+    "java": "var1.setFont(Font.getFont(64, 0, 8));"
+  },
+  {
+    "source": "artifacts/vineflower/i.java:374",
+    "java": "var1.setColor(255, 255, 255);"
+  },
+  {
+    "source": "artifacts/vineflower/i.java:375",
+    "java": "var1.fillRect(0, 0, com.projectgoth.Roshan.c.a, com.projectgoth.Roshan.c.b);"
+  },
+  {
+    "source": "artifacts/vineflower/i.java:376",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/i.java:397",
+    "java": "var1.drawRGB(var8, 0, 12, var5, var6, 12, 12, true);"
+  },
+  {
+    "source": "artifacts/vineflower/i.java:399",
+    "java": "var1.drawRGB(var8, 0, com.projectgoth.Roshan.c.aX, var5, var6, com.projectgoth.Roshan.c.aX, com.projectgoth.Roshan.c.aX, true);"
+  },
+  {
+    "source": "artifacts/vineflower/i.java:411",
+    "java": "var1.setColor(204, 204, 204);"
+  },
+  {
+    "source": "artifacts/vineflower/i.java:413",
+    "java": "var1.drawRect(var5, var6, com.projectgoth.Roshan.c.aX, com.projectgoth.Roshan.c.aX);"
+  },
+  {
+    "source": "artifacts/vineflower/i.java:415",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/i.java:420",
+    "java": "var1.drawRect(var5 - 2, var6 - 2, h, h);"
+  },
+  {
+    "source": "artifacts/vineflower/i.java:421",
+    "java": "var1.drawRect(var5 - 3, var6 - 3, h + 2, h + 2);"
+  },
+  {
+    "source": "artifacts/vineflower/i.java:424",
+    "java": "var1.drawRGB(var8, 0, 12, var3, com.projectgoth.Roshan.c.b - var4 - h, 12, 12, true);"
+  },
+  {
+    "source": "artifacts/vineflower/i.java:426",
+    "java": "var1.drawRGB("
+  },
+  {
+    "source": "artifacts/vineflower/i.java:455",
+    "java": "var1.drawString(var7, var3 + h, var6, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:128",
+    "java": "var1.setFont(Font.getFont(64, 0, 8));"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:168",
+    "java": "var1.setFont(Font.getFont(64, 1, 8));"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:170",
+    "java": "var1.setFont(Font.getFont(64, 1, 16));"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:172",
+    "java": "var1.setFont(Font.getFont(64, 4, 8));"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:182",
+    "java": "var1.setFont(Font.getFont(64, 2, 8));"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:204",
+    "java": "var1.setColor(var5);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:213",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:215",
+    "java": "var1.setFont(Font.getFont(64, 0, var1.getFont().getSize()));"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:216",
+    "java": "var1.setColor(var5);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:223",
+    "java": "var1.setFont(Font.getFont(64, 0, var1.getFont().getSize()));"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:225",
+    "java": "var1.setColor(var7);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:227",
+    "java": "var1.setColor(var5);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:230",
+    "java": "var1.setFont(Font.getFont(64, 0, var1.getFont().getSize()));"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:231",
+    "java": "var1.setColor(var5);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:367",
+    "java": "var1.setColor(var7);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:369",
+    "java": "var1.setColor(var5);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:403",
+    "java": "var1.setColor(var5);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:412",
+    "java": "var1.setColor(var6);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:415",
+    "java": "var1.setColor(0, 0, 255);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:416",
+    "java": "var1.setFont(Font.getFont(64, 4, var1.getFont().getSize()));"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:430",
+    "java": "var1.setColor(0, 0, 255);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:431",
+    "java": "var1.setFont(Font.getFont(64, 4, var1.getFont().getSize()));"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:827",
+    "java": "var1.setColor(var7);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:829",
+    "java": "var1.setColor(var5);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:832",
+    "java": "var1.setFont(Font.getFont(64, 0, 8));"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1025",
+    "java": "var1.setColor(this.C);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1026",
+    "java": "var1.fillRect(0, 0, h, i);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1029",
+    "java": "var1.drawImage(com.projectgoth.Roshan.d.a(this.D, h, i), 0, 0, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1031",
+    "java": "var1.drawImage(this.D, k / 2, i / 2, 3);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1071",
+    "java": "var1.drawImage(var6.h, var6.d - this.r, var6.e - this.p + this.j, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1073",
+    "java": "var1.setColor(251, 202, 106);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1074",
+    "java": "var1.drawRect(var6.d - this.r, var6.e - this.p + this.j + 1, var6.f - var6.d - this.r, var6.g - var6.e - 2);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1078",
+    "java": "var1.drawRGB("
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1104",
+    "java": "var1.drawRGB(com.projectgoth.Roshan.c.a(this.L), 0, 12, k, com.projectgoth.Roshan.c.b - 2 * this.j, 12, 12, true);"
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1109",
+    "java": "var1.drawString(com.projectgoth.Roshan.c.a(o, h - this.j, var1), 2, i - this.j, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/o.java:31",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/o.java:32",
+    "java": "var1.setFont(Font.getFont(64, 0, 8));"
+  },
+  {
+    "source": "artifacts/vineflower/o.java:35",
+    "java": "var1.drawString(var7, var2 + 2, var3 + 1, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/o.java:44",
+    "java": "var1.setColor(255, 255, 255);"
+  },
+  {
+    "source": "artifacts/vineflower/o.java:45",
+    "java": "var1.fillRect(var3, var5, this.g, var2);"
+  },
+  {
+    "source": "artifacts/vineflower/o.java:49",
+    "java": "var1.setColor(226, 226, 226);"
+  },
+  {
+    "source": "artifacts/vineflower/o.java:50",
+    "java": "var1.fillRect(var3, var5, this.g, k.w);"
+  },
+  {
+    "source": "artifacts/vineflower/o.java:53",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/o.java:55",
+    "java": "var1.drawString(com.projectgoth.Roshan.c.a(((j)this.d.elementAt(var7)).a, var10002, var1), var3 + 4 + 12, var5, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/o.java:57",
+    "java": "var1.drawRGB(com.projectgoth.Roshan.c.a(1), 0, 12, var3 + k.w / 2 - 6, var5 + (k.w - 12) / 2, 12, 12, true);"
+  },
+  {
+    "source": "artifacts/vineflower/o.java:63",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/o.java:64",
+    "java": "var1.drawRect(var4, var6, this.g, var2);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:668",
+    "java": "var1.drawRGB("
+  },
+  {
+    "source": "artifacts/vineflower/r.java:811",
+    "java": "var5.setFont(Font.getFont(64, var3 ? 1 : 0, 8));"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:814",
+    "java": "var5.setColor(242, 245, 251);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:815",
+    "java": "var5.fillRect(var1 + 2 * c + l, var2 + 1, var5.getFont().stringWidth(s) + 3, a - 2);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:816",
+    "java": "var5.setColor(51, 85, 153);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:817",
+    "java": "var5.drawRect(var1 + 2 * c + l, var2 + 1, var5.getFont().stringWidth(s) + 3, a - 2);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:820",
+    "java": "var5.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:821",
+    "java": "var5.drawString(s, var1 + 2 * c + l + 2, var2 + a / 2 - com.projectgoth.Roshan.c.a(var5) / 2, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:822",
+    "java": "var5.drawRGB(com.projectgoth.Roshan.c.a(var4 == 3 ? 40 : (com.projectgoth.Roshan.c.aw > 0 ? 38 : 39)), 0, 12, var1 + c, var2 + a / 2 - 6, 12, 12, true);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:826",
+    "java": "var6.setFont(Font.getFont(64, var3 ? 1 : 0, 8));"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:829",
+    "java": "var6.setColor(242, 245, 251);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:830",
+    "java": "var6.fillRect(var1 + 2 * c + l, var2 + 1, var6.getFont().stringWidth(s) + 3, a - 2);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:831",
+    "java": "var6.setColor(51, 85, 153);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:832",
+    "java": "var6.drawRect(var1 + 2 * c + l, var2 + 1, var6.getFont().stringWidth(s) + 3, a - 2);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:835",
+    "java": "var6.setColor(51, 85, 153);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:836",
+    "java": "var6.drawString(s, var1 + 2 * c + l + 2, var2 + a / 2 - com.projectgoth.Roshan.c.a(var6) / 2, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:837",
+    "java": "var6.drawRGB(var5 ? com.projectgoth.Roshan.c.a(5) : com.projectgoth.Roshan.c.a(4), 0, 12, var1 + c, var2 + a / 2 - 6, 12, 12, true);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:841",
+    "java": "var6.setFont(Font.getFont(64, var3 ? 1 : 0, 8));"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:844",
+    "java": "var6.setColor(242, 245, 251);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:845",
+    "java": "var6.fillRect(var1 + 3 * g + l, var2 + 1, var6.getFont().stringWidth(s) + 3, a - 2);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:846",
+    "java": "var6.setColor(51, 85, 153);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:847",
+    "java": "var6.drawRect(var1 + 3 * g + l, var2 + 1, var6.getFont().stringWidth(s) + 3, a - 2);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:870",
+    "java": "var6.drawRGB(com.projectgoth.Roshan.c.a(t), 0, 12, var1 + 2 * g, var2 + a / 2 - 6, 12, 12, true);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:871",
+    "java": "var6.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/r.java:872",
+    "java": "var6.drawString(s, var1 + 3 * g + l + 2, var2 + a / 2 - com.projectgoth.Roshan.c.a(var6) / 2, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/t.java:557",
+    "java": "var1.setFont(Font.getFont(64, 0, 8));"
+  },
+  {
+    "source": "artifacts/vineflower/t.java:558",
+    "java": "var1.setColor(255, 255, 255);"
+  },
+  {
+    "source": "artifacts/vineflower/t.java:559",
+    "java": "var1.fillRect(0, 0, com.projectgoth.Roshan.c.a, com.projectgoth.Roshan.c.b);"
+  },
+  {
+    "source": "artifacts/vineflower/t.java:561",
+    "java": "var1.drawRGB("
+  },
+  {
+    "source": "artifacts/vineflower/t.java:680",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/t.java:683",
+    "java": "var1.drawRGB(com.projectgoth.Roshan.c.a(var7 ? 3 : 2), 0, 12, var3, var4 + 2, 12, 12, true);"
+  },
+  {
+    "source": "artifacts/vineflower/t.java:685",
+    "java": "var1.drawRGB(com.projectgoth.Roshan.c.a(var7 ? 1 : 0), 0, 12, var3, var4 + 2, 12, 12, true);"
+  },
+  {
+    "source": "artifacts/vineflower/t.java:689",
+    "java": "var1.drawString(var2, var3 + g + 12, var4 + f / 2 - com.projectgoth.Roshan.c.a(var1) / 2, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/t.java:694",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/t.java:695",
+    "java": "var1.drawString(var2, g, var3 + d / 2 - com.projectgoth.Roshan.c.a(var1) / 2, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/t.java:703",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/t.java:704",
+    "java": "var1.fillTriangle(g + l - (e - 6) / 2, var4 + e / 2, g + l - (e - 6) / 2 - 5, var4 + e / 2 - 3, g + l - (e - 6) / 2 - 5, var4 + e / 2 + 3);"
+  },
+  {
+    "source": "artifacts/vineflower/t.java:722",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/t.java:724",
+    "java": "var1.drawString(com.projectgoth.Roshan.c.a(var3, l - e - 4, var1), g + 4, var4 + e / 2 - com.projectgoth.Roshan.c.a(var1) / 2, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/t.java:726",
+    "java": "var1.drawString(com.projectgoth.Roshan.c.a(var3, l - 6, var1), g + 4, var4 + e / 2 - com.projectgoth.Roshan.c.a(var1) / 2, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/t.java:742",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/t.java:743",
+    "java": "var1.drawString(com.projectgoth.Roshan.c.a(var2, l - 4, var1), g + 3, var3 + 2, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/t.java:746",
+    "java": "var1.drawImage(var5, g, var3 + e + 3, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/t.java:759",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/t.java:760",
+    "java": "var1.drawString(var2, var3 + 6, var4 + (var7 - var4 - com.projectgoth.Roshan.c.a(var1)) / 2, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/v.java:41",
+    "java": "var1.setFont(com.projectgoth.Roshan.c.aR);"
+  },
+  {
+    "source": "artifacts/vineflower/v.java:47",
+    "java": "var1.setColor(com.projectgoth.Roshan.d.a(6));"
+  },
+  {
+    "source": "artifacts/vineflower/v.java:83",
+    "java": "var1.drawString(var13, var4, var5, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/v.java:89",
+    "java": "var1.setColor(var10);"
+  },
+  {
+    "source": "artifacts/vineflower/v.java:94",
+    "java": "var1.setColor(var10);"
+  },
+  {
+    "source": "artifacts/vineflower/v.java:105",
+    "java": "var1.drawRGB(var8.c, 0, com.projectgoth.Roshan.c.aX, var4, var5, com.projectgoth.Roshan.c.aX, com.projectgoth.Roshan.c.aX, true);"
+  },
+  {
+    "source": "artifacts/vineflower/v.java:107",
+    "java": "var1.setColor(200, 200, 200);"
+  },
+  {
+    "source": "artifacts/vineflower/v.java:109",
+    "java": "var1.drawRect(var4, var5, com.projectgoth.Roshan.c.aX, com.projectgoth.Roshan.c.aX);"
+  },
+  {
+    "source": "artifacts/vineflower/v.java:110",
+    "java": "var1.setColor(var10);"
+  },
+  {
+    "source": "artifacts/vineflower/v.java:117",
+    "java": "var1.drawString(var13, var4, var5, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/x.java:205",
+    "java": "var10.setColor(this.e);"
+  },
+  {
+    "source": "artifacts/vineflower/x.java:206",
+    "java": "var10.drawLine(this.g, var3, this.g + this.f, var3);"
+  },
+  {
+    "source": "artifacts/vineflower/x.java:211",
+    "java": "var10.setColor(var11[var25]);"
+  },
+  {
+    "source": "artifacts/vineflower/x.java:212",
+    "java": "var10.drawLine(var20, var3, var20, var3);"
+  },
+  {
+    "source": "artifacts/vineflower/x.java:217",
+    "java": "var10.setColor(this.e);"
+  },
+  {
+    "source": "artifacts/vineflower/x.java:218",
+    "java": "var10.drawLine(this.g, var3, this.g + this.f, var3);"
+  },
+  {
+    "source": "artifacts/vineflower/y.java:31",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/y.java:32",
+    "java": "var1.setFont(Font.getFont(64, 0, 8));"
+  },
+  {
+    "source": "artifacts/vineflower/y.java:42",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/y.java:43",
+    "java": "var1.drawString(com.projectgoth.Roshan.c.a(var7, var4 - var2 - 10, var1), var2 + 2, var3 + 1, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/z.java:103",
+    "java": "var3.setClip(var5, var4, 1, 1);"
+  },
+  {
+    "source": "artifacts/vineflower/z.java:104",
+    "java": "var3.drawImage(var1, var5 - var5 * this.k / this.f, var4 - var4 * this.l / this.g, 20);"
+  },
+  {
+    "source": "artifacts/vineflower/z.java:148",
+    "java": "var1.setColor(255, 255, 255);"
+  },
+  {
+    "source": "artifacts/vineflower/z.java:149",
+    "java": "var1.fillRect(0, 0, com.projectgoth.Roshan.c.a, com.projectgoth.Roshan.c.b);"
+  },
+  {
+    "source": "artifacts/vineflower/z.java:152",
+    "java": "var1.setColor(0, 0, 0);"
+  },
+  {
+    "source": "artifacts/vineflower/z.java:153",
+    "java": "var1.drawString(\"Processing...\", com.projectgoth.Roshan.c.a / 2, com.projectgoth.Roshan.c.b / 2 - (var1.getFont().getHeight() + 4) / 2, 17);"
+  },
+  {
+    "source": "artifacts/vineflower/z.java:155",
+    "java": "var1.drawImage(this.i, com.projectgoth.Roshan.c.a / 2, com.projectgoth.Roshan.c.b / 2, 3);"
+  }
+]

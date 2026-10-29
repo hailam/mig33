@@ -1,0 +1,1045 @@
+{
+  "scope": "Direct dispatcher reads only; delegated reads and semantics require protocol.md. Changes of accessor do not by themselves establish a clean schema.",
+  "v3_count": 33,
+  "v4_count": 55,
+  "v4_added_incoming": [
+    8,
+    11,
+    12,
+    14,
+    16,
+    208,
+    406,
+    420,
+    421,
+    422,
+    423,
+    603,
+    714,
+    715,
+    717,
+    718,
+    719,
+    918,
+    923,
+    924,
+    927,
+    928,
+    1000,
+    1002,
+    1004,
+    1005
+  ],
+  "v4_removed_incoming": [
+    412,
+    416,
+    702,
+    912
+  ],
+  "shared_count": 29,
+  "changed_direct_reads": [
+    {
+      "opcode": 1,
+      "v3_direct_fields": [
+        {
+          "tag": 1,
+          "type": "I"
+        },
+        {
+          "tag": 1,
+          "type": "T"
+        },
+        {
+          "tag": 2,
+          "type": "X"
+        }
+      ],
+      "v4_direct_fields": [
+        {
+          "tag": 1,
+          "type": "T"
+        }
+      ],
+      "added_reads": [],
+      "removed_reads": [
+        {
+          "tag": 1,
+          "type": "I"
+        },
+        {
+          "tag": 2,
+          "type": "X"
+        }
+      ]
+    },
+    {
+      "opcode": 5,
+      "v3_direct_fields": [
+        {
+          "tag": 2,
+          "type": "T"
+        },
+        {
+          "tag": 3,
+          "type": "B"
+        }
+      ],
+      "v4_direct_fields": [
+        {
+          "tag": 1,
+          "type": "B"
+        },
+        {
+          "tag": 2,
+          "type": "T"
+        },
+        {
+          "tag": 3,
+          "type": "B"
+        },
+        {
+          "tag": 4,
+          "type": "T"
+        }
+      ],
+      "added_reads": [
+        {
+          "tag": 1,
+          "type": "B"
+        },
+        {
+          "tag": 4,
+          "type": "T"
+        }
+      ],
+      "removed_reads": []
+    },
+    {
+      "opcode": 102,
+      "v3_direct_fields": [],
+      "v4_direct_fields": [
+        {
+          "tag": 1,
+          "type": "T"
+        },
+        {
+          "tag": 2,
+          "type": "T"
+        },
+        {
+          "tag": 3,
+          "type": "X"
+        }
+      ],
+      "added_reads": [
+        {
+          "tag": 1,
+          "type": "T"
+        },
+        {
+          "tag": 2,
+          "type": "T"
+        },
+        {
+          "tag": 3,
+          "type": "X"
+        }
+      ],
+      "removed_reads": []
+    },
+    {
+      "opcode": 203,
+      "v3_direct_fields": [
+        {
+          "tag": 1,
+          "type": "T"
+        },
+        {
+          "tag": 2,
+          "type": "B"
+        },
+        {
+          "tag": 3,
+          "type": "T"
+        },
+        {
+          "tag": 4,
+          "type": "B"
+        },
+        {
+          "tag": 6,
+          "type": "B"
+        },
+        {
+          "tag": 7,
+          "type": "B"
+        },
+        {
+          "tag": 8,
+          "type": "B"
+        },
+        {
+          "tag": 11,
+          "type": "T"
+        },
+        {
+          "tag": 12,
+          "type": "T"
+        },
+        {
+          "tag": 13,
+          "type": "T"
+        },
+        {
+          "tag": 14,
+          "type": "I"
+        },
+        {
+          "tag": 16,
+          "type": "I"
+        },
+        {
+          "tag": 17,
+          "type": "B"
+        },
+        {
+          "tag": 18,
+          "type": "B"
+        }
+      ],
+      "v4_direct_fields": [
+        {
+          "tag": 1,
+          "type": "T"
+        },
+        {
+          "tag": 2,
+          "type": "B"
+        },
+        {
+          "tag": 3,
+          "type": "T"
+        },
+        {
+          "tag": 4,
+          "type": "B"
+        },
+        {
+          "tag": 13,
+          "type": "T"
+        },
+        {
+          "tag": 14,
+          "type": "I"
+        },
+        {
+          "tag": 16,
+          "type": "I"
+        },
+        {
+          "tag": 18,
+          "type": "B"
+        },
+        {
+          "tag": 20,
+          "type": "I"
+        },
+        {
+          "tag": 23,
+          "type": "T"
+        },
+        {
+          "tag": 24,
+          "type": "I"
+        },
+        {
+          "tag": 26,
+          "type": "T"
+        },
+        {
+          "tag": 27,
+          "type": "B"
+        },
+        {
+          "tag": 28,
+          "type": "T"
+        },
+        {
+          "tag": 29,
+          "type": "B"
+        },
+        {
+          "tag": 31,
+          "type": "I"
+        },
+        {
+          "tag": 31,
+          "type": "S"
+        },
+        {
+          "tag": 32,
+          "type": "I"
+        },
+        {
+          "tag": 32,
+          "type": "T"
+        },
+        {
+          "tag": 33,
+          "type": "B"
+        },
+        {
+          "tag": 33,
+          "type": "I"
+        },
+        {
+          "tag": 35,
+          "type": "B"
+        },
+        {
+          "tag": 35,
+          "type": "I"
+        },
+        {
+          "tag": 37,
+          "type": "B"
+        },
+        {
+          "tag": 37,
+          "type": "I"
+        }
+      ],
+      "added_reads": [
+        {
+          "tag": 20,
+          "type": "I"
+        },
+        {
+          "tag": 23,
+          "type": "T"
+        },
+        {
+          "tag": 24,
+          "type": "I"
+        },
+        {
+          "tag": 26,
+          "type": "T"
+        },
+        {
+          "tag": 27,
+          "type": "B"
+        },
+        {
+          "tag": 28,
+          "type": "T"
+        },
+        {
+          "tag": 29,
+          "type": "B"
+        },
+        {
+          "tag": 31,
+          "type": "I"
+        },
+        {
+          "tag": 31,
+          "type": "S"
+        },
+        {
+          "tag": 32,
+          "type": "I"
+        },
+        {
+          "tag": 32,
+          "type": "T"
+        },
+        {
+          "tag": 33,
+          "type": "B"
+        },
+        {
+          "tag": 33,
+          "type": "I"
+        },
+        {
+          "tag": 35,
+          "type": "B"
+        },
+        {
+          "tag": 35,
+          "type": "I"
+        },
+        {
+          "tag": 37,
+          "type": "B"
+        },
+        {
+          "tag": 37,
+          "type": "I"
+        }
+      ],
+      "removed_reads": [
+        {
+          "tag": 6,
+          "type": "B"
+        },
+        {
+          "tag": 7,
+          "type": "B"
+        },
+        {
+          "tag": 8,
+          "type": "B"
+        },
+        {
+          "tag": 11,
+          "type": "T"
+        },
+        {
+          "tag": 12,
+          "type": "T"
+        },
+        {
+          "tag": 17,
+          "type": "B"
+        }
+      ]
+    },
+    {
+      "opcode": 402,
+      "v3_direct_fields": [
+        {
+          "tag": 1,
+          "type": "I"
+        },
+        {
+          "tag": 2,
+          "type": "I"
+        },
+        {
+          "tag": 3,
+          "type": "T"
+        },
+        {
+          "tag": 8,
+          "type": "T"
+        },
+        {
+          "tag": 12,
+          "type": "T"
+        },
+        {
+          "tag": 13,
+          "type": "B"
+        },
+        {
+          "tag": 14,
+          "type": "T"
+        },
+        {
+          "tag": 15,
+          "type": "B"
+        },
+        {
+          "tag": 16,
+          "type": "T"
+        },
+        {
+          "tag": 17,
+          "type": "B"
+        },
+        {
+          "tag": 18,
+          "type": "T"
+        },
+        {
+          "tag": 19,
+          "type": "B"
+        },
+        {
+          "tag": 22,
+          "type": "T"
+        },
+        {
+          "tag": 23,
+          "type": "B"
+        }
+      ],
+      "v4_direct_fields": [
+        {
+          "tag": 1,
+          "type": "I"
+        },
+        {
+          "tag": 2,
+          "type": "I"
+        },
+        {
+          "tag": 3,
+          "type": "T"
+        },
+        {
+          "tag": 8,
+          "type": "T"
+        },
+        {
+          "tag": 12,
+          "type": "T"
+        },
+        {
+          "tag": 13,
+          "type": "B"
+        },
+        {
+          "tag": 27,
+          "type": "T"
+        },
+        {
+          "tag": 28,
+          "type": "T"
+        },
+        {
+          "tag": 31,
+          "type": "X"
+        },
+        {
+          "tag": 32,
+          "type": "X"
+        },
+        {
+          "tag": 33,
+          "type": "TA"
+        }
+      ],
+      "added_reads": [
+        {
+          "tag": 27,
+          "type": "T"
+        },
+        {
+          "tag": 28,
+          "type": "T"
+        },
+        {
+          "tag": 31,
+          "type": "X"
+        },
+        {
+          "tag": 32,
+          "type": "X"
+        },
+        {
+          "tag": 33,
+          "type": "TA"
+        }
+      ],
+      "removed_reads": [
+        {
+          "tag": 14,
+          "type": "T"
+        },
+        {
+          "tag": 15,
+          "type": "B"
+        },
+        {
+          "tag": 16,
+          "type": "T"
+        },
+        {
+          "tag": 17,
+          "type": "B"
+        },
+        {
+          "tag": 18,
+          "type": "T"
+        },
+        {
+          "tag": 19,
+          "type": "B"
+        },
+        {
+          "tag": 22,
+          "type": "T"
+        },
+        {
+          "tag": 23,
+          "type": "B"
+        }
+      ]
+    },
+    {
+      "opcode": 404,
+      "v3_direct_fields": [
+        {
+          "tag": 1,
+          "type": "I"
+        },
+        {
+          "tag": 2,
+          "type": "B"
+        },
+        {
+          "tag": 3,
+          "type": "B"
+        },
+        {
+          "tag": 4,
+          "type": "B"
+        },
+        {
+          "tag": 5,
+          "type": "B"
+        },
+        {
+          "tag": 7,
+          "type": "B"
+        }
+      ],
+      "v4_direct_fields": [
+        {
+          "tag": 1,
+          "type": "I"
+        },
+        {
+          "tag": 2,
+          "type": "B"
+        },
+        {
+          "tag": 9,
+          "type": "X"
+        },
+        {
+          "tag": 10,
+          "type": "X"
+        }
+      ],
+      "added_reads": [
+        {
+          "tag": 9,
+          "type": "X"
+        },
+        {
+          "tag": 10,
+          "type": "X"
+        }
+      ],
+      "removed_reads": [
+        {
+          "tag": 3,
+          "type": "B"
+        },
+        {
+          "tag": 4,
+          "type": "B"
+        },
+        {
+          "tag": 5,
+          "type": "B"
+        },
+        {
+          "tag": 7,
+          "type": "B"
+        }
+      ]
+    },
+    {
+      "opcode": 500,
+      "v3_direct_fields": [
+        {
+          "tag": 1,
+          "type": "B"
+        },
+        {
+          "tag": 2,
+          "type": "T"
+        },
+        {
+          "tag": 3,
+          "type": "B"
+        },
+        {
+          "tag": 4,
+          "type": "T"
+        },
+        {
+          "tag": 5,
+          "type": "I"
+        },
+        {
+          "tag": 6,
+          "type": "S"
+        },
+        {
+          "tag": 8,
+          "type": "T"
+        },
+        {
+          "tag": 9,
+          "type": "B"
+        },
+        {
+          "tag": 11,
+          "type": "T"
+        },
+        {
+          "tag": 12,
+          "type": "I"
+        },
+        {
+          "tag": 13,
+          "type": "I"
+        }
+      ],
+      "v4_direct_fields": [
+        {
+          "tag": 1,
+          "type": "B"
+        },
+        {
+          "tag": 2,
+          "type": "T"
+        },
+        {
+          "tag": 3,
+          "type": "B"
+        },
+        {
+          "tag": 4,
+          "type": "T"
+        },
+        {
+          "tag": 5,
+          "type": "I"
+        },
+        {
+          "tag": 6,
+          "type": "S"
+        },
+        {
+          "tag": 8,
+          "type": "T"
+        },
+        {
+          "tag": 9,
+          "type": "B"
+        },
+        {
+          "tag": 10,
+          "type": "T"
+        },
+        {
+          "tag": 11,
+          "type": "T"
+        },
+        {
+          "tag": 12,
+          "type": "I"
+        },
+        {
+          "tag": 13,
+          "type": "I"
+        },
+        {
+          "tag": 14,
+          "type": "T"
+        }
+      ],
+      "added_reads": [
+        {
+          "tag": 10,
+          "type": "T"
+        },
+        {
+          "tag": 14,
+          "type": "T"
+        }
+      ],
+      "removed_reads": []
+    },
+    {
+      "opcode": 701,
+      "v3_direct_fields": [
+        {
+          "tag": 1,
+          "type": "T"
+        },
+        {
+          "tag": 3,
+          "type": "I"
+        },
+        {
+          "tag": 4,
+          "type": "I"
+        }
+      ],
+      "v4_direct_fields": [
+        {
+          "tag": 1,
+          "type": "T"
+        },
+        {
+          "tag": 3,
+          "type": "I"
+        },
+        {
+          "tag": 4,
+          "type": "I"
+        },
+        {
+          "tag": 6,
+          "type": "S"
+        },
+        {
+          "tag": 8,
+          "type": "I"
+        },
+        {
+          "tag": 10,
+          "type": "T"
+        },
+        {
+          "tag": 11,
+          "type": "I"
+        },
+        {
+          "tag": 12,
+          "type": "T"
+        }
+      ],
+      "added_reads": [
+        {
+          "tag": 6,
+          "type": "S"
+        },
+        {
+          "tag": 8,
+          "type": "I"
+        },
+        {
+          "tag": 10,
+          "type": "T"
+        },
+        {
+          "tag": 11,
+          "type": "I"
+        },
+        {
+          "tag": 12,
+          "type": "T"
+        }
+      ],
+      "removed_reads": []
+    },
+    {
+      "opcode": 708,
+      "v3_direct_fields": [
+        {
+          "tag": 2,
+          "type": "T"
+        },
+        {
+          "tag": 3,
+          "type": "T"
+        },
+        {
+          "tag": 4,
+          "type": "T"
+        }
+      ],
+      "v4_direct_fields": [
+        {
+          "tag": 2,
+          "type": "T"
+        },
+        {
+          "tag": 3,
+          "type": "T"
+        },
+        {
+          "tag": 4,
+          "type": "T"
+        },
+        {
+          "tag": 5,
+          "type": "B"
+        }
+      ],
+      "added_reads": [
+        {
+          "tag": 5,
+          "type": "B"
+        }
+      ],
+      "removed_reads": []
+    },
+    {
+      "opcode": 750,
+      "v3_direct_fields": [
+        {
+          "tag": 1,
+          "type": "T"
+        },
+        {
+          "tag": 2,
+          "type": "T"
+        }
+      ],
+      "v4_direct_fields": [
+        {
+          "tag": 1,
+          "type": "T"
+        },
+        {
+          "tag": 2,
+          "type": "T"
+        },
+        {
+          "tag": 3,
+          "type": "B"
+        }
+      ],
+      "added_reads": [
+        {
+          "tag": 3,
+          "type": "B"
+        }
+      ],
+      "removed_reads": []
+    },
+    {
+      "opcode": 755,
+      "v3_direct_fields": [
+        {
+          "tag": 2,
+          "type": "T"
+        },
+        {
+          "tag": 3,
+          "type": "T"
+        },
+        {
+          "tag": 4,
+          "type": "T"
+        }
+      ],
+      "v4_direct_fields": [
+        {
+          "tag": 2,
+          "type": "T"
+        },
+        {
+          "tag": 3,
+          "type": "T"
+        },
+        {
+          "tag": 4,
+          "type": "T"
+        },
+        {
+          "tag": 5,
+          "type": "B"
+        }
+      ],
+      "added_reads": [
+        {
+          "tag": 5,
+          "type": "B"
+        }
+      ],
+      "removed_reads": []
+    },
+    {
+      "opcode": 906,
+      "v3_direct_fields": [
+        {
+          "tag": 15,
+          "type": "T"
+        },
+        {
+          "tag": 18,
+          "type": "T"
+        },
+        {
+          "tag": 21,
+          "type": "T"
+        },
+        {
+          "tag": 24,
+          "type": "T"
+        }
+      ],
+      "v4_direct_fields": [],
+      "added_reads": [],
+      "removed_reads": [
+        {
+          "tag": 15,
+          "type": "T"
+        },
+        {
+          "tag": 18,
+          "type": "T"
+        },
+        {
+          "tag": 21,
+          "type": "T"
+        },
+        {
+          "tag": 24,
+          "type": "T"
+        }
+      ]
+    },
+    {
+      "opcode": 914,
+      "v3_direct_fields": [
+        {
+          "tag": 1,
+          "type": "T"
+        },
+        {
+          "tag": 2,
+          "type": "T"
+        },
+        {
+          "tag": 3,
+          "type": "T"
+        },
+        {
+          "tag": 4,
+          "type": "X"
+        }
+      ],
+      "v4_direct_fields": [
+        {
+          "tag": 1,
+          "type": "T"
+        },
+        {
+          "tag": 2,
+          "type": "T"
+        },
+        {
+          "tag": 3,
+          "type": "T"
+        },
+        {
+          "tag": 4,
+          "type": "X"
+        },
+        {
+          "tag": 5,
+          "type": "B"
+        }
+      ],
+      "added_reads": [
+        {
+          "tag": 5,
+          "type": "B"
+        }
+      ],
+      "removed_reads": []
+    }
+  ]
+}

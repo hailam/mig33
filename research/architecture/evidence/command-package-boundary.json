@@ -1,0 +1,121 @@
+{
+  "research_date": "2026-10-29",
+  "scope": "Command support and composition package placement; research only",
+  "production_changed": false,
+  "observed_layout": {
+    "command_support": "cmd/internal/command owns config flags, parse/load, signals and process exit; no application dispatch modes.",
+    "core_composition": "cmd/internal/wiring.Open constructs the SQLite adapter and services.Application, initializes it, and returns once-only cleanup. Each main separately selects transports/lifecycle hooks.",
+    "production_importers": [
+      "cmd/http/main.go",
+      "cmd/socket/main.go",
+      "cmd/omni/main.go",
+      "cmd/cli/main.go"
+    ],
+    "production_helper_files": 3,
+    "production_helper_lines": 172,
+    "note": "internal/ports/bootstrap_boundaries_test.go mentions the command path as an AST-audit fixture; it does not import that package. An old services-port comment still says composed by bootstrap, but actual wiring lives under cmd/internal."
+  },
+  "import_examples": [
+    {
+      "from": "mig33.local/reconstruction/cmd/http",
+      "to": "mig33.local/reconstruction/cmd/internal/wiring",
+      "allowed": true
+    },
+    {
+      "from": "mig33.local/reconstruction/cmd/cli",
+      "to": "mig33.local/reconstruction/cmd/internal/wiring",
+      "allowed": true
+    },
+    {
+      "from": "mig33.local/reconstruction/cmd/internal/wiring",
+      "to": "mig33.local/reconstruction/internal/services",
+      "allowed": true
+    },
+    {
+      "from": "mig33.local/reconstruction/internal/services",
+      "to": "mig33.local/reconstruction/cmd/internal/wiring",
+      "allowed": false
+    },
+    {
+      "from": "mig33.local/reconstruction/tests/integration",
+      "to": "mig33.local/reconstruction/cmd/internal/wiring",
+      "allowed": false
+    },
+    {
+      "from": "mig33.local/reconstruction/internal/services",
+      "to": "mig33.local/reconstruction/internal/composition",
+      "allowed": "would be allowed by internal visibility if composition were moved there; architectural guards still needed to forbid the dependency, subject to import-cycle checks"
+    }
+  ],
+  "compile_probe": {
+    "directory": "/tmp/mig33-command-import-probe-kdl9earw",
+    "results": [
+      {
+        "command": [
+          "go",
+          "version"
+        ],
+        "exit_code": 0,
+        "output": "go version go1.27.3 darwin/arm64\n"
+      },
+      {
+        "command": [
+          "go",
+          "test",
+          "./cmd/..."
+        ],
+        "exit_code": 0,
+        "output": "?   \texample.test/internalprobe/cmd/allowed\t[no test files]\n?   \texample.test/internalprobe/cmd/internal/wiring\t[no test files]\n"
+      },
+      {
+        "command": [
+          "go",
+          "test",
+          "./internal/..."
+        ],
+        "exit_code": 1,
+        "output": "# example.test/internalprobe/internal/blocked\npackage example.test/internalprobe/internal/blocked\n\tinternal/blocked/blocked.go:2:8: use of internal package example.test/internalprobe/cmd/internal/wiring not allowed\nFAIL\texample.test/internalprobe/internal/blocked [setup failed]\nFAIL\n"
+      }
+    ],
+    "files": {
+      "cmd/allowed/main.go": "package main\nimport \"example.test/internalprobe/cmd/internal/wiring\"\nfunc main() { _ = wiring.Name() }\n",
+      "cmd/internal/wiring/wiring.go": "package wiring\nfunc Name() string { return \"composition\" }\n",
+      "go.mod": "module example.test/internalprobe\n\ngo 1.27.3\n",
+      "internal/blocked/blocked.go": "package blocked\nimport \"example.test/internalprobe/cmd/internal/wiring\"\nfunc Name() string { return wiring.Name() }\n"
+    }
+  },
+  "source_snapshot": {
+    "cmd/internal/command/config.go": {
+      "sha256": "297379a796dca7d08a342a404637fc5ab33ae7ea146a55a030b66fefe1f807ee",
+      "lines": 98
+    },
+    "cmd/internal/command/process.go": {
+      "sha256": "62c1087d6a6015b14dd175eedbc311dd8625b7e837ee21049cddae7849761a3a",
+      "lines": 24
+    },
+    "cmd/internal/wiring/core.go": {
+      "sha256": "c7e9ca39153315d11f1537f89e547b211a63f1aad1aa32f03e42a56e5b319eef",
+      "lines": 50
+    },
+    "cmd/internal/wiring/composition_test.go": {
+      "sha256": "2011346564804e942cea273e1812400480825babdc8c3931613225f36fc6aa6c",
+      "lines": 226
+    },
+    "cmd/http/main.go": {
+      "sha256": "008750d5be0b45e0ddedb8e968d582ebc98e3dbe6d2d02b7c691c5eb21ff0ba5",
+      "lines": 51
+    },
+    "cmd/socket/main.go": {
+      "sha256": "cf026e563c6fffcac27013af67c4a1e293ac9e5e79bc3cfe10c1182007aab2da",
+      "lines": 41
+    },
+    "cmd/omni/main.go": {
+      "sha256": "4903c0c865db1cf90a3f643245971c2e7f19606c5e79e768de68276cd3bc791d",
+      "lines": 58
+    },
+    "cmd/cli/main.go": {
+      "sha256": "e7727192b26fb7dd666c715f1d7cd00c3d11df4457a7a0c1e473afdfa47fd2d6",
+      "lines": 81
+    }
+  }
+}

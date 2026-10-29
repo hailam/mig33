@@ -1,0 +1,71 @@
+{
+  "checked_at_utc": "2026-10-29T10:42:41.561083+00:00",
+  "method": "Fresh curl HTTPS downloads; SHA-256, size and ZIP integrity checked without executing the downloaded files.",
+  "results": [
+    {
+      "name": "v4-publisher",
+      "url": "https://web.archive.org/web/20110427070316id_/http://www.mig33.com:80/wap2/v4_60/24x24/mig33v46.jar",
+      "checked_http_status": 200,
+      "effective_url": "https://web.archive.org/web/20110427070316id_/http://www.mig33.com:80/wap2/v4_60/24x24/mig33v46.jar",
+      "curl_exit_code": 0,
+      "expected_bytes": 190378,
+      "expected_sha256": "dbf12ffbd44bc6e48d09cf35863736731c87c078877f76ed4b780a4dc5eff92c",
+      "received_bytes": 190378,
+      "received_sha256": "dbf12ffbd44bc6e48d09cf35863736731c87c078877f76ed4b780a4dc5eff92c",
+      "matches_expected": true,
+      "result": "verified JAR"
+    },
+    {
+      "name": "v4-mirror",
+      "url": "https://kemongers.jw.lt/hp/mig33v46.jar",
+      "checked_http_status": 200,
+      "effective_url": "https://kemongers.jw.lt/hp/mig33v46.jar",
+      "curl_exit_code": 0,
+      "expected_bytes": 190378,
+      "expected_sha256": "dbf12ffbd44bc6e48d09cf35863736731c87c078877f76ed4b780a4dc5eff92c",
+      "received_bytes": 7755,
+      "received_sha256": "20b4a83978d00712db3f719392418fcbe1303a074990d04fb3387e6aecfdbadb",
+      "matches_expected": false,
+      "result": "HTML download page; not the expected JAR"
+    },
+    {
+      "name": "v3-publisher",
+      "url": "https://web.archive.org/web/20090417052259id_/http://wap.mig33.com:80/v3_08/mig33v3.jar",
+      "checked_http_status": 200,
+      "effective_url": "https://web.archive.org/web/20090417052259id_/http://wap.mig33.com:80/v3_08/mig33v3.jar",
+      "curl_exit_code": 0,
+      "expected_bytes": 115314,
+      "expected_sha256": "2b416199dca5f6593eefe8fa1c9b84ec4be6cdc36f68bcf17e1a94193bfd2934",
+      "received_bytes": 115314,
+      "received_sha256": "2b416199dca5f6593eefe8fa1c9b84ec4be6cdc36f68bcf17e1a94193bfd2934",
+      "matches_expected": true,
+      "result": "verified JAR"
+    },
+    {
+      "name": "v3-mirror",
+      "url": "https://kemongers.jw.lt/hp/mig33v3_08.jar",
+      "checked_http_status": 200,
+      "effective_url": "https://kemongers.jw.lt/hp/mig33v3_08.jar",
+      "curl_exit_code": 0,
+      "expected_bytes": 115314,
+      "expected_sha256": "2b416199dca5f6593eefe8fa1c9b84ec4be6cdc36f68bcf17e1a94193bfd2934",
+      "received_bytes": 7755,
+      "received_sha256": "e9f14de248c8a9665ea76432b8a34e9eabc6ac07f1946c5a716c972a47ed4781",
+      "matches_expected": false,
+      "result": "HTML download page; not the expected JAR"
+    },
+    {
+      "name": "microemulator",
+      "url": "https://repo.maven.apache.org/maven2/org/microemu/microemulator/2.0.4/microemulator-2.0.4.jar",
+      "checked_http_status": 200,
+      "effective_url": "https://repo.maven.apache.org/maven2/org/microemu/microemulator/2.0.4/microemulator-2.0.4.jar",
+      "curl_exit_code": 0,
+      "expected_bytes": 643996,
+      "expected_sha256": "dbd5f3eb8365d3e839d6a203149e0e3776fc1a0585e16ac1fc23f76c9fcae1c6",
+      "received_bytes": 643996,
+      "received_sha256": "dbd5f3eb8365d3e839d6a203149e0e3776fc1a0585e16ac1fc23f76c9fcae1c6",
+      "matches_expected": true,
+      "result": "verified JAR"
+    }
+  ]
+}

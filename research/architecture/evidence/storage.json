@@ -1,0 +1,1155 @@
+{
+  "date": "2026-10-29",
+  "scope": "Read-only audit: repository ports, SQLite/sqlc adapter, context propagation, transaction ownership and durable delivery; implementation paused.",
+  "versions": {
+    "go_mod": "1.25.0 minimum",
+    "local_go": "1.27.1",
+    "sqlc": "1.31.1",
+    "sqlite_driver": "github.com/mattn/go-sqlite3 v1.14.52"
+  },
+  "inventory": {
+    "internal/adapters/sqlite/repositories": {
+      "background": 242,
+      "begin": 44,
+      "files": {
+        "internal/adapters/sqlite/repositories/blocks.go": {
+          "background": 5,
+          "begin": 1,
+          "functions": [
+            {
+              "name": "SetBlocked",
+              "line": 15,
+              "background": 3,
+              "begin": 1
+            },
+            {
+              "name": "BlockedUsers",
+              "line": 51,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "isBlocked",
+              "line": 59,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/commerce.go": {
+          "background": 16,
+          "begin": 2,
+          "functions": [
+            {
+              "name": "CreditBalance",
+              "line": 35,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "CreditOperationWithNote",
+              "line": 53,
+              "background": 10,
+              "begin": 1
+            },
+            {
+              "name": "CreditHistory",
+              "line": 174,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "OwnedStoreItems",
+              "line": 185,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "SelectedStoreTheme",
+              "line": 197,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "SelectStoreTheme",
+              "line": 204,
+              "background": 2,
+              "begin": 1
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/community.go": {
+          "background": 23,
+          "begin": 4,
+          "functions": [
+            {
+              "name": "Community",
+              "line": 22,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "Communities",
+              "line": 26,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "CommunityRole",
+              "line": 37,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "CreateCommunity",
+              "line": 47,
+              "background": 4,
+              "begin": 1
+            },
+            {
+              "name": "CommunityMembership",
+              "line": 92,
+              "background": 5,
+              "begin": 1
+            },
+            {
+              "name": "CommunityMembers",
+              "line": 195,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "LinkCommunityRoom",
+              "line": 218,
+              "background": 4,
+              "begin": 1
+            },
+            {
+              "name": "CommunityRooms",
+              "line": 256,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "AddCommunityPost",
+              "line": 279,
+              "background": 4,
+              "begin": 1
+            },
+            {
+              "name": "CommunityPosts",
+              "line": 314,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/contacts.go": {
+          "background": 32,
+          "begin": 8,
+          "functions": [
+            {
+              "name": "EnsureContacts",
+              "line": 35,
+              "background": 3,
+              "begin": 1
+            },
+            {
+              "name": "contactSnapshot",
+              "line": 87,
+              "background": 4,
+              "begin": 1
+            },
+            {
+              "name": "AddContact",
+              "line": 159,
+              "background": 6,
+              "begin": 1
+            },
+            {
+              "name": "UpdateContact",
+              "line": 227,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "DeleteContact",
+              "line": 276,
+              "background": 1,
+              "begin": 1
+            },
+            {
+              "name": "AddContactGroup",
+              "line": 303,
+              "background": 4,
+              "begin": 1
+            },
+            {
+              "name": "RenameContactGroup",
+              "line": 341,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "DeleteContactGroup",
+              "line": 373,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "deleteContactMarker",
+              "line": 406,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "advanceContacts",
+              "line": 411,
+              "background": 2,
+              "begin": 0
+            },
+            {
+              "name": "requireContactGroup",
+              "line": 427,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "uniqueContactGroupName",
+              "line": 441,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "insertContact",
+              "line": 523,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "readContact",
+              "line": 538,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "readContactIdentity",
+              "line": 545,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/gifts.go": {
+          "background": 6,
+          "begin": 1,
+          "functions": [
+            {
+              "name": "allowGift",
+              "line": 20,
+              "background": 2,
+              "begin": 0
+            },
+            {
+              "name": "GiftNote",
+              "line": 48,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "giftRating",
+              "line": 58,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "RateGift",
+              "line": 73,
+              "background": 2,
+              "begin": 1
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/groups.go": {
+          "background": 11,
+          "begin": 4,
+          "functions": [
+            {
+              "name": "CreateGroup",
+              "line": 21,
+              "background": 3,
+              "begin": 1
+            },
+            {
+              "name": "Invite",
+              "line": 75,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "Leave",
+              "line": 130,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "Group",
+              "line": 165,
+              "background": 0,
+              "begin": 1
+            },
+            {
+              "name": "Groups",
+              "line": 192,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "authorizeGroup",
+              "line": 211,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "readGroup",
+              "line": 225,
+              "background": 2,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/identity.go": {
+          "background": 24,
+          "begin": 4,
+          "functions": [
+            {
+              "name": "Identity",
+              "line": 22,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "IdentityByMobile",
+              "line": 26,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "Identities",
+              "line": 33,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "SeedIdentity",
+              "line": 61,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "CreateIdentityChallenge",
+              "line": 71,
+              "background": 3,
+              "begin": 1
+            },
+            {
+              "name": "IdentityChallenge",
+              "line": 96,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "FailIdentityChallenge",
+              "line": 104,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "ConsumeIdentityChallenge",
+              "line": 109,
+              "background": 0,
+              "begin": 1
+            },
+            {
+              "name": "consumeIdentityChallenge",
+              "line": 120,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "RegisterIdentity",
+              "line": 133,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "UpdateIdentityField",
+              "line": 163,
+              "background": 4,
+              "begin": 0
+            },
+            {
+              "name": "SetIdentityMobile",
+              "line": 201,
+              "background": 2,
+              "begin": 0
+            },
+            {
+              "name": "ActivateIdentity",
+              "line": 221,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "ReplaceIdentityPassword",
+              "line": 232,
+              "background": 3,
+              "begin": 1
+            },
+            {
+              "name": "SetIdentityPreference",
+              "line": 278,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "IdentityPreference",
+              "line": 292,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/messages.go": {
+          "background": 11,
+          "begin": 2,
+          "functions": [
+            {
+              "name": "SaveMessage",
+              "line": 36,
+              "background": 5,
+              "begin": 1
+            },
+            {
+              "name": "Pending",
+              "line": 177,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "MarkDelivered",
+              "line": 192,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "History",
+              "line": 217,
+              "background": 4,
+              "begin": 1
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/moderation.go": {
+          "background": 7,
+          "begin": 2,
+          "functions": [
+            {
+              "name": "SetRoomMuted",
+              "line": 34,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "SetRoomModerator",
+              "line": 91,
+              "background": 3,
+              "begin": 1
+            },
+            {
+              "name": "roomAccountFlag",
+              "line": 140,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "roomAccounts",
+              "line": 154,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/native_services.go": {
+          "background": 8,
+          "begin": 0,
+          "functions": [
+            {
+              "name": "SetLanguage",
+              "line": 12,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "Language",
+              "line": 23,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "ClearPhotoAvatar",
+              "line": 31,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "RemoveIMLabels",
+              "line": 37,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "HasStoreItem",
+              "line": 43,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "saveGiftMessage",
+              "line": 49,
+              "background": 3,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/operator.go": {
+          "background": 9,
+          "begin": 1,
+          "functions": [
+            {
+              "name": "ReviewWorkItem",
+              "line": 18,
+              "background": 6,
+              "begin": 1
+            },
+            {
+              "name": "OperatorReviews",
+              "line": 80,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "OperatorReports",
+              "line": 95,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "OperatorSupport",
+              "line": 106,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/profile_formatting.go": {
+          "background": 2,
+          "begin": 0,
+          "functions": [
+            {
+              "name": "ProfileFormatting",
+              "line": 17,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "SetProfileFormatting",
+              "line": 25,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/reports.go": {
+          "background": 7,
+          "begin": 2,
+          "functions": [
+            {
+              "name": "SubmitReport",
+              "line": 42,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "Reports",
+              "line": 105,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "ReviewReport",
+              "line": 123,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "ReportReviews",
+              "line": 152,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "readReport",
+              "line": 177,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/room_completion.go": {
+          "background": 27,
+          "begin": 5,
+          "functions": [
+            {
+              "name": "RoomCategories",
+              "line": 20,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "ManageRoomCategory",
+              "line": 34,
+              "background": 4,
+              "begin": 1
+            },
+            {
+              "name": "SetRoomCategory",
+              "line": 77,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "DeleteOwnedRoom",
+              "line": 106,
+              "background": 3,
+              "begin": 1
+            },
+            {
+              "name": "roomAudit",
+              "line": 137,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "groupRoomControls",
+              "line": 143,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "groupRoomRole",
+              "line": 150,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "GroupRoomAccess",
+              "line": 160,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "ManageGroupRoom",
+              "line": 190,
+              "background": 10,
+              "begin": 1
+            },
+            {
+              "name": "PlayRoomBot",
+              "line": 305,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "RoomBotScores",
+              "line": 329,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/room_discovery.go": {
+          "background": 10,
+          "begin": 3,
+          "functions": [
+            {
+              "name": "CreateRoom",
+              "line": 30,
+              "background": 4,
+              "begin": 1
+            },
+            {
+              "name": "SearchRoomsFiltered",
+              "line": 92,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "FavoriteRooms",
+              "line": 116,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "AddRoomFavorite",
+              "line": 130,
+              "background": 3,
+              "begin": 1
+            },
+            {
+              "name": "RemoveRoomFavorite",
+              "line": 166,
+              "background": 1,
+              "begin": 1
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/room_settings.go": {
+          "background": 17,
+          "begin": 1,
+          "functions": [
+            {
+              "name": "RoomSettings",
+              "line": 17,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "RoomBanned",
+              "line": 24,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "RoomBans",
+              "line": 27,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "RoomChanges",
+              "line": 30,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "ManageRoom",
+              "line": 44,
+              "background": 13,
+              "begin": 1
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/rooms.go": {
+          "background": 2,
+          "begin": 0,
+          "functions": [
+            {
+              "name": "Rooms",
+              "line": 17,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "readRoom",
+              "line": 45,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/services.go": {
+          "background": 17,
+          "begin": 3,
+          "functions": [
+            {
+              "name": "AddServiceEntry",
+              "line": 25,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "ServiceEntryByNonce",
+              "line": 64,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "ServiceEntryByID",
+              "line": 69,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "ActivityEntries",
+              "line": 76,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "ServiceEntries",
+              "line": 89,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "DeleteServiceEntry",
+              "line": 101,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "AddPhoto",
+              "line": 109,
+              "background": 3,
+              "begin": 1
+            },
+            {
+              "name": "Photos",
+              "line": 155,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "Photo",
+              "line": 167,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "PhotoSharedWith",
+              "line": 177,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "SetPhotoAvatar",
+              "line": 181,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "PhotoAvatar",
+              "line": 203,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "DeletePhoto",
+              "line": 211,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/theme_default.go": {
+          "background": 1,
+          "begin": 0,
+          "functions": [
+            {
+              "name": "ResetStoreTheme",
+              "line": 9,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/transcripts.go": {
+          "background": 7,
+          "begin": 1,
+          "functions": [
+            {
+              "name": "LatestMessageID",
+              "line": 15,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "OwnMessagesAfter",
+              "line": 21,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "Transcript",
+              "line": 31,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "requestedMessage",
+              "line": 43,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "MarkConversationRead",
+              "line": 61,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "ConversationRead",
+              "line": 108,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        }
+      }
+    },
+    "internal/adapters/sqlite/migrations": {
+      "background": 0,
+      "begin": 1,
+      "files": {
+        "internal/adapters/sqlite/migrations/migrate.go": {
+          "background": 0,
+          "begin": 1,
+          "functions": [
+            {
+              "name": "Apply",
+              "line": 14,
+              "background": 0,
+              "begin": 1
+            }
+          ]
+        }
+      }
+    },
+    "internal/services": {
+      "background": 0,
+      "begin": 0,
+      "files": {}
+    }
+  },
+  "port_methods": {
+    "ChatRepository": 15,
+    "CommerceRepository": 11,
+    "CommunityRepository": 10,
+    "ContactsRepository": 15,
+    "IdentityRepository": 17,
+    "ReportsRepository": 9,
+    "RoomsRepository": 29,
+    "ServicesRepository": 18,
+    "Repositories_lifecycle_Close": 1,
+    "total_domain_operations": 124
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Go: Canceling in-progress operations",
+      "url": "https://go.dev/doc/database/cancel-operations",
+      "basis": "Pass caller context through services to database Context methods; derive timeouts and defer cancellation."
+    },
+    {
+      "id": "S2",
+      "title": "Go: Executing transactions",
+      "url": "https://go.dev/doc/database/execute-transactions",
+      "basis": "Use sql.Tx APIs, deferred rollback, check Commit, avoid base DB operations while in a transaction."
+    },
+    {
+      "id": "S3",
+      "title": "database/sql DB.BeginTx",
+      "url": "https://pkg.go.dev/database/sql#DB.BeginTx",
+      "basis": "Begin uses Background; BeginTx context covers transaction lifetime and cancellation rolls back; Commit may return cancellation/transaction-done errors."
+    },
+    {
+      "id": "S4",
+      "title": "sqlc 1.31.1: Using transactions",
+      "url": "https://docs.sqlc.dev/en/v1.31.1/howto/transactions.html",
+      "basis": "Generated DBTX supports DB or Tx, and WithTx binds Queries to a transaction."
+    },
+    {
+      "id": "S5",
+      "title": "Go Code Review Comments: Interfaces",
+      "url": "https://go.dev/wiki/CodeReviewComments#interfaces",
+      "basis": "Interfaces generally belong with consuming code; constructors usually return concrete implementations; avoid speculative interfaces."
+    },
+    {
+      "id": "S6",
+      "title": "Go context package",
+      "url": "https://pkg.go.dev/context",
+      "basis": "Pass Context explicitly first; avoid storing it in structs; values are for request-scoped metadata rather than optional dependencies."
+    },
+    {
+      "id": "S7",
+      "title": "go-sqlite3 v1.14.52 implementation",
+      "url": "https://github.com/mattn/go-sqlite3/blob/v1.14.52/sqlite3.go",
+      "basis": "Exec interruption and cancellable row stepping; Commit/Rollback use Background internally and Commit attempts rollback on error."
+    },
+    {
+      "id": "S8",
+      "title": "go-sqlite3 v1.14.52 context adapter",
+      "url": "https://raw.githubusercontent.com/mattn/go-sqlite3/v1.14.52/sqlite3_sql.go",
+      "basis": "ExecContext, QueryContext and BeginTx forward context; BeginTx ignores driver.TxOptions and delegates to configured transaction mode."
+    },
+    {
+      "id": "S9",
+      "title": "AWS Prescriptive Guidance: Transactional outbox",
+      "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html",
+      "basis": "Persist business change and delivery intent atomically, dispatch after commit, account for duplicate delivery."
+    }
+  ],
+  "findings": [
+    {
+      "priority": "high",
+      "finding": "Cancellation ends at repository ports. All 124 domain operations lack context; production adapter has 242 explicit Background calls, 44 Begin calls, and migration startup adds one Begin.",
+      "evidence": [
+        "internal/ports/repositories.go:7",
+        "internal/adapters/sqlite/repositories/messages.go:36",
+        "internal/adapters/sqlite/repositories/contacts.go:87",
+        "internal/adapters/sqlite/migrations/migrate.go:14"
+      ],
+      "recommendation": "Thread context.Context as the first parameter through I/O ports, helpers, generated queries and BeginTx(ctx,nil). Choose request/connection/command/startup contexts at operation boundaries, not inside repositories.",
+      "sources": [
+        "S1",
+        "S3",
+        "S6"
+      ]
+    },
+    {
+      "priority": "high",
+      "finding": "Modern service context checks are only before the application mutex. ChatGroups, ChatHistory, SyncChat, MarkChatRead, SendChatMessage and ContactsSnapshot can proceed after cancellation while waiting for the lock, then hold the lock during storage I/O.",
+      "evidence": [
+        "internal/services/history.go:10",
+        "internal/services/transcripts.go:31",
+        "internal/services/transcripts.go:94",
+        "internal/services/contact_api.go:9"
+      ],
+      "recommendation": "Pass context downstream and preserve cancellation errors. Recheck cancellation after lock acquisition as an incremental measure; assess smaller critical sections without breaking room/session authorization races. A mutex itself is not context-aware.",
+      "sources": [
+        "S1",
+        "S6"
+      ]
+    },
+    {
+      "priority": "retain",
+      "finding": "sqlc is correctly confined to the adapter. Generated DBTX already exposes Context methods; queries(db) and queries(tx) are valid transaction bindings, with no service dependency on sqlc rows.",
+      "evidence": [
+        "internal/adapters/sqlite/sqlc/db.go:12",
+        "internal/adapters/sqlite/repositories/queries.go:10"
+      ],
+      "recommendation": "Keep domain ports and mappings. WithTx is an idiomatic alternative for binding a reusable Queries object; it is not a missing correctness requirement. Avoid adding generic CRUD repositories over generated methods.",
+      "sources": [
+        "S4",
+        "S5"
+      ]
+    },
+    {
+      "priority": "retain",
+      "finding": "Important multi-table invariants are already implemented as atomic repository operations: SaveMessage includes audience and request key; CreditOperationWithNote includes ledger, inventory, gift note and gift message; RegisterIdentity consumes its challenge atomically; ReviewWorkItem includes audit.",
+      "evidence": [
+        "internal/adapters/sqlite/repositories/messages.go:36",
+        "internal/adapters/sqlite/repositories/commerce.go:53",
+        "internal/adapters/sqlite/repositories/identity.go:133",
+        "internal/adapters/sqlite/repositories/operator.go:18"
+      ],
+      "recommendation": "Keep these operation-specific contracts while threading context. Pure business validation can be extracted, but transaction-sensitive authorization/checks must still be read and applied atomically.",
+      "sources": [
+        "S2",
+        "S4"
+      ]
+    },
+    {
+      "priority": "design",
+      "finding": "Repositories composes 124 domain operations plus Close. Although feature interfaces exist, Application holds only the full composition; the fake embeds a nil broad port to avoid implementing unused methods.",
+      "evidence": [
+        "internal/ports/repositories.go:160",
+        "internal/services/application.go:72",
+        "internal/services/repository_ports_test.go:13"
+      ],
+      "recommendation": "As use cases become separate consumers, inject only their required capabilities (e.g. history reader, message writer, contact reader). Application-owned ports are already an acceptable dependency direction; moving every interface file is not necessary. Consider keeping Close with bootstrap ownership rather than feature capabilities.",
+      "sources": [
+        "S5"
+      ]
+    },
+    {
+      "priority": "design",
+      "finding": "Service-orchestrated Unit of Work is not currently required merely to have hexagonal architecture; existing repository methods already own useful atomic units.",
+      "evidence": [
+        "internal/adapters/sqlite/repositories/queries.go:10",
+        "internal/adapters/sqlite/repositories/store.go:71"
+      ],
+      "recommendation": "Introduce an explicit typed transaction callback only when a concrete use case must coordinate independent repository capabilities. Pass transaction-scoped domain ports into the callback, keep sql.Tx and sqlc internal, forbid nested Begin/base-DB calls, and never hide a transaction or repository in context.Value. With the current one-connection pool, accidental base-DB calls from a transaction can deadlock.",
+      "sources": [
+        "S2",
+        "S4",
+        "S6"
+      ]
+    },
+    {
+      "priority": "high",
+      "finding": "Pinned SQLite driver supports context cancellation, but it is not a guarantee that a deadline forcibly interrupts every phase. Commit and Rollback use Background internally; BeginTx ignores driver.TxOptions and uses configured txlock.",
+      "evidence": [
+        "/tmp/mig33-go-modules/github.com/mattn/go-sqlite3@v1.14.52/sqlite3.go:637",
+        "/tmp/mig33-go-modules/github.com/mattn/go-sqlite3@v1.14.52/sqlite3.go:2463",
+        "/tmp/mig33-go-modules/github.com/mattn/go-sqlite3@v1.14.52/sqlite3.go:2663",
+        "/tmp/mig33-go-modules/github.com/mattn/go-sqlite3@v1.14.52/sqlite3_sql.go:40",
+        "internal/adapters/sqlite/repositories/store.go:67"
+      ],
+      "recommendation": "Use BeginTx/query contexts, retain deliberate busy timeout and isolation configuration, and validate driver behavior rather than assume sql.TxOptions portability. Do not replace a successful commit result with a later ctx.Err, or treat client timeout as proof a write never happened.",
+      "sources": [
+        "S3",
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "priority": "retain",
+      "finding": "Private/group delivery already has transactional outbox semantics: message audience rows are written with messages; pending rows are delivered later and marked only after a successful transport write. A crash after write before marking can replay.",
+      "evidence": [
+        "db/queries/messages.sql:5",
+        "internal/adapters/sqlite/repositories/messages.go:175",
+        "internal/services/delivery.go:230"
+      ],
+      "recommendation": "Preserve durable intent and stable idempotency keys through cancellation changes. Choose bounded application-owned contexts for post-commit dispatch/ack work where appropriate; do not reuse an expired request blindly or detach arbitrary request work. Native delivery cannot promise exactly once without client receipts.",
+      "sources": [
+        "S9"
+      ]
+    },
+    {
+      "priority": "high",
+      "finding": "Service error mapping currently converts most unexpected repository errors to generic Unavailable, including future cancellation unless deliberately preserved. SendChatMessage can commit and then fail its readback; modern message keys and commerce nonces already let retries recover the result.",
+      "evidence": [
+        "internal/services/history.go:76",
+        "internal/services/contact_api.go:22",
+        "internal/services/transcripts.go:124",
+        "internal/services/transcripts.go:153",
+        "internal/adapters/sqlite/repositories/transcripts.go:44"
+      ],
+      "recommendation": "Preserve errors.Is for context.Canceled/DeadlineExceeded, separate commit result from response transport failure, and retry/reconcile commands with the same persistent key. Keep SQL-driver-specific constraint/error normalization inside adapters.",
+      "sources": [
+        "S1",
+        "S2",
+        "S3",
+        "S7"
+      ]
+    },
+    {
+      "priority": "validation",
+      "finding": "Existing repository tests do not exercise Context cancellation or BeginTx behavior; fake service tests cover already-canceled calls and authorization, not cancellation after work begins.",
+      "evidence": [
+        "internal/services/repository_ports_test.go:75",
+        "internal/adapters/sqlite/repositories/*_test.go"
+      ],
+      "recommendation": "After an approved implementation, test cancellation while waiting for the one-connection pool and during a long query, transaction rollback on cancellation, authorization after lock waits, idempotent replay after lost responses, and delivery-marker failure/replay. Run semantic adapter contract tests against every future backend; do not rely only on generated query compile checks.",
+      "sources": [
+        "S1",
+        "S2",
+        "S3",
+        "S9"
+      ]
+    }
+  ],
+  "retention_note": "Original research observations before the user selected Go 1.27.3. Earlier Go 1.25 baseline and compatibility constraints are superseded by go-backend-architecture.md and go-toolchain.json. Architecture implementation remains paused."
+}

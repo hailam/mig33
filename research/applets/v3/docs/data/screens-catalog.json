@@ -1,0 +1,345 @@
+{
+  "artifact_version": "3.08",
+  "description": "Static client state coverage, not a claim that all historical server-page bodies were recovered. al=primary screen, bm=overlay, ah=action/context. 44/46 recognized by renderer but no literal entry assignments found; 48 is observed page routing mode.",
+  "primary_states": [
+    {
+      "id": 1,
+      "name": "About mig33",
+      "kind": "form",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 3,
+      "name": "Add Contact",
+      "kind": "form",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 4,
+      "name": "Add mig33 contact",
+      "kind": "form",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 6,
+      "name": "Conversation",
+      "kind": "chat",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 7,
+      "name": "Emoticon picker",
+      "kind": "grid",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 8,
+      "name": "Contact Request",
+      "kind": "form",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 9,
+      "name": "Contact Details",
+      "kind": "form",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 10,
+      "name": "Contact list",
+      "kind": "roster",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 11,
+      "name": "Create Room",
+      "kind": "form",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 12,
+      "name": "Create Room help",
+      "kind": "server_text",
+      "body_origin": "server",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 13,
+      "name": "Connection Type — manual server",
+      "kind": "form",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 14,
+      "name": "Forgot Details",
+      "kind": "form",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 15,
+      "name": "Login / mig33",
+      "kind": "form",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 17,
+      "name": "Make Call",
+      "kind": "form",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 18,
+      "name": "Make Call help",
+      "kind": "server_text",
+      "body_origin": "server",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 22,
+      "name": "MSN / Yahoo! / Gtalk / AIM Setup",
+      "kind": "form",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 23,
+      "name": "Invite Friend",
+      "kind": "form",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 30,
+      "name": "Registration",
+      "kind": "form",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 34,
+      "name": "Search Room",
+      "kind": "form",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 35,
+      "name": "Search Room help",
+      "kind": "server_text",
+      "body_origin": "server",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 36,
+      "name": "Registration Help?",
+      "kind": "server_text",
+      "body_origin": "server",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 40,
+      "name": "Resend Code",
+      "kind": "form",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 41,
+      "name": "Authenticate Account",
+      "kind": "form",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 42,
+      "name": "mig33 / Connection Type",
+      "kind": "form",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 43,
+      "name": "Welcome to mig33",
+      "kind": "form",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 44,
+      "name": "Embedded page compatibility mode",
+      "kind": "server_page",
+      "body_origin": "server",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 45,
+      "name": "Camera / Send Photo",
+      "kind": "camera",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 46,
+      "name": "Embedded page compatibility mode",
+      "kind": "server_page",
+      "body_origin": "server",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 47,
+      "name": "Select File / Confirm",
+      "kind": "file_browser",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 48,
+      "name": "Embedded page",
+      "kind": "server_page",
+      "body_origin": "server",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    },
+    {
+      "id": 49,
+      "name": "mig33 first run",
+      "kind": "form",
+      "body_origin": "client or dynamic client data",
+      "evidence": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/c.java:608; research/applets/v3/artifacts/decompiled/t.java:46"
+    }
+  ],
+  "overlay_states": [
+    {
+      "id": 1,
+      "name": "Contact Menu"
+    },
+    {
+      "id": 2,
+      "name": "Group Menu"
+    },
+    {
+      "id": 3,
+      "name": "Settings"
+    },
+    {
+      "id": 7,
+      "name": "Chat Rooms / Chat Rooms (page/count)"
+    },
+    {
+      "id": 8,
+      "name": "Add to Group"
+    },
+    {
+      "id": 9,
+      "name": "Presence"
+    },
+    {
+      "id": 10,
+      "name": "Chat Rooms row Menu"
+    },
+    {
+      "id": 20,
+      "name": "Information / Success / Announcement"
+    },
+    {
+      "id": 21,
+      "name": "Error / Warning"
+    },
+    {
+      "id": 22,
+      "name": "Confirmation"
+    },
+    {
+      "id": 23,
+      "name": "Progress"
+    },
+    {
+      "id": 24,
+      "name": "MSN / Yahoo! / Google Talk / AIM"
+    },
+    {
+      "id": 25,
+      "name": "Chat transport selector"
+    },
+    {
+      "id": 27,
+      "name": "IMs"
+    },
+    {
+      "id": 28,
+      "name": "Send Photo / Upload Photos"
+    },
+    {
+      "id": 29,
+      "name": "Conversation Menu"
+    },
+    {
+      "id": 30,
+      "name": "Kick User"
+    },
+    {
+      "id": 31,
+      "name": "Private Chat"
+    },
+    {
+      "id": 32,
+      "name": "Invite User"
+    },
+    {
+      "id": 33,
+      "name": "View User's Profile / Emote Target"
+    },
+    {
+      "id": 34,
+      "name": "Blocked Users"
+    },
+    {
+      "id": 35,
+      "name": "Add to Contact List"
+    },
+    {
+      "id": 36,
+      "name": "Camera Settings"
+    },
+    {
+      "id": 37,
+      "name": "File Received"
+    },
+    {
+      "id": 38,
+      "name": "Embedded page Menu"
+    },
+    {
+      "id": 39,
+      "name": "Mail row Menu"
+    },
+    {
+      "id": 40,
+      "name": "Camera Settings calibration"
+    },
+    {
+      "id": 41,
+      "name": "Recent Numbers"
+    },
+    {
+      "id": 42,
+      "name": "Mute User"
+    }
+  ],
+  "native_displayables": [
+    "TextBox (field editors, message, SMS, number/name, authentication code, group names, embedded-page text fields)",
+    "Form(\"Camera\") with VideoControl Item and Capture/Close commands"
+  ]
+}

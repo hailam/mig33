@@ -1,0 +1,19 @@
+# Shared defaults for every executable. Relative database paths use the process
+# working directory. Environment files only need to include changed values.
+public_url: http://127.0.0.1:8080
+database:
+  path: data/chat.sqlite
+# Optional recovered resources, populated by the applet setup command.
+resources:
+  directory: data/applets/resources/v4
+http:
+  listen: 127.0.0.1:8080
+  read_header_timeout: 5s
+  read_timeout: 15s
+  write_timeout: 15s
+  idle_timeout: 60s
+  max_header_bytes: 16384
+socket:
+  listen: 127.0.0.1:9119
+shutdown_timeout: 5s
+operators: []

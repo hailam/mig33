@@ -1,0 +1,3452 @@
+[
+  {
+    "path": "a.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "a",
+      "java/lang/Object"
+    ]
+  },
+  {
+    "path": "aa.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "aa",
+      "java/lang/Object",
+      "javax/microedition/lcdui/Graphics"
+    ]
+  },
+  {
+    "path": "ab.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": " is away"
+      },
+      {
+        "constant_pool_index": 2,
+        "value": " is busy"
+      },
+      {
+        "constant_pool_index": 3,
+        "value": " is offline"
+      },
+      {
+        "constant_pool_index": 4,
+        "value": " is online"
+      },
+      {
+        "constant_pool_index": 5,
+        "value": "Friends"
+      },
+      {
+        "constant_pool_index": 6,
+        "value": "Group Chat"
+      },
+      {
+        "constant_pool_index": 7,
+        "value": "Info"
+      }
+    ],
+    "referenced_classes": [
+      "[I",
+      "ab",
+      "com/projectgoth/Roshan/c",
+      "java/lang/Object",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/Throwable",
+      "java/util/Vector",
+      "javax/microedition/lcdui/AlertType",
+      "javax/microedition/lcdui/Canvas",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics",
+      "n",
+      "r",
+      "v"
+    ]
+  },
+  {
+    "path": "ac.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "ac",
+      "java/lang/Object"
+    ]
+  },
+  {
+    "path": "ad.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 2,
+        "value": "Open link"
+      }
+    ],
+    "referenced_classes": [
+      "ad",
+      "java/lang/Object",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics",
+      "k"
+    ]
+  },
+  {
+    "path": "b.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "b",
+      "java/lang/Object"
+    ]
+  },
+  {
+    "path": "c.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 4,
+        "value": "..."
+      },
+      {
+        "constant_pool_index": 5,
+        "value": ".gif"
+      },
+      {
+        "constant_pool_index": 6,
+        "value": ".jpeg"
+      },
+      {
+        "constant_pool_index": 7,
+        "value": ".jpg"
+      },
+      {
+        "constant_pool_index": 8,
+        "value": ".mp3"
+      },
+      {
+        "constant_pool_index": 9,
+        "value": "/"
+      },
+      {
+        "constant_pool_index": 10,
+        "value": "Confirm"
+      },
+      {
+        "constant_pool_index": 11,
+        "value": "Error"
+      },
+      {
+        "constant_pool_index": 12,
+        "value": "File size too large."
+      },
+      {
+        "constant_pool_index": 13,
+        "value": "Info"
+      },
+      {
+        "constant_pool_index": 14,
+        "value": "MIDlet needs to be signed to be able to retrieve photos from the storage."
+      },
+      {
+        "constant_pool_index": 15,
+        "value": "Ooops. Unfortunately your Phone does not support taking pictures from the storage."
+      },
+      {
+        "constant_pool_index": 16,
+        "value": "Processing..."
+      },
+      {
+        "constant_pool_index": 17,
+        "value": "Select File"
+      },
+      {
+        "constant_pool_index": 18,
+        "value": "file:///"
+      }
+    ],
+    "referenced_classes": [
+      "[B",
+      "c",
+      "com/projectgoth/Roshan/c",
+      "com/projectgoth/Roshan/d",
+      "java/io/ByteArrayOutputStream",
+      "java/io/InputStream",
+      "java/lang/Exception",
+      "java/lang/Object",
+      "java/lang/SecurityException",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "java/util/Enumeration",
+      "java/util/Vector",
+      "javax/microedition/io/Connection",
+      "javax/microedition/io/Connector",
+      "javax/microedition/io/file/FileConnection",
+      "javax/microedition/io/file/FileSystemRegistry",
+      "javax/microedition/lcdui/Canvas",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics",
+      "javax/microedition/lcdui/Image",
+      "q"
+    ]
+  },
+  {
+    "path": "com/projectgoth/Roshan/a.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 8,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 9,
+        "value": "("
+      },
+      {
+        "constant_pool_index": 10,
+        "value": "(Admin)"
+      },
+      {
+        "constant_pool_index": 11,
+        "value": "(Un-mute)"
+      },
+      {
+        "constant_pool_index": 12,
+        "value": ")"
+      },
+      {
+        "constant_pool_index": 13,
+        "value": "."
+      },
+      {
+        "constant_pool_index": 14,
+        "value": ".165"
+      },
+      {
+        "constant_pool_index": 15,
+        "value": "/"
+      },
+      {
+        "constant_pool_index": 16,
+        "value": "25"
+      },
+      {
+        "constant_pool_index": 17,
+        "value": "9119"
+      },
+      {
+        "constant_pool_index": 18,
+        "value": ":"
+      },
+      {
+        "constant_pool_index": 19,
+        "value": ";"
+      },
+      {
+        "constant_pool_index": 20,
+        "value": "AIM"
+      },
+      {
+        "constant_pool_index": 21,
+        "value": "AIM Setup"
+      },
+      {
+        "constant_pool_index": 22,
+        "value": "Add to Contact List"
+      },
+      {
+        "constant_pool_index": 23,
+        "value": "Amount ("
+      },
+      {
+        "constant_pool_index": 24,
+        "value": "Blocked Users"
+      },
+      {
+        "constant_pool_index": 25,
+        "value": "Chat Rooms"
+      },
+      {
+        "constant_pool_index": 26,
+        "value": "Chat Rooms ("
+      },
+      {
+        "constant_pool_index": 27,
+        "value": "Confirm"
+      },
+      {
+        "constant_pool_index": 28,
+        "value": "Connection Error. Please go to HELP on http://wap.mig33.com for info on how to setup your mobile phone."
+      },
+      {
+        "constant_pool_index": 29,
+        "value": "Connection Error. Please go to HELP on http://wap.mig33.com for info on how to setup your mobile phone. Unexpected response."
+      },
+      {
+        "constant_pool_index": 30,
+        "value": "Connection to server is lost. Please reconnect."
+      },
+      {
+        "constant_pool_index": 31,
+        "value": "Create Room"
+      },
+      {
+        "constant_pool_index": 32,
+        "value": "Downloading contact list..."
+      },
+      {
+        "constant_pool_index": 33,
+        "value": "Emote Target"
+      },
+      {
+        "constant_pool_index": 34,
+        "value": "Enter Username"
+      },
+      {
+        "constant_pool_index": 35,
+        "value": "Error"
+      },
+      {
+        "constant_pool_index": 36,
+        "value": "Google Talk"
+      },
+      {
+        "constant_pool_index": 37,
+        "value": "Gtalk Setup"
+      },
+      {
+        "constant_pool_index": 38,
+        "value": "Info"
+      },
+      {
+        "constant_pool_index": 39,
+        "value": "J2MEv"
+      },
+      {
+        "constant_pool_index": 40,
+        "value": "Kick User"
+      },
+      {
+        "constant_pool_index": 41,
+        "value": "Logging in..."
+      },
+      {
+        "constant_pool_index": 42,
+        "value": "MSN"
+      },
+      {
+        "constant_pool_index": 43,
+        "value": "MSN Setup"
+      },
+      {
+        "constant_pool_index": 44,
+        "value": "Make Call"
+      },
+      {
+        "constant_pool_index": 45,
+        "value": "Mobile Number"
+      },
+      {
+        "constant_pool_index": 46,
+        "value": "Mute User"
+      },
+      {
+        "constant_pool_index": 47,
+        "value": "Next"
+      },
+      {
+        "constant_pool_index": 48,
+        "value": "No chat rooms found."
+      },
+      {
+        "constant_pool_index": 49,
+        "value": "Password"
+      },
+      {
+        "constant_pool_index": 50,
+        "value": "Photo Sent!"
+      },
+      {
+        "constant_pool_index": 51,
+        "value": "Previous"
+      },
+      {
+        "constant_pool_index": 52,
+        "value": "Private Chat"
+      },
+      {
+        "constant_pool_index": 53,
+        "value": "Registration"
+      },
+      {
+        "constant_pool_index": 54,
+        "value": "Registration Help?"
+      },
+      {
+        "constant_pool_index": 55,
+        "value": "Search Room"
+      },
+      {
+        "constant_pool_index": 56,
+        "value": "Send Mail"
+      },
+      {
+        "constant_pool_index": 57,
+        "value": "Sending SMS..."
+      },
+      {
+        "constant_pool_index": 58,
+        "value": "SignIn"
+      },
+      {
+        "constant_pool_index": 59,
+        "value": "Sony"
+      },
+      {
+        "constant_pool_index": 60,
+        "value": "Success"
+      },
+      {
+        "constant_pool_index": 61,
+        "value": "The chat room is empty."
+      },
+      {
+        "constant_pool_index": 62,
+        "value": "Unexpected disconnection. Please reconnect."
+      },
+      {
+        "constant_pool_index": 63,
+        "value": "Unknown"
+      },
+      {
+        "constant_pool_index": 64,
+        "value": "Username"
+      },
+      {
+        "constant_pool_index": 65,
+        "value": "View User's Profile"
+      },
+      {
+        "constant_pool_index": 66,
+        "value": "Yahoo!"
+      },
+      {
+        "constant_pool_index": 67,
+        "value": "Yahoo! Setup"
+      },
+      {
+        "constant_pool_index": 68,
+        "value": "Your SMS has been sent."
+      },
+      {
+        "constant_pool_index": 69,
+        "value": "Your block list is empty."
+      },
+      {
+        "constant_pool_index": 70,
+        "value": "gateway.mig33.com"
+      },
+      {
+        "constant_pool_index": 71,
+        "value": "microedition.platform"
+      },
+      {
+        "constant_pool_index": 72,
+        "value": "not found"
+      },
+      {
+        "constant_pool_index": 73,
+        "value": "socket://"
+      },
+      {
+        "constant_pool_index": 74,
+        "value": "socket://gateway.mig33.com:25"
+      },
+      {
+        "constant_pool_index": 75,
+        "value": "socket://gateway.mig33.com:9119"
+      }
+    ],
+    "referenced_classes": [
+      "[B",
+      "[Lw;",
+      "ab",
+      "com/projectgoth/Roshan/Main",
+      "com/projectgoth/Roshan/a",
+      "com/projectgoth/Roshan/b",
+      "com/projectgoth/Roshan/c",
+      "e",
+      "i",
+      "java/io/ByteArrayInputStream",
+      "java/io/ByteArrayOutputStream",
+      "java/io/DataInputStream",
+      "java/io/DataOutputStream",
+      "java/lang/Byte",
+      "java/lang/Exception",
+      "java/lang/Integer",
+      "java/lang/Object",
+      "java/lang/Short",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/System",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "java/util/Hashtable",
+      "java/util/Vector",
+      "javax/microedition/lcdui/Canvas",
+      "javax/microedition/lcdui/Display",
+      "javax/microedition/rms/RecordStore",
+      "javax/microedition/rms/RecordStoreException",
+      "l",
+      "n",
+      "p",
+      "r",
+      "t",
+      "v",
+      "w"
+    ]
+  },
+  {
+    "path": "com/projectgoth/Roshan/b.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 3,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 4,
+        "value": " "
+      },
+      {
+        "constant_pool_index": 5,
+        "value": ".gif"
+      },
+      {
+        "constant_pool_index": 6,
+        "value": ".jpg"
+      },
+      {
+        "constant_pool_index": 7,
+        "value": "0"
+      },
+      {
+        "constant_pool_index": 8,
+        "value": "25"
+      },
+      {
+        "constant_pool_index": 9,
+        "value": "<"
+      },
+      {
+        "constant_pool_index": 10,
+        "value": "<html><head><title>Error</title></head><body><p>There was an error loading the page.</p></body></html>"
+      },
+      {
+        "constant_pool_index": 11,
+        "value": ">"
+      },
+      {
+        "constant_pool_index": 12,
+        "value": "Connection Error. Please go to HELP on http://wap.mig33.com for info on how to setup your mobile phone."
+      },
+      {
+        "constant_pool_index": 13,
+        "value": "Connection Error. Please go to HELP on http://wap.mig33.com for info on how to setup your mobile phone. :"
+      },
+      {
+        "constant_pool_index": 14,
+        "value": "Connection to server is lost. Please reconnect."
+      },
+      {
+        "constant_pool_index": 15,
+        "value": "Content-Length"
+      },
+      {
+        "constant_pool_index": 16,
+        "value": "Content-Type"
+      },
+      {
+        "constant_pool_index": 17,
+        "value": "GET"
+      },
+      {
+        "constant_pool_index": 18,
+        "value": "POST"
+      },
+      {
+        "constant_pool_index": 19,
+        "value": "Response Code: "
+      },
+      {
+        "constant_pool_index": 20,
+        "value": "User-Agent"
+      },
+      {
+        "constant_pool_index": 21,
+        "value": "application/x-www-form-urlencoded"
+      },
+      {
+        "constant_pool_index": 22,
+        "value": "gateway.mig33.com"
+      },
+      {
+        "constant_pool_index": 23,
+        "value": "http://gateway.mig33.com/"
+      },
+      {
+        "constant_pool_index": 24,
+        "value": "image/gif"
+      },
+      {
+        "constant_pool_index": 25,
+        "value": "mig33"
+      },
+      {
+        "constant_pool_index": 26,
+        "value": "sh"
+      },
+      {
+        "constant_pool_index": 27,
+        "value": "sid"
+      },
+      {
+        "constant_pool_index": 28,
+        "value": "sw"
+      },
+      {
+        "constant_pool_index": 29,
+        "value": "ver"
+      }
+    ],
+    "referenced_classes": [
+      "[B",
+      "[Lw;",
+      "com/projectgoth/Roshan/Main",
+      "com/projectgoth/Roshan/a",
+      "com/projectgoth/Roshan/b",
+      "com/projectgoth/Roshan/c",
+      "com/projectgoth/Roshan/d",
+      "java/io/ByteArrayInputStream",
+      "java/io/ByteArrayOutputStream",
+      "java/io/InputStream",
+      "java/io/InputStreamReader",
+      "java/io/OutputStream",
+      "java/lang/Byte",
+      "java/lang/Exception",
+      "java/lang/Integer",
+      "java/lang/Object",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "java/util/Vector",
+      "javax/microedition/io/Connection",
+      "javax/microedition/io/ConnectionNotFoundException",
+      "javax/microedition/io/Connector",
+      "javax/microedition/io/HttpConnection",
+      "javax/microedition/io/InputConnection",
+      "javax/microedition/io/OutputConnection",
+      "javax/microedition/io/StreamConnection",
+      "k",
+      "p",
+      "w"
+    ]
+  },
+  {
+    "path": "com/projectgoth/Roshan/c.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 8,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 9,
+        "value": " "
+      },
+      {
+        "constant_pool_index": 10,
+        "value": " ?"
+      },
+      {
+        "constant_pool_index": 11,
+        "value": " IM will remove all "
+      },
+      {
+        "constant_pool_index": 12,
+        "value": " contacts as well as your login details for that messenger."
+      },
+      {
+        "constant_pool_index": 13,
+        "value": " is required."
+      },
+      {
+        "constant_pool_index": 14,
+        "value": "\" from your contact list."
+      },
+      {
+        "constant_pool_index": 15,
+        "value": "%"
+      },
+      {
+        "constant_pool_index": 16,
+        "value": "&cid="
+      },
+      {
+        "constant_pool_index": 17,
+        "value": "&f"
+      },
+      {
+        "constant_pool_index": 18,
+        "value": "&pres="
+      },
+      {
+        "constant_pool_index": 19,
+        "value": "&width=120&height=160"
+      },
+      {
+        "constant_pool_index": 20,
+        "value": "&width=160&height=120"
+      },
+      {
+        "constant_pool_index": 21,
+        "value": "&width=240&height=320"
+      },
+      {
+        "constant_pool_index": 22,
+        "value": "&width=288&height=352"
+      },
+      {
+        "constant_pool_index": 23,
+        "value": "&width=320&height=240"
+      },
+      {
+        "constant_pool_index": 24,
+        "value": "&width=352&height=288"
+      },
+      {
+        "constant_pool_index": 25,
+        "value": "&width=480&height=640"
+      },
+      {
+        "constant_pool_index": 26,
+        "value": "&width=640&height=480"
+      },
+      {
+        "constant_pool_index": 27,
+        "value": "("
+      },
+      {
+        "constant_pool_index": 28,
+        "value": ")"
+      },
+      {
+        "constant_pool_index": 29,
+        "value": "*"
+      },
+      {
+        "constant_pool_index": 30,
+        "value": "..."
+      },
+      {
+        "constant_pool_index": 31,
+        "value": "/"
+      },
+      {
+        "constant_pool_index": 32,
+        "value": "/j.png"
+      },
+      {
+        "constant_pool_index": 33,
+        "value": "/k.png"
+      },
+      {
+        "constant_pool_index": 34,
+        "value": "0"
+      },
+      {
+        "constant_pool_index": 35,
+        "value": "1"
+      },
+      {
+        "constant_pool_index": 36,
+        "value": "120x160"
+      },
+      {
+        "constant_pool_index": 37,
+        "value": "160x120"
+      },
+      {
+        "constant_pool_index": 38,
+        "value": "2"
+      },
+      {
+        "constant_pool_index": 39,
+        "value": "240x320"
+      },
+      {
+        "constant_pool_index": 40,
+        "value": "288x352"
+      },
+      {
+        "constant_pool_index": 41,
+        "value": "320x240"
+      },
+      {
+        "constant_pool_index": 42,
+        "value": "352x288"
+      },
+      {
+        "constant_pool_index": 43,
+        "value": "4"
+      },
+      {
+        "constant_pool_index": 44,
+        "value": "480x640"
+      },
+      {
+        "constant_pool_index": 45,
+        "value": "640x480"
+      },
+      {
+        "constant_pool_index": 46,
+        "value": ";"
+      },
+      {
+        "constant_pool_index": 47,
+        "value": "="
+      },
+      {
+        "constant_pool_index": 48,
+        "value": "AIM"
+      },
+      {
+        "constant_pool_index": 49,
+        "value": "AIM Setup"
+      },
+      {
+        "constant_pool_index": 50,
+        "value": "AIM Username"
+      },
+      {
+        "constant_pool_index": 51,
+        "value": "AIM chat"
+      },
+      {
+        "constant_pool_index": 52,
+        "value": "About mig33"
+      },
+      {
+        "constant_pool_index": 53,
+        "value": "Accept Contact"
+      },
+      {
+        "constant_pool_index": 54,
+        "value": "Add Contact"
+      },
+      {
+        "constant_pool_index": 55,
+        "value": "Add Group"
+      },
+      {
+        "constant_pool_index": 56,
+        "value": "Add mig33 contact"
+      },
+      {
+        "constant_pool_index": 57,
+        "value": "Add to Contact List"
+      },
+      {
+        "constant_pool_index": 58,
+        "value": "Add to Group"
+      },
+      {
+        "constant_pool_index": 59,
+        "value": "Add/Edit IM"
+      },
+      {
+        "constant_pool_index": 60,
+        "value": "Allow"
+      },
+      {
+        "constant_pool_index": 61,
+        "value": "Amount (AUD$)"
+      },
+      {
+        "constant_pool_index": 62,
+        "value": "Announcement"
+      },
+      {
+        "constant_pool_index": 63,
+        "value": "Appear Offline"
+      },
+      {
+        "constant_pool_index": 64,
+        "value": "Are you sure you would like to block "
+      },
+      {
+        "constant_pool_index": 65,
+        "value": "Authenticate Account"
+      },
+      {
+        "constant_pool_index": 66,
+        "value": "Away"
+      },
+      {
+        "constant_pool_index": 67,
+        "value": "Back"
+      },
+      {
+        "constant_pool_index": 68,
+        "value": "Background"
+      },
+      {
+        "constant_pool_index": 69,
+        "value": "Block User"
+      },
+      {
+        "constant_pool_index": 70,
+        "value": "Blocked Users"
+      },
+      {
+        "constant_pool_index": 71,
+        "value": "Busy"
+      },
+      {
+        "constant_pool_index": 72,
+        "value": "Call now"
+      },
+      {
+        "constant_pool_index": 73,
+        "value": "Call-through"
+      },
+      {
+        "constant_pool_index": 74,
+        "value": "Camera"
+      },
+      {
+        "constant_pool_index": 75,
+        "value": "Camera Calibration"
+      },
+      {
+        "constant_pool_index": 76,
+        "value": "Camera Default"
+      },
+      {
+        "constant_pool_index": 77,
+        "value": "Camera Retest"
+      },
+      {
+        "constant_pool_index": 78,
+        "value": "Camera Settings"
+      },
+      {
+        "constant_pool_index": 79,
+        "value": "Capture"
+      },
+      {
+        "constant_pool_index": 80,
+        "value": "Changing Presence"
+      },
+      {
+        "constant_pool_index": 81,
+        "value": "Chat"
+      },
+      {
+        "constant_pool_index": 82,
+        "value": "Chat Rooms"
+      },
+      {
+        "constant_pool_index": 83,
+        "value": "Clear Cache"
+      },
+      {
+        "constant_pool_index": 84,
+        "value": "Close"
+      },
+      {
+        "constant_pool_index": 85,
+        "value": "Close Chat"
+      },
+      {
+        "constant_pool_index": 86,
+        "value": "Close Window"
+      },
+      {
+        "constant_pool_index": 87,
+        "value": "Collapse"
+      },
+      {
+        "constant_pool_index": 88,
+        "value": "Compare Rates"
+      },
+      {
+        "constant_pool_index": 89,
+        "value": "Connect"
+      },
+      {
+        "constant_pool_index": 90,
+        "value": "Connecting to "
+      },
+      {
+        "constant_pool_index": 91,
+        "value": "Connecting to AIM"
+      },
+      {
+        "constant_pool_index": 92,
+        "value": "Connecting to Google Talk"
+      },
+      {
+        "constant_pool_index": 93,
+        "value": "Connecting to MSN"
+      },
+      {
+        "constant_pool_index": 94,
+        "value": "Connecting to Yahoo!"
+      },
+      {
+        "constant_pool_index": 95,
+        "value": "Connecting..."
+      },
+      {
+        "constant_pool_index": 96,
+        "value": "Connection"
+      },
+      {
+        "constant_pool_index": 97,
+        "value": "Connection Type"
+      },
+      {
+        "constant_pool_index": 98,
+        "value": "Contact Details"
+      },
+      {
+        "constant_pool_index": 99,
+        "value": "Contact Request"
+      },
+      {
+        "constant_pool_index": 100,
+        "value": "Continue"
+      },
+      {
+        "constant_pool_index": 101,
+        "value": "Create Room"
+      },
+      {
+        "constant_pool_index": 102,
+        "value": "Current Conn."
+      },
+      {
+        "constant_pool_index": 103,
+        "value": "Delete Contact"
+      },
+      {
+        "constant_pool_index": 104,
+        "value": "Delete Group"
+      },
+      {
+        "constant_pool_index": 105,
+        "value": "Destination Number"
+      },
+      {
+        "constant_pool_index": 106,
+        "value": "Disconnect"
+      },
+      {
+        "constant_pool_index": 107,
+        "value": "Disconnecting from "
+      },
+      {
+        "constant_pool_index": 108,
+        "value": "Display Name"
+      },
+      {
+        "constant_pool_index": 109,
+        "value": "Edit"
+      },
+      {
+        "constant_pool_index": 110,
+        "value": "Emoticon Size"
+      },
+      {
+        "constant_pool_index": 111,
+        "value": "Emoticons"
+      },
+      {
+        "constant_pool_index": 112,
+        "value": "Enter Code"
+      },
+      {
+        "constant_pool_index": 113,
+        "value": "Enter Security Code"
+      },
+      {
+        "constant_pool_index": 114,
+        "value": "Enter Username"
+      },
+      {
+        "constant_pool_index": 115,
+        "value": "EricssonW300c"
+      },
+      {
+        "constant_pool_index": 116,
+        "value": "Error"
+      },
+      {
+        "constant_pool_index": 117,
+        "value": "Error loading"
+      },
+      {
+        "constant_pool_index": 118,
+        "value": "Exit"
+      },
+      {
+        "constant_pool_index": 119,
+        "value": "Expand"
+      },
+      {
+        "constant_pool_index": 120,
+        "value": "File Received"
+      },
+      {
+        "constant_pool_index": 121,
+        "value": "Finish"
+      },
+      {
+        "constant_pool_index": 122,
+        "value": "Forgot Details"
+      },
+      {
+        "constant_pool_index": 123,
+        "value": "From Camera"
+      },
+      {
+        "constant_pool_index": 124,
+        "value": "From Scrapbook"
+      },
+      {
+        "constant_pool_index": 125,
+        "value": "From Storage"
+      },
+      {
+        "constant_pool_index": 126,
+        "value": "Google Talk"
+      },
+      {
+        "constant_pool_index": 127,
+        "value": "Group Chat"
+      },
+      {
+        "constant_pool_index": 128,
+        "value": "Group Name"
+      },
+      {
+        "constant_pool_index": 129,
+        "value": "Group must be empty and must not contain hidden contacts."
+      },
+      {
+        "constant_pool_index": 130,
+        "value": "Gtalk Setup"
+      },
+      {
+        "constant_pool_index": 131,
+        "value": "Gtalk Username"
+      },
+      {
+        "constant_pool_index": 132,
+        "value": "Gtalk chat"
+      },
+      {
+        "constant_pool_index": 133,
+        "value": "HTTP"
+      },
+      {
+        "constant_pool_index": 134,
+        "value": "Help?"
+      },
+      {
+        "constant_pool_index": 135,
+        "value": "IM Details"
+      },
+      {
+        "constant_pool_index": 136,
+        "value": "IMs"
+      },
+      {
+        "constant_pool_index": 137,
+        "value": "Info"
+      },
+      {
+        "constant_pool_index": 138,
+        "value": "Insert"
+      },
+      {
+        "constant_pool_index": 139,
+        "value": "Insert Emoticon"
+      },
+      {
+        "constant_pool_index": 140,
+        "value": "Insert Username"
+      },
+      {
+        "constant_pool_index": 141,
+        "value": "Invite Friend"
+      },
+      {
+        "constant_pool_index": 142,
+        "value": "Invite User"
+      },
+      {
+        "constant_pool_index": 143,
+        "value": "Inviting user..."
+      },
+      {
+        "constant_pool_index": 144,
+        "value": "Joining chat room..."
+      },
+      {
+        "constant_pool_index": 145,
+        "value": "Kick User"
+      },
+      {
+        "constant_pool_index": 146,
+        "value": "Leave Room"
+      },
+      {
+        "constant_pool_index": 147,
+        "value": "Leaving group chat..."
+      },
+      {
+        "constant_pool_index": 148,
+        "value": "List room users"
+      },
+      {
+        "constant_pool_index": 149,
+        "value": "Loading Complete"
+      },
+      {
+        "constant_pool_index": 150,
+        "value": "Loading Images "
+      },
+      {
+        "constant_pool_index": 151,
+        "value": "Loading..."
+      },
+      {
+        "constant_pool_index": 152,
+        "value": "Logging Out..."
+      },
+      {
+        "constant_pool_index": 153,
+        "value": "Login"
+      },
+      {
+        "constant_pool_index": 154,
+        "value": "Logout"
+      },
+      {
+        "constant_pool_index": 155,
+        "value": "MSN"
+      },
+      {
+        "constant_pool_index": 156,
+        "value": "MSN Setup"
+      },
+      {
+        "constant_pool_index": 157,
+        "value": "MSN Username"
+      },
+      {
+        "constant_pool_index": 158,
+        "value": "MSN chat"
+      },
+      {
+        "constant_pool_index": 159,
+        "value": "Make Call"
+      },
+      {
+        "constant_pool_index": 160,
+        "value": "Manual"
+      },
+      {
+        "constant_pool_index": 161,
+        "value": "Menu"
+      },
+      {
+        "constant_pool_index": 162,
+        "value": "Mobile Number"
+      },
+      {
+        "constant_pool_index": 163,
+        "value": "More Rooms"
+      },
+      {
+        "constant_pool_index": 164,
+        "value": "Move to Group"
+      },
+      {
+        "constant_pool_index": 165,
+        "value": "Mute User"
+      },
+      {
+        "constant_pool_index": 166,
+        "value": "My Account"
+      },
+      {
+        "constant_pool_index": 167,
+        "value": "My Profile"
+      },
+      {
+        "constant_pool_index": 168,
+        "value": "My Scrapbook"
+      },
+      {
+        "constant_pool_index": 169,
+        "value": "New Group Name"
+      },
+      {
+        "constant_pool_index": 170,
+        "value": "New room name"
+      },
+      {
+        "constant_pool_index": 171,
+        "value": "No"
+      },
+      {
+        "constant_pool_index": 172,
+        "value": "Nokia5300"
+      },
+      {
+        "constant_pool_index": 173,
+        "value": "Nokia6085"
+      },
+      {
+        "constant_pool_index": 174,
+        "value": "Nokia6233"
+      },
+      {
+        "constant_pool_index": 175,
+        "value": "None of your contacts are online."
+      },
+      {
+        "constant_pool_index": 176,
+        "value": "OFF"
+      },
+      {
+        "constant_pool_index": 177,
+        "value": "ON"
+      },
+      {
+        "constant_pool_index": 178,
+        "value": "Ok"
+      },
+      {
+        "constant_pool_index": 179,
+        "value": "Online"
+      },
+      {
+        "constant_pool_index": 180,
+        "value": "Ooops. Unfortunately we detected that your mobile phone does not support taking pictures from the application. "
+      },
+      {
+        "constant_pool_index": 181,
+        "value": "Open Chat Rooms"
+      },
+      {
+        "constant_pool_index": 182,
+        "value": "Open Mail"
+      },
+      {
+        "constant_pool_index": 183,
+        "value": "Origin Number"
+      },
+      {
+        "constant_pool_index": 184,
+        "value": "Other IM"
+      },
+      {
+        "constant_pool_index": 185,
+        "value": "Password"
+      },
+      {
+        "constant_pool_index": 186,
+        "value": "Ping"
+      },
+      {
+        "constant_pool_index": 187,
+        "value": "Please wait.. "
+      },
+      {
+        "constant_pool_index": 188,
+        "value": "Port"
+      },
+      {
+        "constant_pool_index": 189,
+        "value": "Presence"
+      },
+      {
+        "constant_pool_index": 190,
+        "value": "Private Chat"
+      },
+      {
+        "constant_pool_index": 191,
+        "value": "Processing..."
+      },
+      {
+        "constant_pool_index": 192,
+        "value": "Recent Numbers"
+      },
+      {
+        "constant_pool_index": 193,
+        "value": "Recipient username"
+      },
+      {
+        "constant_pool_index": 194,
+        "value": "Register"
+      },
+      {
+        "constant_pool_index": 195,
+        "value": "Registering User..."
+      },
+      {
+        "constant_pool_index": 196,
+        "value": "Registration"
+      },
+      {
+        "constant_pool_index": 197,
+        "value": "Reject"
+      },
+      {
+        "constant_pool_index": 198,
+        "value": "Remind me later"
+      },
+      {
+        "constant_pool_index": 199,
+        "value": "Remove AIM..."
+      },
+      {
+        "constant_pool_index": 200,
+        "value": "Remove GTalk..."
+      },
+      {
+        "constant_pool_index": 201,
+        "value": "Remove IM"
+      },
+      {
+        "constant_pool_index": 202,
+        "value": "Remove MSN..."
+      },
+      {
+        "constant_pool_index": 203,
+        "value": "Remove YAHOO..."
+      },
+      {
+        "constant_pool_index": 204,
+        "value": "Removing "
+      },
+      {
+        "constant_pool_index": 205,
+        "value": "Rename Group"
+      },
+      {
+        "constant_pool_index": 206,
+        "value": "Request Call Back..."
+      },
+      {
+        "constant_pool_index": 207,
+        "value": "Request Kick..."
+      },
+      {
+        "constant_pool_index": 208,
+        "value": "Request Mute..."
+      },
+      {
+        "constant_pool_index": 209,
+        "value": "Request Un-Mute..."
+      },
+      {
+        "constant_pool_index": 210,
+        "value": "Requesting Authentication Code..."
+      },
+      {
+        "constant_pool_index": 211,
+        "value": "Requesting Info..."
+      },
+      {
+        "constant_pool_index": 212,
+        "value": "Resend Code"
+      },
+      {
+        "constant_pool_index": 213,
+        "value": "Retrieving Info..."
+      },
+      {
+        "constant_pool_index": 214,
+        "value": "Retrieving help..."
+      },
+      {
+        "constant_pool_index": 215,
+        "value": "Retrieving..."
+      },
+      {
+        "constant_pool_index": 216,
+        "value": "Room Name"
+      },
+      {
+        "constant_pool_index": 217,
+        "value": "SMS"
+      },
+      {
+        "constant_pool_index": 218,
+        "value": "SMS Message:"
+      },
+      {
+        "constant_pool_index": 219,
+        "value": "Save Password"
+      },
+      {
+        "constant_pool_index": 220,
+        "value": "Search"
+      },
+      {
+        "constant_pool_index": 221,
+        "value": "Search Room"
+      },
+      {
+        "constant_pool_index": 222,
+        "value": "Select"
+      },
+      {
+        "constant_pool_index": 223,
+        "value": "Send"
+      },
+      {
+        "constant_pool_index": 224,
+        "value": "Send Mail"
+      },
+      {
+        "constant_pool_index": 225,
+        "value": "Send Photo"
+      },
+      {
+        "constant_pool_index": 226,
+        "value": "Send SMS"
+      },
+      {
+        "constant_pool_index": 227,
+        "value": "Sending Photo in progress..."
+      },
+      {
+        "constant_pool_index": 228,
+        "value": "Sending SMS..."
+      },
+      {
+        "constant_pool_index": 229,
+        "value": "Server"
+      },
+      {
+        "constant_pool_index": 230,
+        "value": "Set Presence"
+      },
+      {
+        "constant_pool_index": 231,
+        "value": "Settings"
+      },
+      {
+        "constant_pool_index": 232,
+        "value": "Share Mobile"
+      },
+      {
+        "constant_pool_index": 233,
+        "value": "Show offline contacts"
+      },
+      {
+        "constant_pool_index": 234,
+        "value": "Sign In"
+      },
+      {
+        "constant_pool_index": 235,
+        "value": "Sign Out"
+      },
+      {
+        "constant_pool_index": 236,
+        "value": "Sign in as Invisible"
+      },
+      {
+        "constant_pool_index": 237,
+        "value": "Skip"
+      },
+      {
+        "constant_pool_index": 238,
+        "value": "Skip All"
+      },
+      {
+        "constant_pool_index": 239,
+        "value": "Sound"
+      },
+      {
+        "constant_pool_index": 240,
+        "value": "TC"
+      },
+      {
+        "constant_pool_index": 241,
+        "value": "TCP"
+      },
+      {
+        "constant_pool_index": 242,
+        "value": "Testing Connection..."
+      },
+      {
+        "constant_pool_index": 243,
+        "value": "This will also delete this contact from your desktop IM."
+      },
+      {
+        "constant_pool_index": 244,
+        "value": "Unable to call-through: "
+      },
+      {
+        "constant_pool_index": 245,
+        "value": "Unable to invoke native browser: "
+      },
+      {
+        "constant_pool_index": 246,
+        "value": "Unblock"
+      },
+      {
+        "constant_pool_index": 247,
+        "value": "Unblocking "
+      },
+      {
+        "constant_pool_index": 248,
+        "value": "Update"
+      },
+      {
+        "constant_pool_index": 249,
+        "value": "Update Details"
+      },
+      {
+        "constant_pool_index": 250,
+        "value": "Upload Photos"
+      },
+      {
+        "constant_pool_index": 251,
+        "value": "Username"
+      },
+      {
+        "constant_pool_index": 252,
+        "value": "VideoControl"
+      },
+      {
+        "constant_pool_index": 253,
+        "value": "View Details"
+      },
+      {
+        "constant_pool_index": 254,
+        "value": "View Profile"
+      },
+      {
+        "constant_pool_index": 255,
+        "value": "View User"
+      },
+      {
+        "constant_pool_index": 256,
+        "value": "View User's Profile"
+      },
+      {
+        "constant_pool_index": 257,
+        "value": "Wallpaper"
+      },
+      {
+        "constant_pool_index": 258,
+        "value": "Warning"
+      },
+      {
+        "constant_pool_index": 259,
+        "value": "Welcome to mig33"
+      },
+      {
+        "constant_pool_index": 260,
+        "value": "Write"
+      },
+      {
+        "constant_pool_index": 261,
+        "value": "Write Message:"
+      },
+      {
+        "constant_pool_index": 262,
+        "value": "Yahoo!"
+      },
+      {
+        "constant_pool_index": 263,
+        "value": "Yahoo! ID"
+      },
+      {
+        "constant_pool_index": 264,
+        "value": "Yahoo! Setup"
+      },
+      {
+        "constant_pool_index": 265,
+        "value": "Yahoo! chat"
+      },
+      {
+        "constant_pool_index": 266,
+        "value": "You are about to delete \""
+      },
+      {
+        "constant_pool_index": 267,
+        "value": "You are about to delete the group \""
+      },
+      {
+        "constant_pool_index": 268,
+        "value": "You have no recently used numbers."
+      },
+      {
+        "constant_pool_index": 269,
+        "value": "You must agree to the terms and conditions."
+      },
+      {
+        "constant_pool_index": 270,
+        "value": "You must have at least one group."
+      },
+      {
+        "constant_pool_index": 271,
+        "value": "You need to activate your account first."
+      },
+      {
+        "constant_pool_index": 272,
+        "value": "Your current connection is connected through HTTP instead of TCP."
+      },
+      {
+        "constant_pool_index": 273,
+        "value": "Your name"
+      },
+      {
+        "constant_pool_index": 274,
+        "value": "capture://image"
+      },
+      {
+        "constant_pool_index": 275,
+        "value": "capture://video"
+      },
+      {
+        "constant_pool_index": 276,
+        "value": "cid="
+      },
+      {
+        "constant_pool_index": 277,
+        "value": "encoding=jpeg"
+      },
+      {
+        "constant_pool_index": 278,
+        "value": "f"
+      },
+      {
+        "constant_pool_index": 279,
+        "value": "frms"
+      },
+      {
+        "constant_pool_index": 280,
+        "value": "gcid="
+      },
+      {
+        "constant_pool_index": 281,
+        "value": "gid="
+      },
+      {
+        "constant_pool_index": 282,
+        "value": "imType="
+      },
+      {
+        "constant_pool_index": 283,
+        "value": "mig33"
+      },
+      {
+        "constant_pool_index": 284,
+        "value": "mig33 Community"
+      },
+      {
+        "constant_pool_index": 285,
+        "value": "mig33 Username"
+      },
+      {
+        "constant_pool_index": 286,
+        "value": "mig33 chat"
+      },
+      {
+        "constant_pool_index": 287,
+        "value": "roomName="
+      },
+      {
+        "constant_pool_index": 288,
+        "value": "tel:"
+      }
+    ],
+    "referenced_classes": [
+      "[B",
+      "[I",
+      "[Ljava/lang/String;",
+      "ab",
+      "c",
+      "com/projectgoth/Roshan/Main",
+      "com/projectgoth/Roshan/a",
+      "com/projectgoth/Roshan/b",
+      "com/projectgoth/Roshan/c",
+      "com/projectgoth/Roshan/d",
+      "e",
+      "i",
+      "java/lang/Exception",
+      "java/lang/Integer",
+      "java/lang/Object",
+      "java/lang/Runnable",
+      "java/lang/Short",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "java/util/Hashtable",
+      "java/util/Vector",
+      "javax/microedition/lcdui/Canvas",
+      "javax/microedition/lcdui/Command",
+      "javax/microedition/lcdui/CommandListener",
+      "javax/microedition/lcdui/Display",
+      "javax/microedition/lcdui/Displayable",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Form",
+      "javax/microedition/lcdui/Graphics",
+      "javax/microedition/lcdui/Image",
+      "javax/microedition/lcdui/TextBox",
+      "javax/microedition/media/Controllable",
+      "javax/microedition/media/Manager",
+      "javax/microedition/media/Player",
+      "javax/microedition/media/control/VideoControl",
+      "javax/microedition/midlet/MIDlet",
+      "javax/microedition/rms/RecordEnumeration",
+      "javax/microedition/rms/RecordStore",
+      "k",
+      "l",
+      "n",
+      "p",
+      "r",
+      "t",
+      "v",
+      "w",
+      "z"
+    ]
+  },
+  {
+    "path": "com/projectgoth/Roshan/d.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 13,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 14,
+        "value": "\""
+      },
+      {
+        "constant_pool_index": 15,
+        "value": "#"
+      },
+      {
+        "constant_pool_index": 16,
+        "value": "%20"
+      },
+      {
+        "constant_pool_index": 17,
+        "value": "/"
+      },
+      {
+        "constant_pool_index": 18,
+        "value": "0x"
+      },
+      {
+        "constant_pool_index": 19,
+        "value": "black"
+      },
+      {
+        "constant_pool_index": 20,
+        "value": "blue"
+      },
+      {
+        "constant_pool_index": 21,
+        "value": "cyan"
+      },
+      {
+        "constant_pool_index": 22,
+        "value": "gray"
+      },
+      {
+        "constant_pool_index": 23,
+        "value": "green"
+      },
+      {
+        "constant_pool_index": 24,
+        "value": "grey"
+      },
+      {
+        "constant_pool_index": 25,
+        "value": "http://"
+      },
+      {
+        "constant_pool_index": 26,
+        "value": "magenta"
+      },
+      {
+        "constant_pool_index": 27,
+        "value": "microedition.io.file.FileConnection.version"
+      },
+      {
+        "constant_pool_index": 28,
+        "value": "microedition.media.version"
+      },
+      {
+        "constant_pool_index": 29,
+        "value": "red"
+      },
+      {
+        "constant_pool_index": 30,
+        "value": "supports.video.capture"
+      },
+      {
+        "constant_pool_index": 31,
+        "value": "true"
+      },
+      {
+        "constant_pool_index": 32,
+        "value": "white"
+      },
+      {
+        "constant_pool_index": 33,
+        "value": "yellow"
+      }
+    ],
+    "referenced_classes": [
+      "[I",
+      "ab",
+      "com/projectgoth/Roshan/c",
+      "com/projectgoth/Roshan/d",
+      "java/lang/Exception",
+      "java/lang/Integer",
+      "java/lang/Object",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/System",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics",
+      "javax/microedition/lcdui/Image"
+    ]
+  },
+  {
+    "path": "com/projectgoth/Roshan/Main.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": "MIDlet-Version"
+      }
+    ],
+    "referenced_classes": [
+      "com/projectgoth/Roshan/Main",
+      "com/projectgoth/Roshan/c",
+      "javax/microedition/lcdui/Display",
+      "javax/microedition/midlet/MIDlet",
+      "javax/microedition/midlet/MIDletStateChangeException"
+    ]
+  },
+  {
+    "path": "d.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "[C",
+      "com/projectgoth/Roshan/d",
+      "d",
+      "java/lang/Object",
+      "java/lang/String",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics"
+    ]
+  },
+  {
+    "path": "e.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 3,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 4,
+        "value": " "
+      }
+    ],
+    "referenced_classes": [
+      "com/projectgoth/Roshan/c",
+      "e",
+      "java/lang/Exception",
+      "java/lang/Object",
+      "java/lang/Runnable",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "java/util/Vector",
+      "javax/microedition/lcdui/Canvas",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics",
+      "l"
+    ]
+  },
+  {
+    "path": "f.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "f",
+      "java/lang/Object"
+    ]
+  },
+  {
+    "path": "g.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "com/projectgoth/Roshan/c",
+      "g",
+      "java/lang/Object",
+      "javax/microedition/lcdui/Graphics"
+    ]
+  },
+  {
+    "path": "h.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": "Go!"
+      }
+    ],
+    "referenced_classes": [
+      "ab",
+      "com/projectgoth/Roshan/d",
+      "h",
+      "java/lang/Object",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics",
+      "k"
+    ]
+  },
+  {
+    "path": "i.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 2,
+        "value": " "
+      },
+      {
+        "constant_pool_index": 3,
+        "value": "&width=120&height=160"
+      },
+      {
+        "constant_pool_index": 4,
+        "value": "&width=160&height=120"
+      },
+      {
+        "constant_pool_index": 5,
+        "value": "&width=240&height=320"
+      },
+      {
+        "constant_pool_index": 6,
+        "value": "&width=288&height=352"
+      },
+      {
+        "constant_pool_index": 7,
+        "value": "&width=320&height=240"
+      },
+      {
+        "constant_pool_index": 8,
+        "value": "&width=352&height=288"
+      },
+      {
+        "constant_pool_index": 9,
+        "value": "&width=480&height=640"
+      },
+      {
+        "constant_pool_index": 10,
+        "value": "&width=640&height=480"
+      },
+      {
+        "constant_pool_index": 11,
+        "value": ">>>>>>>>>>>>>>>>>>>>>>Problem"
+      },
+      {
+        "constant_pool_index": 12,
+        "value": "AIM"
+      },
+      {
+        "constant_pool_index": 13,
+        "value": "Background"
+      },
+      {
+        "constant_pool_index": 14,
+        "value": "Camera Calibration"
+      },
+      {
+        "constant_pool_index": 15,
+        "value": "Camera Settings"
+      },
+      {
+        "constant_pool_index": 16,
+        "value": "Emoticon Size"
+      },
+      {
+        "constant_pool_index": 17,
+        "value": "Emoticons"
+      },
+      {
+        "constant_pool_index": 18,
+        "value": "Google Talk"
+      },
+      {
+        "constant_pool_index": 19,
+        "value": "MSN"
+      },
+      {
+        "constant_pool_index": 20,
+        "value": "Port"
+      },
+      {
+        "constant_pool_index": 21,
+        "value": "Save Password"
+      },
+      {
+        "constant_pool_index": 22,
+        "value": "Server"
+      },
+      {
+        "constant_pool_index": 23,
+        "value": "Show offline contacts"
+      },
+      {
+        "constant_pool_index": 24,
+        "value": "Sign in as Invisible"
+      },
+      {
+        "constant_pool_index": 25,
+        "value": "SignIn"
+      },
+      {
+        "constant_pool_index": 26,
+        "value": "Sound"
+      },
+      {
+        "constant_pool_index": 27,
+        "value": "TCP"
+      },
+      {
+        "constant_pool_index": 28,
+        "value": "Wallpaper"
+      },
+      {
+        "constant_pool_index": 29,
+        "value": "Yahoo!"
+      },
+      {
+        "constant_pool_index": 30,
+        "value": "["
+      },
+      {
+        "constant_pool_index": 31,
+        "value": "] "
+      },
+      {
+        "constant_pool_index": 32,
+        "value": "ex:"
+      }
+    ],
+    "referenced_classes": [
+      "[B",
+      "[I",
+      "[Ljava/lang/String;",
+      "com/projectgoth/Roshan/c",
+      "com/projectgoth/Roshan/d",
+      "f",
+      "i",
+      "java/io/ByteArrayInputStream",
+      "java/io/ByteArrayOutputStream",
+      "java/io/DataInputStream",
+      "java/io/DataOutputStream",
+      "java/io/IOException",
+      "java/io/PrintStream",
+      "java/lang/Exception",
+      "java/lang/Object",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/System",
+      "java/lang/Throwable",
+      "java/util/Hashtable",
+      "java/util/Vector",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics",
+      "javax/microedition/lcdui/Image",
+      "javax/microedition/rms/RecordStore",
+      "javax/microedition/rms/RecordStoreFullException",
+      "k"
+    ]
+  },
+  {
+    "path": "j.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "j",
+      "java/lang/Object"
+    ]
+  },
+  {
+    "path": "k.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 6,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 7,
+        "value": " "
+      },
+      {
+        "constant_pool_index": 8,
+        "value": "&"
+      },
+      {
+        "constant_pool_index": 9,
+        "value": "&#"
+      },
+      {
+        "constant_pool_index": 10,
+        "value": "&amp;"
+      },
+      {
+        "constant_pool_index": 11,
+        "value": "&copy;"
+      },
+      {
+        "constant_pool_index": 12,
+        "value": "&gt;"
+      },
+      {
+        "constant_pool_index": 13,
+        "value": "&lt;"
+      },
+      {
+        "constant_pool_index": 14,
+        "value": "&nbsp;"
+      },
+      {
+        "constant_pool_index": 15,
+        "value": "(c)"
+      },
+      {
+        "constant_pool_index": 16,
+        "value": "*"
+      },
+      {
+        "constant_pool_index": 17,
+        "value": "/>"
+      },
+      {
+        "constant_pool_index": 18,
+        "value": "2"
+      },
+      {
+        "constant_pool_index": 19,
+        "value": ";"
+      },
+      {
+        "constant_pool_index": 20,
+        "value": "<"
+      },
+      {
+        "constant_pool_index": 21,
+        "value": "</"
+      },
+      {
+        "constant_pool_index": 22,
+        "value": "</a>"
+      },
+      {
+        "constant_pool_index": 23,
+        "value": "</b>"
+      },
+      {
+        "constant_pool_index": 24,
+        "value": "</big>"
+      },
+      {
+        "constant_pool_index": 25,
+        "value": "</body>"
+      },
+      {
+        "constant_pool_index": 26,
+        "value": "</center>"
+      },
+      {
+        "constant_pool_index": 27,
+        "value": "</div>"
+      },
+      {
+        "constant_pool_index": 28,
+        "value": "</em>"
+      },
+      {
+        "constant_pool_index": 29,
+        "value": "</form>"
+      },
+      {
+        "constant_pool_index": 30,
+        "value": "</head>"
+      },
+      {
+        "constant_pool_index": 31,
+        "value": "</html>"
+      },
+      {
+        "constant_pool_index": 32,
+        "value": "</i>"
+      },
+      {
+        "constant_pool_index": 33,
+        "value": "</option>"
+      },
+      {
+        "constant_pool_index": 34,
+        "value": "</p>"
+      },
+      {
+        "constant_pool_index": 35,
+        "value": "</select>"
+      },
+      {
+        "constant_pool_index": 36,
+        "value": "</small>"
+      },
+      {
+        "constant_pool_index": 37,
+        "value": "</span>"
+      },
+      {
+        "constant_pool_index": 38,
+        "value": "</strong>"
+      },
+      {
+        "constant_pool_index": 39,
+        "value": "</tag>"
+      },
+      {
+        "constant_pool_index": 40,
+        "value": "</textarea>"
+      },
+      {
+        "constant_pool_index": 41,
+        "value": "</title>"
+      },
+      {
+        "constant_pool_index": 42,
+        "value": "</u>"
+      },
+      {
+        "constant_pool_index": 43,
+        "value": "<a"
+      },
+      {
+        "constant_pool_index": 44,
+        "value": "<b>"
+      },
+      {
+        "constant_pool_index": 45,
+        "value": "<big>"
+      },
+      {
+        "constant_pool_index": 46,
+        "value": "<body"
+      },
+      {
+        "constant_pool_index": 47,
+        "value": "<br>"
+      },
+      {
+        "constant_pool_index": 48,
+        "value": "<center>"
+      },
+      {
+        "constant_pool_index": 49,
+        "value": "<div"
+      },
+      {
+        "constant_pool_index": 50,
+        "value": "<em>"
+      },
+      {
+        "constant_pool_index": 51,
+        "value": "<form"
+      },
+      {
+        "constant_pool_index": 52,
+        "value": "<html>"
+      },
+      {
+        "constant_pool_index": 53,
+        "value": "<i>"
+      },
+      {
+        "constant_pool_index": 54,
+        "value": "<img"
+      },
+      {
+        "constant_pool_index": 55,
+        "value": "<input"
+      },
+      {
+        "constant_pool_index": 56,
+        "value": "<option"
+      },
+      {
+        "constant_pool_index": 57,
+        "value": "<p"
+      },
+      {
+        "constant_pool_index": 58,
+        "value": "<select"
+      },
+      {
+        "constant_pool_index": 59,
+        "value": "<small>"
+      },
+      {
+        "constant_pool_index": 60,
+        "value": "<span"
+      },
+      {
+        "constant_pool_index": 61,
+        "value": "<strong>"
+      },
+      {
+        "constant_pool_index": 62,
+        "value": "<tag"
+      },
+      {
+        "constant_pool_index": 63,
+        "value": "<textarea"
+      },
+      {
+        "constant_pool_index": 64,
+        "value": "<title>"
+      },
+      {
+        "constant_pool_index": 65,
+        "value": "<u>"
+      },
+      {
+        "constant_pool_index": 66,
+        "value": "="
+      },
+      {
+        "constant_pool_index": 67,
+        "value": "= "
+      },
+      {
+        "constant_pool_index": 68,
+        "value": ">"
+      },
+      {
+        "constant_pool_index": 69,
+        "value": "Go!"
+      },
+      {
+        "constant_pool_index": 70,
+        "value": "action="
+      },
+      {
+        "constant_pool_index": 71,
+        "value": "alt="
+      },
+      {
+        "constant_pool_index": 72,
+        "value": "background-color:"
+      },
+      {
+        "constant_pool_index": 73,
+        "value": "background="
+      },
+      {
+        "constant_pool_index": 74,
+        "value": "bgcolor="
+      },
+      {
+        "constant_pool_index": 75,
+        "value": "block"
+      },
+      {
+        "constant_pool_index": 76,
+        "value": "checkbox"
+      },
+      {
+        "constant_pool_index": 77,
+        "value": "checked"
+      },
+      {
+        "constant_pool_index": 78,
+        "value": "color:"
+      },
+      {
+        "constant_pool_index": 79,
+        "value": "cols="
+      },
+      {
+        "constant_pool_index": 80,
+        "value": "display:"
+      },
+      {
+        "constant_pool_index": 81,
+        "value": "get"
+      },
+      {
+        "constant_pool_index": 82,
+        "value": "height="
+      },
+      {
+        "constant_pool_index": 83,
+        "value": "hidden"
+      },
+      {
+        "constant_pool_index": 84,
+        "value": "href="
+      },
+      {
+        "constant_pool_index": 85,
+        "value": "hspace="
+      },
+      {
+        "constant_pool_index": 86,
+        "value": "id="
+      },
+      {
+        "constant_pool_index": 87,
+        "value": "method="
+      },
+      {
+        "constant_pool_index": 88,
+        "value": "name="
+      },
+      {
+        "constant_pool_index": 89,
+        "value": "password"
+      },
+      {
+        "constant_pool_index": 90,
+        "value": "reset"
+      },
+      {
+        "constant_pool_index": 91,
+        "value": "right"
+      },
+      {
+        "constant_pool_index": 92,
+        "value": "rows="
+      },
+      {
+        "constant_pool_index": 93,
+        "value": "selected"
+      },
+      {
+        "constant_pool_index": 94,
+        "value": "size="
+      },
+      {
+        "constant_pool_index": 95,
+        "value": "src="
+      },
+      {
+        "constant_pool_index": 96,
+        "value": "stretched"
+      },
+      {
+        "constant_pool_index": 97,
+        "value": "style=\""
+      },
+      {
+        "constant_pool_index": 98,
+        "value": "style=\"color:"
+      },
+      {
+        "constant_pool_index": 99,
+        "value": "style=\"float:"
+      },
+      {
+        "constant_pool_index": 100,
+        "value": "submit"
+      },
+      {
+        "constant_pool_index": 101,
+        "value": "text"
+      },
+      {
+        "constant_pool_index": 102,
+        "value": "type="
+      },
+      {
+        "constant_pool_index": 103,
+        "value": "value="
+      },
+      {
+        "constant_pool_index": 104,
+        "value": "vspace="
+      },
+      {
+        "constant_pool_index": 105,
+        "value": "width="
+      }
+    ],
+    "referenced_classes": [
+      "[B",
+      "[I",
+      "[Ljava/lang/String;",
+      "aa",
+      "ac",
+      "ad",
+      "b",
+      "com/projectgoth/Roshan/a",
+      "com/projectgoth/Roshan/c",
+      "com/projectgoth/Roshan/d",
+      "d",
+      "g",
+      "h",
+      "j",
+      "java/lang/Exception",
+      "java/lang/Integer",
+      "java/lang/Object",
+      "java/lang/Runnable",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "java/util/Vector",
+      "javax/microedition/lcdui/Canvas",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics",
+      "javax/microedition/lcdui/Image",
+      "k",
+      "m",
+      "o",
+      "p",
+      "s",
+      "u",
+      "w",
+      "x",
+      "y"
+    ]
+  },
+  {
+    "path": "l.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "java/lang/Object",
+      "l"
+    ]
+  },
+  {
+    "path": "m.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 2,
+        "value": " "
+      },
+      {
+        "constant_pool_index": 3,
+        "value": "%20"
+      },
+      {
+        "constant_pool_index": 4,
+        "value": "&"
+      },
+      {
+        "constant_pool_index": 5,
+        "value": "1"
+      },
+      {
+        "constant_pool_index": 6,
+        "value": "="
+      },
+      {
+        "constant_pool_index": 7,
+        "value": "=on"
+      },
+      {
+        "constant_pool_index": 8,
+        "value": "?"
+      },
+      {
+        "constant_pool_index": 9,
+        "value": "get"
+      }
+    ],
+    "referenced_classes": [
+      "[Ljava/lang/String;",
+      "ac",
+      "com/projectgoth/Roshan/d",
+      "d",
+      "g",
+      "h",
+      "j",
+      "java/lang/Integer",
+      "java/lang/Object",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/util/Vector",
+      "k",
+      "m",
+      "o",
+      "u",
+      "y"
+    ]
+  },
+  {
+    "path": "n.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "java/lang/Integer",
+      "java/lang/Object",
+      "java/lang/String",
+      "n"
+    ]
+  },
+  {
+    "path": "o.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "com/projectgoth/Roshan/c",
+      "com/projectgoth/Roshan/d",
+      "j",
+      "java/lang/Object",
+      "java/lang/Throwable",
+      "java/util/Vector",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics",
+      "k",
+      "o"
+    ]
+  },
+  {
+    "path": "p.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": "UTF-8"
+      }
+    ],
+    "referenced_classes": [
+      "[B",
+      "java/io/ByteArrayInputStream",
+      "java/io/ByteArrayOutputStream",
+      "java/io/DataInputStream",
+      "java/io/DataOutputStream",
+      "java/io/IOException",
+      "java/lang/Byte",
+      "java/lang/Exception",
+      "java/lang/Integer",
+      "java/lang/Long",
+      "java/lang/Object",
+      "java/lang/Short",
+      "java/lang/String",
+      "java/lang/System",
+      "p"
+    ]
+  },
+  {
+    "path": "q.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "java/lang/Object",
+      "q"
+    ]
+  },
+  {
+    "path": "r.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 2,
+        "value": ")"
+      },
+      {
+        "constant_pool_index": 3,
+        "value": "99"
+      },
+      {
+        "constant_pool_index": 4,
+        "value": "AIM"
+      },
+      {
+        "constant_pool_index": 5,
+        "value": "Chat Rooms"
+      },
+      {
+        "constant_pool_index": 6,
+        "value": "Google Talk"
+      },
+      {
+        "constant_pool_index": 7,
+        "value": "MSN"
+      },
+      {
+        "constant_pool_index": 8,
+        "value": "Mail"
+      },
+      {
+        "constant_pool_index": 9,
+        "value": "Mail ("
+      },
+      {
+        "constant_pool_index": 10,
+        "value": "Yahoo!"
+      },
+      {
+        "constant_pool_index": 11,
+        "value": "mig33"
+      }
+    ],
+    "referenced_classes": [
+      "[I",
+      "com/projectgoth/Roshan/c",
+      "java/lang/Object",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/Throwable",
+      "java/util/Vector",
+      "javax/microedition/lcdui/Canvas",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics",
+      "n",
+      "r"
+    ]
+  },
+  {
+    "path": "s.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "java/lang/Object",
+      "java/util/Vector",
+      "javax/microedition/lcdui/Image",
+      "s"
+    ]
+  },
+  {
+    "path": "t.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 2,
+        "value": "\n"
+      },
+      {
+        "constant_pool_index": 3,
+        "value": " "
+      },
+      {
+        "constant_pool_index": 4,
+        "value": " has added you to his/her contact list."
+      },
+      {
+        "constant_pool_index": 5,
+        "value": " is successful. Please select:"
+      },
+      {
+        "constant_pool_index": 6,
+        "value": " to my contact list"
+      },
+      {
+        "constant_pool_index": 7,
+        "value": "(Inc. Country Code)"
+      },
+      {
+        "constant_pool_index": 8,
+        "value": "(e.g. user@mail.com)"
+      },
+      {
+        "constant_pool_index": 9,
+        "value": "AIM"
+      },
+      {
+        "constant_pool_index": 10,
+        "value": "AIM Username"
+      },
+      {
+        "constant_pool_index": 11,
+        "value": "Add "
+      },
+      {
+        "constant_pool_index": 12,
+        "value": "Add to Contact List"
+      },
+      {
+        "constant_pool_index": 13,
+        "value": "Allow"
+      },
+      {
+        "constant_pool_index": 14,
+        "value": "Call now"
+      },
+      {
+        "constant_pool_index": 15,
+        "value": "Call-through"
+      },
+      {
+        "constant_pool_index": 16,
+        "value": "Compare Rates"
+      },
+      {
+        "constant_pool_index": 17,
+        "value": "Connect"
+      },
+      {
+        "constant_pool_index": 18,
+        "value": "Connect to:"
+      },
+      {
+        "constant_pool_index": 19,
+        "value": "Connection Type"
+      },
+      {
+        "constant_pool_index": 20,
+        "value": "Connection test using "
+      },
+      {
+        "constant_pool_index": 21,
+        "value": "Continue"
+      },
+      {
+        "constant_pool_index": 22,
+        "value": "Copyright 2006 Project Goth Inc."
+      },
+      {
+        "constant_pool_index": 23,
+        "value": "Create"
+      },
+      {
+        "constant_pool_index": 24,
+        "value": "Destination Number"
+      },
+      {
+        "constant_pool_index": 25,
+        "value": "Display Name"
+      },
+      {
+        "constant_pool_index": 26,
+        "value": "Enter Code"
+      },
+      {
+        "constant_pool_index": 27,
+        "value": "Enter Security Code"
+      },
+      {
+        "constant_pool_index": 28,
+        "value": "Enter your authentication code to make calls, send SMS and receive your free credit!"
+      },
+      {
+        "constant_pool_index": 29,
+        "value": "Forgot Details"
+      },
+      {
+        "constant_pool_index": 30,
+        "value": "Google Talk"
+      },
+      {
+        "constant_pool_index": 31,
+        "value": "Gtalk Username"
+      },
+      {
+        "constant_pool_index": 32,
+        "value": "HTTP"
+      },
+      {
+        "constant_pool_index": 33,
+        "value": "Help?"
+      },
+      {
+        "constant_pool_index": 34,
+        "value": "I agree to the terms and conditions (see www.mig33.com)"
+      },
+      {
+        "constant_pool_index": 35,
+        "value": "Invite Friend"
+      },
+      {
+        "constant_pool_index": 36,
+        "value": "Invite your friends to join mig33. Get bonus credit when they activate their account."
+      },
+      {
+        "constant_pool_index": 37,
+        "value": "Login"
+      },
+      {
+        "constant_pool_index": 38,
+        "value": "MSN"
+      },
+      {
+        "constant_pool_index": 39,
+        "value": "MSN Username"
+      },
+      {
+        "constant_pool_index": 40,
+        "value": "Manual"
+      },
+      {
+        "constant_pool_index": 41,
+        "value": "Mobile Number"
+      },
+      {
+        "constant_pool_index": 42,
+        "value": "New room name"
+      },
+      {
+        "constant_pool_index": 43,
+        "value": "Or"
+      },
+      {
+        "constant_pool_index": 44,
+        "value": "Origin Number"
+      },
+      {
+        "constant_pool_index": 45,
+        "value": "Password"
+      },
+      {
+        "constant_pool_index": 46,
+        "value": "Please select your connection type below. If you are unsure, try TCP first."
+      },
+      {
+        "constant_pool_index": 47,
+        "value": "Port"
+      },
+      {
+        "constant_pool_index": 48,
+        "value": "Register"
+      },
+      {
+        "constant_pool_index": 49,
+        "value": "Registration"
+      },
+      {
+        "constant_pool_index": 50,
+        "value": "Reject"
+      },
+      {
+        "constant_pool_index": 51,
+        "value": "Remind me later"
+      },
+      {
+        "constant_pool_index": 52,
+        "value": "Resend Code"
+      },
+      {
+        "constant_pool_index": 53,
+        "value": "Room Name"
+      },
+      {
+        "constant_pool_index": 54,
+        "value": "Save"
+      },
+      {
+        "constant_pool_index": 55,
+        "value": "Save Password"
+      },
+      {
+        "constant_pool_index": 56,
+        "value": "Search"
+      },
+      {
+        "constant_pool_index": 57,
+        "value": "Server"
+      },
+      {
+        "constant_pool_index": 58,
+        "value": "Share Mobile"
+      },
+      {
+        "constant_pool_index": 59,
+        "value": "Share my mobile number"
+      },
+      {
+        "constant_pool_index": 60,
+        "value": "Share my mobile number with "
+      },
+      {
+        "constant_pool_index": 61,
+        "value": "Show offline contacts"
+      },
+      {
+        "constant_pool_index": 62,
+        "value": "Sign in as Invisible"
+      },
+      {
+        "constant_pool_index": 63,
+        "value": "Skip"
+      },
+      {
+        "constant_pool_index": 64,
+        "value": "Skip All"
+      },
+      {
+        "constant_pool_index": 65,
+        "value": "Starting mig33 for the first time. We are about to perform a few tests to ensure that the phone is configured correctly"
+      },
+      {
+        "constant_pool_index": 66,
+        "value": "Submit"
+      },
+      {
+        "constant_pool_index": 67,
+        "value": "TC"
+      },
+      {
+        "constant_pool_index": 68,
+        "value": "TCP"
+      },
+      {
+        "constant_pool_index": 69,
+        "value": "This is your mobile number. Please change it if it is incorrect."
+      },
+      {
+        "constant_pool_index": 70,
+        "value": "Type of Contact:"
+      },
+      {
+        "constant_pool_index": 71,
+        "value": "Update"
+      },
+      {
+        "constant_pool_index": 72,
+        "value": "Username"
+      },
+      {
+        "constant_pool_index": 73,
+        "value": "Ver: "
+      },
+      {
+        "constant_pool_index": 74,
+        "value": "View User"
+      },
+      {
+        "constant_pool_index": 75,
+        "value": "Wap: wap.mig33.com"
+      },
+      {
+        "constant_pool_index": 76,
+        "value": "Web: www.mig33.com"
+      },
+      {
+        "constant_pool_index": 77,
+        "value": "Yahoo!"
+      },
+      {
+        "constant_pool_index": 78,
+        "value": "Yahoo! ID"
+      },
+      {
+        "constant_pool_index": 79,
+        "value": "Your name"
+      },
+      {
+        "constant_pool_index": 80,
+        "value": "Your username and password will be sent by SMS to your mobile phone."
+      },
+      {
+        "constant_pool_index": 81,
+        "value": "mig33"
+      },
+      {
+        "constant_pool_index": 82,
+        "value": "mig33 Username"
+      }
+    ],
+    "referenced_classes": [
+      "a",
+      "com/projectgoth/Roshan/Main",
+      "com/projectgoth/Roshan/a",
+      "com/projectgoth/Roshan/b",
+      "com/projectgoth/Roshan/c",
+      "com/projectgoth/Roshan/d",
+      "java/lang/Object",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/Throwable",
+      "java/util/Vector",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics",
+      "javax/microedition/lcdui/Image",
+      "t",
+      "w"
+    ]
+  },
+  {
+    "path": "u.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "java/lang/Object",
+      "u"
+    ]
+  },
+  {
+    "path": "v.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": " "
+      },
+      {
+        "constant_pool_index": 2,
+        "value": ": "
+      },
+      {
+        "constant_pool_index": 3,
+        "value": "¤"
+      },
+      {
+        "constant_pool_index": 4,
+        "value": "±"
+      }
+    ],
+    "referenced_classes": [
+      "com/projectgoth/Roshan/c",
+      "com/projectgoth/Roshan/d",
+      "f",
+      "i",
+      "java/lang/Integer",
+      "java/lang/Object",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/Throwable",
+      "java/util/Vector",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics",
+      "n",
+      "v"
+    ]
+  },
+  {
+    "path": "w.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": "Invalid packet id:2"
+      }
+    ],
+    "referenced_classes": [
+      "[B",
+      "java/io/ByteArrayInputStream",
+      "java/io/ByteArrayOutputStream",
+      "java/io/DataInputStream",
+      "java/io/DataOutputStream",
+      "java/io/IOException",
+      "java/io/InputStream",
+      "java/io/OutputStream",
+      "java/lang/Byte",
+      "java/lang/Integer",
+      "java/lang/Object",
+      "java/lang/Short",
+      "java/lang/String",
+      "java/util/Enumeration",
+      "java/util/Hashtable",
+      "java/util/Vector",
+      "p",
+      "w"
+    ]
+  },
+  {
+    "path": "x.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "[I",
+      "java/lang/Object",
+      "javax/microedition/lcdui/Graphics",
+      "javax/microedition/lcdui/Image",
+      "x"
+    ]
+  },
+  {
+    "path": "y.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 2,
+        "value": "*"
+      }
+    ],
+    "referenced_classes": [
+      "com/projectgoth/Roshan/c",
+      "com/projectgoth/Roshan/d",
+      "java/lang/Object",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics",
+      "k",
+      "y"
+    ]
+  },
+  {
+    "path": "z.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": "&width=120&height=160"
+      },
+      {
+        "constant_pool_index": 2,
+        "value": "&width=160&height=120"
+      },
+      {
+        "constant_pool_index": 3,
+        "value": "&width=240&height=320"
+      },
+      {
+        "constant_pool_index": 4,
+        "value": "&width=288&height=352"
+      },
+      {
+        "constant_pool_index": 5,
+        "value": "&width=320&height=240"
+      },
+      {
+        "constant_pool_index": 6,
+        "value": "&width=352&height=288"
+      },
+      {
+        "constant_pool_index": 7,
+        "value": "&width=480&height=640"
+      },
+      {
+        "constant_pool_index": 8,
+        "value": "&width=640&height=480"
+      },
+      {
+        "constant_pool_index": 9,
+        "value": "EricssonW300c"
+      },
+      {
+        "constant_pool_index": 10,
+        "value": "Error"
+      },
+      {
+        "constant_pool_index": 11,
+        "value": "Nokia5300"
+      },
+      {
+        "constant_pool_index": 12,
+        "value": "Nokia6085"
+      },
+      {
+        "constant_pool_index": 13,
+        "value": "Nokia6131"
+      },
+      {
+        "constant_pool_index": 14,
+        "value": "Nokia6233"
+      },
+      {
+        "constant_pool_index": 15,
+        "value": "Processing..."
+      },
+      {
+        "constant_pool_index": 16,
+        "value": "Send Photo"
+      },
+      {
+        "constant_pool_index": 17,
+        "value": "VideoControl"
+      },
+      {
+        "constant_pool_index": 18,
+        "value": "You need to allow the application to access the mobile phone Camera. "
+      },
+      {
+        "constant_pool_index": 19,
+        "value": "capture://image"
+      },
+      {
+        "constant_pool_index": 20,
+        "value": "capture://video"
+      },
+      {
+        "constant_pool_index": 21,
+        "value": "encoding=jpeg"
+      }
+    ],
+    "referenced_classes": [
+      "com/projectgoth/Roshan/c",
+      "com/projectgoth/Roshan/d",
+      "java/lang/Exception",
+      "java/lang/SecurityException",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "javax/microedition/lcdui/Canvas",
+      "javax/microedition/lcdui/Display",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Form",
+      "javax/microedition/lcdui/Graphics",
+      "javax/microedition/lcdui/Image",
+      "javax/microedition/lcdui/Item",
+      "javax/microedition/media/Controllable",
+      "javax/microedition/media/Manager",
+      "javax/microedition/media/MediaException",
+      "javax/microedition/media/Player",
+      "javax/microedition/media/control/VideoControl",
+      "z"
+    ]
+  }
+]

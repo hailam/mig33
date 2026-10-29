@@ -1,0 +1,30 @@
+{
+  "tools": [
+    {
+      "file": "cfr-0.152.jar",
+      "download_url": "https://www.benf.org/other/cfr/cfr-0.152.jar",
+      "sha256": "f686e8f3ded377d7bc87d216a90e9e9512df4156e75b06c655a16648ae8765b2",
+      "bytes": 2162315
+    },
+    {
+      "file": "vineflower-1.12.0.jar",
+      "download_url": "https://github.com/Vineflower/vineflower/releases/download/1.12.0/vineflower-1.12.0.jar",
+      "sha256": "1dfcfe974395734fa467ce620661c7623d05ba83670de0529b1fbd63ff548b9d",
+      "bytes": 1633863
+    },
+    {
+      "file": "procyon-decompiler-0.6.0.jar",
+      "download_url": "https://github.com/mstrobel/procyon/releases/download/v0.6.0/procyon-decompiler-0.6.0.jar",
+      "sha256": "821da96012fc69244fa1ea298c90455ee4e021434bc796d3b9546ab24601b779",
+      "bytes": 2004704
+    },
+    {
+      "file": "microemulator-2.0.4.jar",
+      "download_url": "https://repo.maven.apache.org/maven2/org/microemu/microemulator/2.0.4/microemulator-2.0.4.jar",
+      "sha256": "dbd5f3eb8365d3e839d6a203149e0e3776fc1a0585e16ac1fc23f76c9fcae1c6",
+      "bytes": 643996
+    }
+  ],
+  "java_runtime": "openjdk version \"26.0.1\" 2026-04-21\nOpenJDK Runtime Environment Homebrew (build 26.0.1)\nOpenJDK 64-Bit Server VM Homebrew (build 26.0.1, mixed mode, sharing)",
+  "note": "Hashes describe the retrieved tool bytes; they are not a claim of independent signature verification."
+}

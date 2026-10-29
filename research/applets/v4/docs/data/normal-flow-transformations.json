@@ -1,0 +1,1422 @@
+[
+  {
+    "class": "ao.class",
+    "method": "a(Ljavax/microedition/lcdui/Graphics;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "ao.class",
+    "method": "d()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "ao.class",
+    "method": "c()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "ao.class",
+    "method": "b()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "ao.class",
+    "method": "a()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "ao.class",
+    "method": "e()V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "ao.class",
+    "method": "run()V",
+    "removed_handlers": 17
+  },
+  {
+    "class": "al.class",
+    "method": "run()V",
+    "removed_handlers": 4
+  },
+  {
+    "class": "af.class",
+    "method": "run()V",
+    "removed_handlers": 3
+  },
+  {
+    "class": "af.class",
+    "method": "a(Ljava/lang/Object;)Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "paint(Ljavax/microedition/lcdui/Graphics;)V",
+    "removed_handlers": 8
+  },
+  {
+    "class": "aj.class",
+    "method": "keyPressed(I)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "commandAction(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+    "removed_handlers": 13
+  },
+  {
+    "class": "aj.class",
+    "method": "a(Ljava/lang/String;Lbl;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "c(Z)V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "aj.class",
+    "method": "d()V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "aj.class",
+    "method": "D()V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "aj.class",
+    "method": "a([B)[Ljavax/microedition/lcdui/Image;",
+    "removed_handlers": 2
+  },
+  {
+    "class": "aj.class",
+    "method": "b([B)[Ljava/lang/Object;",
+    "removed_handlers": 2
+  },
+  {
+    "class": "aj.class",
+    "method": "c(Lay;)Z",
+    "removed_handlers": 5
+  },
+  {
+    "class": "aj.class",
+    "method": "g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;",
+    "removed_handlers": 2
+  },
+  {
+    "class": "aj.class",
+    "method": "a(Ljava/lang/String;Ljava/lang/String;III)V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "aj.class",
+    "method": "ac()Ly;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "i()Ly;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "ai()Lay;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "ad()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "j()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "k()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "b()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "a()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "a(Lay;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "f(Ljava/lang/String;)Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "g(Ljava/lang/String;)Ljavax/microedition/lcdui/Image;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "a(Ljava/lang/String;Ljavax/microedition/lcdui/Image;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "k(Ljava/lang/String;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "c(Ljava/lang/String;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "ah()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "e()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "d(I)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "a(Ljavax/microedition/rms/RecordStore;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "run()V",
+    "removed_handlers": 21
+  },
+  {
+    "class": "aj.class",
+    "method": "<init>(Lmain/Main;)V",
+    "removed_handlers": 8
+  },
+  {
+    "class": "aj.class",
+    "method": "b(Z)Lay;",
+    "removed_handlers": 3
+  },
+  {
+    "class": "aj.class",
+    "method": "a(Z)Lay;",
+    "removed_handlers": 3
+  },
+  {
+    "class": "aj.class",
+    "method": "j(Ljava/lang/String;)Lay;",
+    "removed_handlers": 5
+  },
+  {
+    "class": "aj.class",
+    "method": "a(Ljava/lang/String;Z)V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "aj.class",
+    "method": "c(Ljava/lang/String;Z)Ljavax/microedition/lcdui/Image;",
+    "removed_handlers": 3
+  },
+  {
+    "class": "aj.class",
+    "method": "a(Ljava/lang/String;[B)Z",
+    "removed_handlers": 11
+  },
+  {
+    "class": "aj.class",
+    "method": "d(Lay;)V",
+    "removed_handlers": 3
+  },
+  {
+    "class": "aj.class",
+    "method": "l()Ljava/util/Vector;",
+    "removed_handlers": 2
+  },
+  {
+    "class": "aj.class",
+    "method": "n(I)Lay;",
+    "removed_handlers": 2
+  },
+  {
+    "class": "aj.class",
+    "method": "b(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;",
+    "removed_handlers": 2
+  },
+  {
+    "class": "aj.class",
+    "method": "b(II)V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "aj.class",
+    "method": "k(I)I",
+    "removed_handlers": 2
+  },
+  {
+    "class": "aj.class",
+    "method": "n(Ljava/lang/String;)J",
+    "removed_handlers": 2
+  },
+  {
+    "class": "aj.class",
+    "method": "b(Ljava/lang/String;[B)V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "aj.class",
+    "method": "a(Ljava/lang/String;Ljava/lang/String;)V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "aj.class",
+    "method": "a(Li;Z)Li;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "B()Z",
+    "removed_handlers": 3
+  },
+  {
+    "class": "aj.class",
+    "method": "f(Ljava/lang/String;Ljava/lang/String;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "b(Lay;)Z",
+    "removed_handlers": 3
+  },
+  {
+    "class": "aj.class",
+    "method": "c(Ljava/lang/String;Ljava/lang/String;)V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "aj.class",
+    "method": "at()V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "aj.class",
+    "method": "a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[B)V",
+    "removed_handlers": 4
+  },
+  {
+    "class": "aj.class",
+    "method": "e(Ljava/lang/String;)Li;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "a(Ljava/lang/String;Ljava/lang/String;ZZLbl;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "al()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "sizeChanged(II)V",
+    "removed_handlers": 3
+  },
+  {
+    "class": "aj.class",
+    "method": "v()Ljava/lang/String;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "an()Ljava/lang/String;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "u()Ljava/lang/String;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "w()Ljava/lang/String;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "aj.class",
+    "method": "x()Ljava/lang/String;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "s.class",
+    "method": "h()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "s.class",
+    "method": "n()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "s.class",
+    "method": "m()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "s.class",
+    "method": "i()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "s.class",
+    "method": "k()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "s.class",
+    "method": "j()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "s.class",
+    "method": "l()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "s.class",
+    "method": "a(Ljavax/microedition/lcdui/Graphics;)V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "s.class",
+    "method": "a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;SIILjava/lang/String;ZLjava/lang/String;I)Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "s.class",
+    "method": "a(ILjavax/microedition/lcdui/Graphics;Ljava/lang/String;I)I",
+    "removed_handlers": 1
+  },
+  {
+    "class": "s.class",
+    "method": "c()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "s.class",
+    "method": "b(Ljavax/microedition/lcdui/Graphics;)V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "au.class",
+    "method": "a(Lt;ZZZ)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "e()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "i()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "h()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "g()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "f()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "l()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "j()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "k()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "run()V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "au.class",
+    "method": "a(Z)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "i(I)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "o()Ljava/util/Vector;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "t()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "s()V",
+    "removed_handlers": 3
+  },
+  {
+    "class": "au.class",
+    "method": "a(Ljava/lang/String;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "a(Ljava/lang/String;Ljava/lang/String;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "a(ILjava/lang/String;Ljava/lang/String;)Lt;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "m()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "a(I)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "a(I[B[BI)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "a([B)Lt;",
+    "removed_handlers": 4
+  },
+  {
+    "class": "au.class",
+    "method": "a(Lt;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "a(ZI)Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "a(ILjava/lang/String;)Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "d(I)Ljava/util/Vector;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "b(Z)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "g(Lt;)I",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "c(I)I",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "b(I)I",
+    "removed_handlers": 1
+  },
+  {
+    "class": "au.class",
+    "method": "b([B)Lt;",
+    "removed_handlers": 2
+  },
+  {
+    "class": "au.class",
+    "method": "j(Lt;)[B",
+    "removed_handlers": 2
+  },
+  {
+    "class": "au.class",
+    "method": "c(Lt;)V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "au.class",
+    "method": "e(Lt;)V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "au.class",
+    "method": "d(Lt;)V",
+    "removed_handlers": 4
+  },
+  {
+    "class": "au.class",
+    "method": "b(Lt;)Z",
+    "removed_handlers": 4
+  },
+  {
+    "class": "au.class",
+    "method": "i(Lt;)I",
+    "removed_handlers": 2
+  },
+  {
+    "class": "au.class",
+    "method": "l(Lt;)I",
+    "removed_handlers": 2
+  },
+  {
+    "class": "au.class",
+    "method": "r()Z",
+    "removed_handlers": 2
+  },
+  {
+    "class": "au.class",
+    "method": "p()Z",
+    "removed_handlers": 2
+  },
+  {
+    "class": "au.class",
+    "method": "q()Z",
+    "removed_handlers": 3
+  },
+  {
+    "class": "au.class",
+    "method": "a(Ljavax/microedition/lcdui/Graphics;Z)I",
+    "removed_handlers": 2
+  },
+  {
+    "class": "k.class",
+    "method": "i()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "e()I",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "f()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "c()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "g(I)V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "k.class",
+    "method": "j(I)V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "k.class",
+    "method": "f(I)Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "a(IZ)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "run()V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "k.class",
+    "method": "d()V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "k.class",
+    "method": "g()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "a(I)Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "a(Lbl;)I",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "b(I)I",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "a(Ljava/lang/String;IILjava/lang/String;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "a(Ljava/lang/String;)I",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "a(Ljava/lang/String;I)I",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "a(ILjava/lang/String;)I",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "b(ILs;Lbl;Z)Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "a(Ljava/lang/String;IILjava/lang/String;ILjava/lang/String;)Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "h()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "a(Ljavax/microedition/lcdui/Graphics;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "a(II)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "a(Lt;II)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "a(Ljava/lang/String;Ljava/lang/String;B)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "a(ILs;Lbl;Z)Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "j()Ly;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "k.class",
+    "method": "a(IILjava/lang/String;ILjava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;SIILjava/lang/String;Ljava/lang/String;I)V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "h.class",
+    "method": "run()V",
+    "removed_handlers": 8
+  },
+  {
+    "class": "h.class",
+    "method": "a()Ljava/util/Vector;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "a(Ljavax/microedition/lcdui/Graphics;II)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "b(Ljavax/microedition/lcdui/Graphics;I)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "a(Ljava/lang/String;Ljavax/microedition/lcdui/Font;ILjava/lang/String;I)Ljava/util/Vector;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "d(I)Ljavax/microedition/lcdui/Image;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "b(Ljava/lang/String;)V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "y.class",
+    "method": "a()Ljava/lang/String;",
+    "removed_handlers": 2
+  },
+  {
+    "class": "y.class",
+    "method": "a(Ljavax/microedition/lcdui/Graphics;IIIIIZZILjavax/microedition/lcdui/Image;I)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "a(ILjava/lang/String;BLjava/lang/String;IZLjava/lang/String;Z)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "a(ILjava/lang/String;BLjava/lang/String;IZLjava/lang/String;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "a(Ljava/lang/String;Ljava/lang/String;Z)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "a(Ljava/lang/String;Ljava/lang/String;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "a(IILjava/lang/String;BLjava/lang/String;Ljava/lang/String;ZLjava/lang/String;Z)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "a(IILjava/lang/String;BLjava/lang/String;ILjava/lang/String;Z)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "b(Ljava/io/InputStreamReader;)Ljava/lang/String;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "run()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "c()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "d()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "l()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "j()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "q()V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "y.class",
+    "method": "g()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "f()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "p()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "e()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "e(Ljava/lang/String;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "d(Ljava/lang/String;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "m()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "o()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "y.class",
+    "method": "b(Ljava/lang/String;ILjavax/microedition/lcdui/Graphics;)Ljava/lang/String;",
+    "removed_handlers": 4
+  },
+  {
+    "class": "y.class",
+    "method": "b(Ljava/util/Hashtable;)Z",
+    "removed_handlers": 11
+  },
+  {
+    "class": "y.class",
+    "method": "h(Ljava/lang/String;)Ljava/util/Hashtable;",
+    "removed_handlers": 8
+  },
+  {
+    "class": "y.class",
+    "method": "a(Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;",
+    "removed_handlers": 6
+  },
+  {
+    "class": "y.class",
+    "method": "i()V",
+    "removed_handlers": 3
+  },
+  {
+    "class": "y.class",
+    "method": "e()Z",
+    "removed_handlers": 2
+  },
+  {
+    "class": "u.class",
+    "method": "e()V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "u.class",
+    "method": "d()V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "u.class",
+    "method": "g()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "u.class",
+    "method": "a(Ljava/lang/String;Ljava/lang/String;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "u.class",
+    "method": "a()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "u.class",
+    "method": "a(Lbc;)Lu;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "u.class",
+    "method": "a(SLjava/lang/String;)Lay;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "u.class",
+    "method": "a(SLjava/lang/String;Z)Lay;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "u.class",
+    "method": "run()V",
+    "removed_handlers": 4
+  },
+  {
+    "class": "u.class",
+    "method": "b(Ljava/lang/String;Ljava/lang/String;)[B",
+    "removed_handlers": 3
+  },
+  {
+    "class": "u.class",
+    "method": "a(Lay;I)[Lay;",
+    "removed_handlers": 9
+  },
+  {
+    "class": "bd.class",
+    "method": "run()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bc.class",
+    "method": "i()I",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bc.class",
+    "method": "b(S)Z",
+    "removed_handlers": 2
+  },
+  {
+    "class": "bc.class",
+    "method": "c(S)V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "bc.class",
+    "method": "b(J)Lay;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bc.class",
+    "method": "c(J)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bc.class",
+    "method": "b(Lay;)V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "bc.class",
+    "method": "run()V",
+    "removed_handlers": 16
+  },
+  {
+    "class": "bc.class",
+    "method": "a([Lay;)V",
+    "removed_handlers": 8
+  },
+  {
+    "class": "bj.class",
+    "method": "run()V",
+    "removed_handlers": 7
+  },
+  {
+    "class": "bj.class",
+    "method": "a(Ljavax/microedition/lcdui/Graphics;Ljava/util/Vector;I)Ljava/lang/String;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "a(Ljavax/microedition/lcdui/Graphics;)I",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "a(Z)Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "f()Ljava/util/Vector;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "g()Ljava/util/Vector;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "b(S)Lbj;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "b(Lbj;Z)Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "a(Lbj;Z)Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "b(Lbj;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "b(I)Lbj;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "a(S)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "a(ZLbj;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "a(Ljava/lang/String;Ljavax/microedition/lcdui/Image;Ljava/lang/String;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "a(Ljava/lang/String;Ljava/lang/String;II)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "a(SLjava/lang/String;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "a(Ljava/lang/String;SZZZ)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "i()[B",
+    "removed_handlers": 2
+  },
+  {
+    "class": "bj.class",
+    "method": "j()[Ljava/lang/String;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "f()Ljava/lang/Long;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "g()Ljava/lang/Short;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "e()Ljava/lang/Integer;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "e()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "c()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "e()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "d()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "c()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "l()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "b()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "a(Lbj;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "q()I",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "d()Ljava/lang/String;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "l()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "j()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "k()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "g()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "h()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "i()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "f()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "<init>(S[Ljava/lang/String;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "<init>(SLjava/lang/String;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "a(II)Z",
+    "removed_handlers": 2
+  },
+  {
+    "class": "bj.class",
+    "method": "matches([B)Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bj.class",
+    "method": "h()Ljava/lang/String;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "d.class",
+    "method": "a()V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "d.class",
+    "method": "run()V",
+    "removed_handlers": 20
+  },
+  {
+    "class": "d.class",
+    "method": "<init>(Laj;)V",
+    "removed_handlers": 5
+  },
+  {
+    "class": "bl.class",
+    "method": "m()Ljava/lang/String;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bl.class",
+    "method": "a(Ljava/lang/String;)Lbj;",
+    "removed_handlers": 2
+  },
+  {
+    "class": "bl.class",
+    "method": "a(Ljava/lang/String;J[B)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bl.class",
+    "method": "a(Ljava/lang/String;Ljava/lang/String;[BJ)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "bl.class",
+    "method": "run()V",
+    "removed_handlers": 3
+  },
+  {
+    "class": "bl.class",
+    "method": "c()V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "bl.class",
+    "method": "a(Ljava/lang/String;Ljava/lang/String;ZZZ)V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "t.class",
+    "method": "a(Lt;)[B",
+    "removed_handlers": 2
+  },
+  {
+    "class": "t.class",
+    "method": "a(Ljava/lang/String;)Ljava/lang/String;",
+    "removed_handlers": 1
+  },
+  {
+    "class": "t.class",
+    "method": "b(Ljava/lang/String;)I",
+    "removed_handlers": 1
+  },
+  {
+    "class": "av.class",
+    "method": "run()V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "av.class",
+    "method": "g()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "av.class",
+    "method": "f()Z",
+    "removed_handlers": 1
+  },
+  {
+    "class": "av.class",
+    "method": "a(Ljavax/microedition/lcdui/Graphics;)V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "j.class",
+    "method": "a(Ljavax/microedition/rms/RecordStore;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "j.class",
+    "method": "a(Ljava/lang/String;)V",
+    "removed_handlers": 1
+  },
+  {
+    "class": "j.class",
+    "method": "a(IJ)Z",
+    "removed_handlers": 2
+  },
+  {
+    "class": "j.class",
+    "method": "b(II)V",
+    "removed_handlers": 3
+  },
+  {
+    "class": "j.class",
+    "method": "a(II)V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "j.class",
+    "method": "b()V",
+    "removed_handlers": 2
+  },
+  {
+    "class": "j.class",
+    "method": "a(Lay;)V",
+    "removed_handlers": 4
+  },
+  {
+    "class": "j.class",
+    "method": "c()Z",
+    "removed_handlers": 2
+  },
+  {
+    "class": "j.class",
+    "method": "c(I)Ljava/lang/String;",
+    "removed_handlers": 2
+  },
+  {
+    "class": "j.class",
+    "method": "b(Ljava/lang/String;)Ljava/lang/String;",
+    "removed_handlers": 2
+  },
+  {
+    "class": "j.class",
+    "method": "<clinit>()V",
+    "removed_handlers": 6
+  }
+]

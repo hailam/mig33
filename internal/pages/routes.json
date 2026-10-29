@@ -1,0 +1,423 @@
+{
+  "source": "research/applets/v4/docs/data/endpoints-classified.json",
+  "version": "4.62",
+  "description": "All52 relative embedded-page templates. Dispatch uses path and c/a/v; remaining query parameters are page data. This catalog declares recognition, not implementation.",
+  "routes": [
+    {
+      "id": "L001",
+      "template": "/sites/index.php?c=account&a=get_history&v=midlet",
+      "controller": "account",
+      "action": "get_history",
+      "view": "midlet",
+      "purpose": "Account history"
+    },
+    {
+      "id": "L002",
+      "template": "/sites/index.php?c=account&a=home&v=midlet",
+      "controller": "account",
+      "action": "home",
+      "view": "midlet",
+      "purpose": "Account overview"
+    },
+    {
+      "id": "L003",
+      "template": "/sites/index.php?c=account&a=recharge_credit&v=midlet",
+      "controller": "account",
+      "action": "recharge_credit",
+      "view": "midlet",
+      "purpose": "Recharge credit"
+    },
+    {
+      "id": "L004",
+      "template": "/sites/index.php?c=account&v=midlet&a=transfer_credit",
+      "controller": "account",
+      "action": "transfer_credit",
+      "view": "midlet",
+      "purpose": "Transfer credit page"
+    },
+    {
+      "id": "L005",
+      "template": "/sites/index.php?c=account&v=midlet&a=transfer_credit&recipient_username=%s",
+      "controller": "account",
+      "action": "transfer_credit",
+      "view": "midlet",
+      "purpose": "Transfer credit page"
+    },
+    {
+      "id": "L006",
+      "template": "/sites/index.php?c=avatar&v=midlet&a=home",
+      "controller": "avatar",
+      "action": "home",
+      "view": "midlet",
+      "purpose": "Avatar selection"
+    },
+    {
+      "id": "L007",
+      "template": "/sites/index.php?c=bot&a=bot_list&v=midlet",
+      "controller": "bot",
+      "action": "bot_list",
+      "view": "midlet",
+      "purpose": "Games / bot list"
+    },
+    {
+      "id": "L008",
+      "template": "/sites/index.php?c=buzz&a=home&v=midlet%s",
+      "controller": "buzz",
+      "action": "home",
+      "view": "midlet",
+      "purpose": "Buzz page"
+    },
+    {
+      "id": "L009",
+      "template": "/sites/index.php?c=call&a=home&v=midlet&f=call&number_to_call=%s",
+      "controller": "call",
+      "action": "home",
+      "view": "midlet",
+      "purpose": "Call setup page"
+    },
+    {
+      "id": "L010",
+      "template": "/sites/index.php?c=chatroom&a=create&v=midlet",
+      "controller": "chatroom",
+      "action": "create",
+      "view": "midlet",
+      "purpose": "Create chat room page"
+    },
+    {
+      "id": "L011",
+      "template": "/sites/index.php?c=chatroom&a=search&v=midlet",
+      "controller": "chatroom",
+      "action": "search",
+      "view": "midlet",
+      "purpose": "Search chat rooms"
+    },
+    {
+      "id": "L012",
+      "template": "/sites/index.php?c=chatroom&v=midlet&a=setup&roomName=%s",
+      "controller": "chatroom",
+      "action": "setup",
+      "view": "midlet",
+      "purpose": "Room information / settings"
+    },
+    {
+      "id": "L013",
+      "template": "/sites/index.php?c=email&a=compose&v=midlet%s",
+      "controller": "email",
+      "action": "compose",
+      "view": "midlet",
+      "purpose": "Compose mail"
+    },
+    {
+      "id": "L014",
+      "template": "/sites/index.php?c=group&v=midlet&a=add_to_group&roomName=%s",
+      "controller": "group",
+      "action": "add_to_group",
+      "view": "midlet",
+      "purpose": "Link / add room to a group"
+    },
+    {
+      "id": "L015",
+      "template": "/sites/index.php?c=group&v=midlet&a=home",
+      "controller": "group",
+      "action": "home",
+      "view": "midlet",
+      "purpose": "Group home"
+    },
+    {
+      "id": "L016",
+      "template": "/sites/index.php?c=group&v=midlet&a=list_chatrooms",
+      "controller": "group",
+      "action": "list_chatrooms",
+      "view": "midlet",
+      "purpose": "Group chat rooms"
+    },
+    {
+      "id": "L017",
+      "template": "/sites/index.php?c=group&v=midlet&a=list_groups_home&e=3",
+      "controller": "group",
+      "action": "list_groups_home",
+      "view": "midlet",
+      "purpose": "Discover groups"
+    },
+    {
+      "id": "L018",
+      "template": "/sites/index.php?c=group&v=midlet&a=list_my_groups&e=3",
+      "controller": "group",
+      "action": "list_my_groups",
+      "view": "midlet",
+      "purpose": "My groups"
+    },
+    {
+      "id": "L019",
+      "template": "/sites/index.php?c=group&v=midlet&a=members",
+      "controller": "group",
+      "action": "members",
+      "view": "midlet",
+      "purpose": "Group members"
+    },
+    {
+      "id": "L020",
+      "template": "/sites/index.php?c=group&v=midlet&a=view_forum",
+      "controller": "group",
+      "action": "view_forum",
+      "view": "midlet",
+      "purpose": "Group forum"
+    },
+    {
+      "id": "L021",
+      "template": "/sites/index.php?c=help&a=contact_us&v=midlet%s",
+      "controller": "help",
+      "action": "contact_us",
+      "view": "midlet",
+      "purpose": "Contact support page"
+    },
+    {
+      "id": "L022",
+      "template": "/sites/index.php?c=help&a=main&v=midlet",
+      "controller": "help",
+      "action": "main",
+      "view": "midlet",
+      "purpose": "Help home"
+    },
+    {
+      "id": "L023",
+      "template": "/sites/index.php?c=im&a=setup_im&im=%s&v=midlet",
+      "controller": "im",
+      "action": "setup_im",
+      "view": "midlet",
+      "purpose": "External IM account setup"
+    },
+    {
+      "id": "L024",
+      "template": "/sites/index.php?c=leaderboard&v=midlet&a=home",
+      "controller": "leaderboard",
+      "action": "home",
+      "view": "midlet",
+      "purpose": "Leaderboard"
+    },
+    {
+      "id": "L025",
+      "template": "/sites/index.php?c=location&a=checkin&v=midlet&f=",
+      "controller": "location",
+      "action": "checkin",
+      "view": "midlet",
+      "purpose": "Location check-in page"
+    },
+    {
+      "id": "L026",
+      "template": "/sites/index.php?c=lookout&a=home&v=midlet%s",
+      "controller": "lookout",
+      "action": "home",
+      "view": "midlet",
+      "purpose": "Lookout page"
+    },
+    {
+      "id": "L027",
+      "template": "/sites/index.php?c=merchant&v=midlet&a=dashboard",
+      "controller": "merchant",
+      "action": "dashboard",
+      "view": "midlet",
+      "purpose": "Merchant dashboard"
+    },
+    {
+      "id": "L028",
+      "template": "/sites/index.php?c=migworld&a=get_mobpage&v=midlet",
+      "controller": "migworld",
+      "action": "get_mobpage",
+      "view": "midlet",
+      "purpose": "migWorld / discovery page"
+    },
+    {
+      "id": "L029",
+      "template": "/sites/index.php?c=migworld&v=midlet&a=get_mobpage",
+      "controller": "migworld",
+      "action": "get_mobpage",
+      "view": "midlet",
+      "purpose": "migWorld / discovery page"
+    },
+    {
+      "id": "L030",
+      "template": "/sites/index.php?c=photo&a=home&v=midlet",
+      "controller": "photo",
+      "action": "home",
+      "view": "midlet",
+      "purpose": "Photos / scrapbook page"
+    },
+    {
+      "id": "L031",
+      "template": "/sites/index.php?c=photo&v=midlet&a=home&f=sendfromphoto",
+      "controller": "photo",
+      "action": "home",
+      "view": "midlet",
+      "purpose": "Photos / scrapbook page"
+    },
+    {
+      "id": "L032",
+      "template": "/sites/index.php?c=photo&v=midlet&username=%s&a=home",
+      "controller": "photo",
+      "action": "home",
+      "view": "midlet",
+      "purpose": "Photos / scrapbook page"
+    },
+    {
+      "id": "L033",
+      "template": "/sites/index.php?c=photos&a=wall&v=midlet",
+      "controller": "photos",
+      "action": "wall",
+      "view": "midlet",
+      "purpose": "migPhotos wall"
+    },
+    {
+      "id": "L034",
+      "template": "/sites/index.php?c=profile&a=edit&v=midlet",
+      "controller": "profile",
+      "action": "edit",
+      "view": "midlet",
+      "purpose": "Edit profile page"
+    },
+    {
+      "id": "L035",
+      "template": "/sites/index.php?c=profile&a=home&v=midlet",
+      "controller": "profile",
+      "action": "home",
+      "view": "midlet",
+      "purpose": "Own or selected user profile"
+    },
+    {
+      "id": "L036",
+      "template": "/sites/index.php?c=profile&a=search&v=midlet",
+      "controller": "profile",
+      "action": "search",
+      "view": "midlet",
+      "purpose": "Search people"
+    },
+    {
+      "id": "L037",
+      "template": "/sites/index.php?c=profile&a=user_blog_posts&v=midlet&username=%s",
+      "controller": "profile",
+      "action": "user_blog_posts",
+      "view": "midlet",
+      "purpose": "User blog posts"
+    },
+    {
+      "id": "L038",
+      "template": "/sites/index.php?c=profile&v=midlet&a=home&username=%s",
+      "controller": "profile",
+      "action": "home",
+      "view": "midlet",
+      "purpose": "Own or selected user profile"
+    },
+    {
+      "id": "L039",
+      "template": "/sites/index.php?c=report&a=report_abuse&v=midlet&type=4&subject=Chatroom&subject_id=%s",
+      "controller": "report",
+      "action": "report_abuse",
+      "view": "midlet",
+      "purpose": "Report room / group-chat abuse page"
+    },
+    {
+      "id": "L040",
+      "template": "/sites/index.php?c=report&a=report_abuse&v=midlet&type=4&subject=Group%20Chat&subject_id=%s",
+      "controller": "report",
+      "action": "report_abuse",
+      "view": "midlet",
+      "purpose": "Report room / group-chat abuse page"
+    },
+    {
+      "id": "L041",
+      "template": "/sites/index.php?c=settings&a=block_list&v=midlet",
+      "controller": "settings",
+      "action": "block_list",
+      "view": "midlet",
+      "purpose": "Manage blocked users"
+    },
+    {
+      "id": "L042",
+      "template": "/sites/index.php?c=settings&a=call_by_name&v=midlet",
+      "controller": "settings",
+      "action": "call_by_name",
+      "view": "midlet",
+      "purpose": "Call-by-name settings"
+    },
+    {
+      "id": "L043",
+      "template": "/sites/index.php?c=settings&a=change_password&v=midlet",
+      "controller": "settings",
+      "action": "change_password",
+      "view": "midlet",
+      "purpose": "Change password page"
+    },
+    {
+      "id": "L044",
+      "template": "/sites/index.php?c=settings&a=change_tab_order&v=midlet",
+      "controller": "settings",
+      "action": "change_tab_order",
+      "view": "midlet",
+      "purpose": "Tab-order settings"
+    },
+    {
+      "id": "L045",
+      "template": "/sites/index.php?c=settings&a=chat_privacy&v=midlet",
+      "controller": "settings",
+      "action": "chat_privacy",
+      "view": "midlet",
+      "purpose": "Chat privacy settings"
+    },
+    {
+      "id": "L046",
+      "template": "/sites/index.php?c=settings&a=profile_privacy_settings&v=midlet",
+      "controller": "settings",
+      "action": "profile_privacy_settings",
+      "view": "midlet",
+      "purpose": "Profile privacy settings"
+    },
+    {
+      "id": "L047",
+      "template": "/sites/index.php?c=settings&a=view_update_settings&v=midlet",
+      "controller": "settings",
+      "action": "view_update_settings",
+      "view": "midlet",
+      "purpose": "Activity update settings"
+    },
+    {
+      "id": "L048",
+      "template": "/sites/index.php?c=settings&v=midlet&a=change_mobile",
+      "controller": "settings",
+      "action": "change_mobile",
+      "view": "midlet",
+      "purpose": "Change mobile number page"
+    },
+    {
+      "id": "L049",
+      "template": "/sites/index.php?c=sms&a=home&v=midlet&f=sms&to_number=%s",
+      "controller": "sms",
+      "action": "home",
+      "view": "midlet",
+      "purpose": "Compose SMS page"
+    },
+    {
+      "id": "L050",
+      "template": "/sites/index.php?c=store&a=home&e=3&ty=5&v=midlet",
+      "controller": "store",
+      "action": "home",
+      "view": "midlet",
+      "purpose": "Gift or theme store"
+    },
+    {
+      "id": "L051",
+      "template": "/sites/index.php?c=store&v=midlet&a=home&e=3&ty=1&username=%s",
+      "controller": "store",
+      "action": "home",
+      "view": "midlet",
+      "purpose": "Gift or theme store"
+    },
+    {
+      "id": "L052",
+      "template": "/sites/index.php?c=store&v=midlet&a=main&id=111",
+      "controller": "store",
+      "action": "main",
+      "view": "midlet",
+      "purpose": "Store home"
+    }
+  ]
+}

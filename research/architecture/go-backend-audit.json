@@ -1,0 +1,1271 @@
+{
+  "recorded_on": "2026-10-29",
+  "selected_go_version": "1.27.3",
+  "scope": "Read-only production source audit; tests excluded. Counts describe source call sites, not unique queries or execution counts.",
+  "repository_feature_operations": 124,
+  "repository_lifecycle_operations": 1,
+  "repository_background_calls": 242,
+  "repository_begin_calls": 44,
+  "migration_begin_calls": 1,
+  "inventory": {
+    "internal/adapters/sqlite/repositories": {
+      "background": 242,
+      "begin": 44,
+      "files": {
+        "internal/adapters/sqlite/repositories/blocks.go": {
+          "background": 5,
+          "begin": 1,
+          "functions": [
+            {
+              "name": "SetBlocked",
+              "line": 15,
+              "background": 3,
+              "begin": 1
+            },
+            {
+              "name": "BlockedUsers",
+              "line": 51,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "isBlocked",
+              "line": 59,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/commerce.go": {
+          "background": 16,
+          "begin": 2,
+          "functions": [
+            {
+              "name": "CreditBalance",
+              "line": 35,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "CreditOperationWithNote",
+              "line": 53,
+              "background": 10,
+              "begin": 1
+            },
+            {
+              "name": "CreditHistory",
+              "line": 174,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "OwnedStoreItems",
+              "line": 185,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "SelectedStoreTheme",
+              "line": 197,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "SelectStoreTheme",
+              "line": 204,
+              "background": 2,
+              "begin": 1
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/community.go": {
+          "background": 23,
+          "begin": 4,
+          "functions": [
+            {
+              "name": "Community",
+              "line": 22,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "Communities",
+              "line": 26,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "CommunityRole",
+              "line": 37,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "CreateCommunity",
+              "line": 47,
+              "background": 4,
+              "begin": 1
+            },
+            {
+              "name": "CommunityMembership",
+              "line": 92,
+              "background": 5,
+              "begin": 1
+            },
+            {
+              "name": "CommunityMembers",
+              "line": 195,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "LinkCommunityRoom",
+              "line": 218,
+              "background": 4,
+              "begin": 1
+            },
+            {
+              "name": "CommunityRooms",
+              "line": 256,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "AddCommunityPost",
+              "line": 279,
+              "background": 4,
+              "begin": 1
+            },
+            {
+              "name": "CommunityPosts",
+              "line": 314,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/contacts.go": {
+          "background": 32,
+          "begin": 8,
+          "functions": [
+            {
+              "name": "EnsureContacts",
+              "line": 35,
+              "background": 3,
+              "begin": 1
+            },
+            {
+              "name": "contactSnapshot",
+              "line": 87,
+              "background": 4,
+              "begin": 1
+            },
+            {
+              "name": "AddContact",
+              "line": 159,
+              "background": 6,
+              "begin": 1
+            },
+            {
+              "name": "UpdateContact",
+              "line": 227,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "DeleteContact",
+              "line": 276,
+              "background": 1,
+              "begin": 1
+            },
+            {
+              "name": "AddContactGroup",
+              "line": 303,
+              "background": 4,
+              "begin": 1
+            },
+            {
+              "name": "RenameContactGroup",
+              "line": 341,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "DeleteContactGroup",
+              "line": 373,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "deleteContactMarker",
+              "line": 406,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "advanceContacts",
+              "line": 411,
+              "background": 2,
+              "begin": 0
+            },
+            {
+              "name": "requireContactGroup",
+              "line": 427,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "uniqueContactGroupName",
+              "line": 441,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "insertContact",
+              "line": 523,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "readContact",
+              "line": 538,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "readContactIdentity",
+              "line": 545,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/gifts.go": {
+          "background": 6,
+          "begin": 1,
+          "functions": [
+            {
+              "name": "allowGift",
+              "line": 20,
+              "background": 2,
+              "begin": 0
+            },
+            {
+              "name": "GiftNote",
+              "line": 48,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "giftRating",
+              "line": 58,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "RateGift",
+              "line": 73,
+              "background": 2,
+              "begin": 1
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/groups.go": {
+          "background": 11,
+          "begin": 4,
+          "functions": [
+            {
+              "name": "CreateGroup",
+              "line": 21,
+              "background": 3,
+              "begin": 1
+            },
+            {
+              "name": "Invite",
+              "line": 75,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "Leave",
+              "line": 130,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "Group",
+              "line": 165,
+              "background": 0,
+              "begin": 1
+            },
+            {
+              "name": "Groups",
+              "line": 192,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "authorizeGroup",
+              "line": 211,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "readGroup",
+              "line": 225,
+              "background": 2,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/identity.go": {
+          "background": 24,
+          "begin": 4,
+          "functions": [
+            {
+              "name": "Identity",
+              "line": 22,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "IdentityByMobile",
+              "line": 26,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "Identities",
+              "line": 33,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "SeedIdentity",
+              "line": 61,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "CreateIdentityChallenge",
+              "line": 71,
+              "background": 3,
+              "begin": 1
+            },
+            {
+              "name": "IdentityChallenge",
+              "line": 96,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "FailIdentityChallenge",
+              "line": 104,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "ConsumeIdentityChallenge",
+              "line": 109,
+              "background": 0,
+              "begin": 1
+            },
+            {
+              "name": "consumeIdentityChallenge",
+              "line": 120,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "RegisterIdentity",
+              "line": 133,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "UpdateIdentityField",
+              "line": 163,
+              "background": 4,
+              "begin": 0
+            },
+            {
+              "name": "SetIdentityMobile",
+              "line": 201,
+              "background": 2,
+              "begin": 0
+            },
+            {
+              "name": "ActivateIdentity",
+              "line": 221,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "ReplaceIdentityPassword",
+              "line": 232,
+              "background": 3,
+              "begin": 1
+            },
+            {
+              "name": "SetIdentityPreference",
+              "line": 278,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "IdentityPreference",
+              "line": 292,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/messages.go": {
+          "background": 11,
+          "begin": 2,
+          "functions": [
+            {
+              "name": "SaveMessage",
+              "line": 36,
+              "background": 5,
+              "begin": 1
+            },
+            {
+              "name": "Pending",
+              "line": 177,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "MarkDelivered",
+              "line": 192,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "History",
+              "line": 217,
+              "background": 4,
+              "begin": 1
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/moderation.go": {
+          "background": 7,
+          "begin": 2,
+          "functions": [
+            {
+              "name": "SetRoomMuted",
+              "line": 34,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "SetRoomModerator",
+              "line": 91,
+              "background": 3,
+              "begin": 1
+            },
+            {
+              "name": "roomAccountFlag",
+              "line": 140,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "roomAccounts",
+              "line": 154,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/native_services.go": {
+          "background": 8,
+          "begin": 0,
+          "functions": [
+            {
+              "name": "SetLanguage",
+              "line": 12,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "Language",
+              "line": 23,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "ClearPhotoAvatar",
+              "line": 31,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "RemoveIMLabels",
+              "line": 37,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "HasStoreItem",
+              "line": 43,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "saveGiftMessage",
+              "line": 49,
+              "background": 3,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/operator.go": {
+          "background": 9,
+          "begin": 1,
+          "functions": [
+            {
+              "name": "ReviewWorkItem",
+              "line": 18,
+              "background": 6,
+              "begin": 1
+            },
+            {
+              "name": "OperatorReviews",
+              "line": 80,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "OperatorReports",
+              "line": 95,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "OperatorSupport",
+              "line": 106,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/profile_formatting.go": {
+          "background": 2,
+          "begin": 0,
+          "functions": [
+            {
+              "name": "ProfileFormatting",
+              "line": 17,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "SetProfileFormatting",
+              "line": 25,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/reports.go": {
+          "background": 7,
+          "begin": 2,
+          "functions": [
+            {
+              "name": "SubmitReport",
+              "line": 42,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "Reports",
+              "line": 105,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "ReviewReport",
+              "line": 123,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "ReportReviews",
+              "line": 152,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "readReport",
+              "line": 177,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/room_completion.go": {
+          "background": 27,
+          "begin": 5,
+          "functions": [
+            {
+              "name": "RoomCategories",
+              "line": 20,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "ManageRoomCategory",
+              "line": 34,
+              "background": 4,
+              "begin": 1
+            },
+            {
+              "name": "SetRoomCategory",
+              "line": 77,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "DeleteOwnedRoom",
+              "line": 106,
+              "background": 3,
+              "begin": 1
+            },
+            {
+              "name": "roomAudit",
+              "line": 137,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "groupRoomControls",
+              "line": 143,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "groupRoomRole",
+              "line": 150,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "GroupRoomAccess",
+              "line": 160,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "ManageGroupRoom",
+              "line": 190,
+              "background": 10,
+              "begin": 1
+            },
+            {
+              "name": "PlayRoomBot",
+              "line": 305,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "RoomBotScores",
+              "line": 329,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/room_discovery.go": {
+          "background": 10,
+          "begin": 3,
+          "functions": [
+            {
+              "name": "CreateRoom",
+              "line": 30,
+              "background": 4,
+              "begin": 1
+            },
+            {
+              "name": "SearchRoomsFiltered",
+              "line": 92,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "FavoriteRooms",
+              "line": 116,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "AddRoomFavorite",
+              "line": 130,
+              "background": 3,
+              "begin": 1
+            },
+            {
+              "name": "RemoveRoomFavorite",
+              "line": 166,
+              "background": 1,
+              "begin": 1
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/room_settings.go": {
+          "background": 17,
+          "begin": 1,
+          "functions": [
+            {
+              "name": "RoomSettings",
+              "line": 17,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "RoomBanned",
+              "line": 24,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "RoomBans",
+              "line": 27,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "RoomChanges",
+              "line": 30,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "ManageRoom",
+              "line": 44,
+              "background": 13,
+              "begin": 1
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/rooms.go": {
+          "background": 2,
+          "begin": 0,
+          "functions": [
+            {
+              "name": "Rooms",
+              "line": 17,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "readRoom",
+              "line": 45,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/services.go": {
+          "background": 17,
+          "begin": 3,
+          "functions": [
+            {
+              "name": "AddServiceEntry",
+              "line": 25,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "ServiceEntryByNonce",
+              "line": 64,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "ServiceEntryByID",
+              "line": 69,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "ActivityEntries",
+              "line": 76,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "ServiceEntries",
+              "line": 89,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "DeleteServiceEntry",
+              "line": 101,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "AddPhoto",
+              "line": 109,
+              "background": 3,
+              "begin": 1
+            },
+            {
+              "name": "Photos",
+              "line": 155,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "Photo",
+              "line": 167,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "PhotoSharedWith",
+              "line": 177,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "SetPhotoAvatar",
+              "line": 181,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "PhotoAvatar",
+              "line": 203,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "DeletePhoto",
+              "line": 211,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/theme_default.go": {
+          "background": 1,
+          "begin": 0,
+          "functions": [
+            {
+              "name": "ResetStoreTheme",
+              "line": 9,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        },
+        "internal/adapters/sqlite/repositories/transcripts.go": {
+          "background": 7,
+          "begin": 1,
+          "functions": [
+            {
+              "name": "LatestMessageID",
+              "line": 15,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "OwnMessagesAfter",
+              "line": 21,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "Transcript",
+              "line": 31,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "requestedMessage",
+              "line": 43,
+              "background": 1,
+              "begin": 0
+            },
+            {
+              "name": "MarkConversationRead",
+              "line": 61,
+              "background": 2,
+              "begin": 1
+            },
+            {
+              "name": "ConversationRead",
+              "line": 108,
+              "background": 1,
+              "begin": 0
+            }
+          ]
+        }
+      }
+    },
+    "internal/adapters/sqlite/migrations": {
+      "background": 0,
+      "begin": 1,
+      "files": {
+        "internal/adapters/sqlite/migrations/migrate.go": {
+          "background": 0,
+          "begin": 1,
+          "functions": [
+            {
+              "name": "Apply",
+              "line": 14,
+              "background": 0,
+              "begin": 1
+            }
+          ]
+        }
+      }
+    },
+    "internal/services": {
+      "background": 0,
+      "begin": 0,
+      "files": {}
+    }
+  },
+  "source_files": [
+    {
+      "path": "internal/ports/administration.go",
+      "sha256": "d3152d78862c4713a0de4b302637c7148b552a932673a1de5840a66599d0dd23"
+    },
+    {
+      "path": "internal/ports/browser.go",
+      "sha256": "dded1bfa6f68d33083d2ee3c4b9750f24d0c2fa939ad70e838a75e469af77f49"
+    },
+    {
+      "path": "internal/ports/chat_services.go",
+      "sha256": "47fc1d7af66aae190ad94d5e92604267a1451f87a46bda699d5eb877e4256f4e"
+    },
+    {
+      "path": "internal/ports/repositories.go",
+      "sha256": "773d8004a21d5b67371cefc786e27ae0b69e2ef6bd6af5d60e094e38b229d727"
+    },
+    {
+      "path": "internal/ports/services.go",
+      "sha256": "91f62fea5cdc6444537f66fe9a31d8285de62aa69fca8182d08b6a874f44d314"
+    },
+    {
+      "path": "internal/bootstrap/app.go",
+      "sha256": "810134a04dc09b85e712c528bbb3d7dc7acbccf38580722f14982d50f8bb4801"
+    },
+    {
+      "path": "internal/bootstrap/runtime.go",
+      "sha256": "9d42e52aa57161198900c09751b1b070029a64e915513a470908df7936bcacd0"
+    },
+    {
+      "path": "internal/services/application.go",
+      "sha256": "5afc863bdb590a8d5ace9e68c69d37a0dd8cbc7d55924e32605349f99e831645"
+    },
+    {
+      "path": "internal/services/blocking.go",
+      "sha256": "839749ae956bbe6e52391d909db9ba19603b65fcecdd73ab8e364eaaefcf1845"
+    },
+    {
+      "path": "internal/services/browser.go",
+      "sha256": "90c566a576bf472331b2a5edbf8863b2f9397f9d5783ad4852396049d020ab19"
+    },
+    {
+      "path": "internal/services/commands.go",
+      "sha256": "1db6755a5d65fe8228043d65a1cf2412a36c786ea04d846fad5267541634b9d9"
+    },
+    {
+      "path": "internal/services/commerce_pages.go",
+      "sha256": "032e2c0a6d83f861bfa07a3c904ae86d064dba845e3e6071b94954a855871b96"
+    },
+    {
+      "path": "internal/services/community_pages.go",
+      "sha256": "af21c62028ea34c0568299e09351c78111f86265c8c20e5eb444a70f0bf6f273"
+    },
+    {
+      "path": "internal/services/contact_api.go",
+      "sha256": "d6de2f164603c20b4734baecfbbbd4cdef8d0d03ba2fd2e81e6e5ae2bfe46aaf"
+    },
+    {
+      "path": "internal/services/contact_ordering.go",
+      "sha256": "bd201e10bc2d8bf92ad66d5fdc5d655285bc2e97d9d82a720b95b1e16ae73774"
+    },
+    {
+      "path": "internal/services/contacts.go",
+      "sha256": "5a95611cb4c70e0ddbf1137864fe24cb746b89ae0c14da1b18b536b4b89c1e62"
+    },
+    {
+      "path": "internal/services/delivery.go",
+      "sha256": "5f7e0369e37dc85b0edab5466bbc82ce6a3bcd2835ede3a357d024d41eac3667"
+    },
+    {
+      "path": "internal/services/emoticons.go",
+      "sha256": "9198d4e92950c1e33a48c6afba20259fec56e19b11beba4f4b56edd58b0eade9"
+    },
+    {
+      "path": "internal/services/friend_pages.go",
+      "sha256": "5ddfe6ff05d7b7a9177d9c1b9a85233b1b8f261b3f3aa19b90c163bd38cfc655"
+    },
+    {
+      "path": "internal/services/game_catalog.go",
+      "sha256": "27e48fd3f54baa5db7a47232b30a5b40a7b4de783c46a763a8d3d68997ab2c03"
+    },
+    {
+      "path": "internal/services/gift_commands.go",
+      "sha256": "6a2b9b82fdd87fbf26c05bdf7b7f2e071202a9276abf2adf7487b1ee3d31eb59"
+    },
+    {
+      "path": "internal/services/groups.go",
+      "sha256": "1e10de3006611c2b0d737dc81f822aa8f99f266cfa248817cc685adae8f491b6"
+    },
+    {
+      "path": "internal/services/history.go",
+      "sha256": "75e2c44aa81c40ab84fafe855e73d1598e769f37059320d59ee823fd7cf29f11"
+    },
+    {
+      "path": "internal/services/identity.go",
+      "sha256": "c1e3a4fc1e14c6c14c18fe6642e77c89fe2b46fbd235130edc6209c05a71a9ce"
+    },
+    {
+      "path": "internal/services/identity_pages.go",
+      "sha256": "fbc26c2c9e418ff94bac613be8905cdb54548c44b8c24e280a36528c7ce665b7"
+    },
+    {
+      "path": "internal/services/media.go",
+      "sha256": "b1c1132b06a55f988369317b7c4a56f1b78b7c4150d4848624073345df8c9606"
+    },
+    {
+      "path": "internal/services/native_activities.go",
+      "sha256": "43757413aabbcd58ed4728ecc58e17976e0961d0c1173fa2220a07418294d88d"
+    },
+    {
+      "path": "internal/services/native_port.go",
+      "sha256": "680a6b4f993f1ef28ac77baa0aba2c97144f78078e8117e15f035d6722841e95"
+    },
+    {
+      "path": "internal/services/native_services.go",
+      "sha256": "c37fe6f9c25fb45bb95f0da25a24143d5b6f15fe74fb7eda6be83c05478520e4"
+    },
+    {
+      "path": "internal/services/operator.go",
+      "sha256": "81f5b9e13690483972a4efe0ad454b8b62ad25a432e9285a7802ffd1a1e407e8"
+    },
+    {
+      "path": "internal/services/page_routes.go",
+      "sha256": "a02ce80586e5bde8709fc02d47399f3a340d572f58e84e51b291d07ff90d5d59"
+    },
+    {
+      "path": "internal/services/page_service.go",
+      "sha256": "c75344e9a395292bfdce69af2d0b50700cae66d78673cdb3529bde9866ad9606"
+    },
+    {
+      "path": "internal/services/presence.go",
+      "sha256": "4000544f2a489caaff2854ea3650537053d622740c8f2bed7ec8567da61abda6"
+    },
+    {
+      "path": "internal/services/product_catalog.go",
+      "sha256": "ed410e705430716edd6008d7f14a2bc45c661b3b97a83f9a7975ac2af04479a8"
+    },
+    {
+      "path": "internal/services/profile_formatting.go",
+      "sha256": "7fc19993922b23cd9d60e643d9f011a4bfbd237bcca8d8ccd0e09afce1f538bb"
+    },
+    {
+      "path": "internal/services/reports.go",
+      "sha256": "26801719e901b105606fbbb4cd7a7dfa9f9a18b3fb901f2213e9c1aa249dddc3"
+    },
+    {
+      "path": "internal/services/room_commands.go",
+      "sha256": "038cbae542d665da1eb787995f63be973983c3daeda9f8a45251009b1a0f8db6"
+    },
+    {
+      "path": "internal/services/room_management.go",
+      "sha256": "c140618c000a72ab952bb5bce63eb0ab0a59a2e190e5f1aae3e0f6f72a3f5ad1"
+    },
+    {
+      "path": "internal/services/room_messages.go",
+      "sha256": "9038611e9704c8b1aaf21b8c99ef9e379f5e32304dfd1fe7f90b6c271fcb8339"
+    },
+    {
+      "path": "internal/services/room_pages.go",
+      "sha256": "3edb00f8ced069eca6a2528a3a3d504534355e4e463471b3ad1eeeddc6882cd7"
+    },
+    {
+      "path": "internal/services/room_settings.go",
+      "sha256": "1fa3c38fdf74a32be3d7a0c72b72335883dd7df23251b5a73716c1fa754cbc2a"
+    },
+    {
+      "path": "internal/services/rooms.go",
+      "sha256": "84da7193ca18d78b78d5aa92cc1fb0bf3664884bfb391e0924c05d7f9cc69f2b"
+    },
+    {
+      "path": "internal/services/service_pages.go",
+      "sha256": "a34c99491dca7d22344c585c6debda643c57f042fa31c77f1b4dd5c0ad65c143"
+    },
+    {
+      "path": "internal/services/session_service.go",
+      "sha256": "38dace450b86ca7bab184bc56726738a03f8b78ad37e4a08900b1265d100e65f"
+    },
+    {
+      "path": "internal/services/store_themes.go",
+      "sha256": "8b4afa60a2810f694a6725f630bf7c7218628658ac6841865237c2ce5d5b686d"
+    },
+    {
+      "path": "internal/services/transcripts.go",
+      "sha256": "ea765ab33cb214d65b96ac7ea2af03398676534bfaf1fec84d8fe37f48a76f8f"
+    },
+    {
+      "path": "internal/services/votes.go",
+      "sha256": "d28f270b8fcc616c1741a554489e35d597889136d7d59dc8065a60bc28bca062"
+    },
+    {
+      "path": "internal/services/wap.go",
+      "sha256": "a9d101d47a483395acb6cdd13bab6596effbccaaf19a732ec73072415ae04268"
+    },
+    {
+      "path": "internal/controllers/browser.go",
+      "sha256": "dd4e4675b2991149d11f60303552c20a2863e2e06642c45a86720fe16c8d333f"
+    },
+    {
+      "path": "internal/controllers/catalog.go",
+      "sha256": "a6810ab14deddff697b89eec1da34495af4209fb04d4db2f7191765d94003460"
+    },
+    {
+      "path": "internal/controllers/chat.go",
+      "sha256": "a5315de1c4b822e88c678ed80c6713dcb3a96138bac30f31d9cd45fccd6933b5"
+    },
+    {
+      "path": "internal/controllers/contacts.go",
+      "sha256": "cccf9c2ce3b3bdc676f96fe1bc3516dac302c5d543959271c311ad9776153289"
+    },
+    {
+      "path": "internal/controllers/controller.go",
+      "sha256": "ab48497dbef14c58c9f95561e7c7952da0c142ebdbccdafa3d8d5310049ab270"
+    },
+    {
+      "path": "internal/controllers/media.go",
+      "sha256": "4b789f66d39e6343091ecc2323faed8430eaf7e4f42accee2072fcdf096262d7"
+    },
+    {
+      "path": "internal/controllers/native.go",
+      "sha256": "f33e4f06b095b18728b377b63247f80f0256caa7b5333d8579ff116500957e50"
+    },
+    {
+      "path": "internal/controllers/operator.go",
+      "sha256": "896fda9d24a36aecd6502f6c95599fecb37f1623b68e357af59f3dd92c7e457c"
+    },
+    {
+      "path": "internal/controllers/pages.go",
+      "sha256": "f2700134a713e34607f72e536df0db5ad4e0fe64724791123515ae961cc30db1"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/blocks.go",
+      "sha256": "d869e50a4e11741dd902077048934267c80e3d150c3e9a1ac96fc1dd81bc50a4"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/commerce.go",
+      "sha256": "c3c4718def78f4894295d5d94d751517653883191ea50cc580ca41a63728d201"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/community.go",
+      "sha256": "65c9ba2982c13a3a53da7b47f271263bf0e099306d9cd0b9b1be76c2d5734e73"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/contacts.go",
+      "sha256": "84c7b3a52563e61feaa929b68b503726ec6b837868cfb1630866e2c613f24f2e"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/gifts.go",
+      "sha256": "1cac1281bd4befe2441c52f94fe2683990c6dc4e0dc5131bfe97ebdf7bbebc8c"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/groups.go",
+      "sha256": "77fa0d980130478bc96d34eb29231d987581507f24c60339d9b67522b3b199d3"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/identity.go",
+      "sha256": "d78585603bd31ab44d20c247f7851da3657d14dedea53d04f68b3f98457a263f"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/messages.go",
+      "sha256": "a4dcf616ec68599544de9311a76cf104908a00f2470392b467a5fcfbb2419157"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/moderation.go",
+      "sha256": "742b8299bb3b2b7876e51cb22028382bbfb9de3130fba744b42108a8ba80e671"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/native_services.go",
+      "sha256": "aa7efff1f9dfd199e58e03c1b760b23788ef77440eec12a40eff15388f11da52"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/operator.go",
+      "sha256": "3a55313a64b276373e713a6e2e5e89aeef72c112bd9e1740ed3b55585c703df7"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/ports.go",
+      "sha256": "7010bf283a8893c04a9aa778cfe8eaf05d2926dc9bf0d4079b291dacb1b14d58"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/profile_formatting.go",
+      "sha256": "3ac7f5a681babe991d35e82ea0f1abeb0d8a2eb3774675ec41d3a7a02862e79d"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/queries.go",
+      "sha256": "d0154d9a5c4f36d40c685856aef5bb23f6d5450f1f2731ccf81197704ddbb322"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/reports.go",
+      "sha256": "5735fff9b79f409515049b0855c41f482b704f19f6d676de9c7ca445f495f4f0"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/room_completion.go",
+      "sha256": "453fa084c65e1ae4009e898d4c50693ef90830dace7a4c053604fc7a9c6668f7"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/room_discovery.go",
+      "sha256": "f491151b484505bfed17752c2380b4d5b074e233d48ec2b5ae7d7ef508a52c34"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/room_settings.go",
+      "sha256": "5e9343dfc0b209eefe95ac24efea7dea9683cdca98322ba224196d5d8f39398a"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/rooms.go",
+      "sha256": "d47052a5e189a6b1f392b6acda7ce0853a302044732ac506d739ea466891ef95"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/services.go",
+      "sha256": "19380deb97b5cb73143c26f4dfdc9272feb3363c7ce9d5f26658c51490b3010f"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/store.go",
+      "sha256": "0ad13dfb042b654d758641a6ccf6ee8d8b58e65274f8c074ad16b4fd3d39e1b0"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/theme_default.go",
+      "sha256": "2aaf7690bd503e84fade86c61b5049c3ec9b06bdeaefbd9be50a749b30ad4610"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/transcripts.go",
+      "sha256": "3df8576dc350825aaa9830db1f53a7bbea768e965a2cf82ded8231b903835a31"
+    },
+    {
+      "path": "internal/adapters/sqlite/migrations/migrate.go",
+      "sha256": "0304232c092cb76bd91a03695fd681fb761266eddac60cf1066cfcb128777e09"
+    },
+    {
+      "path": "internal/adapters/socket/server.go",
+      "sha256": "7854b6e375a647ebae3fc187d658b29d9bf03743e401e12cf5efefeacb79fffb"
+    }
+  ],
+  "notes": "Source hashes anchor the architecture findings to this intermediate draft. Toolchain changes are recorded separately. No cancellation latency or performance benchmark was run.",
+  "module_file": {
+    "path": "go.mod",
+    "sha256": "543cac4c3e62c044f15d49690ec13959f0882ec2ba08449f61767174d55de806"
+  },
+  "toolchain_validation": "evidence/go-toolchain.json"
+}

@@ -1,0 +1,518 @@
+{
+  "date": "2026-10-29",
+  "scope": "Research and implementation plan only; no project production files changed and no acceptance suites rerun in this task.",
+  "answer": "One complete coordinated delivery is feasible for the agreed capability modular-monolith refactor. It should use dependency-ordered internal checkpoints, not repeated user approvals or a long-lived partially migrated application. This is an engineering assessment of the current source and tests, not a guarantee of an exact duration.",
+  "meaning_of_complete": [
+    "All current backend capabilities have a named owner, a narrow public use-case API and explicit collaborators.",
+    "Business capability packages do not import HTTP, native packet, templ, generated HTTP/sqlc or concrete database packages.",
+    "Native packet/page compatibility becomes adapter code that invokes the same typed use cases as modern HTTP and CLI.",
+    "Realtime session/presence/room participation/delivery state has one explicit owner and documented lock order; extracted capabilities do not copy session maps.",
+    "No business package depends on the 124-operation aggregate repository or the old all-purpose Application receiver.",
+    "The old implementation is removed after every caller and behavioral test is migrated. A small explicit orchestration/composition facade is acceptable; renaming the old 182-method object is not completion.",
+    "Existing URLs, packets, templates, persistence schema, provider mocks and delivery semantics remain compatible, with full final verification evidence."
+  ],
+  "excluded_changes": [
+    "Microservices, separate go.mod files, database-per-capability, PostgreSQL migration or distributed session state.",
+    "New feature scope, Expo UI/v3 skin, recovered historical assets, real SMS/email/IM/payments.",
+    "Concurrency redesign for throughput or per-capability locks during a structural refactor.",
+    "A generic event bus, CQRS framework, service locator or DI container without a concrete requirement.",
+    "Restarting the interactive demo or mutating its database as a test fixture."
+  ],
+  "baseline": {
+    "application_methods": 182,
+    "exported_application_methods": 38,
+    "one_application_type": "internal/services/application.go:72",
+    "repository_capabilities": {
+      "ChatRepository": 15,
+      "CommerceRepository": 11,
+      "CommunityRepository": 10,
+      "ContactsRepository": 15,
+      "IdentityRepository": 17,
+      "ReportsRepository": 9,
+      "RoomsRepository": 29,
+      "ServicesRepository": 18
+    },
+    "domain_functions": 12,
+    "fields_accessed_from_number_of_service_files": {
+      "mu": 14,
+      "store": 33,
+      "accounts": 23,
+      "sessions": 19,
+      "deliveries": 3,
+      "kickVotes": 6,
+      "operators": 3
+    },
+    "compatibility_imports_number_of_service_files": {
+      "pages": 19,
+      "protocol": 24,
+      "domain": 34,
+      "catalog": 2,
+      "formatting": 4
+    },
+    "application_method_call_sites_crossing_source_files": 238,
+    "notes": "Source-file count is not service count; these41 production files form one Go package and one service object. Cross-file selector counts are syntactic evidence of coupling, not independent runtime service calls."
+  },
+  "target_ownership": [
+    {
+      "package": "cmd/internal/command + cmd/internal/wiring",
+      "owns": "Flags/config/process policy and assembly/cleanup of concrete capabilities; all four mains select transports.",
+      "current_files": [
+        "cmd/internal/command/config.go",
+        "cmd/internal/command/process.go",
+        "cmd/internal/wiring/core.go"
+      ],
+      "constraint": "Keep command-private import boundary; no business logic or mode dispatcher."
+    },
+    {
+      "package": "internal/bootstrap",
+      "owns": "Generic Component Start/Run/Stop supervision only.",
+      "current_files": [
+        "internal/bootstrap/runtime.go"
+      ],
+      "constraint": "No concrete capability, config or adapter imports."
+    },
+    {
+      "package": "internal/accounts",
+      "owns": "Credential and account models, registration/recovery, profile/preferences and committed credential values.",
+      "current_files": [
+        "internal/services/identity.go",
+        "internal/services/identity_pages.go",
+        "internal/services/profile_formatting.go",
+        "internal/domain/identity.go"
+      ],
+      "constraint": "Split forms/rendering to legacy-web adapter; account/delivery gates must not move together simply because currently in same struct."
+    },
+    {
+      "package": "internal/contacts",
+      "owns": "Roster/contact groups, personal block policy and persistent contacts operations.",
+      "current_files": [
+        "internal/services/contacts.go",
+        "internal/services/contact_api.go",
+        "internal/services/blocking.go",
+        "internal/services/friend_pages.go",
+        "internal/domain/contacts.go"
+      ],
+      "constraint": "Protocol serializers/forms move to adapters. Blocking commit plus queued-delivery cancellation remains an ordered realtime workflow."
+    },
+    {
+      "package": "internal/chat",
+      "owns": "DM/private-group models, typed message commands, history/read state/idempotency and chat policy.",
+      "current_files": [
+        "internal/services/history.go",
+        "internal/services/transcripts.go",
+        "internal/services/groups.go",
+        "internal/services/commands.go",
+        "internal/domain/messages.go",
+        "internal/domain/groups.go",
+        "internal/domain/chat_api.go"
+      ],
+      "constraint": "Keep canonical persisted MessageInput hashing representation unchanged; native slash parsing is mapped explicitly to typed commands without changing errors or expansions."
+    },
+    {
+      "package": "internal/rooms",
+      "owns": "Room metadata/directory/settings, capacity/moderation/vote rules and community-room permission contracts.",
+      "current_files": [
+        "internal/services/rooms.go",
+        "internal/services/room_settings.go",
+        "internal/services/room_management.go",
+        "internal/services/room_commands.go",
+        "internal/services/votes.go",
+        "internal/domain/rooms.go",
+        "internal/domain/room_settings.go",
+        "internal/domain/room_completion.go"
+      ],
+      "constraint": "Pure rules and stored metadata live here; live participant/ballot scheduling state has the chosen realtime owner. Do not accidentally create two independent owners."
+    },
+    {
+      "package": "internal/community",
+      "owns": "Community Groups, roles/membership, forum posts and room association use cases.",
+      "current_files": [
+        "internal/services/community_pages.go",
+        "internal/domain/community.go"
+      ],
+      "constraint": "Legacy query/form parsing and HTML move to adapter; room-link permission checks remain atomic."
+    },
+    {
+      "package": "internal/commerce",
+      "owns": "Test-credit ledger, purchases/gifts, inventory/entitlement, ratings and themes as business capabilities.",
+      "current_files": [
+        "internal/services/commerce_pages.go",
+        "internal/services/gift_commands.go",
+        "internal/services/store_themes.go",
+        "internal/domain/commerce.go",
+        "internal/domain/gifts.go"
+      ],
+      "constraint": "Gift purchase remains one specialized atomic operation including durable message intent; UI/native rendering belongs outside this package."
+    },
+    {
+      "package": "internal/catalog",
+      "owns": "Existing static products plus public game/emoticon metadata queries.",
+      "current_files": [
+        "internal/services/product_catalog.go",
+        "internal/services/game_catalog.go",
+        "internal/services/emoticons.go",
+        "internal/domain/catalog_api.go"
+      ],
+      "constraint": "Separate static catalog data from ownership checks and native 914/916 encodings; retain original assets/IDs/availability."
+    },
+    {
+      "package": "internal/media",
+      "owns": "Photo upload/ownership/access, avatars and stored media decisions.",
+      "current_files": [
+        "internal/services/media.go"
+      ],
+      "constraint": "Return typed resource/view data; packet tokens, HTTP responses and templ rendering stay in adapters."
+    },
+    {
+      "package": "internal/social, internal/review, recorded-provider-request capability",
+      "owns": "Activity/local inbox behavior, report/support/operator review, and mock external-provider request recording respectively.",
+      "current_files": [
+        "internal/services/service_pages.go",
+        "internal/services/native_activities.go",
+        "internal/services/native_services.go",
+        "internal/services/reports.go",
+        "internal/services/operator.go",
+        "internal/domain/services.go",
+        "internal/domain/reports.go",
+        "internal/domain/operator.go"
+      ],
+      "constraint": "These mixed files need declaration-level ownership, not one whole-file move. Final naming/grouping should follow actual cohesive use cases; do not reproduce ServicesRepository as a business domain."
+    },
+    {
+      "package": "internal/realtime (cohesive application coordinator)",
+      "owns": "Session lifecycle, presence, live participation, response/delivery ordering, pending reservations, own-message cursors and scheduled maintenance; cross-capability workflows whose correctness depends on this state.",
+      "current_files": [
+        "internal/services/application.go",
+        "internal/services/session_service.go",
+        "internal/services/presence.go",
+        "internal/services/delivery.go",
+        "internal/services/contact_ordering.go",
+        "internal/services/room_messages.go",
+        "internal/services/browser.go"
+      ],
+      "constraint": "One state owner with narrow collaborators; no god repository or shared mutable maps exposed. Native queues become typed delivery events with stable acknowledgment handles, not protocol.Packet fields in business state. Preserve responseGate -> deliveryGate -> state lock order."
+    },
+    {
+      "package": "internal/adapters/native + internal/adapters/legacyweb (names illustrative)",
+      "owns": "Native opcode decode/encode/error compatibility and historical URL/form/page/WAP translation, including same handler path for native922 and HTTP pages.",
+      "current_files": [
+        "internal/services/native_port.go",
+        "internal/services/page_routes.go",
+        "internal/services/page_service.go",
+        "internal/services/wap.go",
+        "internal/services/native_services.go",
+        "internal/services/identity_pages.go",
+        "internal/services/room_pages.go",
+        "internal/services/commerce_pages.go",
+        "internal/services/community_pages.go",
+        "internal/services/service_pages.go"
+      ],
+      "constraint": "Permanent adapters are legitimate. A compatibility adapter must call typed capabilities, not retain the old business implementation under a new name."
+    },
+    {
+      "package": "internal/controllers",
+      "owns": "One generated ServerInterface implementation package, files split for readability, DTO conversion and HTTP transport policy.",
+      "current_files": [
+        "internal/controllers/controller.go",
+        "internal/controllers/chat.go"
+      ],
+      "constraint": "Typed dependency struct or narrow service fields replace one broad Services dependency; no controller-to-repository shortcuts."
+    },
+    {
+      "package": "internal/adapters/sqlite/repositories + existing sqlc/migrations",
+      "owns": "Persistence mappings, one connection pool/migration lifecycle, capability port implementations and transaction boundaries.",
+      "current_files": [
+        "internal/adapters/sqlite/repositories/ports.go",
+        "internal/adapters/sqlite/repositories/store.go",
+        "internal/adapters/sqlite/repositories/identity.go",
+        "internal/adapters/sqlite/repositories/commerce.go",
+        "internal/adapters/sqlite/repositories/messages.go"
+      ],
+      "constraint": "One adapter may implement many narrow consumer ports. Keep generated query package/schema initially; do not expose sqlc rows or sql.Tx to capabilities."
+    }
+  ],
+  "shared_type_policy": [
+    "Move owned account/chat/contact/room/community/commerce types and their rules next to their capability.",
+    "Keep a deliberately small shared vocabulary/errors package only for genuinely shared contracts; do not merely rename the current global domain package to common.",
+    "Generated OpenAPI DTOs stay at HTTP boundary; sqlc models stay in persistence adapters; protocol fields and templ types stay in compatibility/rendering adapters.",
+    "Freeze MessageInput canonical field order or encode an explicit versioned canonical representation matching existing hashes; verify persisted replay before removing old type aliases.",
+    "Any transitional aliases/facades are internal migration tools and removed when no longer required; no permanent dual implementations or feature flag required for one delivery."
+  ],
+  "dependency_order": [
+    {
+      "step": 1,
+      "name": "Freeze behavior and define target contracts",
+      "work": [
+        "Snapshot production source and fixture database/schema evidence; preserve active demo.",
+        "Map all 182 Application methods and all public ports to a capability or adapter owner, including mixed page/native files.",
+        "Specify typed Actor/session/delivery envelopes and state ownership; record lock order and transaction invariants.",
+        "Decide small capability APIs before parallel code movement."
+      ],
+      "gate": "Every existing operation has an owner, inputs/results and explicit dependency direction; no ambiguous shared mutable state."
+    },
+    {
+      "step": 2,
+      "name": "Establish types and narrow consumer ports",
+      "work": [
+        "Create owned capability types and repository contracts, keeping generated transport/database types outside.",
+        "Adapt SQLite mappings to new contracts while retaining atomic repository operations.",
+        "Preserve canonical JSON/idempotency encoding and cancellation/error semantics."
+      ],
+      "gate": "Contracts compile, repository atomicity and replay tests pass; no SQL/schema/OpenAPI drift unless explicitly justified."
+    },
+    {
+      "step": 3,
+      "name": "Extract capability logic",
+      "work": [
+        "Move static/read-only and persistence-driven capability logic into focused concrete services.",
+        "Separate parsing/rendering from business decisions in mixed files.",
+        "Keep cross-feature transactions in specialized adapter operations; cross-capability calls are typed and synchronous."
+      ],
+      "gate": "Unit/port tests validate each capability independently; constructor dependencies expose only actual needs."
+    },
+    {
+      "step": 4,
+      "name": "Establish realtime and workflow ownership",
+      "work": [
+        "Move session/live membership/presence/order/maintenance state into one coordinator.",
+        "Split account values from delivery gates without changing ownership or ordering guarantees.",
+        "Introduce typed delivery events and acknowledgment handles so native wire packets remain outside business state.",
+        "Route credential changes, block transitions and live room mutations through explicit coordinated workflows."
+      ],
+      "gate": "State/ordering/cancellation tests pass, including shared-SID HTTP/TCP interleavings, block/write ordering and canceled reservation retry."
+    },
+    {
+      "step": 5,
+      "name": "Complete native and page adapters",
+      "work": [
+        "Translate every supported opcode to typed capability/workflow commands and map results to exact legacy fields/errors.",
+        "Move historical page selectors/form rules/rendering into one reusable compatibility boundary used by HTTP and native922/923.",
+        "Keep templ deduplication and historical URL literals/resource bytes intact."
+      ],
+      "gate": "Protocol serialization, malformed-input ordering, all52 page registry and focused native tests pass."
+    },
+    {
+      "step": 6,
+      "name": "Wire all entrypoints and remove old implementation",
+      "work": [
+        "Keep generated controllers as one package with typed capability dependencies.",
+        "Construct shared graph explicitly in cmd/internal/wiring; omni shares the same realtime owner for both transports.",
+        "CLI invokes its typed administrative capabilities without starting workers/listeners.",
+        "Remove old all-purpose Application/aggregate dependency and migration-only aliases/facades; retain only real orchestration and compatibility adapters."
+      ],
+      "gate": "All four commands compile; bootstrap remains mechanism-only; architecture guards reject old dependency paths."
+    },
+    {
+      "step": 7,
+      "name": "Run final behavioral and architecture acceptance",
+      "work": [
+        "Run full go test -race ./... and go vet ./... on Go1.27.3.",
+        "Check schema snapshot, reference assets/links, generated OpenAPI/sqlc determinism where generators changed.",
+        "Inventory and execute all17 existing scenario run-*.sh scripts, using shared run.sh, on final isolated builds/fixtures; use one frozen final binary where possible. Covers the seven prior baseline suites plus contacts, blocking, identity, reconnect, own-session mirrors, room discovery/moderation, friend moderation, slash commands, media and formatting as represented in actual scripts. Preserve suite-specific fixtures and record any non-applicable check explicitly rather than silently skipping.",
+        "Record binary/source/JAR hashes, DB integrity, native frames/screenshots and outstanding limits; update architecture/research docs."
+      ],
+      "gate": "One complete reviewable result; no known migration stubs, silent feature regressions, old business implementation or unvalidated changed boundary."
+    }
+  ],
+  "parallelization": {
+    "prerequisite": "Complete typed contracts and ownership map first. Parallel file moves before that create circular dependencies and simultaneous edits to the shared Application.",
+    "root_integrator": "Owns shared vocabulary, realtime state/lock plan, cross-capability workflows, entrypoint composition, architecture guards and final acceptance.",
+    "lane_accounts_contacts": "Account and contact business use cases/model tests; coordinate combined registration and block workflow contracts with integrator and SQLite owner.",
+    "lane_community_commerce_ancillary": "Community/commerce/catalog/media/review/provider business slices behind frozen contracts, with per-file ownership assignments.",
+    "lane_adapters": "SQLite mappings and native/page adapter migration in separate batches with explicitly allocated files; controllers remain one package. A single agent may sequence these to avoid concurrent shared repository/registry edits.",
+    "integration_rule": "Shared registries, generated contracts, state structs and migration policy have a single writer. Dependencies and tests are integrated at internal checkpoints; user review is at the complete result."
+  },
+  "nonnegotiable_invariants": [
+    {
+      "invariant": "Registration consumes challenge and creates identity + roster + Friends group atomically; cache installs committed values even after caller cancellation.",
+      "source": "internal/adapters/sqlite/repositories/identity.go; internal/services/identity.go; identity_context_test.go"
+    },
+    {
+      "invariant": "Accepted message, immutable audience and send key share transaction; context propagation does not convert successful commit to failure.",
+      "source": "internal/adapters/sqlite/repositories/messages.go; context_test.go"
+    },
+    {
+      "invariant": "Gift debit/ledger/inventory/note/message intent and relevant privacy checks remain a single atomic operation.",
+      "source": "internal/adapters/sqlite/repositories/commerce.go; gifts.go"
+    },
+    {
+      "invariant": "Contact response ordering is responseGate -> account deliveryGate -> state mutex. No caller waits for outer gates while holding the state mutex.",
+      "source": "internal/services/contact_ordering.go:10"
+    },
+    {
+      "invariant": "Personal block commits before queued traffic is canceled; already-started writes serialize against the block.",
+      "source": "internal/services/application.go Handle opcode417; internal/services/blocking.go"
+    },
+    {
+      "invariant": "Transient lookup errors do not destroy ballots, own-message cursors, delivery reservations or complete ownership snapshots.",
+      "source": "internal/services/metadata_context_test.go; delivery_context_test.go"
+    },
+    {
+      "invariant": "Native sends retain their existing unkeyed behavior; JSON keyed retries preserve old canonical hashes across restart.",
+      "source": "internal/domain/chat_api.go:22; internal/services/transcripts.go"
+    },
+    {
+      "invariant": "HTTP drain, socket cleanup budgets, maintenance joining and one owner of repository Close retain current lifecycle semantics.",
+      "source": "internal/bootstrap/runtime.go; internal/adapters/httptransport/server.go; cmd/internal/wiring/core.go"
+    }
+  ],
+  "completion_checks": [
+    "Each old service method is accounted for in ownership manifest; no feature silently dropped because its page/native form was mixed into another file.",
+    "No capability import of net/http, internal/protocol, templ, pages rendering, database/sql, sqlc or concrete adapters.",
+    "No capability consumes ports.Repositories or *services.Application; no exported mutable session/account maps or mutex handles.",
+    "Modern HTTP, native and historical web adapters invoke the same underlying typed business operations and authorization rules.",
+    "All existing meaningful tests migrated; no removed behavioral assertions solely to simplify package splitting.",
+    "Old Application implementation and transitional forwarding scaffolding removed; small permanent facades carry orchestration only.",
+    "One consistent final binary passes acceptance; current live app/data remains independent of fixture testing."
+  ],
+  "research_sources": [
+    {
+      "url": "https://martinfowler.com/bliki/BranchByAbstraction.html",
+      "supports": "Large replacements can use a temporary abstraction, move consumers in checked steps, and remove old implementations and migration abstractions afterward. It discusses some all-at-once cutovers too.",
+      "qualification": "This source describes continuous-delivery migration; applying the same internal checkpoints to one final delivery is our engineering inference, not a mandate for several releases or approvals."
+    },
+    {
+      "url": "https://go.dev/doc/effective_go#interfaces_and_types",
+      "supports": "Interfaces express behavior and permit multiple concrete implementations.",
+      "qualification": "Use current Go module/interface guidance for modern structure; Effective Go notes its historical scope."
+    }
+  ],
+  "source_snapshot": {
+    "internal/services/application.go": "5cfc40b4f5a81adaf5a3e098688af1abadad3fd832d26dc3cce23b3d9912b0b1",
+    "internal/services/blocking.go": "bdf741282ab1647b11f3d1a872db3715876ec0878250e001516be28050df0c86",
+    "internal/services/browser.go": "21c0a52a060465a7a302c7f4d5f06b208edab98ce43490723141fc5854aa92cb",
+    "internal/services/commands.go": "eed1917862965ae379c4023eb6fbac68509cfe7d35fd349218e87978f15f9c54",
+    "internal/services/commerce_pages.go": "14f390656ee07fe947e67c888d5aa31a2c9fd18f81ea685c83ec05c615f49526",
+    "internal/services/community_pages.go": "1bf90fc86783f9ac7e8252c522aebd2716fadfb3981d2c4041e603336467cfc5",
+    "internal/services/contact_api.go": "82edaeeb1714f2effccb616a9b5346a01f92c79fd9e227b6e51bb8729febae2f",
+    "internal/services/contact_ordering.go": "bd201e10bc2d8bf92ad66d5fdc5d655285bc2e97d9d82a720b95b1e16ae73774",
+    "internal/services/contacts.go": "d2d234c2d3a8f2505552ee5b4a4b12a166045c343c48c93447f9e1b6fa004797",
+    "internal/services/delivery.go": "7ef4eaa7f25f7cc6362b3a23c3526494095aa5ee71462dab99ebc4d32bfc4f74",
+    "internal/services/emoticons.go": "edf68957d05088092bc098da4ecc27cb66b1ca818f8b03c330546bf0b4c08d52",
+    "internal/services/friend_pages.go": "0e45b2d339d22746314f3530fa2cf7eb126531b3571eb914705727f23f44d7f1",
+    "internal/services/game_catalog.go": "926f84b3b3bb4cdf316a6fa4da72d17a8171d2d815f88bb700005e2f2c65b9a2",
+    "internal/services/gift_commands.go": "052f3117b9d318f1c4e69d354eda52a5290f02aa863450c9c0e02937f1995ae7",
+    "internal/services/groups.go": "f2d0e4b4c1d6cfa1735dce9410010073a70b4b7aaeb413f17bf02c11c716d9cb",
+    "internal/services/history.go": "d9ff05cbdeba77dec622da89f45f125d08453109dba6607b3e58a3c08ed50fde",
+    "internal/services/identity.go": "9a017b4039a7356f26a446b52948e9e9e2a272ef80ff909c37718efd485277e7",
+    "internal/services/identity_pages.go": "1431d45de9971dfa346bd6f207efc9cc0ed397c4e805edb673143c819f2d80d8",
+    "internal/services/media.go": "2d6358f76cf9b3f6dae343ed4940a667fa574eb20457fa69d4427aea85a02541",
+    "internal/services/native_activities.go": "d35fb1ddef0dff95b446fcd51cf23865b9a70807a18867b72ce028fd4c763647",
+    "internal/services/native_port.go": "0791e1adae0d7564021d86f7cbfb87c32bb8ba69c680bc7a611ae76e3da014ca",
+    "internal/services/native_services.go": "660f8af075aed1055f7925e26d771594e3b22db9dbf1cd3c45998142480e8058",
+    "internal/services/operator.go": "e7489dbdb229bdaa0079c97d0baa8a0be692cc6f952351c4de4f0db5c53fc8d8",
+    "internal/services/page_routes.go": "638bf166d0bb58ed2a33b2c97661d13a4e3aba11a15b0ebd02bc1776eb1af082",
+    "internal/services/page_service.go": "a629bf46940c65ba86cdba756c17cea940d23b815160f3bb665aed5cd731917a",
+    "internal/services/presence.go": "da74e2267097a29edcd33791debe39a0c9a8d174bfa2f477d0eb8a05b355ccae",
+    "internal/services/product_catalog.go": "13e4476782263c0086bc752c29799ddcb529a76279eb1ebe7d1fbfde09b5f087",
+    "internal/services/profile_formatting.go": "4a86bc0d444115e992e5341b09f81496f810a8661994fbaf7b7008f58a4f4487",
+    "internal/services/reports.go": "f72ec1906e5b4a8b13511ac271603678f24a227bdf7ca5b1d9138652642e8991",
+    "internal/services/room_commands.go": "7a16d61fde2879279b5a8ea6e107f31ea8625cfb7fc82d63dc017c47df7ee80d",
+    "internal/services/room_management.go": "03bccb91e55839c0ed7e00f0963ff1f4f1b691ae75ecc4b0356c9feb92df080b",
+    "internal/services/room_messages.go": "d1410fc1f617ec7c3b51b3fa9c0d86e5c0cfbf1400b2b100ea997c49d7f14af8",
+    "internal/services/room_pages.go": "614a9e0bf70f000897ff084ba179679ffeb7ff8927785779c457b1d48013f13a",
+    "internal/services/room_settings.go": "917cd628bd78012dd843014c1ae7fd561be0e15655e73ee40ce35e27ec64850e",
+    "internal/services/rooms.go": "f1ae80c3b5996c657fd0309acd6470d37bb41c63d9d3a0c7b91c89a6a7488099",
+    "internal/services/service_pages.go": "882e7f6cb28e39ce70b3efe7d5a771edaa6575c2b9e96118f90b7973ecf295b0",
+    "internal/services/session_service.go": "a95118dc820e117d7ad264d062a6169d3f82e528abe09e639a227faac4d3a947",
+    "internal/services/store_themes.go": "ad8f61be8fdf9eed8072d8afe61a4e78971473d5a47ff2459a7f4597980d476f",
+    "internal/services/transcripts.go": "c40a6ff254ce3e8b25bb3a940e78cd6a3c0dcd3c714d010228827d04675390fa",
+    "internal/services/votes.go": "28e4401f7bf1e695292082e0921f94f83cd811033e24c89cbe9310e91fad72f3",
+    "internal/services/wap.go": "73941ba1848491f7905c409ac3fbeb6ee7903ced880d299460346d9fe877fe58",
+    "internal/domain/application.go": "53d32f5f987507a6607f6af08641996011b589520ae75af21da3142b5bd7ca50",
+    "internal/domain/browser.go": "447269a483f1c46174a54e3324c3905eaa14baae00ce5162e1385e4c9486f17a",
+    "internal/domain/catalog.go": "c732f6f4b741e0dcf02558c52bca34bd235b01b16d0cc00266dd08fd4f412f46",
+    "internal/domain/catalog_api.go": "18f708da9209bce32008782c59522dd5189b774f895849a8f00f7b31a0056d9a",
+    "internal/domain/chat_api.go": "49c85238e4fc2660e43bd6c2cb8e407ab59f71ded79a0802d226368bd7e5f2d0",
+    "internal/domain/commerce.go": "7bdf5b858c22bf63638b599fe26c1a1ddb7456432b8cbff97aa0317a253fda77",
+    "internal/domain/community.go": "c7998e415b351213a8af50b7915f225e87e265764811ab03f5a9b70384a64cf9",
+    "internal/domain/contacts.go": "cecc36558bee00cfd353da219560e9ec5b68b3f5e7a61479937e66ec9ef01b8d",
+    "internal/domain/gifts.go": "1b9272595a194fc201445c439ba0adf53e9e82b66fc683416f09b356b43082da",
+    "internal/domain/groups.go": "1653559dc81c35bd30119090ac4ba200841eec6de4fd88c78da628102afc34a7",
+    "internal/domain/identity.go": "659c34e790e7a8250175fceff3dd81df4f6012a9ff67a5d49e8c0574bc17c7f4",
+    "internal/domain/messages.go": "6df533f0608f47f5f4da98668a475de9f4cebf507d3ebf64778b1d138a35fc7e",
+    "internal/domain/operator.go": "a6e59ed15a1dbc265d2d01bd06e5cede90fbca1911c214a7a61210461e052c66",
+    "internal/domain/reports.go": "9a74cbe497a109f9ecf4e8ba56c7cdeae7e98cbe1c17a144d71d9fa7f08ab0ff",
+    "internal/domain/room_completion.go": "64d28a7aa6ad68f53a852c1660b557d260224d79cfcd521847a6b7634f0938d7",
+    "internal/domain/room_discovery.go": "690d667575a4d315c9a467a7f439b0477453e42bb24eaed2316c9edb1cd7bfe8",
+    "internal/domain/room_settings.go": "a7c68a26c4249aea4ef0783dace5e59bdf7a65e58627888f9770c9fb29ef4fd4",
+    "internal/domain/rooms.go": "706b3698bb1e201b0dd76b2dab3d3633a66f6df1da1c1ad5d8ace6f3f150aac4",
+    "internal/domain/services.go": "a474461a34b3593125a43b8b94b3ac93acbcbc91f111a4d2d6fc324c534177d8",
+    "internal/domain/store.go": "fc6508609b3150793847b41f50253eb6d668001f0fab11d8873245eac01219e9",
+    "internal/ports/administration.go": "8c6d89fba09b65c347b865f0b2501e44ba6415e8db2e25e396fb982f49128a17",
+    "internal/ports/browser.go": "dded1bfa6f68d33083d2ee3c4b9750f24d0c2fa939ad70e838a75e469af77f49",
+    "internal/ports/chat_services.go": "47fc1d7af66aae190ad94d5e92604267a1451f87a46bda699d5eb877e4256f4e",
+    "internal/ports/repositories.go": "498abef758cd941ba6ac3b16ba35a3eaffb8c4fe7518d6084cae077b8c711c06",
+    "internal/ports/services.go": "7bb1901b2a9f8e7270c5d6693a4255dce46e1c99b2dbf289989a0deac46c6202",
+    "internal/adapters/sqlite/repositories/blocks.go": "d6edd3ca916b5f8ed2c78cb8ed204ef0e1e36a4ed09eeffcabba3d2d9c4ffda8",
+    "internal/adapters/sqlite/repositories/commerce.go": "2045e87c0035453a176a3c603a1e150fe4cbdbe8192aa7f1ee3c8600ee8a2762",
+    "internal/adapters/sqlite/repositories/community.go": "b874f1b88cfd564fc142f14f96d057a6d9df94ef6cf687d494a8e21bd1dff9a3",
+    "internal/adapters/sqlite/repositories/contacts.go": "c13e8cc1b60bc116041d56051ffbd777abddfae9f8e94c6538a4272ebf32c8eb",
+    "internal/adapters/sqlite/repositories/gifts.go": "168eba582e89d48f990f5d14c7db13c65f99d0b5104b6c73e7832b41249aece7",
+    "internal/adapters/sqlite/repositories/groups.go": "d5fd6fab6ba776679c6a50fe93c95f86df96d6bbe6529c880a977cf35b3f22e7",
+    "internal/adapters/sqlite/repositories/identity.go": "1696364af641f474119372c4cc9888d39c67a77fdf6560858bf58c379f463922",
+    "internal/adapters/sqlite/repositories/messages.go": "aea3775dc9a302845a3599d8d3b83cb4f1a13cc451aee82eea290b3fe6c05e28",
+    "internal/adapters/sqlite/repositories/moderation.go": "00bbe9e498a26f7ad31290b570209768a67b2bcf05ee1b12282589b9d9befc51",
+    "internal/adapters/sqlite/repositories/native_services.go": "b7442f4a3bdb6f0234ecb4216efc179d99dd1f9d86fab0e50078ecadf0d49382",
+    "internal/adapters/sqlite/repositories/operator.go": "39e060f61f198fc2ce9bb0007d9f9cd60d0d2e9d55159e913a3f03aad4e0578b",
+    "internal/adapters/sqlite/repositories/ports.go": "7010bf283a8893c04a9aa778cfe8eaf05d2926dc9bf0d4079b291dacb1b14d58",
+    "internal/adapters/sqlite/repositories/profile_formatting.go": "d5f4a41d30d23fedff194a4179fd033320a2e0b84aa8f901b891bc4450d7e038",
+    "internal/adapters/sqlite/repositories/queries.go": "7a0a54a6412d2b3f3d9fcac7a8a786fc899e2c9a526d8aee226a3198f703e01e",
+    "internal/adapters/sqlite/repositories/reports.go": "2480ec63ec9415f13cf3f843331241411966a60c77c8fc2fb2f36e7ea4c98be6",
+    "internal/adapters/sqlite/repositories/room_completion.go": "d3877903b35cb80aa761dd96f1e554cd49499d146637f9809746c00936da4e89",
+    "internal/adapters/sqlite/repositories/room_discovery.go": "3126d63aa7d666fd4bbd46aa6deca34caff48551e182843187708048fdad9b49",
+    "internal/adapters/sqlite/repositories/room_settings.go": "6a898a4879111d9d94ce319bea4335ada807d4e1571283072bc092bc7971013e",
+    "internal/adapters/sqlite/repositories/rooms.go": "5e126fb91ffd2a63eb678d6c31f59731b3715b2767feda09cce3d0ac69469ac8",
+    "internal/adapters/sqlite/repositories/services.go": "e5c46945534b7025744cc59f16777a38ee0503d3b565c098ff4f50cbb58742f1",
+    "internal/adapters/sqlite/repositories/store.go": "ca1f370e58214e6c413b00d088b4e00be960fa7a7a7823c044b401594a15be21",
+    "internal/adapters/sqlite/repositories/theme_default.go": "d44a5825f53a4494a67d46db023f14ec56fc70b02d3763bab9003aa01a922697",
+    "internal/adapters/sqlite/repositories/transcripts.go": "4c618fbb626259c944952afaf62ed3a85cf2d8f845c0fa74eef52a832e8a02cf",
+    "internal/controllers/browser.go": "dd4e4675b2991149d11f60303552c20a2863e2e06642c45a86720fe16c8d333f",
+    "internal/controllers/catalog.go": "a6810ab14deddff697b89eec1da34495af4209fb04d4db2f7191765d94003460",
+    "internal/controllers/chat.go": "a5315de1c4b822e88c678ed80c6713dcb3a96138bac30f31d9cd45fccd6933b5",
+    "internal/controllers/contacts.go": "cccf9c2ce3b3bdc676f96fe1bc3516dac302c5d543959271c311ad9776153289",
+    "internal/controllers/controller.go": "ab48497dbef14c58c9f95561e7c7952da0c142ebdbccdafa3d8d5310049ab270",
+    "internal/controllers/media.go": "4b789f66d39e6343091ecc2323faed8430eaf7e4f42accee2072fcdf096262d7",
+    "internal/controllers/native.go": "beb505988ac9c24e3a6f230b7b3c395f6e25a341a092229c40b556d6a6539bb5",
+    "internal/controllers/operator.go": "896fda9d24a36aecd6502f6c95599fecb37f1623b68e357af59f3dd92c7e457c",
+    "internal/controllers/pages.go": "e14d5e50b6ba3c2acb10a02e67939d4575025fbdae70469de5d0b653fed4e3bd"
+  },
+  "acceptance_inventory": {
+    "scenario_runner_count": 17,
+    "scenario_runners": [
+      "v4/scripts/integration/run-block.sh",
+      "v4/scripts/integration/run-catalog.sh",
+      "v4/scripts/integration/run-contacts.sh",
+      "v4/scripts/integration/run-formatting.sh",
+      "v4/scripts/integration/run-friend-moderation.sh",
+      "v4/scripts/integration/run-group.sh",
+      "v4/scripts/integration/run-identity.sh",
+      "v4/scripts/integration/run-media.sh",
+      "v4/scripts/integration/run-mirrors.sh",
+      "v4/scripts/integration/run-pages.sh",
+      "v4/scripts/integration/run-pair.sh",
+      "v4/scripts/integration/run-reconnect.sh",
+      "v4/scripts/integration/run-room-discovery.sh",
+      "v4/scripts/integration/run-room-moderation.sh",
+      "v4/scripts/integration/run-room.sh",
+      "v4/scripts/integration/run-slash.sh",
+      "v4/scripts/integration/run-vote-report.sh"
+    ],
+    "shared_runner": "v4/scripts/integration/run.sh",
+    "requirement": "Inventory and execute all applicable existing scenario runners against isolated fixtures for the complete protocol/page extraction. Preserve each suite's dedicated setup, ports, advertised origin and evidence. Seven prior suites are the baseline, not the full completion ceiling. Diagnose existing fixture defects separately and preserve failed evidence; do not silently omit a suite."
+  },
+  "delivery_commitment": "One coordinated implementation and one complete reviewable final delivery. Internal checkpoints do not require repeated user approval; temporary migration bridges are removed by completion.",
+  "workflow_coordination": {
+    "decision": "Retain one cohesive permanent realtime application coordinator for operations that combine capability services with shared sessions, queued deliveries, room membership, votes or delivery gates. It owns ephemeral state and ordered gate acquisition; it does not own packet construction, page rendering, SQL, or every business rule.",
+    "capability_interaction": "Coordinate typed, synchronous account/contact/chat/room operations. Capability services return typed committed results and required effects; they do not call back into the coordinator while holding their own locks or expose lock handles to adapters. Apply committed cache/session transitions before releasing the workflow boundary.",
+    "examples": [
+      "Login and password changes coordinate identity results with session replacement or invalidation.",
+      "Blocking coordinates durable privacy change with queued-delivery cancellation under the existing delivery gate.",
+      "Room join, leave and kick coordinate durable policy decisions with live membership and typed recipient events.",
+      "Message and gift workflows retain database atomicity and publish delivery work only after committed results."
+    ],
+    "concurrency_rule": "Preserve responseGate -> account deliveryGate -> shared state mutex ordering and current cancellation/commit semantics. Split account values from delivery synchronization where necessary; do not introduce separately locked copies of shared state or a new asynchronous event bus during this structural migration.",
+    "review_checkpoint": "Approve the ownership and call direction internally before parallel extraction. This is an engineering checkpoint within the authorized single delivery, not an additional user approval phase.",
+    "completion_boundary": "The former all-feature Application is removed. Each controller/adapter receives concrete capability interfaces or explicit workflow interfaces it consumes; the permanent coordinator exposes only operations that need shared realtime coordination."
+  }
+}

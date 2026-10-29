@@ -1,0 +1,5858 @@
+[
+  {
+    "source": "artifacts/vineflower/ab.java:55",
+    "java_literal": "\"Info\""
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:56",
+    "java_literal": "\" is online\""
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:56",
+    "java_literal": "\" is busy\""
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:56",
+    "java_literal": "\" is away\""
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:56",
+    "java_literal": "\" is offline\""
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:217",
+    "java_literal": "\"Group Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:264",
+    "java_literal": "\"Group Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:378",
+    "java_literal": "\"Friends\""
+  },
+  {
+    "source": "artifacts/vineflower/ab.java:381",
+    "java_literal": "\"Group Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/ad.java:25",
+    "java_literal": "\"Open link\""
+  },
+  {
+    "source": "artifacts/vineflower/c.java:14",
+    "java_literal": "\"file:///\""
+  },
+  {
+    "source": "artifacts/vineflower/c.java:28",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/c.java:53",
+    "java_literal": "\"MIDlet needs to be signed to be able to retrieve photos from the storage.\""
+  },
+  {
+    "source": "artifacts/vineflower/c.java:55",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/c.java:63",
+    "java_literal": "\"Ooops. Unfortunately your Phone does not support taking pictures from the storage.\""
+  },
+  {
+    "source": "artifacts/vineflower/c.java:65",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/c.java:80",
+    "java_literal": "\"File size too large.\""
+  },
+  {
+    "source": "artifacts/vineflower/c.java:120",
+    "java_literal": "\"...\""
+  },
+  {
+    "source": "artifacts/vineflower/c.java:122",
+    "java_literal": "\"...\""
+  },
+  {
+    "source": "artifacts/vineflower/c.java:130",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/c.java:184",
+    "java_literal": "\"Select File\""
+  },
+  {
+    "source": "artifacts/vineflower/c.java:193",
+    "java_literal": "\"Confirm\""
+  },
+  {
+    "source": "artifacts/vineflower/c.java:216",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/c.java:218",
+    "java_literal": "\".mp3\""
+  },
+  {
+    "source": "artifacts/vineflower/c.java:220",
+    "java_literal": "\".gif\""
+  },
+  {
+    "source": "artifacts/vineflower/c.java:220",
+    "java_literal": "\".jpeg\""
+  },
+  {
+    "source": "artifacts/vineflower/c.java:220",
+    "java_literal": "\".jpg\""
+  },
+  {
+    "source": "artifacts/vineflower/c.java:223",
+    "java_literal": "\"...\""
+  },
+  {
+    "source": "artifacts/vineflower/c.java:301",
+    "java_literal": "\"Ooops. Unfortunately your Phone does not support taking pictures from the storage.\""
+  },
+  {
+    "source": "artifacts/vineflower/c.java:301",
+    "java_literal": "\"Info\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/Main.java:13",
+    "java_literal": "\"MIDlet-Version\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:50",
+    "java_literal": "\"socket://\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:50",
+    "java_literal": "\":\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:59",
+    "java_literal": "\"socket://gateway.mig33.com:25\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:60",
+    "java_literal": "\"gateway.mig33.com\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:61",
+    "java_literal": "\"25\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:68",
+    "java_literal": "\"socket://gateway.mig33.com:9119\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:69",
+    "java_literal": "\"gateway.mig33.com\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:70",
+    "java_literal": "\"9119\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:83",
+    "java_literal": "\"socket://\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:83",
+    "java_literal": "\":\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:107",
+    "java_literal": "\"SignIn\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:129",
+    "java_literal": "\"SignIn\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:134",
+    "java_literal": "\"SignIn\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:246",
+    "java_literal": "\".\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:247",
+    "java_literal": "\".\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:250",
+    "java_literal": "\"J2MEv\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:250",
+    "java_literal": "\".165\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:253",
+    "java_literal": "\"microedition.platform\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:257",
+    "java_literal": "\"Sony\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:262",
+    "java_literal": "\"Unknown\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:521",
+    "java_literal": "\"Connection Error. Please go to HELP on http://wap.mig33.com for info on how to setup your mobile phone. Unexpected response.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:523",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:548",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:552",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:591",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:607",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:623",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:635",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:643",
+    "java_literal": "\"not found\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:648",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:678",
+    "java_literal": "\"Success\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:682",
+    "java_literal": "\"Success\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:755",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:781",
+    "java_literal": "\"Your SMS has been sent.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:781",
+    "java_literal": "\"Sending SMS...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:783",
+    "java_literal": "\"Send Mail\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:795",
+    "java_literal": "\"Photo Sent!\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:798",
+    "java_literal": "\"Info\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:829",
+    "java_literal": "\"Confirm\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:833",
+    "java_literal": "\"Success\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:837",
+    "java_literal": "\"Info\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:840",
+    "java_literal": "\"Success\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:954",
+    "java_literal": "\"Search Room\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:957",
+    "java_literal": "\"Create Room\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:960",
+    "java_literal": "\"Make Call\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:963",
+    "java_literal": "\"Registration Help?\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:974",
+    "java_literal": "\"Registration\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:983",
+    "java_literal": "\"Registration\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:984",
+    "java_literal": "\"Username\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:984",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:985",
+    "java_literal": "\"Password\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:985",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:986",
+    "java_literal": "\"Mobile Number\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:986",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:987",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:994",
+    "java_literal": "\"Logging in...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1036",
+    "java_literal": "\"Amount (\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1036",
+    "java_literal": "\")\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1053",
+    "java_literal": "\"Downloading contact list...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1073",
+    "java_literal": "\"MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1077",
+    "java_literal": "\"Yahoo!\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1081",
+    "java_literal": "\"Google Talk\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1085",
+    "java_literal": "\"AIM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1104",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1136",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1138",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1151",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1153",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1160",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1162",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1169",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1171",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1178",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1180",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1187",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1189",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1267",
+    "java_literal": "\"Blocked Users\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1272",
+    "java_literal": "\";\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1278",
+    "java_literal": "\"Your block list is empty.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1278",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1341",
+    "java_literal": "\"Chat Rooms\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1344",
+    "java_literal": "\"(\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1344",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1344",
+    "java_literal": "\")\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1356",
+    "java_literal": "\"No chat rooms found.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1356",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1363",
+    "java_literal": "\"Chat Rooms (\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1363",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1363",
+    "java_literal": "\")\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1369",
+    "java_literal": "\"Next\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1373",
+    "java_literal": "\"Previous\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1380",
+    "java_literal": "\"Info\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1392",
+    "java_literal": "\"Kick User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1395",
+    "java_literal": "\"Mute User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1399",
+    "java_literal": "\"Private Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1402",
+    "java_literal": "\"Add to Contact List\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1407",
+    "java_literal": "\"Emote Target\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1409",
+    "java_literal": "\"View User's Profile\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1419",
+    "java_literal": "\";\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1428",
+    "java_literal": "\";\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1438",
+    "java_literal": "\";\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1444",
+    "java_literal": "\"(Un-mute)\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1451",
+    "java_literal": "\"(Admin)\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1461",
+    "java_literal": "\"The chat room is empty.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1461",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1463",
+    "java_literal": "\"Enter Username\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1486",
+    "java_literal": "\"Confirm\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1507",
+    "java_literal": "\"MSN Setup\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1507",
+    "java_literal": "\"MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1512",
+    "java_literal": "\"Yahoo! Setup\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1512",
+    "java_literal": "\"Yahoo!\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1517",
+    "java_literal": "\"AIM Setup\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1517",
+    "java_literal": "\"AIM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1522",
+    "java_literal": "\"Gtalk Setup\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1522",
+    "java_literal": "\"Google Talk\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1640",
+    "java_literal": "\"Unexpected disconnection. Please reconnect.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1640",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1691",
+    "java_literal": "\"Connection Error. Please go to HELP on http://wap.mig33.com for info on how to setup your mobile phone.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/a.java:1718",
+    "java_literal": "\"Connection to server is lost. Please reconnect.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:15",
+    "java_literal": "\"http://gateway.mig33.com/\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:16",
+    "java_literal": "\"gateway.mig33.com\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:17",
+    "java_literal": "\"25\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:74",
+    "java_literal": "\"GET\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:78",
+    "java_literal": "\"Content-Type\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:78",
+    "java_literal": "\"image/gif\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:79",
+    "java_literal": "\"POST\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:81",
+    "java_literal": "\"Content-Length\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:87",
+    "java_literal": "\"Response Code: \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:90",
+    "java_literal": "\"Content-Length\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:93",
+    "java_literal": "\"0\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:118",
+    "java_literal": "\"Connection Error. Please go to HELP on http://wap.mig33.com for info on how to setup your mobile phone.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:123",
+    "java_literal": "\"Connection Error. Please go to HELP on http://wap.mig33.com for info on how to setup your mobile phone. :\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:161",
+    "java_literal": "\"Connection Error. Please go to HELP on http://wap.mig33.com for info on how to setup your mobile phone.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:221",
+    "java_literal": "\"Connection to server is lost. Please reconnect.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:243",
+    "java_literal": "\"mig33\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:244",
+    "java_literal": "\"sid\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:245",
+    "java_literal": "\"sw\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:245",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:246",
+    "java_literal": "\"sh\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:246",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:247",
+    "java_literal": "\"ver\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:249",
+    "java_literal": "\"User-Agent\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:253",
+    "java_literal": "\"GET\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:257",
+    "java_literal": "\"Content-Type\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:257",
+    "java_literal": "\"application/x-www-form-urlencoded\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:258",
+    "java_literal": "\"POST\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:259",
+    "java_literal": "\"Content-Length\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:269",
+    "java_literal": "\"Content-Length\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:271",
+    "java_literal": "\"0\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:298",
+    "java_literal": "\"<html><head><title>Error</title></head><body><p>There was an error loading the page.</p></body></html>\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:361",
+    "java_literal": "\"Content-Length\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:363",
+    "java_literal": "\"0\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:387",
+    "java_literal": "\".gif\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:387",
+    "java_literal": "\".jpg\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:439",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:447",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:454",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:459",
+    "java_literal": "\"<\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:465",
+    "java_literal": "\"<\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:469",
+    "java_literal": "\">\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:475",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:478",
+    "java_literal": "\"<\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/b.java:478",
+    "java_literal": "\">\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:34",
+    "java_literal": "\"Camera\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:96",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:97",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:101",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:175",
+    "java_literal": "\"Amount (AUD$)\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:184",
+    "java_literal": "\"...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:221",
+    "java_literal": "\"/k.png\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:240",
+    "java_literal": "\"/j.png\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:294",
+    "java_literal": "\"tel:\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:299",
+    "java_literal": "\"Unable to call-through: \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:299",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:325",
+    "java_literal": "\"MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:327",
+    "java_literal": "\"Yahoo!\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:329",
+    "java_literal": "\"Google Talk\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:331",
+    "java_literal": "\"AIM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:338",
+    "java_literal": "\"Send\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:339",
+    "java_literal": "\"Menu\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:340",
+    "java_literal": "\"Select\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:341",
+    "java_literal": "\"Edit\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:342",
+    "java_literal": "\"Continue\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:343",
+    "java_literal": "\"Back\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:344",
+    "java_literal": "\"Finish\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:345",
+    "java_literal": "\"Unblock\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:346",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:347",
+    "java_literal": "\"Capture\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:348",
+    "java_literal": "\"Write\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:349",
+    "java_literal": "\"Close\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:350",
+    "java_literal": "\"Back\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:351",
+    "java_literal": "\"Exit\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:352",
+    "java_literal": "\"Ok\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:353",
+    "java_literal": "\"No\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:354",
+    "java_literal": "\"Insert\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:355",
+    "java_literal": "\"Insert Emoticon\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:356",
+    "java_literal": "\"Insert Username\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:366",
+    "java_literal": "\"mig33\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:370",
+    "java_literal": "\"mig33\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:378",
+    "java_literal": "\"Menu\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:379",
+    "java_literal": "\"Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:381",
+    "java_literal": "\"Make Call\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:382",
+    "java_literal": "\"Send SMS\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:383",
+    "java_literal": "\"Invite Friend\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:384",
+    "java_literal": "\"My Scrapbook\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:385",
+    "java_literal": "\"Set Presence\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:387",
+    "java_literal": "\"View Profile\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:388",
+    "java_literal": "\"View Details\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:389",
+    "java_literal": "\"mig33 Community\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:390",
+    "java_literal": "\"Add Contact\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:391",
+    "java_literal": "\"Add Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:392",
+    "java_literal": "\"Delete Contact\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:393",
+    "java_literal": "\"Move to Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:395",
+    "java_literal": "\"My Profile\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:396",
+    "java_literal": "\"My Account\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:397",
+    "java_literal": "\"Other IM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:398",
+    "java_literal": "\"Settings\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:399",
+    "java_literal": "\"Exit\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:400",
+    "java_literal": "\"Menu\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:401",
+    "java_literal": "\"Collapse\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:403",
+    "java_literal": "\"Make Call\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:404",
+    "java_literal": "\"Send SMS\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:405",
+    "java_literal": "\"Invite Friend\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:406",
+    "java_literal": "\"My Scrapbook\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:407",
+    "java_literal": "\"Set Presence\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:409",
+    "java_literal": "\"mig33 Community\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:410",
+    "java_literal": "\"Add Contact\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:411",
+    "java_literal": "\"Add Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:412",
+    "java_literal": "\"Rename Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:413",
+    "java_literal": "\"Delete Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:415",
+    "java_literal": "\"My Profile\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:416",
+    "java_literal": "\"My Account\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:417",
+    "java_literal": "\"Other IM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:418",
+    "java_literal": "\"Settings\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:419",
+    "java_literal": "\"Exit\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:420",
+    "java_literal": "\"Menu\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:421",
+    "java_literal": "\"Open Chat Rooms\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:423",
+    "java_literal": "\"Make Call\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:424",
+    "java_literal": "\"Send SMS\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:425",
+    "java_literal": "\"Invite Friend\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:426",
+    "java_literal": "\"My Scrapbook\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:427",
+    "java_literal": "\"Set Presence\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:429",
+    "java_literal": "\"mig33 Community\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:430",
+    "java_literal": "\"Add Contact\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:431",
+    "java_literal": "\"Add Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:433",
+    "java_literal": "\"My Profile\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:434",
+    "java_literal": "\"My Account\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:435",
+    "java_literal": "\"Other IM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:436",
+    "java_literal": "\"Settings\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:437",
+    "java_literal": "\"Exit\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:438",
+    "java_literal": "\"Menu\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:439",
+    "java_literal": "\"Open Mail\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:441",
+    "java_literal": "\"Make Call\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:442",
+    "java_literal": "\"Send SMS\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:443",
+    "java_literal": "\"Add Contact\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:444",
+    "java_literal": "\"Invite Friend\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:446",
+    "java_literal": "\"My Account\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:447",
+    "java_literal": "\"My Scrapbook\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:448",
+    "java_literal": "\"mig33 Community\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:449",
+    "java_literal": "\"Other IM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:451",
+    "java_literal": "\"Add Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:452",
+    "java_literal": "\"Set Presence\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:453",
+    "java_literal": "\"Settings\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:454",
+    "java_literal": "\"Exit\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:455",
+    "java_literal": "\"Settings\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:456",
+    "java_literal": "\"Save Password\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:456",
+    "java_literal": "\"ON\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:457",
+    "java_literal": "\"Sound\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:457",
+    "java_literal": "\"ON\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:457",
+    "java_literal": "\"OFF\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:458",
+    "java_literal": "\"Blocked Users\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:459",
+    "java_literal": "\"Current Conn.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:459",
+    "java_literal": "\"HTTP\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:460",
+    "java_literal": "\"Emoticons\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:460",
+    "java_literal": "\"ON\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:460",
+    "java_literal": "\"OFF\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:461",
+    "java_literal": "\"Clear Cache\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:462",
+    "java_literal": "\"Camera Settings\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:463",
+    "java_literal": "\"Camera Retest\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:464",
+    "java_literal": "\"About mig33\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:470",
+    "java_literal": "\"Loading...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:481",
+    "java_literal": "\"Contact Request\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:492",
+    "java_literal": "\"Info\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:512",
+    "java_literal": "\"File Received\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:537",
+    "java_literal": "\"Add Contact\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:540",
+    "java_literal": "\"Add mig33 contact\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:543",
+    "java_literal": "\"Contact Details\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:546",
+    "java_literal": "\"Create Room\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:549",
+    "java_literal": "\"Connection Type\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:552",
+    "java_literal": "\"Forgot Details\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:555",
+    "java_literal": "\"Login\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:560",
+    "java_literal": "\"Make Call\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:564",
+    "java_literal": "\"MSN Setup\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:564",
+    "java_literal": "\"Yahoo! Setup\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:564",
+    "java_literal": "\"AIM Setup\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:564",
+    "java_literal": "\"Gtalk Setup\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:568",
+    "java_literal": "\"Invite Friend\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:574",
+    "java_literal": "\"Registration\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:578",
+    "java_literal": "\"Search Room\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:581",
+    "java_literal": "\"Resend Code\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:584",
+    "java_literal": "\"Authenticate Account\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:587",
+    "java_literal": "\"Connection Type\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:587",
+    "java_literal": "\"mig33\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:590",
+    "java_literal": "\"Welcome to mig33\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:596",
+    "java_literal": "\"Contact Request\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:596",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:598",
+    "java_literal": "\"About mig33\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:600",
+    "java_literal": "\"mig33\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:620",
+    "java_literal": "\"Loading...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:625",
+    "java_literal": "\"Loading Images \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:625",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:632",
+    "java_literal": "\"Error loading\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:636",
+    "java_literal": "\"Loading Complete\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:639",
+    "java_literal": "\"Loading Images \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:639",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:767",
+    "java_literal": "\"mig33\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:768",
+    "java_literal": "\"Connection Type\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:860",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:879",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:899",
+    "java_literal": "\"Save Password\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:902",
+    "java_literal": "\"Sound\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:905",
+    "java_literal": "\"Google Talk\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:908",
+    "java_literal": "\"MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:911",
+    "java_literal": "\"Yahoo!\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:914",
+    "java_literal": "\"Show offline contacts\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:917",
+    "java_literal": "\"AIM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:920",
+    "java_literal": "\"Camera Settings\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:923",
+    "java_literal": "\"Camera Calibration\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:926",
+    "java_literal": "\"TCP\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:929",
+    "java_literal": "\"Emoticons\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:932",
+    "java_literal": "\"Emoticon Size\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:935",
+    "java_literal": "\"Sign in as Invisible\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:938",
+    "java_literal": "\"Wallpaper\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:941",
+    "java_literal": "\"Call-through\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:972",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:987",
+    "java_literal": "\"Background\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1004",
+    "java_literal": "\"Background\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1022",
+    "java_literal": "\"Save Password\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1025",
+    "java_literal": "\"Sound\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1028",
+    "java_literal": "\"Google Talk\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1031",
+    "java_literal": "\"MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1034",
+    "java_literal": "\"Yahoo!\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1037",
+    "java_literal": "\"Show offline contacts\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1040",
+    "java_literal": "\"AIM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1043",
+    "java_literal": "\"Camera Settings\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1046",
+    "java_literal": "\"Camera Calibration\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1049",
+    "java_literal": "\"TCP\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1052",
+    "java_literal": "\"Emoticons\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1055",
+    "java_literal": "\"Emoticon Size\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1058",
+    "java_literal": "\"Sign in as Invisible\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1061",
+    "java_literal": "\"Wallpaper\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1064",
+    "java_literal": "\"Call-through\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1067",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1085",
+    "java_literal": "\"&width=120&height=160\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1088",
+    "java_literal": "\"&width=240&height=320\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1091",
+    "java_literal": "\"&width=288&height=352\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1094",
+    "java_literal": "\"&width=480&height=640\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1097",
+    "java_literal": "\"&width=160&height=120\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1100",
+    "java_literal": "\"&width=320&height=240\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1103",
+    "java_literal": "\"&width=352&height=288\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1106",
+    "java_literal": "\"&width=640&height=480\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1109",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1128",
+    "java_literal": "\"&width=120&height=160\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1131",
+    "java_literal": "\"&width=240&height=320\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1134",
+    "java_literal": "\"&width=288&height=352\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1137",
+    "java_literal": "\"&width=480&height=640\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1140",
+    "java_literal": "\"&width=160&height=120\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1143",
+    "java_literal": "\"&width=320&height=240\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1146",
+    "java_literal": "\"&width=352&height=288\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1149",
+    "java_literal": "\"&width=640&height=480\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1154",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1172",
+    "java_literal": "\"Nokia5300\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1172",
+    "java_literal": "\"Nokia6233\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1172",
+    "java_literal": "\"Nokia6085\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1173",
+    "java_literal": "\"capture://video\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1175",
+    "java_literal": "\"capture://image\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1179",
+    "java_literal": "\"VideoControl\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1182",
+    "java_literal": "\"EricssonW300c\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1192",
+    "java_literal": "\"&width=120&height=160\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1195",
+    "java_literal": "\"&width=240&height=320\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1198",
+    "java_literal": "\"&width=288&height=352\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1201",
+    "java_literal": "\"&width=480&height=640\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1204",
+    "java_literal": "\"&width=160&height=120\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1207",
+    "java_literal": "\"&width=320&height=240\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1210",
+    "java_literal": "\"&width=352&height=288\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1213",
+    "java_literal": "\"&width=640&height=480\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1218",
+    "java_literal": "\"encoding=jpeg\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1250",
+    "java_literal": "\"Server\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1253",
+    "java_literal": "\"Port\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1273",
+    "java_literal": "\"Server\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1276",
+    "java_literal": "\"Port\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1361",
+    "java_literal": "\"frms\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1391",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1396",
+    "java_literal": "\"frms\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1400",
+    "java_literal": "\";\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1454",
+    "java_literal": "\"Sign In\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1455",
+    "java_literal": "\"Sign Out\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1457",
+    "java_literal": "\"Add/Edit IM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1458",
+    "java_literal": "\"Remove IM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1463",
+    "java_literal": "\"IMs\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1464",
+    "java_literal": "\"MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1465",
+    "java_literal": "\"Yahoo!\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1466",
+    "java_literal": "\"Google Talk\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1467",
+    "java_literal": "\"AIM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1473",
+    "java_literal": "\"Camera Settings\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1474",
+    "java_literal": "\"Camera Default\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1474",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1475",
+    "java_literal": "\"120x160\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1475",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1476",
+    "java_literal": "\"240x320\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1476",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1477",
+    "java_literal": "\"288x352\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1477",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1478",
+    "java_literal": "\"480x640\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1478",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1479",
+    "java_literal": "\"160x120\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1479",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1480",
+    "java_literal": "\"320x240\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1480",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1481",
+    "java_literal": "\"352x288\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1481",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1482",
+    "java_literal": "\"640x480\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1482",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1488",
+    "java_literal": "\"Your current connection is connected through HTTP instead of TCP.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1488",
+    "java_literal": "\"Info\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1521",
+    "java_literal": "\"Announcement\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1530",
+    "java_literal": "\"Connect\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1530",
+    "java_literal": "\"Connecting to MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1533",
+    "java_literal": "\"Connect\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1533",
+    "java_literal": "\"Connecting to Yahoo!\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1536",
+    "java_literal": "\"Connect\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1536",
+    "java_literal": "\"Connecting to Google Talk\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1539",
+    "java_literal": "\"Connect\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1539",
+    "java_literal": "\"Connecting to AIM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1555",
+    "java_literal": "\"...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1559",
+    "java_literal": "\"...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1574",
+    "java_literal": "\"Chat Rooms\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1578",
+    "java_literal": "\"(\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1578",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1578",
+    "java_literal": "\")\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1582",
+    "java_literal": "\"More Rooms\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1583",
+    "java_literal": "\"Search\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1584",
+    "java_literal": "\"Create Room\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1611",
+    "java_literal": "\"Menu\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1612",
+    "java_literal": "\"View User's Profile\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1614",
+    "java_literal": "\"Private Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1615",
+    "java_literal": "\"Kick User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1616",
+    "java_literal": "\"Mute User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1617",
+    "java_literal": "\"Leave Room\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1620",
+    "java_literal": "\"Add to Contact List\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1621",
+    "java_literal": "\"Invite User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1622",
+    "java_literal": "\"Send Photo\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1623",
+    "java_literal": "\"Close Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1626",
+    "java_literal": "\"Add to Contact List\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1630",
+    "java_literal": "\"Invite User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1631",
+    "java_literal": "\"Block User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1634",
+    "java_literal": "\"Send Photo\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1635",
+    "java_literal": "\"Close Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1709",
+    "java_literal": "\"View User's Profile\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1709",
+    "java_literal": "\"List room users\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1725",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1727",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1819",
+    "java_literal": "\"Menu\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1821",
+    "java_literal": "\"Continue\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1824",
+    "java_literal": "\"Close Window\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1837",
+    "java_literal": "\"Expand\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1839",
+    "java_literal": "\"Expand\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1839",
+    "java_literal": "\"Collapse\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1846",
+    "java_literal": "\"Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1848",
+    "java_literal": "\"Send Mail\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1850",
+    "java_literal": "\"Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1860",
+    "java_literal": "\"Blocked Users\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1860",
+    "java_literal": "\"Unblocking \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1994",
+    "java_literal": "\"SMS Message:\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:1994",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2000",
+    "java_literal": "\"Mobile Number\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2000",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2082",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2108",
+    "java_literal": "\"cid=\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2108",
+    "java_literal": "\"&pres=\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2111",
+    "java_literal": "\"gid=\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2147",
+    "java_literal": "\"Chat Rooms\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2147",
+    "java_literal": "\"Retrieving...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2157",
+    "java_literal": "\"Chat Rooms\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2157",
+    "java_literal": "\"Retrieving...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2160",
+    "java_literal": "\"Chat Rooms\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2160",
+    "java_literal": "\"Retrieving...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2167",
+    "java_literal": "\"Chat Rooms\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2167",
+    "java_literal": "\"Joining chat room...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2175",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2180",
+    "java_literal": "\";\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2182",
+    "java_literal": "\"f\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2182",
+    "java_literal": "\"=\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2184",
+    "java_literal": "\"&f\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2184",
+    "java_literal": "\"=\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2193",
+    "java_literal": "\"Presence\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2193",
+    "java_literal": "\"Changing Presence\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2206",
+    "java_literal": "\"From Camera\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2222",
+    "java_literal": "\"Ooops. Unfortunately we detected that your mobile phone does not support taking pictures from the application. \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2225",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2232",
+    "java_literal": "\"From Storage\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2239",
+    "java_literal": "\"From Scrapbook\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2241",
+    "java_literal": "\"Send Photo\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2241",
+    "java_literal": "\"Retrieving Info...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2254",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2256",
+    "java_literal": "\"roomName=\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2258",
+    "java_literal": "\"gcid=\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2260",
+    "java_literal": "\"imType=\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2260",
+    "java_literal": "\"&cid=\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2267",
+    "java_literal": "\"View User's Profile\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2271",
+    "java_literal": "\"View User's Profile\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2271",
+    "java_literal": "\"List room users\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2275",
+    "java_literal": "\"Group Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2275",
+    "java_literal": "\"Retrieving Info...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2278",
+    "java_literal": "\"View Profile\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2278",
+    "java_literal": "\"Retrieving Info...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2283",
+    "java_literal": "\"Invite User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2284",
+    "java_literal": "\"Invite User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2299",
+    "java_literal": "\"None of your contacts are online.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2299",
+    "java_literal": "\"Warning\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2303",
+    "java_literal": "\"Private Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2305",
+    "java_literal": "\"Private Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2305",
+    "java_literal": "\"Retrieving...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2307",
+    "java_literal": "\"Kick User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2309",
+    "java_literal": "\"Kick User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2309",
+    "java_literal": "\"Retrieving...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2311",
+    "java_literal": "\"Mute User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2313",
+    "java_literal": "\"Mute User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2313",
+    "java_literal": "\"Retrieving...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2315",
+    "java_literal": "\"Leave Room\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2316",
+    "java_literal": "\"Leave Room\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2316",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2318",
+    "java_literal": "\"Add to Contact List\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2320",
+    "java_literal": "\"Add mig33 contact\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2325",
+    "java_literal": "\"Group Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2325",
+    "java_literal": "\"Retrieving Info...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2328",
+    "java_literal": "\"Block User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2330",
+    "java_literal": "\"Block User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2331",
+    "java_literal": "\"Are you sure you would like to block \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2331",
+    "java_literal": "\" ?\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2333",
+    "java_literal": "\"Close Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2335",
+    "java_literal": "\"Leave Room\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2335",
+    "java_literal": "\"Leaving group chat...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2341",
+    "java_literal": "\"Send Photo\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2342",
+    "java_literal": "\"Send Photo\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2344",
+    "java_literal": "\"From Camera\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2345",
+    "java_literal": "\"From Storage\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2346",
+    "java_literal": "\"From Scrapbook\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2353",
+    "java_literal": "\"Kick User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2353",
+    "java_literal": "\"Request Kick...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2358",
+    "java_literal": "\"Enter Username\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2358",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2369",
+    "java_literal": "\"Invite User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2369",
+    "java_literal": "\"Inviting user...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2375",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2380",
+    "java_literal": "\"View Profile\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2380",
+    "java_literal": "\"Retrieving Info...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2387",
+    "java_literal": "\"Add mig33 contact\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2400",
+    "java_literal": "\"Close Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2400",
+    "java_literal": "\"Close Window\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2401",
+    "java_literal": "\"Continue\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2426",
+    "java_literal": "\"Mute User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2426",
+    "java_literal": "\"Request Un-Mute...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2429",
+    "java_literal": "\"Mute User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2429",
+    "java_literal": "\"Request Mute...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2436",
+    "java_literal": "\"Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2439",
+    "java_literal": "\"Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2441",
+    "java_literal": "\"mig33 chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2445",
+    "java_literal": "\"MSN chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2450",
+    "java_literal": "\"Yahoo! chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2455",
+    "java_literal": "\"Gtalk chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2460",
+    "java_literal": "\"AIM chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2471",
+    "java_literal": "\"Send Mail\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2473",
+    "java_literal": "\"Write Message:\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2475",
+    "java_literal": "\"View Profile\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2481",
+    "java_literal": "\"View Profile\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2481",
+    "java_literal": "\"Retrieving Info...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2483",
+    "java_literal": "\"View Details\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2485",
+    "java_literal": "\"Contact Details\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2489",
+    "java_literal": "\"Display Name\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2491",
+    "java_literal": "\"mig33 Username\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2493",
+    "java_literal": "\"Mobile Number\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2495",
+    "java_literal": "\"MSN Username\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2497",
+    "java_literal": "\"Yahoo! ID\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2499",
+    "java_literal": "\"AIM Username\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2501",
+    "java_literal": "\"Gtalk Username\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2510",
+    "java_literal": "\"Sign In\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2511",
+    "java_literal": "\"Connect\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2511",
+    "java_literal": "\"Connecting to \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2513",
+    "java_literal": "\"Sign Out\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2514",
+    "java_literal": "\"Disconnect\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2514",
+    "java_literal": "\"Disconnecting from \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2516",
+    "java_literal": "\"Add/Edit IM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2519",
+    "java_literal": "\"IM Details\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2519",
+    "java_literal": "\"Retrieving Info...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2523",
+    "java_literal": "\"MSN Setup\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2523",
+    "java_literal": "\"MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2524",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2524",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2526",
+    "java_literal": "\"Yahoo! Setup\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2526",
+    "java_literal": "\"Yahoo!\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2527",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2527",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2529",
+    "java_literal": "\"Gtalk Setup\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2529",
+    "java_literal": "\"Google Talk\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2530",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2530",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2532",
+    "java_literal": "\"AIM Setup\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2532",
+    "java_literal": "\"AIM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2533",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2533",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2540",
+    "java_literal": "\"Open Chat Rooms\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2543",
+    "java_literal": "\"Chat Rooms\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2543",
+    "java_literal": "\"Retrieving...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2545",
+    "java_literal": "\"Open Mail\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2548",
+    "java_literal": "\"Expand\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2555",
+    "java_literal": "\"Collapse\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2560",
+    "java_literal": "\"Delete Contact\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2563",
+    "java_literal": "\"Delete Contact\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2566",
+    "java_literal": "\"You are about to delete \\\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2568",
+    "java_literal": "\"\\\" from your contact list.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2571",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2572",
+    "java_literal": "\"This will also delete this contact from your desktop IM.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2577",
+    "java_literal": "\"Delete Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2582",
+    "java_literal": "\"Delete Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2583",
+    "java_literal": "\"You are about to delete the group \\\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2583",
+    "java_literal": "\"\\\" from your contact list.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2586",
+    "java_literal": "\"You must have at least one group.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2586",
+    "java_literal": "\"Warning\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2589",
+    "java_literal": "\"Group must be empty and must not contain hidden contacts.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2589",
+    "java_literal": "\"Warning\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2593",
+    "java_literal": "\"Exit\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2594",
+    "java_literal": "\"Logout\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2594",
+    "java_literal": "\"Logging Out...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2596",
+    "java_literal": "\"About mig33\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2600",
+    "java_literal": "\"Make Call\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2603",
+    "java_literal": "\"Info\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2604",
+    "java_literal": "\"You need to activate your account first.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2610",
+    "java_literal": "\"Make Call\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2616",
+    "java_literal": "\"Destination Number\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2623",
+    "java_literal": "\"Origin Number\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2641",
+    "java_literal": "\"Add Contact\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2645",
+    "java_literal": "\"Invite Friend\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2649",
+    "java_literal": "\"My Scrapbook\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2651",
+    "java_literal": "\"My Scrapbook\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2651",
+    "java_literal": "\"Retrieving Info...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2657",
+    "java_literal": "\"mig33 Community\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2659",
+    "java_literal": "\"mig33 Community\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2659",
+    "java_literal": "\"Retrieving Info...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2665",
+    "java_literal": "\"Add Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2665",
+    "java_literal": "\"Rename Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2666",
+    "java_literal": "\"Send SMS\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2676",
+    "java_literal": "\"SMS Message:\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2676",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2680",
+    "java_literal": "\"Info\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2681",
+    "java_literal": "\"You need to activate your account first.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2685",
+    "java_literal": "\"Settings\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2688",
+    "java_literal": "\"Current Conn.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2688",
+    "java_literal": "\"HTTP\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2688",
+    "java_literal": "\"TCP\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2690",
+    "java_literal": "\"Move to Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2692",
+    "java_literal": "\"Add to Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2695",
+    "java_literal": "\"Set Presence\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2696",
+    "java_literal": "\"Presence\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2697",
+    "java_literal": "\"Online\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2698",
+    "java_literal": "\"Away\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2699",
+    "java_literal": "\"Busy\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2700",
+    "java_literal": "\"Appear Offline\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2703",
+    "java_literal": "\"Other IM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2706",
+    "java_literal": "\"Save Password\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2708",
+    "java_literal": "\"Save Password\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2708",
+    "java_literal": "\"ON\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2708",
+    "java_literal": "\"OFF\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2711",
+    "java_literal": "\"Sound\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2713",
+    "java_literal": "\"Sound\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2713",
+    "java_literal": "\"ON\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2713",
+    "java_literal": "\"OFF\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2716",
+    "java_literal": "\"Emoticons\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2719",
+    "java_literal": "\"Emoticons\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2719",
+    "java_literal": "\"ON\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2719",
+    "java_literal": "\"OFF\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2722",
+    "java_literal": "\"Clear Cache\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2723",
+    "java_literal": "\"Clear Cache\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2723",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2726",
+    "java_literal": "\"My Account\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2728",
+    "java_literal": "\"My Account\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2728",
+    "java_literal": "\"Retrieving Info...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2734",
+    "java_literal": "\"My Profile\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2736",
+    "java_literal": "\"My Profile\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2736",
+    "java_literal": "\"Retrieving Info...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2742",
+    "java_literal": "\"Remove IM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2744",
+    "java_literal": "\"Remove IM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2745",
+    "java_literal": "\"Removing \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2745",
+    "java_literal": "\" IM will remove all \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2745",
+    "java_literal": "\" contacts as well as your login details for that messenger.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2748",
+    "java_literal": "\"Blocked Users\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2749",
+    "java_literal": "\"Blocked Users\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2749",
+    "java_literal": "\"Retrieving...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2751",
+    "java_literal": "\"Camera Settings\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2751",
+    "java_literal": "\"Camera Retest\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2752",
+    "java_literal": "\"Camera Retest\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2759",
+    "java_literal": "\"Camera Settings\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2760",
+    "java_literal": "\"Please wait.. \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2760",
+    "java_literal": "\"%\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2774",
+    "java_literal": "\"Add Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2776",
+    "java_literal": "\"Rename Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2782",
+    "java_literal": "\"Add Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2782",
+    "java_literal": "\"Group Name\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2782",
+    "java_literal": "\"New Group Name\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2782",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2788",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2788",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2797",
+    "java_literal": "\"Write Message:\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2814",
+    "java_literal": "\"Mobile Number\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2815",
+    "java_literal": "\"Add Contact\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2815",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2819",
+    "java_literal": "\"Move to Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2819",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2822",
+    "java_literal": "\"Add Contact\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2822",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2826",
+    "java_literal": "\"Accept Contact\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2826",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2853",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2855",
+    "java_literal": "\"Mobile Number\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2855",
+    "java_literal": "\"Password\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2868",
+    "java_literal": "\"Mobile Number\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2886",
+    "java_literal": "\"Port\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2890",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2894",
+    "java_literal": "\"Logout\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2894",
+    "java_literal": "\"Logging Out...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2937",
+    "java_literal": "\"Resend Code\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2937",
+    "java_literal": "\"Requesting Authentication Code...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2958",
+    "java_literal": "\"Delete Contact\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2958",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2962",
+    "java_literal": "\"Delete Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2962",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2974",
+    "java_literal": "\"Make Call\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2974",
+    "java_literal": "\"Request Call Back...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2984",
+    "java_literal": "\"Remove IM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2984",
+    "java_literal": "\"Remove MSN...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2985",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2986",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2988",
+    "java_literal": "\"Remove IM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2988",
+    "java_literal": "\"Remove YAHOO...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2989",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2990",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2992",
+    "java_literal": "\"Remove IM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2992",
+    "java_literal": "\"Remove AIM...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2993",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2994",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2996",
+    "java_literal": "\"Remove IM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2996",
+    "java_literal": "\"Remove GTalk...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2997",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:2998",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3004",
+    "java_literal": "\"Block User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3004",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3042",
+    "java_literal": "\"Add Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3042",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3045",
+    "java_literal": "\"Update\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3045",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3048",
+    "java_literal": "\"Send Mail\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3048",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3056",
+    "java_literal": "\"Mobile Number\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3056",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3061",
+    "java_literal": "\"SMS\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3061",
+    "java_literal": "\"Sending SMS...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3070",
+    "java_literal": "\"Display Name\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3070",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3075",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3079",
+    "java_literal": "\"Add to Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3080",
+    "java_literal": "\"Add Contact\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3080",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3094",
+    "java_literal": "\"Username\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3109",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3126",
+    "java_literal": "\"Authenticate Account\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3126",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3132",
+    "java_literal": "\"Add Contact\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3132",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3133",
+    "java_literal": "\"MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3135",
+    "java_literal": "\"Yahoo!\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3137",
+    "java_literal": "\"Google Talk\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3139",
+    "java_literal": "\"AIM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3149",
+    "java_literal": "\"mig33 Username\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3149",
+    "java_literal": "\"Recipient username\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3174",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3175",
+    "java_literal": "\"Help?\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3177",
+    "java_literal": "\"Make Call\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3177",
+    "java_literal": "\"Retrieving help...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3184",
+    "java_literal": "\"Registration\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3184",
+    "java_literal": "\"Retrieving help...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3187",
+    "java_literal": "\"Create Room\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3187",
+    "java_literal": "\"Retrieving help...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3190",
+    "java_literal": "\"Search Room\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3190",
+    "java_literal": "\"Retrieving help...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3193",
+    "java_literal": "\"mig33\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3196",
+    "java_literal": "\"Mobile Number\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3197",
+    "java_literal": "\"Mobile Number\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3197",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3201",
+    "java_literal": "\"MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3202",
+    "java_literal": "\"MSN Username\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3202",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3206",
+    "java_literal": "\"AIM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3207",
+    "java_literal": "\"AIM Username\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3207",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3211",
+    "java_literal": "\"Google Talk\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3212",
+    "java_literal": "\"Gtalk Username\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3212",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3216",
+    "java_literal": "\"Yahoo!\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3217",
+    "java_literal": "\"Yahoo! ID\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3217",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3221",
+    "java_literal": "\"Connection Type\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3228",
+    "java_literal": "\"Enter Code\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3229",
+    "java_literal": "\"Enter Code\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3229",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3233",
+    "java_literal": "\"Resend Code\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3235",
+    "java_literal": "\"Remind me later\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3242",
+    "java_literal": "\"Forgot Details\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3244",
+    "java_literal": "\"Register\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3245",
+    "java_literal": "\"Registration\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3245",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3276",
+    "java_literal": "\"Password\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3279",
+    "java_literal": "\" is required.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3290",
+    "java_literal": "\"TC\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3293",
+    "java_literal": "\"You must agree to the terms and conditions.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3296",
+    "java_literal": "\"Share Mobile\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3298",
+    "java_literal": "\"Save Password\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3300",
+    "java_literal": "\"Save Password\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3300",
+    "java_literal": "\"ON\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3300",
+    "java_literal": "\"OFF\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3301",
+    "java_literal": "\"Sign in as Invisible\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3303",
+    "java_literal": "\"Call-through\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3306",
+    "java_literal": "\"MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3308",
+    "java_literal": "\"Yahoo!\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3310",
+    "java_literal": "\"AIM\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3312",
+    "java_literal": "\"Google Talk\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3319",
+    "java_literal": "\"Show offline contacts\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3324",
+    "java_literal": "\"Username\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3324",
+    "java_literal": "\"Recipient username\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3325",
+    "java_literal": "\"Display Name\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3325",
+    "java_literal": "\"Your name\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3326",
+    "java_literal": "\"mig33 Username\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3331",
+    "java_literal": "\" is required.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3334",
+    "java_literal": "\"MSN Username\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3338",
+    "java_literal": "\"AIM Username\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3342",
+    "java_literal": "\"Gtalk Username\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3346",
+    "java_literal": "\"Yahoo! ID\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3350",
+    "java_literal": "\"Password\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3353",
+    "java_literal": "\" is required.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3358",
+    "java_literal": "\"Enter Security Code\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3361",
+    "java_literal": "\" is required.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3366",
+    "java_literal": "\"Mobile Number\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3371",
+    "java_literal": "\" is required.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3374",
+    "java_literal": "\"Destination Number\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3377",
+    "java_literal": "\" is required.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3382",
+    "java_literal": "\"Origin Number\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3385",
+    "java_literal": "\" is required.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3390",
+    "java_literal": "\"Room Name\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3390",
+    "java_literal": "\"New room name\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3391",
+    "java_literal": "\"Server\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3394",
+    "java_literal": "\" is required.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3399",
+    "java_literal": "\"Port\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3402",
+    "java_literal": "\" is required.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3411",
+    "java_literal": "\" is required.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3420",
+    "java_literal": "\" is required.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3429",
+    "java_literal": "\" is required.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3445",
+    "java_literal": "\"Add to Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3449",
+    "java_literal": "\"Add Contact\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3449",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3454",
+    "java_literal": "\"Update Details\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3454",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3458",
+    "java_literal": "\"Create Room\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3458",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3465",
+    "java_literal": "\"Ping\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3465",
+    "java_literal": "\"Testing Connection...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3469",
+    "java_literal": "\"Forgot Details\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3469",
+    "java_literal": "\"Requesting Info...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3473",
+    "java_literal": "\"Login\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3473",
+    "java_literal": "\"Connecting...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3477",
+    "java_literal": "\"Make Call\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3477",
+    "java_literal": "\"Retrieving Info...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3478",
+    "java_literal": "\"Call now\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3479",
+    "java_literal": "\"Destination Number\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3480",
+    "java_literal": "\"Origin Number\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3482",
+    "java_literal": "\"Compare Rates\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3492",
+    "java_literal": "\"MSN Setup\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3492",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3497",
+    "java_literal": "\"Yahoo! Setup\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3497",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3502",
+    "java_literal": "\"Gtalk Setup\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3502",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3507",
+    "java_literal": "\"AIM Setup\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3507",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3516",
+    "java_literal": "\"Invite Friend\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3516",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3520",
+    "java_literal": "\"Registration\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3520",
+    "java_literal": "\"Registering User...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3526",
+    "java_literal": "\"Search Room\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3526",
+    "java_literal": "\"Retrieving Info...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3530",
+    "java_literal": "\"Resend Code\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3530",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3567",
+    "java_literal": "\"Allow\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3574",
+    "java_literal": "\"Add to Contact List\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3578",
+    "java_literal": "\"Share Mobile\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3584",
+    "java_literal": "\"Add to Group\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3589",
+    "java_literal": "\"Accept Contact\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3589",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3595",
+    "java_literal": "\"Reject\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3596",
+    "java_literal": "\"Contact Request\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3596",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3601",
+    "java_literal": "\"View User\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3608",
+    "java_literal": "\"Skip\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3616",
+    "java_literal": "\"Skip All\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3627",
+    "java_literal": "\"Manual\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3633",
+    "java_literal": "\"HTTP\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3640",
+    "java_literal": "\"Connection\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3640",
+    "java_literal": "\"Connecting...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3644",
+    "java_literal": "\"Login\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3646",
+    "java_literal": "\"Registration\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3648",
+    "java_literal": "\"Registration\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3648",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3659",
+    "java_literal": "\"2\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3662",
+    "java_literal": "\"Sending Photo in progress...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3673",
+    "java_literal": "\"0\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3673",
+    "java_literal": "\"1\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3675",
+    "java_literal": "\"4\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3680",
+    "java_literal": "\"Unable to invoke native browser: \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3680",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3683",
+    "java_literal": "\"Upload Photos\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3685",
+    "java_literal": "\"From Camera\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3686",
+    "java_literal": "\"From Storage\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3701",
+    "java_literal": "\"Sending Photo in progress...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3703",
+    "java_literal": "\"Sending Photo in progress...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3707",
+    "java_literal": "\"Sending Photo in progress...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3726",
+    "java_literal": "\"Upload Photos\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3726",
+    "java_literal": "\"Processing...\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3736",
+    "java_literal": "\"mig33\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3875",
+    "java_literal": "\"Destination Number\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3877",
+    "java_literal": "\"Recent Numbers\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3884",
+    "java_literal": "\"You have no recently used numbers.\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3884",
+    "java_literal": "\"Recent Numbers\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3962",
+    "java_literal": "\"Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3964",
+    "java_literal": "\"Send Mail\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3966",
+    "java_literal": "\"Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:3969",
+    "java_literal": "\"Chat\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:4110",
+    "java_literal": "\"Please wait.. \""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/c.java:4110",
+    "java_literal": "\"%\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:151",
+    "java_literal": "\"microedition.io.file.FileConnection.version\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:159",
+    "java_literal": "\"microedition.media.version\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:163",
+    "java_literal": "\"supports.video.capture\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:163",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:163",
+    "java_literal": "\"supports.video.capture\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:164",
+    "java_literal": "\"true\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:202",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:238",
+    "java_literal": "\"\\\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:254",
+    "java_literal": "\"black\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:258",
+    "java_literal": "\"blue\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:262",
+    "java_literal": "\"cyan\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:266",
+    "java_literal": "\"gray\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:266",
+    "java_literal": "\"grey\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:270",
+    "java_literal": "\"green\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:274",
+    "java_literal": "\"magenta\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:278",
+    "java_literal": "\"red\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:282",
+    "java_literal": "\"white\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:286",
+    "java_literal": "\"yellow\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:290",
+    "java_literal": "\"#\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:294",
+    "java_literal": "\"0x\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:302",
+    "java_literal": "\"http://\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:305",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:311",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:314",
+    "java_literal": "\"http://\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:320",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:327",
+    "java_literal": "\"/\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:330",
+    "java_literal": "\"http://\""
+  },
+  {
+    "source": "artifacts/vineflower/com/projectgoth/Roshan/d.java:340",
+    "java_literal": "\"%20\""
+  },
+  {
+    "source": "artifacts/vineflower/e.java:53",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/e.java:202",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/e.java:203",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/e.java:207",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/e.java:215",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/e.java:216",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/e.java:221",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/e.java:222",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/h.java:28",
+    "java_literal": "\"Go!\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:66",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:82",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:100",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:107",
+    "java_literal": "\"Save Password\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:108",
+    "java_literal": "\"Sound\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:109",
+    "java_literal": "\"Google Talk\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:110",
+    "java_literal": "\"MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:111",
+    "java_literal": "\"Yahoo!\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:112",
+    "java_literal": "\"Show offline contacts\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:113",
+    "java_literal": "\"AIM\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:114",
+    "java_literal": "\"Camera Settings\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:115",
+    "java_literal": "\"Camera Calibration\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:116",
+    "java_literal": "\"TCP\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:117",
+    "java_literal": "\"Emoticons\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:118",
+    "java_literal": "\"Emoticon Size\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:119",
+    "java_literal": "\"Sign in as Invisible\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:120",
+    "java_literal": "\"Background\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:121",
+    "java_literal": "\"Wallpaper\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:122",
+    "java_literal": "\"&width=120&height=160\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:123",
+    "java_literal": "\"&width=240&height=320\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:124",
+    "java_literal": "\"&width=288&height=352\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:125",
+    "java_literal": "\"&width=480&height=640\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:126",
+    "java_literal": "\"&width=160&height=120\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:127",
+    "java_literal": "\"&width=320&height=240\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:128",
+    "java_literal": "\"&width=352&height=288\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:129",
+    "java_literal": "\"&width=640&height=480\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:130",
+    "java_literal": "\"Server\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:131",
+    "java_literal": "\"Port\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:132",
+    "java_literal": "\"SignIn\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:252",
+    "java_literal": "\"ex:\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:274",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:282",
+    "java_literal": "\">>>>>>>>>>>>>>>>>>>>>>Problem\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:355",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:440",
+    "java_literal": "\"[\""
+  },
+  {
+    "source": "artifacts/vineflower/i.java:440",
+    "java_literal": "\"] \""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:21",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:66",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:75",
+    "java_literal": "\"= \""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:75",
+    "java_literal": "\"=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:76",
+    "java_literal": "\"<\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:76",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:77",
+    "java_literal": "\"/>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:77",
+    "java_literal": "\">\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:78",
+    "java_literal": "\">\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:78",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:79",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:86",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:93",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:132",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:146",
+    "java_literal": "\"</html>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:146",
+    "java_literal": "\"</head>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:146",
+    "java_literal": "\"</body>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:148",
+    "java_literal": "\"<html>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:150",
+    "java_literal": "\"<title>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:152",
+    "java_literal": "\"</title>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:156",
+    "java_literal": "\"</textarea>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:167",
+    "java_literal": "\"<b>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:167",
+    "java_literal": "\"<strong>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:167",
+    "java_literal": "\"<em>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:169",
+    "java_literal": "\"<big>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:171",
+    "java_literal": "\"<u>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:173",
+    "java_literal": "\"</u>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:174",
+    "java_literal": "\"</i>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:175",
+    "java_literal": "\"</b>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:176",
+    "java_literal": "\"</big>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:177",
+    "java_literal": "\"</small>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:178",
+    "java_literal": "\"<small>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:179",
+    "java_literal": "\"</strong>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:180",
+    "java_literal": "\"</em>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:181",
+    "java_literal": "\"<i>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:183",
+    "java_literal": "\"<center>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:185",
+    "java_literal": "\"</center>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:196",
+    "java_literal": "\"</form>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:199",
+    "java_literal": "\"</div>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:205",
+    "java_literal": "\"</p>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:214",
+    "java_literal": "\"</a>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:222",
+    "java_literal": "\"</span>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:229",
+    "java_literal": "\"</tag>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:243",
+    "java_literal": "\"<br>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:255",
+    "java_literal": "\"</\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:256",
+    "java_literal": "\"</option>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:259",
+    "java_literal": "\"</select>\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:278",
+    "java_literal": "\"<\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:280",
+    "java_literal": "\"<textarea\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:286",
+    "java_literal": "\"name=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:288",
+    "java_literal": "\"rows=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:290",
+    "java_literal": "\"cols=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:299",
+    "java_literal": "\"alt=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:301",
+    "java_literal": "\"size=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:312",
+    "java_literal": "\"<div\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:316",
+    "java_literal": "\"style=\\\"\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:321",
+    "java_literal": "\"color:\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:322",
+    "java_literal": "\";\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:329",
+    "java_literal": "\"background-color:\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:330",
+    "java_literal": "\";\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:337",
+    "java_literal": "\"display:\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:338",
+    "java_literal": "\";\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:347",
+    "java_literal": "\"block\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:375",
+    "java_literal": "\"<body\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:381",
+    "java_literal": "\"bgcolor=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:383",
+    "java_literal": "\"background=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:389",
+    "java_literal": "\"stretched\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:393",
+    "java_literal": "\"<p\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:398",
+    "java_literal": "\"style=\\\"color:\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:404",
+    "java_literal": "\"<span\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:407",
+    "java_literal": "\"style=\\\"color:\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:413",
+    "java_literal": "\"<a\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:420",
+    "java_literal": "\"href=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:428",
+    "java_literal": "\"<tag\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:435",
+    "java_literal": "\"id=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:437",
+    "java_literal": "\"type=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:439",
+    "java_literal": "\"href=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:448",
+    "java_literal": "\"<img\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:449",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:458",
+    "java_literal": "\"src=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:460",
+    "java_literal": "\"style=\\\"float:\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:462",
+    "java_literal": "\"right\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:465",
+    "java_literal": "\"hspace=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:467",
+    "java_literal": "\"vspace=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:469",
+    "java_literal": "\"width=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:471",
+    "java_literal": "\"height=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:503",
+    "java_literal": "\"<form\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:504",
+    "java_literal": "\"get\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:505",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:509",
+    "java_literal": "\"method=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:511",
+    "java_literal": "\"action=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:518",
+    "java_literal": "\"<input\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:519",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:520",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:521",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:522",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:528",
+    "java_literal": "\"type=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:530",
+    "java_literal": "\"name=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:532",
+    "java_literal": "\"value=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:534",
+    "java_literal": "\"checked\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:536",
+    "java_literal": "\"alt=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:538",
+    "java_literal": "\"size=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:544",
+    "java_literal": "\"text\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:547",
+    "java_literal": "\"hidden\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:550",
+    "java_literal": "\"text\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:550",
+    "java_literal": "\"password\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:551",
+    "java_literal": "\"submit\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:551",
+    "java_literal": "\"reset\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:552",
+    "java_literal": "\"checkbox\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:577",
+    "java_literal": "\"password\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:605",
+    "java_literal": "\"<select\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:608",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:612",
+    "java_literal": "\"name=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:614",
+    "java_literal": "\"size=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:630",
+    "java_literal": "\"<option\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:631",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:635",
+    "java_literal": "\"value=\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:637",
+    "java_literal": "\"selected\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:649",
+    "java_literal": "\"&#\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:664",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:667",
+    "java_literal": "\"&copy;\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:667",
+    "java_literal": "\"(c)\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:668",
+    "java_literal": "\"&amp;\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:668",
+    "java_literal": "\"&\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:669",
+    "java_literal": "\"&lt;\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:669",
+    "java_literal": "\"<\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:670",
+    "java_literal": "\"&gt;\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:670",
+    "java_literal": "\">\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:671",
+    "java_literal": "\"&nbsp;\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:671",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:679",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:694",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:695",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:696",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:751",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:764",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:770",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:802",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:804",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:819",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1075",
+    "java_literal": "\"Go!\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1142",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1145",
+    "java_literal": "\"2\""
+  },
+  {
+    "source": "artifacts/vineflower/k.java:1148",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/m.java:24",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/m.java:30",
+    "java_literal": "\"&\""
+  },
+  {
+    "source": "artifacts/vineflower/m.java:33",
+    "java_literal": "\"=\""
+  },
+  {
+    "source": "artifacts/vineflower/m.java:45",
+    "java_literal": "\"&\""
+  },
+  {
+    "source": "artifacts/vineflower/m.java:48",
+    "java_literal": "\"=\""
+  },
+  {
+    "source": "artifacts/vineflower/m.java:55",
+    "java_literal": "\"&\""
+  },
+  {
+    "source": "artifacts/vineflower/m.java:58",
+    "java_literal": "\"=\""
+  },
+  {
+    "source": "artifacts/vineflower/m.java:64",
+    "java_literal": "\"&\""
+  },
+  {
+    "source": "artifacts/vineflower/m.java:67",
+    "java_literal": "\"=on\""
+  },
+  {
+    "source": "artifacts/vineflower/m.java:73",
+    "java_literal": "\"&\""
+  },
+  {
+    "source": "artifacts/vineflower/m.java:76",
+    "java_literal": "\"=\""
+  },
+  {
+    "source": "artifacts/vineflower/m.java:82",
+    "java_literal": "\"&\""
+  },
+  {
+    "source": "artifacts/vineflower/m.java:85",
+    "java_literal": "\"=\""
+  },
+  {
+    "source": "artifacts/vineflower/m.java:90",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/m.java:90",
+    "java_literal": "\"%20\""
+  },
+  {
+    "source": "artifacts/vineflower/m.java:91",
+    "java_literal": "\"1\""
+  },
+  {
+    "source": "artifacts/vineflower/m.java:92",
+    "java_literal": "\"get\""
+  },
+  {
+    "source": "artifacts/vineflower/m.java:93",
+    "java_literal": "\"?\""
+  },
+  {
+    "source": "artifacts/vineflower/p.java:38",
+    "java_literal": "\"UTF-8\""
+  },
+  {
+    "source": "artifacts/vineflower/p.java:130",
+    "java_literal": "\"UTF-8\""
+  },
+  {
+    "source": "artifacts/vineflower/p.java:164",
+    "java_literal": "\"UTF-8\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:21",
+    "java_literal": "\"mig33\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:40",
+    "java_literal": "\"Mail\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:230",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:414",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:418",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:422",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:426",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:430",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:457",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:479",
+    "java_literal": "\"Mail\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:487",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:540",
+    "java_literal": "\"99\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:545",
+    "java_literal": "\"99\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:547",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:551",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:555",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:559",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:563",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:710",
+    "java_literal": "\"mig33\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:713",
+    "java_literal": "\"MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:715",
+    "java_literal": "\"Yahoo!\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:717",
+    "java_literal": "\"Google Talk\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:719",
+    "java_literal": "\"AIM\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:722",
+    "java_literal": "\"MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:724",
+    "java_literal": "\"Yahoo!\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:726",
+    "java_literal": "\"Google Talk\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:728",
+    "java_literal": "\"AIM\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:756",
+    "java_literal": "\"mig33\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:759",
+    "java_literal": "\"MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:761",
+    "java_literal": "\"Yahoo!\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:763",
+    "java_literal": "\"Google Talk\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:765",
+    "java_literal": "\"AIM\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:768",
+    "java_literal": "\"MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:770",
+    "java_literal": "\"Yahoo!\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:772",
+    "java_literal": "\"Google Talk\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:774",
+    "java_literal": "\"AIM\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:812",
+    "java_literal": "\"Chat Rooms\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:812",
+    "java_literal": "\"Mail (\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:812",
+    "java_literal": "\")\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:850",
+    "java_literal": "\"mig33\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:852",
+    "java_literal": "\"MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:854",
+    "java_literal": "\"Yahoo!\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:856",
+    "java_literal": "\"AIM\""
+  },
+  {
+    "source": "artifacts/vineflower/r.java:858",
+    "java_literal": "\"Google Talk\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:40",
+    "java_literal": "\"Ver: \""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:41",
+    "java_literal": "\"Web: www.mig33.com\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:42",
+    "java_literal": "\"Wap: wap.mig33.com\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:44",
+    "java_literal": "\"Copyright 2006 Project Goth Inc.\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:74",
+    "java_literal": "\"Type of Contact:\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:75",
+    "java_literal": "\"mig33\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:77",
+    "java_literal": "\"Mobile Number\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:79",
+    "java_literal": "\"MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:81",
+    "java_literal": "\"Yahoo!\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:83",
+    "java_literal": "\"Google Talk\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:85",
+    "java_literal": "\"AIM\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:88",
+    "java_literal": "\"mig33 Username\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:89",
+    "java_literal": "\"Share my mobile number\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:89",
+    "java_literal": "\"Share Mobile\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:91",
+    "java_literal": "\"Continue\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:94",
+    "java_literal": "\" has added you to his/her contact list.\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:96",
+    "java_literal": "\"Allow\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:98",
+    "java_literal": "\"Reject\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:100",
+    "java_literal": "\"View User\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:102",
+    "java_literal": "\"Skip\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:104",
+    "java_literal": "\"Skip All\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:106",
+    "java_literal": "\"Add \""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:106",
+    "java_literal": "\" to my contact list\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:106",
+    "java_literal": "\"Add to Contact List\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:107",
+    "java_literal": "\"Share my mobile number with \""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:107",
+    "java_literal": "\"Share Mobile\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:110",
+    "java_literal": "\"Display Name\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:111",
+    "java_literal": "\"mig33 Username\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:112",
+    "java_literal": "\"Mobile Number\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:113",
+    "java_literal": "\"MSN Username\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:114",
+    "java_literal": "\"Yahoo! ID\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:115",
+    "java_literal": "\"Gtalk Username\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:116",
+    "java_literal": "\"AIM Username\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:117",
+    "java_literal": "\"Update\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:120",
+    "java_literal": "\"New room name\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:121",
+    "java_literal": "\"Create\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:122",
+    "java_literal": "\"Help?\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:132",
+    "java_literal": "\"\\n\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:148",
+    "java_literal": "\"Server\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:149",
+    "java_literal": "\"Port\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:151",
+    "java_literal": "\"Connect\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:154",
+    "java_literal": "\"Your username and password will be sent by SMS to your mobile phone.\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:156",
+    "java_literal": "\"Mobile Number\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:157",
+    "java_literal": "\"Continue\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:160",
+    "java_literal": "\"Username\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:161",
+    "java_literal": "\"Password\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:162",
+    "java_literal": "\"Password\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:163",
+    "java_literal": "\"Save Password\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:163",
+    "java_literal": "\"Save Password\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:164",
+    "java_literal": "\"Sign in as Invisible\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:164",
+    "java_literal": "\"Sign in as Invisible\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:166",
+    "java_literal": "\"Login\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:168",
+    "java_literal": "\"Register\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:170",
+    "java_literal": "\"Forgot Details\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:172",
+    "java_literal": "\"Connection Type\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:174",
+    "java_literal": "\"Connect to:\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:175",
+    "java_literal": "\"MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:175",
+    "java_literal": "\"MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:176",
+    "java_literal": "\"Yahoo!\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:176",
+    "java_literal": "\"Yahoo!\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:177",
+    "java_literal": "\"Google Talk\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:177",
+    "java_literal": "\"Google Talk\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:178",
+    "java_literal": "\"AIM\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:178",
+    "java_literal": "\"AIM\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:181",
+    "java_literal": "\"Show offline contacts\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:181",
+    "java_literal": "\"Show offline contacts\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:184",
+    "java_literal": "\"Destination Number\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:185",
+    "java_literal": "\"Destination Number\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:187",
+    "java_literal": "\"Origin Number\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:188",
+    "java_literal": "\"Origin Number\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:191",
+    "java_literal": "\"Call-through\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:191",
+    "java_literal": "\"Call-through\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:195",
+    "java_literal": "\"Call now\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:198",
+    "java_literal": "\"Compare Rates\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:202",
+    "java_literal": "\"Help?\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:205",
+    "java_literal": "\"Username\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:206",
+    "java_literal": "\"MSN\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:207",
+    "java_literal": "\"(e.g. user@mail.com)\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:210",
+    "java_literal": "\"Username\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:212",
+    "java_literal": "\"Password\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:213",
+    "java_literal": "\"Password\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:215",
+    "java_literal": "\"Save\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:218",
+    "java_literal": "\"Invite your friends to join mig33. Get bonus credit when they activate their account.\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:220",
+    "java_literal": "\"Mobile Number\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:221",
+    "java_literal": "\"Your name\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:222",
+    "java_literal": "\"Invite Friend\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:225",
+    "java_literal": "\"Username\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:226",
+    "java_literal": "\"Password\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:227",
+    "java_literal": "\"Mobile Number\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:228",
+    "java_literal": "\"(Inc. Country Code)\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:229",
+    "java_literal": "\"Mobile Number\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:231",
+    "java_literal": "\"Enter Security Code\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:232",
+    "java_literal": "\"Enter Security Code\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:237",
+    "java_literal": "\"I agree to the terms and conditions (see www.mig33.com)\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:237",
+    "java_literal": "\"TC\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:239",
+    "java_literal": "\"Submit\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:240",
+    "java_literal": "\"Help?\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:243",
+    "java_literal": "\"Room Name\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:244",
+    "java_literal": "\"Search\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:245",
+    "java_literal": "\"Help?\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:248",
+    "java_literal": "\"This is your mobile number. Please change it if it is incorrect.\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:250",
+    "java_literal": "\"Mobile Number\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:251",
+    "java_literal": "\"Continue\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:254",
+    "java_literal": "\"Enter your authentication code to make calls, send SMS and receive your free credit!\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:256",
+    "java_literal": "\"Enter Code\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:258",
+    "java_literal": "\"Resend Code\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:260",
+    "java_literal": "\"Remind me later\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:263",
+    "java_literal": "\"Please select your connection type below. If you are unsure, try TCP first.\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:264",
+    "java_literal": "\"TCP\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:266",
+    "java_literal": "\"HTTP\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:268",
+    "java_literal": "\"Manual\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:271",
+    "java_literal": "\"Connection test using \""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:271",
+    "java_literal": "\"TCP\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:271",
+    "java_literal": "\"HTTP\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:271",
+    "java_literal": "\" is successful. Please select:\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:272",
+    "java_literal": "\"Login\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:273",
+    "java_literal": "\"Or\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:274",
+    "java_literal": "\"Registration\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:278",
+    "java_literal": "\"Starting mig33 for the first time. We are about to perform a few tests to ensure that the phone is configured correctly\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:506",
+    "java_literal": "\"Username\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:507",
+    "java_literal": "\"Username\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:511",
+    "java_literal": "\"Password\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:512",
+    "java_literal": "\"Password\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:781",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:782",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:786",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:794",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:795",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:800",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:801",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:821",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:822",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:827",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:835",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:836",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:841",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/t.java:842",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:22",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:60",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:61",
+    "java_literal": "\"±\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:92",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:100",
+    "java_literal": "\"±\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:128",
+    "java_literal": "\"±\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:129",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:290",
+    "java_literal": "\": \""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:292",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:292",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:292",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:302",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:318",
+    "java_literal": "\"±\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:318",
+    "java_literal": "\"±\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:330",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:331",
+    "java_literal": "\"±\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:363",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:363",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:363",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:365",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:365",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:365",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:381",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:381",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:381",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:383",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:383",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:383",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:408",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:408",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:408",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:410",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:410",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:410",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:422",
+    "java_literal": "\"±\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:431",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:431",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:431",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:433",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:433",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:433",
+    "java_literal": "\"¤\""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:443",
+    "java_literal": "\" \""
+  },
+  {
+    "source": "artifacts/vineflower/v.java:444",
+    "java_literal": "\"±\""
+  },
+  {
+    "source": "artifacts/vineflower/w.java:88",
+    "java_literal": "\"Invalid packet id:2\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:33",
+    "java_literal": "\"\""
+  },
+  {
+    "source": "artifacts/vineflower/y.java:36",
+    "java_literal": "\"*\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:29",
+    "java_literal": "\"&width=320&height=240\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:35",
+    "java_literal": "\"&width=120&height=160\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:38",
+    "java_literal": "\"&width=240&height=320\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:41",
+    "java_literal": "\"&width=288&height=352\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:44",
+    "java_literal": "\"&width=480&height=640\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:47",
+    "java_literal": "\"&width=160&height=120\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:50",
+    "java_literal": "\"&width=320&height=240\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:53",
+    "java_literal": "\"&width=352&height=288\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:56",
+    "java_literal": "\"&width=640&height=480\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:60",
+    "java_literal": "\"Nokia5300\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:61",
+    "java_literal": "\"Nokia6233\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:62",
+    "java_literal": "\"Nokia6085\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:63",
+    "java_literal": "\"Nokia6131\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:64",
+    "java_literal": "\"capture://video\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:66",
+    "java_literal": "\"capture://image\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:70",
+    "java_literal": "\"VideoControl\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:73",
+    "java_literal": "\"EricssonW300c\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:117",
+    "java_literal": "\"encoding=jpeg\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:123",
+    "java_literal": "\"You need to allow the application to access the mobile phone Camera. \""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:123",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:125",
+    "java_literal": "\"Error\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:150",
+    "java_literal": "\"Send Photo\""
+  },
+  {
+    "source": "artifacts/vineflower/z.java:153",
+    "java_literal": "\"Processing...\""
+  }
+]

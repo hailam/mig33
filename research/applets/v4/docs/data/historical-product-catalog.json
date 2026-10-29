@@ -1,0 +1,2443 @@
+{
+  "research_date": "2026-10-28",
+  "retrieved_at": "2026-10-28T11:01:50.100099+00:00",
+  "scope": "Recovered historical product names and community-author store/pack screenshots; not a complete original product database.",
+  "sources": [
+    {
+      "id": "news-454683020124169117",
+      "title": "Mig33 Emoticon - Social Pack",
+      "url": "https://mig33-news.blogspot.com/2011/01/mig33-emoticon-social-pack.html",
+      "published": "2011-01-08T17:38:00.000+05:30",
+      "updated": "2011-01-08T17:38:29.543+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "e4450be0bfdbf54dfdbf1864b11746f8651cff0d3c0f851026c48166fb67e269",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-7587009618867795384",
+      "title": "Mig33 Emoticon - Christmas Pack 2010",
+      "url": "https://mig33-news.blogspot.com/2010/12/mig33-emoticon-christmas-pack-2010.html",
+      "published": "2010-12-28T10:43:00.000+05:30",
+      "updated": "2010-12-28T10:43:08.306+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "064220f84297e7c1b9aba2b1f03a6f92f203f89b209e514b65024f5df051fc8b",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-2884293256228211558",
+      "title": "Mig33 Emoticon - In Love Pack 2 and Daily Pack",
+      "url": "https://mig33-news.blogspot.com/2010/10/mig33-emoticon-in-love-pack-2-and-daily.html",
+      "published": "2010-10-03T18:41:00.000+05:30",
+      "updated": "2010-10-03T18:41:02.737+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "9621187cd4c6e02833d07a8d0be6a7dd3fd65ad29deb392ebafb12ed25c81dac",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-2459370836212645900",
+      "title": "Mig33 Emoticon - Signs Pack 2",
+      "url": "https://mig33-news.blogspot.com/2010/09/mig33-emoticon-signs-pack-2.html",
+      "published": "2010-09-17T11:09:00.000+05:30",
+      "updated": "2010-09-17T11:09:07.920+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "9b036e3bf89f85342441a4eba28c5b261a122a52d13feea89e92c8553d3e2f39",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-885695143463340691",
+      "title": "Mig33 Emoticon - Football Fever 2",
+      "url": "https://mig33-news.blogspot.com/2010/06/football-fever-2.html",
+      "published": "2010-06-25T12:46:00.002+05:30",
+      "updated": "2010-06-25T12:47:54.071+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "b1acff8dcb48a4c633b7f09cc464a54e5f51edc5a24476f8586fcc0c2f19ab3f",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-2026406890247889584",
+      "title": "Mig33 Emoticon - Football Fever 1",
+      "url": "https://mig33-news.blogspot.com/2010/06/mig33-emoticon-football-fever-1.html",
+      "published": "2010-06-12T07:49:00.000+05:30",
+      "updated": "2010-06-12T07:49:11.381+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "7bac92e49435ce30a27704060bb0c03788c7ff0ff7519c88fecd074726224482",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-1870047875992524190",
+      "title": "Elvis Migbot Gift",
+      "url": "https://mig33-news.blogspot.com/2010/05/elvis-migbot-gift.html",
+      "published": "2010-05-27T12:13:00.002+05:30",
+      "updated": "2010-05-27T12:13:56.718+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "1054fc05796b41dcd6683a1d191af35f2f47afe7b9be48e2ef18765e35971078",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-6908161449319062044",
+      "title": "Mig33 Emoticon - Migbot 2 Pack",
+      "url": "https://mig33-news.blogspot.com/2010/05/mig33-emoticon-migbot-2-pack.html",
+      "published": "2010-05-27T12:11:00.000+05:30",
+      "updated": "2010-05-27T12:11:06.476+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "9a0ebe4a0933ca8dc6180b311b9ec946cf1a805b6db636cafe348781d708c2c2",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-218207913583537956",
+      "title": "Mig33 Emoticon - Skeleton Pack",
+      "url": "https://mig33-news.blogspot.com/2010/05/mig33-emoticon-skeleton-pack.html",
+      "published": "2010-05-27T12:08:00.000+05:30",
+      "updated": "2010-05-27T12:08:08.245+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "1d838d4522efddf04a233e3e0af70137b68981b20a9b99659be8b2a875015a40",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-614330829120352593",
+      "title": "Swimsuit Migbot Gift",
+      "url": "https://mig33-news.blogspot.com/2010/05/swimsuit-migbot-gift.html",
+      "published": "2010-05-22T09:13:00.000+05:30",
+      "updated": "2010-05-22T09:13:51.127+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "d63a03f0d650473f5e39f41655dfbcf0f27545f58fef769d48ddcabc8d4aa5f0",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-279072127932558760",
+      "title": "Mig33 Emoticon - Extra Pack 3",
+      "url": "https://mig33-news.blogspot.com/2010/05/mig33-emoticon-extra-pack-3.html",
+      "published": "2010-05-20T18:40:00.000+05:30",
+      "updated": "2010-05-20T18:40:09.229+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "b38acd203428c02533e63525b4a55b61b923c0ade67ca0239e5a3a9873304531",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-5143202326498594043",
+      "title": "Mig33 Emoticon - Bear Pack",
+      "url": "https://mig33-news.blogspot.com/2010/05/mig33-emoticon-bear-pack.html",
+      "published": "2010-05-19T19:41:00.000+05:30",
+      "updated": "2010-05-19T19:41:51.257+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "0930393f99fcba3814891f5fe17712184032278b2a279681b4339673469b9d55",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-9134567680355354107",
+      "title": "Mig33 Emoticon - Star Pack",
+      "url": "https://mig33-news.blogspot.com/2010/05/mig33-emoticon-star-pack.html",
+      "published": "2010-05-18T18:20:00.000+05:30",
+      "updated": "2010-05-18T18:20:12.318+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "fc7ebe2e1a7780c591dfd03a9bbafc5290f38aeee4472876deb47b3ecb920f4d",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-3307987992482639440",
+      "title": "Mig33 Emoticon - Finger Pack",
+      "url": "https://mig33-news.blogspot.com/2010/05/mig33-emoticon-finger-pack.html",
+      "published": "2010-05-15T17:40:00.000+05:30",
+      "updated": "2010-05-15T17:40:26.668+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "5dc270c921cac2baeb673bcb4cf3c66443d6cabd600541ba7097d10ac659e84d",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-8379932680148941566",
+      "title": "Mafia MigBot Gift",
+      "url": "https://mig33-news.blogspot.com/2010/05/mafia-migbot-gift.html",
+      "published": "2010-05-15T09:05:00.000+05:30",
+      "updated": "2010-05-15T09:05:30.364+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "e57e342fd81009e5135628dc4e47e555ec59b0ae06d3f500b5e7e05196f2d4e0",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-8544247413078474892",
+      "title": "Mig33 Emoticon - Lovely Pack",
+      "url": "https://mig33-news.blogspot.com/2010/05/mig33-emoticon-lovely-pack.html",
+      "published": "2010-05-08T05:45:00.000+05:30",
+      "updated": "2010-05-08T05:45:12.971+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "51f15f3e72b34280f0f815fae0ee28019196b7728e8c9a35f505f55d77fbfe16",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-3064790530256190229",
+      "title": "Mig33 Computer Emoticon Pack",
+      "url": "https://mig33-news.blogspot.com/2010/05/mig33-computer-emoticon-pack.html",
+      "published": "2010-05-05T22:56:00.001+05:30",
+      "updated": "2010-05-05T22:57:57.275+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "65f3a692e3181a3ff4a1027adc589f78755685f7d65510e590232159c8ef6850",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-6233379929863884307",
+      "title": "Dog pack emoticon set",
+      "url": "https://mig33-news.blogspot.com/2010/04/dog-pack-emoticon-set.html",
+      "published": "2010-04-30T21:30:00.000+05:30",
+      "updated": "2010-04-30T21:30:39.870+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "56e4a00a151b264b26270ff19c24498330201729a2c17ad7938230d0f88f96ba",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-1014367141034298501",
+      "title": "Clock Pack emoticon set",
+      "url": "https://mig33-news.blogspot.com/2010/01/clock-pack-emoticon-set.html",
+      "published": "2010-01-09T12:29:00.002+05:30",
+      "updated": "2010-01-09T12:34:18.661+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "7ff92b8859b00f399d7ddf3e703ca07024f8748263fba0a2b2cf1d39c273c607",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-1059041724615258886",
+      "title": "Halloween Emoticon Pack",
+      "url": "https://mig33-news.blogspot.com/2009/10/halloween-emoticon-pack.html",
+      "published": "2009-10-28T19:42:00.000+05:30",
+      "updated": "2009-10-28T19:42:12.079+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "a7b7582b211c62ecf7a873b033f9f7ffdcae954b34de8ae17d972c1ecfc75c48",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-7043410046266981785",
+      "title": "New Diwali 2009 emot pack and gifts.",
+      "url": "https://mig33-news.blogspot.com/2009/10/new-diwali-2009-emot-pack-and-gifts.html",
+      "published": "2009-10-13T12:05:00.000+05:30",
+      "updated": "2009-10-13T12:05:47.926+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "f90de2e89105f23f2e95a5c3180ab2a661a0c9efc9962e2ed3bec32b59a65e9f",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-9100539882372527320",
+      "title": "Animation emot pack has been released.",
+      "url": "https://mig33-news.blogspot.com/2009/09/animation-emot-pack-has-been-released.html",
+      "published": "2009-09-05T10:58:00.000+05:30",
+      "updated": "2009-09-05T11:12:34.226+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "60fc9ce471795a1a98f3fa4d91d23985097b88ec53c4922040c61ce5509c8361",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-5420102766586695827",
+      "title": "MigBot emot pack has been released...",
+      "url": "https://mig33-news.blogspot.com/2009/08/migbot-emot-pack-has-been-released.html",
+      "published": "2009-08-22T13:18:00.001+05:30",
+      "updated": "2009-08-25T09:50:20.995+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "41548c0eadf19207ef00087c3360cf0ed2720e85a20ef65656de3ca86d92b66f",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-2259500757358655757",
+      "title": "Ramadan emot pack has been released",
+      "url": "https://mig33-news.blogspot.com/2009/08/ramadan-emot-pack-has-been-released.html",
+      "published": "2009-08-22T13:16:00.000+05:30",
+      "updated": "2009-08-25T09:52:49.668+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "7cf29348d491e090a3e71b76c926cf231d0004472d4ed0dba34e8f25436150b3",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-2514282993249539856",
+      "title": "New Gifts",
+      "url": "https://mig33-news.blogspot.com/2009/08/new-gifts.html",
+      "published": "2009-08-19T21:27:00.000+05:30",
+      "updated": "2009-08-25T09:56:05.796+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "b81d9d29cbd85cf0c6acde0f03bce8371b1a7bc5e2136ac79876e760b32116f2",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "news-7113578475525546123",
+      "title": "Default emot pack has been released",
+      "url": "https://mig33-news.blogspot.com/2009/08/default-emot-pack-has-been-released.html",
+      "published": "2009-08-08T08:16:00.000+05:30",
+      "updated": "2009-08-25T09:58:51.656+05:30",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "517017489c1656df7c3936765ae288c51ec426735d90edbe151186a373747957",
+      "limits": [
+        "Contemporary author screenshot/report, not official catalog export",
+        "Unknown original product IDs, token aliases, complete download data and exact v4.62 applicability unless separately established"
+      ]
+    },
+    {
+      "id": "info-4450180573231905662",
+      "title": "Trik Emoticon Bergambar On Status Mig33",
+      "url": "https://mig-info.blogspot.com/2011/01/trik-emoticon-bergambar-pada-status.html",
+      "published": "2011-01-25T07:56:00.022+07:00",
+      "updated": "2011-02-03T15:31:55.239+07:00",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "dc3d23de870aa4f36c506238b52e9ea5b10de196c6315f41eed2fa0193385321",
+      "limits": [
+        "Original author captures/report; not official product database",
+        "Local currency prices are dated observations, not canonical prices"
+      ]
+    },
+    {
+      "id": "info-2861025131531000240",
+      "title": "Mig33 Upgrade Command Gift On Chat",
+      "url": "https://mig-info.blogspot.com/2011/01/mig33-new-command-gift-on-chat.html",
+      "published": "2011-01-19T12:37:00.013+07:00",
+      "updated": "2011-01-19T13:49:43.898+07:00",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "752939a639af2815ceceefa9e81513719005bdceb39237ec764535c05cc1a688",
+      "limits": [
+        "Original author captures/report; not official product database",
+        "Local currency prices are dated observations, not canonical prices"
+      ]
+    },
+    {
+      "id": "info-491350424469428865",
+      "title": "New Again 3 Emoticon",
+      "url": "https://mig-info.blogspot.com/2010/07/new-again-3-emoticon.html",
+      "published": "2010-07-27T19:15:00.006+07:00",
+      "updated": "2010-07-27T19:39:42.470+07:00",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "ddf7587ebbfea15b47db0378514b827836a4bca410cb93a9e04965d5da6f2550",
+      "limits": [
+        "Original author captures/report; not official product database",
+        "Local currency prices are dated observations, not canonical prices"
+      ]
+    },
+    {
+      "id": "info-8443733440063598288",
+      "title": "New Emoticon On Juli 2010",
+      "url": "https://mig-info.blogspot.com/2010/07/new-emoticon-on-juli-2010.html",
+      "published": "2010-07-23T12:48:00.007+07:00",
+      "updated": "2010-07-23T13:20:03.622+07:00",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "521c1b790ef8bd8689fd1060ef8f72fee7fc14732241eb6ecc0c40fce24fc0eb",
+      "limits": [
+        "Original author captures/report; not official product database",
+        "Local currency prices are dated observations, not canonical prices"
+      ]
+    },
+    {
+      "id": "info-5437419459619508561",
+      "title": "New Emoticon 2010",
+      "url": "https://mig-info.blogspot.com/2010/05/new-emoticon-2010.html",
+      "published": "2010-05-19T12:16:00.022+07:00",
+      "updated": "2010-05-19T13:38:14.430+07:00",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "9ac1e7950b494e61290d402e4dc81e8bca931ea8311eeb6820dd76f19a87907e",
+      "limits": [
+        "Original author captures/report; not official product database",
+        "Local currency prices are dated observations, not canonical prices"
+      ]
+    },
+    {
+      "id": "info-9193054086248475324",
+      "title": "New 5 Emoticon Again in 2010",
+      "url": "https://mig-info.blogspot.com/2010/02/new-5-emoticon-again-in-2010.html",
+      "published": "2010-02-11T08:40:00.033+07:00",
+      "updated": "2010-02-27T11:07:23.810+07:00",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "0b88e3744f85352fe3d8b23de9410c11e8e594a2032a35fc71174fb69da8f171",
+      "limits": [
+        "Original author captures/report; not official product database",
+        "Local currency prices are dated observations, not canonical prices"
+      ]
+    },
+    {
+      "id": "info-5484845010791157033",
+      "title": "New Emoticon",
+      "url": "https://mig-info.blogspot.com/2010/01/new-emoticon.html",
+      "published": "2010-01-23T13:01:00.008+07:00",
+      "updated": "2010-01-29T13:19:52.167+07:00",
+      "type": "contemporary_community_author_observation",
+      "html_sha256": "dd5044e75bf750fcf310d4e326b7d30b6dd975432feabdfa2c3302a6d7020733",
+      "limits": [
+        "Original author captures/report; not official product database",
+        "Local currency prices are dated observations, not canonical prices"
+      ]
+    },
+    {
+      "id": "mig33-pr-20110301",
+      "title": "mig33 virtual-gift sales announcement",
+      "url": "https://www.prnewswire.com/news-releases/over-40-million-virtual-gifts-sold-in-2010-by-mobile-social-entertainment-leader-mig33-117159883.html",
+      "published": "2011-03-01",
+      "type": "company_issued_press_release",
+      "summary": "The company identifies Big Hug, Kiss and Best Friend among its best-selling gifts during 2010. It does not disclose individual product IDs, assets or exact prices."
+    }
+  ],
+  "assets": [
+    {
+      "source_id": "news-454683020124169117",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3Tq_Vy93ASsVO_ih5rX-WlP4_eIDokUU-Z41ArLOI8eDyGcHAv3C5AwYhnfSchWKkQuuknL_A59BlQX0i1ox63rXVoSBD-0Hn2DbT3djPKv702j0oIAsjgtKMJ7on-wrSVfa-IZrz8mA/s1600/emot.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/mig33-emoticon-social-pack-1.png",
+      "bytes": 6796,
+      "sha256": "c792a8d7201e9e9daaa0c222aaedb6e9a3e311fb4d86b1fd49050cb8f265fb20",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-7587009618867795384",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiP-oMxuioUuVLee6myZze1Fdg-YnN4Nx5fost36mtLUiosNW65D7I68cWUXrTkbH-lBeOWxiiJTGaeDxewj-jA2ocZob_1OqsO6ZLLGF4MlCsnzt0oxZVn2g5yGLIfGlciAe5TTFbVEkk/s1600/emot-christmas.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/mig33-emoticon-christmas-pack-2010-1.png",
+      "bytes": 7053,
+      "sha256": "49d290dfc2a075fd6605f5aa2d6a1473458a577d31a68897dc5e413b6465f916",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-2884293256228211558",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4HPaYHxwS78LQzWLGHVi-7AHBqMnO-heyoqrFL_gFCsFyRR8ate_ub_E2zAbewpd3N1vmDtcdLcPvVa0RSCxmLPsPVakKfrUApID_oe_SLuK7oblUW327IWdtrmuYTHW_RTvjQp6rVFc/s1600/1.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/mig33-emoticon-in-love-pack-2-and-daily-pack-1.png",
+      "bytes": 9133,
+      "sha256": "cd6eb4de11dba722c8f0ca83b12098cd67f4383a8261917ad457547bbde7ac31",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-2884293256228211558",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqKIbwhPejc285YPexY3M2MFAprGqOTCr1ScIs02FGrHDi6XSZV5-s9AQZA2513B9wPB5wGPPJKJd-wXzOwgjL5yY5WDBtZauxNGNED6x4oRe0H4otxeNz_VAmBf7bzkb6-vUNeGbFJHk/s1600/2.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/mig33-emoticon-in-love-pack-2-and-daily-pack-2.png",
+      "bytes": 10100,
+      "sha256": "5248de76a2a773afd964b65c00508129ce7474c73c778b8290010a51f5a683cc",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-2459370836212645900",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5iWV1XBCmkozaQ48ckxrPod0HyzDRDVQsQ-1hglz3EdpHm8QyKjGXDTdcYUWnvYzkMzwt7sDM8XZPI8nhhHHY5O60O6TcBmqTm5d2GJYcEk3SIp764lrWZWqcU84U-uPYkw7YE74q2n0/s320/111.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/mig33-emoticon-signs-pack-2-1.png",
+      "bytes": 7670,
+      "sha256": "f89e1323a67f4bab79e58bb032d73776c36b5b1f29a008389bab85e779825201",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-885695143463340691",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEinNVh5Etd2yuSrO2a4PRIsBB52sgbKqt6HBXZQvz-POhmHHz4mgWjdeOR1xHC1nfmIVioZPV0SMYKRjgQ915DXt55H5BVXccih5T0jodDsdZRVXnY7VKxqbUdQt5W4qhzGlv3hsupW3pM/s320/football2.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/mig33-emoticon-football-fever-2-1.png",
+      "bytes": 9028,
+      "sha256": "42872b5462396f372550be6f781aa55477e08a5f4238812a37abea0937af781d",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-2026406890247889584",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlz0fP6yLNBBp4aA-gyd8ti24voAjqOAj-F1eVqS9_XEi6ZmSMc6IbR_RIHGRWJQde5NHTuLB8Oq3AGyOSFd1ZGGUFabiZrCo0ZMs9dvtwEiPl6GYZkxOH-n5xzM_p56UCmAAjJxEJfnU/s320/emo.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/mig33-emoticon-football-fever-1-1.png",
+      "bytes": 8885,
+      "sha256": "43d2bf4a0781935def809ae8e9c7b94832f5ad0f1f9f5aee074d2fae487cbc0b",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-1870047875992524190",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjobNtBOQ47_HMb53n1_FwIikR3aCAsjLwdUnv5sS7vAL30gyi1dYMm8bWbq1kocLn-v5DR6iSN2syj60JJ4tQ2q7Vu01-S71gHl9Wb1LrnkOF1GZDfmg1M38UhOHKLJP4U8DZiUIWzyR8/s320/elvis_migbot.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/elvis-migbot-gift-1.png",
+      "bytes": 10531,
+      "sha256": "7dd5e92ca0c0ce1456ac99aeb05496bb99851d7717bf311003bcded9410b967c",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-6908161449319062044",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifoSVXt_Gzu7cTVfWLs3KPVT55NKPLL0rmVn-td8087wkZZ_v0j0rulEfeYiPtB0BBNvn3pqvSBj5i_8ZDAIk0Eh4JmC9qadFg0FWex5v88bqVpvL7GU3R2oGTK3AlNDpaMMapr2rIjFI/s320/emo_migbot2.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/mig33-emoticon-migbot-2-pack-1.png",
+      "bytes": 6533,
+      "sha256": "a3f066d77574d73941277790a72a98e35e778b4031552bb08cb521156152de7b",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-218207913583537956",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSgoMZEzOGP6iRkgKkNUCyWD-64Ohzaz9NE3WA3l3MNOhPBYTFNe8tqkFwCEO0ngjPUMqHE3J300yVDyrjjzBtTcdt6Bk1w2Uqu1Hztf9biVjltBDlyLtyZMugTiZgU-cqUb9QoFxlAlk/s320/emo_ske.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/mig33-emoticon-skeleton-pack-1.png",
+      "bytes": 5992,
+      "sha256": "4055ad3c5a36336483b38273bbe1cf9c55abbd6868ed4adcf11d57f91231bb15",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-614330829120352593",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaN5d8yU3lvnM-MdEBRZZalOS8RoETxpLy2fH1beh0ppG79TND3VMjFeeDTJYOLhun97LOATbmh1D9c4KcT585bumoP24FFPUOhypfw2nFbdPI0dC4N1J7Aq5z45q87cPM6g_GhF6glvg/s320/1.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/swimsuit-migbot-gift-1.png",
+      "bytes": 9702,
+      "sha256": "f9f11da69051e9fb41288d02e5750501ddd92f50ae96f063dfac4c866c6e45f7",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-279072127932558760",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrSJNA2paXRdLKNG8qObVnlbqKYYmWoecB9vcgD0LqkbiXpOeynCRA6WO5KgGyVJiDlVGpW38H0ioyNCBPJJyATBCMF6chDyy9ptZIleV1ZNcWFeTjSd0Rq8mPUeEjyHxzZ7HJhKrZxdI/s320/extra.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/mig33-emoticon-extra-pack-3-1.png",
+      "bytes": 6584,
+      "sha256": "e6e79c0ff0242ac81a60b18be0668d925d5c7b1c409e46fef199df53322090fb",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-5143202326498594043",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizOltxWbUCspc_LtJ9EpEtejKoCfwYbDxv1yavdg66rVJvEj-DDPM-OqDaK-wB3Cb0jJ_kw3G5MnF2P1x7mKsQMB7LBTcVwrRZObIHovU1odntrqohmkcRTrJhhBgSUdsh3t0fixGG7Fw/s320/bear.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/mig33-emoticon-bear-pack-1.png",
+      "bytes": 5289,
+      "sha256": "c96d1263ebd2c853135827834835e9272d3562e699a9e5c67abbb4c0a427748d",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-9134567680355354107",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUKIdBINWaWWfwGSyPZch7tT9aVUc0-nmJa2_NerOjleEbgQTuRMzoPJMcJU_pwrmXJPFlCEx92QK3yODIe24zs8EyKQvGPc5ybHf1QkbeMNUEhMaRJLm2Qc49enXki25-k_2-a3X9zzY/s320/star.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/mig33-emoticon-star-pack-1.png",
+      "bytes": 6499,
+      "sha256": "e991525f7807c988b8623fa0a44140b0e2e45bef5c33887634fba7c2a945c1fa",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-3307987992482639440",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiu3Pysu-mdSxpKQCpsbKl4Z0P-MCYTHEpt0QcoI4_af6IQkrZ3AN7xvzi-z8-iaxB7SB2MgU-CHt_S7WGsQYCvWdXbnvTmAn0Bf9l3LhyphenhyphenxYXh_6wxbE_9uaOpCDoByUGKYUSHGOiMgwV0/s320/emo.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/mig33-emoticon-finger-pack-1.png",
+      "bytes": 5351,
+      "sha256": "6207505338cc51e8899f0747af08fea85160026532f250767e3e4c499bcd1828",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-8379932680148941566",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKY9pf7tXXHKIfkGbGmZH4aAd_QapQ0FWHeHk295GTF7re04_EZQ1E5adXOMGlBZYvvu9Kr9Bp_k-S5m_dVKy8JMSfHJ1LKhEV3NstE5MzFvd_bY2bYyWkOs2QHWNVbwH_EkQSdDSYZdk/s320/mafia.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/mafia-migbot-gift-1.png",
+      "bytes": 10969,
+      "sha256": "03af1676cc27a4239638f135e5ea767c8506eff29b46e56ef1fa44e1928400d3",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-8544247413078474892",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBJACabhrDBYowWIosxOBhX680L9b1TerikQQedeij5SNRjo1OEoyplT7tXjrhx_W2FKwq5QX7tSevU9sabKJ-ccODpJJHk5rZC1HgBZ_kkWyHnVDakkBRgYdFka5xW_byPNIbRFg7HcI/s320/emo.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/mig33-emoticon-lovely-pack-1.png",
+      "bytes": 6705,
+      "sha256": "c14209a1f5c872ce61428076c5bb5ef2fa19c9d4875692e2a0e49af7f0db6e9b",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-3064790530256190229",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJQ55699bse0D-Ae_KaKP2QYrc_H6aCpmcVcjw47dgVWh_cPlb2gDqpIUIiki5qluuFFK3yS_lAns6CzPcgqSeJjjSxtCY2sxjE6TT3YB3LdsKZYj1166HYI4EumXEzTfQeRyrm_jhhuA/s320/com.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/mig33-computer-emoticon-pack-1.png",
+      "bytes": 6610,
+      "sha256": "a3bc7f98bd76cab447f94192d72ad1ca3cf99e889d27857cc13d8e31b44dc06a",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-6233379929863884307",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrcNJ-y9A7GOROhZXu28RHDrC9J7aG1pu67uYwRywXfNczVN4L0qHUmPHbWaPA_dhWeO9dkWdjC-O-OtiWAMZthyphenhyphensy-TdgMoRz8zJj5wZp4-JzRRDnSCMm-38iGB_xA7AWvIZq4TiTuPQ/s320/emot.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/dog-pack-emoticon-set-1.png",
+      "bytes": 4456,
+      "sha256": "4a54c7148254b08d4a977c0743f186a7c9fc3e4562cb9e21d61eddc03ca7e301",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-1014367141034298501",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4ghWrPe8-IXa3lFZiXzRvzLVg_a33fhznw7Qk-hXmvrISU9G_fHyLk4AzzOCLy7kmOlOQfg11ndofwr97mB_oXgoN_3KjeLI1i1ncDNd3MNPxgyPvxNZgwMlZ8KaT6J-a9AyRai2n4kM/s400/clock.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/clock-pack-emoticon-set-1.png",
+      "bytes": 8263,
+      "sha256": "8ff1540afd28405d5ed4635d3967eff711147f4ec0b2e3ae0be26b2fd7b5d061",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-1059041724615258886",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifU7x1kfeeNx2Qxz1IeJUsDk7m6Diw2ovJ9muuyCEcim0tH28s6bGf71Qewcvsh468fAPJ_1-njU3MDLAaFBNT7T54UBOAY6bOHVckHPbirAcS6n3P6EQWhM6hoaPksyPeIV_fW0EhdJ3c/s320/0001.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/halloween-emoticon-pack-1.png",
+      "bytes": 4964,
+      "sha256": "84b0aba18d79d408ee128882a44c53d3c83671fcf488b310b1b333aff0166bcf",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-7043410046266981785",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgT99tzXE3fV5T9bhjLrvLprJs7bkxeRKwArsr53bRH-x2Sar1kFdXDLHHhyphenhyphenLKbsKKyOcrrm5AC-3p5Avjh0XyH-HTJmNpEHCYkjdQ5TRu4xk7fujIS9GlRh5P3RLVFDBV7Ef_QTq-dJGL1/s320/gift.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/new-diwali-2009-emot-pack-and-gifts-1.png",
+      "bytes": 6082,
+      "sha256": "806d507bb501f146406028bb8c24ded288a6d6236ca34b751ecc51cb92ba9f56",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-7043410046266981785",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhttW9Va43r2Qzkvsx08WOYCwwLF1bcbI0RdQcACO3RX5Iv6LzIzAJ40UW31nu4qs0Wf9xXq1DdCSLjgMhHlLefccIglFDLKF3vfrh1tzIlqDN9EuSZnmKcxwrdnxBfsbtdP1_VavsaQqnC/s320/emot.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/new-diwali-2009-emot-pack-and-gifts-2.png",
+      "bytes": 6350,
+      "sha256": "e0c5878d4cf2fe91fe072ae6d479dedf57714b525e87a2eae2aaa54d61404aa6",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-9100539882372527320",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmfNWtIRw21qo9WXw6GUbZpzFmSYDk25v5yZgQhhDwzIDNp4t9n-9J8p-oLMAUavnp0L6xlhjuijn78aLmkBHU87xbWWcPEN9YExwrb-cMFdersIWpEV4lXunv5Qm2zwZr6YUO8icEJvn_/s400/001.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/animation-emot-pack-has-been-released-1.png",
+      "bytes": 4316,
+      "sha256": "85472048d4cf5ca534a7c9b1a1488ef33c271130da11827a0ba6f8121d2f0a19",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-9100539882372527320",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgW34eYBawvKNxfGzYtLOR3VjCVrwkyoeFnxqjC62pfrwYmi9x0zlbFPBotwqlUp_293pmxl768Cthz888-AS7Fibig7ROaziO82jtWaWYHt1InkdmYUK_6U68axfeR4fWVUFptLcpdhNRQ/s400/002.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/animation-emot-pack-has-been-released-2.png",
+      "bytes": 6741,
+      "sha256": "9f0e35d0a048a2c012900744aed1cc8d50331e15c2913477c9268e5c2f3e66f9",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-5420102766586695827",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEip7auz2Peicr5rfR7qfBHRWJbn8E6l1BR5q-QZsqEzBHUorMj58ZLmjubFQMvwnF89Nwly4yDCte5wDQTouJtTecHfyIjAjpouutSi6jOvWThA_8zqJ8IWgsU7cfIA0xKnKDJblPvpLnK9/s400/migbot.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/migbot-emot-pack-has-been-released-1.png",
+      "bytes": 5040,
+      "sha256": "1085ced640f4142536cc2efb3ad26d3f783c76f09278fdcc1da07ccb5aa897bc",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-2259500757358655757",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEPNPuIwJgguyPKbLeIsYbQxnA__R3w38EnfESl4gigkBVXA1IVRAqWtlCumPoxVTx5Pzo6E_7ZET8TpIvpAl2jrEuC3gdQZbn_gUqDqpMMv5I78GIvrZNA_kx7yyAtR_qNinxCuYMZz5m/s400/ramadan.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/ramadan-emot-pack-has-been-released-1.png",
+      "bytes": 5871,
+      "sha256": "64149f596c98ce115bde6b8b5278bbdee3f45f676cf2795e5e4f598e76d5b74d",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-2514282993249539856",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0mzmbazUZROM3kRa-ktx6Xs-7Oan4sKHLPWDkZ28F08d7rH0qSXp0fhNAxJ0_1jBiqZvw5W545_s7ZCrTi_TBIhPHcwJRzLE6Ctd_XKGDP42ji2-JjBB07Y_linki6t9UVK5JlCd5nxKC/s400/001.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/new-gifts-1.png",
+      "bytes": 7803,
+      "sha256": "a3fcf893c1f9f9d9d704843f660952ae08df04faff44adb03188a444b6d701c9",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-2514282993249539856",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEisBSV4t-TB6xk7H-eYih7RmZ8JbHBomjocjFk2ws4Bd6uB6AmiHc1r6_zboC0k1e25epuFnqj_Xa7VOwZPuL8voEOOm1LkLPwy6bQ46t74fu0YzEBuW0ULlQRRcTg15j5Jbvl3scgA3Pj9/s400/002.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/new-gifts-2.png",
+      "bytes": 6642,
+      "sha256": "e657f641b554b4aa8f6c20457f8c325ce02f006916739fe023f73384dd1472be",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-7113578475525546123",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjSFYp_NZSfYq5rzaQjwnNXK5jxP3iFaUoocVpTIXtP8Tqep4DHRpGHo8D3DckweU1iBmPjnzYc8ZnqnBOC_oC00bmCpo2WOye_n3sGqzpBaROMvIMHcmxOrte9eYjvrxtUFyM_oW2npiDi/s400/001.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/default-emot-pack-has-been-released-1.png",
+      "bytes": 7647,
+      "sha256": "a92f0c14c4b1bf0e692816d8de53db01097d7056732698f20333f92bcc344528",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-7113578475525546123",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirsitwTUruaclge3_ew5dfFYAsSTEVmJa69UchMCSCTh1jH_2QdxA5OqB7NEQAuv-D2usdegcS3G7fwYUgAO4KG_aTSMhD5DfiieGXcGeEOoqQvAdrLpf4V_K9J64NQLrWVPGQ-mAAnrZ_/s400/002.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/default-emot-pack-has-been-released-2.png",
+      "bytes": 3671,
+      "sha256": "b597b64651f647c2d9d848b1413977ea9648592be538020ea7d071d6cdac2791",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-7113578475525546123",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRCtlqljhQLDXP_YyuOoEtC2kR-viM6hAYTwkqmeHYjFHEA4HPR9yzjYQI0wwt3Yk_71NUsbLSgz4PucAsJ8qFJRe-bL7L2Hqk9q3Szd-bx5xFFqQnMFWkplLZFsUBaulk3rYeykkNozd6/s400/003.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/default-emot-pack-has-been-released-3.png",
+      "bytes": 4608,
+      "sha256": "90e3b39cebdc52cc08e0065f6f0b39f2ac6a979ecb3883c29515cd8a5f0431f3",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-7113578475525546123",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDnHznyIxtBLmitbVGE2TdJhfguwgBjbQaG3Kf0TFfsKMUjH0C_n1dpjaBHEC-c0EDZQOP7Yls9pSi0OJOOKiMzm7jkiaYF6aOsi2MH6dNpYK5GWiuPe4unzY6QsKsWnRpdg7rfzRwX7q0/s400/004.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/default-emot-pack-has-been-released-4.png",
+      "bytes": 5620,
+      "sha256": "b01e903453466b87734bd7de58cdb526423524d62c4d431f5323a473af90637d",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-7113578475525546123",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4lWU1Xsbny5d-_Gop1gBtRsce7Mq0CRh8CZu-SD7_y4u4HXwFW4ycEGzGouB0ciQWutgdjb9owqLtjVIvBknoMS44drIgY6oKQayM2-ycsiRNfqjuf-x8CZX8rHq-s0iULhJWmSpocA3n/s400/005.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/default-emot-pack-has-been-released-5.png",
+      "bytes": 7281,
+      "sha256": "e73b9cb15462d73ce93896805b1534a765a3339f87a2e4903265a5cf4b8f3883",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "news-7113578475525546123",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizPbktLbkA_mQdzDXx-2ZSFBr1_y0hWrRv8d65gzrCMC7tPu3jXrkNPFpD1rN8WZBrT14vEN3Fj4M1JxCMr0O__SOHwHdtYHCpvLYDBnpaCposJDjzuptFgzMVab0WrOEujvVX_185u4l0/s400/006.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/default-emot-pack-has-been-released-6.png",
+      "bytes": 19106,
+      "sha256": "c94c6088b5debe77d9c0dc15f851d0b5187281a4f11db841794eb3f44e5a598f",
+      "width": 176,
+      "height": 209,
+      "format": "PNG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-4450180573231905662",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj21yI2AOo0UJAW1_jSwUFKiPUIUXis5zf52xxywhsykul5HcSpJ61YNvqfsHgsTxYNaJJP_ETIh5OGXn83iBiidmNUqcnq0QoCVMYT2soIwVEBq_Js207lwknNtTZ256iX9wCQQNmLHPg/s1600/mig-info+status+emoticon.jpg",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-4450180573231905662-mig-info-status-emoticon-jpg.jpg",
+      "bytes": 41994,
+      "sha256": "f194aba33cdcdaae1a4407d9eb057ee9e59f34eda353fe5bcd05a2e583e15ead",
+      "width": 479,
+      "height": 249,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-4450180573231905662",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVKWEDCBS0qLM71AIPajrm9hsG6GEqTcWaUInJV_cHUCqZ6Q5mbCP1KRvA1dG0oaeXbj1qACcpPYq-ebmPoHmhKGect2CzEuaqe68tRz78A6zxSjz2qsqHOBbTjXoSs3ZhfH9LEOXv3oY/s1600/mig-info+ilegal+emoticon.jpg",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-4450180573231905662-mig-info-ilegal-emoticon-jpg.jpg",
+      "bytes": 46291,
+      "sha256": "3aeb752f5296d1718c2e31ddd69786eeaf052a8933c6ac2eef45d1a7aaab526b",
+      "width": 479,
+      "height": 249,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-2861025131531000240",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5zutxsXAo0AIS6q_k1HFAcrQwYsJIuPMAC-ysErL7Scm-uJD_LM9W66-GEsAOt6nGxV5hoWQVw3ohwlx0K79VSPHkBLH3kMxguD9GMcvj8uqoEv8wp1lDmIqlXWtGKbw91UHtS6RGJcU/s1600/mig-info+new+gift+command.jpg",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-2861025131531000240-mig-info-new-gift-command-jpg.jpg",
+      "bytes": 34435,
+      "sha256": "6fe3360b2ea79538493fa37ebb1447ac63ee66f7bd0981fea616fcc925458dc0",
+      "width": 480,
+      "height": 248,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-2861025131531000240",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZ2xBRJQsA5OdePbZP6qEVDB88nclkWTRz5NtzLl1aL8p5plpku108FGICFKDUNqCqVZvNEE7XLv5F0QL1UAO6O3lA6jghnV-MbNC7ogShfsf4Yy6P1Wu9S5Q0VIapWFegjcprRvpnosQ/s1600/gift+list.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-2861025131531000240-gift-list-png.jpg",
+      "bytes": 26599,
+      "sha256": "94fa5414aa1286405546d96cc6d85b48fb37ce9df99c6e4136d2958aa9a3df5f",
+      "width": 240,
+      "height": 248,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-2861025131531000240",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuppDEuqxSJ-MKdmKzDPFCp21fmWWUevjjyICmhmGsGrS8GVlI2A9szEtXB1YLY4dW4efPbAwWyuYTNvBOkqPFv_3DERnekZpCk3NSTY7KPISQPxGXLv13WMvdnmBUG2JJm-UQ14ZUQks/s1600/gift+new.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-2861025131531000240-gift-new-png.jpg",
+      "bytes": 27372,
+      "sha256": "133d548a3f135cae2a127a301e0577d969d8509503b500f07b371a0c3f1f693e",
+      "width": 240,
+      "height": 248,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-2861025131531000240",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEid6WA_AWyVHuUp_lAjmM0qBr4h6jton1M8jnBpElRpJs1IOvjuFkMnYw2gXayUR_haEWN16kv3x3jPkcV8K_7QSD3Td_Vl5xZByqSMZ63TolcwrOZtNNtRZGj-kxGiCjkwtRNmoij_VX4/s1600/gift+featured.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-2861025131531000240-gift-featured-png.jpg",
+      "bytes": 25557,
+      "sha256": "c41208ca3e2f58cdb249191fef2fbc6b02a48009c13da65dbd179b8b4f5541d4",
+      "width": 240,
+      "height": 248,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-2861025131531000240",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKpEN-d0Rnpr7Hw4V86SiFz0z0Z8BDAb8wka48ztMsA12iNmzffc2JH0m_bTaR5DjZ9GLKR4fLq7zSlAgWRd4GqbdkncJj-BaXQe0TMzXtaf_QKRLzf9aD__dr_Zpm4nCa3LjGhMdNIG0/s1600/gift+popular.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-2861025131531000240-gift-popular-png.jpg",
+      "bytes": 27086,
+      "sha256": "e8ce423fd31082f6cbb93059c71f6dcd481335519ead57e901102c296aefac88",
+      "width": 240,
+      "height": 248,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-2861025131531000240",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEio4OefYfdVgOXLQgjHjPU8Wz_hGIThLKJhvCLyvn9ItgOFgWHBbAUTUs_mU5MsWOOYWQVcDJwbWM23mOJrcB1Nktjkxp6BB5fd1LOnV9cQ1tUfI8Cl2jw9MU6yVU9LUGOn2EU1du6ZFJE/s1600/gift+search+%2526+display.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-2861025131531000240-gift-search-26-display-png.jpg",
+      "bytes": 22030,
+      "sha256": "63db6cdee449d150acaa178e55468e1705ec4734c3301177867dd63e8b8e27f8",
+      "width": 240,
+      "height": 248,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-2861025131531000240",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNE1PP3UbliijS9RLUUQSuWfOHw5JeMFFVjrL0YEL1tnhiJAUNLLN7MbCpLxe6-rWvr1RLNEsOyzbHgt-RMuHWBFNNOt93QAEA4elRkhrKfbMHUeWvubrcWAjkOD0MdLAjBgZYtDB6788/s1600/gift+category.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-2861025131531000240-gift-category-png.jpg",
+      "bytes": 25056,
+      "sha256": "c38144c0d8f6e148dc1a9f078b723aa450496dd8b70e9e21dc6db7c2c59b73ef",
+      "width": 240,
+      "height": 248,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-2861025131531000240",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9dPKkVTsObub2BsOnUWX6MZXth2MW8m_i8VLQRvVluhrN_gWJAy0SAUYplWWkwiCQhnyhFUTviPBUkpGMYB0Ekzi50hnCkA7QJ8JN-7B0CeV9lznf6Xz3pc6INWa4SiaVqtgmJP9sUYg/s1600/gift+gifts.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-2861025131531000240-gift-gifts-png.jpg",
+      "bytes": 19200,
+      "sha256": "40da740f2179b16e80356bea8edce7648ff698137978f8660c014a1db50b894f",
+      "width": 240,
+      "height": 248,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-2861025131531000240",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirwkAHz948W5oRo7TfAHTGMu2ZNTjMQixxU8yFiLbWSvLXyyfIbSh1DBmX0_kv2m5vEWP2zE76lDX5Ud5h0VwdKc_cL06vmnlA2ISZyN785VV-00JjuM-5hsOPD7RahSFAE6EEYqRC0fI/s1600/gift+%2528username%2529+%2528gift%2529+-m+%2528text+message%2529.png",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-2861025131531000240-gift-28username-29-28gift-29-m-28text-message-29-png.jpg",
+      "bytes": 22634,
+      "sha256": "942f9e660128ae3f25e8da3a823c0634da4148bad9679215954af5155fd04571",
+      "width": 240,
+      "height": 248,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-491350424469428865",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqygBJCksEyewSkbc9oWFYTPEmLZsMPjnRaklnEK2j3f5bONVZQpZJ6KFVLEkuxCiyazAmcBuRdZ2CSiSs4dMC_ZMQWscq4KQRqbZhXyUvJ9qh9xizhDhS_ficfJkH3qNU_ObWAaCttnM/s1600/a.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-491350424469428865-a-jpg.jpg",
+      "bytes": 8568,
+      "sha256": "55ab1b177cfc2bdbeef5a3f50f895d01154b000396c1c094156d463c5642bee1",
+      "width": 277,
+      "height": 167,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-491350424469428865",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjg2sEOPUc2nJFht2IrhYPdT1aLUcyUJbX__N6QO5drokNpXIhWQI7IF63ejwj6mf-esf0c6idGT05OHV99Iw1zOy41mwuCsn8Wnno8c0m93RhaKFpcrzpsqYvIGAK0sIi0m-B6E50uqU/s1600/b.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-491350424469428865-b-jpg.jpg",
+      "bytes": 9485,
+      "sha256": "37da7e49a95257b99627e5167d26d2f9ddf6848780c854fbdaa0282bbe228cbd",
+      "width": 296,
+      "height": 163,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-491350424469428865",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi07q9_JbJIMrAl4K6bYTRiCP1JWSGZOZ4Qf-5-73UyTDbgkSvA3pyJPW2R5I8B2OABTXvu4GoRRAvcFSO7gL57G_hRloTgHNhv8vWkG03eFwBxZZQj88oj_nzirvpj1jqPiZxE6Y-QTdM/s1600/c.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-491350424469428865-c-jpg.jpg",
+      "bytes": 9604,
+      "sha256": "9ab787e83db2060cf1b951c5c318e5c702adcb5beaf06a0ee847c42309eda8ef",
+      "width": 273,
+      "height": 165,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-8443733440063598288",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8za8d-rnBbddJUFxJs164uW9AYsZsUm_OvUIiAtjUbBWuC3rUNXxMuuEeeZrzXMyousNf-VOWVmMDbVlffgIZPR7jSyhBmy1kF8t1bIy9iXAGzp08VqtPJJu4NB80QH5HvAfWox2mNII/s1600/a.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-8443733440063598288-a-jpg.jpg",
+      "bytes": 9849,
+      "sha256": "76225981df1486f7770c5e429cb23681771b0037b691da830c83a34c6a022c7d",
+      "width": 273,
+      "height": 164,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-8443733440063598288",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghiFvH4ytyHdqPVl3x5wIs2EbK3ZgfcsyzDt2XqZXFJNm1RgXK1aNLz6aTQQjH-1_KVYqcUNxbPKo70N52FprwemAc2bbuLhokAynVEwW4TtpAah9Mou2dNJVP4bhUepNlQv_FBTg5S3o/s1600/b.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-8443733440063598288-b-jpg.jpg",
+      "bytes": 8886,
+      "sha256": "8651c85f6f26f3ccdf60eec5dc10e004a8e654062e1f7c062568c1941e84c32f",
+      "width": 272,
+      "height": 164,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-8443733440063598288",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2ZkGkJYragJ4ly2DwDTDDk7tbIu-AdAnGH9DzQdGAWSBQdNS3p9Ki0IpWy9LIxk7rJAiTbk0jkD1ZYquRhh3BiaMoYRQ5jm3WRhVUxhTAoZPTuqQYh_IA9O-fwH2MFqCc-GNSmJKuz50/s1600/c.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-8443733440063598288-c-jpg.jpg",
+      "bytes": 9502,
+      "sha256": "ae72d24b32cc0c51642613e7e57efbd76d645fbfa0ddcf17927878b7b22028ef",
+      "width": 270,
+      "height": 162,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-8443733440063598288",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgo9WVqt0q8yqS7uToGm9R_M3Bq-I80HddQSL42IazPLYrICzHk1HfvWLG6potXxMz90j86SmOWjqaKP1KvFqR5onAyWZSHvfP9kHNrdthGmOyziHEdg3gshwFnHhQVlfYb2tE_Ayh8D2s/s1600/d.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-8443733440063598288-d-jpg.jpg",
+      "bytes": 9495,
+      "sha256": "0dc339ab75bc83649d6f5eb1952ea59f67e4efec26635af4fba6efc23bc9ec70",
+      "width": 272,
+      "height": 163,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-5437419459619508561",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPUfNwhNKwyT6yQZreQsedOjH0Avv89HlfMGFZbWcqW61W08XN2QKgfvcn5u4q6i4FzQOkYrEvuaf3tw0cc37cpaM4ErjmCbZv5_4l10_S-9LYMVkq5VC1mw2l-kaNKCV30JjRQbZ1098/s1600/bear.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-5437419459619508561-bear-jpg.jpg",
+      "bytes": 8637,
+      "sha256": "e52f3ae087539d20ba5e17fe90d6f28fbcdfd2add1655ae9988dd96129c5d134",
+      "width": 271,
+      "height": 149,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-5437419459619508561",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhhJhbQzvlANGhFkwPuauYrg7OhczkDbgs91JHFWR_3oMhkb5hHN5HCFTgJGj4hgF4S3SqSlf8wzIspNtUJ9mPz0a-WQSlgozfu8S4MyfC6saabAMNqbXHeU40DSjE2zMphG9rTeFf-0jQ/s1600/star.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-5437419459619508561-star-jpg.jpg",
+      "bytes": 9079,
+      "sha256": "73a41877c32e4529b3726a432749c8520f13cb6bf57759ec923c1a74a9f69c1c",
+      "width": 265,
+      "height": 145,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-5437419459619508561",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVrdaPGQHEaYo-NJVrotR1DuaKpeTTRmwX5ub0hFRIvXgsq5GDqp65BeVmSqAKZ5d_U_7BICtl2OTjZQuwNmFEYcLKjnRWUNzS9SufrT8Gt39U8JMFOsEvcIVnvTOV3uwNWWvgSCBdUok/s1600/finger.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-5437419459619508561-finger-jpg.jpg",
+      "bytes": 8954,
+      "sha256": "ffdc169805befb5b3b1ea7fab12ea3646ebc328fcda7a6445ff6b58ca4ba52e3",
+      "width": 272,
+      "height": 146,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-5437419459619508561",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiIicMiLe6n8On4k3yrxNxJmENboF3K2gIGIAHkkCv7Thao6JCNy3ZLLnBNG-ClAnx0aa6b6WuXrR29nyltioQ5XAepCTrdQ_Z6117axBG2TB0ebPiH6xakzUb3tvzuKb3czyKn7OkIOxs/s1600/love.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-5437419459619508561-love-jpg.jpg",
+      "bytes": 7436,
+      "sha256": "8194d3d9f4be6d4e3a49f094f49f9c6408b3702c1b84ead5f11733af6ede9fda",
+      "width": 248,
+      "height": 121,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-5437419459619508561",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOogjtRY6aqKA71Fw3mgTjHT-BLmfiyJwVnoPwRHG4_kQn6jPo9I6WOgtiTyyNlrIk5WBe05Jc3I2CGbXw5rYc88s1RtSzOsOEPL80g-gmyNUFRQiY52Vj2PBe5LJYQXifKsgemYE3sEc/s1600/com.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-5437419459619508561-com-jpg.jpg",
+      "bytes": 7227,
+      "sha256": "d2411e3bc95de2cb1b7ee58e22aeb819f0f122c8976bd96d2e5a53b265803584",
+      "width": 257,
+      "height": 126,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-5437419459619508561",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLycF-7n-J76dc6A2hHNYkrr4qA8lJ13ce2LY54njxaaEiPCoQbJOguH_vJC4LNP2a-VVQ3WWuPwOLAGeuWH5S5jVCYBMRy3jNsqF2mn5jW0leVVZ9176oKoqm5Iszw3U3rXFFx8q8xT4/s1600/dog.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-5437419459619508561-dog-jpg.jpg",
+      "bytes": 7127,
+      "sha256": "1c3503cbd730f2aa103e8462268efb4fe8fd699b1edacda552d542482d1af360",
+      "width": 248,
+      "height": 122,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-5437419459619508561",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYxBvH-DiNHZNeVc6EeTWQ5iZfgqDjb61bp3ArljXDKv8p1ApzXwcqNfk0GkCnYFerPEwvyHKQUMMb5DeHMzqUQBy2jq7CYJqEK-8TloPWfLiWkgfm0Q76fckDl5WkGeu__Xt9zE4xvDk/s1600/buah.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-5437419459619508561-buah-jpg.jpg",
+      "bytes": 6824,
+      "sha256": "5cd5c125b7193b731f82eba6474554ab1fc8ff528d1d162fbddec11005373cc8",
+      "width": 249,
+      "height": 121,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-5437419459619508561",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKdLb5RORluC0wdy3cDjx_9lIlygWzvYSq4HP74A4gIs_uLb5PoFTf3fIg0E2Uahqj7ybPdlh-MaqcnGdPj1FhcrntSKZXl55SwHIcBrL25XmR467DvGfP4DOhFbDhSIfEUsrEVLp2iwY/s1600/gost.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-5437419459619508561-gost-jpg.jpg",
+      "bytes": 7568,
+      "sha256": "968722573c753a3bd1bcd5d42b5426fdc9975d17fc985a8a7de924f67dd2ed7a",
+      "width": 254,
+      "height": 121,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-5437419459619508561",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEifuczrm8Y2CP6tdwafAH4l6OuZ-fE16bQ8Fpcm4_4fRAbDLGdKRlZ9zchOrkc2iQ_NnbYEWKEwL0mwGLcU8BjRO9qyDvjIfnpmXSRGK3v9tlaZysfd2nfcVXJad3nYieCrzC-hIQlPGRc/s1600/shor+code+2.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-5437419459619508561-shor-code-2-jpg.jpg",
+      "bytes": 8465,
+      "sha256": "4a0618d99bde081d9724e51841f9d879baec0c5f4d6352bb657542e36c307115",
+      "width": 269,
+      "height": 125,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-5437419459619508561",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJfdGfcN_afx1Yx232B0WOM3keMWd8ENyFQarJTjBi9Fg6xVG4xHXDbt9tdtrClOZ_6YlNqnwv8H-Dk8iRWOwgEuSQ0RycbOK30wsAjk2mTx4TrgMuFJ4ZEhfbmhJBjJvkqI7PDIf-FCs/s1600/alien.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-5437419459619508561-alien-jpg.jpg",
+      "bytes": 7917,
+      "sha256": "a65f35a0c0a418602882bad0a73abc981b4113c1af52cddc422b405c4ce85ca9",
+      "width": 250,
+      "height": 121,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-5437419459619508561",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiueHlVYLqxCPvmi_OURzvLkRccltX9ecivHacv6T1zBwDCIpbsDRKlHOIK2vFjl89QzUPsWqL6wCJaHa_JKxqeBPHE5Oc85r81Wvk4AnMtRfLe1fXLjqD1xspxv9O2fQ29bjKDa171yAM/s1600/cess.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-5437419459619508561-cess-jpg.jpg",
+      "bytes": 6358,
+      "sha256": "f2abbae32259b8ea3a64214b396d7cc9a2ec36b42131eb1dd994908cc6ef9496",
+      "width": 248,
+      "height": 121,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-5437419459619508561",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiomt4yb-iSF-z6hXAl31ymqAJ13VDbhSHrscnk-uEI-nQIkNOcJf8dDvUl83thjQmdl1hAtIwwLXcPqjgrbYCyncmX8jDqwfV7SP45GavIjDsyrNDFEnFSZIeWbyEjZ1qYLSA0Q7iwSmI/s1600/pinguin.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-5437419459619508561-pinguin-jpg.jpg",
+      "bytes": 7345,
+      "sha256": "fdbb495b317e3e55bfa905596a333fb48d4896b26f65d0ccc6273cf138acd8d7",
+      "width": 248,
+      "height": 121,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-5437419459619508561",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVsoTpbeCwsodexBXg30VIA9jhRxL5fMuy3gqLTuF2tPmSpk_qul_-dCEpL8Beuz8TdI8KyhvSnlBYJ0HdBeiXUbbiLu3Fc7PU_ay88fHCmROBwa4WJbCeL7e9RbcieZBfGtLCmmsrflM/s1600/greenie.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-5437419459619508561-greenie-jpg.jpg",
+      "bytes": 7329,
+      "sha256": "42d85e12a892666faebac28fa09108978428d2c74a110a4c711b5fc60dbddfde",
+      "width": 253,
+      "height": 121,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-5437419459619508561",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX_WyRFgFS_txXE1kkuWITdc_a4gNYZXhNIudi5YCAf7G0842pYi3XwKkgAHakOaDyNTGi4y-F-B5xrKsxiZysa2D45AK5MrrDNABdRypMOsYfIozGJVQUKoPS6BPsoL90mptOXQrG0vE/s1600/black.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-5437419459619508561-black-jpg.jpg",
+      "bytes": 6851,
+      "sha256": "3cefd64b5a64d471af0b6c76907d6ffb0b2b309a08aed9b6392a321834e0bd11",
+      "width": 248,
+      "height": 121,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-5437419459619508561",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpFojOYRK8ItcUEKBuinvO6YWL_RCixe7ENWHyZ5B1lJxk43D8cNslR99Hm4lu-3GducI9IC8Rjt_FgMfD73p-W6WVJbDn_K_XA31P6n-GNKEwXXpRlp7QpPgoWZXL3AIF1Azgq9Jxo6E/s1600/creature.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-5437419459619508561-creature-jpg.jpg",
+      "bytes": 6967,
+      "sha256": "17032d9253637628a99a4da11d23c817e9589f82beecfb955706534e3b25a92f",
+      "width": 248,
+      "height": 121,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-5437419459619508561",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYhgbY0zWHoasv1yZvE38yp3VZfBCT4srTu09GujzXv1oBunpRMOuydmSa7spfzuZmQ9OlpguJqCKAqab-QoeQzb9HDjZ6mghqXlRHct23uHzb0KaORimo6nqvF-uno_s44TYlTmEf6No/s1600/ipl.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-5437419459619508561-ipl-jpg.jpg",
+      "bytes": 8168,
+      "sha256": "3b5d760ccaab89108aa1984db739f657ef75c312a6ed32cb3431e39f193ae540",
+      "width": 305,
+      "height": 121,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-5437419459619508561",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxBvSpIg1LNvLtcHfIxuoZH9dNlwGAKC-X427nO_YA9ST8c0Y3s7Z5CGBBOMrX40nG7UigSWaSbdtLp5flpccqj13jjP00sHnUyZztWveWOBZk37Z0V_zyJ1p1xsAHRZfrswG6knZjkuI/s1600/short.JPG",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-5437419459619508561-short-jpg.jpg",
+      "bytes": 8001,
+      "sha256": "45f76cb529c6befc7ad644aed4b9e4a553b00f878e5ede40488f55f7023f6bb1",
+      "width": 257,
+      "height": 123,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence"
+    },
+    {
+      "source_id": "info-9193054086248475324",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbl7SBJzOBHK08EH17jujL7uQOFKgSBWBbchCTeEHVAQiulvqa2nyKU3OFnV_cIXc6RgMAmA0LYNrNrLFUZNGc2XGnsyYQmsUqeXkZGOCTxH74Q1A3m_aD3VAijobAyhQH0LEny-E78pc/s1600-h/zodiac.jpg",
+      "error": "Unsupported image"
+    },
+    {
+      "source_id": "info-9193054086248475324",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguoPNmrrk_ioHmKMWcnzp3NjAmO4xtkJnpMqePesXEJ_PH-dOw6PwjerlzTisEhcbrZUrzO5SxKRpuOInhfALwhAMbz2NislS3FFaegPXsbXK0PJGIxr8jQNsWP7GGUaqua0DggBCo6tk/s1600-h/arrow.jpg",
+      "error": "Unsupported image"
+    },
+    {
+      "source_id": "info-9193054086248475324",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEjrSQe6wcME4Y7Qt_ExzYh14m8qRn_LcwkDb17Ej1Mt_6gIbfuSx1Cx2zeNc7FUxojaX0GkbJo1J2AzXoHUW9oI51HGe0i_aLiNErtdthDJFofB56S0ELY-sEqqJsP2GFwvoeftPcOtU/s1600-h/heart.jpg",
+      "error": "Unsupported image"
+    },
+    {
+      "source_id": "info-9193054086248475324",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsZ1ct9e0vHVpEWXfzJv1kdKmzRFTL9bS0T25kVI23h0VPjShq_PkUecJG76LS4U7H7VttpVsH_aAB_ahoHPtCVj8d0pW1pDAqdqgN0bMzxXZuOyX8UiwfBhi8ss9f4fZz7Q4sn1-kJjE/s1600-h/short.jpg",
+      "error": "Unsupported image"
+    },
+    {
+      "source_id": "info-9193054086248475324",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiu0jVwiD-GvqhgGdu8t3WDvpI-ptv4g_ccww_jX0OF_wTLkEU_4VDIh6WPAhSeR-XGQhYOxfXy_dYFdGWtQHWGRgNVwqsLb25gsej3jqCW7HnzEStpTDN6OWKo4BbRc2p-mTmyrcfADbQ/s1600-h/cny.jpg",
+      "error": "Unsupported image"
+    },
+    {
+      "source_id": "info-5484845010791157033",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiN4j-hqkRUEIdGqCTIbDbVJl5Jcs0Vx9hGEzFn1SwdbpFoKtouhs49vOAPMjMJ5KKzWoC0bKrhYYkABMBzAuogmSNIy4v6ak2BCpNG4sZOTudIDAYHrvzVstOp508xUDR-bjUi28knMPg/s1600-h/emobaru.jpg",
+      "error": "Unsupported image"
+    },
+    {
+      "source_id": "info-9193054086248475324",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbl7SBJzOBHK08EH17jujL7uQOFKgSBWBbchCTeEHVAQiulvqa2nyKU3OFnV_cIXc6RgMAmA0LYNrNrLFUZNGc2XGnsyYQmsUqeXkZGOCTxH74Q1A3m_aD3VAijobAyhQH0LEny-E78pc/s400/zodiac.jpg",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-9193054086248475324-zodiac-jpg.jpg",
+      "bytes": 22589,
+      "sha256": "43bc66a9df1f44c629fd0653602bc29dd4630f3ba6200dda30107e7f35ca628e",
+      "width": 400,
+      "height": 335,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence",
+      "retrieval_note": "Original img src used because linked s1600-h URL returned a wrapper page."
+    },
+    {
+      "source_id": "info-9193054086248475324",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguoPNmrrk_ioHmKMWcnzp3NjAmO4xtkJnpMqePesXEJ_PH-dOw6PwjerlzTisEhcbrZUrzO5SxKRpuOInhfALwhAMbz2NislS3FFaegPXsbXK0PJGIxr8jQNsWP7GGUaqua0DggBCo6tk/s400/arrow.jpg",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-9193054086248475324-arrow-jpg.jpg",
+      "bytes": 29132,
+      "sha256": "cd0c85888ea2a76f36fa40bb7fb7a5b78fcd1fc6dcfd09f26fa2af491f65781d",
+      "width": 400,
+      "height": 347,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence",
+      "retrieval_note": "Original img src used because linked s1600-h URL returned a wrapper page."
+    },
+    {
+      "source_id": "info-9193054086248475324",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEjrSQe6wcME4Y7Qt_ExzYh14m8qRn_LcwkDb17Ej1Mt_6gIbfuSx1Cx2zeNc7FUxojaX0GkbJo1J2AzXoHUW9oI51HGe0i_aLiNErtdthDJFofB56S0ELY-sEqqJsP2GFwvoeftPcOtU/s400/heart.jpg",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-9193054086248475324-heart-jpg.jpg",
+      "bytes": 27038,
+      "sha256": "2bad4b7cfb8228d1be89c35d48b1006040af1e8523de8e0ae51cd3aa8538e84f",
+      "width": 400,
+      "height": 337,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence",
+      "retrieval_note": "Original img src used because linked s1600-h URL returned a wrapper page."
+    },
+    {
+      "source_id": "info-9193054086248475324",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsZ1ct9e0vHVpEWXfzJv1kdKmzRFTL9bS0T25kVI23h0VPjShq_PkUecJG76LS4U7H7VttpVsH_aAB_ahoHPtCVj8d0pW1pDAqdqgN0bMzxXZuOyX8UiwfBhi8ss9f4fZz7Q4sn1-kJjE/s400/short.jpg",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-9193054086248475324-short-jpg.jpg",
+      "bytes": 29303,
+      "sha256": "85d99755d18f5c5e7cd2a61a2f47855401b90ede963a82ed44b6ee896a63ce0b",
+      "width": 400,
+      "height": 339,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence",
+      "retrieval_note": "Original img src used because linked s1600-h URL returned a wrapper page."
+    },
+    {
+      "source_id": "info-9193054086248475324",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiu0jVwiD-GvqhgGdu8t3WDvpI-ptv4g_ccww_jX0OF_wTLkEU_4VDIh6WPAhSeR-XGQhYOxfXy_dYFdGWtQHWGRgNVwqsLb25gsej3jqCW7HnzEStpTDN6OWKo4BbRc2p-mTmyrcfADbQ/s400/cny.jpg",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-9193054086248475324-cny-jpg.jpg",
+      "bytes": 30623,
+      "sha256": "309ad83322e82ffd4455421ee67943bcf5cd97e323bebbf61f221913a47d51b2",
+      "width": 400,
+      "height": 339,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence",
+      "retrieval_note": "Original img src used because linked s1600-h URL returned a wrapper page."
+    },
+    {
+      "source_id": "info-5484845010791157033",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiN4j-hqkRUEIdGqCTIbDbVJl5Jcs0Vx9hGEzFn1SwdbpFoKtouhs49vOAPMjMJ5KKzWoC0bKrhYYkABMBzAuogmSNIy4v6ak2BCpNG4sZOTudIDAYHrvzVstOp508xUDR-bjUi28knMPg/s400/emobaru.jpg",
+      "path": "research/applets/v4/artifacts/historical-catalogs/info-5484845010791157033-emobaru-jpg.jpg",
+      "bytes": 22302,
+      "sha256": "8e8cadbe42483094c9a9614c8da1335938589976a23ad5046b0fbf85558f8ae0",
+      "width": 400,
+      "height": 223,
+      "format": "JPEG",
+      "retained_unchanged": true,
+      "use": "historical_catalog_preview_evidence",
+      "retrieval_note": "Original img src used because linked s1600-h URL returned a wrapper page."
+    }
+  ],
+  "catalog_items": [
+    {
+      "name": "Big Hug",
+      "kind": "gift",
+      "source_ids": [
+        "mig33-pr-20110301"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local."
+    },
+    {
+      "name": "Kiss",
+      "kind": "gift",
+      "source_ids": [
+        "mig33-pr-20110301"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local."
+    },
+    {
+      "name": "Best Friend",
+      "kind": "gift",
+      "source_ids": [
+        "mig33-pr-20110301"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local."
+    },
+    {
+      "name": "Hug",
+      "kind": "gift",
+      "source_ids": [
+        "info-2861025131531000240"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "evidence": "Read directly from gift popular/search screenshots; spacing/case retained."
+    },
+    {
+      "name": "Big Kiss",
+      "kind": "gift",
+      "source_ids": [
+        "info-2861025131531000240"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "evidence": "Read directly from gift popular/search screenshots; spacing/case retained."
+    },
+    {
+      "name": "My Friend",
+      "kind": "gift",
+      "source_ids": [
+        "info-2861025131531000240"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "evidence": "Read directly from gift popular/search screenshots; spacing/case retained."
+    },
+    {
+      "name": "Flower",
+      "kind": "gift",
+      "source_ids": [
+        "info-2861025131531000240"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "evidence": "Read directly from gift popular/search screenshots; spacing/case retained."
+    },
+    {
+      "name": "Rose",
+      "kind": "gift",
+      "source_ids": [
+        "info-2861025131531000240"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "evidence": "Read directly from gift popular/search screenshots; spacing/case retained."
+    },
+    {
+      "name": "Forever",
+      "kind": "gift",
+      "source_ids": [
+        "info-2861025131531000240"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "evidence": "Read directly from gift popular/search screenshots; spacing/case retained."
+    },
+    {
+      "name": "cupid",
+      "kind": "gift",
+      "source_ids": [
+        "info-2861025131531000240"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "evidence": "Read directly from gift popular/search screenshots; spacing/case retained."
+    },
+    {
+      "name": "chocolate",
+      "kind": "gift",
+      "source_ids": [
+        "info-2861025131531000240"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "evidence": "Read directly from gift popular/search screenshots; spacing/case retained."
+    },
+    {
+      "name": "Ice Cream",
+      "kind": "gift",
+      "source_ids": [
+        "info-2861025131531000240",
+        "news-2514282993249539856"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "evidence": "Read directly from gift popular/search screenshots; spacing/case retained."
+    },
+    {
+      "name": "thank you",
+      "kind": "gift",
+      "source_ids": [
+        "info-2861025131531000240"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "evidence": "Read directly from gift popular/search screenshots; spacing/case retained."
+    },
+    {
+      "name": "2 Love",
+      "kind": "gift",
+      "source_ids": [
+        "info-2861025131531000240"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "evidence": "Read directly from gift popular/search screenshots; spacing/case retained."
+    },
+    {
+      "name": "bro",
+      "kind": "gift",
+      "source_ids": [
+        "info-2861025131531000240"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "evidence": "Read directly from gift popular/search screenshots; spacing/case retained."
+    },
+    {
+      "name": "Slap",
+      "kind": "gift",
+      "source_ids": [
+        "info-2861025131531000240"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "evidence": "Read directly from gift popular/search screenshots; spacing/case retained."
+    },
+    {
+      "name": "Salam",
+      "kind": "gift",
+      "source_ids": [
+        "info-2861025131531000240"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "evidence": "Read directly from gift popular/search screenshots; spacing/case retained."
+    },
+    {
+      "name": "Hugs",
+      "kind": "gift",
+      "source_ids": [
+        "info-2861025131531000240"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "evidence": "Read directly from gift popular/search screenshots; spacing/case retained."
+    },
+    {
+      "name": "Hug Coupon",
+      "kind": "gift",
+      "source_ids": [
+        "info-2861025131531000240"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "evidence": "Read directly from gift popular/search screenshots; spacing/case retained."
+    },
+    {
+      "name": "Bear Hug",
+      "kind": "gift",
+      "source_ids": [
+        "info-2861025131531000240"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "evidence": "Read directly from gift popular/search screenshots; spacing/case retained."
+    },
+    {
+      "name": "Hugging Bear",
+      "kind": "gift",
+      "source_ids": [
+        "info-2861025131531000240"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "evidence": "Read directly from gift popular/search screenshots; spacing/case retained."
+    },
+    {
+      "name": "BFF Hug",
+      "kind": "gift",
+      "source_ids": [
+        "info-2861025131531000240"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "evidence": "Read directly from gift popular/search screenshots; spacing/case retained."
+    },
+    {
+      "name": "Independence Peacock",
+      "kind": "gift",
+      "source_ids": [
+        "news-2514282993249539856"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local."
+    },
+    {
+      "name": "Independence Flower",
+      "kind": "gift",
+      "source_ids": [
+        "news-2514282993249539856"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local."
+    },
+    {
+      "name": "Independence Kite",
+      "kind": "gift",
+      "source_ids": [
+        "news-2514282993249539856"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local."
+    },
+    {
+      "name": "migBot Pin",
+      "kind": "gift",
+      "source_ids": [
+        "news-2514282993249539856"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local."
+    },
+    {
+      "name": "Special Present",
+      "kind": "gift",
+      "source_ids": [
+        "news-2514282993249539856"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local."
+    },
+    {
+      "name": "Love Heart",
+      "kind": "gift",
+      "source_ids": [
+        "news-2514282993249539856"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local."
+    },
+    {
+      "name": "Champagne Toast",
+      "kind": "gift",
+      "source_ids": [
+        "news-2514282993249539856"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local."
+    },
+    {
+      "name": "Cold, Fresh, Milk",
+      "kind": "gift",
+      "source_ids": [
+        "news-2514282993249539856"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local."
+    },
+    {
+      "name": "Teddy Bear",
+      "kind": "gift",
+      "source_ids": [
+        "news-2514282993249539856"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local."
+    },
+    {
+      "name": "Trophy",
+      "kind": "gift",
+      "source_ids": [
+        "news-2514282993249539856"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local."
+    },
+    {
+      "name": "Mafia Migbot",
+      "kind": "gift",
+      "source_ids": [
+        "news-8379932680148941566"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "observed_price": {
+        "amount": "28.41",
+        "currency": "LKR",
+        "scope": "Dated screenshot; not canonical billing data"
+      },
+      "limited_edition_observed": true
+    },
+    {
+      "name": "Elvis Migbot",
+      "kind": "gift",
+      "source_ids": [
+        "news-1870047875992524190"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "observed_price": {
+        "amount": "34.14",
+        "currency": "LKR",
+        "scope": "Dated screenshot; not canonical billing data"
+      },
+      "limited_edition_observed": true
+    },
+    {
+      "name": "Swimsuit Migbot",
+      "kind": "gift",
+      "source_ids": [
+        "news-614330829120352593"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "observed_price": {
+        "amount": "28.44",
+        "currency": "LKR",
+        "scope": "Dated screenshot; not canonical billing data"
+      },
+      "limited_edition_observed": true
+    },
+    {
+      "name": "Lovely Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-8544247413078474892"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "observed_count": 8,
+      "observed_price": {
+        "amount": "32.31",
+        "currency": "LKR",
+        "scope": "Dated screenshot; not canonical billing data"
+      },
+      "original_aliases": null
+    },
+    {
+      "name": "Clock Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-1014367141034298501"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "observed_count": 12,
+      "observed_price": {
+        "amount": "29.37",
+        "currency": "LKR",
+        "scope": "Dated screenshot; not canonical billing data"
+      },
+      "original_aliases": null
+    },
+    {
+      "name": "Bear Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-5143202326498594043"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "observed_count": 8,
+      "observed_price": {
+        "amount": "19.55",
+        "currency": "LKR",
+        "scope": "Dated screenshot; not canonical billing data"
+      },
+      "original_aliases": null
+    },
+    {
+      "name": "Finger Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-3307987992482639440"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "observed_count": 11,
+      "observed_price": {
+        "amount": "20.14",
+        "currency": "LKR",
+        "scope": "Dated screenshot; not canonical billing data"
+      },
+      "original_aliases": null
+    },
+    {
+      "name": "Star Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-9134567680355354107"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "observed_count": 10,
+      "observed_price": {
+        "amount": "29.90",
+        "currency": "LKR",
+        "scope": "Dated screenshot; not canonical billing data"
+      },
+      "original_aliases": null
+    },
+    {
+      "name": "Migbot 2",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-6908161449319062044"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "observed_count": 8,
+      "observed_price": {
+        "amount": "41.37",
+        "currency": "LKR",
+        "scope": "Dated screenshot; not canonical billing data"
+      },
+      "original_aliases": null
+    },
+    {
+      "name": "Skeleton Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-218207913583537956"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "observed_count": 8,
+      "observed_price": {
+        "amount": "20.69",
+        "currency": "LKR",
+        "scope": "Dated screenshot; not canonical billing data"
+      },
+      "original_aliases": null
+    },
+    {
+      "name": "Social Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-454683020124169117"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "observed_count": 8,
+      "observed_price": {
+        "amount": "27.59",
+        "currency": "LKR",
+        "scope": "Dated screenshot; not canonical billing data"
+      },
+      "original_aliases": null
+    },
+    {
+      "name": "Christmas Pack 2010",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-7587009618867795384"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "In Love Pack 2",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-2884293256228211558"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Daily Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-2884293256228211558"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Signs Pack 2",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-2459370836212645900"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Football Fever 1",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-2026406890247889584"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Football Fever 2",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-885695143463340691"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Extra Pack 3",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-279072127932558760"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Computer Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-3064790530256190229"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Dog Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-6233379929863884307"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Halloween",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-1059041724615258886"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Diwali 2009",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-7043410046266981785"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "MigBot",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-5420102766586695827"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Ramadan",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-2259500757358655757"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Default Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "news-7113578475525546123"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Cool Pack",
+      "kind": "animated_emoticon_pack",
+      "source_ids": [
+        "news-9100539882372527320"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "observed_count": 8,
+      "original_aliases": null,
+      "reported_billing": "Author reports monthly credits; amount and expiration protocol not recovered."
+    },
+    {
+      "name": "Swifty Pack",
+      "kind": "animated_emoticon_pack",
+      "source_ids": [
+        "news-9100539882372527320"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "observed_count": 8,
+      "original_aliases": null,
+      "reported_billing": "Author reports monthly credits; amount and expiration protocol not recovered."
+    },
+    {
+      "name": "Birthday Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "info-491350424469428865"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Baby Animal Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "info-491350424469428865"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Bad Boy Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "info-491350424469428865"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "In Love Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "info-8443733440063598288"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Cool Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "info-8443733440063598288"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Cute Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "info-8443733440063598288"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Sign Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "info-8443733440063598288"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Zodiac Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "info-9193054086248475324"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Arrow Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "info-9193054086248475324"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Heart Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "info-9193054086248475324"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Shortcode Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "info-9193054086248475324"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "CNY and Valentine Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "info-9193054086248475324"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Flower Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "info-5484845010791157033"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Extra Pack 2",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "info-5484845010791157033"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    },
+    {
+      "name": "Sport Pack",
+      "kind": "emoticon_pack",
+      "source_ids": [
+        "info-5484845010791157033"
+      ],
+      "name_status": "recovered",
+      "original_id": null,
+      "original_download": null,
+      "runtime_boundary": "Name is historical; any newly assigned ID, token, test price or replacement artwork must be labeled local.",
+      "original_aliases": null
+    }
+  ],
+  "observed_gift_categories": {
+    "source_id": "info-2861025131531000240",
+    "values": [
+      "Charity",
+      "Others / Misc",
+      "Accessories / Jewelry",
+      "Nature",
+      "Horoscopes / Zodiac",
+      "Toys / Games",
+      "Emotions / Expressions",
+      "Fashion",
+      "Festivals / Holidays",
+      "Flags",
+      "Gadgets",
+      "Greetings / Wishes",
+      "Home / Living",
+      "Love / Friendship",
+      "mig33",
+      "Music",
+      "Animals",
+      "Sports",
+      "Food",
+      "SALE",
+      "FREE",
+      "Exclusive / Limited Edition"
+    ],
+    "limits": "Visible screenshot ends at Landmarks /; remaining category text is cropped."
+  },
+  "historical_behavior": [
+    {
+      "source_id": "news-7113578475525546123",
+      "finding": "Purchase confirmation shows price, available balance, Yes-buy and No-go-back links; completion directs the user to Insert Emoticon from a chat menu. The historical free Default Pack is reported broken by the author.",
+      "limits": "Screenshot covers page flow, not server entitlement/expiry implementation."
+    },
+    {
+      "source_id": "info-2861025131531000240",
+      "finding": "Gift browse commands return names and prices as chat text. Search and display reveal matching products, category and rating.",
+      "limits": "Observed January2011 behavior; exact pagination, rate limits and transactions unknown."
+    }
+  ],
+  "selected_token_evidence": [
+    {
+      "token": "[cricket-helmet]",
+      "source_id": "news-7113578475525546123",
+      "asset": "research/applets/v4/artifacts/historical-catalogs/default-emot-pack-has-been-released-6.png",
+      "limits": "Visible picker label only; cannot identify exact original download bytes or pack membership."
+    }
+  ],
+  "unrecovered": [
+    "Complete official product database and product IDs",
+    "Complete token-to-image mappings and downloaded pack files",
+    "Original paid theme names/assets beyond bundled default_v2; edited-client skins are not official store themes",
+    "Exact historical exchange rates, billing/expiry and stock/rating rules",
+    "Physical-handset font behavior for private-use Unicode glyphs"
+  ],
+  "handset_glyph_observation": {
+    "source_id": "info-4450180573231905662",
+    "code_points": [
+      "U+EEBC",
+      "U+EEC9",
+      "U+EEC0",
+      "U+EECA",
+      "U+EEBB",
+      "U+EECB",
+      "U+EEC1",
+      "U+EEBA",
+      "U+EEBE",
+      "U+EEBF",
+      "U+EEC3",
+      "U+EEC6",
+      "U+EEC7",
+      "U+EEBD",
+      "U+EEC5"
+    ],
+    "finding": "Author reports these pasted characters render as emoticon glyphs in status and chat on some Java phones, and explicitly says support varies by handset. This is not BBCode or a recovered colour-code grammar.",
+    "backend_implication": "Keep Unicode text intact; do not assign universal images or colours without a specific handset/font mapping."
+  },
+  "retrieval_feeds": [
+    {
+      "url": "https://www.blogger.com/feeds/4936523606286207353/posts/default?alt=json&published-min=2009-01-01T00:00:00Z&published-max=2012-01-01T00:00:00Z&start-index=451&max-results=150",
+      "sha256": "b874a743ddc7101100590d9450754053386a128e3b9340c76d56278f0f519f1c",
+      "entries_retrieved": 72
+    },
+    {
+      "url": "https://www.blogger.com/feeds/4936523606286207353/posts/default?alt=json&published-min=2009-01-01T00:00:00Z&published-max=2012-01-01T00:00:00Z&max-results=500",
+      "sha256": "b2758eaddb5f2810303f33c28b30c09cbcbc39d448e07d2b297c229786743bd2",
+      "entries_retrieved": 150
+    },
+    {
+      "url": "https://www.blogger.com/feeds/4936523606286207353/posts/default?alt=json&published-min=2009-01-01T00:00:00Z&published-max=2012-01-01T00:00:00Z&start-index=301&max-results=150",
+      "sha256": "ea60ed436cab5418edc8de23bd8411ccfac4a5534999a33ab2e373d14b3c9b5d",
+      "entries_retrieved": 150
+    },
+    {
+      "url": "https://www.blogger.com/feeds/4936523606286207353/posts/default?alt=json&published-min=2009-01-01T00:00:00Z&published-max=2012-01-01T00:00:00Z&start-index=151&max-results=150",
+      "sha256": "d48160c1eead679152d0afe3fbf4f6c21ff72e260d7a8bee800f11440d6c1ada",
+      "entries_retrieved": 150
+    },
+    {
+      "url": "https://www.blogger.com/feeds/3542791334459693706/posts/default?alt=json&published-min=2009-01-01T00:00:00Z&published-max=2012-01-01T00:00:00Z&max-results=500",
+      "sha256": "602a547326e5775b2571adb8f7df90f15909ce453b4dad01d9f0deefb9e0fe05",
+      "entries_retrieved": 145
+    }
+  ]
+}

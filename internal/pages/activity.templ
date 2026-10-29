@@ -1,0 +1,7 @@
+package pages
+
+// ActivitySummary targets av.java's anchor-only renderer. Arbitrary user text
+// stays on the destination page because av does not decode HTML entities.
+templ ActivitySummary(owner string, action string, href string, label string) {
+	{ owner + " " + action + "." }{ " " }<a href={ legacyURL(href) }>{ label }</a>
+}

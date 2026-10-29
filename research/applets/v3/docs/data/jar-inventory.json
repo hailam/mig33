@@ -1,0 +1,509 @@
+[
+  {
+    "path": "a.class",
+    "bytes": 419,
+    "sha256": "3cbfe1dd70b53d3543dd6cff0ab994605e761e8b78d0b0ea6ab5f8e0e4fbf1d1",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      52
+    ]
+  },
+  {
+    "path": "aa.class",
+    "bytes": 512,
+    "sha256": "609f5500cf4cecfa0cf454a73fd480bf6d1c736b2aed60c6a332dbefe8f80a3c",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      52
+    ]
+  },
+  {
+    "path": "ab.class",
+    "bytes": 10620,
+    "sha256": "8d60e2e61de35ef6d9b16a6b45609ad68e2633246e6320071900d8f8d05a569b",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "ac.class",
+    "bytes": 234,
+    "sha256": "53c403af5fcbf11456286e667df3a2980499fe6ab812f3bfc99948fd85303bf0",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "ad.class",
+    "bytes": 1143,
+    "sha256": "5a90643abca509a09dc520b3d416c4740aaf8326290f7999a2894faaee8fc887",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "b.class",
+    "bytes": 250,
+    "sha256": "4afa9319bc984812262ab9201503217fbf0b3cb94a2eaddd6fbc14007e923ba0",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "c.class",
+    "bytes": 8076,
+    "sha256": "aded6d85e1dcd273a38df7868cf30f591caa0d1b3062636a358aa743a542a0ab",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "com/projectgoth/Roshan/a.class",
+    "bytes": 31875,
+    "sha256": "aa30c425b689675d71d15d612d0ec5607c556e6ea38e473dab7cf9cfbb49aabd",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "com/projectgoth/Roshan/b.class",
+    "bytes": 12310,
+    "sha256": "8a680fb607b2ed4e59e9b97e812111679872e4102179c6c8bbbda83758fd8623",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "com/projectgoth/Roshan/c.class",
+    "bytes": 71062,
+    "sha256": "23998e9f73f6889c16728fe0cf18753942c0cf4af17ea0f6bacf5b5b1e95f246",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "com/projectgoth/Roshan/d.class",
+    "bytes": 6234,
+    "sha256": "028e669f768e93c5dad31f4b6c998c1e71f44d0b0f378c4bdd901488a1325aed",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "com/projectgoth/Roshan/Main.class",
+    "bytes": 1020,
+    "sha256": "abfce568267d2ee2bc6ebb02bb51a9fb0bfc30be947c7a4daebf819600ececeb",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "d.class",
+    "bytes": 1267,
+    "sha256": "80daa3b484dfdc0a9cae8fd3c8f6e644533a914a88cd5aab280773a6ec25e366",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "e.class",
+    "bytes": 9665,
+    "sha256": "b818495dbc45b83d4511f92579dbe10f2245cc0bae886decbf09857a725697e8",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "f.class",
+    "bytes": 344,
+    "sha256": "3c7074bdb29041ed1246f008a5bfd4af010bf0f9222b85fa10579df156006c5d",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "g.class",
+    "bytes": 611,
+    "sha256": "9aac5a8c83d6cbe09355edca12b91b236c0100dc486e84c24f95237cba51f2d9",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "h.class",
+    "bytes": 1150,
+    "sha256": "d7a52efdf5335c718903e821c47071852453e2ef2a0f0f56baa272587719862a",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "i.class",
+    "bytes": 11410,
+    "sha256": "645690fed6542922f91de9b66893fd2c3116076361ba7e807cf2e7de21eb5a34",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "j.class",
+    "bytes": 233,
+    "sha256": "9442611907879373c22c1be6a9006a2a33f4eac022cdcc2f1ba921188cb2ce8e",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "j.png",
+    "bytes": 3084,
+    "sha256": "8a129a43efd442072a4e500b5815b84bc2402dcda78998776d3dd0eb4ece46e6",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "k.class",
+    "bytes": 38611,
+    "sha256": "caef82bc15e75eeb73c83503b9fc381e30ef0dddb6d007ad5c239a5569a00c48",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "k.png",
+    "bytes": 803,
+    "sha256": "15e482baa119ea166345daa3b5927d21ee526f2eb790f7cc68a42c867e865d46",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "l.class",
+    "bytes": 373,
+    "sha256": "b679a9b397b103cd19266736bab05d3423a56767c50ab3d34821d26197aee3a3",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "m.class",
+    "bytes": 2608,
+    "sha256": "34c94ddbee461b9c728b9182df4b953be5a4d9b9d963685f9c1b4f73837b813a",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "META-INF/MANIFEST.MF",
+    "bytes": 231,
+    "sha256": "2343c9c331a34dc7a2bb61f190bc699668b65bc00badfe7cfc448dde49b993e2",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "MiG33.png",
+    "bytes": 283,
+    "sha256": "76d8e944c037169636214a734578585c39a57b66ac6795679cd2e55fe45b84a1",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "n.class",
+    "bytes": 1778,
+    "sha256": "787a65baec60efb873cdede05d8d0753e0cb6d934de8727f219a554aabc84f3c",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "o.class",
+    "bytes": 2577,
+    "sha256": "724942788effe6743c35348fe574ea10c95d78433646064bd333063583a7ade4",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "p.class",
+    "bytes": 2910,
+    "sha256": "f32dd05b074f726f6aede4bc59f7f3534e11bc52f4ab3a0a13b8638cffb010f7",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "q.class",
+    "bytes": 294,
+    "sha256": "81a88b35172fd08c0d5497742ec80f3963e150c3ba294df45c729156ed4c0cc5",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "r.class",
+    "bytes": 16151,
+    "sha256": "35e11a15ca9b3e7c3bcf01d0c58cf41c5d6a3252b9c3637df9d183f8d59601ba",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "s.class",
+    "bytes": 625,
+    "sha256": "83b2cf740eeaa66eab72d416d7b435ba7224838df2be21b0d3548af7f49db0df",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "t.class",
+    "bytes": 17363,
+    "sha256": "ed345544e01c22b95804643743ddb9ecc4293cc2821f3a994fc99046dc5f1a29",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "u.class",
+    "bytes": 360,
+    "sha256": "5c5babe16bfda97485af3b084bf13aefc0bdaa4d0b2174861d50e59acef166fb",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "v.class",
+    "bytes": 10865,
+    "sha256": "de4ec3d5eff2dcdb4cf16cd8e82617906f4e7bbb0418ca7765b1091e27a87824",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "w.class",
+    "bytes": 3203,
+    "sha256": "f73d19ae52d93fb4a00722fc3a7f7bf3a6aa27b74bc78ad233f3c4c53745555a",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "x.class",
+    "bytes": 5113,
+    "sha256": "ef67af78b2fbc6efe59709193fe8d799cb5fd60ccbe761c3fc85e376293105f6",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "y.class",
+    "bytes": 1509,
+    "sha256": "85fb6abe03eb66d8f35b5f06f6c4f399d7a83d1935bd90de2406ea1a0fbde299",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  },
+  {
+    "path": "z.class",
+    "bytes": 5120,
+    "sha256": "7afea6544a94eccd69e3ffefa2287a64a932254d81a0ea4eee46f59bb9c57afa",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ]
+  }
+]

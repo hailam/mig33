@@ -1,0 +1,109 @@
+{
+  "research_date": "2026-10-29",
+  "scope": "Command-private support and incremental domain/capability modularization; research only",
+  "source_policy": "Primary technical references and original authors; project recommendations are inferences from these sources and the repository audit. Practitioner examples are not universal standards.",
+  "sources": [
+    {
+      "id": "go-internal-rule",
+      "url": "https://go.dev/doc/go1.4#internalpackages",
+      "kind": "official Go release notes / enforced rule",
+      "supports": "An internal path is importable only from within the tree rooted at the parent of that internal directory. The rule is enforced by the go command, not by a cmd naming convention."
+    },
+    {
+      "id": "go-current-internal-enforcement",
+      "url": "https://go.dev/src/cmd/go/internal/load/pkg.go",
+      "kind": "official Go implementation source",
+      "supports": "disallowInternal implements the parent-tree check. For packages in modules it checks the importing package import-path prefix. The innermost internal path component supplies the most restrictive parent."
+    },
+    {
+      "id": "go-module-layout",
+      "url": "https://go.dev/doc/modules/layout",
+      "kind": "official design guidance, not mandatory layout",
+      "supports": "Separate command directories and top-level internal supporting packages are common arrangements. cmd is a convention, not a required directory with special language semantics. Server business logic can be kept under root internal; the guide explicitly acknowledges wide variation."
+    },
+    {
+      "id": "go-cmd-internal-production-example",
+      "url": "https://go.dev/src/cmd/internal/",
+      "kind": "official Go toolchain source / concrete precedent",
+      "supports": "The Go toolchain actually keeps shared command support under cmd/internal. This demonstrates a valid maintained layout; it is not a mandate to mirror toolchain complexity."
+    },
+    {
+      "id": "go-package-names",
+      "url": "https://go.dev/blog/package-names",
+      "kind": "official Go design guidance by Sameer Ajmani",
+      "supports": "Package names should explain their purpose. Directory hierarchy by itself does not create package relationships. Generic utility and all-API buckets tend to accumulate unrelated dependencies."
+    },
+    {
+      "id": "go-interface-consumers",
+      "url": "https://go.dev/wiki/CodeReviewComments#interfaces",
+      "kind": "Go review guidance",
+      "supports": "Interfaces generally belong with consumers, implementations generally return concrete types, and interfaces should follow demonstrated use rather than speculative mocking needs."
+    },
+    {
+      "id": "cheney-practical",
+      "url": "https://dave.cheney.net/practical-go/presentations/qcon-china.html#_consider_fewer_larger_packages",
+      "kind": "Original author's Go architecture advice, 2019",
+      "supports": "Prefer fewer cohesive packages over elaborate taxonomies; splitting a package can force many previously private identifiers into a wide exported API. Arrange related responsibilities in files when a package remains cohesive.",
+      "qualification": "Experienced practitioner guidance, not a language rule or numerical threshold."
+    },
+    {
+      "id": "fowler-bounded-context",
+      "url": "https://martinfowler.com/bliki/BoundedContext.html",
+      "kind": "Original architectural exposition",
+      "supports": "Bounded contexts divide large models into internally consistent meanings and define relationships between models; the same business word may mean different things in different contexts."
+    },
+    {
+      "id": "fowler-monolith-first",
+      "url": "https://martinfowler.com/bliki/MonolithFirst.html",
+      "kind": "Original architectural recommendation",
+      "supports": "Distributed services add operational cost and require stable boundaries; moving boundaries inside a monolith is easier. Modular design is useful, but later service extraction is not guaranteed.",
+      "qualification": "The author explicitly describes limited anecdotal evidence and dissent. Do not claim every monolith should or easily can become microservices."
+    },
+    {
+      "id": "fowler-aggregate",
+      "url": "https://martinfowler.com/bliki/DDD_Aggregate.html",
+      "kind": "Original architectural exposition",
+      "supports": "Aggregates group domain objects around an integrity boundary with one root; they are not merely collections or arbitrary code folders.",
+      "qualification": "Its strict transaction-boundary advice belongs to aggregate design. Do not relabel existing packages as aggregates then break current cross-feature atomic operations to satisfy a folder layout."
+    },
+    {
+      "id": "microsoft-domain-events",
+      "url": "https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/domain-events-design-implementation",
+      "kind": "Official reference-architecture documentation, .NET",
+      "supports": "In-process domain events may be synchronous or asynchronous. Dispatching side effects before commit can retain one transaction; dispatching after commit requires eventual consistency and failure recovery. Both choices depend on actual business invariants.",
+      "qualification": "The examples are .NET/EF Core/eShop reference code, not idiomatic-Go prescriptions or production evidence for this repository."
+    },
+    {
+      "id": "sqlc-transactions",
+      "url": "https://docs.sqlc.dev/en/v1.31.1/howto/transactions.html",
+      "kind": "Official documentation for the repository's pinned sqlc version",
+      "supports": "Generated Queries can bind to a transaction through WithTx/DBTX. Multiple query operations can share one transaction without exposing generated records to application code.",
+      "qualification": "The SQL/database example uses Begin; retain this repository's explicit BeginTx(ctx,nil) cancellation convention."
+    },
+    {
+      "id": "go-transactions",
+      "url": "https://go.dev/doc/database/execute-transactions",
+      "kind": "Official Go database guidance",
+      "supports": "Transactions group operations atomically; mixing non-transaction database calls into an active transaction can produce inconsistency or deadlock."
+    },
+    {
+      "id": "johnson-layout-alternative",
+      "url": "https://www.gobeyond.dev/standard-package-layout/",
+      "kind": "Original author's layout proposal, 2016",
+      "supports": "Presents an alternative of shared domain types, dependency-based adapter packages, and main composition; critiques both layer-style and naive module-style cycles.",
+      "qualification": "Despite the article title, this is a practitioner's proposal, not an official Go standard. Its single shared domain strategy is closer to the current layout and can still accumulate a large shared model."
+    },
+    {
+      "id": "cockburn-hexagonal",
+      "url": "https://alistair.cockburn.us/hexagonal-architecture",
+      "kind": "Original architecture author",
+      "supports": "Ports and adapters isolate application behavior from external mechanisms; the pattern does not prescribe Go package names."
+    },
+    {
+      "id": "sqlc-query-sets",
+      "url": "https://docs.sqlc.dev/en/v1.31.1/reference/config.html",
+      "kind": "Official documentation for pinned generator",
+      "supports": "Configuration supports multiple query sets with separately configured output packages; package generation does not define business boundaries."
+    }
+  ]
+}

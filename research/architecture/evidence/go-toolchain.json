@@ -1,0 +1,50 @@
+{
+  "verified_at": "2026-10-28T20:20:34.651443+00:00",
+  "version": "go1.27.3",
+  "stable": true,
+  "released": "2026-10-19",
+  "sources": [
+    {
+      "url": "https://go.dev/dl/?mode=json",
+      "verified_fact": "Latest stable release is go1.27.3."
+    },
+    {
+      "url": "https://go.dev/doc/devel/release#go1.27.3",
+      "verified_fact": "go1.27.3 released2026-10-19."
+    }
+  ],
+  "previous_module_go_directive": "1.25.0",
+  "module_go_directive": "1.27.3",
+  "previous_default_toolchain": "go1.27.1 darwin/arm64",
+  "tested_toolchain": "go version go1.27.3 darwin/arm64",
+  "environment": {
+    "CGO_ENABLED": "1",
+    "GOARCH": "arm64",
+    "GOOS": "darwin",
+    "GOTOOLCHAIN": "go1.27.3",
+    "GOVERSION": "go1.27.3"
+  },
+  "download_method": "GOTOOLCHAIN=go1.27.3; downloaded using Go toolchain selection into /tmp/mig33-go-modules; global installation unchanged.",
+  "dependency_versions_unchanged": true,
+  "go_sum_sha256": "bf00827794725edab544969cfc407f65f0d21d8c802bcfd1a5d124d7f38390d0",
+  "checks": [
+    {
+      "command": "go test -race ./...",
+      "exit_code": 0,
+      "duration_seconds": 46.947,
+      "output": "ok  \tmig33.local/reconstruction/cmd/cli\t6.076s\n?   \tmig33.local/reconstruction/cmd/http\t[no test files]\nok  \tmig33.local/reconstruction/cmd/internal/command\t1.998s\n?   \tmig33.local/reconstruction/cmd/omni\t[no test files]\n?   \tmig33.local/reconstruction/cmd/socket\t[no test files]\n?   \tmig33.local/reconstruction/configs\t[no test files]\n?   \tmig33.local/reconstruction/db/migrations\t[no test files]\nok  \tmig33.local/reconstruction/internal/adapters/httpapi\t2.518s\n?   \tmig33.local/reconstruction/internal/adapters/httptransport\t[no test files]\nok  \tmig33.local/reconstruction/internal/adapters/socket\t3.035s\nok  \tmig33.local/reconstruction/internal/adapters/sqlite/migrations\t3.550s\nok  \tmig33.local/reconstruction/internal/adapters/sqlite/repositories\t5.202s\n?   \tmig33.local/reconstruction/internal/adapters/sqlite/sqlc\t[no test files]\nok  \tmig33.local/reconstruction/internal/bootstrap\t8.297s\n?   \tmig33.local/reconstruction/internal/catalog\t[no test files]\nok  \tmig33.local/reconstruction/internal/config\t5.311s\nok  \tmig33.local/reconstruction/internal/controllers\t4.289s\n?   \tmig33.local/reconstruction/internal/domain\t[no test files]\nok  \tmig33.local/reconstruction/internal/formatting\t6.198s\nok  \tmig33.local/reconstruction/internal/pages\t5.770s\nok  \tmig33.local/reconstruction/internal/ports\t6.699s\nok  \tmig33.local/reconstruction/internal/protocol\t7.117s\nok  \tmig33.local/reconstruction/internal/services\t26.460s\n"
+    },
+    {
+      "command": "go vet ./...",
+      "exit_code": 0,
+      "duration_seconds": 16.69,
+      "output": ""
+    }
+  ],
+  "entrypoints": "go test -race ./... builds and tests cmd/http, cmd/socket, cmd/omni and cmd/cli.",
+  "live_backend_touched": false,
+  "automatic_toolchain_selection": {
+    "GOTOOLCHAIN": "auto",
+    "result": "go version go1.27.3 darwin/arm64"
+  }
+}

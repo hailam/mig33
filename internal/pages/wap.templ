@@ -1,0 +1,52 @@
+package pages
+
+templ WAPLogin(action, csrf string) {
+	@Heading("Sign in")
+	@Form(action, []HiddenField{{Name:"csrf", Value:csrf}, {Name:"op", Value:"login"}}, Stack(Input("username", "Username", "text", "", 10), Input("password", "Password", "password", "", 10)), "Sign in")
+}
+
+templ WAPChat(data WAPChatData) {
+	@Heading("Chat")
+	@Paragraph(data.User + " · " + data.Target)
+	if data.Notice != "" {
+		@Paragraph(data.Notice)
+	}
+	@Link(data.Action, "Refresh")
+	@Link("/member2/t.php", "Conversations")
+	for _, message := range data.Messages {
+		if message.Action {
+			<p style="color:#993300">{ message.Body }</p>
+		} else {
+			@Paragraph(message.Sender + " · " + message.Time)
+			if message.Formatted {
+				@FormattedContent(message.Document)
+			} else if message.Color != "" {
+				<p { formattedColorAttributes("color", message.Color)... }>{ message.Body }</p>
+			} else {
+				@Paragraph(message.Body)
+			}
+		}
+	}
+	if data.NextURL != "" {
+		@Link(data.NextURL, "Next messages")
+	}
+	if data.IsRoom && !data.Joined {
+		@Form(data.Action, []HiddenField{{Name:"csrf", Value:data.CSRF}, {Name:"op", Value:"join"}}, Stack(), "Join room")
+	} else {
+		@Form(data.Action, []HiddenField{{Name:"csrf", Value:data.CSRF}, {Name:"nonce", Value:data.Nonce}, {Name:"op", Value:"send"}}, wapComposer(), "Send")
+		if data.IsRoom {
+			@Form(data.Action, []HiddenField{{Name:"csrf", Value:data.CSRF}, {Name:"op", Value:"leave"}}, Stack(), "Leave room")
+		}
+	}
+	if data.BrowserSession {
+		@Form("/member2/t.php", []HiddenField{{Name:"csrf", Value:data.CSRF}, {Name:"op", Value:"logout"}}, Stack(), "Sign out")
+	}
+}
+
+templ wapComposer() {
+	@Paragraph("Message format")
+	<select name="format"><option value="plain" selected>Plain text</option><option value="html">Formatted text</option></select>
+	@Paragraph("Formatted text: <b>bold</b>, <i>italic</i>, <u>underline</u>, <span style=\"color:#ff0000\">red</span>.")
+	@Paragraph("Java chats show the message as plain text and preserve a single text colour. Mixed colours and font styles appear here.")
+	@TextArea("body", "Message", "", 4096)
+}

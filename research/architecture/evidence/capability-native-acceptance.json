@@ -1,0 +1,71 @@
+{
+  "complete": true,
+  "source_unchanged": true,
+  "binary_sha256": "5bf1954f88e4cc71f93fc443ce81970753ad4d6a657341a1859706d9680d2891",
+  "source_manifest_sha256": "ac5d55b77024436c377ad48d19e7e5449fd49fd2d4525a3c0644f0ed7f8cbd92",
+  "jar_sha256": "dbf12ffbd44bc6e48d09cf35863736731c87c078877f76ed4b780a4dc5eff92c",
+  "totals": {
+    "frames": 3625,
+    "screenshots": 570,
+    "clients": 48
+  },
+  "harness_attempts": [
+    {
+      "number": 1,
+      "temporary_harness": "/var/folders/99/dvq39r1d3_34sf_7dqmvfy0c0000gn/T/mig33-hexagonal-native-jw1fw21q",
+      "runner_sha256": "228ba438d726c457e24a44610cba4208af02ccbdb23caa4eb111186ae3ecd6d9",
+      "runner_source": "acceptance-runner.py",
+      "manifest": "harness-manifest.json",
+      "corrections": "fixture-corrections.json",
+      "started_at": "2026-10-28T22:31:41.429257+00:00"
+    },
+    {
+      "number": 2,
+      "temporary_harness": "/var/folders/99/dvq39r1d3_34sf_7dqmvfy0c0000gn/T/mig33-hexagonal-native-bpnlb267",
+      "runner_sha256": "73c9216814a3f5b1da40c4debd9bf44d6fe3c66b78e15183afad99f33aa1c97b",
+      "runner_source": "acceptance-runner-2.py",
+      "manifest": "harness-manifest-2.json",
+      "corrections": "fixture-corrections-2.json",
+      "started_at": "2026-10-28T22:37:50.343395+00:00"
+    }
+  ],
+  "resumption_provenance": {
+    "changed_harness_inputs": [
+      "v4/scripts/integration/V4SlashIntegration.java"
+    ],
+    "previous_successful_suite_count": 9,
+    "previous_successful_suite_scripts_and_executed_client_classes_unchanged": true,
+    "production_source_and_binary_unchanged": true,
+    "failure_analysis": "slash-presence-failure-analysis.json",
+    "failed_attempt": "failed-attempts/slash-1",
+    "correction": "fixture-corrections-2.json"
+  },
+  "suite_count": 17,
+  "db_integrity_checks": 17,
+  "foreign_key_violations": 0,
+  "database_schemas": [
+    18
+  ],
+  "source_files": 231,
+  "evidence": "/Users/maix/apps/go/mig33/v4/scripts/integration/hexagonal-out",
+  "capture_manifest_sha256": "71f4b2b19a900789671d2715228d66a8999d66e1b731b60aa0b3d7170543b5fd",
+  "suite_names": [
+    "pair",
+    "group",
+    "room",
+    "room-moderation",
+    "block",
+    "contacts",
+    "vote-report",
+    "room-discovery",
+    "friend-moderation",
+    "slash",
+    "identity",
+    "pages",
+    "catalog",
+    "formatting",
+    "media",
+    "mirrors",
+    "reconnect"
+  ]
+}

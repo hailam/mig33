@@ -1,0 +1,824 @@
+[
+  {
+    "literal": "/sites/index.php?c=account&a=get_history&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6636
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=account&a=home&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6626
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=account&a=recharge_credit&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6646
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=account&v=midlet&a=transfer_credit",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 4379
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 5026
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6561
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6571
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=account&v=midlet&a=transfer_credit&recipient_username=%s",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 4369
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 5015
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6549
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=avatar&v=midlet&a=home",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6934
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=bot&a=bot_list&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 7702
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=buzz&a=home&v=midlet%s",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6696
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=call&a=home&v=midlet&f=call&number_to_call=%s",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 4413
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 4917
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 4928
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 7646
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 13842
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=chatroom&a=create&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6796
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=chatroom&a=search&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 5104
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6824
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/bc.txt",
+        "line": 4080
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=chatroom&v=midlet&a=setup&roomName=%s",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 5061
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 5189
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 8406
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=email&a=compose&v=midlet%s",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 7909
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 8229
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=group&v=midlet&a=add_to_group&roomName=%s",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 5077
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6806
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 8522
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=group&v=midlet&a=home",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 5445
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=group&v=midlet&a=list_chatrooms",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 5350
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=group&v=midlet&a=list_groups_home&e=3",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 3090
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 3155
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 3203
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 3275
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 8540
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=group&v=midlet&a=list_my_groups&e=3",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 2807
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 7295
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/bj.txt",
+        "line": 4623
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=group&v=midlet&a=members",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 5382
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=group&v=midlet&a=view_forum",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 5414
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=help&a=contact_us&v=midlet%s",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6884
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=help&a=main&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 7712
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=im&a=setup_im&im=%s&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 5708
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 7927
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=leaderboard&v=midlet&a=home",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 8468
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=location&a=checkin&v=midlet&f=",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 21935
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=lookout&a=home&v=midlet%s",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 4985
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6664
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=merchant&v=midlet&a=dashboard",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6874
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=migworld&a=get_mobpage&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 8458
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=migworld&v=midlet&a=get_mobpage",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 3131
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 3227
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 3251
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6912
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 8512
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/k.txt",
+        "line": 1119
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=photo&a=home&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 5599
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=photo&v=midlet&a=home&f=sendfromphoto",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 5589
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=photo&v=midlet&username=%s&a=home",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6732
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6744
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6922
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/bc.txt",
+        "line": 8488
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=photos&a=wall&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 8492
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=profile&a=edit&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 7692
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=profile&a=home&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 2783
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 3066
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 3179
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6944
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=profile&a=search&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 8502
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=profile&a=user_blog_posts&v=midlet&username=%s",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 8478
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=profile&v=midlet&a=home&username=%s",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 4487
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 4963
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 8173
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=report&a=report_abuse&v=midlet&type=4&subject=Chatroom&subject_id=%s",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 5249
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=report&a=report_abuse&v=midlet&type=4&subject=Group%20Chat&subject_id=%s",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 5236
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=settings&a=block_list&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6834
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=settings&a=call_by_name&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6844
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=settings&a=change_password&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6616
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=settings&a=change_tab_order&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6596
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=settings&a=chat_privacy&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 8592
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=settings&a=profile_privacy_settings&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6864
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=settings&a=view_update_settings&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6854
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=settings&v=midlet&a=change_mobile",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6606
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=sms&a=home&v=midlet&f=sms&to_number=%s",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 4389
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 4892
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 4903
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 7579
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 13832
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=store&a=home&e=3&ty=5&v=midlet",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 7305
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=store&v=midlet&a=home&e=3&ty=1&username=%s",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 4521
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 4974
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 8209
+      }
+    ]
+  },
+  {
+    "literal": "/sites/index.php?c=store&v=midlet&a=main&id=111",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 5114
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6902
+      }
+    ]
+  },
+  {
+    "literal": "http://",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 10821
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 10841
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/bc.txt",
+        "line": 1482
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/bc.txt",
+        "line": 1487
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/bc.txt",
+        "line": 4860
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/bc.txt",
+        "line": 5624
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/u.txt",
+        "line": 1659
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/u.txt",
+        "line": 1664
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/y.txt",
+        "line": 10888
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/y.txt",
+        "line": 11160
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/y.txt",
+        "line": 11702
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/y.txt",
+        "line": 11719
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/y.txt",
+        "line": 11777
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/y.txt",
+        "line": 11808
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/y.txt",
+        "line": 11813
+      }
+    ]
+  },
+  {
+    "literal": "http://gateway.mig33.com/",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 11131
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/bc.txt",
+        "line": 140
+      }
+    ]
+  },
+  {
+    "literal": "http://www.mig33.com/sites/c=migworld&v=midlet&a=new_home",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/bl.txt",
+        "line": 1048
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/bl.txt",
+        "line": 1061
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/bl.txt",
+        "line": 1086
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/bl.txt",
+        "line": 1091
+      }
+    ]
+  },
+  {
+    "literal": "http://www.mig33.com/sites/index.php?c=help&v=wap&a=apn",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 12904
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 13215
+      }
+    ]
+  },
+  {
+    "literal": "http://www.mig33.com/sites/index.php?c=help&v=wap&a=tc",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 11061
+      }
+    ]
+  },
+  {
+    "literal": "http://www.mig33.com/sites/index.php?c=registration_api&v=midlet&a=check_username&username=%s",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 10868
+      }
+    ]
+  },
+  {
+    "literal": "http://www.mig33.com/sites/lib/ga_midlet.php?",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/bj.txt",
+        "line": 1468
+      }
+    ]
+  },
+  {
+    "literal": "http://www.mig33.com/sites/resources/language/v4.6/l",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 6993
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 9731
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+        "line": 11210
+      }
+    ]
+  },
+  {
+    "literal": "https://",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/y.txt",
+        "line": 11723
+      },
+      {
+        "path": "research/applets/v4/artifacts/bytecode/y.txt",
+        "line": 11768
+      }
+    ]
+  },
+  {
+    "literal": "socket://",
+    "references": [
+      {
+        "path": "research/applets/v4/artifacts/bytecode/u.txt",
+        "line": 299
+      }
+    ]
+  }
+]

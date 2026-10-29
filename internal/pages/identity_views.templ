@@ -1,0 +1,91 @@
+package pages
+
+templ IdentityRegistration(action, csrf, otp string) {
+	@Paragraph("Local development verification uses " + otp + ". No SMS will be sent.")
+	@Form(action, []HiddenField{{Name: "csrf", Value: csrf}}, identityRegistrationControls(otp), "Create Account")
+}
+
+templ identityRegistrationControls(otp string) {
+	@Input("username", "Username (3 to 32 letters, numbers, dots, hyphens or underscores)", "text", "", 10)
+	@Input("mobile", "Mobile number including country code", "text", "", 10)
+	@Input("code", "Development verification code: " + otp, "text", "", 10)
+	@Checkbox("agree", "I agree to create a local test account. This service sends no SMS and charges no money.", false)
+	@Input("password", "Password (case insensitive for original-client compatibility)", "password", "", 10)
+}
+
+templ IdentityRecoveryStart(action, csrf, otp string) {
+	@Paragraph("Reset your password using the development code " + otp + ". No SMS will be sent.")
+	@Form(action, []HiddenField{{Name: "csrf", Value: csrf}}, Input("mobile", "Registered mobile number", "text", "", 10), "Continue")
+}
+
+templ IdentityRecoveryPassword(action, csrf, otp string) {
+	@Paragraph("Development code: " + otp)
+	@Form(action, []HiddenField{{Name: "csrf", Value: csrf}}, identityRecoveryControls(), "Reset Password")
+}
+
+templ identityRecoveryControls() {
+	@Input("code", "Verification code", "text", "", 10)
+	@Input("password", "New password", "password", "", 10)
+}
+
+templ IdentityPasswordForm(action string, hidden []HiddenField, label, submit string) {
+	@Form(action, hidden, Input("password", label, "password", "", 10), submit)
+}
+
+templ IdentityProfile(data IdentityProfileData) {
+	@Paragraph(data.Display)
+	@Paragraph("Username: " + data.Username)
+	@Paragraph("Presence: " + data.Presence)
+	@Paragraph("Status: " + data.Status)
+	if data.Bio != "" {
+		@Paragraph("About me: " + data.Bio)
+	}
+	if data.Country != "" {
+		@Paragraph("Country: " + data.Country)
+	}
+	if data.Own {
+		@Link(data.EditURL, "Edit Profile")
+	} else {
+		@Link(data.ChatURL, "Chat")
+		@Link(data.AddFriendURL, "Add Friend")
+	}
+	@Link(data.PhotosURL, "Photos")
+	@Link(data.BlogURL, "Blog Posts")
+}
+
+templ IdentityProfileEditor(csrf, notice string, fields []IdentityEditField) {
+	if notice != "" {
+		@Paragraph(notice)
+	}
+	for _, field := range fields {
+		@Paragraph(field.Label + ": " + field.Value)
+		@Form(field.Action, []HiddenField{{Name: "csrf", Value: csrf}}, Input("value", field.InputLabel, "text", "", 10), "Save")
+	}
+}
+
+templ IdentityMobileSettings(action, csrf, current, notice, otp string) {
+	if notice != "" {
+		@Paragraph(notice)
+	}
+	@Paragraph("Current mobile: " + current)
+	@Paragraph("Development code: " + otp)
+	@Form(action, []HiddenField{{Name: "csrf", Value: csrf}}, identityMobileControls(), "Save Mobile Number")
+}
+
+templ identityMobileControls() {
+	@Input("mobile", "New mobile number", "text", "", 10)
+	@Input("code", "Verification code", "text", "", 10)
+}
+
+templ IdentityPreferenceSettings(action, csrf, current, notice, applyURL string, options [][2]string) {
+	if notice != "" {
+		@Paragraph(notice)
+	}
+	if applyURL != "" {
+		@Link(applyURL, "Apply tab order to this device")
+	}
+	@Paragraph("Current: " + current)
+	for _, option := range options {
+		@Form(action, []HiddenField{{Name: "csrf", Value: csrf}, {Name: "value", Value: option[0]}}, Stack(), option[1])
+	}
+}

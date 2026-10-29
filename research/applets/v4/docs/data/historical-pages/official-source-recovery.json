@@ -1,0 +1,33 @@
+{
+  "retrieved": "2026-10-27",
+  "requests": [
+    {
+      "id": "pvt2-original",
+      "url": "https://blog.mig33.com/uploads/2010/07/pvt2.png",
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "id": "pvt2-photon",
+      "url": "https://i0.wp.com/blog.mig33.com/uploads/2010/07/pvt2.png",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "footprints-photon",
+      "url": "https://i0.wp.com/blog.mig33.com/uploads/2010/11/Footprints1.png",
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "id": "pvt2-archive",
+      "url": "https://web.archive.org/web/20110201000000id_/http://blog.mig33.com/uploads/2010/07/pvt2.png",
+      "bytes": 12246,
+      "content_type": "image/png",
+      "final_url": "https://web.archive.org/web/20140603222517id_/http://blog.mig33.com/uploads/2010/07/pvt2.png",
+      "sha256": "46bc7f250e59f8ea5c36c11e964b5f67729fd35f9789ceeafcc3df42bc1d552e"
+    },
+    {
+      "id": "available",
+      "url": "https://archive.org/wayback/available?url=blog.mig33.com/uploads/2010/07/pvt2.png&timestamp=2011",
+      "error": "HTTP Error 429: Too Many Requests"
+    }
+  ]
+}

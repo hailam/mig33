@@ -1,0 +1,608 @@
+{
+  "retrieved": "2026-10-28",
+  "counts": {
+    "templates": 52,
+    "partial_visible_page": 13,
+    "navigation_only": 17,
+    "no_matching_visual": 22,
+    "exact_historical_page_html": 0
+  },
+  "routes": [
+    {
+      "id": "L001",
+      "url_template": "/sites/index.php?c=account&a=get_history&v=midlet",
+      "purpose": "Account history",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "native navigation only",
+      "image_ids": [
+        "credits5c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L002",
+      "url_template": "/sites/index.php?c=account&a=home&v=midlet",
+      "purpose": "Account overview",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "native navigation only",
+      "image_ids": [
+        "credits5c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L003",
+      "url_template": "/sites/index.php?c=account&a=recharge_credit&v=midlet",
+      "purpose": "Recharge credit",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "partial visible page",
+      "image_ids": [
+        "credits5c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L004",
+      "url_template": "/sites/index.php?c=account&v=midlet&a=transfer_credit",
+      "purpose": "Transfer credit page",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "native navigation only",
+      "image_ids": [
+        "credits5c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L005",
+      "url_template": "/sites/index.php?c=account&v=midlet&a=transfer_credit&recipient_username=%s",
+      "purpose": "Transfer credit page",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "native navigation only",
+      "image_ids": [
+        "credits5c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L006",
+      "url_template": "/sites/index.php?c=avatar&v=midlet&a=home",
+      "purpose": "Avatar selection",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "native navigation only",
+      "image_ids": [
+        "credits5c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L007",
+      "url_template": "/sites/index.php?c=bot&a=bot_list&v=midlet",
+      "purpose": "Games / bot list",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "partial visible page",
+      "image_ids": [
+        "games-2010-1",
+        "moonbase-1",
+        "games-guide-2011-3",
+        "games-2009-2"
+      ],
+      "exact_4_62_page_html": false,
+      "evidence_note": "migGames directory and help visible in original community captures. Partial historical-family evidence; exact URL/build not captured."
+    },
+    {
+      "id": "L008",
+      "url_template": "/sites/index.php?c=buzz&a=home&v=midlet%s",
+      "purpose": "Buzz page",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L009",
+      "url_template": "/sites/index.php?c=call&a=home&v=midlet&f=call&number_to_call=%s",
+      "purpose": "Call setup page",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L010",
+      "url_template": "/sites/index.php?c=chatroom&a=create&v=midlet",
+      "purpose": "Create chat room page",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "partial visible page",
+      "image_ids": [
+        "chat5c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L011",
+      "url_template": "/sites/index.php?c=chatroom&a=search&v=midlet",
+      "purpose": "Search chat rooms",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "partial visible page",
+      "image_ids": [
+        "chat3c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L012",
+      "url_template": "/sites/index.php?c=chatroom&v=midlet&a=setup&roomName=%s",
+      "purpose": "Room information / settings",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "partial visible page",
+      "image_ids": [
+        "room1"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L013",
+      "url_template": "/sites/index.php?c=email&a=compose&v=midlet%s",
+      "purpose": "Compose mail",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L014",
+      "url_template": "/sites/index.php?c=group&v=midlet&a=add_to_group&roomName=%s",
+      "purpose": "Link / add room to a group",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "native navigation only",
+      "image_ids": [
+        "chat8c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L015",
+      "url_template": "/sites/index.php?c=group&v=midlet&a=home",
+      "purpose": "Group home",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "partial visible page",
+      "image_ids": [
+        "chat8c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L016",
+      "url_template": "/sites/index.php?c=group&v=midlet&a=list_chatrooms",
+      "purpose": "Group chat rooms",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "partial visible page",
+      "image_ids": [
+        "chat8c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L017",
+      "url_template": "/sites/index.php?c=group&v=midlet&a=list_groups_home&e=3",
+      "purpose": "Discover groups",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "native navigation only",
+      "image_ids": [
+        "chat8c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L018",
+      "url_template": "/sites/index.php?c=group&v=midlet&a=list_my_groups&e=3",
+      "purpose": "My groups",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "native navigation only",
+      "image_ids": [
+        "credits5c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L019",
+      "url_template": "/sites/index.php?c=group&v=midlet&a=members",
+      "purpose": "Group members",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "native navigation only",
+      "image_ids": [
+        "chat8c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L020",
+      "url_template": "/sites/index.php?c=group&v=midlet&a=view_forum",
+      "purpose": "Group forum",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L021",
+      "url_template": "/sites/index.php?c=help&a=contact_us&v=midlet%s",
+      "purpose": "Contact support page",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L022",
+      "url_template": "/sites/index.php?c=help&a=main&v=midlet",
+      "purpose": "Help home",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L023",
+      "url_template": "/sites/index.php?c=im&a=setup_im&im=%s&v=midlet",
+      "purpose": "External IM account setup",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L024",
+      "url_template": "/sites/index.php?c=leaderboard&v=midlet&a=home",
+      "purpose": "Leaderboard",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L025",
+      "url_template": "/sites/index.php?c=location&a=checkin&v=midlet&f=",
+      "purpose": "Location check-in page",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L026",
+      "url_template": "/sites/index.php?c=lookout&a=home&v=midlet%s",
+      "purpose": "Lookout page",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L027",
+      "url_template": "/sites/index.php?c=merchant&v=midlet&a=dashboard",
+      "purpose": "Merchant dashboard",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L028",
+      "url_template": "/sites/index.php?c=migworld&a=get_mobpage&v=midlet",
+      "purpose": "migWorld / discovery page",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L029",
+      "url_template": "/sites/index.php?c=migworld&v=midlet&a=get_mobpage",
+      "purpose": "migWorld / discovery page",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "partial visible page",
+      "image_ids": [
+        "games-2009-1"
+      ],
+      "exact_4_62_page_html": false,
+      "evidence_note": "migWorld news/What is Hot/Help body visible; dynamic content and exact request URL not recovered."
+    },
+    {
+      "id": "L030",
+      "url_template": "/sites/index.php?c=photo&a=home&v=midlet",
+      "purpose": "Photos / scrapbook page",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L031",
+      "url_template": "/sites/index.php?c=photo&v=midlet&a=home&f=sendfromphoto",
+      "purpose": "Photos / scrapbook page",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L032",
+      "url_template": "/sites/index.php?c=photo&v=midlet&username=%s&a=home",
+      "purpose": "Photos / scrapbook page",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L033",
+      "url_template": "/sites/index.php?c=photos&a=wall&v=midlet",
+      "purpose": "migPhotos wall",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L034",
+      "url_template": "/sites/index.php?c=profile&a=edit&v=midlet",
+      "purpose": "Edit profile page",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "native navigation only",
+      "image_ids": [
+        "credits5c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L035",
+      "url_template": "/sites/index.php?c=profile&a=home&v=midlet",
+      "purpose": "Own or selected user profile",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "partial visible page",
+      "image_ids": [
+        "pvt2"
+      ],
+      "exact_4_62_page_html": false,
+      "community_image_catalog": "historical-formatting",
+      "community_image_paths": [
+        "../historical-formatting/profile-red-background.jpg",
+        "../historical-formatting/profile-custom-background-small.jpg",
+        "../historical-formatting/profile-my-profile-link.jpg",
+        "../historical-formatting/profile-room-link.jpg",
+        "../historical-formatting/profile-private-chat-link.jpg",
+        "../historical-formatting/profile-yellow-text.jpg",
+        "../historical-formatting/profile-large-text.jpg"
+      ],
+      "design_evidence_note": "Partial historical profile-home family visuals from a community-author guide. One capture explicitly identifies a modified4.20-store client. Exact4.62, handset, full scroll contents and route-specific HTML remain unrecovered. Existing image_ids retain official-host navigation evidence."
+    },
+    {
+      "id": "L036",
+      "url_template": "/sites/index.php?c=profile&a=search&v=midlet",
+      "purpose": "Search people",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L037",
+      "url_template": "/sites/index.php?c=profile&a=user_blog_posts&v=midlet&username=%s",
+      "purpose": "User blog posts",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L038",
+      "url_template": "/sites/index.php?c=profile&v=midlet&a=home&username=%s",
+      "purpose": "Own or selected user profile",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "partial visible page",
+      "image_ids": [
+        "pvt2"
+      ],
+      "exact_4_62_page_html": false,
+      "community_image_catalog": "historical-formatting",
+      "community_image_paths": [
+        "../historical-formatting/profile-red-background.jpg",
+        "../historical-formatting/profile-custom-background-small.jpg",
+        "../historical-formatting/profile-my-profile-link.jpg",
+        "../historical-formatting/profile-room-link.jpg",
+        "../historical-formatting/profile-private-chat-link.jpg",
+        "../historical-formatting/profile-yellow-text.jpg",
+        "../historical-formatting/profile-large-text.jpg"
+      ],
+      "design_evidence_note": "Partial historical profile-home family visuals from a community-author guide. One capture explicitly identifies a modified4.20-store client. Exact4.62, handset, full scroll contents and route-specific HTML remain unrecovered. Existing image_ids retain official-host navigation evidence."
+    },
+    {
+      "id": "L039",
+      "url_template": "/sites/index.php?c=report&a=report_abuse&v=midlet&type=4&subject=Chatroom&subject_id=%s",
+      "purpose": "Report room / group-chat abuse page",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L040",
+      "url_template": "/sites/index.php?c=report&a=report_abuse&v=midlet&type=4&subject=Group%20Chat&subject_id=%s",
+      "purpose": "Report room / group-chat abuse page",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L041",
+      "url_template": "/sites/index.php?c=settings&a=block_list&v=midlet",
+      "purpose": "Manage blocked users",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "native navigation only",
+      "image_ids": [
+        "chat14c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L042",
+      "url_template": "/sites/index.php?c=settings&a=call_by_name&v=midlet",
+      "purpose": "Call-by-name settings",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "native navigation only",
+      "image_ids": [
+        "chat14c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L043",
+      "url_template": "/sites/index.php?c=settings&a=change_password&v=midlet",
+      "purpose": "Change password page",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "partial visible page",
+      "image_ids": [
+        "passwordddd"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L044",
+      "url_template": "/sites/index.php?c=settings&a=change_tab_order&v=midlet",
+      "purpose": "Tab-order settings",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L045",
+      "url_template": "/sites/index.php?c=settings&a=chat_privacy&v=midlet",
+      "purpose": "Chat privacy settings",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "native navigation only",
+      "image_ids": [
+        "chat14c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L046",
+      "url_template": "/sites/index.php?c=settings&a=profile_privacy_settings&v=midlet",
+      "purpose": "Profile privacy settings",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "native navigation only",
+      "image_ids": [
+        "chat14c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L047",
+      "url_template": "/sites/index.php?c=settings&a=view_update_settings&v=midlet",
+      "purpose": "Activity update settings",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "native navigation only",
+      "image_ids": [
+        "chat14c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L048",
+      "url_template": "/sites/index.php?c=settings&v=midlet&a=change_mobile",
+      "purpose": "Change mobile number page",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "native navigation only",
+      "image_ids": [
+        "chat14c"
+      ],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L049",
+      "url_template": "/sites/index.php?c=sms&a=home&v=midlet&f=sms&to_number=%s",
+      "purpose": "Compose SMS page",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "not recovered",
+      "image_ids": [],
+      "exact_4_62_page_html": false
+    },
+    {
+      "id": "L050",
+      "url_template": "/sites/index.php?c=store&a=home&e=3&ty=5&v=midlet",
+      "purpose": "Gift or theme store",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "native navigation only",
+      "image_ids": [
+        "chat11",
+        "animation-emot-pack-has-been-released-1",
+        "games-2009-1"
+      ],
+      "exact_4_62_page_html": false,
+      "evidence_note": "Theme links are visible; no theme catalog, preview or purchase body recovered. Keep navigation-only status."
+    },
+    {
+      "id": "L051",
+      "url_template": "/sites/index.php?c=store&v=midlet&a=home&e=3&ty=1&username=%s",
+      "purpose": "Gift or theme store",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "partial visible page",
+      "image_ids": [
+        "new-gifts-1",
+        "new-gifts-2",
+        "mafia-migbot-gift-1"
+      ],
+      "exact_4_62_page_html": false,
+      "evidence_note": "Gift list and gift detail with recipient input visible. Exact selected-recipient URL response remains unrecovered."
+    },
+    {
+      "id": "L052",
+      "url_template": "/sites/index.php?c=store&v=midlet&a=main&id=111",
+      "purpose": "Store home",
+      "client_contract": "Recovered original bytecode",
+      "historical_page_design": "partial visible page",
+      "image_ids": [
+        "animation-emot-pack-has-been-released-1",
+        "animation-emot-pack-has-been-released-2",
+        "mig33-emoticon-lovely-pack-1",
+        "default-emot-pack-has-been-released-3",
+        "default-emot-pack-has-been-released-4"
+      ],
+      "exact_4_62_page_html": false,
+      "evidence_note": "Store landing links, pack details and purchase confirmation/completion visible. These establish store-family presentation, not exact id=111 response HTML."
+    }
+  ],
+  "additional_image_catalogs": [
+    {
+      "id": "historical-formatting",
+      "path": "../../../docs/data/historical-formatting-sources.json",
+      "provenance": "Original community-author profile guides; separate from official-host catalog.json",
+      "images": 7
+    },
+    {
+      "id": "historical-products",
+      "path": "../../../docs/data/historical-product-catalog.json",
+      "provenance": "Contemporary community-author store/pack captures; separate from official-host catalog",
+      "images": 76,
+      "image_id_scheme": "Image filename stem; resolve asset.path",
+      "gallery": "../../docs/historical-catalogs.html"
+    },
+    {
+      "id": "historical-games",
+      "path": "../../../docs/data/games-history.json",
+      "provenance": "Contemporary community-author game/page captures; build unspecified",
+      "images": 17,
+      "image_id_scheme": "images[].id"
+    }
+  ],
+  "retained_image_counts": {
+    "official_host": 20,
+    "community_profiles": 7,
+    "community_products": 76,
+    "community_games": 17,
+    "total_distinct_paths_and_sha256": 120
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "date": "2026-10-29",
+  "scope": "Where ports and adapters benefit a complete planned capability refactor; research only",
+  "production_changed": false,
+  "position": "Extend the existing hexagonal design at meaningful business/technical boundaries. A complete coordinated refactor is feasible as one delivery, while dependency-ordered implementation and checks remain necessary inside that delivery.",
+  "already_present": [
+    "HTTP controllers consume service contracts and implement generated HTTP interface; HTTP/socket/CLI are different driving adapters.",
+    "Repository ports separate application calls from SQLite/sqlc; generated records and database/sql stay in adapters.",
+    "Context propagation, explicit logger/repository injection, command composition and generic bootstrap lifecycle already establish important boundaries."
+  ],
+  "concrete_gaps": [
+    {
+      "area": "Shared use case behind JSON and native",
+      "priority": "highest",
+      "evidence": "transcripts.go:94\u2013155 converts modern input into opcode500 and reads packet acknowledgment",
+      "target": "A typed chat command/result shared by native decoder and JSON controller; protocol serialization belongs to native compatibility adapter."
+    },
+    {
+      "area": "Historical pages",
+      "evidence": "page_routes.go and domain.PageRequest/PageResult mix method/URL/form and HTML/status into application contracts",
+      "target": "Compatibility adapter validates original selectors/forms and renders templ from typed use-case results; both direct HTTP and opcode922/923 call this adapter. Preserve authentication/error ordering and literal routes."
+    },
+    {
+      "area": "Module-owned dependencies",
+      "evidence": "Application currently consumes aggregate ports.Repositories",
+      "target": "Each capability owns only repository and collaborator contracts required by its use cases. The same SQLite Store may implement several; no database split is necessary."
+    },
+    {
+      "area": "Stateful delivery",
+      "evidence": "Account/session objects mix credential cache and delivery gates; packets occupy push/inflight structures",
+      "target": "An explicit realtime/session owner exposes typed session/admission/delivery operations; identity and contacts do not receive mutable maps or copied mutexes. Retain one ordering owner while protocol envelopes move outward."
+    },
+    {
+      "area": "Pure rules in storage adapter",
+      "evidence": "SaveMessage and CreditOperationWithNote combine pure validation with transaction-sensitive checks",
+      "target": "Extract reusable pure business policies into owning capabilities. Keep authoritative membership, balance, block and ownership decisions within the atomic persistence operation or explicit transaction-bound workflow to prevent TOCTOU bugs."
+    },
+    {
+      "area": "Provider integration seams",
+      "evidence": "nativeProviderMessage records local/mock requests; OTP is development-only",
+      "target": "Use outbound ports for actual delivery/verification/payment capabilities when their use cases need them, with honest recorded/no-send mock adapters. Do not rename mock request persistence as a successful external delivery."
+    },
+    {
+      "area": "Shared domain DTO bucket",
+      "evidence": "domain includes PageRequest/Result and API-shaped results, not only business concepts",
+      "target": "Place representation DTOs at adapters and business command/result/value types with their capability; retain a small explicit shared vocabulary where needed."
+    }
+  ],
+  "proposed_dependency_direction": [
+    "Generated HTTP routing -> controllers -> typed capability application ports/use cases",
+    "Native socket or HTTP tunnel -> native compatibility adapter -> same typed use cases",
+    "Historical HTTP pages or opcode922 -> legacy page adapter -> typed use cases -> legacy templ renderer",
+    "CLI -> administration use cases",
+    "Capabilities -> consumer-owned persistence/provider/realtime collaborator ports",
+    "SQLite/sqlc and mock/provider implementations -> implement those outbound contracts",
+    "cmd/internal/wiring -> concrete composition; bootstrap -> supplied lifecycle hooks only"
+  ],
+  "reasonable_ports": [
+    {
+      "port": "Chat application operations",
+      "example": "Send(ctx, authenticatedSessionOrActor, SendCommand) -> MessageReceipt/error",
+      "note": "Authentication/authorization remains enforced in application policy; a raw caller-supplied username is not trusted authority."
+    },
+    {
+      "port": "Atomic message persistence",
+      "example": "AcceptMessage(ctx, command) -> AcceptedMessage/error",
+      "note": "Keep message/audience/key and current durable authorization checks atomic."
+    },
+    {
+      "port": "Account registration persistence",
+      "example": "Register(ctx, challenge, credentials) -> Account/error",
+      "note": "Contract includes initial roster; no independent account and contact commits."
+    },
+    {
+      "port": "Gift purchase persistence",
+      "example": "PurchaseGift(ctx, command) -> Receipt/error",
+      "note": "Contract includes ledger, entitlement, gift note and durable message intent."
+    },
+    {
+      "port": "Realtime coordination",
+      "example": "ResolveSession / validate room participation / reserve-and-complete delivery as actual workflows require",
+      "note": "Do not expose mutable session maps, Packet channels, or naked locks to business modules; coordinate block/write ordering."
+    },
+    {
+      "port": "External provider capability",
+      "example": "Verification delivery or payment authorization only for currently supported use cases",
+      "note": "Mocks retain truthful pending/local behavior and do not imply providers are implemented."
+    }
+  ],
+  "avoid_abstraction": [
+    "A port interface for every helper, formatter, value object or static catalog lookup.",
+    "A custom logger interface when *slog.Logger already provides the needed concrete dependency.",
+    "A generic CRUD repository or UnitOfWork covering all features without a concrete workflow need.",
+    "Putting *sql.Tx or generated sqlc rows in domain/application ports.",
+    "Introducing an asynchronous event bus to replace synchronous atomic operations.",
+    "Separate session stores or locks per new capability merely to make package folders independent.",
+    "Treating every inbound port as requiring a Go interface; exported concrete methods are also valid application boundaries and interfaces should follow consumers."
+  ],
+  "one_delivery_plan_constraints": [
+    "Define target contracts, ownership and completion criteria before parallel file movement.",
+    "Move shared commands/results and pure policy first; wire complete capabilities behind stable adapters in dependency order.",
+    "Keep atomic persistence contracts and current lock ordering through the move; changing concurrency policy is not required for new package ownership.",
+    "Preserve existing endpoints, packet semantics, native error ordering, keyed-message canonical serialization and old database contents.",
+    "Run focused checks as boundaries move and full race/vet/native acceptance against one final graph.",
+    "Remove temporary facades or explicitly reduce them to representation/dispatch ownership by the delivery end; do not leave the old Application containing all business methods and call the folder move complete."
+  ],
+  "sources": [
+    {
+      "url": "https://alistair.cockburn.us/hexagonal-architecture",
+      "kind": "Original pattern author",
+      "supports": "Application behavior can be driven through several adapters and tested independently of UI/database; the conceptual inside/outside boundary matters more than a prescribed folder layout."
+    },
+    {
+      "url": "https://go.dev/wiki/CodeReviewComments#interfaces",
+      "kind": "Official Go review guidance",
+      "supports": "Interfaces generally belong with consumers; return concrete implementations and add contracts for demonstrated needs rather than speculative interfaces."
+    },
+    {
+      "url": "https://go.dev/blog/package-names",
+      "kind": "Official Go package-design guidance",
+      "supports": "Package purpose and exported APIs guide boundaries; directory hierarchy alone creates no semantic relationship."
+    },
+    {
+      "url": "https://docs.sqlc.dev/en/v1.31.1/howto/transactions.html",
+      "kind": "Official pinned-generator documentation",
+      "supports": "Generated queries can bind to the same transaction; package refactoring does not require independent commits or leaking SQL types into application code."
+    }
+  ],
+  "local_evidence": [
+    {
+      "path": "internal/controllers/controller.go",
+      "line": 15,
+      "finding": "HTTP controllers depend on application service ports; generated ServerInterface is implemented here.",
+      "sha256": "ab48497dbef14c58c9f95561e7c7952da0c142ebdbccdafa3d8d5310049ab270"
+    },
+    {
+      "path": "internal/ports/services.go",
+      "line": 22,
+      "finding": "NativeService exposes protocol.Packet, packet queues and transport write gates.",
+      "sha256": "7bb1901b2a9f8e7270c5d6693a4255dce46e1c99b2dbf289989a0deac46c6202"
+    },
+    {
+      "path": "internal/ports/chat_services.go",
+      "line": 10,
+      "finding": "Typed chat input/output port already exists, but it is implemented through native packets internally.",
+      "sha256": "47fc1d7af66aae190ad94d5e92604267a1451f87a46bda699d5eb877e4256f4e"
+    },
+    {
+      "path": "internal/services/transcripts.go",
+      "line": 94,
+      "finding": "SendChatMessage constructs opcode500, calls native messageWithFormatting, and interprets packet acknowledgment/error.",
+      "sha256": "c40a6ff254ce3e8b25bb3a940e78cd6a3c0dcd3c714d010228827d04675390fa"
+    },
+    {
+      "path": "internal/services/application.go",
+      "line": 28,
+      "finding": "Account embeds deliveryGate; session and Application own shared authentication/presence/room/queue state.",
+      "sha256": "5cfc40b4f5a81adaf5a3e098688af1abadad3fd832d26dc3cce23b3d9912b0b1"
+    },
+    {
+      "path": "internal/services/application.go",
+      "line": 407,
+      "finding": "messageWithFormatting mixes protocol decoding, validation, permissions, photo handling, slash commands, persistence and live delivery.",
+      "sha256": "5cfc40b4f5a81adaf5a3e098688af1abadad3fd832d26dc3cce23b3d9912b0b1"
+    },
+    {
+      "path": "internal/services/page_routes.go",
+      "line": 11,
+      "finding": "Page handlers take method/URL/form and return rendered pages inside services.",
+      "sha256": "638bf166d0bb58ed2a33b2c97661d13a4e3aba11a15b0ebd02bc1776eb1af082"
+    },
+    {
+      "path": "internal/domain/application.go",
+      "line": 47,
+      "finding": "PageRequest/PageResult encode HTTP-like request and document representation concerns in shared domain package.",
+      "sha256": "53d32f5f987507a6607f6af08641996011b589520ae75af21da3142b5bd7ca50"
+    },
+    {
+      "path": "internal/services/native_services.go",
+      "line": 72,
+      "finding": "Provider messages currently validate and record mock requests; no actual external send.",
+      "sha256": "660f8af075aed1055f7925e26d771594e3b22db9dbf1cd3c45998142480e8058"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/messages.go",
+      "line": 36,
+      "finding": "Atomic message save includes membership/blocks and other durable invariant checks, audience and idempotency.",
+      "sha256": "aea3775dc9a302845a3599d8d3b83cb4f1a13cc451aee82eea290b3fe6c05e28"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/commerce.go",
+      "line": 55,
+      "finding": "Gift operation preserves ledger/inventory/note/message intent in one transaction.",
+      "sha256": "2045e87c0035453a176a3c603a1e150fe4cbdbe8192aa7f1ee3c8600ee8a2762"
+    },
+    {
+      "path": "internal/adapters/sqlite/repositories/identity.go",
+      "line": 135,
+      "finding": "Registration creates account and initial roster atomically.",
+      "sha256": "1696364af641f474119372c4cc9888d39c67a77fdf6560858bf58c379f463922"
+    },
+    {
+      "path": "internal/services/presence.go",
+      "line": 14,
+      "finding": "Worker Run owns timed session/vote maintenance and joins it on shutdown.",
+      "sha256": "da74e2267097a29edcd33791debe39a0c9a8d174bfa2f477d0eb8a05b355ccae"
+    },
+    {
+      "path": "internal/ports/boundaries_test.go",
+      "line": 16,
+      "finding": "Existing guards exclude infrastructure imports from application but explicitly permit protocol in services; remaining compatibility coupling is intentional current scope.",
+      "sha256": "56e0da27d7f5cfacc3f2d9ed86451ca53341cc90c554b04ed01a1a8bc8ba8ca5"
+    }
+  ]
+}

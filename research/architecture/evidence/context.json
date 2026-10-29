@@ -1,0 +1,324 @@
+{
+  "subject": "Idiomatic Go context ownership and propagation for mig33 reconstruction",
+  "researched_at": "2026-10-29",
+  "repository": "/Users/maix/apps/go/mig33",
+  "module_go_version": "1.25.0",
+  "scope": "Read-only research; no repository/application edits",
+  "sources": [
+    {
+      "id": "context",
+      "title": "context package documentation",
+      "url": "https://pkg.go.dev/context",
+      "authority": "Go standard library",
+      "facts": [
+        "Pass a non-nil Context explicitly as the first parameter; propagate it across calls. Values are for request metadata, not optional arguments.",
+        "Call each returned cancel function. Cancellation signals work to stop but does not wait for it. Context is safe for concurrent use.",
+        "WithoutCancel removes cancellation and deadlines; AfterFunc's stop function does not join a running callback."
+      ]
+    },
+    {
+      "id": "structs",
+      "title": "Contexts and structs",
+      "url": "https://go.dev/blog/context-and-structs",
+      "authority": "Official Go blog; Jean Barkhuysen and Matt T. Proud",
+      "facts": [
+        "Prefer per-operation contexts over a context stored in a reusable worker or service. Stored contexts obscure lifetimes and mix otherwise independent callers.",
+        "The article acknowledges exceptional compatibility cases, rather than establishing that constructors may never accept context."
+      ]
+    },
+    {
+      "id": "database-cancel",
+      "title": "Canceling in-progress operations",
+      "url": "https://go.dev/doc/database/cancel-operations",
+      "authority": "Official Go documentation",
+      "facts": [
+        "Pass caller context through to QueryContext, optionally deriving a shorter timeout. HTTP cancellation can then cancel database work.",
+        "Always call the derived context's cancel function to release resources."
+      ]
+    },
+    {
+      "id": "http",
+      "title": "net/http Request.Context, Server.BaseContext and Server.Shutdown",
+      "url": "https://pkg.go.dev/net/http",
+      "authority": "Go standard library",
+      "facts": [
+        "Incoming request context ends on connection closure, HTTP/2 cancellation, or handler return. BaseContext supplies the request ancestor; its default is Background.",
+        "Shutdown stops listeners, closes idle connections, and waits for active requests. Serve returns before Shutdown completes, so the process must join shutdown.",
+        "Shutdown ignores hijacked connections; RegisterOnShutdown initiates their teardown without waiting. WriteTimeout bounds response writes."
+      ]
+    },
+    {
+      "id": "errgroup",
+      "title": "golang.org/x/sync/errgroup",
+      "url": "https://pkg.go.dev/golang.org/x/sync/errgroup",
+      "authority": "Go subrepository maintainers",
+      "facts": [
+        "WithContext cancels its derived context on the first non-nil task error or when Wait returns. Wait joins all tasks and returns the first non-nil error.",
+        "SetLimit bounds active goroutines; Go can block waiting for capacity. A Group is for one overall task, not reuse across independent tasks."
+      ]
+    },
+    {
+      "id": "net",
+      "title": "net.Conn and Dialer.DialContext",
+      "url": "https://pkg.go.dev/net#Conn",
+      "authority": "Go standard library",
+      "facts": [
+        "Closing a connection unblocks pending reads and writes. Deadlines affect pending and future network I/O; refresh them for idle timeouts.",
+        "A successful DialContext connection does not inherit ongoing cancellation from the dialing context. Connection lifetime needs separate ownership."
+      ]
+    },
+    {
+      "id": "sql",
+      "title": "database/sql DB.BeginTx",
+      "url": "https://pkg.go.dev/database/sql#DB.BeginTx",
+      "authority": "Go standard library",
+      "facts": [
+        "BeginTx uses its context until commit or rollback. Cancellation causes rollback, and Commit returns an error if that transaction context is canceled.",
+        "Non-context database methods cannot carry the caller's operation context; use context-aware transaction/query methods through adapters."
+      ]
+    },
+    {
+      "id": "pipelines",
+      "title": "Go Concurrency Patterns: Pipelines and cancellation",
+      "url": "https://go.dev/blog/pipelines",
+      "authority": "Official Go blog; Sameer Ajmani",
+      "facts": [
+        "Goroutines must exit explicitly; blocked channel sends can retain memory indefinitely. Designs need cancellation paths when downstream consumers stop."
+      ]
+    }
+  ],
+  "code_observations": [
+    {
+      "finding": "Modern HTTP controllers already pass request context to service methods.",
+      "evidence": [
+        "internal/controllers/chat.go:47",
+        "internal/controllers/chat.go:124"
+      ],
+      "assessment": "Keep this boundary; propagate further instead of replacing request context."
+    },
+    {
+      "finding": "Repository interfaces do not accept context; SQLite adapter inserts Background at generated-query calls.",
+      "evidence": [
+        "internal/ports/repositories.go:7",
+        "internal/adapters/sqlite/repositories/messages.go:102"
+      ],
+      "measurement": {
+        "background_calls": 242,
+        "production_repository_files": 20
+      },
+      "assessment": "Request cancellation currently cannot reach SQL even though sqlc methods support context."
+    },
+    {
+      "finding": "Service methods usually check ctx.Err only before taking the global application mutex.",
+      "evidence": [
+        "internal/services/transcripts.go:31",
+        "internal/services/transcripts.go:94"
+      ],
+      "assessment": "A caller canceled while waiting for the mutex can still execute storage/mutations afterward. Rechecking after lock helps avoid new canceled work, but does not make mutex waits interruptible."
+    },
+    {
+      "finding": "Native application dispatch has no context parameter.",
+      "evidence": [
+        "internal/services/application.go:149",
+        "internal/adapters/socket/server.go:81"
+      ],
+      "assessment": "Transport cancellation interrupts socket I/O, not an in-flight Handle or repository call."
+    },
+    {
+      "finding": "Socket server correctly closes connections on cancellation and waits for connection workers; reader work is signaled by done and connection close.",
+      "evidence": [
+        "internal/adapters/socket/server.go:20",
+        "internal/adapters/socket/server.go:42"
+      ],
+      "assessment": "Preserve this ownership. If adding operation contexts, derive connection children canceled on disconnect and bounded per-packet children without making one packet timeout cancel unrelated connections."
+    },
+    {
+      "finding": "Application construction performs identity/contact I/O and starts the session sweep timer.",
+      "evidence": [
+        "internal/services/application.go:98",
+        "internal/services/application.go:107",
+        "internal/services/presence.go:10"
+      ],
+      "assessment": "This constructor is not pure assignment. Initialization context is legitimate if scoped to initialization; maintenance lifetime should be explicit. Existing closed flag prevents the sweep from touching storage after Close."
+    },
+    {
+      "finding": "Migration and message transactions start with db.Begin, not BeginTx.",
+      "evidence": [
+        "internal/adapters/sqlite/migrations/migrate.go:14",
+        "internal/adapters/sqlite/repositories/messages.go:81"
+      ],
+      "assessment": "Changing signatures without changing transaction creation would leave important work uncancelable."
+    },
+    {
+      "finding": "Message save atomically persists message, audience, and request key; delivery acknowledgement follows successful transport write.",
+      "evidence": [
+        "internal/adapters/sqlite/repositories/messages.go:22",
+        "internal/adapters/sqlite/repositories/messages.go:139",
+        "internal/services/delivery.go:231"
+      ],
+      "assessment": "Preserve committed delivery obligations across request/connection cancellation. Replay after successful write but before marking is already explicitly allowed."
+    },
+    {
+      "finding": "Current HTTP construction has no custom BaseContext, while runtime cancels its running context before Shutdown and uses a fresh Background-derived shutdown deadline.",
+      "evidence": [
+        "internal/bootstrap/app.go:48",
+        "internal/bootstrap/runtime.go:113"
+      ],
+      "assessment": "Fresh shutdown context is correct. Simply wiring the running context into BaseContext would change drain behavior by immediately canceling active handlers."
+    },
+    {
+      "finding": "Controller generic error mapping treats raw context errors as Service unavailable; service storage error conversions also drop original causes.",
+      "evidence": [
+        "internal/controllers/controller.go:33",
+        "internal/services/transcripts.go:48"
+      ],
+      "assessment": "Future propagation should retain errors.Is behavior and define cancellation/deadline handling at adapters. Avoid inventing an HTTP 499 contract automatically."
+    }
+  ],
+  "recommendations": [
+    {
+      "topic": "Operation API convention",
+      "classification": "source-backed guidance",
+      "sources": [
+        "context",
+        "structs"
+      ],
+      "proposal": "Use Method(ctx context.Context, explicit business arguments) for work that can block or performs I/O. Keep configuration, repositories, loggers and optional arguments in constructor parameters/fields, not context.Values. Pure formatting and validation helpers need no ctx parameter."
+    },
+    {
+      "topic": "Construction versus lifetime",
+      "classification": "application recommendation",
+      "sources": [
+        "structs"
+      ],
+      "proposal": "Pure New constructors accept dependencies without context. Open/Ping/Migrate/warm-up may accept a bounded startup context for initialization I/O, but do not retain that ctx on the shared service. A maintenance worker accepts its own Run(ctx) lifetime; a startup deadline must not later terminate healthy runtime work."
+    },
+    {
+      "topic": "Repository propagation",
+      "classification": "application recommendation",
+      "sources": [
+        "database-cancel",
+        "sql"
+      ],
+      "proposal": "Add ctx first to repository ports and methods that do I/O, and pass the same/derived ctx to sqlc queries and BeginTx. Adopt one vertical feature slice at a time, updating native/internal callers with their correct owner context rather than mechanically supplying Background everywhere."
+    },
+    {
+      "topic": "Locking",
+      "classification": "local code inference",
+      "sources": [],
+      "proposal": "At minimum, recheck cancellation after acquiring the application lock and before new I/O. Longer term, shorten global lock hold times without breaking session/room authorization and response/delivery ordering. Do not put mutex.Lock in an abandoned goroutine to pretend it is cancelable."
+    },
+    {
+      "topic": "HTTP lifetime",
+      "classification": "application inference from HTTP semantics",
+      "sources": [
+        "http"
+      ],
+      "proposal": "Separate stop-accepting/drain intent from force-canceling active handler work. If BaseContext is set, own that ancestor independently of the immediately canceled signal context. Await Shutdown before closing shared storage; after its deadline, cancel active work/Close according to the adapter contract. Network read/write timeouts are not a replacement for per-operation database deadlines."
+    },
+    {
+      "topic": "Native connection and operation lifetimes",
+      "classification": "application recommendation",
+      "sources": [
+        "net",
+        "context"
+      ],
+      "proposal": "Keep one server lifetime, a child for each connection, and a bounded child for each admitted packet/application operation where appropriate. Close/deadline changes interrupt network I/O; propagating ctx into Handle and repositories interrupts cooperative application work. A delivery attempt belongs to its connection/worker, while its durable obligation belongs to stored state."
+    },
+    {
+      "topic": "Durable chat handoff",
+      "classification": "application inference from existing outbox design",
+      "sources": [
+        "sql"
+      ],
+      "proposal": "Before commit, request context may cancel the message transaction; existing idempotency keys handle retry after an uncertain response. Once message/audience/outbox commit succeeds, delivery must not inherit the originating HTTP request ctx, since handler return cancels it. Use an application-owned worker/connection context and bounded attempt context. Cancellation must not mark an unwritten packet delivered or erase the stored pending message. No queue service is required merely to make this handoff explicit."
+    },
+    {
+      "topic": "WithoutCancel",
+      "classification": "application recommendation",
+      "sources": [
+        "context"
+      ],
+      "proposal": "WithoutCancel is a targeted tool, not a durable-job mechanism. It removes the deadline and cancellation and can retain request-scoped values. If used for short cleanup, attach a fresh timeout and owner; durable work should carry explicit stored inputs and run under worker ownership."
+    },
+    {
+      "topic": "Goroutine supervision",
+      "classification": "application recommendation",
+      "sources": [
+        "errgroup",
+        "pipelines"
+      ],
+      "proposal": "Use errgroup for related concurrent operations and join them. Do not reuse its derived ctx after Wait or derive shutdown from that canceled ctx. It does not provide readiness, startup rollback, durable-job storage, or complete graceful-shutdown policy. A task returning nil does not trigger error-based peer cancellation. Cancellation is cooperative; every blocking loop/channel/I/O needs an exit mechanism."
+    },
+    {
+      "topic": "Error behavior",
+      "classification": "application recommendation",
+      "sources": [
+        "context"
+      ],
+      "proposal": "Preserve context.Canceled/DeadlineExceeded through wrapping and distinguish expected client departure from server failure at adapters. Decide endpoint-specific timeout status rather than treating all cancellation as storage outage or adding a nonstandard response code implicitly."
+    }
+  ],
+  "context_ownership": [
+    {
+      "scope": "startup",
+      "owner": "entrypoint/composition",
+      "parent": "process context with bounded initialization deadline",
+      "ends": "construction succeeds/fails; never stored for subsequent requests"
+    },
+    {
+      "scope": "HTTP operation",
+      "owner": "net/http and request handler",
+      "parent": "r.Context(), optional shorter child deadline",
+      "ends": "request completes or caller cancels"
+    },
+    {
+      "scope": "native connection",
+      "owner": "socket adapter",
+      "parent": "server lifetime; separate cancellation on connection termination",
+      "ends": "disconnect, protocol close, or server force stop"
+    },
+    {
+      "scope": "native operation",
+      "owner": "packet dispatcher",
+      "parent": "connection context with optional command deadline",
+      "ends": "packet operation completes; durable committed work survives separately"
+    },
+    {
+      "scope": "delivery/maintenance worker",
+      "owner": "application lifecycle",
+      "parent": "worker run context",
+      "ends": "worker stop; persisted pending work remains for restart"
+    },
+    {
+      "scope": "delivery attempt",
+      "owner": "worker or connection",
+      "parent": "bounded child of worker/connection context",
+      "ends": "one attempt, retry governed by persisted state"
+    },
+    {
+      "scope": "shutdown",
+      "owner": "entrypoint/lifecycle supervisor",
+      "parent": "fresh independent bounded context",
+      "ends": "drain completes or shutdown deadline expires"
+    }
+  ],
+  "suggested_tests": [
+    "Verify the service-to-repository fake receives the operation context and observes cancellation/deadline.",
+    "Cancel a request while it waits for the application lock; verify no new mutation starts after cancellation once the lock is acquired.",
+    "Block acquisition of SQLite's single connection and cancel the repository context; verify prompt termination and no transaction writes.",
+    "Cancel message saving before commit and assert no partial message/audience/request-key transaction; retry with the same key.",
+    "Commit a message, cancel its originating request, reconnect the recipient, and verify pending delivery survives without duplicate persisted messages.",
+    "Fail/cancel a transport write and verify no delivered mark; successful write followed by failed bookkeeping remains replayable per existing protocol contract.",
+    "Begin a slow HTTP handler, initiate shutdown, verify it can drain before the deadline; on deadline verify forced stop and no storage closure before worker exit.",
+    "Cancel socket lifecycle during blocked reads/writes and packet work; assert connection workers terminate and gates release without disturbing other sessions.",
+    "Use startup timeout during blocked migration/warm-up and verify cleanup; ensure successful runtime work is not tied to the expired startup context.",
+    "Exercise errgroup failure plus cleanup using a fresh shutdown context, rather than the already canceled group context."
+  ],
+  "limits": [
+    "Static inspection only; no new cancellation behavior implemented or runtime cancellation benchmarks performed.",
+    "Documentation pages may show newer Go versions, but the described context APIs are available in module Go 1.25.",
+    "Driver-specific interruption latency and SQLite busy-timeout behavior need dedicated verification before promising strict cancellation timing."
+  ],
+  "retention_note": "Original research observations before the user selected Go 1.27.3. Earlier Go 1.25 baseline and compatibility constraints are superseded by go-backend-architecture.md and go-toolchain.json. Architecture implementation remains paused."
+}

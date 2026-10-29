@@ -1,0 +1,239 @@
+{
+  "profile": "MicroEmulator 2.0.4, 240x320 Canvas, default font profile",
+  "original_jar_sha256": "2b416199dca5f6593eefe8fa1c9b84ec4be6cdc36f68bcf17e1a94193bfd2934",
+  "microemulator_sha256": "dbd5f3eb8365d3e839d6a203149e0e3776fc1a0585e16ac1fc23f76c9fcae1c6",
+  "native_softkeys_included": false,
+  "network": "Connector shim throws for every protocol; one test refusal, no application network attempts",
+  "images": [
+    {
+      "file": "01-about.png",
+      "description": "About mig33; state 1; static",
+      "sha256": "40a19ffd5811c66b941f5b9e0c3796735d70de2b48613af92cc2c3f35a21868f"
+    },
+    {
+      "file": "03-contact-type.png",
+      "description": "Add Contact; state 3; static",
+      "sha256": "d0f1763bb10ac8e4059df98bbba7a97575e95a5d8d9d91d18a678dfb3804cfb1"
+    },
+    {
+      "file": "03-contact-type-end.png",
+      "description": "Add Contact; last reachable focus/scroll position; static",
+      "sha256": "97d69a8f8cf3e7a8136badfb23ef5185b3f7e2ae939d2449e77b8b3eab38a05d"
+    },
+    {
+      "file": "04-add-mig33-contact.png",
+      "description": "Add mig33 contact; state 4; blank fields",
+      "sha256": "de06c338e5e05664447f8f0629bf525ce9c90539e7ff50769aaa1976b98cd531"
+    },
+    {
+      "file": "08-contact-request-fixture.png",
+      "description": "Contact Request; state 8; SYNTHETIC requester",
+      "sha256": "1a0c52ed933e057488f48a3b3f1d9796de7a115ff745bb0f731b0410edb83815"
+    },
+    {
+      "file": "08-contact-request-fixture-end.png",
+      "description": "Contact Request; last reachable focus/scroll position; SYNTHETIC requester",
+      "sha256": "ffd8c427c3629487ddadc9579f0b932b6c86e58c4d4bea1401dd174d53a47b71"
+    },
+    {
+      "file": "09-contact-details.png",
+      "description": "Contact Details; state 9; blank fields",
+      "sha256": "4ffc34309054124ecf7ac491c01dc4b537feb249a5502c017ced1e2b62eb5a86"
+    },
+    {
+      "file": "09-contact-details-end.png",
+      "description": "Contact Details; last reachable focus/scroll position; blank fields",
+      "sha256": "4d25d2cdcba7f92f6c631b767b7058f5f79c1ac4087c854382dd45ee9d7d99b2"
+    },
+    {
+      "file": "11-create-room.png",
+      "description": "Create Room; state 11; blank fields",
+      "sha256": "ec6b19405aade5ce7763caf8e9c5f689d19068266721cada410acd5979970752"
+    },
+    {
+      "file": "13-manual-connection.png",
+      "description": "Connection Type; state 13; original endpoint defaults",
+      "sha256": "20efbb67e6141e9cac4d2d6882a2db800a319dd99bd72bf4fcf8d116c2b12ffe"
+    },
+    {
+      "file": "14-forgot-details-fixture.png",
+      "description": "Forgot Details; state 14; SYNTHETIC mobile number",
+      "sha256": "96331e89d4096f7efd55442170b6b0c9ef1ca64e02ece35ca11c4cb5e0a50748"
+    },
+    {
+      "file": "15-login.png",
+      "description": "Login; state 15; empty RMS defaults; Username focus",
+      "sha256": "8d1a1c7c0185691b73d533930dffdc240e62663208a18b45fa6d49d41922b794"
+    },
+    {
+      "file": "15-login-end.png",
+      "description": "Login; last reachable focus/scroll position; empty RMS defaults; Username focus",
+      "sha256": "d3a34bd2982f6e043c18f7597581ea6ce03e26b95a2c1ac02d33811f7bf5316a"
+    },
+    {
+      "file": "17-make-call.png",
+      "description": "Make Call; state 17; call-through capability absent",
+      "sha256": "4fef9f966ccc98ddabf2116169ca38a5a22f6ea9513cad929d5048e3a8df4d69"
+    },
+    {
+      "file": "17-make-call-through.png",
+      "description": "Make Call; state 17; capability flag forced on",
+      "sha256": "19bec70394a216f970db5b74bb7af18633f97da02be6ce042581ef4a7fa3e6e7"
+    },
+    {
+      "file": "17-make-call-through-end.png",
+      "description": "Make Call; last reachable focus/scroll position; capability flag forced on",
+      "sha256": "c6a35045f3f28ca1c67d977d43f10c9095ab30b340f552200640c66b9f750761"
+    },
+    {
+      "file": "22-msn-setup.png",
+      "description": "MSN Setup; state 22; blank fields",
+      "sha256": "0413065c9d891dba2a2e452c601058e24d2aae7af0b294e89d38e74d3c1f31c7"
+    },
+    {
+      "file": "22-yahoo-setup.png",
+      "description": "Yahoo! Setup; state 22; blank fields",
+      "sha256": "7fd2099a1d792ac339ad602c05e3a96e7a18e0b34632802833a884e559e6aa68"
+    },
+    {
+      "file": "22-googletalk-setup.png",
+      "description": "Google Talk Setup; state 22; blank fields",
+      "sha256": "8fff12e38b4eda40bf3fb24257be00614ed2ce13b23da3edfdfec3d9c52aad7a"
+    },
+    {
+      "file": "22-aim-setup.png",
+      "description": "AIM Setup; state 22; blank fields",
+      "sha256": "1f5fb67df50fb31f1e839e77e4573459b2b2407a2171cb08c807775ea537727b"
+    },
+    {
+      "file": "23-invite-friend.png",
+      "description": "Invite Friend; state 23; blank fields",
+      "sha256": "fbcacc8ff46e54c4db7a155458d4b950226fd54404fca9612700153dc079607b"
+    },
+    {
+      "file": "34-search-room.png",
+      "description": "Search Room; state 34; blank fields",
+      "sha256": "13883e75ddb0bf88be37ee9e20e98ce426156398acdd21dbfb2182f126e7902e"
+    },
+    {
+      "file": "40-resend-code-fixture.png",
+      "description": "Resend Code; state 40; SYNTHETIC mobile number",
+      "sha256": "648b74874cae4f9efd72ac9a56a092e35646ebae4dcf12da850ac2f18905757b"
+    },
+    {
+      "file": "41-authenticate.png",
+      "description": "Authenticate Account; state 41; static",
+      "sha256": "a95ac83fde060fa122930b41ada1a15489ca7eb850739a55a4a7ad6465cc803f"
+    },
+    {
+      "file": "42-connection-type.png",
+      "description": "Connection Type; state 42; static",
+      "sha256": "3992be7cfdb3a77a5991b1ff3428499c085f9d80511d4a0d18fa836529069a76"
+    },
+    {
+      "file": "43-welcome-tcp.png",
+      "description": "Welcome to mig33; state 43; successful TCP state forced; no live connection",
+      "sha256": "a29d6f2e3e31fabf3893e84b2e02ea1051c10a1e7ff9cc1157e0fd01ab5b3447"
+    },
+    {
+      "file": "49-first-run.png",
+      "description": "mig33; state 49; static",
+      "sha256": "a49e75c28545c008cf71fed22b3cd0831470881c490a341f3b75ef5f367ea1ee"
+    },
+    {
+      "file": "30-registration-fixture.png",
+      "description": "Registration; state 30; SYNTHETIC CAPTCHA and mobile number",
+      "sha256": "11e2c89cf7368ee6be4308109927d8fa2a623cb65f062d97d2cdad951b641a3f"
+    },
+    {
+      "file": "30-registration-fixture-end.png",
+      "description": "Registration; last reachable focus/scroll position; SYNTHETIC CAPTCHA and mobile number",
+      "sha256": "ef7f8acf5615271d89f8f6860258737c2f6f644d7f78887f442c3894cdc08d1b"
+    },
+    {
+      "file": "10-contacts-empty.png",
+      "description": "Empty contacts state; offline original constructor",
+      "sha256": "893802f7bb33a85cc2befeda9c582651a86969942117dddbe545c679490c6c8e"
+    },
+    {
+      "file": "menu-contact.png",
+      "description": "Original constructor menu; top selection",
+      "sha256": "31873c68371a80d9298ccffeddfeb1aefc4d501c3c3e3388ed6bb82c841ba484"
+    },
+    {
+      "file": "menu-contact-end.png",
+      "description": "Original constructor menu; near bottom selection",
+      "sha256": "6c3acd373ce9789ada77ccf6990d38deda3018849e834848ce6669915e5a2485"
+    },
+    {
+      "file": "menu-group.png",
+      "description": "Original constructor menu; top selection",
+      "sha256": "b9011f39bb2878fe182307d909d2d7cff7fe5d2bdfdc43992bb7cf240e72eafa"
+    },
+    {
+      "file": "menu-group-end.png",
+      "description": "Original constructor menu; near bottom selection",
+      "sha256": "0f2cf6b05d06d221ce931c633822892b7457d554925e364bc35a6f3c26ff82d7"
+    },
+    {
+      "file": "menu-settings.png",
+      "description": "Original constructor menu; top selection",
+      "sha256": "6a499fc6ed5b3faca823940e905dcc93337fc2fd374e97037783aedf40de82ff"
+    },
+    {
+      "file": "menu-settings-end.png",
+      "description": "Original constructor menu; near bottom selection",
+      "sha256": "ecca3ab051834cc38f840fae0ebd84528918f83d48514afdf5bf157fa9310d39"
+    },
+    {
+      "file": "menu-chatrooms.png",
+      "description": "Original constructor menu; top selection",
+      "sha256": "029ffe7ae808154b6cbd63a965191a979f62ead93b696ce3f81fa4de6f45a742"
+    },
+    {
+      "file": "menu-chatrooms-end.png",
+      "description": "Original constructor menu; near bottom selection",
+      "sha256": "364224b66dad3a9291c17f182c843a667b46ed96eeee3e2f2c4fca258f75bd0e"
+    },
+    {
+      "file": "menu-mail.png",
+      "description": "Original constructor menu; top selection",
+      "sha256": "f83f250cf117266d88ab46d4f620637175607609e01f3ef914a6afb925db5172"
+    },
+    {
+      "file": "menu-mail-end.png",
+      "description": "Original constructor menu; near bottom selection",
+      "sha256": "6db1700abd142e351ff98351752fac7b3698d3eb3577877ad2734bd87497e1b8"
+    },
+    {
+      "file": "menu-other-ims.png",
+      "description": "Original offline menu factory",
+      "sha256": "90325a7995f00e6f959ae235cd46a2cc46b03ea7a65dd177409d6326322f13fb"
+    },
+    {
+      "file": "menu-camera-resolutions.png",
+      "description": "Original offline menu factory",
+      "sha256": "4f3d8a6d70655c56628ba1883ac0aadd15ec09762d92f1aa6d864f24c9fe031f"
+    },
+    {
+      "file": "menu-chatroom-list-fixture.png",
+      "description": "Original offline menu factory",
+      "sha256": "3dc0383c8c2628454be38246337e59cf1955c5d3bfb5d887f051e81f9975c1a1"
+    },
+    {
+      "file": "menu-msn-account.png",
+      "description": "Original IM account menu factory, no saved account",
+      "sha256": "24583f7e6037f17377a5cf4366d3134a6712a58ecf4a7ee6820524fbd1b730ad"
+    },
+    {
+      "file": "10-contacts-fixture.png",
+      "description": "SYNTHETIC group and contacts; original roster renderer",
+      "sha256": "b9653b22a436cb562be7d1804bb026774e1eef94f08a0da1902a3f045702fb8a"
+    },
+    {
+      "file": "06-chat-fixture.png",
+      "description": "SYNTHETIC private chat messages; original tab/chat renderer",
+      "sha256": "d50515c5e092e6b092e3a7f4d08f6d9278dc6ae76ceb146c71dd688ed1e7d2e1"
+    }
+  ]
+}

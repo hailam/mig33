@@ -1,0 +1,295 @@
+{
+  "status": "passed",
+  "recorded_at_utc": "2026-10-29T08:13:15.062680+00:00",
+  "module": "github.com/hailam/mig33",
+  "relocation": {
+    "mapped_files": 25454,
+    "protected_files_verified": 25174,
+    "missing": [],
+    "changed_protected_files": [],
+    "map": "research/relocation-map.json",
+    "local_full_manifest": "research/relocation-manifest.json.gz",
+    "temporary_aliases_removed": true
+  },
+  "gitignore": {
+    "passed": true,
+    "cases": [
+      {
+        "path": "research/applets/v4/artifacts/original/mig33-4.62.jar",
+        "ignored": true,
+        "rule": ".gitignore:16:/research/applets/*/artifacts/**"
+      },
+      {
+        "path": "research/applets/v3/artifacts/decompiled/a.java",
+        "ignored": true,
+        "rule": ".gitignore:16:/research/applets/*/artifacts/**"
+      },
+      {
+        "path": "research/applets/v4/artifacts/screenshots/240x320/index.html",
+        "ignored": true,
+        "rule": ".gitignore:16:/research/applets/*/artifacts/**"
+      },
+      {
+        "path": "research/applets/v4/artifacts/historical-pages/catalog.json",
+        "ignored": false,
+        "rule": ".gitignore:18:!/research/applets/*/artifacts/**/*.json"
+      },
+      {
+        "path": "research/applets/v4/artifacts/screenshots/240x320/manifest.json",
+        "ignored": false,
+        "rule": ".gitignore:18:!/research/applets/*/artifacts/**/*.json"
+      },
+      {
+        "path": "research/applets/v4/discovery/official-keypad.jar",
+        "ignored": true,
+        "rule": ".gitignore:20:/research/applets/*/discovery/**"
+      },
+      {
+        "path": "research/applets/v4/discovery/provenance.json",
+        "ignored": false,
+        "rule": ".gitignore:22:!/research/applets/*/discovery/**/*.json"
+      },
+      {
+        "path": "research/applets/v4/docs/protocol.md",
+        "ignored": false,
+        "rule": ""
+      },
+      {
+        "path": "research/applets/v4/docs/data/protocol-outgoing.json",
+        "ignored": false,
+        "rule": ""
+      },
+      {
+        "path": "research/acceptance/v4/runs/hexagonal-out/evidence-summary.json",
+        "ignored": true,
+        "rule": ".gitignore:26:/research/acceptance/*/runs/"
+      },
+      {
+        "path": "research/acceptance/v4/README.md",
+        "ignored": false,
+        "rule": ""
+      },
+      {
+        "path": "research/architecture/evidence/capability-before-source.tar.gz",
+        "ignored": true,
+        "rule": ".gitignore:27:/research/architecture/evidence/*.tar.gz"
+      },
+      {
+        "path": "research/architecture/evidence/capability-race-final.log",
+        "ignored": true,
+        "rule": ".gitignore:29:/research/architecture/evidence/*.log"
+      },
+      {
+        "path": "research/architecture/evidence/go-capability-implementation.json",
+        "ignored": false,
+        "rule": ""
+      },
+      {
+        "path": "research/relocation-map.json",
+        "ignored": false,
+        "rule": ""
+      },
+      {
+        "path": "research/relocation-manifest.json.gz",
+        "ignored": true,
+        "rule": ".gitignore:30:/research/relocation-manifest.json.gz"
+      },
+      {
+        "path": "data/chat.sqlite",
+        "ignored": true,
+        "rule": ".gitignore:3:/data/"
+      },
+      {
+        "path": "data/applets/build/integration/classes/V4Integration.class",
+        "ignored": true,
+        "rule": ".gitignore:3:/data/"
+      },
+      {
+        "path": "bin/omni",
+        "ignored": true,
+        "rule": ".gitignore:2:/bin/"
+      },
+      {
+        "path": "tools/applets/bin/microemulator-2.0.4.jar",
+        "ignored": true,
+        "rule": ".gitignore:11:*.jar"
+      },
+      {
+        "path": "tools/applets/bin/manifest.json",
+        "ignored": false,
+        "rule": ""
+      },
+      {
+        "path": "tools/applets/v4/integration/V4Integration.java",
+        "ignored": false,
+        "rule": ""
+      },
+      {
+        "path": "internal/pages/routes.json",
+        "ignored": false,
+        "rule": ""
+      }
+    ],
+    "actual_repository_eligible_file_count": 611,
+    "actual_repository_raw_artifacts_eligible": [],
+    "actual_repository_tracked_file_count": 0
+  },
+  "go": {
+    "toolchain": "go version go1.27.3 darwin/arm64",
+    "module_checks": [
+      {
+        "name": "race",
+        "argv": [
+          "go",
+          "test",
+          "-race",
+          "-timeout",
+          "120s",
+          "./..."
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 25.087,
+        "log": "data/organization-validation/module-race.log"
+      },
+      {
+        "name": "vet",
+        "argv": [
+          "go",
+          "vet",
+          "./..."
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.398,
+        "log": "data/organization-validation/module-vet.log"
+      },
+      {
+        "name": "build",
+        "argv": [
+          "go",
+          "build",
+          "-o",
+          "/var/folders/99/dvq39r1d3_34sf_7dqmvfy0c0000gn/T/mig33-module-validation-en1xsxjx/bin/",
+          "./cmd/http",
+          "./cmd/socket",
+          "./cmd/omni",
+          "./cmd/cli"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 1.413,
+        "log": "data/organization-validation/module-build.log"
+      }
+    ],
+    "clean_source_checks": [
+      {
+        "name": "race",
+        "argv": [
+          "go",
+          "test",
+          "-race",
+          "-timeout",
+          "120s",
+          "./..."
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 32.219,
+        "log": "data/organization-validation/clean-source-race.log"
+      },
+      {
+        "name": "vet",
+        "argv": [
+          "go",
+          "vet",
+          "./..."
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.911,
+        "log": "data/organization-validation/clean-source-vet.log"
+      }
+    ],
+    "clean_source_copied_files": 368,
+    "clean_source_excluded_roots": [
+      "research",
+      "artifacts",
+      "tools",
+      "data",
+      "bin"
+    ],
+    "clean_source_jar_files": 0,
+    "clean_source_files_unchanged": true,
+    "language_asset_golden": {
+      "original_jar_sha256": "dbf12ffbd44bc6e48d09cf35863736731c87c078877f76ed4b780a4dc5eff92c",
+      "entry": "en-US",
+      "entry_bytes": 10411,
+      "entry_sha256": "0cf60b4706679bdaa92bf48d8063a819dfd4387d03351d788f39f976422057f9",
+      "embedded_asset_equal": true,
+      "test_preserves_fixture_asset_comparison": true,
+      "test_preserves_opcode_1004_check": true
+    }
+  },
+  "applet_tooling": {
+    "shell_syntax_files": 21,
+    "python_syntax_files": 2,
+    "integration_desktop_java_files": 25,
+    "capture_java_files": 4,
+    "rms_test": "PASS nested RMS opens, final closure, unbalanced close, and reopen persistence",
+    "temporary_build": "/var/folders/99/dvq39r1d3_34sf_7dqmvfy0c0000gn/T/mig33-relocation-compile-h5tkspo_",
+    "live_classes_untouched": true,
+    "publisher_jar_and_archived_evidence_untouched": true,
+    "publisher_jar_sha256": "dbf12ffbd44bc6e48d09cf35863736731c87c078877f76ed4b780a4dc5eff92c",
+    "emulator_sha256": "dbd5f3eb8365d3e839d6a203149e0e3776fc1a0585e16ac1fc23f76c9fcae1c6",
+    "native_pair": {
+      "evidence": "/Users/maix/apps/go/mig33/data/applets/validation/relocation-pair",
+      "passed": true,
+      "source_unchanged": true,
+      "binary_sha256": "dc20c5282622830c6bdcc288375a54417c7bbae7261489b47f9c2e33877d0fa3",
+      "source_manifest_sha256": "7045a0d6830cc30c1952429bc5cc8dff2d19eaa54f3da926ac6317611f5f8ef5",
+      "totals": {
+        "frames": 98,
+        "screenshots": 7,
+        "clients": 2
+      },
+      "database_integrity": "ok",
+      "foreign_key_violations": 0,
+      "copied_suite_scripts": 17,
+      "recorded_corrections": 3,
+      "temporary_harness": "/var/folders/99/dvq39r1d3_34sf_7dqmvfy0c0000gn/T/mig33-hexagonal-native-2_oxr45f"
+    }
+  },
+  "references": {
+    "builds": [
+      {
+        "version": "3.08",
+        "jar_sha256": "2b416199dca5f6593eefe8fa1c9b84ec4be6cdc36f68bcf17e1a94193bfd2934",
+        "classes": 35,
+        "screenshots": 46,
+        "original_resources_match": true
+      },
+      {
+        "version": "4.62",
+        "jar_sha256": "dbf12ffbd44bc6e48d09cf35863736731c87c078877f76ed4b780a4dc5eff92c",
+        "classes": 26,
+        "screenshots": 39,
+        "original_resources_match": true
+      }
+    ],
+    "theme_fields": 148,
+    "theme_images": 9,
+    "documents_checked": 85,
+    "historical_images_verified": 120,
+    "html_documents_checked": 7,
+    "tool_binaries_checked": 4,
+    "v4_endpoint_literal_references_checked": 128,
+    "v4_endpoint_url_path_literals": 59,
+    "v4_page_templates": 52,
+    "json_files_parsed": 37,
+    "broken_local_document_links": [],
+    "scope": "Original bytes, extracted resources, decompiler/disassembly coverage, image hashes/PNG CRCs and local links; not live backend behavior."
+  },
+  "local_logs": "data/organization-validation/",
+  "notes": [
+    "Existing execution snapshots keep their historical paths and module identifiers.",
+    "Git ignores raw local artifacts; documentation, small JSON/Markdown catalogs, metadata and tooling source remain eligible.",
+    "All four Go entrypoints build; full race/vet also pass without research archives or JARs.",
+    "Interactive clients were refreshed using the new paths; local application data was retained."
+  ]
+}

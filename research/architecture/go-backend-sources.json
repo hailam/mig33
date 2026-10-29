@@ -1,0 +1,454 @@
+{
+  "checked_on": "2026-10-29",
+  "selected_go_version": "1.27.3",
+  "scope": "Primary documentation, maintainer explanations, versioned source and local code audit; recommendations are project-specific judgments, not an official gold-standard certification.",
+  "source_count": 40,
+  "sources": [
+    {
+      "url": "https://pkg.go.dev/context",
+      "title": "context package documentation",
+      "authority": "Go standard library",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/context.json",
+        "evidence/storage.json"
+      ],
+      "cited_in_report": true
+    },
+    {
+      "url": "https://go.dev/blog/context-and-structs",
+      "title": "Contexts and structs",
+      "authority": "Official Go blog; Jean Barkhuysen and Matt T. Proud",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/context.json"
+      ],
+      "cited_in_report": true
+    },
+    {
+      "url": "https://go.dev/doc/database/cancel-operations",
+      "title": "Canceling in-progress operations",
+      "authority": "Official Go documentation",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/context.json",
+        "evidence/storage.json"
+      ],
+      "cited_in_report": true
+    },
+    {
+      "url": "https://pkg.go.dev/net/http",
+      "title": "net/http Request.Context, Server.BaseContext and Server.Shutdown",
+      "authority": "Go standard library",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/context.json",
+        "evidence/di.json"
+      ],
+      "cited_in_report": true
+    },
+    {
+      "url": "https://pkg.go.dev/golang.org/x/sync/errgroup",
+      "title": "golang.org/x/sync/errgroup",
+      "authority": "Go subrepository maintainers",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/context.json",
+        "evidence/di.json"
+      ],
+      "cited_in_report": true
+    },
+    {
+      "url": "https://pkg.go.dev/net#Conn",
+      "title": "net.Conn and Dialer.DialContext",
+      "authority": "Go standard library",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/context.json"
+      ]
+    },
+    {
+      "url": "https://pkg.go.dev/database/sql#DB.BeginTx",
+      "title": "database/sql DB.BeginTx",
+      "authority": "Go standard library",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/context.json",
+        "evidence/storage.json"
+      ],
+      "cited_in_report": true
+    },
+    {
+      "url": "https://go.dev/blog/pipelines",
+      "title": "Go Concurrency Patterns: Pipelines and cancellation",
+      "authority": "Official Go blog; Sameer Ajmani",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/context.json"
+      ]
+    },
+    {
+      "url": "https://go.dev/blog/wire",
+      "title": "go-di",
+      "authority": "Go project",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/di.json"
+      ],
+      "cited_in_report": true
+    },
+    {
+      "url": "https://go.dev/wiki/CodeReviewComments#interfaces",
+      "title": "go-interfaces",
+      "authority": "Go project",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/di.json",
+        "evidence/storage.json"
+      ],
+      "cited_in_report": true
+    },
+    {
+      "url": "https://google.github.io/styleguide/go/best-practices#function-argument-lists",
+      "title": "google-options",
+      "authority": "Google Go style maintainers",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/di.json"
+      ]
+    },
+    {
+      "url": "https://github.com/uber-go/guide/blob/master/style.md#functional-options",
+      "title": "uber-options",
+      "authority": "Uber Go maintainers",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/di.json"
+      ],
+      "cited_in_report": true
+    },
+    {
+      "url": "https://github.com/uber-go/fx",
+      "title": "fx-readme",
+      "authority": "Fx maintainers",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/di.json"
+      ]
+    },
+    {
+      "url": "https://uber-go.github.io/fx/modules.html",
+      "title": "fx-modules",
+      "authority": "Fx maintainers",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/di.json"
+      ],
+      "cited_in_report": true
+    },
+    {
+      "url": "https://uber-go.github.io/fx/lifecycle.html",
+      "title": "fx-lifecycle",
+      "authority": "Fx maintainers",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/di.json"
+      ],
+      "cited_in_report": true
+    },
+    {
+      "url": "https://pkg.go.dev/go.uber.org/fx",
+      "title": "fx-api",
+      "authority": "Fx maintainers' package documentation",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/di.json"
+      ]
+    },
+    {
+      "url": "https://uber-go.github.io/fx/value-groups/index.html",
+      "title": "fx-groups",
+      "authority": "Fx maintainers",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/di.json"
+      ]
+    },
+    {
+      "url": "https://uber-go.github.io/fx/annotate.html",
+      "title": "fx-annotations",
+      "authority": "Fx maintainers",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/di.json"
+      ]
+    },
+    {
+      "url": "https://pkg.go.dev/go.uber.org/fx/fxtest",
+      "title": "fx-tests",
+      "authority": "Fx maintainers",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/di.json"
+      ]
+    },
+    {
+      "url": "https://github.com/uber-go/dig",
+      "title": "dig",
+      "authority": "Dig maintainers",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/di.json"
+      ],
+      "cited_in_report": true
+    },
+    {
+      "url": "https://github.com/google/wire",
+      "title": "wire-status",
+      "authority": "Wire maintainers/GitHub repository status",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/di.json"
+      ],
+      "cited_in_report": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google/wire/main/docs/guide.md",
+      "title": "wire-guide",
+      "authority": "Wire maintainers",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/di.json"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/oklog/run/master/group.go",
+      "title": "oklog-run",
+      "authority": "oklog/run maintainers",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/di.json"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/golang/sync/v0.24.0/go.mod",
+      "title": "x/sync v0.24.0 module requirement",
+      "authority": "Go project",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/di.json"
+      ],
+      "relevance": "Requires Go 1.26; compatible with the selected Go 1.27.3 baseline.",
+      "cited_in_report": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/golang/sync/v0.22.0/go.mod",
+      "title": "sync-compatible-go",
+      "authority": "Go project",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/di.json"
+      ]
+    },
+    {
+      "url": "https://go.dev/doc/database/execute-transactions",
+      "title": "Go: Executing transactions",
+      "authority": "Primary source publisher or maintainer",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/storage.json"
+      ],
+      "cited_in_report": true
+    },
+    {
+      "url": "https://docs.sqlc.dev/en/v1.31.1/howto/transactions.html",
+      "title": "sqlc 1.31.1: Using transactions",
+      "authority": "Primary source publisher or maintainer",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/storage.json"
+      ],
+      "cited_in_report": true
+    },
+    {
+      "url": "https://github.com/mattn/go-sqlite3/blob/v1.14.52/sqlite3.go",
+      "title": "go-sqlite3 v1.14.52 implementation",
+      "authority": "Primary source publisher or maintainer",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/storage.json"
+      ],
+      "cited_in_report": true
+    },
+    {
+      "url": "https://raw.githubusercontent.com/mattn/go-sqlite3/v1.14.52/sqlite3_sql.go",
+      "title": "go-sqlite3 v1.14.52 context adapter",
+      "authority": "Primary source publisher or maintainer",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/storage.json"
+      ],
+      "cited_in_report": true
+    },
+    {
+      "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html",
+      "title": "Transactional outbox pattern",
+      "authority": "Primary source publisher or maintainer",
+      "checked_on": "2026-10-29",
+      "evidence_files": [
+        "evidence/storage.json"
+      ],
+      "relevance": "Persist business state and delivery intent atomically; account for duplicate delivery.",
+      "cited_in_report": true
+    },
+    {
+      "url": "https://blog.ploeh.dk/2011/07/28/CompositionRoot/",
+      "title": "Composition Root",
+      "authority": "Mark Seemann, pattern author",
+      "checked_on": "2026-10-29",
+      "evidence_files": [],
+      "relevance": "Composition belongs near the application entrypoint.",
+      "cited_in_report": true
+    },
+    {
+      "url": "https://go.dev/doc/modules/layout",
+      "title": "Organizing a Go module",
+      "authority": "Go project",
+      "checked_on": "2026-10-29",
+      "evidence_files": [],
+      "relevance": "Multiple commands can use shared internal packages; no mandatory bootstrap layout is prescribed.",
+      "cited_in_report": true
+    },
+    {
+      "url": "https://go.dev/blog/slog",
+      "title": "Structured Logging with slog",
+      "authority": "Go project",
+      "checked_on": "2026-10-29",
+      "evidence_files": [],
+      "relevance": "Explicit loggers and context-aware logging are separate capabilities.",
+      "cited_in_report": true
+    },
+    {
+      "url": "https://go.dev/blog/testing-time",
+      "title": "Testing Time and other asynchronicities",
+      "authority": "Go project",
+      "checked_on": "2026-10-29",
+      "evidence_files": [],
+      "relevance": "Go 1.25 made synctest generally available; real network and cgo calls are not durably blocking.",
+      "cited_in_report": true
+    },
+    {
+      "url": "https://pkg.go.dev/sync#Mutex.Lock",
+      "title": "sync.Mutex.Lock",
+      "authority": "Go standard library",
+      "checked_on": "2026-10-29",
+      "evidence_files": [],
+      "relevance": "Mutex.Lock blocks and has no context parameter.",
+      "cited_in_report": true
+    },
+    {
+      "url": "https://go.dev/blog/go1.13-errors",
+      "title": "Working with Errors in Go 1.13",
+      "authority": "Go project",
+      "checked_on": "2026-10-29",
+      "evidence_files": [],
+      "relevance": "Wrapping errors exposes them as part of the observable API.",
+      "cited_in_report": true
+    },
+    {
+      "url": "https://google.github.io/styleguide/go/decisions#cryptorand",
+      "title": "Go Style Decisions",
+      "authority": "Google Go style maintainers",
+      "checked_on": "2026-10-29",
+      "evidence_files": [],
+      "relevance": "Organization guidance on context and cryptographic random sources.",
+      "cited_in_report": true
+    },
+    {
+      "url": "https://go.dev/dl/?mode=json",
+      "title": "Go stable release downloads",
+      "authority": "Go project",
+      "checked_on": "2026-10-29",
+      "evidence_files": [],
+      "relevance": "Official feed identifies go1.27.3 as the latest stable release at research time.",
+      "cited_in_report": true
+    },
+    {
+      "url": "https://go.dev/doc/devel/release",
+      "title": "Go release history",
+      "authority": "Go project",
+      "checked_on": "2026-10-29",
+      "evidence_files": [],
+      "relevance": "Go 1.27.3 release date is 2026-10-19.",
+      "cited_in_report": true
+    },
+    {
+      "url": "https://github.com/oklog/run",
+      "title": "oklog/run",
+      "authority": "Primary source publisher or maintainer",
+      "checked_on": "2026-10-29",
+      "evidence_files": [],
+      "cited_in_report": true
+    }
+  ],
+  "release_status": [
+    {
+      "repository": "uber-go/fx",
+      "sources": [
+        "https://api.github.com/repos/uber-go/fx",
+        "https://api.github.com/repos/uber-go/fx/releases/latest"
+      ],
+      "archived": false,
+      "pushed_at": "2025-12-27T14:09:36Z",
+      "repository_url": "https://github.com/uber-go/fx",
+      "release": "v1.24.0",
+      "published_at": "2025-05-13T22:13:57Z",
+      "release_url": "https://github.com/uber-go/fx/releases/tag/v1.24.0"
+    },
+    {
+      "repository": "uber-go/dig",
+      "sources": [
+        "https://api.github.com/repos/uber-go/dig",
+        "https://api.github.com/repos/uber-go/dig/releases/latest"
+      ],
+      "archived": false,
+      "pushed_at": "2025-05-13T20:09:41Z",
+      "repository_url": "https://github.com/uber-go/dig",
+      "release": "v1.19.0",
+      "published_at": "2025-05-13T19:45:36Z",
+      "release_url": "https://github.com/uber-go/dig/releases/tag/v1.19.0"
+    },
+    {
+      "repository": "oklog/run",
+      "sources": [
+        "https://api.github.com/repos/oklog/run",
+        "https://api.github.com/repos/oklog/run/releases/latest"
+      ],
+      "archived": false,
+      "pushed_at": "2025-06-27T14:04:45Z",
+      "repository_url": "https://github.com/oklog/run",
+      "release": "v1.2.0",
+      "published_at": "2025-06-27T14:03:23Z",
+      "release_url": "https://github.com/oklog/run/releases/tag/v1.2.0"
+    },
+    {
+      "repository": "google/wire",
+      "sources": [
+        "https://api.github.com/repos/google/wire",
+        "https://api.github.com/repos/google/wire/releases/latest"
+      ],
+      "archived": true,
+      "pushed_at": "2025-08-22T13:56:56Z",
+      "repository_url": "https://github.com/google/wire",
+      "release": "v0.7.0",
+      "published_at": "2025-08-22T13:56:56Z",
+      "release_url": "https://github.com/google/wire/releases/tag/v0.7.0"
+    }
+  ],
+  "retained_notes": [
+    "evidence/context.json",
+    "evidence/di.json",
+    "evidence/storage.json",
+    "evidence/go-toolchain.json"
+  ]
+}

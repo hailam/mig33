@@ -1,0 +1,32 @@
+[
+  {
+    "path": "default-avatar.png",
+    "bytes": 595,
+    "sha256": "97dec777e01f301f96335af9e74b0db1aebebf1d7275fc1b82844c1638818afa",
+    "zip_timestamp": [
+      2011,
+      4,
+      19,
+      15,
+      13,
+      36
+    ],
+    "width": 24,
+    "height": 24
+  },
+  {
+    "path": "MiG33.png",
+    "bytes": 2618,
+    "sha256": "c1c1e15f3d09e8f4624c6d4242c8b92131362c4b4381151e183bdef2288baad0",
+    "zip_timestamp": [
+      2011,
+      4,
+      7,
+      16,
+      23,
+      4
+    ],
+    "width": 24,
+    "height": 24
+  }
+]

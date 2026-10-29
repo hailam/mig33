@@ -1,0 +1,625 @@
+{
+  "retrieved_at": "2026-10-28",
+  "target": "mig33 Java ME v4.62 build .000; evidence includes other unspecified4.x-era clients",
+  "sources": [
+    {
+      "id": "games2009",
+      "url": "https://mig33-news.blogspot.com/2009/08/mig33-games-are-lunched.html",
+      "published": "2009-08-22",
+      "kind": "contemporary_author_post_and_original_client_screens",
+      "supports": [
+        "migGames name/navigation",
+        "/games",
+        "/bot <game>",
+        "/bot stop",
+        "RussianRoulette observed messages and timing"
+      ],
+      "limits": [
+        "client build unspecified",
+        "single example payout does not determine fee/probability rule"
+      ]
+    },
+    {
+      "id": "catalog2011",
+      "url": "https://mig33-news.blogspot.com/p/mig33-games.html",
+      "published": null,
+      "kind": "first_person_author_guide_and_original_client_screens",
+      "supports": [
+        "20 listed game names",
+        "free/paid labels at reported date",
+        "game directory and Werewolf help screenshots"
+      ],
+      "limits": [
+        "original static-page publication date not exposed; republished2011-03-07",
+        "free/paid labels conflict with embedded Werewolf pay-to-enter screenshot",
+        "no claim of complete v4.62 production catalog"
+      ],
+      "corroborating_republication": "https://pakmig33.wordpress.com/2011/03/07/mig33-games/",
+      "retrieved_page_sha256": "284c1d6fbc465afbf45bbd643e165f536367ffd768766667b6910314722ab20f"
+    },
+    {
+      "id": "partners2010",
+      "url": "https://www.prnewswire.com/news-releases/mobile-community-mig33-launches-game-developer-program-announces-new-social-game-partnerships-106642023.html",
+      "published": "2010-11-03",
+      "kind": "mig33_issued_press_release",
+      "supports": [
+        "Moonbase by Blue Leaf Games",
+        "Club Wars by TheMobileGamer",
+        "Kooky Pets by Kooky Panda",
+        "partner games use authentication/billing integration"
+      ],
+      "limits": [
+        "announcement does not establish full rollout date or mechanics"
+      ]
+    },
+    {
+      "id": "one2009",
+      "url": "https://mig33-news.blogspot.com/2009/09/mig33-game-one-free.html",
+      "published": "2009-09-16",
+      "kind": "contemporary_author_report",
+      "supports": [
+        "One",
+        "/bot one",
+        "rooms and private group chats"
+      ],
+      "limits": [
+        "full game commands/rules not recovered"
+      ]
+    },
+    {
+      "id": "hot2009",
+      "url": "https://mig33-news.blogspot.com/2009/09/mig33-game-head-and-tail.html",
+      "published": "2009-09-19",
+      "kind": "contemporary_author_report",
+      "supports": [
+        "Heads or Tails",
+        "/bot hot"
+      ],
+      "limits": [
+        "reported paid in2009 but free in2011 guide",
+        "full game rules not recovered"
+      ]
+    },
+    {
+      "id": "lowcard2010",
+      "url": "https://sgenk.blogspot.com/2010/02/mig33-game-lowcardbot.html",
+      "published": "2010-02-07",
+      "kind": "first_person_gameplay_account",
+      "supports": [
+        "LowCardBot",
+        "!start",
+        "!j",
+        "!d",
+        "60-second joining",
+        "20-second drawing",
+        "lowest card elimination"
+      ],
+      "limits": [
+        "stake currency syntax and claimed1% fee are one user report, not universal server contract"
+      ]
+    }
+  ],
+  "games": [
+    {
+      "name": "MigWars",
+      "source": "catalog2011",
+      "reported_charging": "free",
+      "implementation": "reference_placeholder",
+      "limits": "Historical name recovered; complete original gameplay is not implemented."
+    },
+    {
+      "name": "Bollywood Trivia",
+      "source": "catalog2011",
+      "reported_charging": "free",
+      "implementation": "reference_placeholder",
+      "limits": "Historical name recovered; complete original gameplay is not implemented."
+    },
+    {
+      "name": "Boy Friend",
+      "source": "catalog2011",
+      "reported_charging": "free",
+      "implementation": "reference_placeholder",
+      "limits": "Historical name recovered; complete original gameplay is not implemented."
+    },
+    {
+      "name": "Girl Friend",
+      "source": "catalog2011",
+      "reported_charging": "free",
+      "implementation": "reference_placeholder",
+      "limits": "Historical name recovered; complete original gameplay is not implemented."
+    },
+    {
+      "name": "Heads or Tails",
+      "source": "catalog2011",
+      "reported_charging": "conflicting_reports",
+      "implementation": "reference_placeholder",
+      "limits": "Historical name recovered; complete original gameplay is not implemented."
+    },
+    {
+      "name": "Music Trivia",
+      "source": "catalog2011",
+      "reported_charging": "free",
+      "implementation": "reference_placeholder",
+      "limits": "Historical name recovered; complete original gameplay is not implemented."
+    },
+    {
+      "name": "One",
+      "source": "catalog2011",
+      "reported_charging": "free",
+      "implementation": "reference_placeholder",
+      "limits": "Historical name recovered; complete original gameplay is not implemented."
+    },
+    {
+      "name": "Sports Trivia",
+      "source": "catalog2011",
+      "reported_charging": "free",
+      "implementation": "reference_placeholder",
+      "limits": "Historical name recovered; complete original gameplay is not implemented."
+    },
+    {
+      "name": "Star Trivia",
+      "source": "catalog2011",
+      "reported_charging": "free",
+      "implementation": "reference_placeholder",
+      "limits": "Historical name recovered; complete original gameplay is not implemented."
+    },
+    {
+      "name": "Trivia",
+      "source": "catalog2011",
+      "reported_charging": "free",
+      "implementation": "reference_placeholder",
+      "limits": "Historical name recovered; complete original gameplay is not implemented."
+    },
+    {
+      "name": "Vampire",
+      "source": "catalog2011",
+      "reported_charging": "free",
+      "implementation": "reference_placeholder",
+      "limits": "Historical name recovered; complete original gameplay is not implemented."
+    },
+    {
+      "name": "Werewolf",
+      "source": "catalog2011",
+      "reported_charging": "conflicting_reports",
+      "implementation": "reference_placeholder",
+      "limits": "Historical name recovered; complete original gameplay is not implemented."
+    },
+    {
+      "name": "LowCards",
+      "source": "catalog2011",
+      "reported_charging": "paid",
+      "implementation": "reference_placeholder",
+      "limits": "Historical name recovered; complete original gameplay is not implemented."
+    },
+    {
+      "name": "Baccarat",
+      "source": "catalog2011",
+      "reported_charging": "paid",
+      "implementation": "reference_placeholder",
+      "limits": "Historical name recovered; complete original gameplay is not implemented."
+    },
+    {
+      "name": "Blackjack",
+      "source": "catalog2011",
+      "reported_charging": "paid",
+      "implementation": "reference_placeholder",
+      "limits": "Historical name recovered; complete original gameplay is not implemented."
+    },
+    {
+      "name": "Knock Out",
+      "source": "catalog2011",
+      "reported_charging": "paid",
+      "implementation": "reference_placeholder",
+      "limits": "Historical name recovered; complete original gameplay is not implemented."
+    },
+    {
+      "name": "Dice",
+      "source": "catalog2011",
+      "reported_charging": "paid",
+      "implementation": "reference_placeholder",
+      "limits": "Historical name recovered; complete original gameplay is not implemented."
+    },
+    {
+      "name": "Rock Paper Scissors",
+      "source": "catalog2011",
+      "reported_charging": "paid",
+      "implementation": "reference_placeholder",
+      "limits": "Historical name recovered; complete original gameplay is not implemented."
+    },
+    {
+      "name": "Russian Roulette",
+      "source": "catalog2011",
+      "reported_charging": "paid",
+      "implementation": "reference_placeholder",
+      "limits": "Historical name recovered; complete original gameplay is not implemented."
+    },
+    {
+      "name": "FootBall",
+      "source": "catalog2011",
+      "reported_charging": "paid",
+      "implementation": "reference_placeholder",
+      "limits": "Historical name recovered; complete original gameplay is not implemented."
+    },
+    {
+      "name": "Moonbase",
+      "source": "partners2010",
+      "reported_charging": "unknown",
+      "implementation": "reference_placeholder",
+      "limits": "External partner game; local catalog reference only."
+    },
+    {
+      "name": "Club Wars",
+      "source": "partners2010",
+      "reported_charging": "unknown",
+      "implementation": "reference_placeholder",
+      "limits": "External partner game; local catalog reference only."
+    },
+    {
+      "name": "Kooky Pets",
+      "source": "partners2010",
+      "reported_charging": "unknown",
+      "implementation": "reference_placeholder",
+      "limits": "External partner game; local catalog reference only."
+    }
+  ],
+  "commands": [
+    {
+      "syntax": "/games",
+      "evidence": "games-2009-2",
+      "meaning": "List games",
+      "implementation": "local catalog listing"
+    },
+    {
+      "syntax": "/bot <game>",
+      "evidence": "games-2009-2",
+      "meaning": "Select/start a bot",
+      "implementation": "bounded replacement dice/8ball only"
+    },
+    {
+      "syntax": "/bot stop",
+      "evidence": "games-2009-2",
+      "meaning": "Stop current bot",
+      "implementation": "alias for current scoped /botstop"
+    },
+    {
+      "syntax": "/bot one",
+      "evidence": "one2009",
+      "meaning": "One game",
+      "implementation": "reference only"
+    },
+    {
+      "syntax": "/bot hot",
+      "evidence": "hot2009",
+      "meaning": "Heads or Tails",
+      "implementation": "reference only"
+    }
+  ],
+  "images": [
+    {
+      "id": "club-wars-1",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJk_nOG6uTxzC9FPrJB8gJYf1CzVm0eOZGrJe7LZp5vj1OcSggO7pshKjB9WV7sgRbTPtQL3sIHNs61lRnCHkngQT5rI3lfJdblThxx4lw9DbCkk5_FAQs-lvZCL2GFuHk56dBD1zOlAM/s1600/2.png",
+      "page": "https://mig33-news.blogspot.com/2010/12/mig33-games-club-wars.html",
+      "published_at": "2010-12-12T11:22:00.000+05:30",
+      "title": "Mig33 Games - Club Wars",
+      "feed_url": "https://mig33-news.blogspot.com/feeds/posts/default?alt=json&max-results=150&published-min=2009-01-01T00:00:00Z&published-max=2012-01-01T00:00:00Z",
+      "path": "research/applets/v4/artifacts/historical-games/club-wars-1.png",
+      "sha256": "63178946329c9d1a12a4bfdcaa7e2e272233de5a080d4ed2d793d16f118a2b5c",
+      "bytes": 22098,
+      "width": 176,
+      "height": 209,
+      "retrieved_at": "2026-10-28",
+      "status": "recovered",
+      "caption": "Club Wars main menu with models, fights, security, store, inventory and bank.",
+      "provenance": "contemporary_community_capture",
+      "target_build": "unspecified",
+      "limits": "Partial visible screen only; no original authenticated HTML or complete mechanics recovered."
+    },
+    {
+      "id": "club-wars-2",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhX3lYkRtIuwZd-QNOpkspnqysl1PNNxULkjp8zCFaLxdGNfq0iluvYwOB8H4LUTjAmwoZ663GV2wW9GArEvNld_H2A3_yRs1l0uLBx0t9S6lbAN2R1wZVqIigO-ygIYatDtdGFAlf0FpU/s1600/3.png",
+      "page": "https://mig33-news.blogspot.com/2010/12/mig33-games-club-wars.html",
+      "published_at": "2010-12-12T11:22:00.000+05:30",
+      "title": "Mig33 Games - Club Wars",
+      "feed_url": "https://mig33-news.blogspot.com/feeds/posts/default?alt=json&max-results=150&published-min=2009-01-01T00:00:00Z&published-max=2012-01-01T00:00:00Z",
+      "path": "research/applets/v4/artifacts/historical-games/club-wars-2.png",
+      "sha256": "d841e274ef7509b59a7fb589b941df5680b5640d2ff5f8aa5ded43baf689c7ea",
+      "bytes": 9318,
+      "width": 176,
+      "height": 209,
+      "retrieved_at": "2026-10-28",
+      "status": "recovered",
+      "caption": "Club Wars model choices and quick links.",
+      "provenance": "contemporary_community_capture",
+      "target_build": "unspecified",
+      "limits": "Partial visible screen only; no original authenticated HTML or complete mechanics recovered."
+    },
+    {
+      "id": "club-wars-3",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjm15e54Kvs2jte3bP3XOJpm37zODxRlwsCjQS6MXBRWqeZECOLjM67nsfmUxMcXOukI9wxnq59GYgbT9vp88UBJzAthyHPwRmDmBc4ucmDEzSnHRMfO82C5dJUVoZNUyhrQbxY3VHJuUU/s1600/4.png",
+      "page": "https://mig33-news.blogspot.com/2010/12/mig33-games-club-wars.html",
+      "published_at": "2010-12-12T11:22:00.000+05:30",
+      "title": "Mig33 Games - Club Wars",
+      "feed_url": "https://mig33-news.blogspot.com/feeds/posts/default?alt=json&max-results=150&published-min=2009-01-01T00:00:00Z&published-max=2012-01-01T00:00:00Z",
+      "path": "research/applets/v4/artifacts/historical-games/club-wars-3.png",
+      "sha256": "f0e48c3029d849ddab230508784bd3b65d011090f82c856ab24a950e690cfb0c",
+      "bytes": 16317,
+      "width": 176,
+      "height": 209,
+      "retrieved_at": "2026-10-28",
+      "status": "recovered",
+      "caption": "Club Wars status values and time-based replenishment.",
+      "provenance": "contemporary_community_capture",
+      "target_build": "unspecified",
+      "limits": "Partial visible screen only; no original authenticated HTML or complete mechanics recovered."
+    },
+    {
+      "id": "moonbase-1",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhSV28m5mBEx5T4BICkTbYgav9Ky94tvHJCJgiwSc26R6tat9DRxMzTRG-KYFPY8LtHi0qqY_fLpsMZpS1RG0KrtZwy9ycVX48JrAdbU3gJwLQ6z-TYlARcW6MWwuTbqbKF75L8iY1tZ_A/s1600/01.png",
+      "page": "https://mig33-news.blogspot.com/2010/10/mig33-games-moonbase.html",
+      "published_at": "2010-10-29T09:57:00.000+05:30",
+      "title": "Mig33 Games - Moonbase",
+      "feed_url": "https://mig33-news.blogspot.com/feeds/posts/default?alt=json&max-results=150&published-min=2009-01-01T00:00:00Z&published-max=2012-01-01T00:00:00Z",
+      "path": "research/applets/v4/artifacts/historical-games/moonbase-1.png",
+      "sha256": "7e976a7f5f01a2796ec667e4c484318828231dbcca5bce9f5d176502db5a6590",
+      "bytes": 5605,
+      "width": 176,
+      "height": 209,
+      "retrieved_at": "2026-10-28",
+      "status": "recovered",
+      "caption": "migGames catalog with Moonbase, MigWars and Bollywood Trivia.",
+      "provenance": "contemporary_community_capture",
+      "target_build": "unspecified",
+      "limits": "Partial visible screen only; no original authenticated HTML or complete mechanics recovered."
+    },
+    {
+      "id": "moonbase-2",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTNZbPS8uKjcFuu-rHR0RaMWjfKREha-toOhDO0irUiyDkDFe4Pdb1W3paDGTNTDBqZW0F42frJ4PwrSBcZDSPohxG59LURIxc9NEaIEfGsL7d2t1ClsHuOKL9mVOvqEhsrpIzGABI8Wo/s1600/02.png",
+      "page": "https://mig33-news.blogspot.com/2010/10/mig33-games-moonbase.html",
+      "published_at": "2010-10-29T09:57:00.000+05:30",
+      "title": "Mig33 Games - Moonbase",
+      "feed_url": "https://mig33-news.blogspot.com/feeds/posts/default?alt=json&max-results=150&published-min=2009-01-01T00:00:00Z&published-max=2012-01-01T00:00:00Z",
+      "path": "research/applets/v4/artifacts/historical-games/moonbase-2.png",
+      "sha256": "bd44b948c5a2fed2bd36f43e885e5329be361cf8c4f9c5ae0c4937ee2fbcf080",
+      "bytes": 4793,
+      "width": 176,
+      "height": 209,
+      "retrieved_at": "2026-10-28",
+      "status": "recovered",
+      "caption": "Moonbase play link and story description.",
+      "provenance": "contemporary_community_capture",
+      "target_build": "unspecified",
+      "limits": "Partial visible screen only; no original authenticated HTML or complete mechanics recovered."
+    },
+    {
+      "id": "moonbase-3",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZsxXPHq_MR0kTqIjfTO-Ta-5AfuyFKnC1uRfu27siUOyWW9F0xtAwOJLAeK04oLT-oiYVm_Vk5zk7DerbDZtd0Ozi5Sm4pABsfrGekhFd2fsrFIw-eMtkMNT1P02_7pbr4ZhoG2FSkVk/s1600/04.png",
+      "page": "https://mig33-news.blogspot.com/2010/10/mig33-games-moonbase.html",
+      "published_at": "2010-10-29T09:57:00.000+05:30",
+      "title": "Mig33 Games - Moonbase",
+      "feed_url": "https://mig33-news.blogspot.com/feeds/posts/default?alt=json&max-results=150&published-min=2009-01-01T00:00:00Z&published-max=2012-01-01T00:00:00Z",
+      "path": "research/applets/v4/artifacts/historical-games/moonbase-3.png",
+      "sha256": "87899f8d86e03c8527b99c4cb206bd64ca0b9c40fd6cf36280df368622c0ea52",
+      "bytes": 4241,
+      "width": 176,
+      "height": 209,
+      "retrieved_at": "2026-10-28",
+      "status": "recovered",
+      "caption": "Moonbase Silo upgrade costs and insufficient-resource state.",
+      "provenance": "contemporary_community_capture",
+      "target_build": "unspecified",
+      "limits": "Partial visible screen only; no original authenticated HTML or complete mechanics recovered."
+    },
+    {
+      "id": "moonbase-4",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgWoiHk2uGcUQuxZwHJIBt2nOOkX6Bl8D9UksfaBITfuVKdCBGt6KDhqHO0cCyY6NJM6M44X-rjRlkZJqIg9QIc6Aigba_oSQIrrqNagDA1QjqPUmtr1OIZnFZE4DImgO33eXwi6s9U674/s1600/03.png",
+      "page": "https://mig33-news.blogspot.com/2010/10/mig33-games-moonbase.html",
+      "published_at": "2010-10-29T09:57:00.000+05:30",
+      "title": "Mig33 Games - Moonbase",
+      "feed_url": "https://mig33-news.blogspot.com/feeds/posts/default?alt=json&max-results=150&published-min=2009-01-01T00:00:00Z&published-max=2012-01-01T00:00:00Z",
+      "path": "research/applets/v4/artifacts/historical-games/moonbase-4.png",
+      "sha256": "fda83bf3739835f7669f20e4c4001788cf51bbd8bd93de10abae8f344c2fa889",
+      "bytes": 4440,
+      "width": 176,
+      "height": 209,
+      "retrieved_at": "2026-10-28",
+      "status": "recovered",
+      "caption": "Moonbase resource totals/cap and building navigation.",
+      "provenance": "contemporary_community_capture",
+      "target_build": "unspecified",
+      "limits": "Partial visible screen only; no original authenticated HTML or complete mechanics recovered."
+    },
+    {
+      "id": "games-2010-1",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUg9AV-FU7LpldJjfX_gmL7oOP4fG0SE_0dXRdB0gx52UixoqdlufjTSecmIjribU8PFN1kASn1JlkfQpGnGyYNqL7k94aDPmpRSZwXZxHk1F-qEDA8TCJtGKqhJld3OIrFdTLdWizCp4/s1600/game.png",
+      "page": "https://mig33-news.blogspot.com/2010/06/mig33-games-baccart-blackjack.html",
+      "published_at": "2010-06-01T12:22:00.003+05:30",
+      "title": "Mig33 Games - Baccarot & Blackjack",
+      "feed_url": "https://mig33-news.blogspot.com/feeds/posts/default?alt=json&max-results=150&published-min=2009-01-01T00:00:00Z&published-max=2012-01-01T00:00:00Z",
+      "path": "research/applets/v4/artifacts/historical-games/games-2010-1.png",
+      "sha256": "150e85ee555b4570078cb62480c2c561bbfe06c641055c304e69586854c5a8d6",
+      "bytes": 5126,
+      "width": 176,
+      "height": 209,
+      "retrieved_at": "2026-10-28",
+      "status": "recovered",
+      "caption": "migGames catalog: room navigation, MigWars, Baccarat and Blackjack.",
+      "provenance": "contemporary_community_capture",
+      "target_build": "unspecified",
+      "limits": "Partial visible screen only; no original authenticated HTML or complete mechanics recovered."
+    },
+    {
+      "id": "games-2009-1",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1-DfNMvZ69veeFIH4oES0KU3LgaZ3UwniKtNogFQnpwA6J7sH-12H0nOxi_CbTuuV_rxqpclScllfcA-x7xdyIA5n_Z7k0bPPkKLY4KwxK9tyg9GFDjgkZltwLrEKX6is1juKWKqVr5AV/s1600/miggames1.png",
+      "page": "https://mig33-news.blogspot.com/2009/08/mig33-games-are-lunched.html",
+      "published_at": "2009-08-22T12:25:00.000+05:30",
+      "title": "Mig33 Games are lunched",
+      "feed_url": "https://mig33-news.blogspot.com/feeds/posts/default?alt=json&max-results=150&published-min=2009-01-01T00:00:00Z&published-max=2012-01-01T00:00:00Z",
+      "path": "research/applets/v4/artifacts/historical-games/games-2009-1.png",
+      "sha256": "d7256304851c04e433ccd9ee668df0e06ff639f56763702a76bdfad54b1a9530",
+      "bytes": 4368,
+      "width": 176,
+      "height": 209,
+      "retrieved_at": "2026-10-28",
+      "status": "recovered",
+      "caption": "migWorld news links to migGames and gift/theme promotion.",
+      "provenance": "contemporary_community_capture",
+      "target_build": "unspecified",
+      "limits": "Partial visible screen only; no original authenticated HTML or complete mechanics recovered."
+    },
+    {
+      "id": "games-2009-2",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFWcDyFVtdF8CJLnkrmS9Pk7h4Q31cNLoYeT1xaqB4ynrfxWur38tU6cCUbjhv3hJJxXSj1m_fUr-7RC7aLEGJ1DpoC5FfKnnVz34ZpksGmgywHlLZFj_gnURb4NdcGuceLIDqU81iEll9/s1600/miggames2.png",
+      "page": "https://mig33-news.blogspot.com/2009/08/mig33-games-are-lunched.html",
+      "published_at": "2009-08-22T12:25:00.000+05:30",
+      "title": "Mig33 Games are lunched",
+      "feed_url": "https://mig33-news.blogspot.com/feeds/posts/default?alt=json&max-results=150&published-min=2009-01-01T00:00:00Z&published-max=2012-01-01T00:00:00Z",
+      "path": "research/applets/v4/artifacts/historical-games/games-2009-2.png",
+      "sha256": "039228607dc72e03a31ea9af098092819f43243889873463e67a31e88e84c8d5",
+      "bytes": 4942,
+      "width": 176,
+      "height": 209,
+      "retrieved_at": "2026-10-28",
+      "status": "recovered",
+      "caption": "Original migGames help: /bot <game>, /bot stop, /games; Game 1 through Game 50 rooms.",
+      "provenance": "contemporary_community_capture",
+      "target_build": "unspecified",
+      "limits": "Partial visible screen only; no original authenticated HTML or complete mechanics recovered."
+    },
+    {
+      "id": "games-2009-3",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDp4W5LVq7e4lPwQ6A26ToLHytD8Qrjh8qo6hjWNJehsqyAjePzPMFo3tC1F9nFO6DtwOAU0NiX1_0FbXl3VPl-yV4lUeRfev018ynUfWvcSdqiXxTBM_oPFUniDvcZixdyl8dK2UZHz0L/s1600/miggames3.png",
+      "page": "https://mig33-news.blogspot.com/2009/08/mig33-games-are-lunched.html",
+      "published_at": "2009-08-22T12:25:00.000+05:30",
+      "title": "Mig33 Games are lunched",
+      "feed_url": "https://mig33-news.blogspot.com/feeds/posts/default?alt=json&max-results=150&published-min=2009-01-01T00:00:00Z&published-max=2012-01-01T00:00:00Z",
+      "path": "research/applets/v4/artifacts/historical-games/games-2009-3.png",
+      "sha256": "a2feecd96934a171652cec9e6fe5e0b0b7e5b7e2fab4f8230fe96948415bdcd4",
+      "bytes": 4617,
+      "width": 176,
+      "height": 209,
+      "retrieved_at": "2026-10-28",
+      "status": "recovered",
+      "caption": "RussianRoulette room: automatic spin at timeout and eliminated player.",
+      "provenance": "contemporary_community_capture",
+      "target_build": "unspecified",
+      "limits": "Partial visible screen only; no original authenticated HTML or complete mechanics recovered."
+    },
+    {
+      "id": "games-2009-4",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAhyphenhyphenqFY3MbCO234hjjrpblf9BagNgRmM2xeObEmHOkbUV_0i3GtpF0J4d-C49EEDBn7xb1_QbCQIhjE2RoAOkoyvsDtQiwwtqbkC3KNb2zItl71sqZjlPHyfUrWR0B4mhBLNLIaT4k65sY/s1600/miggames4.png",
+      "page": "https://mig33-news.blogspot.com/2009/08/mig33-games-are-lunched.html",
+      "published_at": "2009-08-22T12:25:00.000+05:30",
+      "title": "Mig33 Games are lunched",
+      "feed_url": "https://mig33-news.blogspot.com/feeds/posts/default?alt=json&max-results=150&published-min=2009-01-01T00:00:00Z&published-max=2012-01-01T00:00:00Z",
+      "path": "research/applets/v4/artifacts/historical-games/games-2009-4.png",
+      "sha256": "74f70f44931497bb5cc382d9b879b208657e55b25e9c56860fcca9a53c7412f4",
+      "bytes": 4864,
+      "width": 176,
+      "height": 209,
+      "retrieved_at": "2026-10-28",
+      "status": "recovered",
+      "caption": "RussianRoulette room: surviving turn and twenty-second next-turn prompt.",
+      "provenance": "contemporary_community_capture",
+      "target_build": "unspecified",
+      "limits": "Partial visible screen only; no original authenticated HTML or complete mechanics recovered."
+    },
+    {
+      "id": "games-2009-5",
+      "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsEFqgfFOHJb_zpYB8rA5LmfONguWLbUx47zEsVzGSvzhqoTWcMyrc48xjONg64eKG5pV-aSjwQdHWCi5tiBWLt2YSM7Vtvy2ez7m2yDZUMKA2tBbtvD_mGiEE8pRqrRnR9kOR1kcyqlWw/s1600/miggames5.png",
+      "page": "https://mig33-news.blogspot.com/2009/08/mig33-games-are-lunched.html",
+      "published_at": "2009-08-22T12:25:00.000+05:30",
+      "title": "Mig33 Games are lunched",
+      "feed_url": "https://mig33-news.blogspot.com/feeds/posts/default?alt=json&max-results=150&published-min=2009-01-01T00:00:00Z&published-max=2012-01-01T00:00:00Z",
+      "path": "research/applets/v4/artifacts/historical-games/games-2009-5.png",
+      "sha256": "40eea6a72a4ed07758d7928e9284058603ae7dde7812c93cc86bc74cff607807",
+      "bytes": 5276,
+      "width": 176,
+      "height": 209,
+      "retrieved_at": "2026-10-28",
+      "status": "recovered",
+      "caption": "RussianRoulette game completion, observed USD0.27 win and default USD0.05 restart prompt.",
+      "provenance": "contemporary_community_capture",
+      "target_build": "unspecified",
+      "limits": "Partial visible screen only; no original authenticated HTML or complete mechanics recovered."
+    },
+    {
+      "id": "games-guide-2011-1",
+      "url": "https://pakmig33.files.wordpress.com/2011/03/gamerooms.png",
+      "page": "https://pakmig33.wordpress.com/2011/03/07/mig33-games/",
+      "published_at": "2011-03-07",
+      "title": "mig33 games",
+      "path": "research/applets/v4/artifacts/historical-games/games-guide-2011-1.png",
+      "sha256": "bea2f413a2ddc344fc70eeb84ea097dc78d662499c0939e16a9fa63542ab112e",
+      "bytes": 5992,
+      "width": 176,
+      "height": 209,
+      "retrieved_at": "2026-10-28",
+      "status": "recovered",
+      "caption": "Chat Rooms Play Games category and Game 1–6 occupancy list.",
+      "provenance": "contemporary_community_capture",
+      "target_build": "unspecified",
+      "limits": "Partial visible screen only; no original authenticated HTML or complete mechanics recovered."
+    },
+    {
+      "id": "games-guide-2011-2",
+      "url": "https://pakmig33.files.wordpress.com/2011/03/113.png",
+      "page": "https://pakmig33.wordpress.com/2011/03/07/mig33-games/",
+      "published_at": "2011-03-07",
+      "title": "mig33 games",
+      "path": "research/applets/v4/artifacts/historical-games/games-guide-2011-2.png",
+      "sha256": "f806a03e2f9a686e6c31d98d22dbcb3028f7940a3890c18a24bac533acbff7db",
+      "bytes": 7236,
+      "width": 176,
+      "height": 209,
+      "retrieved_at": "2026-10-28",
+      "status": "recovered",
+      "caption": "Native main-menu Games navigation; build unspecified.",
+      "provenance": "contemporary_community_capture",
+      "target_build": "unspecified",
+      "limits": "Partial visible screen only; no original authenticated HTML or complete mechanics recovered."
+    },
+    {
+      "id": "games-guide-2011-3",
+      "url": "https://pakmig33.files.wordpress.com/2011/03/21.png",
+      "page": "https://pakmig33.wordpress.com/2011/03/07/mig33-games/",
+      "published_at": "2011-03-07",
+      "title": "mig33 games",
+      "path": "research/applets/v4/artifacts/historical-games/games-guide-2011-3.png",
+      "sha256": "3d65ac8d0a43a44c8392b9ced5c3e48ca25f352a4d7238ee2e42bec1776967ec",
+      "bytes": 6564,
+      "width": 176,
+      "height": 209,
+      "retrieved_at": "2026-10-28",
+      "status": "recovered",
+      "caption": "migGames catalog: MigWars, Werewolf and Russian Roulette.",
+      "provenance": "contemporary_community_capture",
+      "target_build": "unspecified",
+      "limits": "Partial visible screen only; no original authenticated HTML or complete mechanics recovered."
+    },
+    {
+      "id": "games-guide-2011-4",
+      "url": "https://pakmig33.files.wordpress.com/2011/03/31.png",
+      "page": "https://pakmig33.wordpress.com/2011/03/07/mig33-games/",
+      "published_at": "2011-03-07",
+      "title": "mig33 games",
+      "path": "research/applets/v4/artifacts/historical-games/games-guide-2011-4.png",
+      "sha256": "e341422557256830b71bd6014f79f1ba1713c06492f716c62af2374ab70b2972",
+      "bytes": 6486,
+      "width": 176,
+      "height": 209,
+      "retrieved_at": "2026-10-28",
+      "status": "recovered",
+      "caption": "Werewolf help: 5–12 players, two wolves above seven players, no charge if insufficient players.",
+      "provenance": "contemporary_community_capture",
+      "target_build": "unspecified",
+      "limits": "Partial visible screen only; no original authenticated HTML or complete mechanics recovered."
+    }
+  ],
+  "implementation_policy": "Known catalog names and recovered navigation are retained. Unknown mechanics are explicitly unavailable reference placeholders; playable dice and8ball remain labeled replacements. Do not infer wager settlement, payouts, probabilities or complete response banks from screenshots.",
+  "secondary_leads": [
+    {
+      "url": "https://mig33rz.blogspot.com/2009/12/mig33-games-trivia-and-lowcard.html",
+      "note": "Reprinted Trivia/Low Card instructions link to unavailable blog.mig33forum.com originals; not promoted to authoritative primary evidence."
+    }
+  ]
+}

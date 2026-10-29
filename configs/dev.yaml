@@ -1,0 +1,8 @@
+# Isolated development instance; it can run beside the default local backend.
+public_url: http://127.0.0.1:18080
+database:
+  path: data/dev.sqlite
+http:
+  listen: 127.0.0.1:18080
+socket:
+  listen: 127.0.0.1:19119

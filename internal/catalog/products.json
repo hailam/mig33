@@ -1,0 +1,1164 @@
+[
+  {
+    "id": "rose",
+    "name": "Rose",
+    "kind": "gift",
+    "price": 100,
+    "description": "A local animated gift representation.",
+    "category": "Love / Friendship",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2011/01/mig33-new-command-gift-on-chat.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "cake",
+    "name": "Birthday cake",
+    "kind": "gift",
+    "price": 250,
+    "description": "A local animated gift representation.",
+    "category": "Greetings / Wishes",
+    "name_evidence": "local_replacement",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "star",
+    "name": "Thank you star",
+    "kind": "gift",
+    "price": 150,
+    "description": "A local animated gift representation.",
+    "category": "Greetings / Wishes",
+    "name_evidence": "local_replacement",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "theme-blue",
+    "name": "Ocean blue",
+    "kind": "theme",
+    "price": 300,
+    "description": "Local blue colour variant preserving the original default theme assets.",
+    "category": "Themes",
+    "name_evidence": "local_replacement",
+    "artwork_evidence": "original_theme_local_colours",
+    "price_evidence": "local_test_price",
+    "source_urls": [],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "theme-orange",
+    "name": "Sunset orange",
+    "kind": "theme",
+    "price": 300,
+    "description": "Local orange colour variant preserving the original default theme assets.",
+    "category": "Themes",
+    "name_evidence": "local_replacement",
+    "artwork_evidence": "original_theme_local_colours",
+    "price_evidence": "local_test_price",
+    "source_urls": [],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-effects",
+    "name": "Effects emoticon pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Three local effects: [buzz] vibrates, [sparkle] animates, [chime] plays a short sound.",
+    "category": "Emoticon Packs",
+    "name_evidence": "local_replacement",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "big-hug",
+    "name": "Big Hug",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://www.prnewswire.com/news-releases/over-40-million-virtual-gifts-sold-in-2010-by-mobile-social-entertainment-leader-mig33-117159883.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "kiss",
+    "name": "Kiss",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://www.prnewswire.com/news-releases/over-40-million-virtual-gifts-sold-in-2010-by-mobile-social-entertainment-leader-mig33-117159883.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "best-friend",
+    "name": "Best Friend",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://www.prnewswire.com/news-releases/over-40-million-virtual-gifts-sold-in-2010-by-mobile-social-entertainment-leader-mig33-117159883.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "hug",
+    "name": "Hug",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Animals",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2011/01/mig33-new-command-gift-on-chat.html"
+    ],
+    "category_evidence": "recovered"
+  },
+  {
+    "id": "big-kiss",
+    "name": "Big Kiss",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2011/01/mig33-new-command-gift-on-chat.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "my-friend",
+    "name": "My Friend",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2011/01/mig33-new-command-gift-on-chat.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "flower",
+    "name": "Flower",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2011/01/mig33-new-command-gift-on-chat.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "forever",
+    "name": "Forever",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2011/01/mig33-new-command-gift-on-chat.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "cupid",
+    "name": "cupid",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2011/01/mig33-new-command-gift-on-chat.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "chocolate",
+    "name": "chocolate",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2011/01/mig33-new-command-gift-on-chat.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "ice-cream",
+    "name": "Ice Cream",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2011/01/mig33-new-command-gift-on-chat.html",
+      "https://mig33-news.blogspot.com/2009/08/new-gifts.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "thank-you",
+    "name": "thank you",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2011/01/mig33-new-command-gift-on-chat.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "2-love",
+    "name": "2 Love",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2011/01/mig33-new-command-gift-on-chat.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "bro",
+    "name": "bro",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2011/01/mig33-new-command-gift-on-chat.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "slap",
+    "name": "Slap",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2011/01/mig33-new-command-gift-on-chat.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "salam",
+    "name": "Salam",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2011/01/mig33-new-command-gift-on-chat.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "hugs",
+    "name": "Hugs",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2011/01/mig33-new-command-gift-on-chat.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "hug-coupon",
+    "name": "Hug Coupon",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2011/01/mig33-new-command-gift-on-chat.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "bear-hug",
+    "name": "Bear Hug",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2011/01/mig33-new-command-gift-on-chat.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "hugging-bear",
+    "name": "Hugging Bear",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2011/01/mig33-new-command-gift-on-chat.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "bff-hug",
+    "name": "BFF Hug",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2011/01/mig33-new-command-gift-on-chat.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "independence-peacock",
+    "name": "Independence Peacock",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2009/08/new-gifts.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "independence-flower",
+    "name": "Independence Flower",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2009/08/new-gifts.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "independence-kite",
+    "name": "Independence Kite",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2009/08/new-gifts.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "migbot-pin",
+    "name": "migBot Pin",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2009/08/new-gifts.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "special-present",
+    "name": "Special Present",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2009/08/new-gifts.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "love-heart",
+    "name": "Love Heart",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2009/08/new-gifts.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "champagne-toast",
+    "name": "Champagne Toast",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2009/08/new-gifts.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "cold-fresh-milk",
+    "name": "Cold, Fresh, Milk",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2009/08/new-gifts.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "teddy-bear",
+    "name": "Teddy Bear",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2009/08/new-gifts.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "trophy",
+    "name": "Trophy",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2009/08/new-gifts.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "mafia-migbot",
+    "name": "Mafia Migbot",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2010/05/mafia-migbot-gift.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "elvis-migbot",
+    "name": "Elvis Migbot",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2010/05/elvis-migbot-gift.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "swimsuit-migbot",
+    "name": "Swimsuit Migbot",
+    "kind": "gift",
+    "price": 100,
+    "description": "Historical gift name with a local placeholder animation.",
+    "category": "Others / Misc",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2010/05/swimsuit-migbot-gift.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-lovely-pack",
+    "name": "Lovely Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2010/05/mig33-emoticon-lovely-pack.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-clock-pack",
+    "name": "Clock Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2010/01/clock-pack-emoticon-set.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-bear-pack",
+    "name": "Bear Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2010/05/mig33-emoticon-bear-pack.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-finger-pack",
+    "name": "Finger Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2010/05/mig33-emoticon-finger-pack.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-star-pack",
+    "name": "Star Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2010/05/mig33-emoticon-star-pack.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-migbot-2",
+    "name": "Migbot 2",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2010/05/mig33-emoticon-migbot-2-pack.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-skeleton-pack",
+    "name": "Skeleton Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2010/05/mig33-emoticon-skeleton-pack.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-social-pack",
+    "name": "Social Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2011/01/mig33-emoticon-social-pack.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-christmas-pack-2010",
+    "name": "Christmas Pack 2010",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2010/12/mig33-emoticon-christmas-pack-2010.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-in-love-pack-2",
+    "name": "In Love Pack 2",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2010/10/mig33-emoticon-in-love-pack-2-and-daily.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-daily-pack",
+    "name": "Daily Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2010/10/mig33-emoticon-in-love-pack-2-and-daily.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-signs-pack-2",
+    "name": "Signs Pack 2",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2010/09/mig33-emoticon-signs-pack-2.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-football-fever-1",
+    "name": "Football Fever 1",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2010/06/mig33-emoticon-football-fever-1.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-football-fever-2",
+    "name": "Football Fever 2",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2010/06/football-fever-2.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-extra-pack-3",
+    "name": "Extra Pack 3",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2010/05/mig33-emoticon-extra-pack-3.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-computer-pack",
+    "name": "Computer Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2010/05/mig33-computer-emoticon-pack.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-dog-pack",
+    "name": "Dog Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2010/04/dog-pack-emoticon-set.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-halloween",
+    "name": "Halloween",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2009/10/halloween-emoticon-pack.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-diwali-2009",
+    "name": "Diwali 2009",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2009/10/new-diwali-2009-emot-pack-and-gifts.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-migbot",
+    "name": "MigBot",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2009/08/migbot-emot-pack-has-been-released.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-ramadan",
+    "name": "Ramadan",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2009/08/ramadan-emot-pack-has-been-released.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-default-pack",
+    "name": "Default Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2009/08/default-emot-pack-has-been-released.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-cool-pack",
+    "name": "Cool Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2009/09/animation-emot-pack-has-been-released.html",
+      "https://mig-info.blogspot.com/2010/07/new-emoticon-on-juli-2010.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-swifty-pack",
+    "name": "Swifty Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig33-news.blogspot.com/2009/09/animation-emot-pack-has-been-released.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-birthday-pack",
+    "name": "Birthday Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2010/07/new-again-3-emoticon.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-baby-animal-pack",
+    "name": "Baby Animal Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2010/07/new-again-3-emoticon.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-bad-boy-pack",
+    "name": "Bad Boy Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2010/07/new-again-3-emoticon.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-in-love-pack",
+    "name": "In Love Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2010/07/new-emoticon-on-juli-2010.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-cute-pack",
+    "name": "Cute Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2010/07/new-emoticon-on-juli-2010.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-sign-pack",
+    "name": "Sign Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2010/07/new-emoticon-on-juli-2010.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-zodiac-pack",
+    "name": "Zodiac Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2010/02/new-5-emoticon-again-in-2010.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-arrow-pack",
+    "name": "Arrow Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2010/02/new-5-emoticon-again-in-2010.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-heart-pack",
+    "name": "Heart Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2010/02/new-5-emoticon-again-in-2010.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-shortcode-pack",
+    "name": "Shortcode Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2010/02/new-5-emoticon-again-in-2010.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-cny-and-valentine-pack",
+    "name": "CNY and Valentine Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2010/02/new-5-emoticon-again-in-2010.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-flower-pack",
+    "name": "Flower Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2010/01/new-emoticon.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-extra-pack-2",
+    "name": "Extra Pack 2",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2010/01/new-emoticon.html"
+    ],
+    "category_evidence": "local_placement"
+  },
+  {
+    "id": "emotes-sport-pack",
+    "name": "Sport Pack",
+    "kind": "emoticon_pack",
+    "price": 200,
+    "description": "Historical pack name with one local placeholder emoticon. Original aliases and pack contents are unavailable.",
+    "category": "Emoticon Packs",
+    "name_evidence": "recovered_name",
+    "artwork_evidence": "recovered_atlas_placeholder",
+    "price_evidence": "local_test_price",
+    "source_urls": [
+      "https://mig-info.blogspot.com/2010/01/new-emoticon.html"
+    ],
+    "category_evidence": "local_placement"
+  }
+]

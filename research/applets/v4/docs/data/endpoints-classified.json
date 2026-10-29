@@ -1,0 +1,2565 @@
+{
+  "version": "4.62",
+  "build": ".000",
+  "original_jar_sha256": "dbf12ffbd44bc6e48d09cf35863736731c87c078877f76ed4b780a4dc5eff92c",
+  "scope": "Recovered client URL/path literals plus constructed transport/asset URLs and descriptor URLs. Not an exhaustive inventory of the historical server, or a statement of current availability.",
+  "counts": {
+    "raw_literals": 62,
+    "excluded_scheme_prefixes": 3,
+    "embedded_page_templates": 52,
+    "classified_url_path_literals": 59,
+    "constructed_or_descriptor_templates": 6
+  },
+  "literals": [
+    {
+      "id": "L001",
+      "literal": "/sites/index.php?c=account&a=get_history&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6636
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "account",
+      "action": "get_history",
+      "purpose": "Account history",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "account"
+        },
+        {
+          "name": "a",
+          "value_template": "get_history"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ]
+    },
+    {
+      "id": "L002",
+      "literal": "/sites/index.php?c=account&a=home&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6626
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "account",
+      "action": "home",
+      "purpose": "Account overview",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "account"
+        },
+        {
+          "name": "a",
+          "value_template": "home"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ]
+    },
+    {
+      "id": "L003",
+      "literal": "/sites/index.php?c=account&a=recharge_credit&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6646
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "account",
+      "action": "recharge_credit",
+      "purpose": "Recharge credit",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "account"
+        },
+        {
+          "name": "a",
+          "value_template": "recharge_credit"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ]
+    },
+    {
+      "id": "L004",
+      "literal": "/sites/index.php?c=account&v=midlet&a=transfer_credit",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 4379
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 5026
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6561
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6571
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "account",
+      "action": "transfer_credit",
+      "purpose": "Transfer credit page",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "account"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "a",
+          "value_template": "transfer_credit"
+        }
+      ]
+    },
+    {
+      "id": "L005",
+      "literal": "/sites/index.php?c=account&v=midlet&a=transfer_credit&recipient_username=%s",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 4369
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 5015
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6549
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "account",
+      "action": "transfer_credit",
+      "purpose": "Transfer credit page",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "account"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "a",
+          "value_template": "transfer_credit"
+        },
+        {
+          "name": "recipient_username",
+          "value_template": "%s"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "Private conversation uses peer username s.f(); participant submenu1000 uses selected name var65. Roster Transfer Credit uses aq.c (DISPLAY NAME) if non-null, not aq.e (mig33 username); this is actual code despite query parameter name. Credits menu and absent recipient use separate no-recipient route.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:3485",
+          "research/applets/v4/artifacts/normal-flow/aj.java:3832",
+          "research/applets/v4/artifacts/normal-flow/aj.java:4758"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:4369",
+          "research/applets/v4/artifacts/bytecode/aj.txt:5015",
+          "research/applets/v4/artifacts/bytecode/aj.txt:6549"
+        ]
+      }
+    },
+    {
+      "id": "L006",
+      "literal": "/sites/index.php?c=avatar&v=midlet&a=home",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6934
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "avatar",
+      "action": "home",
+      "purpose": "Avatar selection",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "avatar"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "a",
+          "value_template": "home"
+        }
+      ]
+    },
+    {
+      "id": "L007",
+      "literal": "/sites/index.php?c=bot&a=bot_list&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 7702
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "bot",
+      "action": "bot_list",
+      "purpose": "Games / bot list",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "bot"
+        },
+        {
+          "name": "a",
+          "value_template": "bot_list"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ]
+    },
+    {
+      "id": "L008",
+      "literal": "/sites/index.php?c=buzz&a=home&v=midlet%s",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6696
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "buzz",
+      "action": "home",
+      "purpose": "Buzz page",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "buzz"
+        },
+        {
+          "name": "a",
+          "value_template": "home"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet%s"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "Buzz substitutes whole suffix &cid=<selected contact aq.a>&pres=<selected contact aq.j>. cid is contact ID; pres is presence byte.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:4710"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:6696"
+        ],
+        "expanded_template": "/sites/index.php?c=buzz&a=home&v=midlet&cid={contact_id}&pres={presence}"
+      }
+    },
+    {
+      "id": "L009",
+      "literal": "/sites/index.php?c=call&a=home&v=midlet&f=call&number_to_call=%s",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 4413
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 4917
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 4928
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 7646
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 13842
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "call",
+      "action": "home",
+      "purpose": "Call setup page",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "call"
+        },
+        {
+          "name": "a",
+          "value_template": "home"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "f",
+          "value_template": "call"
+        },
+        {
+          "name": "number_to_call",
+          "value_template": "%s"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "Private chat: peer mobile s.c() when non-null, otherwise peer username s.f(). Roster Call: selected contact mobile. Participant submenu action106 also reads the CURRENT ROSTER selection mobile aq.d rather than var65; preserve that observed distinction. mig33:call(argument): raw argument.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:3419",
+          "research/applets/v4/artifacts/normal-flow/aj.java:3430",
+          "research/applets/v4/artifacts/normal-flow/aj.java:3820",
+          "research/applets/v4/artifacts/normal-flow/aj.java:4188",
+          "research/applets/v4/artifacts/normal-flow/aj.java:5252"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:4413",
+          "research/applets/v4/artifacts/bytecode/aj.txt:4917",
+          "research/applets/v4/artifacts/bytecode/aj.txt:4928",
+          "research/applets/v4/artifacts/bytecode/aj.txt:7646",
+          "research/applets/v4/artifacts/bytecode/aj.txt:13842"
+        ]
+      }
+    },
+    {
+      "id": "L010",
+      "literal": "/sites/index.php?c=chatroom&a=create&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6796
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "chatroom",
+      "action": "create",
+      "purpose": "Create chat room page",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "chatroom"
+        },
+        {
+          "name": "a",
+          "value_template": "create"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ]
+    },
+    {
+      "id": "L011",
+      "literal": "/sites/index.php?c=chatroom&a=search&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 5104
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6824
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/bc.txt",
+          "line": 4080
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "chatroom",
+      "action": "search",
+      "purpose": "Search chat rooms",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "chatroom"
+        },
+        {
+          "name": "a",
+          "value_template": "search"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ]
+    },
+    {
+      "id": "L012",
+      "literal": "/sites/index.php?c=chatroom&v=midlet&a=setup&roomName=%s",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 5061
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 5189
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 8406
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "chatroom",
+      "action": "setup",
+      "purpose": "Room information / settings",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "chatroom"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "a",
+          "value_template": "setup"
+        },
+        {
+          "name": "roomName",
+          "value_template": "%s"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "Room Info in current conversation uses s.b room name. Rooms-list Room Info and Change Chat Room Themes branch use selected room-list item .c; the latter does not use a separate theme route.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:3516",
+          "research/applets/v4/artifacts/normal-flow/aj.java:3584",
+          "research/applets/v4/artifacts/normal-flow/aj.java:3959"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:5061",
+          "research/applets/v4/artifacts/bytecode/aj.txt:5189",
+          "research/applets/v4/artifacts/bytecode/aj.txt:8406"
+        ]
+      }
+    },
+    {
+      "id": "L013",
+      "literal": "/sites/index.php?c=email&a=compose&v=midlet%s",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 7909
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 8229
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "email",
+      "action": "compose",
+      "purpose": "Compose mail",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "email"
+        },
+        {
+          "name": "a",
+          "value_template": "compose"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet%s"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "Send Email substitutes whole suffix &to=<selected contact mig33 username aq.e>. Compose Email substitutes EMPTY STRING, removing%s. Empty string is distinct from null (null would leave%s literal).",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:4007",
+          "research/applets/v4/artifacts/normal-flow/aj.java:4114"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:7909",
+          "research/applets/v4/artifacts/bytecode/aj.txt:8229"
+        ],
+        "expanded_templates": [
+          "/sites/index.php?c=email&a=compose&v=midlet&to={username}",
+          "/sites/index.php?c=email&a=compose&v=midlet"
+        ]
+      }
+    },
+    {
+      "id": "L014",
+      "literal": "/sites/index.php?c=group&v=midlet&a=add_to_group&roomName=%s",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 5077
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6806
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 8522
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "group",
+      "action": "add_to_group",
+      "purpose": "Link / add room to a group",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "group"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "a",
+          "value_template": "add_to_group"
+        },
+        {
+          "name": "roomName",
+          "value_template": "%s"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "Replace first %s using y.b with current conversation s.b room name, then resolve resulting relative path with y.e(...,null).",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:3529",
+          "research/applets/v4/artifacts/normal-flow/aj.java:3890",
+          "research/applets/v4/artifacts/normal-flow/aj.java:4650"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:5077",
+          "research/applets/v4/artifacts/bytecode/aj.txt:6806",
+          "research/applets/v4/artifacts/bytecode/aj.txt:8522"
+        ]
+      }
+    },
+    {
+      "id": "L015",
+      "literal": "/sites/index.php?c=group&v=midlet&a=home",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 5445
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "group",
+      "action": "home",
+      "purpose": "Group home",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "group"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "a",
+          "value_template": "home"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "Append &cid=<current conversation s.a>, the community/group ID. list_chatrooms and members append after y.e(...,null); view_forum and home concatenate before y.e. No query delimiter is synthesized beyond the explicit &cid=.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:3676"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:5445"
+        ],
+        "expanded_template": "/sites/index.php?c=group&v=midlet&a=home&cid={community_id}"
+      }
+    },
+    {
+      "id": "L016",
+      "literal": "/sites/index.php?c=group&v=midlet&a=list_chatrooms",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 5350
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "group",
+      "action": "list_chatrooms",
+      "purpose": "Group chat rooms",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "group"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "a",
+          "value_template": "list_chatrooms"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "Append &cid=<current conversation s.a>, the community/group ID. list_chatrooms and members append after y.e(...,null); view_forum and home concatenate before y.e. No query delimiter is synthesized beyond the explicit &cid=.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:3655"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:5350"
+        ],
+        "expanded_template": "/sites/index.php?c=group&v=midlet&a=list_chatrooms&cid={community_id}"
+      }
+    },
+    {
+      "id": "L017",
+      "literal": "/sites/index.php?c=group&v=midlet&a=list_groups_home&e=3",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 3090
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 3155
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 3203
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 3275
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 8540
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "group",
+      "action": "list_groups_home",
+      "purpose": "Discover groups",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "group"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "a",
+          "value_template": "list_groups_home"
+        },
+        {
+          "name": "e",
+          "value_template": "3"
+        }
+      ]
+    },
+    {
+      "id": "L018",
+      "literal": "/sites/index.php?c=group&v=midlet&a=list_my_groups&e=3",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 2807
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 7295
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/bj.txt",
+          "line": 4623
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "group",
+      "action": "list_my_groups",
+      "purpose": "My groups",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "group"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "a",
+          "value_template": "list_my_groups"
+        },
+        {
+          "name": "e",
+          "value_template": "3"
+        }
+      ]
+    },
+    {
+      "id": "L019",
+      "literal": "/sites/index.php?c=group&v=midlet&a=members",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 5382
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "group",
+      "action": "members",
+      "purpose": "Group members",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "group"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "a",
+          "value_template": "members"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "Append &cid=<current conversation s.a>, the community/group ID. list_chatrooms and members append after y.e(...,null); view_forum and home concatenate before y.e. No query delimiter is synthesized beyond the explicit &cid=.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:3665"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:5382"
+        ],
+        "expanded_template": "/sites/index.php?c=group&v=midlet&a=members&cid={community_id}"
+      }
+    },
+    {
+      "id": "L020",
+      "literal": "/sites/index.php?c=group&v=midlet&a=view_forum",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 5414
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "group",
+      "action": "view_forum",
+      "purpose": "Group forum",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "group"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "a",
+          "value_template": "view_forum"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "Append &cid=<current conversation s.a>, the community/group ID. list_chatrooms and members append after y.e(...,null); view_forum and home concatenate before y.e. No query delimiter is synthesized beyond the explicit &cid=.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:3671"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:5414"
+        ],
+        "expanded_template": "/sites/index.php?c=group&v=midlet&a=view_forum&cid={community_id}"
+      }
+    },
+    {
+      "id": "L021",
+      "literal": "/sites/index.php?c=help&a=contact_us&v=midlet%s",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6884
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "help",
+      "action": "contact_us",
+      "purpose": "Contact support page",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "help"
+        },
+        {
+          "name": "a",
+          "value_template": "contact_us"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet%s"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "Contact Us substitutes whole suffix &to=<current signed-in username RMS1>. It is NOT a recipient field supplied by user input.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:4593"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:6884"
+        ],
+        "expanded_template": "/sites/index.php?c=help&a=contact_us&v=midlet&to={self_username}"
+      }
+    },
+    {
+      "id": "L022",
+      "literal": "/sites/index.php?c=help&a=main&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 7712
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "help",
+      "action": "main",
+      "purpose": "Help home",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "help"
+        },
+        {
+          "name": "a",
+          "value_template": "main"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ]
+    },
+    {
+      "id": "L023",
+      "literal": "/sites/index.php?c=im&a=setup_im&im=%s&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 5708
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 7927
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "im",
+      "action": "setup_im",
+      "purpose": "External IM account setup",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "im"
+        },
+        {
+          "name": "a",
+          "value_template": "setup_im"
+        },
+        {
+          "name": "im",
+          "value_template": "%s"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "Replace %s with decimal selected external service ID h(ao).d, then y.e(result,null) resolves the base. Used for unconfigured service and Edit Login.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:3253",
+          "research/applets/v4/artifacts/normal-flow/aj.java:4098"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:5708",
+          "research/applets/v4/artifacts/bytecode/aj.txt:7927"
+        ]
+      }
+    },
+    {
+      "id": "L024",
+      "literal": "/sites/index.php?c=leaderboard&v=midlet&a=home",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 8468
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "leaderboard",
+      "action": "home",
+      "purpose": "Leaderboard",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "leaderboard"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "a",
+          "value_template": "home"
+        }
+      ]
+    },
+    {
+      "id": "L025",
+      "literal": "/sites/index.php?c=location&a=checkin&v=midlet&f=",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 21935
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "location",
+      "action": "checkin",
+      "purpose": "Location check-in page",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "location"
+        },
+        {
+          "name": "a",
+          "value_template": "checkin"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "f",
+          "value_template": ""
+        }
+      ],
+      "construction_notes": {
+        "expansion": "Append raw l(String) argument after f=. Self-menu Check In passes literal HOME; mig33:checkIn(argument) passes its argument unchanged. Whole URL later has ASCII spaces replaced with%20.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:7738"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:21935"
+        ],
+        "expanded_templates": [
+          "/sites/index.php?c=location&a=checkin&v=midlet&f=HOME",
+          "/sites/index.php?c=location&a=checkin&v=midlet&f={bridge_argument}"
+        ]
+      }
+    },
+    {
+      "id": "L026",
+      "literal": "/sites/index.php?c=lookout&a=home&v=midlet%s",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 4985
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6664
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "lookout",
+      "action": "home",
+      "purpose": "Lookout page",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "lookout"
+        },
+        {
+          "name": "a",
+          "value_template": "home"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet%s"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "Whole suffix replacement, not scalar: &cid=<contactID>&pres=<presenceByte>. Roster branch uses aq.a and aq.j. Private conversation branch uses s.e() (peer contact ID) but still cached aq.j for presence; do not silently substitute a newly inferred peer presence.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:3473",
+          "research/applets/v4/artifacts/normal-flow/aj.java:4724"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:4985",
+          "research/applets/v4/artifacts/bytecode/aj.txt:6664"
+        ],
+        "expanded_template": "/sites/index.php?c=lookout&a=home&v=midlet&cid={contact_id}&pres={presence}"
+      }
+    },
+    {
+      "id": "L027",
+      "literal": "/sites/index.php?c=merchant&v=midlet&a=dashboard",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6874
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "merchant",
+      "action": "dashboard",
+      "purpose": "Merchant dashboard",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "merchant"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "a",
+          "value_template": "dashboard"
+        }
+      ]
+    },
+    {
+      "id": "L028",
+      "literal": "/sites/index.php?c=migworld&a=get_mobpage&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 8458
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "migworld",
+      "action": "get_mobpage",
+      "purpose": "migWorld / discovery page",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "migworld"
+        },
+        {
+          "name": "a",
+          "value_template": "get_mobpage"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ]
+    },
+    {
+      "id": "L029",
+      "literal": "/sites/index.php?c=migworld&v=midlet&a=get_mobpage",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 3131
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 3227
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 3251
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6912
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 8512
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/k.txt",
+          "line": 1119
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "migworld",
+      "action": "get_mobpage",
+      "purpose": "migWorld / discovery page",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "migworld"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "a",
+          "value_template": "get_mobpage"
+        }
+      ]
+    },
+    {
+      "id": "L030",
+      "literal": "/sites/index.php?c=photo&a=home&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 5599
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "photo",
+      "action": "home",
+      "purpose": "Photos / scrapbook page",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "photo"
+        },
+        {
+          "name": "a",
+          "value_template": "home"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "From My Photo when aO==55 (display picture context) opens this page; selecting returned picture sends display-picture update and restores Friends. No username query is appended in this branch.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:3329"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:5599"
+        ]
+      }
+    },
+    {
+      "id": "L031",
+      "literal": "/sites/index.php?c=photo&v=midlet&a=home&f=sendfromphoto",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 5589
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "photo",
+      "action": "home",
+      "purpose": "Photos / scrapbook page",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "photo"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "a",
+          "value_template": "home"
+        },
+        {
+          "name": "f",
+          "value_template": "sendfromphoto"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "From My Photo when aO!=55 opens this page. Before navigation store current tab type in bl and recipient/chat key in bm (group tab4 uses s.b; others s.h()). Selected photo/link or mig33:sendScrapbookPhoto(argument) later sends message content type5 to saved conversation; this page request itself has no POST body.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:3325"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:5589"
+        ]
+      }
+    },
+    {
+      "id": "L032",
+      "literal": "/sites/index.php?c=photo&v=midlet&username=%s&a=home",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6732
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6744
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6922
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/bc.txt",
+          "line": 8488
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "photo",
+      "action": "home",
+      "purpose": "Photos / scrapbook page",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "photo"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "username",
+          "value_template": "%s"
+        },
+        {
+          "name": "a",
+          "value_template": "home"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "My Photos uses current username RMS1. View Photos uses selected contact aq.e when non-null, otherwise current username. IMPORTANT opcode504 fallback (normal bc1537) calls y.e(template,null): if Q exists it sends the URL with literal%s UNREPLACED. Record this as observed client behavior, not a missing inferred username.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:4570",
+          "research/applets/v4/artifacts/normal-flow/aj.java:4687",
+          "research/applets/v4/artifacts/normal-flow/aj.java:4697",
+          "research/applets/v4/artifacts/normal-flow/bc.java:1537"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/bc.txt:8488",
+          "research/applets/v4/artifacts/bytecode/aj.txt:6732",
+          "research/applets/v4/artifacts/bytecode/aj.txt:6744",
+          "research/applets/v4/artifacts/bytecode/aj.txt:6922"
+        ],
+        "null_substitution_case": "Opcode504 response with no field1 URL and saved request field5==0; sends literal username=%s if Q non-null."
+      }
+    },
+    {
+      "id": "L033",
+      "literal": "/sites/index.php?c=photos&a=wall&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 8492
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "photos",
+      "action": "wall",
+      "purpose": "migPhotos wall",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "photos"
+        },
+        {
+          "name": "a",
+          "value_template": "wall"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ]
+    },
+    {
+      "id": "L034",
+      "literal": "/sites/index.php?c=profile&a=edit&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 7692
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "profile",
+      "action": "edit",
+      "purpose": "Edit profile page",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "profile"
+        },
+        {
+          "name": "a",
+          "value_template": "edit"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ]
+    },
+    {
+      "id": "L035",
+      "literal": "/sites/index.php?c=profile&a=home&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 2783
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 3066
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 3179
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6944
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "profile",
+      "action": "home",
+      "purpose": "Own or selected user profile",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "profile"
+        },
+        {
+          "name": "a",
+          "value_template": "home"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ]
+    },
+    {
+      "id": "L036",
+      "literal": "/sites/index.php?c=profile&a=search&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 8502
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "profile",
+      "action": "search",
+      "purpose": "Search people",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "profile"
+        },
+        {
+          "name": "a",
+          "value_template": "search"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ]
+    },
+    {
+      "id": "L037",
+      "literal": "/sites/index.php?c=profile&a=user_blog_posts&v=midlet&username=%s",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 8478
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "profile",
+      "action": "user_blog_posts",
+      "purpose": "User blog posts",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "profile"
+        },
+        {
+          "name": "a",
+          "value_template": "user_blog_posts"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "username",
+          "value_template": "%s"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "My Blog substitutes current signed-in username from RMS profile field1 via y.b, then resolves base via y.e(...,null).",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:3916"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:8478"
+        ]
+      }
+    },
+    {
+      "id": "L038",
+      "literal": "/sites/index.php?c=profile&v=midlet&a=home&username=%s",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 4487
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 4963
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 8173
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "profile",
+      "action": "home",
+      "purpose": "Own or selected user profile",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "profile"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "a",
+          "value_template": "home"
+        },
+        {
+          "name": "username",
+          "value_template": "%s"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "Private User Profile: peer username s.f(); participant submenu102: selected participant name var65; roster View Profile/User Profiles/User Profile: current contact mig33 username t.e.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:3449",
+          "research/applets/v4/artifacts/normal-flow/aj.java:3789",
+          "research/applets/v4/artifacts/normal-flow/aj.java:4033"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:4487",
+          "research/applets/v4/artifacts/bytecode/aj.txt:4963",
+          "research/applets/v4/artifacts/bytecode/aj.txt:8173"
+        ]
+      }
+    },
+    {
+      "id": "L039",
+      "literal": "/sites/index.php?c=report&a=report_abuse&v=midlet&type=4&subject=Chatroom&subject_id=%s",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 5249
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "report",
+      "action": "report_abuse",
+      "purpose": "Report room / group-chat abuse page",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "report"
+        },
+        {
+          "name": "a",
+          "value_template": "report_abuse"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "type",
+          "value_template": "4"
+        },
+        {
+          "name": "subject",
+          "value_template": "Chatroom"
+        },
+        {
+          "name": "subject_id",
+          "value_template": "%s"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "Chatroom Report Abuse uses current conversation s.b (room name) for%s.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:3618"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:5249"
+        ]
+      }
+    },
+    {
+      "id": "L040",
+      "literal": "/sites/index.php?c=report&a=report_abuse&v=midlet&type=4&subject=Group%20Chat&subject_id=%s",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 5236
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "report",
+      "action": "report_abuse",
+      "purpose": "Report room / group-chat abuse page",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "report"
+        },
+        {
+          "name": "a",
+          "value_template": "report_abuse"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "type",
+          "value_template": "4"
+        },
+        {
+          "name": "subject",
+          "value_template": "Group%20Chat"
+        },
+        {
+          "name": "subject_id",
+          "value_template": "%s"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "Group-chat Report Abuse uses current conversation s.b (group chat identifier) for%s. Group%20Chat is already escaped in literal; no additional component encoding.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:3603"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:5236"
+        ]
+      }
+    },
+    {
+      "id": "L041",
+      "literal": "/sites/index.php?c=settings&a=block_list&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6834
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "settings",
+      "action": "block_list",
+      "purpose": "Manage blocked users",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "settings"
+        },
+        {
+          "name": "a",
+          "value_template": "block_list"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ]
+    },
+    {
+      "id": "L042",
+      "literal": "/sites/index.php?c=settings&a=call_by_name&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6844
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "settings",
+      "action": "call_by_name",
+      "purpose": "Call-by-name settings",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "settings"
+        },
+        {
+          "name": "a",
+          "value_template": "call_by_name"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ]
+    },
+    {
+      "id": "L043",
+      "literal": "/sites/index.php?c=settings&a=change_password&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6616
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "settings",
+      "action": "change_password",
+      "purpose": "Change password page",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "settings"
+        },
+        {
+          "name": "a",
+          "value_template": "change_password"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ]
+    },
+    {
+      "id": "L044",
+      "literal": "/sites/index.php?c=settings&a=change_tab_order&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6596
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "settings",
+      "action": "change_tab_order",
+      "purpose": "Tab-order settings",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "settings"
+        },
+        {
+          "name": "a",
+          "value_template": "change_tab_order"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ]
+    },
+    {
+      "id": "L045",
+      "literal": "/sites/index.php?c=settings&a=chat_privacy&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 8592
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "settings",
+      "action": "chat_privacy",
+      "purpose": "Chat privacy settings",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "settings"
+        },
+        {
+          "name": "a",
+          "value_template": "chat_privacy"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ]
+    },
+    {
+      "id": "L046",
+      "literal": "/sites/index.php?c=settings&a=profile_privacy_settings&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6864
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "settings",
+      "action": "profile_privacy_settings",
+      "purpose": "Profile privacy settings",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "settings"
+        },
+        {
+          "name": "a",
+          "value_template": "profile_privacy_settings"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ]
+    },
+    {
+      "id": "L047",
+      "literal": "/sites/index.php?c=settings&a=view_update_settings&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6854
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "settings",
+      "action": "view_update_settings",
+      "purpose": "Activity update settings",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "settings"
+        },
+        {
+          "name": "a",
+          "value_template": "view_update_settings"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ]
+    },
+    {
+      "id": "L048",
+      "literal": "/sites/index.php?c=settings&v=midlet&a=change_mobile",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6606
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "settings",
+      "action": "change_mobile",
+      "purpose": "Change mobile number page",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "settings"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "a",
+          "value_template": "change_mobile"
+        }
+      ]
+    },
+    {
+      "id": "L049",
+      "literal": "/sites/index.php?c=sms&a=home&v=midlet&f=sms&to_number=%s",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 4389
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 4892
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 4903
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 7579
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 13832
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "sms",
+      "action": "home",
+      "purpose": "Compose SMS page",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "sms"
+        },
+        {
+          "name": "a",
+          "value_template": "home"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "f",
+          "value_template": "sms"
+        },
+        {
+          "name": "to_number",
+          "value_template": "%s"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "Private chat: peer mobile s.c() when non-null, otherwise peer mig33 username s.f(). Roster SMS: selected contact mobile aq.d. Participant submenu action108: selected participant name var65. mig33:sms(argument): raw argument. Despite parameter name to_number, value can therefore be a username.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:3396",
+          "research/applets/v4/artifacts/normal-flow/aj.java:3407",
+          "research/applets/v4/artifacts/normal-flow/aj.java:3827",
+          "research/applets/v4/artifacts/normal-flow/aj.java:4221",
+          "research/applets/v4/artifacts/normal-flow/aj.java:5257"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:4389",
+          "research/applets/v4/artifacts/bytecode/aj.txt:4892",
+          "research/applets/v4/artifacts/bytecode/aj.txt:4903",
+          "research/applets/v4/artifacts/bytecode/aj.txt:7579",
+          "research/applets/v4/artifacts/bytecode/aj.txt:13832"
+        ]
+      }
+    },
+    {
+      "id": "L050",
+      "literal": "/sites/index.php?c=store&a=home&e=3&ty=5&v=midlet",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 7305
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "store",
+      "action": "home",
+      "purpose": "Gift or theme store",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "store"
+        },
+        {
+          "name": "a",
+          "value_template": "home"
+        },
+        {
+          "name": "e",
+          "value_template": "3"
+        },
+        {
+          "name": "ty",
+          "value_template": "5"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        }
+      ]
+    },
+    {
+      "id": "L051",
+      "literal": "/sites/index.php?c=store&v=midlet&a=home&e=3&ty=1&username=%s",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 4521
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 4974
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 8209
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "store",
+      "action": "home",
+      "purpose": "Gift or theme store",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "store"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "a",
+          "value_template": "home"
+        },
+        {
+          "name": "e",
+          "value_template": "3"
+        },
+        {
+          "name": "ty",
+          "value_template": "1"
+        },
+        {
+          "name": "username",
+          "value_template": "%s"
+        }
+      ],
+      "construction_notes": {
+        "expansion": "Give a Gift: private peer username s.f(), participant submenu100 selected name var65, or selected roster contact mig33 username aq.e.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:3461",
+          "research/applets/v4/artifacts/normal-flow/aj.java:3779",
+          "research/applets/v4/artifacts/normal-flow/aj.java:4013"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:4521",
+          "research/applets/v4/artifacts/bytecode/aj.txt:4974",
+          "research/applets/v4/artifacts/bytecode/aj.txt:8209"
+        ]
+      }
+    },
+    {
+      "id": "L052",
+      "literal": "/sites/index.php?c=store&v=midlet&a=main&id=111",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 5114
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6902
+        }
+      ],
+      "kind": "embedded_page_template",
+      "controller": "store",
+      "action": "main",
+      "purpose": "Store home",
+      "base": "WEB_BASE derived from login response 203 field 26",
+      "initial_application_method": "GET",
+      "delivery": "922/923 over gateway, or direct HTTP according to transport state",
+      "response": "Server-provided markup rendered by the embedded browser",
+      "query_template_components": [
+        {
+          "name": "c",
+          "value_template": "store"
+        },
+        {
+          "name": "v",
+          "value_template": "midlet"
+        },
+        {
+          "name": "a",
+          "value_template": "main"
+        },
+        {
+          "name": "id",
+          "value_template": "111"
+        }
+      ]
+    },
+    {
+      "id": "L054",
+      "literal": "http://gateway.mig33.com/",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 11131
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/bc.txt",
+          "line": 140
+        }
+      ],
+      "kind": "binary_http_gateway",
+      "initial_application_method": "GET polling / POST packet bytes",
+      "response": "Binary packet stream"
+    },
+    {
+      "id": "L055",
+      "literal": "http://www.mig33.com/sites/c=migworld&v=midlet&a=new_home",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/bl.txt",
+          "line": 1048
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/bl.txt",
+          "line": 1061
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/bl.txt",
+          "line": 1086
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/bl.txt",
+          "line": 1091
+        }
+      ],
+      "kind": "internal_browser_home_key",
+      "initial_application_method": "No network request in the recovered initialization call site",
+      "response": "Local document/cache/history key; exact unusual URL-shaped string retained",
+      "construction_notes": {
+        "expansion": "Synthetic/internal home-document cache key in bl.c(); lacks index.php? and is NOT a normal HTTP fetch in that method. It creates/caches a local s model and updates browser history. Distinguish from server-supplied actual home URL.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/bl.java:351",
+          "research/applets/v4/artifacts/normal-flow/bl.java:353",
+          "research/applets/v4/artifacts/normal-flow/bl.java:361",
+          "research/applets/v4/artifacts/normal-flow/bl.java:362"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/bl.txt:1048",
+          "research/applets/v4/artifacts/bytecode/bl.txt:1061",
+          "research/applets/v4/artifacts/bytecode/bl.txt:1086",
+          "research/applets/v4/artifacts/bytecode/bl.txt:1091"
+        ],
+        "initial_request": "no request at this call site"
+      }
+    },
+    {
+      "id": "L056",
+      "literal": "http://www.mig33.com/sites/index.php?c=help&v=wap&a=apn",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 12904
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 13215
+        }
+      ],
+      "kind": "external_browser",
+      "initial_application_method": "platformRequest; handset browser chooses HTTP behavior",
+      "response": "Connection help page",
+      "construction_notes": {
+        "expansion": "Passed to native browser/platformRequest by aj.k. Client does not implement the browser HTTP transaction; do not treat this as an embedded922 form or infer a POST body.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:1615",
+          "research/applets/v4/artifacts/normal-flow/aj.java:1683"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:12904",
+          "research/applets/v4/artifacts/bytecode/aj.txt:13215"
+        ],
+        "initial_request": "native browser delegation"
+      }
+    },
+    {
+      "id": "L057",
+      "literal": "http://www.mig33.com/sites/index.php?c=help&v=wap&a=tc",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 11061
+        }
+      ],
+      "kind": "external_browser",
+      "initial_application_method": "platformRequest; handset browser chooses HTTP behavior",
+      "response": "Terms and conditions page",
+      "construction_notes": {
+        "expansion": "Passed to native browser/platformRequest by aj.k. Client does not implement the browser HTTP transaction; do not treat this as an embedded922 form or infer a POST body.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:2649"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:11061"
+        ],
+        "initial_request": "native browser delegation"
+      }
+    },
+    {
+      "id": "L058",
+      "literal": "http://www.mig33.com/sites/index.php?c=registration_api&v=midlet&a=check_username&username=%s",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 10868
+        }
+      ],
+      "kind": "registration_check",
+      "initial_application_method": "GET through local job 1005",
+      "response": "Raw text consumed by the username suggestion parser",
+      "construction_notes": {
+        "expansion": "Replace first %s directly with the Username field (var22). Uses y.b rather than y.e, so does not depend on aj.Q. Username editor normally lowercases input. No percent-encoding in substitution. bc.g queues1005 and u performs direct GET.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:2640"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:10868"
+        ],
+        "initial_request": "GET"
+      }
+    },
+    {
+      "id": "L059",
+      "literal": "http://www.mig33.com/sites/lib/ga_midlet.php?",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/bj.txt",
+          "line": 1468
+        }
+      ],
+      "kind": "analytics_prefix",
+      "initial_application_method": "GET through separate analytics client",
+      "response": "Response body 1 disables tracking"
+    },
+    {
+      "id": "L060",
+      "literal": "http://www.mig33.com/sites/resources/language/v4.6/l",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 6993
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 9731
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 11210
+        }
+      ],
+      "kind": "language_catalog",
+      "initial_application_method": "GET through local job 1001",
+      "response": "Binary packet 1002 containing language triples",
+      "construction_notes": {
+        "expansion": "Change Language requests this absolute language-list URL via bc.b→1001. u.a(short,String,false) resolves against gateway base if needed, then direct GET, parsing response as a language-list packet1002.",
+        "source_refs": [
+          "research/applets/v4/artifacts/normal-flow/aj.java:2124",
+          "research/applets/v4/artifacts/normal-flow/aj.java:2679",
+          "research/applets/v4/artifacts/normal-flow/aj.java:4530"
+        ],
+        "original_bytecode_refs": [
+          "research/applets/v4/artifacts/bytecode/aj.txt:6993",
+          "research/applets/v4/artifacts/bytecode/aj.txt:9731",
+          "research/applets/v4/artifacts/bytecode/aj.txt:11210"
+        ],
+        "initial_request": "GET"
+      }
+    }
+  ],
+  "constructed_and_descriptor_urls": [
+    {
+      "id": "G001",
+      "template": "socket://gateway.mig33.com:25",
+      "kind": "binary_tcp_gateway",
+      "construction": "Default host and port; manual/saved settings can override.",
+      "references": [
+        "research/applets/v4/artifacts/normal-flow/bc.java:125",
+        "research/applets/v4/artifacts/normal-flow/u.java:119"
+      ]
+    },
+    {
+      "id": "G002",
+      "template": "socket://gateway.mig33.com:9119",
+      "kind": "binary_tcp_gateway",
+      "construction": "Connection test switches between ports 25 and 9119 for its second attempt.",
+      "references": [
+        "research/applets/v4/artifacts/normal-flow/bc.java:459"
+      ]
+    },
+    {
+      "id": "G003",
+      "template": "{HTTP_GATEWAY}{session}",
+      "kind": "binary_http_session_gateway",
+      "construction": "Append session directly except requests 200, 100, 2, 904; base retained when session is null. GET polls.",
+      "references": [
+        "research/applets/v4/artifacts/normal-flow/u.java:505"
+      ]
+    },
+    {
+      "id": "G004",
+      "template": "{ASSET_BASE}{assetId}?w={width}&h={height}&a=1&c=1",
+      "kind": "dynamic_image",
+      "construction": "Base from login 203 tag 23, stored settings tag 9. IDs beginning http pass through unchanged. A second builder uses G for both dimensions.",
+      "references": [
+        "research/applets/v4/artifacts/normal-flow/aj.java:6306"
+      ]
+    },
+    {
+      "id": "D001",
+      "template": "http://www.mig33.com/midlet/member/c_info.php?awtrack=wap",
+      "kind": "midlet_install_notification",
+      "construction": "MIDlet-Install-Notify descriptor value; handled by the device application manager, not app network code.",
+      "references": [
+        "research/applets/v4/artifacts/extracted/META-INF/MANIFEST.MF",
+        "research/applets/v4/artifacts/original/mig33-4.62.jad"
+      ]
+    },
+    {
+      "id": "D002",
+      "template": "http://www.mig33.com/wap2/v4_60/24x24/mig33v46.jar",
+      "kind": "jar_distribution",
+      "construction": "MIDlet-Jar-URL in the JAD; installation/distribution URL, not a runtime app API.",
+      "references": [
+        "research/applets/v4/artifacts/original/mig33-4.62.jad"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "literal": "http://",
+      "reason": "Scheme prefix, not a complete endpoint",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 10821
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+          "line": 10841
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/bc.txt",
+          "line": 1482
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/bc.txt",
+          "line": 1487
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/bc.txt",
+          "line": 4860
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/bc.txt",
+          "line": 5624
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/u.txt",
+          "line": 1659
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/u.txt",
+          "line": 1664
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/y.txt",
+          "line": 10888
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/y.txt",
+          "line": 11160
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/y.txt",
+          "line": 11702
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/y.txt",
+          "line": 11719
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/y.txt",
+          "line": 11777
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/y.txt",
+          "line": 11808
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/y.txt",
+          "line": 11813
+        }
+      ]
+    },
+    {
+      "literal": "https://",
+      "reason": "Scheme prefix, not a complete endpoint",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/y.txt",
+          "line": 11723
+        },
+        {
+          "path": "research/applets/v4/artifacts/bytecode/y.txt",
+          "line": 11768
+        }
+      ]
+    },
+    {
+      "literal": "socket://",
+      "reason": "Scheme prefix, not a complete endpoint",
+      "references": [
+        {
+          "path": "research/applets/v4/artifacts/bytecode/u.txt",
+          "line": 299
+        }
+      ]
+    }
+  ]
+}

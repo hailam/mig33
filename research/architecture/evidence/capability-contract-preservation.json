@@ -1,0 +1,240 @@
+{
+  "baseline_archive": "/tmp/mig33-before-capability-refactor-20261029.tgz",
+  "baseline_sha256": "99522dd1b6603fb336d7b4058b506ec115c7c4e69d048ac8ccb4f5134c5d3092",
+  "protected_files": [
+    {
+      "path": "internal/adapters/httpapi/openapi.gen.go",
+      "sha256": "684b57f0ff4d556b02a29fc183928dda3f0276f4db0ed2f87202b8394577f3ee"
+    },
+    {
+      "path": "internal/adapters/httpapi/openapi_test.go",
+      "sha256": "ecd7ff7645d3531c73583f4c9e71417a32880e533986784babc1234ec230077c"
+    },
+    {
+      "path": "internal/adapters/sqlite/sqlc/models.go",
+      "sha256": "d504eca60fbb2707953aae93a27359f415c568a8a577c1f5362871669e9fa063"
+    },
+    {
+      "path": "internal/adapters/sqlite/sqlc/identity.sql.go",
+      "sha256": "b53f0f28f4b5ef3267cd89c94dae01fd6d3e21025b24d59db87d3b9abd75b60e"
+    },
+    {
+      "path": "internal/adapters/sqlite/sqlc/reports.sql.go",
+      "sha256": "5a09af67cb303dd2bbfbe59811286dda3c03093516b6679a48c1a68adcb680f6"
+    },
+    {
+      "path": "internal/adapters/sqlite/sqlc/db.go",
+      "sha256": "5356c90d31993bf24bc6e59578cfa9fa8ab1191c3285259a2a9814a21113d7db"
+    },
+    {
+      "path": "internal/adapters/sqlite/sqlc/contacts.sql.go",
+      "sha256": "69939b7b4605d0b22d25adbb46ab065016a1971add3d639adc92a5b700c5b2e0"
+    },
+    {
+      "path": "internal/adapters/sqlite/sqlc/commerce.sql.go",
+      "sha256": "b557ab038f0149a8288c13119966df537e4bca7ceb9dcd1619d1d535bdb25f0d"
+    },
+    {
+      "path": "internal/adapters/sqlite/sqlc/rooms.sql.go",
+      "sha256": "e895f760a5c576c23ed0beadee7df12a9e08ec38cf4132d04e00d056d96898a2"
+    },
+    {
+      "path": "internal/adapters/sqlite/sqlc/room_completion.sql.go",
+      "sha256": "73d8571b9503d69312f51ed82653ad6673a2f248d0db762784e779f822c4d1c7"
+    },
+    {
+      "path": "internal/adapters/sqlite/sqlc/community.sql.go",
+      "sha256": "31da019c82b69debc9571bcd8189e61ac0050c36fd8d07d5ff45141fcbe8f2cc"
+    },
+    {
+      "path": "internal/adapters/sqlite/sqlc/groups.sql.go",
+      "sha256": "cd1ccbeb812b4cb9fce320b99822c0dd5b6ba92a7b31ca4441b52600b03f9a90"
+    },
+    {
+      "path": "internal/adapters/sqlite/sqlc/messages.sql.go",
+      "sha256": "8042b099c718c74e73ebac1e2ef59c9cef70345c62a78037dd705a2ac4a65b2c"
+    },
+    {
+      "path": "internal/adapters/sqlite/sqlc/blocks.sql.go",
+      "sha256": "abe89052fc238a50fa929366c7dd258f720e0790f341edcd60810dbe0da45ad3"
+    },
+    {
+      "path": "internal/adapters/sqlite/sqlc/services.sql.go",
+      "sha256": "f7d6a2d751ed2b98db27ff753cf08df0b65221b7602fc1583eeaac05e57a74d7"
+    },
+    {
+      "path": "internal/adapters/sqlite/sqlc/querier.go",
+      "sha256": "35c4f02038b872ea1befe474393ad537ccaaf772b3d3c2bc3e2a487f0f0aff95"
+    },
+    {
+      "path": "internal/adapters/sqlite/sqlc/room_settings.sql.go",
+      "sha256": "e13fe806146f2df61de47711fbcc4e8449e481b58a9b7e9c0571c5efc60c43cd"
+    },
+    {
+      "path": "internal/adapters/sqlite/migrations/migrate_test.go",
+      "sha256": "d0b2ef97f4e5fd03b4911478d28cc88ccfb65b385d6dd0bc8016192c83c697de"
+    },
+    {
+      "path": "internal/adapters/sqlite/migrations/migrate.go",
+      "sha256": "5a833422a8f2fe55f09bc631fc7075df33491e20b2bccec35190d51858ee5b70"
+    },
+    {
+      "path": "api/oapi-codegen.yaml",
+      "sha256": "f3921f8336b075bab0bd4cd02a0eb7b00ba6d76ea4a935e8708630623648102b"
+    },
+    {
+      "path": "api/openapi.yaml",
+      "sha256": "d6b38dc137c1606d12db25fd1eb7149ae43266c1eb3f2dc18c19e8a98d1fee06"
+    },
+    {
+      "path": "db/schema.sql",
+      "sha256": "e8c51416523d88c7e1677e1cfcd0e70d279a696e40fb2669924eb20e44d2851b"
+    },
+    {
+      "path": "db/queries/identity.sql",
+      "sha256": "269b28e6ff494f6940b6f8317cd9f18ca1c4da05b7952153cc2fa5ce5bfd64db"
+    },
+    {
+      "path": "db/queries/contacts.sql",
+      "sha256": "c665d3860e3f0cc020b3369b4c58e4fba3773eb01df2e4745770252c2ded2b6f"
+    },
+    {
+      "path": "db/queries/room_settings.sql",
+      "sha256": "850bc3a0f2a24a6ad874efd61ffff78921c53a468dc1ef0d3a804d50bfacd5e4"
+    },
+    {
+      "path": "db/queries/groups.sql",
+      "sha256": "2639714e2b94e4b7aa4c1a0c9102dc007c6cd16f11c92407663f04530249207b"
+    },
+    {
+      "path": "db/queries/rooms.sql",
+      "sha256": "ebf0d535416a0a30226f391313164f8d327dc189e69458e929accd0989880ae5"
+    },
+    {
+      "path": "db/queries/messages.sql",
+      "sha256": "7959af7ac8504252496febc77982f28b491b594fccc750a59f306e1592877fd2"
+    },
+    {
+      "path": "db/queries/commerce.sql",
+      "sha256": "f2e624db66c29867325362e126d51a7892582406d4d47e0210bb898e164e67e9"
+    },
+    {
+      "path": "db/queries/blocks.sql",
+      "sha256": "483fdbcd09320dfa099514d6839217ba42f084081ce6abe5599db8d39eb5b419"
+    },
+    {
+      "path": "db/queries/reports.sql",
+      "sha256": "d6c4eb7944cdf6a5bbf7eb91c8656845907aed4ed14afb3728cf3e6ee0ed92b5"
+    },
+    {
+      "path": "db/queries/community.sql",
+      "sha256": "8d82f9e2af0b056559f0b5ccca8f617c20a4c9fee362b7f30b9ba31298b25354"
+    },
+    {
+      "path": "db/queries/services.sql",
+      "sha256": "ac512b02f4c280f84ad14308e64894a608830e24c2b02b82545ee2be5cd3b996"
+    },
+    {
+      "path": "db/queries/room_completion.sql",
+      "sha256": "b7ef8c0b6767e88c3003ec63e51db0ef2beddd62238bb989c2b90c09acefcf6f"
+    },
+    {
+      "path": "db/migrations/catalog.go",
+      "sha256": "ccb0bd5a47aa8c5365d386dabf22a1ec3ae340229c611b11954860713502b8f1"
+    },
+    {
+      "path": "db/migrations/008.sql",
+      "sha256": "03e5f4a4917739983b6280b73187bdef35d6b03dc3b906a57de5cabd02e976c9"
+    },
+    {
+      "path": "db/migrations/009.sql",
+      "sha256": "63b402702b988d3d8a179f503316b9ed35a1cb5f632ff4186bd4dcc328d9fcd5"
+    },
+    {
+      "path": "db/migrations/018.sql",
+      "sha256": "fc76d45ef2fc0fc6f8cfc5ac75b2fdc3b8abe33f2b4d52990a3d6af31bf75b5c"
+    },
+    {
+      "path": "db/migrations/016.sql",
+      "sha256": "9a47fafdb167f413f84efffdc98b3239b288fbf97430e34a33915b782ae561dc"
+    },
+    {
+      "path": "db/migrations/002.sql",
+      "sha256": "403127611b5c719348d49b85a0b1762b2800ae893dd87eb0df2311a02b8f53a4"
+    },
+    {
+      "path": "db/migrations/003.sql",
+      "sha256": "44bd0ba3fd97fba7e3256942a0fe8a2391f81ad59e9eb34541a09d3a5c556046"
+    },
+    {
+      "path": "db/migrations/017.sql",
+      "sha256": "eda2ff723d5f66a1625e7ae84080f5f30054229ff0dcccb50fd43ae1162ece36"
+    },
+    {
+      "path": "db/migrations/001.sql",
+      "sha256": "9f6840122a8adfae4d9019e5ce6358871b80e3519827b0ed36ae3f990c214a89"
+    },
+    {
+      "path": "db/migrations/015.sql",
+      "sha256": "07f99fe5a7890f8a783de8f95e8595e1e406696dbb5ee07841264fc8a75b22c6"
+    },
+    {
+      "path": "db/migrations/014.sql",
+      "sha256": "a3b6cf775777b5198063536fea387abdd88d6d46c92c3112e9e4ed60f3b2cfa3"
+    },
+    {
+      "path": "db/migrations/004.sql",
+      "sha256": "b8fa72d3527f7299b9e2f8ac100e220d19ceead551c8fbd8498eb2d40b9306ef"
+    },
+    {
+      "path": "db/migrations/010.sql",
+      "sha256": "aa9edf2a1a40210308b7634b3cec7a8ca82207c209e3fdbfa74efe70b52c6208"
+    },
+    {
+      "path": "db/migrations/011.sql",
+      "sha256": "2459f70549a82d7d83031643ac8f8dc8e1e9e86a6d97cdbd9239be635b977b94"
+    },
+    {
+      "path": "db/migrations/005.sql",
+      "sha256": "489cab447b6eae8139c85894713a27bc833c02c28484bcd04c47f7386f29d4f0"
+    },
+    {
+      "path": "db/migrations/013.sql",
+      "sha256": "f36cffad87c220766c29e660c3b55354507035f01c20caa3513e2ca3dad9a3e1"
+    },
+    {
+      "path": "db/migrations/007.sql",
+      "sha256": "0cf8ff6bbcab636ccc2fcb149a66550f9c3d81c53f24b3f5d5b617af3603bda0"
+    },
+    {
+      "path": "db/migrations/006.sql",
+      "sha256": "92dab17e44c47be8265ca3cf7c835d0e558510eb32545e13cf8c14bd7029a5ba"
+    },
+    {
+      "path": "db/migrations/012.sql",
+      "sha256": "1e3a61349ae814f555321f5cba02eb8f9fe510e908dc3f630f47bb50044234c9"
+    },
+    {
+      "path": "db/migrations/support/version.sql",
+      "sha256": "575cffa48f6e2b51c4f08e70d8f07f6a05f51eb5bc65cdaacc3f5979d6b3e92e"
+    },
+    {
+      "path": "db/migrations/support/foreign_key_check.sql",
+      "sha256": "5b231e1dcf26f67c20d30e84a24030804b20771b814581b4e067e1f8ef0e97f2"
+    },
+    {
+      "path": "db/migrations/support/002_insert_sequence.sql",
+      "sha256": "c0e15fc81e8a0f4bcf11384348e4351b04857a4069c881c5ecf3ac0faeb0653c"
+    },
+    {
+      "path": "db/migrations/support/002_restore_sequence.sql",
+      "sha256": "7099dde7cf8a1991bdfcc759840ac7e76f4bf0a7a686af699edb40854b0c654d"
+    },
+    {
+      "path": "db/migrations/support/002_read_sequence.sql",
+      "sha256": "f3ed3843b9a1cf5810debb7e0c65436f6e5d4f7f751ffd2bcc7b59584585d1b5"
+    }
+  ],
+  "changed_files": [],
+  "result": "PASS"
+}

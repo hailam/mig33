@@ -1,0 +1,93 @@
+{
+  "retrieved": "2026-10-27",
+  "images": [
+    {
+      "id": "public2",
+      "original_url": "http://blog.mig33.com/uploads/2010/07/public2.png",
+      "request_url": "https://web.archive.org/web/20110201000000id_/http://blog.mig33.com/uploads/2010/07/public2.png",
+      "url_basis": "filename from 2011 guide, directory inferred from surviving pvt2 source",
+      "bytes": 9702,
+      "content_type": "image/png",
+      "final_url": "https://web.archive.org/web/20140603223831id_/http://blog.mig33.com/uploads/2010/07/public2.png",
+      "sha256": "89b6e10d61876ac932b99c11327dbf68761724bffd960dc093539f9ef418ac16",
+      "file": "public2.png"
+    },
+    {
+      "id": "chat3c",
+      "original_url": "http://blog.mig33.com/uploads/2010/07/chat3c.png",
+      "request_url": "https://web.archive.org/web/20110201000000id_/http://blog.mig33.com/uploads/2010/07/chat3c.png",
+      "url_basis": "filename from 2011 guide, directory inferred from surviving pvt2 source",
+      "bytes": 7360,
+      "content_type": "image/png",
+      "final_url": "https://web.archive.org/web/20140603223636id_/http://blog.mig33.com/uploads/2010/07/chat3c.png",
+      "sha256": "bf9155a219f874f8c806cf673a2de39209b146a4f365ae09f7f113c89c2f3bdb",
+      "file": "chat3c.png"
+    },
+    {
+      "id": "chat5c",
+      "original_url": "http://blog.mig33.com/uploads/2010/07/chat5c.png",
+      "request_url": "https://web.archive.org/web/20110201000000id_/http://blog.mig33.com/uploads/2010/07/chat5c.png",
+      "url_basis": "filename from 2011 guide, directory inferred from surviving pvt2 source",
+      "bytes": 16577,
+      "content_type": "image/png",
+      "final_url": "https://web.archive.org/web/20140603223736id_/http://blog.mig33.com/uploads/2010/07/chat5c.png",
+      "sha256": "ccfe17a48fd93754c2b722124d9eed30350c9d3898a6ad6caaf660c5870c513c",
+      "file": "chat5c.png"
+    },
+    {
+      "id": "chat8c",
+      "original_url": "http://blog.mig33.com/uploads/2010/07/chat8c.png",
+      "request_url": "https://web.archive.org/web/20110201000000id_/http://blog.mig33.com/uploads/2010/07/chat8c.png",
+      "url_basis": "filename from 2011 guide, directory inferred from surviving pvt2 source",
+      "bytes": 17395,
+      "content_type": "image/png",
+      "final_url": "https://web.archive.org/web/20140603222703id_/http://blog.mig33.com/uploads/2010/07/chat8c.png",
+      "sha256": "f7a7bc4f045419ada75c5faee26053edc0dd1dcdbd0ee6996f25c5e768c985a5",
+      "file": "chat8c.png"
+    },
+    {
+      "id": "room1",
+      "original_url": "http://blog.mig33.com/uploads/2010/07/room1.png",
+      "request_url": "https://web.archive.org/web/20110201000000id_/http://blog.mig33.com/uploads/2010/07/room1.png",
+      "url_basis": "filename from 2011 guide, directory inferred from surviving pvt2 source",
+      "bytes": 12617,
+      "content_type": "image/png",
+      "final_url": "https://web.archive.org/web/20140603222054id_/http://blog.mig33.com/uploads/2010/07/room1.png",
+      "sha256": "557ebe5f71c82dad4b17ecf7cc137049ae5f7a8fcc98f06db43b5284e861e149",
+      "file": "room1.png"
+    },
+    {
+      "id": "chat11",
+      "original_url": "http://blog.mig33.com/uploads/2010/07/chat11.png",
+      "request_url": "https://web.archive.org/web/20110201000000id_/http://blog.mig33.com/uploads/2010/07/chat11.png",
+      "url_basis": "filename from 2011 guide, directory inferred from surviving pvt2 source",
+      "bytes": 3247,
+      "content_type": "image/png",
+      "final_url": "https://web.archive.org/web/20140603224008id_/http://blog.mig33.com/uploads/2010/07/chat11.png",
+      "sha256": "711f6d934e161cdb3f6ada468a7023ca0e14a57c391c61c1f52c7f6b3d9e40ad",
+      "file": "chat11.png"
+    },
+    {
+      "id": "chat14c",
+      "original_url": "http://blog.mig33.com/uploads/2010/07/chat14c.png",
+      "request_url": "https://web.archive.org/web/20110201000000id_/http://blog.mig33.com/uploads/2010/07/chat14c.png",
+      "url_basis": "filename from 2011 guide, directory inferred from surviving pvt2 source",
+      "bytes": 7115,
+      "content_type": "image/png",
+      "final_url": "https://web.archive.org/web/20140603222634id_/http://blog.mig33.com/uploads/2010/07/chat14c.png",
+      "sha256": "f397d3cd17b17ba4887e27eae570fae43b574359421f512e09d99d489e29809d",
+      "file": "chat14c.png"
+    },
+    {
+      "id": "Footprints1",
+      "original_url": "http://blog.mig33.com/uploads/2010/11/Footprints1.png",
+      "request_url": "https://web.archive.org/web/20110201000000id_/http://blog.mig33.com/uploads/2010/11/Footprints1.png",
+      "url_basis": "exact original URL preserved by WordPress mirror",
+      "bytes": 21347,
+      "content_type": "image/png",
+      "final_url": "https://web.archive.org/web/20120601193526id_/http://blog.mig33.com/uploads/2010/11/Footprints1.png",
+      "sha256": "9f61ab52e9ec527b1da47f8ff9400e55ca0ff98de0843b7773bc9b57a89d63af",
+      "file": "Footprints1.png"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# Keep compatibility transports in the contract, outside generated REST routing.
+package: httpapi
+generate:
+  models: true
+  std-http-server: true
+output-options:
+  include-tags:
+    - modern-json
+output: internal/adapters/httpapi/openapi.gen.go

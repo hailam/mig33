@@ -1,0 +1,1351 @@
+[
+  {
+    "opcode": 6,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 527,
+    "direct_field_reads": [
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 531
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 534
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 537
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 540
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 915,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 548,
+    "direct_field_reads": [],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 916,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 552,
+    "direct_field_reads": [
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 553
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 553
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 412,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 556,
+    "direct_field_reads": [
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 559
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 559
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 914,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 564,
+    "direct_field_reads": [
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 567
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 567
+      },
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 567
+      },
+      {
+        "tag": 4,
+        "type": "X",
+        "line": 567
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 920,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 574,
+    "direct_field_reads": [
+      {
+        "tag": 1,
+        "type": "I",
+        "line": 575
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 911,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 587,
+    "direct_field_reads": [
+      {
+        "tag": 1,
+        "type": "I",
+        "line": 588
+      },
+      {
+        "tag": 2,
+        "type": "I",
+        "line": 593
+      },
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 593
+      },
+      {
+        "tag": 4,
+        "type": "T",
+        "line": 593
+      },
+      {
+        "tag": 2,
+        "type": "I",
+        "line": 600
+      },
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 600
+      },
+      {
+        "tag": 4,
+        "type": "T",
+        "line": 600
+      },
+      {
+        "tag": 2,
+        "type": "I",
+        "line": 607
+      },
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 607
+      },
+      {
+        "tag": 4,
+        "type": "T",
+        "line": 607
+      },
+      {
+        "tag": 2,
+        "type": "I",
+        "line": 614
+      },
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 614
+      },
+      {
+        "tag": 4,
+        "type": "T",
+        "line": 614
+      },
+      {
+        "tag": 2,
+        "type": "I",
+        "line": 621
+      },
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 621
+      },
+      {
+        "tag": 4,
+        "type": "T",
+        "line": 621
+      },
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 626
+      },
+      {
+        "tag": 2,
+        "type": "I",
+        "line": 626
+      },
+      {
+        "tag": 4,
+        "type": "T",
+        "line": 626
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 502,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 683,
+    "direct_field_reads": [],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 912,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 690,
+    "direct_field_reads": [
+      {
+        "tag": 1,
+        "type": "I",
+        "line": 691
+      },
+      {
+        "tag": 2,
+        "type": "X",
+        "line": 692
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 5,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 696,
+    "direct_field_reads": [
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 697
+      },
+      {
+        "tag": 3,
+        "type": "B",
+        "line": 698
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 503,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 701,
+    "direct_field_reads": [
+      {
+        "tag": 1,
+        "type": "I",
+        "line": 702
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 750,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 705,
+    "direct_field_reads": [
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 708
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 712
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 712
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 207,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 717,
+    "direct_field_reads": [
+      {
+        "tag": 2,
+        "type": "B",
+        "line": 718
+      },
+      {
+        "tag": 1,
+        "type": "B",
+        "line": 719
+      },
+      {
+        "tag": 1,
+        "type": "B",
+        "line": 723
+      },
+      {
+        "tag": 1,
+        "type": "B",
+        "line": 727
+      },
+      {
+        "tag": 1,
+        "type": "B",
+        "line": 731
+      },
+      {
+        "tag": 1,
+        "type": "B",
+        "line": 735
+      },
+      {
+        "tag": 1,
+        "type": "B",
+        "line": 739
+      },
+      {
+        "tag": 1,
+        "type": "B",
+        "line": 743
+      },
+      {
+        "tag": 1,
+        "type": "B",
+        "line": 747
+      },
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 752
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 708,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 756,
+    "direct_field_reads": [
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 780
+      },
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 780
+      },
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 781
+      },
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 782
+      },
+      {
+        "tag": 4,
+        "type": "T",
+        "line": 787
+      },
+      {
+        "tag": 4,
+        "type": "T",
+        "line": 788
+      },
+      {
+        "tag": 4,
+        "type": "T",
+        "line": 789
+      },
+      {
+        "tag": 4,
+        "type": "T",
+        "line": 790
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 796
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 797
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 798
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 799
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 755,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 757,
+    "direct_field_reads": [
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 780
+      },
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 780
+      },
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 781
+      },
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 782
+      },
+      {
+        "tag": 4,
+        "type": "T",
+        "line": 787
+      },
+      {
+        "tag": 4,
+        "type": "T",
+        "line": 788
+      },
+      {
+        "tag": 4,
+        "type": "T",
+        "line": 789
+      },
+      {
+        "tag": 4,
+        "type": "T",
+        "line": 790
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 796
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 797
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 798
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 799
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 416,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 830,
+    "direct_field_reads": [
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 835
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 835
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 836
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 837
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 3,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 849,
+    "direct_field_reads": [],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 906,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 865,
+    "direct_field_reads": [
+      {
+        "tag": 15,
+        "type": "T",
+        "line": 870
+      },
+      {
+        "tag": 15,
+        "type": "T",
+        "line": 871
+      },
+      {
+        "tag": 18,
+        "type": "T",
+        "line": 875
+      },
+      {
+        "tag": 18,
+        "type": "T",
+        "line": 876
+      },
+      {
+        "tag": 21,
+        "type": "T",
+        "line": 880
+      },
+      {
+        "tag": 21,
+        "type": "T",
+        "line": 881
+      },
+      {
+        "tag": 24,
+        "type": "T",
+        "line": 885
+      },
+      {
+        "tag": 24,
+        "type": "T",
+        "line": 886
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 203,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 895,
+    "direct_field_reads": [
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 898
+      },
+      {
+        "tag": 2,
+        "type": "B",
+        "line": 899
+      },
+      {
+        "tag": 6,
+        "type": "B",
+        "line": 900
+      },
+      {
+        "tag": 6,
+        "type": "B",
+        "line": 901
+      },
+      {
+        "tag": 17,
+        "type": "B",
+        "line": 902
+      },
+      {
+        "tag": 17,
+        "type": "B",
+        "line": 903
+      },
+      {
+        "tag": 8,
+        "type": "B",
+        "line": 904
+      },
+      {
+        "tag": 8,
+        "type": "B",
+        "line": 905
+      },
+      {
+        "tag": 7,
+        "type": "B",
+        "line": 906
+      },
+      {
+        "tag": 7,
+        "type": "B",
+        "line": 907
+      },
+      {
+        "tag": 11,
+        "type": "T",
+        "line": 908
+      },
+      {
+        "tag": 12,
+        "type": "T",
+        "line": 909
+      },
+      {
+        "tag": 13,
+        "type": "T",
+        "line": 910
+      },
+      {
+        "tag": 14,
+        "type": "I",
+        "line": 912
+      },
+      {
+        "tag": 18,
+        "type": "B",
+        "line": 914
+      },
+      {
+        "tag": 18,
+        "type": "B",
+        "line": 915
+      },
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 927
+      },
+      {
+        "tag": 4,
+        "type": "B",
+        "line": 928
+      },
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 930
+      },
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 932
+      },
+      {
+        "tag": 16,
+        "type": "I",
+        "line": 935
+      },
+      {
+        "tag": 16,
+        "type": "I",
+        "line": 935
+      },
+      {
+        "tag": 16,
+        "type": "I",
+        "line": 936
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 701,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 947,
+    "direct_field_reads": [
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 956
+      },
+      {
+        "tag": 4,
+        "type": "I",
+        "line": 956
+      },
+      {
+        "tag": 3,
+        "type": "I",
+        "line": 956
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 702,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 959,
+    "direct_field_reads": [
+      {
+        "tag": 1,
+        "type": "B",
+        "line": 972
+      },
+      {
+        "tag": 1,
+        "type": "B",
+        "line": 973
+      },
+      {
+        "tag": 1,
+        "type": "B",
+        "line": 976
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 985
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 986
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 201,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 992,
+    "direct_field_reads": [
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 994
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 996
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 500,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 1001,
+    "direct_field_reads": [
+      {
+        "tag": 3,
+        "type": "B",
+        "line": 1002
+      },
+      {
+        "tag": 3,
+        "type": "B",
+        "line": 1002
+      },
+      {
+        "tag": 9,
+        "type": "B",
+        "line": 1003
+      },
+      {
+        "tag": 8,
+        "type": "T",
+        "line": 1003
+      },
+      {
+        "tag": 1,
+        "type": "B",
+        "line": 1003
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 1003
+      },
+      {
+        "tag": 3,
+        "type": "B",
+        "line": 1003
+      },
+      {
+        "tag": 4,
+        "type": "T",
+        "line": 1003
+      },
+      {
+        "tag": 11,
+        "type": "T",
+        "line": 1003
+      },
+      {
+        "tag": 6,
+        "type": "S",
+        "line": 1003
+      },
+      {
+        "tag": 12,
+        "type": "I",
+        "line": 1003
+      },
+      {
+        "tag": 12,
+        "type": "I",
+        "line": 1003
+      },
+      {
+        "tag": 13,
+        "type": "I",
+        "line": 1003
+      },
+      {
+        "tag": 13,
+        "type": "I",
+        "line": 1003
+      },
+      {
+        "tag": 5,
+        "type": "I",
+        "line": 1006
+      },
+      {
+        "tag": 5,
+        "type": "I",
+        "line": 1006
+      },
+      {
+        "tag": 8,
+        "type": "T",
+        "line": 1006
+      },
+      {
+        "tag": 1,
+        "type": "B",
+        "line": 1006
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 1006
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 1006
+      },
+      {
+        "tag": 3,
+        "type": "B",
+        "line": 1006
+      },
+      {
+        "tag": 11,
+        "type": "T",
+        "line": 1006
+      },
+      {
+        "tag": 6,
+        "type": "S",
+        "line": 1006
+      },
+      {
+        "tag": 12,
+        "type": "I",
+        "line": 1006
+      },
+      {
+        "tag": 12,
+        "type": "I",
+        "line": 1006
+      },
+      {
+        "tag": 13,
+        "type": "I",
+        "line": 1006
+      },
+      {
+        "tag": 13,
+        "type": "I",
+        "line": 1006
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 403,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 1009,
+    "direct_field_reads": [],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 402,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 1024,
+    "direct_field_reads": [
+      {
+        "tag": 1,
+        "type": "I",
+        "line": 1027
+      },
+      {
+        "tag": 2,
+        "type": "I",
+        "line": 1028
+      },
+      {
+        "tag": 2,
+        "type": "I",
+        "line": 1029
+      },
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 1031
+      },
+      {
+        "tag": 3,
+        "type": "T",
+        "line": 1032
+      },
+      {
+        "tag": 8,
+        "type": "T",
+        "line": 1034
+      },
+      {
+        "tag": 8,
+        "type": "T",
+        "line": 1035
+      },
+      {
+        "tag": 12,
+        "type": "T",
+        "line": 1037
+      },
+      {
+        "tag": 12,
+        "type": "T",
+        "line": 1038
+      },
+      {
+        "tag": 13,
+        "type": "B",
+        "line": 1039
+      },
+      {
+        "tag": 14,
+        "type": "T",
+        "line": 1045
+      },
+      {
+        "tag": 14,
+        "type": "T",
+        "line": 1046
+      },
+      {
+        "tag": 15,
+        "type": "B",
+        "line": 1047
+      },
+      {
+        "tag": 15,
+        "type": "B",
+        "line": 1047
+      },
+      {
+        "tag": 18,
+        "type": "T",
+        "line": 1053
+      },
+      {
+        "tag": 18,
+        "type": "T",
+        "line": 1054
+      },
+      {
+        "tag": 19,
+        "type": "B",
+        "line": 1055
+      },
+      {
+        "tag": 19,
+        "type": "B",
+        "line": 1055
+      },
+      {
+        "tag": 22,
+        "type": "T",
+        "line": 1061
+      },
+      {
+        "tag": 22,
+        "type": "T",
+        "line": 1062
+      },
+      {
+        "tag": 23,
+        "type": "B",
+        "line": 1063
+      },
+      {
+        "tag": 23,
+        "type": "B",
+        "line": 1063
+      },
+      {
+        "tag": 16,
+        "type": "T",
+        "line": 1069
+      },
+      {
+        "tag": 16,
+        "type": "T",
+        "line": 1070
+      },
+      {
+        "tag": 17,
+        "type": "B",
+        "line": 1071
+      },
+      {
+        "tag": 17,
+        "type": "B",
+        "line": 1071
+      },
+      {
+        "tag": 1,
+        "type": "I",
+        "line": 1104
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 401,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 1111,
+    "direct_field_reads": [
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 1112
+      },
+      {
+        "tag": 1,
+        "type": "I",
+        "line": 1112
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 104,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 1130,
+    "direct_field_reads": [
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 1132
+      },
+      {
+        "tag": 3,
+        "type": "X",
+        "line": 1133
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 1138
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 0,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 1143,
+    "direct_field_reads": [
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 1154
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 1178
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 1182
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 1185
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 1190
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 1196
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 1223
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 301,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 1230,
+    "direct_field_reads": [
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 1240
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 404,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 1248,
+    "direct_field_reads": [
+      {
+        "tag": 1,
+        "type": "I",
+        "line": 1249
+      },
+      {
+        "tag": 2,
+        "type": "B",
+        "line": 1249
+      },
+      {
+        "tag": 2,
+        "type": "B",
+        "line": 1249
+      },
+      {
+        "tag": 3,
+        "type": "B",
+        "line": 1249
+      },
+      {
+        "tag": 3,
+        "type": "B",
+        "line": 1249
+      },
+      {
+        "tag": 5,
+        "type": "B",
+        "line": 1249
+      },
+      {
+        "tag": 5,
+        "type": "B",
+        "line": 1249
+      },
+      {
+        "tag": 4,
+        "type": "B",
+        "line": 1249
+      },
+      {
+        "tag": 4,
+        "type": "B",
+        "line": 1249
+      },
+      {
+        "tag": 7,
+        "type": "B",
+        "line": 1249
+      },
+      {
+        "tag": 7,
+        "type": "B",
+        "line": 1249
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 804,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 1252,
+    "direct_field_reads": [
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 1253
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 1254
+      },
+      {
+        "tag": 2,
+        "type": "T",
+        "line": 1257
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 102,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 1269,
+    "direct_field_reads": [],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  },
+  {
+    "opcode": 1,
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 1278,
+    "direct_field_reads": [
+      {
+        "tag": 2,
+        "type": "X",
+        "line": 1286
+      },
+      {
+        "tag": 2,
+        "type": "X",
+        "line": 1287
+      },
+      {
+        "tag": 1,
+        "type": "I",
+        "line": 1287
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 1301
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 1305
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 1309
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 1313
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 1317
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 1320
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 1324
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 1325
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 1376
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 1390
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 1420
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 1424
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 1428
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 1515
+      },
+      {
+        "tag": 1,
+        "type": "T",
+        "line": 1525
+      }
+    ],
+    "note": "Context-specific fields may be read by delegated handlers; see protocol.md."
+  }
+]

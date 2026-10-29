@@ -1,0 +1,231 @@
+{
+  "version": "4.62",
+  "scope": "27 recognized primary states, including one retained unusable state; not a count of all dynamic visual combinations.17 populated form-constructor branches. Menu/dialog overlay IDs are a separate namespace.",
+  "states": [
+    {
+      "id": 1,
+      "name": "Add IM Friend",
+      "family": "built-in form",
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2738",
+      "variant_data": "screens-forms.json",
+      "body_origin": "built-in with dynamic field values"
+    },
+    {
+      "id": 6,
+      "name": "Conversation",
+      "family": "auxiliary/tabbed",
+      "source": "research/applets/v4/artifacts/vineflower/s.java",
+      "variant_data": "private/group/room/external transport; transcript server-driven"
+    },
+    {
+      "id": 7,
+      "name": "Emoticon grid",
+      "family": "auxiliary/tabbed",
+      "source": "research/applets/v4/artifacts/vineflower/bj.java",
+      "variant_data": "downloaded shortcuts/images; native editor return"
+    },
+    {
+      "id": 9,
+      "name": "Contact Details",
+      "family": "built-in form",
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2807",
+      "variant_data": "screens-forms.json",
+      "body_origin": "built-in with dynamic field values"
+    },
+    {
+      "id": 10,
+      "name": "Friends",
+      "family": "auxiliary/tabbed",
+      "source": "research/applets/v4/artifacts/vineflower/au.java",
+      "variant_data": "groups,contacts,self,mail,notifications"
+    },
+    {
+      "id": 13,
+      "name": "Connection Settings",
+      "family": "built-in form",
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2821",
+      "variant_data": "screens-forms.json",
+      "body_origin": "built-in with dynamic field values"
+    },
+    {
+      "id": 14,
+      "name": "Forgot Details",
+      "family": "built-in form",
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2844",
+      "variant_data": "screens-forms.json",
+      "body_origin": "built-in with dynamic field values"
+    },
+    {
+      "id": 15,
+      "name": "Login",
+      "family": "built-in form",
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2850",
+      "variant_data": "screens-forms.json",
+      "body_origin": "built-in with dynamic field values"
+    },
+    {
+      "id": 23,
+      "name": "Invite 2 mig33",
+      "family": "built-in form",
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2898",
+      "variant_data": "screens-forms.json",
+      "body_origin": "built-in with dynamic field values"
+    },
+    {
+      "id": 30,
+      "name": "Registration (step 2 of 3)",
+      "family": "built-in form",
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2905",
+      "variant_data": "screens-forms.json",
+      "body_origin": "built-in with dynamic field values"
+    },
+    {
+      "id": 36,
+      "name": "Server-supplied registration help",
+      "family": "built-in form",
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2938",
+      "variant_data": "screens-forms.json",
+      "body_origin": "server text"
+    },
+    {
+      "id": 40,
+      "name": "Resend Code",
+      "family": "built-in form",
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2957",
+      "variant_data": "screens-forms.json",
+      "body_origin": "built-in with dynamic field values"
+    },
+    {
+      "id": 41,
+      "name": "Authenticate Account (step 3 of 3)",
+      "family": "built-in form",
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2963",
+      "variant_data": "screens-forms.json",
+      "body_origin": "built-in with dynamic field values"
+    },
+    {
+      "id": 43,
+      "name": "Welcome to mig33",
+      "family": "built-in form",
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2973",
+      "variant_data": "screens-forms.json",
+      "body_origin": "built-in with dynamic field values"
+    },
+    {
+      "id": 45,
+      "name": "Camera capture and preview",
+      "family": "auxiliary/tabbed",
+      "source": "research/applets/v4/artifacts/vineflower/d.java",
+      "variant_data": "native camera Form and custom preview"
+    },
+    {
+      "id": 47,
+      "name": "File browser and preview",
+      "family": "auxiliary/tabbed",
+      "source": "research/applets/v4/artifacts/vineflower/ao.java",
+      "variant_data": "device FileConnection directories and content"
+    },
+    {
+      "id": 48,
+      "name": "Embedded page",
+      "family": "auxiliary/tabbed",
+      "source": "research/applets/v4/artifacts/vineflower/bl.java",
+      "variant_data": "server-driven body,forms,menus,images"
+    },
+    {
+      "id": 49,
+      "name": "mig33 first-launch help",
+      "family": "built-in form",
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2983",
+      "variant_data": "screens-forms.json",
+      "body_origin": "built-in with dynamic field values"
+    },
+    {
+      "id": 50,
+      "name": "Updates",
+      "family": "auxiliary/tabbed",
+      "source": "research/applets/v4/artifacts/vineflower/av.java",
+      "variant_data": "server activity feed"
+    },
+    {
+      "id": 52,
+      "name": "Add Phone Contact",
+      "family": "built-in form",
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2986",
+      "variant_data": "screens-forms.json",
+      "body_origin": "built-in with dynamic field values"
+    },
+    {
+      "id": 54,
+      "name": "Connection Settings (chooser)",
+      "family": "built-in form",
+      "source": "research/applets/v4/artifacts/vineflower/y.java:2996",
+      "variant_data": "screens-forms.json",
+      "body_origin": "built-in with dynamic field values"
+    },
+    {
+      "id": 55,
+      "name": "Chat Rooms",
+      "family": "auxiliary/tabbed",
+      "source": "research/applets/v4/artifacts/vineflower/bj.java",
+      "variant_data": "server categories,rooms,favorites"
+    },
+    {
+      "id": 57,
+      "name": "Add a Friend",
+      "family": "built-in form",
+      "source": "research/applets/v4/artifacts/vineflower/y.java:3005",
+      "variant_data": "screens-forms.json",
+      "body_origin": "built-in with dynamic field values"
+    },
+    {
+      "id": 59,
+      "name": "Change Text Color grid",
+      "family": "auxiliary/tabbed",
+      "source": "research/applets/v4/artifacts/vineflower/bj.java",
+      "variant_data": "configured integer RGB values"
+    },
+    {
+      "id": 60,
+      "name": "Captcha Form",
+      "family": "built-in form",
+      "source": "research/applets/v4/artifacts/vineflower/y.java:3015",
+      "variant_data": "screens-forms.json",
+      "body_origin": "built-in with dynamic field values"
+    },
+    {
+      "id": 61,
+      "name": "Retained last-used-emoticon state",
+      "family": "auxiliary/tabbed",
+      "source": "research/applets/v4/artifacts/vineflower/aj.java",
+      "variant_data": "unusable/null-array branch; not established as functioning screen"
+    },
+    {
+      "id": 62,
+      "name": "Registration (step 1 of 3)",
+      "family": "built-in form",
+      "source": "research/applets/v4/artifacts/vineflower/y.java:3024",
+      "variant_data": "screens-forms.json",
+      "body_origin": "built-in with dynamic field values"
+    }
+  ],
+  "state_variables": {
+    "M": "primary state",
+    "aO": "action context",
+    "aH": "menu stack",
+    "aI": "dialog stack",
+    "aF": "progress overlay",
+    "aG": "reconnect overlay"
+  },
+  "tab_types": {
+    "1": 10,
+    "2": 50,
+    "3": 6,
+    "4": 6,
+    "5": 6,
+    "6": 6,
+    "7": 48,
+    "8": 55,
+    "9": 48
+  }
+}

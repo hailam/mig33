@@ -1,0 +1,868 @@
+{
+  "version": "4.62",
+  "description": "Literal primary/action assignments and y UI construction call sites in normal-flow decompiler output. This supplements the manually classified catalog; computed states and server contents are not statically enumerable.",
+  "primary_assignments": [
+    {
+      "value": 7,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1631",
+      "java": "M = 7;"
+    },
+    {
+      "value": 6,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1636",
+      "java": "M = 6;"
+    },
+    {
+      "value": 6,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1735",
+      "java": "M = 6;"
+    },
+    {
+      "value": 30,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1740",
+      "java": "M = 30;"
+    },
+    {
+      "value": 6,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1754",
+      "java": "M = 6;"
+    },
+    {
+      "value": 6,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1758",
+      "java": "M = 6;"
+    },
+    {
+      "value": 6,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1762",
+      "java": "M = 6;"
+    },
+    {
+      "value": 41,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1800",
+      "java": "M = 41;"
+    },
+    {
+      "value": 40,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1803",
+      "java": "M = 40;"
+    },
+    {
+      "value": 54,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1832",
+      "java": "M = 54;"
+    },
+    {
+      "value": 49,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1834",
+      "java": "M = 49;"
+    },
+    {
+      "value": 41,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1838",
+      "java": "M = 41;"
+    },
+    {
+      "value": 49,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1841",
+      "java": "M = 49;"
+    },
+    {
+      "value": 10,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1852",
+      "java": "M = 10;"
+    },
+    {
+      "value": 15,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1855",
+      "java": "M = 15;"
+    },
+    {
+      "value": 15,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1858",
+      "java": "M = 15;"
+    },
+    {
+      "value": 15,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1864",
+      "java": "M = 15;"
+    },
+    {
+      "value": 48,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1875",
+      "java": "M = 48;"
+    },
+    {
+      "value": 6,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1895",
+      "java": "M = 6;"
+    },
+    {
+      "value": 54,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2129",
+      "java": "M = 54;"
+    },
+    {
+      "value": 13,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2139",
+      "java": "M = 13;"
+    },
+    {
+      "value": 62,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2185",
+      "java": "M = 62;"
+    },
+    {
+      "value": 14,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2652",
+      "java": "M = 14;"
+    },
+    {
+      "value": 40,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2661",
+      "java": "M = 40;"
+    },
+    {
+      "value": 62,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2683",
+      "java": "M = 62;"
+    },
+    {
+      "value": 15,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2689",
+      "java": "M = 15;"
+    },
+    {
+      "value": 6,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2756",
+      "java": "M = 6;"
+    },
+    {
+      "value": 48,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2791",
+      "java": "M = 48;"
+    },
+    {
+      "value": 10,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2807",
+      "java": "M = 10;"
+    },
+    {
+      "value": 54,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2872",
+      "java": "M = 54;"
+    },
+    {
+      "value": 15,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2884",
+      "java": "M = 15;"
+    },
+    {
+      "value": 41,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2928",
+      "java": "M = 41;"
+    },
+    {
+      "value": 6,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:3132",
+      "java": "M = 6;"
+    },
+    {
+      "value": 45,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:3294",
+      "java": "M = 45;"
+    },
+    {
+      "value": 47,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:3307",
+      "java": "M = 47;"
+    },
+    {
+      "value": 57,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:3443",
+      "java": "M = 57;"
+    },
+    {
+      "value": 1,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:3797",
+      "java": "M = 1;"
+    },
+    {
+      "value": 57,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:3800",
+      "java": "M = 57;"
+    },
+    {
+      "value": 9,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:4071",
+      "java": "M = 9;"
+    },
+    {
+      "value": 59,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5142",
+      "java": "M = 59;"
+    },
+    {
+      "value": 15,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5163",
+      "java": "M = 15;"
+    },
+    {
+      "value": 41,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5182",
+      "java": "M = 41;"
+    },
+    {
+      "value": 62,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5470",
+      "java": "M = 62;"
+    },
+    {
+      "value": 41,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5485",
+      "java": "M = 41;"
+    },
+    {
+      "value": 57,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5725",
+      "java": "M = 57;"
+    },
+    {
+      "value": 52,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5732",
+      "java": "M = 52;"
+    },
+    {
+      "value": 1,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5739",
+      "java": "M = 1;"
+    },
+    {
+      "value": 23,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5746",
+      "java": "M = 23;"
+    },
+    {
+      "value": 15,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:6365",
+      "java": "M = 15;"
+    },
+    {
+      "value": 49,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:6720",
+      "java": "M = 49;"
+    },
+    {
+      "value": 15,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:8840",
+      "java": "M = 15;"
+    },
+    {
+      "value": 15,
+      "source": "research/applets/v4/artifacts/normal-flow/bc.java:1220",
+      "java": "aj.M = 15;"
+    },
+    {
+      "value": 41,
+      "source": "research/applets/v4/artifacts/normal-flow/bc.java:1429",
+      "java": "aj.M = 41;"
+    },
+    {
+      "value": 15,
+      "source": "research/applets/v4/artifacts/normal-flow/bc.java:1581",
+      "java": "aj.M = 15;"
+    },
+    {
+      "value": 15,
+      "source": "research/applets/v4/artifacts/normal-flow/bc.java:1654",
+      "java": "aj.M = 15;"
+    },
+    {
+      "value": 43,
+      "source": "research/applets/v4/artifacts/normal-flow/bc.java:1656",
+      "java": "aj.M = 43;"
+    },
+    {
+      "value": 36,
+      "source": "research/applets/v4/artifacts/normal-flow/bc.java:1679",
+      "java": "aj.M = 36;"
+    },
+    {
+      "value": 60,
+      "source": "research/applets/v4/artifacts/normal-flow/bc.java:1738",
+      "java": "aj.M = 60;"
+    },
+    {
+      "value": 30,
+      "source": "research/applets/v4/artifacts/normal-flow/bc.java:1764",
+      "java": "aj.M = 30;"
+    },
+    {
+      "value": 10,
+      "source": "research/applets/v4/artifacts/normal-flow/bc.java:2135",
+      "java": "aj.M = 10;"
+    },
+    {
+      "value": 6,
+      "source": "research/applets/v4/artifacts/normal-flow/bc.java:2327",
+      "java": "aj.M = 6;"
+    },
+    {
+      "value": 10,
+      "source": "research/applets/v4/artifacts/normal-flow/k.java:123",
+      "java": "aj.M = 10;"
+    },
+    {
+      "value": 50,
+      "source": "research/applets/v4/artifacts/normal-flow/k.java:126",
+      "java": "aj.M = 50;"
+    },
+    {
+      "value": 6,
+      "source": "research/applets/v4/artifacts/normal-flow/k.java:132",
+      "java": "aj.M = 6;"
+    },
+    {
+      "value": 48,
+      "source": "research/applets/v4/artifacts/normal-flow/k.java:137",
+      "java": "aj.M = 48;"
+    },
+    {
+      "value": 55,
+      "source": "research/applets/v4/artifacts/normal-flow/k.java:140",
+      "java": "aj.M = 55;"
+    }
+  ],
+  "action_assignments": [
+    {
+      "value": 7,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1641",
+      "java": "aO = 7;"
+    },
+    {
+      "value": 44,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1644",
+      "java": "aO = 44;"
+    },
+    {
+      "value": -1,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1880",
+      "java": "aO = -1;"
+    },
+    {
+      "value": 50,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:1917",
+      "java": "aO = 50;"
+    },
+    {
+      "value": 9,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2018",
+      "java": "aO = 9;"
+    },
+    {
+      "value": 11,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2021",
+      "java": "aO = 11;"
+    },
+    {
+      "value": 27,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2046",
+      "java": "aO = 27;"
+    },
+    {
+      "value": 24,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2056",
+      "java": "aO = 24;"
+    },
+    {
+      "value": 15,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2060",
+      "java": "aO = 15;"
+    },
+    {
+      "value": 68,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2081",
+      "java": "aO = 68;"
+    },
+    {
+      "value": -1,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2792",
+      "java": "aO = -1;"
+    },
+    {
+      "value": -1,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2808",
+      "java": "aO = -1;"
+    },
+    {
+      "value": -1,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2825",
+      "java": "aO = -1;"
+    },
+    {
+      "value": 32,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2856",
+      "java": "aO = 32;"
+    },
+    {
+      "value": 0,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2889",
+      "java": "aO = 0;"
+    },
+    {
+      "value": 7,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:3850",
+      "java": "aO = 7;"
+    },
+    {
+      "value": 22,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:4138",
+      "java": "aO = 22;"
+    },
+    {
+      "value": 33,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:4231",
+      "java": "aO = 33;"
+    },
+    {
+      "value": 10,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:4837",
+      "java": "aO = 10;"
+    },
+    {
+      "value": 0,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:4841",
+      "java": "aO = 0;"
+    },
+    {
+      "value": 68,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:4861",
+      "java": "aO = 68;"
+    },
+    {
+      "value": 21,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:4867",
+      "java": "aO = 21;"
+    },
+    {
+      "value": 0,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:4971",
+      "java": "aO = 0;"
+    },
+    {
+      "value": 14,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5496",
+      "java": "aO = 14;"
+    },
+    {
+      "value": 7,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5753",
+      "java": "aO = 7;"
+    },
+    {
+      "value": 55,
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7498",
+      "java": "aO = 55;"
+    }
+  ],
+  "ui_constructors": [
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:313",
+      "java": "this.aj = new y(y.e(372), M, null, this.Z.o());"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:363",
+      "java": "this.aj = new y(y.e(87), M, null, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:367",
+      "java": "this.aj = new y(y.e(86), M, null, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:370",
+      "java": "this.aj = new y(y.e(126), M, null, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:376",
+      "java": "this.aj = new y(y.e(158), M, null, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:379",
+      "java": "this.aj = new y(y.e(248), M, cg, null, aU, aV, aW);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:382",
+      "java": "this.aj = new y(y.e(262), M, null, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:385",
+      "java": "this.aj = new y(y.e(8), M, null, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:388",
+      "java": "this.aj = new y(y.e(340), M, null, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:391",
+      "java": "this.aj = new y(y.e(341), M, null, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:394",
+      "java": "this.aj = new y(y.e(15), M, null, this.Z.o());"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:397",
+      "java": "this.aj = new y(y.e(11), M, null, this.Z.o());"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:401",
+      "java": "this.aj = new y(y.e(386), M, null, null, aU, aV, aW);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:404",
+      "java": "this.aj = new y(y.e(248), M, null, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:408",
+      "java": "this.aj = new y(y.e(386), M, null, null, aU, aV, aW);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:412",
+      "java": "this.ak = new y(y.e(193), M, null, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:2113",
+      "java": "var99 = new y(2, y.e(120), false);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:3440",
+      "java": "this.aj = new y("
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:3634",
+      "java": "y var190 = new y(32, y.e(16));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:3793",
+      "java": "this.aj = new y(y.e(372), 1, var65, this.Z.o());"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:3799",
+      "java": "this.aj = new y(y.e(11), 57, var65, this.Z.o());"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:4042",
+      "java": "this.aj = new y(y.e(87), 9, null, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:4995",
+      "java": "y var5 = new y(38, y.e(191));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5432",
+      "java": "this.aG = new y(this, 5, y.e(265));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5472",
+      "java": "this.aj = new y(y.e(247), 62, null, var4);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5702",
+      "java": "this.aF = new y(this, var1, var2);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5714",
+      "java": "this.aF = new y(this, 3, var1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5720",
+      "java": "this.aG = new y(this, 5, var1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5726",
+      "java": "this.aj = new y(y.e(11), 57, var1, this.Z.o());"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5733",
+      "java": "this.aj = new y(y.e(15), 52, null, this.Z.o());"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5740",
+      "java": "this.aj = new y(y.e(372), 1, null, this.Z.o());"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5747",
+      "java": "this.aj = new y(y.e(158), 23, null, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:6005",
+      "java": "y var1 = new y(1, y.e(191));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:6021",
+      "java": "y var2 = new y(46, y.e(191));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:6207",
+      "java": "y var2 = new y(27, var1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:6481",
+      "java": "y var10000 = new y(var5, var3, var7);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:6490",
+      "java": "y var10000 = new y(var5, var3, false);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:6719",
+      "java": "this.ak = new y(y.e(193), 49, null, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7233",
+      "java": "y var1 = new y(29, y.e(191));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7348",
+      "java": "y var2 = new y(10, y.e(66));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7398",
+      "java": "y var2 = new y(2, var1.m);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7424",
+      "java": "y var1 = new y(54, y.e(288));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7459",
+      "java": "y var1 = new y(51, j.a.f((short)1));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7482",
+      "java": "y var1 = new y(62, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7502",
+      "java": "var1 = new y(28, y.e(292));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7504",
+      "java": "var1 = new y(28, y.e(55));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7507",
+      "java": "var1 = new y(28, y.e(326));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7558",
+      "java": "y var3 = new y(24, h(this.ao).a);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7582",
+      "java": "y var1 = new y(27, y.e(188));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7640",
+      "java": "y var2 = new y(25, y.e(237));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7666",
+      "java": "y var0 = new y(62, y.e(12));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7693",
+      "java": "y var10000 = new y(39, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7742",
+      "java": "y var10000 = new y(62, y.e(48));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7750",
+      "java": "y var10000 = new y(62, y.e(373));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7784",
+      "java": "y var1 = new y(62, y.e(183));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7815",
+      "java": "y var2 = new y(62, y.e(151));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7846",
+      "java": "y var3 = new y(9, y.e(234));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:7886",
+      "java": "y var2 = new y(36, y.e(50));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:8013",
+      "java": "y var10000 = new y(62, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:8036",
+      "java": "y var10000 = new y(62, y.e(235));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:8054",
+      "java": "y var10000 = new y(61, y.e(44));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:8069",
+      "java": "y var10000 = new y(62, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:8086",
+      "java": "y var10000 = new y(29, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:8103",
+      "java": "y var10000 = new y(62, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:8123",
+      "java": "y var4 = new y(1, var6);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:8318",
+      "java": "this.aG = new y(this, 5, y.e(83));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:8823",
+      "java": "y var3 = new y(8, var1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:8841",
+      "java": "this.aj = new y(y.e(183), M, null, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/bc.java:1678",
+      "java": "this.u.ak = new y(y.e(248), 36, var1[var2].f((short)1), null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/bc.java:2667",
+      "java": "y var159 = new y(45, y.e(331));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/bc.java:3156",
+      "java": "y var11 = new y(57, y.e(172));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/bc.java:3188",
+      "java": "this.u.aj = new y(y.e(340), aj.M, null, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/bc.java:3189",
+      "java": "this.u.ak = new y(y.e(193), 49, null, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/bc.java:3191",
+      "java": "this.u.aj = new y(y.e(183), aj.M, null, null);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/k.java:1146",
+      "java": "y var5 = new y(47, y.e(9));"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/s.java:2539",
+      "java": "this.c = new y(38, var48);"
+    }
+  ],
+  "commands": [
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5809",
+      "java": "this.bM = new Command(y.e(154), 4, 2);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5810",
+      "java": "this.bO = new Command(y.e(155), 4, 3);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5811",
+      "java": "this.bA = new Command(y.e(281), 4, 1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5812",
+      "java": "this.bw = new Command(y.e(191), 4, 1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5813",
+      "java": "this.by = new Command(y.e(278), 4, 1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5814",
+      "java": "this.bB = new Command(y.e(106), 4, 1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5815",
+      "java": "this.bz = new Command(y.e(88), 4, 1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5816",
+      "java": "this.bF = new Command(y.e(53), 4, 1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5817",
+      "java": "this.bv = new Command(y.e(74), 2, 1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5818",
+      "java": "this.bx = new Command(y.e(29), 2, 1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5819",
+      "java": "this.bC = new Command(y.e(121), 2, 1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5820",
+      "java": "this.bG = new Command(y.e(348), 4, 1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5821",
+      "java": "this.bH = new Command(y.e(214), 2, 1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5822",
+      "java": "this.bL = new Command(y.e(153), 4, 1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5823",
+      "java": "this.bN = new Command(y.e(60), 4, 1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5824",
+      "java": "this.bK = new Command(y.e(103), 4, 1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5825",
+      "java": "this.bS = new Command(y.e(103), 2, 1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5826",
+      "java": "this.bI = new Command(y.e(222), 4, 1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5827",
+      "java": "this.bJ = new Command(y.e(52), 2, 1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5828",
+      "java": "this.bP = new Command(y.e(29), 2, 1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5829",
+      "java": "this.bQ = new Command(y.e(342), 2, 1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5830",
+      "java": "this.bR = new Command(y.e(251), 4, 1);"
+    },
+    {
+      "source": "research/applets/v4/artifacts/normal-flow/aj.java:5831",
+      "java": "this.bE = new Command(y.e(244), 2, 1);"
+    }
+  ]
+}

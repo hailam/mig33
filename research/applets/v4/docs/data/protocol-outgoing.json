@@ -1,0 +1,285 @@
+{
+  "scope": "Concrete requests plus known generic callers and explicitly marked local jobs; source bc/aj normal branch evidence crosschecked to original bytecode, see protocol.md. Synthetic errors, response objects and RMS objects excluded.",
+  "operations": [
+    {
+      "opcode": 2,
+      "purpose": "Test connection / heartbeat",
+      "schema_and_flow": "Manual test no fields \u21923; automatic heartbeat1:I1"
+    },
+    {
+      "opcode": 7,
+      "purpose": "Get help",
+      "schema_and_flow": "1:I topic; recovered UI registration topic5 \u21926"
+    },
+    {
+      "opcode": 9,
+      "purpose": "Reply to server prompt8",
+      "schema_and_flow": "1:B1 accept /0 decline;2:S original prompt transaction"
+    },
+    {
+      "opcode": 10,
+      "purpose": "Upload device/system information",
+      "schema_and_flow": "1:S1;2:T one property string, repeated after203 when enabled"
+    },
+    {
+      "opcode": 11,
+      "purpose": "Reply to preference query12",
+      "schema_and_flow": "1:B store type1 numeric/2 string;2:T key;3?:T value"
+    },
+    {
+      "opcode": 17,
+      "purpose": "Answer security challenge16",
+      "schema_and_flow": "1:T entered text"
+    },
+    {
+      "opcode": 101,
+      "purpose": "Start registration",
+      "schema_and_flow": "1:I height; duplicate width tag is overwritten \u2192102"
+    },
+    {
+      "opcode": 103,
+      "purpose": "Submit registration",
+      "schema_and_flow": "Five text fields + duplicate client string9/10; see above \u2192ack/104"
+    },
+    {
+      "opcode": 200,
+      "purpose": "Login",
+      "schema_and_flow": "Dedicated table \u2192201"
+    },
+    {
+      "opcode": 202,
+      "purpose": "Login challenge answer",
+      "schema_and_flow": "1:I Java hash \u2192203"
+    },
+    {
+      "opcode": 204,
+      "purpose": "Activate account",
+      "schema_and_flow": "1:T activation code \u2192ack"
+    },
+    {
+      "opcode": 205,
+      "purpose": "Resend/change activation mobile",
+      "schema_and_flow": "1:T mobile \u2192ack"
+    },
+    {
+      "opcode": 206,
+      "purpose": "Connect external IM",
+      "schema_and_flow": "1:B service,2:B mode,3:B0 (boolean argument ignored) \u2192207"
+    },
+    {
+      "opcode": 300,
+      "purpose": "Logout",
+      "schema_and_flow": "No fields"
+    },
+    {
+      "opcode": 302,
+      "purpose": "Disconnect external IM",
+      "schema_and_flow": "1:B service \u2192207/ack"
+    },
+    {
+      "opcode": 400,
+      "purpose": "Full contact synchronization",
+      "schema_and_flow": "No fields \u2192401/402/420/403"
+    },
+    {
+      "opcode": 405,
+      "purpose": "Add contact",
+      "schema_and_flow": "2?:I group;3?:T display;8?:T mobile;12?:T mig33 with24:B share-mobile flag;30?:T external username;31?:B external service \u2192402"
+    },
+    {
+      "opcode": 406,
+      "purpose": "Delete contact",
+      "schema_and_flow": "1:I contact ID \u2192ack or push406"
+    },
+    {
+      "opcode": 407,
+      "purpose": "Edit contact",
+      "schema_and_flow": "1:I contact;2?:I group;3?:T display;8?:T mobile;12?:T mig33;30?:TA external usernames +31?:X parallel service bytes. Arrays sent only if both nonempty vectors have equal lengths \u2192402"
+    },
+    {
+      "opcode": 408,
+      "purpose": "Add group",
+      "schema_and_flow": "2:T name \u2192401"
+    },
+    {
+      "opcode": 409,
+      "purpose": "Delete group",
+      "schema_and_flow": "1:I group \u2192ack"
+    },
+    {
+      "opcode": 410,
+      "purpose": "Rename group",
+      "schema_and_flow": "1:I group;2:T name \u2192ack"
+    },
+    {
+      "opcode": 411,
+      "purpose": "Move contact",
+      "schema_and_flow": "1:I contact;2?:I group, omitted for\u22121 \u2192ack"
+    },
+    {
+      "opcode": 417,
+      "purpose": "Block user",
+      "schema_and_flow": "1:T username;2:B2 **always**; boolean parameter ignored"
+    },
+    {
+      "opcode": 419,
+      "purpose": "Incremental contact synchronization",
+      "schema_and_flow": "1:L saved timestamp \u2192cache updates/403"
+    },
+    {
+      "opcode": 500,
+      "purpose": "Send message/photo",
+      "schema_and_flow": "Dedicated table below \u2192ack/error"
+    },
+    {
+      "opcode": 504,
+      "purpose": "Upload photo",
+      "schema_and_flow": "1:S1;2:X bytes;4?:S parameter, omitted\u22121;5:B purpose. Ack1:T opens URL; absent URL with purpose0 opens photo home"
+    },
+    {
+      "opcode": 600,
+      "purpose": "Set presence",
+      "schema_and_flow": "1:B new presence;2:B old presence for rollback \u2192ack/error"
+    },
+    {
+      "opcode": 601,
+      "purpose": "Set status text",
+      "schema_and_flow": "1:T new text;2:T old text \u2192ack/error;603 may update profile"
+    },
+    {
+      "opcode": 602,
+      "purpose": "Set avatar",
+      "schema_and_flow": "Inserts1:T new ID then1:T old ID: **old ID wins**; no tag2 is sent. Preserve anomaly"
+    },
+    {
+      "opcode": 703,
+      "purpose": "Join room",
+      "schema_and_flow": "1:T room; boolean argument ignored \u2192701 room state and/or ack"
+    },
+    {
+      "opcode": 704,
+      "purpose": "Leave room",
+      "schema_and_flow": "1:T room \u2192ack; suppress incoming messages while pending"
+    },
+    {
+      "opcode": 706,
+      "purpose": "Kick room member",
+      "schema_and_flow": "1:T room;2:T target \u2192ack"
+    },
+    {
+      "opcode": 707,
+      "purpose": "Room participants",
+      "schema_and_flow": "1:T room \u2192708"
+    },
+    {
+      "opcode": 709,
+      "purpose": "Mute room member",
+      "schema_and_flow": "1:T room;2:T target \u2192ack"
+    },
+    {
+      "opcode": 710,
+      "purpose": "Unmute room member",
+      "schema_and_flow": "1:T room;2:T target \u2192ack"
+    },
+    {
+      "opcode": 711,
+      "purpose": "Add favorite room",
+      "schema_and_flow": "1:T room \u2192701"
+    },
+    {
+      "opcode": 712,
+      "purpose": "Remove room from category",
+      "schema_and_flow": "1:S category;2:T room \u2192ack"
+    },
+    {
+      "opcode": 713,
+      "purpose": "Get room categories",
+      "schema_and_flow": "No fields \u2192714*/715"
+    },
+    {
+      "opcode": 716,
+      "purpose": "Get category contents",
+      "schema_and_flow": "1:S category;2:B flag \u2192701*/717"
+    },
+    {
+      "opcode": 751,
+      "purpose": "Create group chat from private",
+      "schema_and_flow": "1:T existing peer;2:T invitee;3:B service \u2192750"
+    },
+    {
+      "opcode": 752,
+      "purpose": "Invite to group",
+      "schema_and_flow": "1:T group ID;2:T invitee;3:B service \u2192ack"
+    },
+    {
+      "opcode": 753,
+      "purpose": "Leave group",
+      "schema_and_flow": "1:T group ID;2:B service \u2192ack"
+    },
+    {
+      "opcode": 754,
+      "purpose": "Group participants",
+      "schema_and_flow": "1:T group ID;2:B service \u2192755"
+    },
+    {
+      "opcode": 800,
+      "purpose": "Confirm callback",
+      "schema_and_flow": "1:T origin;2:T destination;4:B0;5:B1. Both int arguments ignored \u2192ack/804"
+    },
+    {
+      "opcode": 900,
+      "purpose": "Invite friend",
+      "schema_and_flow": "1:T mobile;2:T name \u2192ack"
+    },
+    {
+      "opcode": 904,
+      "purpose": "Forgot details",
+      "schema_and_flow": "2:T mobile \u2192ack"
+    },
+    {
+      "opcode": 907,
+      "purpose": "Remove/update IM settings",
+      "schema_and_flow": "Cached906 changed to907;1:B1; UI sets30:B selected service before request. Retains all other cached fields"
+    },
+    {
+      "opcode": 913,
+      "purpose": "Get emoticon",
+      "schema_and_flow": "1:T token **plus a trailing space**;2:I action mode.914's mode1 path can open animated/photo content"
+    },
+    {
+      "opcode": 921,
+      "purpose": "Subscribe/unsubscribe activity updates",
+      "schema_and_flow": "1:B1 opens Updates tab,0 closes/disables; errors requeue same request"
+    },
+    {
+      "opcode": 922,
+      "purpose": "Fetch embedded web page/image",
+      "schema_and_flow": "Dedicated HTTP table below \u2192923, gateway or local routing"
+    },
+    {
+      "opcode": 925,
+      "purpose": "Set language",
+      "schema_and_flow": "1:T language code after1004"
+    },
+    {
+      "opcode": 926,
+      "purpose": "Get external IM icons",
+      "schema_and_flow": "1:X array of service IDs (this caller sends one byte) \u2192927"
+    },
+    {
+      "opcode": 1001,
+      "purpose": "**Local language-list job**",
+      "schema_and_flow": "1:T URL; HTTP fetch binary1002; not serialized to gateway"
+    },
+    {
+      "opcode": 1003,
+      "purpose": "**Local language-pack job**",
+      "schema_and_flow": "1:T URL; HTTP fetch binary1004; not serialized to gateway"
+    },
+    {
+      "opcode": 1005,
+      "purpose": "**Local raw HTTP job**",
+      "schema_and_flow": "1:T URL; returns synthetic1005 with1:X body; username availability check"
+    }
+  ]
+}

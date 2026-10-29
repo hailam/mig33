@@ -1,0 +1,30 @@
+{
+  "builds": [
+    {
+      "version": "3.08",
+      "jar_sha256": "2b416199dca5f6593eefe8fa1c9b84ec4be6cdc36f68bcf17e1a94193bfd2934",
+      "classes": 35,
+      "screenshots": 46,
+      "original_resources_match": true
+    },
+    {
+      "version": "4.62",
+      "jar_sha256": "dbf12ffbd44bc6e48d09cf35863736731c87c078877f76ed4b780a4dc5eff92c",
+      "classes": 26,
+      "screenshots": 39,
+      "original_resources_match": true
+    }
+  ],
+  "theme_fields": 148,
+  "theme_images": 9,
+  "documents_checked": 86,
+  "historical_images_verified": 120,
+  "html_documents_checked": 7,
+  "tool_binaries_checked": 4,
+  "v4_endpoint_literal_references_checked": 128,
+  "v4_endpoint_url_path_literals": 59,
+  "v4_page_templates": 52,
+  "json_files_parsed": 46,
+  "broken_local_document_links": [],
+  "scope": "Original bytes, extracted resources, decompiler/disassembly coverage, image hashes/PNG CRCs and local links; not live backend behavior."
+}

@@ -1,0 +1,548 @@
+{
+  "recorded_at_utc": "2026-10-29T07:45:13.824316+00:00",
+  "moves": [
+    {
+      "old": "v4/scripts/integration/BLOCKING.md",
+      "new": "research/acceptance/v4/BLOCKING.md"
+    },
+    {
+      "old": "v4/scripts/integration/CONTACTS.md",
+      "new": "research/acceptance/v4/CONTACTS.md"
+    },
+    {
+      "old": "v4/scripts/integration/FRIENDS_MODERATION.md",
+      "new": "research/acceptance/v4/FRIENDS_MODERATION.md"
+    },
+    {
+      "old": "v4/scripts/integration/GROUPS.md",
+      "new": "research/acceptance/v4/GROUPS.md"
+    },
+    {
+      "old": "v4/scripts/integration/IDENTITY.md",
+      "new": "research/acceptance/v4/IDENTITY.md"
+    },
+    {
+      "old": "v4/scripts/integration/MEDIA.md",
+      "new": "research/acceptance/v4/MEDIA.md"
+    },
+    {
+      "old": "v4/scripts/integration/MIRRORS.md",
+      "new": "research/acceptance/v4/MIRRORS.md"
+    },
+    {
+      "old": "v4/scripts/integration/PAGES.md",
+      "new": "research/acceptance/v4/PAGES.md"
+    },
+    {
+      "old": "v4/scripts/integration/README.md",
+      "new": "research/acceptance/v4/README.md"
+    },
+    {
+      "old": "v4/scripts/integration/RECONNECT.md",
+      "new": "research/acceptance/v4/RECONNECT.md"
+    },
+    {
+      "old": "v4/scripts/integration/ROOMS.md",
+      "new": "research/acceptance/v4/ROOMS.md"
+    },
+    {
+      "old": "v4/scripts/integration/ROOM_DISCOVERY.md",
+      "new": "research/acceptance/v4/ROOM_DISCOVERY.md"
+    },
+    {
+      "old": "v4/scripts/integration/ROOM_MODERATION.md",
+      "new": "research/acceptance/v4/ROOM_MODERATION.md"
+    },
+    {
+      "old": "v4/scripts/integration/SLASH_COMMANDS.md",
+      "new": "research/acceptance/v4/SLASH_COMMANDS.md"
+    },
+    {
+      "old": "v4/scripts/integration/VOTE_REPORT.md",
+      "new": "research/acceptance/v4/VOTE_REPORT.md"
+    },
+    {
+      "old": "v4/scripts/integration/block-out",
+      "new": "research/acceptance/v4/runs/block-out"
+    },
+    {
+      "old": "v4/scripts/integration/block-report.md",
+      "new": "research/acceptance/v4/block-report.md"
+    },
+    {
+      "old": "v4/scripts/integration/catalog-out",
+      "new": "research/acceptance/v4/runs/catalog-out"
+    },
+    {
+      "old": "v4/scripts/integration/catalog-result.md",
+      "new": "research/acceptance/v4/catalog-result.md"
+    },
+    {
+      "old": "v4/scripts/integration/contact-out",
+      "new": "research/acceptance/v4/runs/contact-out"
+    },
+    {
+      "old": "v4/scripts/integration/contact-report.md",
+      "new": "research/acceptance/v4/contact-report.md"
+    },
+    {
+      "old": "v4/scripts/integration/controllers-out",
+      "new": "research/acceptance/v4/runs/controllers-out"
+    },
+    {
+      "old": "v4/scripts/integration/controllers-result.md",
+      "new": "research/acceptance/v4/controllers-result.md"
+    },
+    {
+      "old": "v4/scripts/integration/formatting-out",
+      "new": "research/acceptance/v4/runs/formatting-out"
+    },
+    {
+      "old": "v4/scripts/integration/formatting-result.md",
+      "new": "research/acceptance/v4/formatting-result.md"
+    },
+    {
+      "old": "v4/scripts/integration/friend-moderation-out",
+      "new": "research/acceptance/v4/runs/friend-moderation-out"
+    },
+    {
+      "old": "v4/scripts/integration/friend-moderation-result.md",
+      "new": "research/acceptance/v4/friend-moderation-result.md"
+    },
+    {
+      "old": "v4/scripts/integration/group-out",
+      "new": "research/acceptance/v4/runs/group-out"
+    },
+    {
+      "old": "v4/scripts/integration/group-report.md",
+      "new": "research/acceptance/v4/group-report.md"
+    },
+    {
+      "old": "v4/scripts/integration/hexagonal-first-attempt-out",
+      "new": "research/acceptance/v4/runs/hexagonal-first-attempt-out"
+    },
+    {
+      "old": "v4/scripts/integration/hexagonal-out",
+      "new": "research/acceptance/v4/runs/hexagonal-out"
+    },
+    {
+      "old": "v4/scripts/integration/hexagonal-pilot-out",
+      "new": "research/acceptance/v4/runs/hexagonal-pilot-out"
+    },
+    {
+      "old": "v4/scripts/integration/hexagonal-preformat-out",
+      "new": "research/acceptance/v4/runs/hexagonal-preformat-out"
+    },
+    {
+      "old": "v4/scripts/integration/identity-out",
+      "new": "research/acceptance/v4/runs/identity-out"
+    },
+    {
+      "old": "v4/scripts/integration/identity-result.md",
+      "new": "research/acceptance/v4/identity-result.md"
+    },
+    {
+      "old": "v4/scripts/integration/lifecycle-before-cancellation-fix-out",
+      "new": "research/acceptance/v4/runs/lifecycle-before-cancellation-fix-out"
+    },
+    {
+      "old": "v4/scripts/integration/lifecycle-before-cancellation-fix-result.md",
+      "new": "research/acceptance/v4/lifecycle-before-cancellation-fix-result.md"
+    },
+    {
+      "old": "v4/scripts/integration/lifecycle-out",
+      "new": "research/acceptance/v4/runs/lifecycle-out"
+    },
+    {
+      "old": "v4/scripts/integration/lifecycle-result.md",
+      "new": "research/acceptance/v4/lifecycle-result.md"
+    },
+    {
+      "old": "v4/scripts/integration/media-out",
+      "new": "research/acceptance/v4/runs/media-out"
+    },
+    {
+      "old": "v4/scripts/integration/media-result.md",
+      "new": "research/acceptance/v4/media-result.md"
+    },
+    {
+      "old": "v4/scripts/integration/mirror-out",
+      "new": "research/acceptance/v4/runs/mirror-out"
+    },
+    {
+      "old": "v4/scripts/integration/mirrors-result.md",
+      "new": "research/acceptance/v4/mirrors-result.md"
+    },
+    {
+      "old": "v4/scripts/integration/out",
+      "new": "research/acceptance/v4/runs/out"
+    },
+    {
+      "old": "v4/scripts/integration/pages-out",
+      "new": "research/acceptance/v4/runs/pages-out"
+    },
+    {
+      "old": "v4/scripts/integration/pages-result.md",
+      "new": "research/acceptance/v4/pages-result.md"
+    },
+    {
+      "old": "v4/scripts/integration/reconnect-out",
+      "new": "research/acceptance/v4/runs/reconnect-out"
+    },
+    {
+      "old": "v4/scripts/integration/reconnect-result.md",
+      "new": "research/acceptance/v4/reconnect-result.md"
+    },
+    {
+      "old": "v4/scripts/integration/refactor-out",
+      "new": "research/acceptance/v4/runs/refactor-out"
+    },
+    {
+      "old": "v4/scripts/integration/refactor-result.md",
+      "new": "research/acceptance/v4/refactor-result.md"
+    },
+    {
+      "old": "v4/scripts/integration/report.md",
+      "new": "research/acceptance/v4/report.md"
+    },
+    {
+      "old": "v4/scripts/integration/room-discovery-out",
+      "new": "research/acceptance/v4/runs/room-discovery-out"
+    },
+    {
+      "old": "v4/scripts/integration/room-discovery-result.md",
+      "new": "research/acceptance/v4/room-discovery-result.md"
+    },
+    {
+      "old": "v4/scripts/integration/room-moderation-out",
+      "new": "research/acceptance/v4/runs/room-moderation-out"
+    },
+    {
+      "old": "v4/scripts/integration/room-moderation-report.md",
+      "new": "research/acceptance/v4/room-moderation-report.md"
+    },
+    {
+      "old": "v4/scripts/integration/room-out",
+      "new": "research/acceptance/v4/runs/room-out"
+    },
+    {
+      "old": "v4/scripts/integration/room-report.md",
+      "new": "research/acceptance/v4/room-report.md"
+    },
+    {
+      "old": "v4/scripts/integration/slash-out",
+      "new": "research/acceptance/v4/runs/slash-out"
+    },
+    {
+      "old": "v4/scripts/integration/slash-result.md",
+      "new": "research/acceptance/v4/slash-result.md"
+    },
+    {
+      "old": "v4/scripts/integration/vote-report-out",
+      "new": "research/acceptance/v4/runs/vote-report-out"
+    },
+    {
+      "old": "v4/scripts/integration/vote-report-result.md",
+      "new": "research/acceptance/v4/vote-report-result.md"
+    },
+    {
+      "old": "v4/scripts/integration/classes",
+      "new": "data/applets/build/integration/classes"
+    },
+    {
+      "old": "v4/scripts/integration/resource-bridge.jar",
+      "new": "data/applets/build/integration/resource-bridge.jar"
+    },
+    {
+      "old": "v4/scripts/integration/FieldProbe.class",
+      "new": "data/applets/build/integration/FieldProbe.class"
+    },
+    {
+      "old": "v4/scripts/integration/__pycache__",
+      "new": "data/applets/build/integration/__pycache__"
+    },
+    {
+      "old": "v4/scripts/capture-classes",
+      "new": "data/applets/build/v4/capture-classes"
+    },
+    {
+      "old": "v4/scripts/resource-bridge.jar",
+      "new": "data/applets/build/v4/resource-bridge.jar"
+    },
+    {
+      "old": "scripts/capture-classes",
+      "new": "data/applets/build/v3/classes"
+    },
+    {
+      "old": "docs/research",
+      "new": "research/architecture"
+    },
+    {
+      "old": "research/candidates",
+      "new": "research/applets/v3/discovery"
+    },
+    {
+      "old": "research/v4",
+      "new": "research/applets/v4/discovery"
+    },
+    {
+      "old": "artifacts",
+      "new": "research/applets/v3/artifacts"
+    },
+    {
+      "old": "v4/artifacts",
+      "new": "research/applets/v4/artifacts"
+    },
+    {
+      "old": "v4/docs",
+      "new": "research/applets/v4/docs"
+    },
+    {
+      "old": "v4/scripts",
+      "new": "tools/applets/v4"
+    },
+    {
+      "old": "docs/data/games-history.json",
+      "new": "research/applets/v4/docs/data/games-history.json"
+    },
+    {
+      "old": "docs/data/historical-formatting-sources.json",
+      "new": "research/applets/v4/docs/data/historical-formatting-sources.json"
+    },
+    {
+      "old": "docs/data/historical-product-catalog.json",
+      "new": "research/applets/v4/docs/data/historical-product-catalog.json"
+    },
+    {
+      "old": "docs/data/validation.json",
+      "new": "research/applets/validation.json"
+    },
+    {
+      "old": "docs/data/__pycache__",
+      "new": "data/applets/build/v3/pycache"
+    },
+    {
+      "old": "docs/data",
+      "new": "research/applets/v3/docs/data"
+    },
+    {
+      "old": "docs/assets.html",
+      "new": "research/applets/v3/docs/assets.html"
+    },
+    {
+      "old": "docs/capture.md",
+      "new": "research/applets/v3/docs/capture.md"
+    },
+    {
+      "old": "docs/protocol.md",
+      "new": "research/applets/v3/docs/protocol.md"
+    },
+    {
+      "old": "docs/provenance.md",
+      "new": "research/applets/v3/docs/provenance.md"
+    },
+    {
+      "old": "docs/rendering.md",
+      "new": "research/applets/v3/docs/rendering.md"
+    },
+    {
+      "old": "docs/screens.md",
+      "new": "research/applets/v3/docs/screens.md"
+    },
+    {
+      "old": "docs/comparison.md",
+      "new": "research/applets/shared/comparison.md"
+    },
+    {
+      "old": "docs/comparison.html",
+      "new": "research/applets/shared/comparison.html"
+    },
+    {
+      "old": "docs/protocol-differences.md",
+      "new": "research/applets/shared/protocol-differences.md"
+    },
+    {
+      "old": "docs/history-and-popularity.md",
+      "new": "research/applets/shared/history-and-popularity.md"
+    },
+    {
+      "old": "docs/methodology.md",
+      "new": "research/applets/shared/methodology.md"
+    },
+    {
+      "old": "docs/backend-inferences.md",
+      "new": "research/applets/shared/backend-inferences.md"
+    },
+    {
+      "old": "docs/historical-page-designs.md",
+      "new": "research/applets/v4/docs/historical-page-designs.md"
+    },
+    {
+      "old": "scripts/inventory.py",
+      "new": "tools/applets/scripts/inventory.py"
+    },
+    {
+      "old": "scripts/validate_reference.py",
+      "new": "tools/applets/scripts/validate_reference.py"
+    },
+    {
+      "old": "scripts/build_comparison.py",
+      "new": "tools/applets/scripts/build_comparison.py"
+    },
+    {
+      "old": "scripts/build_v4_endpoints.py",
+      "new": "tools/applets/scripts/build_v4_endpoints.py"
+    },
+    {
+      "old": "scripts/extract_v4_theme.py",
+      "new": "tools/applets/scripts/extract_v4_theme.py"
+    },
+    {
+      "old": "scripts/decompile_normal_flow.py",
+      "new": "tools/applets/scripts/decompile_normal_flow.py"
+    },
+    {
+      "old": "scripts/capture_screens.sh",
+      "new": "tools/applets/v3/capture_screens.sh"
+    },
+    {
+      "old": "scripts/capture_gallery.py",
+      "new": "tools/applets/v3/capture_gallery.py"
+    },
+    {
+      "old": "scripts/capture-src",
+      "new": "tools/applets/v3/capture-src"
+    },
+    {
+      "old": "tools/cfr-0.152.jar",
+      "new": "tools/applets/bin/cfr-0.152.jar"
+    },
+    {
+      "old": "tools/manifest.json",
+      "new": "tools/applets/bin/manifest.json"
+    },
+    {
+      "old": "tools/microemulator-2.0.4.jar",
+      "new": "tools/applets/bin/microemulator-2.0.4.jar"
+    },
+    {
+      "old": "tools/procyon-decompiler-0.6.0.jar",
+      "new": "tools/applets/bin/procyon-decompiler-0.6.0.jar"
+    },
+    {
+      "old": "tools/procyon-release.json",
+      "new": "tools/applets/bin/procyon-release.json"
+    },
+    {
+      "old": "tools/vineflower-1.12.0.jar",
+      "new": "tools/applets/bin/vineflower-1.12.0.jar"
+    },
+    {
+      "old": "v4/docs/data/__pycache__",
+      "new": "data/applets/build/v4/pycache"
+    },
+    {
+      "old": "v4/docs/data/protocol-extract.py",
+      "new": "tools/applets/v4/protocol-extract.py"
+    },
+    {
+      "old": "v4/docs/data/protocol-codec.py",
+      "new": "tools/applets/v4/protocol-codec.py"
+    },
+    {
+      "old": "v4/docs/data/protocol-fixture-harness.java",
+      "new": "tools/applets/v4/protocol-fixture-harness.java"
+    },
+    {
+      "old": "docs/data/protocol-codec.py",
+      "new": "tools/applets/v3/protocol-codec.py"
+    },
+    {
+      "old": "docs/data/protocol-fixture-harness.java",
+      "new": "tools/applets/v3/protocol-fixture-harness.java"
+    },
+    {
+      "old": "artifacts/screenshots/240x320/manifest.json",
+      "new": "research/applets/v3/docs/data/screenshots-240x320.json"
+    },
+    {
+      "old": "v4/artifacts/analysis-only/transformations.json",
+      "new": "research/applets/v4/docs/data/normal-flow-transformations.json"
+    },
+    {
+      "old": "v4/artifacts/historical-pages/archived-july-extra-images.json",
+      "new": "research/applets/v4/docs/data/historical-pages/archived-july-extra-images.json"
+    },
+    {
+      "old": "v4/artifacts/historical-pages/archived-guide-images.json",
+      "new": "research/applets/v4/docs/data/historical-pages/archived-guide-images.json"
+    },
+    {
+      "old": "v4/artifacts/historical-pages/route-design-coverage.json",
+      "new": "research/applets/v4/docs/data/historical-pages/route-design-coverage.json"
+    },
+    {
+      "old": "v4/artifacts/historical-pages/mirror-images.json",
+      "new": "research/applets/v4/docs/data/historical-pages/mirror-images.json"
+    },
+    {
+      "old": "v4/artifacts/historical-pages/catalog.json",
+      "new": "research/applets/v4/docs/data/historical-pages/catalog.json"
+    },
+    {
+      "old": "v4/artifacts/historical-pages/official-source-recovery.json",
+      "new": "research/applets/v4/docs/data/historical-pages/official-source-recovery.json"
+    },
+    {
+      "old": "v4/artifacts/screenshots/240x320/manifest.json",
+      "new": "research/applets/v4/docs/data/screenshots-240x320.json"
+    },
+    {
+      "old": "research/applets/v3/artifacts/screenshots/240x320/manifest.json",
+      "new": "research/applets/v3/docs/data/screenshots-240x320.json"
+    },
+    {
+      "old": "research/applets/v4/artifacts/screenshots/240x320/manifest.json",
+      "new": "research/applets/v4/docs/data/screenshots-240x320.json"
+    },
+    {
+      "old": "research/applets/v4/artifacts/analysis-only/transformations.json",
+      "new": "research/applets/v4/docs/data/normal-flow-transformations.json"
+    },
+    {
+      "old": "research/applets/v4/artifacts/historical-pages/archived-guide-images.json",
+      "new": "research/applets/v4/docs/data/historical-pages/archived-guide-images.json"
+    },
+    {
+      "old": "research/applets/v4/artifacts/historical-pages/archived-july-extra-images.json",
+      "new": "research/applets/v4/docs/data/historical-pages/archived-july-extra-images.json"
+    },
+    {
+      "old": "research/applets/v4/artifacts/historical-pages/catalog.json",
+      "new": "research/applets/v4/docs/data/historical-pages/catalog.json"
+    },
+    {
+      "old": "research/applets/v4/artifacts/historical-pages/mirror-images.json",
+      "new": "research/applets/v4/docs/data/historical-pages/mirror-images.json"
+    },
+    {
+      "old": "research/applets/v4/artifacts/historical-pages/official-source-recovery.json",
+      "new": "research/applets/v4/docs/data/historical-pages/official-source-recovery.json"
+    },
+    {
+      "old": "research/applets/v4/artifacts/historical-pages/route-design-coverage.json",
+      "new": "research/applets/v4/docs/data/historical-pages/route-design-coverage.json"
+    }
+  ],
+  "moved_file_count": 25454,
+  "manifest": "research/relocation-manifest.json.gz",
+  "manifest_sha256": "5e5921b71b9799063a37d6d18ae80c3482821f08d29652836c78c450988e85b5",
+  "note": "Old paths inside retained execution snapshots describe their as-run layout. Use this map to locate relocated artifacts. Active source/document paths are updated separately.",
+  "temporary_aliases_removed": true,
+  "artifact_metadata_separation": {
+    "recorded_at_utc": "2026-10-29T13:35:45.959961+00:00",
+    "metadata_files_moved": 9,
+    "bytes_preserved": true,
+    "artifacts_entirely_ignored": true
+  }
+}

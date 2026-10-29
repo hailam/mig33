@@ -1,0 +1,181 @@
+package pages
+
+import "net/url"
+import "strconv"
+
+templ legacyHelpView() {
+	@Paragraph("Select a contact for a direct message, or browse Chat rooms to join Lobby, Gaming or Help.")
+	@Paragraph("Use the Chat rooms menu to search, create a public room, view Room Info or save a room to Favorites.")
+	@Paragraph("Use the room participant list to see users, moderators and muted members.")
+	@Paragraph("Use /me followed by an action, or /hug, /slap, /wave, /smile, /laugh, /cry and /brb with an optional username. /roll, /fortune and /8ball take no arguments.")
+	@Paragraph("Block & Mute User hides someone's incoming messages for you. Use Settings, Manage Block List to unblock them.")
+	@Paragraph("Private and group messages are saved for offline delivery. Room messages are live; missed room traffic is not replayed.")
+}
+
+templ legacyProfileView(view profileView) {
+	@Heading(view.Name)
+	@Paragraph("Username: " + view.Username)
+	@Paragraph("Presence: " + view.Presence)
+	@Paragraph("Status: " + view.Status)
+	if view.ShowActions {
+		@nativeUserActions(view.Username)
+	}
+}
+
+templ nativeUserActions(username string) {
+	if nativeUsernameAllowed(username) {
+		@Link("mig33:privateChat(" + username + ")", "Chat")
+		@Link("mig33:inviteFriend(" + username + ")", "Add Friend")
+	}
+}
+
+templ roomLinks(view RoomView, includeInfo bool) {
+	if join := nativeRoomJoinURL(view.Name); join != "" {
+		@Link(join, "Join Room")
+	}
+	if includeInfo && view.InfoURL != "" {
+		@Link(view.InfoURL, "Room Info")
+	}
+}
+
+templ legacyRoomInfoView(view RoomView, moderators string) {
+	@Heading(view.Name)
+	@Paragraph(roomOccupancy(view))
+	if view.Owner != "" {
+		@Paragraph("Owner: " + view.Owner)
+	}
+	@Paragraph("Moderators: " + moderators)
+	@Paragraph(view.Description)
+	if view.Notice != "" {
+		@Paragraph(view.Notice)
+	}
+	if view.Management != nil {
+		@roomManagementForm(view.Name, *view.Management)
+	}
+	@roomLinks(view, false)
+	if view.SettingsURL != "" {
+		@Link(view.SettingsURL, "Room Settings: language, keywords, moderators, bans, kicking rules and ownership")
+	}
+}
+
+// The legacy native input width is controlled by size, not CSS. Keep maxlength
+// for ordinary browser clients even though the original native editor ignores it.
+templ legacyTextInput(name, label string, maximum int) {
+	@Paragraph(label)
+	<input type="text" name={ name } value="" size="10" maxlength={ strconv.Itoa(maximum) }/>
+}
+
+templ legacyRoomSearchView(view roomSearchView) {
+	@Heading("Search Rooms")
+ @Paragraph("Language filter: " + view.Language)
+ @Paragraph("Keyword filter: " + view.Keywords)
+	@Form(view.Action, nil, Input("query", "Room name or description", "text", "", 10), "Search")
+ @Form(view.LanguageAction, nil, Input("query", "Primary language (empty means all)", "text", "", 10), "Filter Language")
+ @Form(view.KeywordsAction, nil, Input("query", "Keywords (literal text)", "text", "", 10), "Filter Keywords")
+	if view.Searched {
+		if view.Query != "" {
+			@Paragraph("Results for: " + view.Query)
+		}
+		if len(view.Results) == 0 {
+			@Paragraph("No chat rooms found.")
+		}
+		if len(view.Results) >= 100 {
+			@Paragraph("Showing up to 100 rooms. Narrow your search to find a room.")
+		}
+		for _, room := range view.Results {
+			@Heading(room.Name)
+			@Paragraph(roomOccupancy(room))
+			@roomLinks(room, true)
+		}
+	}
+}
+
+templ legacyRoomCreateView(view roomCreateView) {
+	@Heading("Create Room")
+	@Paragraph("Choose a name using 1 to " + strconv.Itoa(view.NameLimit) + " letters, numbers, spaces, _ or -.")
+	@Form(view.Action, view.Hidden, legacyTextInput("name", "Room name", view.NameLimit), "Continue")
+}
+
+templ legacyRoomCreateDetailsView(view roomCreateView) {
+	@Heading("Create Room")
+	@Paragraph("Room: " + view.Name)
+	@Paragraph("This public room will hold up to 50 people. You will be its moderator.")
+	@Form(view.Action, view.Hidden, TextArea("description", "Description (optional)", "", 0), "Create Room")
+}
+
+templ legacyRoomCreatedView(view RoomView) {
+	@Heading("Room Created")
+	@Paragraph(view.Name)
+	@Paragraph("Your room is ready.")
+	@roomLinks(view, true)
+}
+
+templ roomManagementForm(room string, management RoomManagement) {
+	@Heading("Room Moderation")
+	@Paragraph("Mute stops a member from sending in this room. They can still read messages.")
+	if len(management.Targets) == 0 {
+		@Paragraph("No other members can be moderated here right now.")
+	}
+	for _, target := range management.Targets {
+		@Form(management.Action, roomModerationFields(room, management, target), Stack(), roomModerationLabel(target))
+	}
+}
+
+templ legacyReportView(view reportView) {
+	@Heading("Report Abuse")
+	@Paragraph("Conversation: " + view.Context)
+	@Paragraph("Reports are saved for review by the local operator. Submitting a report does not remove anyone from the conversation.")
+	@Form(view.Action, view.Hidden, legacyReportControls(view.Targets), "Submit Report")
+}
+
+templ legacyReportControls(targets []string) {
+	@Paragraph("Reason")
+	<select name="category">
+		<option value="spam">Spam or flooding</option>
+		<option value="harassment">Harassment</option>
+		<option value="content">Offensive content</option>
+		<option value="other">Other</option>
+	</select>
+	@Paragraph("User (optional)")
+	<select name="target">
+		<option value="">Conversation in general</option>
+		for _, target := range targets {
+			<option value={ target }>{ target }</option>
+		}
+	</select>
+	@TextArea("details", "Describe what happened", "", 0)
+}
+
+templ legacyBlockListView(view blockListView) {
+	@Heading("Manage Block List")
+	if view.Notice != "" {
+		@Paragraph(view.Notice)
+	}
+	if len(view.Blocked) == 0 {
+		@Paragraph("You have no blocked users.")
+	} else {
+		@Paragraph("Select Unblock to remove a user from your block list.")
+		for _, username := range view.Blocked {
+			@Heading(username)
+			@Form(view.Action, unblockFields(view, username), Stack(), "Unblock")
+		}
+	}
+}
+
+templ legacyFriendSearchView(view friendSearchView) {
+	@Heading("Search New Friends")
+	@Form(view.Action, nil, legacyTextInput("query", "Name or username", 128), "Search")
+	if view.Searched {
+		if view.Query != "" {
+			@Paragraph("Results for: " + view.Query)
+		}
+		if len(view.Users) == 0 {
+			@Paragraph("No friends found.")
+		}
+		for _, user := range view.Users {
+			<p><b>{ userDisplayName(user) }</b> ({ user.Username })</p>
+			@Link(view.ProfileURL + url.QueryEscape(user.Username), "View Profile")
+			@nativeUserActions(user.Username)
+		}
+	}
+}

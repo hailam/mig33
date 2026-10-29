@@ -1,0 +1,57 @@
+{
+  "research_date": "2026-10-29",
+  "scope": "Primary sources for capability ports/adapters and one complete migration. No production changes in this research pass.",
+  "interpretation": "Feasibility of one delivery and package ownership are repository-specific engineering conclusions; sources do not prescribe these package names or guarantee migration duration.",
+  "sources": [
+    {
+      "title": "Cockburn: original ports-and-adapters article",
+      "url": "https://alistair.cockburn.us/hexagonal-architecture",
+      "supports": "Separate application behavior from technology-specific interaction; several adapters can drive the same semantic application API."
+    },
+    {
+      "title": "Go code review: interfaces",
+      "url": "https://go.dev/wiki/CodeReviewComments#interfaces",
+      "supports": "Interfaces generally belong to consuming packages; introduce contracts for actual use and return concrete implementations."
+    },
+    {
+      "title": "Go: executing transactions",
+      "url": "https://go.dev/doc/database/execute-transactions",
+      "supports": "Group related changes in a transaction; avoid mixing non-transaction DB operations with transaction-bound operations."
+    },
+    {
+      "title": "sqlc 1.31.1: transactions",
+      "url": "https://docs.sqlc.dev/en/v1.31.1/howto/transactions.html",
+      "supports": "WithTx binds generated queries to a transaction. The project retains BeginTx(ctx, nil) rather than the example context-free Begin."
+    },
+    {
+      "title": "Fowler: refactoring",
+      "url": "https://refactoring.com/",
+      "supports": "Small internal behavior-preserving changes can compose a larger restructuring. Release cadence is a separate project decision."
+    },
+    {
+      "title": "Fowler: branch by abstraction",
+      "url": "https://martinfowler.com/bliki/BranchByAbstraction.html",
+      "supports": "Temporary abstractions can support checked caller migration; remove old implementations and unnecessary migration bridges after replacement."
+    },
+    {
+      "title": "Fowler: Unit of Work",
+      "url": "https://martinfowler.com/eaaCatalog/unitOfWork.html",
+      "supports": "The named pattern tracks affected objects and coordinates persistence/concurrency; a transaction callback alone is not the entire pattern."
+    },
+    {
+      "title": "AWS: transactional outbox",
+      "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html",
+      "supports": "Durable state and delivery intent avoid dual-write gaps; asynchronous consumers need duplicate and ordering handling."
+    }
+  ],
+  "local_evidence": [
+    "go-domain-boundaries-audit.json",
+    "evidence/hexagonal-fit.json",
+    "evidence/transaction-module-options.json",
+    "evidence/single-delivery-plan.json"
+  ],
+  "previous_research": [
+    "go-domain-boundaries.md",
+    "go-backend-architecture.md"
+  ]
+}

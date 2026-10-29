@@ -1,0 +1,736 @@
+[
+  {
+    "method": "public void a(w w2)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 106,
+    "constructors": []
+  },
+  {
+    "method": "public void a(String string, String string2, String string3, String string4, String string5)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 174,
+    "constructors": [
+      {
+        "line": 175,
+        "expression": "w w2 = new w(103);"
+      },
+      {
+        "line": 176,
+        "expression": "w2.a(new p(1, string));"
+      },
+      {
+        "line": 177,
+        "expression": "w2.a(new p(2, string2));"
+      },
+      {
+        "line": 178,
+        "expression": "w2.a(new p(3, string3));"
+      },
+      {
+        "line": 179,
+        "expression": "w2.a(new p(4, string4));"
+      },
+      {
+        "line": 180,
+        "expression": "w2.a(new p(5, string5));"
+      }
+    ]
+  },
+  {
+    "method": "public void a(short s2, String string)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 184,
+    "constructors": [
+      {
+        "line": 185,
+        "expression": "w w2 = new w(s2);"
+      },
+      {
+        "line": 186,
+        "expression": "w2.a(new p(1, string));"
+      }
+    ]
+  },
+  {
+    "method": "public void a(short s2, String string, String string2)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 190,
+    "constructors": [
+      {
+        "line": 191,
+        "expression": "w w2 = new w(s2);"
+      },
+      {
+        "line": 192,
+        "expression": "w2.a(new p(1, string));"
+      },
+      {
+        "line": 194,
+        "expression": "w2.a(new p(2, string2));"
+      }
+    ]
+  },
+  {
+    "method": "public void a(short s2, byte[] byArray, short s3)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 199,
+    "constructors": [
+      {
+        "line": 200,
+        "expression": "w w2 = new w(504);"
+      },
+      {
+        "line": 201,
+        "expression": "w2.a(new p(1, s2));"
+      },
+      {
+        "line": 202,
+        "expression": "w2.a(new p(2, byArray));"
+      },
+      {
+        "line": 203,
+        "expression": "w2.a(new p(4, s3));"
+      }
+    ]
+  },
+  {
+    "method": "public void a(byte by, String string)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 207,
+    "constructors": [
+      {
+        "line": 208,
+        "expression": "w w2 = new w(910);"
+      },
+      {
+        "line": 209,
+        "expression": "w2.a(new p(1, by));"
+      },
+      {
+        "line": 211,
+        "expression": "w2.a(new p(2, string));"
+      }
+    ]
+  },
+  {
+    "method": "public void b()",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 216,
+    "constructors": [
+      {
+        "line": 217,
+        "expression": "w w2 = new w(101);"
+      },
+      {
+        "line": 218,
+        "expression": "w2.a(new p(1, com.projectgoth.Roshan.c.a));"
+      },
+      {
+        "line": 219,
+        "expression": "w2.a(new p(1, com.projectgoth.Roshan.c.b));"
+      }
+    ]
+  },
+  {
+    "method": "public void a(String string, int n2)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 223,
+    "constructors": [
+      {
+        "line": 224,
+        "expression": "w w2 = new w(999);"
+      },
+      {
+        "line": 225,
+        "expression": "w2.a(new p(1, string));"
+      },
+      {
+        "line": 226,
+        "expression": "w2.a(new p(2, n2));"
+      }
+    ]
+  },
+  {
+    "method": "public void a(String string)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 230,
+    "constructors": [
+      {
+        "line": 231,
+        "expression": "w w2 = new w(904);"
+      },
+      {
+        "line": 232,
+        "expression": "w2.a(new p(2, string));"
+      }
+    ]
+  },
+  {
+    "method": "public void a(String string, boolean bl)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 236,
+    "constructors": [
+      {
+        "line": 237,
+        "expression": "w w2 = new w(417);"
+      },
+      {
+        "line": 238,
+        "expression": "w2.a(new p(1, string));"
+      },
+      {
+        "line": 239,
+        "expression": "w2.a(new p(2, bl ? (byte)2 : 1));"
+      }
+    ]
+  },
+  {
+    "method": "public void b(short s2, String string, String string2)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 243,
+    "constructors": [
+      {
+        "line": 244,
+        "expression": "w w2 = new w(s2);"
+      },
+      {
+        "line": 245,
+        "expression": "w2.a(new p(1, string2));"
+      },
+      {
+        "line": 246,
+        "expression": "w2.a(new p(2, string));"
+      }
+    ]
+  },
+  {
+    "method": "public void a(String string, String string2, String string3)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 250,
+    "constructors": [
+      {
+        "line": 253,
+        "expression": "w2 = new w(752);"
+      },
+      {
+        "line": 254,
+        "expression": "w2.a(new p(1, string3));"
+      },
+      {
+        "line": 256,
+        "expression": "w2 = new w(751);"
+      },
+      {
+        "line": 257,
+        "expression": "w2.a(new p(1, string));"
+      },
+      {
+        "line": 259,
+        "expression": "w2.a(new p(2, string2));"
+      }
+    ]
+  },
+  {
+    "method": "public void b(String string, String string2)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 263,
+    "constructors": [
+      {
+        "line": 266,
+        "expression": "w w2 = new w(200);"
+      },
+      {
+        "line": 267,
+        "expression": "w2.a(new p(1, 1));"
+      },
+      {
+        "line": 268,
+        "expression": "w2.a(new p(2, 2));"
+      },
+      {
+        "line": 270,
+        "expression": "w2.a(new p(3, (short)n2));"
+      },
+      {
+        "line": 271,
+        "expression": "w2.a(new p(5, string));"
+      },
+      {
+        "line": 272,
+        "expression": "w2.a(new p(7, \"J2MEv\" + Main.d + \".165\"));"
+      },
+      {
+        "line": 284,
+        "expression": "w2.a(new p(8, com.projectgoth.Roshan.c.L != null ? com.projectgoth.Roshan.c.L : \"Unknown\"));"
+      },
+      {
+        "line": 286,
+        "expression": "w2.a(new p(9, 99));"
+      },
+      {
+        "line": 288,
+        "expression": "w2.a(new p(9, 1));"
+      },
+      {
+        "line": 290,
+        "expression": "w2.a(new p(11, com.projectgoth.Roshan.c.aW));"
+      },
+      {
+        "line": 291,
+        "expression": "w2.a(new p(12, com.projectgoth.Roshan.c.a - 6));"
+      },
+      {
+        "line": 292,
+        "expression": "w2.a(new p(13, com.projectgoth.Roshan.c.b - com.projectgoth.Roshan.c.c));"
+      },
+      {
+        "line": 293,
+        "expression": "w2.a(new p(14, com.projectgoth.Roshan.c.c(14)));"
+      }
+    ]
+  },
+  {
+    "method": "public void a(String string, String string2, int n2, int n3)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 297,
+    "constructors": [
+      {
+        "line": 300,
+        "expression": "w2 = new w(805);"
+      },
+      {
+        "line": 302,
+        "expression": "w2 = new w(800);"
+      },
+      {
+        "line": 303,
+        "expression": "w2.a(new p(4, (byte)n2));"
+      },
+      {
+        "line": 304,
+        "expression": "w2.a(new p(5, (byte)n3));"
+      },
+      {
+        "line": 306,
+        "expression": "w2.a(new p(1, string));"
+      },
+      {
+        "line": 307,
+        "expression": "w2.a(new p(2, string2));"
+      }
+    ]
+  },
+  {
+    "method": "public void c()",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 311,
+    "constructors": []
+  },
+  {
+    "method": "public void a(short s2, int n2, int n3, boolean bl)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 317,
+    "constructors": [
+      {
+        "line": 318,
+        "expression": "w w2 = new w(s2);"
+      },
+      {
+        "line": 319,
+        "expression": "w2.a(new p(1, (byte)n2));"
+      },
+      {
+        "line": 321,
+        "expression": "w2.a(new p(2, (byte)n3));"
+      },
+      {
+        "line": 322,
+        "expression": "w2.a(new p(3, bl ? (byte)1 : 0));"
+      }
+    ]
+  },
+  {
+    "method": "public void a(String string, int n2, String string2)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 327,
+    "constructors": [
+      {
+        "line": 329,
+        "expression": "w w2 = new w(700);"
+      },
+      {
+        "line": 331,
+        "expression": "w2.a(new p(1, string));"
+      },
+      {
+        "line": 334,
+        "expression": "w2.a(new p(2, (byte)n2));"
+      },
+      {
+        "line": 337,
+        "expression": "w2.a(new p(3, string2));"
+      }
+    ]
+  },
+  {
+    "method": "public void a(String string, boolean bl, boolean bl2, int n2)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 342,
+    "constructors": [
+      {
+        "line": 343,
+        "expression": "w w2 = new w(413);"
+      },
+      {
+        "line": 344,
+        "expression": "w2.a(new p(1, string));"
+      },
+      {
+        "line": 345,
+        "expression": "w2.a(new p(2, bl ? (byte)1 : 0));"
+      },
+      {
+        "line": 346,
+        "expression": "w2.a(new p(3, n2));"
+      },
+      {
+        "line": 347,
+        "expression": "w2.a(new p(4, bl2 ? (byte)1 : 0));"
+      }
+    ]
+  },
+  {
+    "method": "public void a(int n2)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 351,
+    "constructors": [
+      {
+        "line": 352,
+        "expression": "w w2 = new w(7);"
+      },
+      {
+        "line": 353,
+        "expression": "w2.a(new p(1, n2));"
+      }
+    ]
+  },
+  {
+    "method": "public void a(short s2)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 357,
+    "constructors": [
+      {
+        "line": 358,
+        "expression": "w w2 = new w(s2);"
+      }
+    ]
+  },
+  {
+    "method": "public void c(String string, String string2)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 362,
+    "constructors": [
+      {
+        "line": 363,
+        "expression": "w w2 = new w(202);"
+      },
+      {
+        "line": 364,
+        "expression": "w2.a(new p(1, (String.valueOf(string2) + string.toLowerCase()).hashCode()));"
+      }
+    ]
+  },
+  {
+    "method": "public void d(String string, String string2)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 368,
+    "constructors": [
+      {
+        "line": 369,
+        "expression": "w w2 = new w(900);"
+      },
+      {
+        "line": 370,
+        "expression": "w2.a(new p(1, string));"
+      },
+      {
+        "line": 371,
+        "expression": "w2.a(new p(2, string2));"
+      }
+    ]
+  },
+  {
+    "method": "public void a(short s2, String string, int n2, String string2, byte[] byArray, short s3)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 375,
+    "constructors": [
+      {
+        "line": 376,
+        "expression": "w w2 = new w(500);"
+      },
+      {
+        "line": 377,
+        "expression": "w2.a(new p(1, (byte)s2));"
+      },
+      {
+        "line": 378,
+        "expression": "w2.a(new p(2, s2 == 2 ? com.projectgoth.Roshan.c.z : a[0]));"
+      },
+      {
+        "line": 379,
+        "expression": "w2.a(new p(3, 1));"
+      },
+      {
+        "line": 380,
+        "expression": "w2.a(new p(4, string));"
+      },
+      {
+        "line": 382,
+        "expression": "w2.a(new p(5, n2));"
+      },
+      {
+        "line": 384,
+        "expression": "w2.a(new p(6, s3));"
+      },
+      {
+        "line": 386,
+        "expression": "w2.a(new p(8, string2));"
+      },
+      {
+        "line": 388,
+        "expression": "w2.a(new p(8, byArray));"
+      }
+    ]
+  },
+  {
+    "method": "public void a(short s2, String string, String string2, int n2, byte[] byArray, short s3)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 393,
+    "constructors": [
+      {
+        "line": 394,
+        "expression": "w w2 = new w(500);"
+      },
+      {
+        "line": 395,
+        "expression": "w2.a(new p(1, (byte)s2));"
+      },
+      {
+        "line": 396,
+        "expression": "w2.a(new p(2, a[0]));"
+      },
+      {
+        "line": 397,
+        "expression": "w2.a(new p(3, (byte)n2));"
+      },
+      {
+        "line": 398,
+        "expression": "w2.a(new p(4, string));"
+      },
+      {
+        "line": 399,
+        "expression": "w2.a(new p(6, s3));"
+      },
+      {
+        "line": 401,
+        "expression": "w2.a(new p(8, string2));"
+      },
+      {
+        "line": 403,
+        "expression": "w2.a(new p(8, byArray));"
+      }
+    ]
+  },
+  {
+    "method": "public void a(short s2, int n2)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 408,
+    "constructors": [
+      {
+        "line": 409,
+        "expression": "w w2 = new w(s2);"
+      },
+      {
+        "line": 410,
+        "expression": "w2.a(new p(1, n2));"
+      }
+    ]
+  },
+  {
+    "method": "public void b(String string)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 414,
+    "constructors": [
+      {
+        "line": 415,
+        "expression": "w w2 = new w(408);"
+      },
+      {
+        "line": 416,
+        "expression": "w2.a(new p(2, string));"
+      }
+    ]
+  },
+  {
+    "method": "public void b(String string, int n2)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 420,
+    "constructors": [
+      {
+        "line": 421,
+        "expression": "w w2 = new w(410);"
+      },
+      {
+        "line": 422,
+        "expression": "w2.a(new p(1, n2));"
+      },
+      {
+        "line": 423,
+        "expression": "w2.a(new p(2, string));"
+      }
+    ]
+  },
+  {
+    "method": "public void b(int n2)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 427,
+    "constructors": [
+      {
+        "line": 428,
+        "expression": "w w2 = new w(600);"
+      },
+      {
+        "line": 429,
+        "expression": "w2.a(new p(1, (byte)n2));"
+      }
+    ]
+  },
+  {
+    "method": "public void a(int n2, int n3)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 433,
+    "constructors": [
+      {
+        "line": 434,
+        "expression": "w w2 = new w(411);"
+      },
+      {
+        "line": 435,
+        "expression": "w2.a(new p(1, n2));"
+      },
+      {
+        "line": 436,
+        "expression": "w2.a(new p(2, n3));"
+      }
+    ]
+  },
+  {
+    "method": "public void d()",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 440,
+    "constructors": [
+      {
+        "line": 441,
+        "expression": "w w2 = new w(415);"
+      },
+      {
+        "line": 442,
+        "expression": "w2.a(new p(1, 2));"
+      }
+    ]
+  },
+  {
+    "method": "public void a(String string, String string2, String string3, String string4, String string5, String string6, String string7, int n2, boolean bl)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 446,
+    "constructors": [
+      {
+        "line": 447,
+        "expression": "w w2 = new w(405);"
+      },
+      {
+        "line": 449,
+        "expression": "w2.a(new p(2, n2));"
+      },
+      {
+        "line": 452,
+        "expression": "w2.a(new p(3, string));"
+      },
+      {
+        "line": 455,
+        "expression": "w2.a(new p(12, string3));"
+      },
+      {
+        "line": 456,
+        "expression": "w2.a(new p(24, bl ? (byte)1 : 0));"
+      },
+      {
+        "line": 459,
+        "expression": "w2.a(new p(14, string5));"
+      },
+      {
+        "line": 462,
+        "expression": "w2.a(new p(16, string4));"
+      },
+      {
+        "line": 465,
+        "expression": "w2.a(new p(18, string6));"
+      },
+      {
+        "line": 468,
+        "expression": "w2.a(new p(22, string7));"
+      },
+      {
+        "line": 471,
+        "expression": "w2.a(new p(8, string2));"
+      }
+    ]
+  },
+  {
+    "method": "public void a(String string, String string2, String string3, String string4, String string5, String string6, String string7, int n2, int n3)",
+    "source": "research/applets/v3/artifacts/decompiled/com/projectgoth/Roshan/a.java",
+    "line": 476,
+    "constructors": [
+      {
+        "line": 477,
+        "expression": "w w2 = new w(407);"
+      },
+      {
+        "line": 478,
+        "expression": "w2.a(new p(1, n2));"
+      },
+      {
+        "line": 480,
+        "expression": "w2.a(new p(3, string));"
+      },
+      {
+        "line": 483,
+        "expression": "w2.a(new p(22, string7));"
+      },
+      {
+        "line": 486,
+        "expression": "w2.a(new p(8, string2));"
+      },
+      {
+        "line": 489,
+        "expression": "w2.a(new p(12, string3));"
+      },
+      {
+        "line": 492,
+        "expression": "w2.a(new p(14, string4));"
+      },
+      {
+        "line": 495,
+        "expression": "w2.a(new p(16, string6));"
+      },
+      {
+        "line": 498,
+        "expression": "w2.a(new p(18, string5));"
+      },
+      {
+        "line": 500,
+        "expression": "w2.a(new p(2, n3));"
+      }
+    ]
+  }
+]

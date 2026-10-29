@@ -1,0 +1,164 @@
+{
+  "date": "2026-10-29",
+  "scope": "Transaction and realtime ownership for one coordinated capability/hexagonal refactor; research only",
+  "production_changed": false,
+  "recommendation": {
+    "persistence": "Keep specialized atomic workflow ports as the intended final design for current registration, message acceptance and gift purchase; one SQLite adapter may implement several small contracts with one generated sqlc package. Introduce explicit transaction scopes only for a concrete orchestration need that cannot be expressed cleanly as one workflow operation.",
+    "realtime": "Create a focused realtime/session state owner with typed inbound/outbound contracts; remove unrelated business rules and rendering from it. One shared state owner is a deliberate concurrency boundary, not a reason to retain the all-feature Application.",
+    "delivery": "A complete migration can be delivered as one coordinated change with internal dependency-ordered compilation and behavioral checkpoints. Splitting the user-facing delivery into multiple approvals is not required by these patterns."
+  },
+  "current_invariants": [
+    {
+      "workflow": "Registration",
+      "source": "internal/adapters/sqlite/repositories/identity.go:132",
+      "atomic_parts": [
+        "Consume challenge",
+        "Check username/mobile conflicts",
+        "Create identity",
+        "Create initial contact roster",
+        "Create default Friends group"
+      ],
+      "post_commit": "Cache the returned committed identity directly; do not reread through a possibly canceled request context."
+    },
+    {
+      "workflow": "Gift purchase",
+      "source": "internal/adapters/sqlite/repositories/commerce.go:52",
+      "atomic_parts": [
+        "Idempotency receipt and replay comparison",
+        "Privacy and block checks",
+        "Wallet debit and ledger",
+        "Recipient inventory",
+        "Literal gift note",
+        "Durable gift message and audience"
+      ],
+      "post_commit": "Notify delivery using the committed message/outbox state; notification failure must not erase accepted work."
+    },
+    {
+      "workflow": "Message acceptance",
+      "source": "internal/adapters/sqlite/repositories/messages.go:24",
+      "atomic_parts": [
+        "Existing key/hash replay",
+        "Photo ownership",
+        "Group membership or room mute checks",
+        "Message and immutable audience",
+        "Idempotency key"
+      ],
+      "qualification": "Live room membership/recipient snapshot comes from the application state owner; durable checks remain inside the same database transaction."
+    },
+    {
+      "workflow": "Personal block",
+      "source": "internal/services/application.go:188; internal/services/blocking.go:13",
+      "ordering": [
+        "Per-session response gate",
+        "Per-account delivery gate",
+        "Application state lock",
+        "Persist block",
+        "Cancel matching queued delivery reservations"
+      ],
+      "qualification": "Preserve the existing responseGate -> deliveryGate -> state-lock order. No caller may wait for an outer gate while holding the state lock."
+    },
+    {
+      "workflow": "Transport completion",
+      "source": "internal/services/delivery.go:238; internal/services/contact_ordering.go:9",
+      "ordering": [
+        "Ordered response and queued prefix",
+        "Recheck eligibility before encoding/write",
+        "Mark durable delivery only after successful write",
+        "Release reservation after failure/cancellation for same-session retry"
+      ],
+      "qualification": "Current correlation uses *protocol.Packet keys. A typed event migration needs stable delivery handles so encoding or copying DTOs cannot lose completion correlation; native delivery remains at-least-once, not exactly-once."
+    }
+  ],
+  "options": [
+    {
+      "name": "Specialized atomic workflow port",
+      "example": "accounts.RegistrationStore.Register(ctx, command) (Account, error); commerce.GiftStore.Purchase(ctx, command) (Receipt, error); chat.MessageStore.Accept(ctx, command) (Message, error)",
+      "benefit": "Expresses the observable business transaction as one contract and keeps sqlc/database mechanisms in the adapter. Several logical capabilities can participate in one durable workflow without independently committing.",
+      "cost": "Adapter must implement the whole persistence operation. Pure business calculations should live in capability policy code; current-state integrity checks need transactional reads/rechecks.",
+      "fit": "Recommended for the current concrete workflows; valid final architecture, not a temporary escape hatch."
+    },
+    {
+      "name": "Explicit workflow transaction scope",
+      "example": "WithinGift(ctx context.Context, fn func(context.Context, GiftLedger, GiftInventory, GiftMessages) error) error",
+      "benefit": "Lets application orchestration combine named consumer-owned repository capabilities while adapter binds all implementations to one transaction.",
+      "cost": "More contracts, callback scope/lifetime rules, and testing. Never retain scoped repositories, start nested transactions, or perform network I/O inside the callback. With the current one-connection pool, accidental nested repository transactions can deadlock.",
+      "fit": "Optional for workflows whose application orchestration genuinely needs independent capabilities. This explicit transaction runner is not automatically Fowler's full object-change-tracking Unit of Work pattern."
+    },
+    {
+      "name": "Independent commits plus generic in-memory event bus",
+      "example": "Commit purchase, publish GiftPurchased, another handler writes message",
+      "benefit": "Loose call-site coupling for optional transient notifications.",
+      "cost": "Breaks current atomicity when the process fails between commit and handling; adds ordering, retry and error-policy ambiguity.",
+      "fit": "Do not replace required registration/gift/message/block invariants with it."
+    },
+    {
+      "name": "Durable outbox and asynchronous integration",
+      "example": "Commit state plus event/outbox row, then owned worker delivers/retries",
+      "benefit": "Appropriate for genuinely asynchronous effects and external provider integration.",
+      "cost": "Requires persistence, ownership, ordering/idempotency policy and acceptance tests. Changes synchronous behavior if used indiscriminately.",
+      "fit": "Existing message/audience pending records already provide durable delivery intent. Extend deliberately when actual provider/event requirements emerge; no generic bus is required for this refactor."
+    }
+  ],
+  "illustrative_ports": {
+    "atomic": "// In the consuming capability; illustrative only.\ntype GiftStore interface {\n    Purchase(ctx context.Context, command GiftPurchase) (GiftReceipt, error)\n}\n// Receipt describes committed effects; SQL types stay in the adapter.\n",
+    "transaction_scope": "// Alternative only when the use case needs several scoped capabilities.\ntype GiftTransactions interface {\n    WithinGift(ctx context.Context, work func(context.Context, GiftLedger, GiftInventory, GiftMessages) error) error\n}\n// The SQLite implementation BeginTx(ctx, nil)s once and supplies repositories\n// bound to the same sqlc DBTX. Commit/rollback remain adapter-owned.\n",
+    "typed_delivery": "// Illustrative outbound contract, not a finalized API.\ntype DeliveryHandle string\ntype Delivery struct { Handle DeliveryHandle; Event Event }\ntype DeliveryQueue interface {\n    Take(ctx context.Context, session SessionID) ([]Delivery, error)\n    Complete(ctx context.Context, handles []DeliveryHandle, written bool) error\n}\n// Final design must preserve eligibility rechecks and response/write gates.\n// Native codec maps typed Event to protocol.Packet outside business modules.\n"
+  },
+  "full_target_ownership": [
+    "Accounts owns credentials, registration/recovery policy and committed account cache; expose immutable account views and a session-revocation collaborator port.",
+    "Realtime owns session state, presence, response/write gates, delivery reservations and live participation coordination. Keys are stable user/session IDs, not mutable account objects shared across modules.",
+    "Chat owns message/group policy and typed message use cases; persistence uses the atomic message port and realtime coordination for live room eligibility/snapshots.",
+    "Contacts owns roster/block policy; an explicit block workflow coordinates the realtime delivery fence, persistence commit, and queue invalidation. Use injected narrow interfaces rather than reciprocal concrete imports.",
+    "Commerce owns pricing/purchase policy and its specialized atomic purchase port; SQLite may write ledger, inventory and chat persistence within that one operation.",
+    "Native/HTTP compatibility adapters own opcodes, packet fields, HTML/templ projection and historical command quirks. Application capabilities expose typed commands/results/events.",
+    "Composition wires concrete services, adapters and collaborators once. No module imports cmd/internal wiring; bootstrap remains generic lifecycle only."
+  ],
+  "single_delivery_completion_criteria": [
+    "Every chosen capability has an explicit owning service, narrow dependencies and semantic commands/results; no new method delegates back into a retained all-feature Application for its real business work.",
+    "Old broad repository/service aggregates are removed from final business constructors or limited to a composition-only compatibility bridge that carries no business state/rules.",
+    "One intentional realtime state owner remains; this is not duplicated across HTTP/socket/modules.",
+    "Cross-capability persistence operations retain current atomicity with one BeginTx per workflow and context-aware generated queries.",
+    "No business package imports protocol, templ/pages, net/http, database/sql, generated httpapi/sqlc or concrete adapters.",
+    "MessageInput canonical serialization/hash order and historical endpoint/opcode behavior are preserved or mapped through an explicit compatibility representation.",
+    "Existing rollback, successful-commit cancellation, credential-cache, block/write ordering, failed-delivery retry, vote/catalog cancellation and original-JAR suites pass against the final graph."
+  ],
+  "sources": [
+    {
+      "url": "https://go.dev/doc/database/execute-transactions",
+      "kind": "Official Go database guidance",
+      "supports": "Related changes must share a transaction; mixing DB calls outside the active transaction can cause inconsistency or deadlock."
+    },
+    {
+      "url": "https://docs.sqlc.dev/en/v1.31.1/howto/transactions.html",
+      "kind": "Official pinned sqlc documentation",
+      "supports": "Generated Queries can bind to a transaction through WithTx/DBTX. Keep this project's explicit BeginTx(ctx,nil) convention rather than copying the context-free Begin example."
+    },
+    {
+      "url": "https://alistair.cockburn.us/hexagonal-architecture",
+      "kind": "Original architecture article",
+      "supports": "Adapters translate technology-specific interaction into semantic application ports; application behavior can be driven and tested without its runtime devices/database."
+    },
+    {
+      "url": "https://martinfowler.com/eaaCatalog/unitOfWork.html",
+      "kind": "Original pattern author",
+      "supports": "Unit of Work coordinates object changes and concurrency for a business transaction; a callback transaction runner alone does not implement every aspect of that pattern."
+    },
+    {
+      "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html",
+      "kind": "Official architecture guidance",
+      "supports": "Persist state and delivery intent together to avoid dual-write gaps; asynchronous consumers need duplicate/ordering/retry policy. No AWS service adoption is implied."
+    }
+  ],
+  "source_sha256": {
+    "internal/adapters/sqlite/repositories/identity.go": "1696364af641f474119372c4cc9888d39c67a77fdf6560858bf58c379f463922",
+    "internal/adapters/sqlite/repositories/commerce.go": "2045e87c0035453a176a3c603a1e150fe4cbdbe8192aa7f1ee3c8600ee8a2762",
+    "internal/adapters/sqlite/repositories/gifts.go": "168eba582e89d48f990f5d14c7db13c65f99d0b5104b6c73e7832b41249aece7",
+    "internal/adapters/sqlite/repositories/messages.go": "aea3775dc9a302845a3599d8d3b83cb4f1a13cc451aee82eea290b3fe6c05e28",
+    "internal/services/application.go": "5cfc40b4f5a81adaf5a3e098688af1abadad3fd832d26dc3cce23b3d9912b0b1",
+    "internal/services/blocking.go": "bdf741282ab1647b11f3d1a872db3715876ec0878250e001516be28050df0c86",
+    "internal/services/contact_ordering.go": "bd201e10bc2d8bf92ad66d5fdc5d655285bc2e97d9d82a720b95b1e16ae73774",
+    "internal/services/delivery.go": "7ef4eaa7f25f7cc6362b3a23c3526494095aa5ee71462dab99ebc4d32bfc4f74",
+    "internal/services/native_port.go": "0791e1adae0d7564021d86f7cbfb87c32bb8ba69c680bc7a611ae76e3da014ca",
+    "internal/domain/chat_api.go": "49c85238e4fc2660e43bd6c2cb8e407ab59f71ded79a0802d226368bd7e5f2d0"
+  }
+}

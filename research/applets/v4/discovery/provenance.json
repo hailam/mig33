@@ -1,0 +1,29 @@
+{
+  "recovered_at_utc": "2026-10-25T12:50:41.484728+00:00",
+  "version": "4.62",
+  "variant": "24x24 keypad",
+  "build": ".000",
+  "size_bytes": 190378,
+  "sha256": "dbf12ffbd44bc6e48d09cf35863736731c87c078877f76ed4b780a4dc5eff92c",
+  "manifest": "Manifest-Version: 1.0\r\nMIDlet-Vendor: Project Goth, Inc.\r\nMIDlet-Version: 4.62\r\nMIDlet-1: mig33v46,/MiG33.png,main.Main\r\nMicroEdition-Configuration: CLDC-1.0\r\nMIDlet-Install-Notify: http://www.mig33.com/midlet/member/c_info.php?awtrack=wap\r\nBUILD: .000\r\nMIDlet-Icon: MiG33.png\r\nMIDlet-Name: mig33v46\r\nMicroEdition-Profile: MIDP-2.0\r\n\r\n",
+  "class_count": 26,
+  "archive_capture": "20110427070316",
+  "original_url": "http://www.mig33.com:80/wap2/v4_60/24x24/mig33v46.jar",
+  "retrieval_url": "https://web.archive.org/web/20110427070316id_/http://www.mig33.com:80/wap2/v4_60/24x24/mig33v46.jar",
+  "archive_cdx_sha1_base32": "6H7WNCXGJQ5YHBPS23MYJKSNK7MUVMFA",
+  "mirror_url": "https://kemongers.jw.lt/hp/mig33v46.jar",
+  "mirror_sha256": "dbf12ffbd44bc6e48d09cf35863736731c87c078877f76ed4b780a4dc5eff92c",
+  "descriptor_captures": [
+    "20110507031520",
+    "20131011131821"
+  ],
+  "latest_primary_evidence": "https://web.archive.org/web/20140215010316id_/http://www.mig33.com/downloads/j2me/all",
+  "latest_claim": "Latest verified mig33 Java ME build; publisher called the v4.6 line latest in February2014. No proof about every later migme successor or every variant.",
+  "touch_variant": {
+    "version": "4.60",
+    "build": ".005",
+    "size_bytes": 191450,
+    "sha256": "9e37acdccf8920ada3854dd626a4d38f3d487186b7b4a375c4e00d0ce1c1821b",
+    "retrieval_url": "https://web.archive.org/web/20110622082033id_/http://www.mig33.com:80/wap2/v4_60/touch/mig33v46_touch.jar"
+  }
+}

@@ -1,0 +1,3276 @@
+[
+  {
+    "path": "ao.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": "/"
+      },
+      {
+        "constant_pool_index": 2,
+        "value": "..."
+      },
+      {
+        "constant_pool_index": 3,
+        "value": " ,.;?!"
+      },
+      {
+        "constant_pool_index": 4,
+        "value": " ERR02: "
+      },
+      {
+        "constant_pool_index": 5,
+        "value": " ERR:01 "
+      },
+      {
+        "constant_pool_index": 6,
+        "value": ".gif"
+      },
+      {
+        "constant_pool_index": 7,
+        "value": ".jpeg"
+      },
+      {
+        "constant_pool_index": 8,
+        "value": ".jpg"
+      },
+      {
+        "constant_pool_index": 9,
+        "value": ".mp3"
+      },
+      {
+        "constant_pool_index": 10,
+        "value": ".png"
+      },
+      {
+        "constant_pool_index": 11,
+        "value": "file:///"
+      }
+    ],
+    "referenced_classes": [
+      "y",
+      "[B",
+      "aj",
+      "ao",
+      "bj",
+      "java/io/InputStream",
+      "java/lang/Exception",
+      "java/lang/Object",
+      "java/lang/OutOfMemoryError",
+      "java/lang/SecurityException",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/System",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "java/util/Enumeration",
+      "java/util/Vector",
+      "javax/microedition/io/Connection",
+      "javax/microedition/io/Connector",
+      "javax/microedition/io/file/FileConnection",
+      "javax/microedition/io/file/FileSystemRegistry",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics",
+      "javax/microedition/lcdui/Image"
+    ]
+  },
+  {
+    "path": "aq.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "aq",
+      "bc",
+      "java/util/TimerTask"
+    ]
+  },
+  {
+    "path": "al.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "aj",
+      "al",
+      "au",
+      "java/lang/Exception",
+      "java/lang/Object",
+      "java/lang/Thread",
+      "java/util/TimerTask"
+    ]
+  },
+  {
+    "path": "i.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "i",
+      "[B",
+      "[Ljavax/microedition/lcdui/Image;",
+      "java/lang/Object",
+      "java/lang/String",
+      "javax/microedition/lcdui/Image"
+    ]
+  },
+  {
+    "path": "af.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "j",
+      "t",
+      "af",
+      "au",
+      "ay",
+      "java/lang/Exception",
+      "java/lang/Integer",
+      "java/lang/InterruptedException",
+      "java/lang/Long",
+      "java/lang/Object",
+      "java/lang/Runnable",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "java/util/Vector"
+    ]
+  },
+  {
+    "path": "ac.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 2,
+        "value": ";"
+      },
+      {
+        "constant_pool_index": 3,
+        "value": "="
+      },
+      {
+        "constant_pool_index": 4,
+        "value": "; "
+      },
+      {
+        "constant_pool_index": 5,
+        "value": "img.mig33.com"
+      }
+    ],
+    "referenced_classes": [
+      "y",
+      "ac",
+      "[Ljava/lang/String;",
+      "java/lang/Object",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/util/Enumeration",
+      "java/util/Hashtable"
+    ]
+  },
+  {
+    "path": "aw.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "aj",
+      "aw",
+      "java/util/TimerTask"
+    ]
+  },
+  {
+    "path": "bg.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "u",
+      "bg",
+      "java/util/TimerTask"
+    ]
+  },
+  {
+    "path": "aj.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 2,
+        "value": " "
+      },
+      {
+        "constant_pool_index": 3,
+        "value": "#"
+      },
+      {
+        "constant_pool_index": 4,
+        "value": "%"
+      },
+      {
+        "constant_pool_index": 5,
+        "value": "("
+      },
+      {
+        "constant_pool_index": 6,
+        "value": ")"
+      },
+      {
+        "constant_pool_index": 7,
+        "value": "*"
+      },
+      {
+        "constant_pool_index": 8,
+        "value": "+"
+      },
+      {
+        "constant_pool_index": 9,
+        "value": ","
+      },
+      {
+        "constant_pool_index": 10,
+        "value": "/"
+      },
+      {
+        "constant_pool_index": 11,
+        "value": "0"
+      },
+      {
+        "constant_pool_index": 12,
+        "value": "1"
+      },
+      {
+        "constant_pool_index": 13,
+        "value": "2"
+      },
+      {
+        "constant_pool_index": 14,
+        "value": "4"
+      },
+      {
+        "constant_pool_index": 15,
+        "value": ":"
+      },
+      {
+        "constant_pool_index": 16,
+        "value": "P"
+      },
+      {
+        "constant_pool_index": 17,
+        "value": "["
+      },
+      {
+        "constant_pool_index": 18,
+        "value": "e"
+      },
+      {
+        "constant_pool_index": 19,
+        "value": "i"
+      },
+      {
+        "constant_pool_index": 20,
+        "value": " ("
+      },
+      {
+        "constant_pool_index": 21,
+        "value": "-1"
+      },
+      {
+        "constant_pool_index": 22,
+        "value": "17"
+      },
+      {
+        "constant_pool_index": 23,
+        "value": "18"
+      },
+      {
+        "constant_pool_index": 24,
+        "value": "19"
+      },
+      {
+        "constant_pool_index": 25,
+        "value": "20"
+      },
+      {
+        "constant_pool_index": 26,
+        "value": "21"
+      },
+      {
+        "constant_pool_index": 27,
+        "value": "22"
+      },
+      {
+        "constant_pool_index": 28,
+        "value": "23"
+      },
+      {
+        "constant_pool_index": 29,
+        "value": "24"
+      },
+      {
+        "constant_pool_index": 30,
+        "value": "25"
+      },
+      {
+        "constant_pool_index": 31,
+        "value": "33"
+      },
+      {
+        "constant_pool_index": 32,
+        "value": "37"
+      },
+      {
+        "constant_pool_index": 33,
+        "value": "40"
+      },
+      {
+        "constant_pool_index": 34,
+        "value": "41"
+      },
+      {
+        "constant_pool_index": 35,
+        "value": "42"
+      },
+      {
+        "constant_pool_index": 36,
+        "value": "43"
+      },
+      {
+        "constant_pool_index": 37,
+        "value": "44"
+      },
+      {
+        "constant_pool_index": 38,
+        "value": "45"
+      },
+      {
+        "constant_pool_index": 39,
+        "value": "51"
+      },
+      {
+        "constant_pool_index": 40,
+        "value": "52"
+      },
+      {
+        "constant_pool_index": 41,
+        "value": "TC"
+      },
+      {
+        "constant_pool_index": 42,
+        "value": "&h="
+      },
+      {
+        "constant_pool_index": 43,
+        "value": "..."
+      },
+      {
+        "constant_pool_index": 44,
+        "value": "?w="
+      },
+      {
+        "constant_pool_index": 45,
+        "value": "CT:"
+      },
+      {
+        "constant_pool_index": 46,
+        "value": "lac"
+      },
+      {
+        "constant_pool_index": 47,
+        "value": "mcc"
+      },
+      {
+        "constant_pool_index": 48,
+        "value": "mnc"
+      },
+      {
+        "constant_pool_index": 49,
+        "value": "sms"
+      },
+      {
+        "constant_pool_index": 50,
+        "value": "&a=1&c=1"
+      },
+      {
+        "constant_pool_index": 51,
+        "value": "&cid="
+      },
+      {
+        "constant_pool_index": 52,
+        "value": "&pres="
+      },
+      {
+        "constant_pool_index": 53,
+        "value": "&to="
+      },
+      {
+        "constant_pool_index": 54,
+        "value": "&width=120&height=160"
+      },
+      {
+        "constant_pool_index": 55,
+        "value": "&width=160&height=120"
+      },
+      {
+        "constant_pool_index": 56,
+        "value": "&width=240&height=320"
+      },
+      {
+        "constant_pool_index": 57,
+        "value": "&width=288&height=352"
+      },
+      {
+        "constant_pool_index": 58,
+        "value": "&width=320&height=240"
+      },
+      {
+        "constant_pool_index": 59,
+        "value": "&width=352&height=288"
+      },
+      {
+        "constant_pool_index": 60,
+        "value": "&width=480&height=640"
+      },
+      {
+        "constant_pool_index": 61,
+        "value": "&width=640&height=480"
+      },
+      {
+        "constant_pool_index": 62,
+        "value": "(25/25)"
+      },
+      {
+        "constant_pool_index": 63,
+        "value": ") kBrowser"
+      },
+      {
+        "constant_pool_index": 64,
+        "value": "/default-avatar.png"
+      },
+      {
+        "constant_pool_index": 65,
+        "value": "/sites/index.php?c=account&a=get_history&v=midlet"
+      },
+      {
+        "constant_pool_index": 66,
+        "value": "/sites/index.php?c=account&a=home&v=midlet"
+      },
+      {
+        "constant_pool_index": 67,
+        "value": "/sites/index.php?c=account&a=recharge_credit&v=midlet"
+      },
+      {
+        "constant_pool_index": 68,
+        "value": "/sites/index.php?c=account&v=midlet&a=transfer_credit"
+      },
+      {
+        "constant_pool_index": 69,
+        "value": "/sites/index.php?c=account&v=midlet&a=transfer_credit&recipient_username=%s"
+      },
+      {
+        "constant_pool_index": 70,
+        "value": "/sites/index.php?c=avatar&v=midlet&a=home"
+      },
+      {
+        "constant_pool_index": 71,
+        "value": "/sites/index.php?c=bot&a=bot_list&v=midlet"
+      },
+      {
+        "constant_pool_index": 72,
+        "value": "/sites/index.php?c=buzz&a=home&v=midlet%s"
+      },
+      {
+        "constant_pool_index": 73,
+        "value": "/sites/index.php?c=call&a=home&v=midlet&f=call&number_to_call=%s"
+      },
+      {
+        "constant_pool_index": 74,
+        "value": "/sites/index.php?c=chatroom&a=create&v=midlet"
+      },
+      {
+        "constant_pool_index": 75,
+        "value": "/sites/index.php?c=chatroom&a=search&v=midlet"
+      },
+      {
+        "constant_pool_index": 76,
+        "value": "/sites/index.php?c=chatroom&v=midlet&a=setup&roomName=%s"
+      },
+      {
+        "constant_pool_index": 77,
+        "value": "/sites/index.php?c=email&a=compose&v=midlet%s"
+      },
+      {
+        "constant_pool_index": 78,
+        "value": "/sites/index.php?c=group&v=midlet&a=add_to_group&roomName=%s"
+      },
+      {
+        "constant_pool_index": 79,
+        "value": "/sites/index.php?c=group&v=midlet&a=home"
+      },
+      {
+        "constant_pool_index": 80,
+        "value": "/sites/index.php?c=group&v=midlet&a=list_chatrooms"
+      },
+      {
+        "constant_pool_index": 81,
+        "value": "/sites/index.php?c=group&v=midlet&a=list_groups_home&e=3"
+      },
+      {
+        "constant_pool_index": 82,
+        "value": "/sites/index.php?c=group&v=midlet&a=list_my_groups&e=3"
+      },
+      {
+        "constant_pool_index": 83,
+        "value": "/sites/index.php?c=group&v=midlet&a=members"
+      },
+      {
+        "constant_pool_index": 84,
+        "value": "/sites/index.php?c=group&v=midlet&a=view_forum"
+      },
+      {
+        "constant_pool_index": 85,
+        "value": "/sites/index.php?c=help&a=contact_us&v=midlet%s"
+      },
+      {
+        "constant_pool_index": 86,
+        "value": "/sites/index.php?c=help&a=main&v=midlet"
+      },
+      {
+        "constant_pool_index": 87,
+        "value": "/sites/index.php?c=im&a=setup_im&im=%s&v=midlet"
+      },
+      {
+        "constant_pool_index": 88,
+        "value": "/sites/index.php?c=leaderboard&v=midlet&a=home"
+      },
+      {
+        "constant_pool_index": 89,
+        "value": "/sites/index.php?c=location&a=checkin&v=midlet&f="
+      },
+      {
+        "constant_pool_index": 90,
+        "value": "/sites/index.php?c=lookout&a=home&v=midlet%s"
+      },
+      {
+        "constant_pool_index": 91,
+        "value": "/sites/index.php?c=merchant&v=midlet&a=dashboard"
+      },
+      {
+        "constant_pool_index": 92,
+        "value": "/sites/index.php?c=migworld&a=get_mobpage&v=midlet"
+      },
+      {
+        "constant_pool_index": 93,
+        "value": "/sites/index.php?c=migworld&v=midlet&a=get_mobpage"
+      },
+      {
+        "constant_pool_index": 94,
+        "value": "/sites/index.php?c=photo&a=home&v=midlet"
+      },
+      {
+        "constant_pool_index": 95,
+        "value": "/sites/index.php?c=photo&v=midlet&a=home&f=sendfromphoto"
+      },
+      {
+        "constant_pool_index": 96,
+        "value": "/sites/index.php?c=photo&v=midlet&username=%s&a=home"
+      },
+      {
+        "constant_pool_index": 97,
+        "value": "/sites/index.php?c=photos&a=wall&v=midlet"
+      },
+      {
+        "constant_pool_index": 98,
+        "value": "/sites/index.php?c=profile&a=edit&v=midlet"
+      },
+      {
+        "constant_pool_index": 99,
+        "value": "/sites/index.php?c=profile&a=home&v=midlet"
+      },
+      {
+        "constant_pool_index": 100,
+        "value": "/sites/index.php?c=profile&a=search&v=midlet"
+      },
+      {
+        "constant_pool_index": 101,
+        "value": "/sites/index.php?c=profile&a=user_blog_posts&v=midlet&username=%s"
+      },
+      {
+        "constant_pool_index": 102,
+        "value": "/sites/index.php?c=profile&v=midlet&a=home&username=%s"
+      },
+      {
+        "constant_pool_index": 103,
+        "value": "/sites/index.php?c=report&a=report_abuse&v=midlet&type=4&subject=Chatroom&subject_id=%s"
+      },
+      {
+        "constant_pool_index": 104,
+        "value": "/sites/index.php?c=report&a=report_abuse&v=midlet&type=4&subject=Group%20Chat&subject_id=%s"
+      },
+      {
+        "constant_pool_index": 105,
+        "value": "/sites/index.php?c=settings&a=block_list&v=midlet"
+      },
+      {
+        "constant_pool_index": 106,
+        "value": "/sites/index.php?c=settings&a=call_by_name&v=midlet"
+      },
+      {
+        "constant_pool_index": 107,
+        "value": "/sites/index.php?c=settings&a=change_password&v=midlet"
+      },
+      {
+        "constant_pool_index": 108,
+        "value": "/sites/index.php?c=settings&a=change_tab_order&v=midlet"
+      },
+      {
+        "constant_pool_index": 109,
+        "value": "/sites/index.php?c=settings&a=chat_privacy&v=midlet"
+      },
+      {
+        "constant_pool_index": 110,
+        "value": "/sites/index.php?c=settings&a=profile_privacy_settings&v=midlet"
+      },
+      {
+        "constant_pool_index": 111,
+        "value": "/sites/index.php?c=settings&a=view_update_settings&v=midlet"
+      },
+      {
+        "constant_pool_index": 112,
+        "value": "/sites/index.php?c=settings&v=midlet&a=change_mobile"
+      },
+      {
+        "constant_pool_index": 113,
+        "value": "/sites/index.php?c=sms&a=home&v=midlet&f=sms&to_number=%s"
+      },
+      {
+        "constant_pool_index": 114,
+        "value": "/sites/index.php?c=store&a=home&e=3&ty=5&v=midlet"
+      },
+      {
+        "constant_pool_index": 115,
+        "value": "/sites/index.php?c=store&v=midlet&a=home&e=3&ty=1&username=%s"
+      },
+      {
+        "constant_pool_index": 116,
+        "value": "/sites/index.php?c=store&v=midlet&a=main&id=111"
+      },
+      {
+        "constant_pool_index": 117,
+        "value": "120x160"
+      },
+      {
+        "constant_pool_index": 118,
+        "value": "160x120"
+      },
+      {
+        "constant_pool_index": 119,
+        "value": "240x320"
+      },
+      {
+        "constant_pool_index": 120,
+        "value": "288x352"
+      },
+      {
+        "constant_pool_index": 121,
+        "value": "320x240"
+      },
+      {
+        "constant_pool_index": 122,
+        "value": "352x288"
+      },
+      {
+        "constant_pool_index": 123,
+        "value": "480x640"
+      },
+      {
+        "constant_pool_index": 124,
+        "value": "640x480"
+      },
+      {
+        "constant_pool_index": 125,
+        "value": "BUILD"
+      },
+      {
+        "constant_pool_index": 126,
+        "value": "Cell-ID"
+      },
+      {
+        "constant_pool_index": 127,
+        "value": "CellID"
+      },
+      {
+        "constant_pool_index": 128,
+        "value": "EricssonW300c"
+      },
+      {
+        "constant_pool_index": 129,
+        "value": "HOME"
+      },
+      {
+        "constant_pool_index": 130,
+        "value": "IMSI"
+      },
+      {
+        "constant_pool_index": 131,
+        "value": "LocAreaCode"
+      },
+      {
+        "constant_pool_index": 132,
+        "value": "MIDlet-Version"
+      },
+      {
+        "constant_pool_index": 133,
+        "value": "Server"
+      },
+      {
+        "constant_pool_index": 134,
+        "value": "Sony"
+      },
+      {
+        "constant_pool_index": 135,
+        "value": "Unknown"
+      },
+      {
+        "constant_pool_index": 136,
+        "value": "VideoControl"
+      },
+      {
+        "constant_pool_index": 137,
+        "value": "allemo"
+      },
+      {
+        "constant_pool_index": 138,
+        "value": "audio"
+      },
+      {
+        "constant_pool_index": 139,
+        "value": "auth"
+      },
+      {
+        "constant_pool_index": 140,
+        "value": "call"
+      },
+      {
+        "constant_pool_index": 141,
+        "value": "capture://image"
+      },
+      {
+        "constant_pool_index": 142,
+        "value": "capture://video"
+      },
+      {
+        "constant_pool_index": 143,
+        "value": "checkIn"
+      },
+      {
+        "constant_pool_index": 144,
+        "value": "cid="
+      },
+      {
+        "constant_pool_index": 145,
+        "value": "close"
+      },
+      {
+        "constant_pool_index": 146,
+        "value": "closeTab"
+      },
+      {
+        "constant_pool_index": 147,
+        "value": "com.nokia.mid.cellID"
+      },
+      {
+        "constant_pool_index": 148,
+        "value": "com.nokia.mid.cellid"
+      },
+      {
+        "constant_pool_index": 149,
+        "value": "com.nokia.mid.countrycode"
+      },
+      {
+        "constant_pool_index": 150,
+        "value": "com.nokia.mid.imsi"
+      },
+      {
+        "constant_pool_index": 151,
+        "value": "com.nokia.mid.lac"
+      },
+      {
+        "constant_pool_index": 152,
+        "value": "com.nokia.mid.mcc"
+      },
+      {
+        "constant_pool_index": 153,
+        "value": "com.nokia.mid.mnc"
+      },
+      {
+        "constant_pool_index": 154,
+        "value": "com.nokia.mid.mobinfo.IMSI"
+      },
+      {
+        "constant_pool_index": 155,
+        "value": "com.nokia.mid.networkID"
+      },
+      {
+        "constant_pool_index": 156,
+        "value": "com.nokia.mid.networkid"
+      },
+      {
+        "constant_pool_index": 157,
+        "value": "com.samsung.cellID"
+      },
+      {
+        "constant_pool_index": 158,
+        "value": "com.samsung.cellId"
+      },
+      {
+        "constant_pool_index": 159,
+        "value": "com.samsung.cellid"
+      },
+      {
+        "constant_pool_index": 160,
+        "value": "com.siemens.cellid"
+      },
+      {
+        "constant_pool_index": 161,
+        "value": "com.sonyericsson.net.cellid"
+      },
+      {
+        "constant_pool_index": 162,
+        "value": "com.sonyericsson.net.cmcc"
+      },
+      {
+        "constant_pool_index": 163,
+        "value": "com.sonyericsson.net.cmnc"
+      },
+      {
+        "constant_pool_index": 164,
+        "value": "com.sonyericsson.net.lac"
+      },
+      {
+        "constant_pool_index": 165,
+        "value": "com.sonyericsson.net.mcc"
+      },
+      {
+        "constant_pool_index": 166,
+        "value": "com.sonyericsson.net.mnc"
+      },
+      {
+        "constant_pool_index": 167,
+        "value": "default_v2"
+      },
+      {
+        "constant_pool_index": 168,
+        "value": "device.name"
+      },
+      {
+        "constant_pool_index": 169,
+        "value": "en-US"
+      },
+      {
+        "constant_pool_index": 170,
+        "value": "encoding=jpeg"
+      },
+      {
+        "constant_pool_index": 171,
+        "value": "focusTab"
+      },
+      {
+        "constant_pool_index": 172,
+        "value": "freqmo"
+      },
+      {
+        "constant_pool_index": 173,
+        "value": "gcid="
+      },
+      {
+        "constant_pool_index": 174,
+        "value": "gid="
+      },
+      {
+        "constant_pool_index": 175,
+        "value": "http"
+      },
+      {
+        "constant_pool_index": 176,
+        "value": "http://"
+      },
+      {
+        "constant_pool_index": 177,
+        "value": "http://gateway.mig33.com/"
+      },
+      {
+        "constant_pool_index": 178,
+        "value": "http://www.mig33.com/sites/index.php?c=help&v=wap&a=apn"
+      },
+      {
+        "constant_pool_index": 179,
+        "value": "http://www.mig33.com/sites/index.php?c=help&v=wap&a=tc"
+      },
+      {
+        "constant_pool_index": 180,
+        "value": "http://www.mig33.com/sites/index.php?c=registration_api&v=midlet&a=check_username&username=%s"
+      },
+      {
+        "constant_pool_index": 181,
+        "value": "http://www.mig33.com/sites/resources/language/v4.6/l"
+      },
+      {
+        "constant_pool_index": 182,
+        "value": "imMenu"
+      },
+      {
+        "constant_pool_index": 183,
+        "value": "imType="
+      },
+      {
+        "constant_pool_index": 184,
+        "value": "imsi"
+      },
+      {
+        "constant_pool_index": 185,
+        "value": "inviteFriend"
+      },
+      {
+        "constant_pool_index": 186,
+        "value": "inviteToMig33"
+      },
+      {
+        "constant_pool_index": 187,
+        "value": "invokeNativeBrowser"
+      },
+      {
+        "constant_pool_index": 188,
+        "value": "j2me"
+      },
+      {
+        "constant_pool_index": 189,
+        "value": "joinChatroom"
+      },
+      {
+        "constant_pool_index": 190,
+        "value": "joinGroupChatroom"
+      },
+      {
+        "constant_pool_index": 191,
+        "value": "locareacode"
+      },
+      {
+        "constant_pool_index": 192,
+        "value": "microedition.hostname"
+      },
+      {
+        "constant_pool_index": 193,
+        "value": "microedition.platform"
+      },
+      {
+        "constant_pool_index": 194,
+        "value": "mig33:"
+      },
+      {
+        "constant_pool_index": 195,
+        "value": "newBrowser"
+      },
+      {
+        "constant_pool_index": 196,
+        "value": "null"
+      },
+      {
+        "constant_pool_index": 197,
+        "value": "phone.Cell-ID"
+      },
+      {
+        "constant_pool_index": 198,
+        "value": "phone.CellID"
+      },
+      {
+        "constant_pool_index": 199,
+        "value": "phone.Cellid"
+      },
+      {
+        "constant_pool_index": 200,
+        "value": "phone.cID"
+      },
+      {
+        "constant_pool_index": 201,
+        "value": "phone.cid"
+      },
+      {
+        "constant_pool_index": 202,
+        "value": "phone.imsi"
+      },
+      {
+        "constant_pool_index": 203,
+        "value": "phone.lac"
+      },
+      {
+        "constant_pool_index": 204,
+        "value": "phone.mcc"
+      },
+      {
+        "constant_pool_index": 205,
+        "value": "phone.mnc"
+      },
+      {
+        "constant_pool_index": 206,
+        "value": "privateChat"
+      },
+      {
+        "constant_pool_index": 207,
+        "value": "reorderHomeTab"
+      },
+      {
+        "constant_pool_index": 208,
+        "value": "roomName="
+      },
+      {
+        "constant_pool_index": 209,
+        "value": "sendScrapbookPhoto"
+      },
+      {
+        "constant_pool_index": 210,
+        "value": "setDisplayPicture"
+      },
+      {
+        "constant_pool_index": 211,
+        "value": "tel:"
+      },
+      {
+        "constant_pool_index": 212,
+        "value": "updateStatus"
+      },
+      {
+        "constant_pool_index": 213,
+        "value": "uploadPhotoToScrapbook"
+      }
+    ],
+    "referenced_classes": [
+      "i",
+      "d",
+      "j",
+      "k",
+      "s",
+      "t",
+      "y",
+      "[B",
+      "[I",
+      "af",
+      "aj",
+      "ao",
+      "aq",
+      "au",
+      "av",
+      "aw",
+      "ay",
+      "bc",
+      "bd",
+      "bj",
+      "bl",
+      "[Ljava/lang/String;",
+      "[Ljavax/microedition/lcdui/Image;",
+      "java/io/ByteArrayInputStream",
+      "java/io/ByteArrayOutputStream",
+      "java/io/DataInputStream",
+      "java/io/DataOutputStream",
+      "java/io/InputStream",
+      "java/lang/Byte",
+      "java/lang/Class",
+      "java/lang/Exception",
+      "java/lang/Integer",
+      "java/lang/Long",
+      "java/lang/Object",
+      "java/lang/Runnable",
+      "java/lang/Short",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/System",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "java/util/Date",
+      "java/util/Enumeration",
+      "java/util/Hashtable",
+      "java/util/Timer",
+      "java/util/Vector",
+      "javax/microedition/lcdui/Canvas",
+      "javax/microedition/lcdui/Command",
+      "javax/microedition/lcdui/CommandListener",
+      "javax/microedition/lcdui/Display",
+      "javax/microedition/lcdui/Displayable",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Form",
+      "javax/microedition/lcdui/Graphics",
+      "javax/microedition/lcdui/Image",
+      "javax/microedition/lcdui/TextBox",
+      "javax/microedition/media/Controllable",
+      "javax/microedition/media/Manager",
+      "javax/microedition/media/Player",
+      "javax/microedition/media/control/VideoControl",
+      "javax/microedition/midlet/MIDlet",
+      "javax/microedition/rms/RecordEnumeration",
+      "javax/microedition/rms/RecordStore",
+      "javax/microedition/rms/RecordStoreFullException",
+      "main/Main"
+    ]
+  },
+  {
+    "path": "s.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 2,
+        "value": " "
+      },
+      {
+        "constant_pool_index": 3,
+        "value": "&"
+      },
+      {
+        "constant_pool_index": 4,
+        "value": "*"
+      },
+      {
+        "constant_pool_index": 5,
+        "value": "/"
+      },
+      {
+        "constant_pool_index": 6,
+        "value": "0"
+      },
+      {
+        "constant_pool_index": 7,
+        "value": "1"
+      },
+      {
+        "constant_pool_index": 8,
+        "value": ";"
+      },
+      {
+        "constant_pool_index": 9,
+        "value": "<"
+      },
+      {
+        "constant_pool_index": 10,
+        "value": "="
+      },
+      {
+        "constant_pool_index": 11,
+        "value": ">"
+      },
+      {
+        "constant_pool_index": 12,
+        "value": "?"
+      },
+      {
+        "constant_pool_index": 13,
+        "value": "¤"
+      },
+      {
+        "constant_pool_index": 14,
+        "value": "±"
+      },
+      {
+        "constant_pool_index": 15,
+        "value": "µ"
+      },
+      {
+        "constant_pool_index": 16,
+        "value": "Ω"
+      },
+      {
+        "constant_pool_index": 17,
+        "value": "∫"
+      },
+      {
+        "constant_pool_index": 18,
+        "value": "▲"
+      },
+      {
+        "constant_pool_index": 19,
+        "value": "♣"
+      },
+      {
+        "constant_pool_index": 20,
+        "value": "&#"
+      },
+      {
+        "constant_pool_index": 21,
+        "value": "-1"
+      },
+      {
+        "constant_pool_index": 22,
+        "value": "-2"
+      },
+      {
+        "constant_pool_index": 23,
+        "value": ": "
+      },
+      {
+        "constant_pool_index": 24,
+        "value": "</"
+      },
+      {
+        "constant_pool_index": 25,
+        "value": "<a"
+      },
+      {
+        "constant_pool_index": 26,
+        "value": "<p"
+      },
+      {
+        "constant_pool_index": 27,
+        "value": "%20"
+      },
+      {
+        "constant_pool_index": 28,
+        "value": "(c)"
+      },
+      {
+        "constant_pool_index": 29,
+        "value": "<b>"
+      },
+      {
+        "constant_pool_index": 30,
+        "value": "<i>"
+      },
+      {
+        "constant_pool_index": 31,
+        "value": "<td"
+      },
+      {
+        "constant_pool_index": 32,
+        "value": "<tr"
+      },
+      {
+        "constant_pool_index": 33,
+        "value": "<u>"
+      },
+      {
+        "constant_pool_index": 34,
+        "value": "=on"
+      },
+      {
+        "constant_pool_index": 35,
+        "value": "get"
+      },
+      {
+        "constant_pool_index": 36,
+        "value": "¤¤¤"
+      },
+      {
+        "constant_pool_index": 37,
+        "value": "&amp;"
+      },
+      {
+        "constant_pool_index": 38,
+        "value": "&copy;"
+      },
+      {
+        "constant_pool_index": 39,
+        "value": "&gt;"
+      },
+      {
+        "constant_pool_index": 40,
+        "value": "&lt;"
+      },
+      {
+        "constant_pool_index": 41,
+        "value": "&nbsp;"
+      },
+      {
+        "constant_pool_index": 42,
+        "value": ".mid"
+      },
+      {
+        "constant_pool_index": 43,
+        "value": ".mp3"
+      },
+      {
+        "constant_pool_index": 44,
+        "value": ".wav"
+      },
+      {
+        "constant_pool_index": 45,
+        "value": "</a>"
+      },
+      {
+        "constant_pool_index": 46,
+        "value": "</b>"
+      },
+      {
+        "constant_pool_index": 47,
+        "value": "</big>"
+      },
+      {
+        "constant_pool_index": 48,
+        "value": "</body>"
+      },
+      {
+        "constant_pool_index": 49,
+        "value": "</center>"
+      },
+      {
+        "constant_pool_index": 50,
+        "value": "</div>"
+      },
+      {
+        "constant_pool_index": 51,
+        "value": "</em>"
+      },
+      {
+        "constant_pool_index": 52,
+        "value": "</form>"
+      },
+      {
+        "constant_pool_index": 53,
+        "value": "</head>"
+      },
+      {
+        "constant_pool_index": 54,
+        "value": "</html>"
+      },
+      {
+        "constant_pool_index": 55,
+        "value": "</i>"
+      },
+      {
+        "constant_pool_index": 56,
+        "value": "</menu>"
+      },
+      {
+        "constant_pool_index": 57,
+        "value": "</option>"
+      },
+      {
+        "constant_pool_index": 58,
+        "value": "</p>"
+      },
+      {
+        "constant_pool_index": 59,
+        "value": "</select>"
+      },
+      {
+        "constant_pool_index": 60,
+        "value": "</small>"
+      },
+      {
+        "constant_pool_index": 61,
+        "value": "</span>"
+      },
+      {
+        "constant_pool_index": 62,
+        "value": "</strong>"
+      },
+      {
+        "constant_pool_index": 63,
+        "value": "</style>"
+      },
+      {
+        "constant_pool_index": 64,
+        "value": "</table"
+      },
+      {
+        "constant_pool_index": 65,
+        "value": "</td"
+      },
+      {
+        "constant_pool_index": 66,
+        "value": "</textarea>"
+      },
+      {
+        "constant_pool_index": 67,
+        "value": "</title>"
+      },
+      {
+        "constant_pool_index": 68,
+        "value": "</tr"
+      },
+      {
+        "constant_pool_index": 69,
+        "value": "</u>"
+      },
+      {
+        "constant_pool_index": 70,
+        "value": "<big>"
+      },
+      {
+        "constant_pool_index": 71,
+        "value": "<body"
+      },
+      {
+        "constant_pool_index": 72,
+        "value": "<br>"
+      },
+      {
+        "constant_pool_index": 73,
+        "value": "<center>"
+      },
+      {
+        "constant_pool_index": 74,
+        "value": "<div"
+      },
+      {
+        "constant_pool_index": 75,
+        "value": "<em>"
+      },
+      {
+        "constant_pool_index": 76,
+        "value": "<form"
+      },
+      {
+        "constant_pool_index": 77,
+        "value": "<html>"
+      },
+      {
+        "constant_pool_index": 78,
+        "value": "<img"
+      },
+      {
+        "constant_pool_index": 79,
+        "value": "<input"
+      },
+      {
+        "constant_pool_index": 80,
+        "value": "<menu "
+      },
+      {
+        "constant_pool_index": 81,
+        "value": "<menuitem"
+      },
+      {
+        "constant_pool_index": 82,
+        "value": "<option"
+      },
+      {
+        "constant_pool_index": 83,
+        "value": "<prefetch"
+      },
+      {
+        "constant_pool_index": 84,
+        "value": "<select"
+      },
+      {
+        "constant_pool_index": 85,
+        "value": "<small>"
+      },
+      {
+        "constant_pool_index": 86,
+        "value": "<span"
+      },
+      {
+        "constant_pool_index": 87,
+        "value": "<strong>"
+      },
+      {
+        "constant_pool_index": 88,
+        "value": "<style"
+      },
+      {
+        "constant_pool_index": 89,
+        "value": "<table"
+      },
+      {
+        "constant_pool_index": 90,
+        "value": "<textarea"
+      },
+      {
+        "constant_pool_index": 91,
+        "value": "<title>"
+      },
+      {
+        "constant_pool_index": 92,
+        "value": "action="
+      },
+      {
+        "constant_pool_index": 93,
+        "value": "alt="
+      },
+      {
+        "constant_pool_index": 94,
+        "value": "background-color:"
+      },
+      {
+        "constant_pool_index": 95,
+        "value": "background="
+      },
+      {
+        "constant_pool_index": 96,
+        "value": "bgcolor="
+      },
+      {
+        "constant_pool_index": 97,
+        "value": "block"
+      },
+      {
+        "constant_pool_index": 98,
+        "value": "checkbox"
+      },
+      {
+        "constant_pool_index": 99,
+        "value": "checked"
+      },
+      {
+        "constant_pool_index": 100,
+        "value": "color:"
+      },
+      {
+        "constant_pool_index": 101,
+        "value": "cols="
+      },
+      {
+        "constant_pool_index": 102,
+        "value": "display:"
+      },
+      {
+        "constant_pool_index": 103,
+        "value": "height="
+      },
+      {
+        "constant_pool_index": 104,
+        "value": "hidden"
+      },
+      {
+        "constant_pool_index": 105,
+        "value": "href="
+      },
+      {
+        "constant_pool_index": 106,
+        "value": "hspace="
+      },
+      {
+        "constant_pool_index": 107,
+        "value": "label="
+      },
+      {
+        "constant_pool_index": 108,
+        "value": "method="
+      },
+      {
+        "constant_pool_index": 109,
+        "value": "midletTheme"
+      },
+      {
+        "constant_pool_index": 110,
+        "value": "mig33:"
+      },
+      {
+        "constant_pool_index": 111,
+        "value": "name="
+      },
+      {
+        "constant_pool_index": 112,
+        "value": "password"
+      },
+      {
+        "constant_pool_index": 113,
+        "value": "reset"
+      },
+      {
+        "constant_pool_index": 114,
+        "value": "right"
+      },
+      {
+        "constant_pool_index": 115,
+        "value": "rows="
+      },
+      {
+        "constant_pool_index": 116,
+        "value": "selected"
+      },
+      {
+        "constant_pool_index": 117,
+        "value": "size="
+      },
+      {
+        "constant_pool_index": 118,
+        "value": "src="
+      },
+      {
+        "constant_pool_index": 119,
+        "value": "stretched"
+      },
+      {
+        "constant_pool_index": 120,
+        "value": "style=\""
+      },
+      {
+        "constant_pool_index": 121,
+        "value": "style=\"color:"
+      },
+      {
+        "constant_pool_index": 122,
+        "value": "style=\"float:"
+      },
+      {
+        "constant_pool_index": 123,
+        "value": "submit"
+      },
+      {
+        "constant_pool_index": 124,
+        "value": "text"
+      },
+      {
+        "constant_pool_index": 125,
+        "value": "title="
+      },
+      {
+        "constant_pool_index": 126,
+        "value": "type="
+      },
+      {
+        "constant_pool_index": 127,
+        "value": "url="
+      },
+      {
+        "constant_pool_index": 128,
+        "value": "value="
+      },
+      {
+        "constant_pool_index": 129,
+        "value": "vspace="
+      },
+      {
+        "constant_pool_index": 130,
+        "value": "width="
+      },
+      {
+        "constant_pool_index": 131,
+        "value": "µ-2µ"
+      }
+    ],
+    "referenced_classes": [
+      "i",
+      "s",
+      "t",
+      "y",
+      "aj",
+      "ay",
+      "bd",
+      "bj",
+      "bl",
+      "[Ljava/lang/String;",
+      "java/lang/Exception",
+      "java/lang/Integer",
+      "java/lang/Object",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/System",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "java/util/Calendar",
+      "java/util/Hashtable",
+      "java/util/Vector",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics",
+      "javax/microedition/lcdui/Image"
+    ]
+  },
+  {
+    "path": "au.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 2,
+        "value": ")"
+      },
+      {
+        "constant_pool_index": 3,
+        "value": "/"
+      },
+      {
+        "constant_pool_index": 4,
+        "value": "¤"
+      },
+      {
+        "constant_pool_index": 5,
+        "value": "  "
+      },
+      {
+        "constant_pool_index": 6,
+        "value": " ("
+      },
+      {
+        "constant_pool_index": 7,
+        "value": "11"
+      },
+      {
+        "constant_pool_index": 8,
+        "value": "30"
+      },
+      {
+        "constant_pool_index": 9,
+        "value": "31"
+      },
+      {
+        "constant_pool_index": 10,
+        "value": "32"
+      },
+      {
+        "constant_pool_index": 11,
+        "value": "99"
+      },
+      {
+        "constant_pool_index": 12,
+        "value": " - "
+      },
+      {
+        "constant_pool_index": 13,
+        "value": "..."
+      }
+    ],
+    "referenced_classes": [
+      "j",
+      "t",
+      "y",
+      "[B",
+      "aj",
+      "al",
+      "au",
+      "ay",
+      "bc",
+      "bj",
+      "java/io/ByteArrayInputStream",
+      "java/io/ByteArrayOutputStream",
+      "java/io/DataInputStream",
+      "java/io/DataOutputStream",
+      "java/lang/Exception",
+      "java/lang/Integer",
+      "java/lang/Object",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "java/util/Enumeration",
+      "java/util/Hashtable",
+      "java/util/Timer",
+      "java/util/Vector",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics",
+      "javax/microedition/lcdui/Image",
+      "javax/microedition/rms/RecordEnumeration",
+      "javax/microedition/rms/RecordStore"
+    ]
+  },
+  {
+    "path": "k.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": "*"
+      },
+      {
+        "constant_pool_index": 2,
+        "value": "0"
+      },
+      {
+        "constant_pool_index": 3,
+        "value": "-1"
+      },
+      {
+        "constant_pool_index": 4,
+        "value": "]: "
+      },
+      {
+        "constant_pool_index": 5,
+        "value": "/sites/index.php?c=migworld&v=midlet&a=get_mobpage"
+      },
+      {
+        "constant_pool_index": 6,
+        "value": "search for contact"
+      },
+      {
+        "constant_pool_index": 7,
+        "value": "search for contact: Cannot find it in contact list"
+      },
+      {
+        "constant_pool_index": 8,
+        "value": "search for contact: FOUND contact "
+      },
+      {
+        "constant_pool_index": 9,
+        "value": "tabOrdering["
+      }
+    ],
+    "referenced_classes": [
+      "j",
+      "k",
+      "s",
+      "t",
+      "y",
+      "aj",
+      "au",
+      "bj",
+      "bl",
+      "[Lbj;",
+      "java/io/PrintStream",
+      "java/lang/Exception",
+      "java/lang/Object",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/System",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "java/util/Vector",
+      "javax/microedition/lcdui/AlertType",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics"
+    ]
+  },
+  {
+    "path": "h.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": " "
+      },
+      {
+        "constant_pool_index": 2,
+        "value": ":"
+      },
+      {
+        "constant_pool_index": 3,
+        "value": "EX:"
+      },
+      {
+        "constant_pool_index": 4,
+        "value": ":D1A:PS:"
+      },
+      {
+        "constant_pool_index": 5,
+        "value": ":D5A-EX:"
+      },
+      {
+        "constant_pool_index": 6,
+        "value": ":D5A:EX:"
+      }
+    ],
+    "referenced_classes": [
+      "h",
+      "u",
+      "y",
+      "aj",
+      "ay",
+      "bc",
+      "bj",
+      "[Lay;",
+      "java/lang/Exception",
+      "java/lang/Object",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "java/util/Vector"
+    ]
+  },
+  {
+    "path": "y.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 2,
+        "value": "\n"
+      },
+      {
+        "constant_pool_index": 3,
+        "value": " "
+      },
+      {
+        "constant_pool_index": 4,
+        "value": "\""
+      },
+      {
+        "constant_pool_index": 5,
+        "value": "#"
+      },
+      {
+        "constant_pool_index": 6,
+        "value": "*"
+      },
+      {
+        "constant_pool_index": 7,
+        "value": "+"
+      },
+      {
+        "constant_pool_index": 8,
+        "value": "."
+      },
+      {
+        "constant_pool_index": 9,
+        "value": "/"
+      },
+      {
+        "constant_pool_index": 10,
+        "value": "0"
+      },
+      {
+        "constant_pool_index": 11,
+        "value": "1"
+      },
+      {
+        "constant_pool_index": 12,
+        "value": "2"
+      },
+      {
+        "constant_pool_index": 13,
+        "value": "3"
+      },
+      {
+        "constant_pool_index": 14,
+        "value": ":"
+      },
+      {
+        "constant_pool_index": 15,
+        "value": "<"
+      },
+      {
+        "constant_pool_index": 16,
+        "value": "="
+      },
+      {
+        "constant_pool_index": 17,
+        "value": ">"
+      },
+      {
+        "constant_pool_index": 18,
+        "value": "?"
+      },
+      {
+        "constant_pool_index": 19,
+        "value": "%a"
+      },
+      {
+        "constant_pool_index": 20,
+        "value": "%b"
+      },
+      {
+        "constant_pool_index": 21,
+        "value": "%s"
+      },
+      {
+        "constant_pool_index": 22,
+        "value": ".."
+      },
+      {
+        "constant_pool_index": 23,
+        "value": "//"
+      },
+      {
+        "constant_pool_index": 24,
+        "value": "/>"
+      },
+      {
+        "constant_pool_index": 25,
+        "value": "0x"
+      },
+      {
+        "constant_pool_index": 26,
+        "value": "40"
+      },
+      {
+        "constant_pool_index": 27,
+        "value": "47"
+      },
+      {
+        "constant_pool_index": 28,
+        "value": "= "
+      },
+      {
+        "constant_pool_index": 29,
+        "value": "AM"
+      },
+      {
+        "constant_pool_index": 30,
+        "value": "PM"
+      },
+      {
+        "constant_pool_index": 31,
+        "value": "TC"
+      },
+      {
+        "constant_pool_index": 32,
+        "value": "%20"
+      },
+      {
+        "constant_pool_index": 33,
+        "value": "..."
+      },
+      {
+        "constant_pool_index": 34,
+        "value": "red"
+      },
+      {
+        "constant_pool_index": 35,
+        "value": " ,.;?!"
+      },
+      {
+        "constant_pool_index": 36,
+        "value": "allemo"
+      },
+      {
+        "constant_pool_index": 37,
+        "value": "black"
+      },
+      {
+        "constant_pool_index": 38,
+        "value": "blue"
+      },
+      {
+        "constant_pool_index": 39,
+        "value": "cyan"
+      },
+      {
+        "constant_pool_index": 40,
+        "value": "gray"
+      },
+      {
+        "constant_pool_index": 41,
+        "value": "green"
+      },
+      {
+        "constant_pool_index": 42,
+        "value": "grey"
+      },
+      {
+        "constant_pool_index": 43,
+        "value": "http"
+      },
+      {
+        "constant_pool_index": 44,
+        "value": "http:"
+      },
+      {
+        "constant_pool_index": 45,
+        "value": "http://"
+      },
+      {
+        "constant_pool_index": 46,
+        "value": "https://"
+      },
+      {
+        "constant_pool_index": 47,
+        "value": "magenta"
+      },
+      {
+        "constant_pool_index": 48,
+        "value": "microedition.io.file.FileConnection.version"
+      },
+      {
+        "constant_pool_index": 49,
+        "value": "microedition.media.version"
+      },
+      {
+        "constant_pool_index": 50,
+        "value": "supports.video.capture"
+      },
+      {
+        "constant_pool_index": 51,
+        "value": "true"
+      },
+      {
+        "constant_pool_index": 52,
+        "value": "white"
+      },
+      {
+        "constant_pool_index": 53,
+        "value": "yellow"
+      },
+      {
+        "constant_pool_index": 54,
+        "value": "zh-CN"
+      }
+    ],
+    "referenced_classes": [
+      "i",
+      "j",
+      "t",
+      "y",
+      "[B",
+      "[I",
+      "aj",
+      "ay",
+      "bc",
+      "bj",
+      "[Ljava/lang/String;",
+      "java/io/ByteArrayInputStream",
+      "java/io/ByteArrayOutputStream",
+      "java/io/DataInputStream",
+      "java/io/DataOutputStream",
+      "java/io/InputStreamReader",
+      "java/io/OutputStream",
+      "java/lang/Exception",
+      "java/lang/Integer",
+      "java/lang/Object",
+      "java/lang/Runnable",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/System",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "java/util/Calendar",
+      "java/util/Enumeration",
+      "java/util/Hashtable",
+      "java/util/Vector",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics",
+      "javax/microedition/lcdui/Image",
+      "javax/microedition/rms/RecordEnumeration",
+      "javax/microedition/rms/RecordStore",
+      "javax/microedition/rms/RecordStoreFullException"
+    ]
+  },
+  {
+    "path": "u.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 2,
+        "value": " "
+      },
+      {
+        "constant_pool_index": 3,
+        "value": "0"
+      },
+      {
+        "constant_pool_index": 4,
+        "value": ":"
+      },
+      {
+        "constant_pool_index": 5,
+        "value": "<"
+      },
+      {
+        "constant_pool_index": 6,
+        "value": ">"
+      },
+      {
+        "constant_pool_index": 7,
+        "value": " :"
+      },
+      {
+        "constant_pool_index": 8,
+        "value": "sh"
+      },
+      {
+        "constant_pool_index": 9,
+        "value": "sw"
+      },
+      {
+        "constant_pool_index": 10,
+        "value": "GET"
+      },
+      {
+        "constant_pool_index": 11,
+        "value": "lac"
+      },
+      {
+        "constant_pool_index": 12,
+        "value": "mcc"
+      },
+      {
+        "constant_pool_index": 13,
+        "value": "mnc"
+      },
+      {
+        "constant_pool_index": 14,
+        "value": "sid"
+      },
+      {
+        "constant_pool_index": 15,
+        "value": "ver"
+      },
+      {
+        "constant_pool_index": 16,
+        "value": " url:"
+      },
+      {
+        "constant_pool_index": 17,
+        "value": ":D11:RDF:"
+      },
+      {
+        "constant_pool_index": 18,
+        "value": ":D9:PR:"
+      },
+      {
+        "constant_pool_index": 19,
+        "value": ":EX:"
+      },
+      {
+        "constant_pool_index": 20,
+        "value": ":Response Code: "
+      },
+      {
+        "constant_pool_index": 21,
+        "value": "Content-Length"
+      },
+      {
+        "constant_pool_index": 22,
+        "value": "Content-Type"
+      },
+      {
+        "constant_pool_index": 23,
+        "value": "Cookie"
+      },
+      {
+        "constant_pool_index": 24,
+        "value": "ERR01: "
+      },
+      {
+        "constant_pool_index": 25,
+        "value": "ERR02: "
+      },
+      {
+        "constant_pool_index": 26,
+        "value": "ERR03: "
+      },
+      {
+        "constant_pool_index": 27,
+        "value": "ERR04: "
+      },
+      {
+        "constant_pool_index": 28,
+        "value": "ERR05: "
+      },
+      {
+        "constant_pool_index": 29,
+        "value": "ERR06: "
+      },
+      {
+        "constant_pool_index": 30,
+        "value": "Location"
+      },
+      {
+        "constant_pool_index": 31,
+        "value": "POST"
+      },
+      {
+        "constant_pool_index": 32,
+        "value": "Pragma"
+      },
+      {
+        "constant_pool_index": 33,
+        "value": "Set-Cookie"
+      },
+      {
+        "constant_pool_index": 34,
+        "value": "User-Agent"
+      },
+      {
+        "constant_pool_index": 35,
+        "value": "application/x-www-form-urlencoded"
+      },
+      {
+        "constant_pool_index": 36,
+        "value": "cellid"
+      },
+      {
+        "constant_pool_index": 37,
+        "value": "data to send"
+      },
+      {
+        "constant_pool_index": 38,
+        "value": "epoch"
+      },
+      {
+        "constant_pool_index": 39,
+        "value": "http://"
+      },
+      {
+        "constant_pool_index": 40,
+        "value": "https"
+      },
+      {
+        "constant_pool_index": 41,
+        "value": "image/gif"
+      },
+      {
+        "constant_pool_index": 42,
+        "value": "lang"
+      },
+      {
+        "constant_pool_index": 43,
+        "value": "no-cache"
+      },
+      {
+        "constant_pool_index": 44,
+        "value": "socket://"
+      }
+    ],
+    "referenced_classes": [
+      "j",
+      "u",
+      "y",
+      "[B",
+      "ac",
+      "aj",
+      "ay",
+      "bc",
+      "bg",
+      "bj",
+      "[Lay;",
+      "java/io/ByteArrayInputStream",
+      "java/io/ByteArrayOutputStream",
+      "java/io/InputStream",
+      "java/io/OutputStream",
+      "java/io/PrintStream",
+      "java/lang/Exception",
+      "java/lang/Integer",
+      "java/lang/Object",
+      "java/lang/SecurityException",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/System",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "java/util/Timer",
+      "java/util/TimerTask",
+      "java/util/Vector",
+      "javax/microedition/io/Connection",
+      "javax/microedition/io/ConnectionNotFoundException",
+      "javax/microedition/io/Connector",
+      "javax/microedition/io/HttpConnection",
+      "javax/microedition/io/InputConnection",
+      "javax/microedition/io/OutputConnection",
+      "javax/microedition/io/StreamConnection"
+    ]
+  },
+  {
+    "path": "be.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "be",
+      "bj",
+      "java/util/TimerTask"
+    ]
+  },
+  {
+    "path": "bd.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": ".mid"
+      },
+      {
+        "constant_pool_index": 2,
+        "value": ".mp3"
+      },
+      {
+        "constant_pool_index": 3,
+        "value": "audio/x-wav"
+      }
+    ],
+    "referenced_classes": [
+      "aj",
+      "bd",
+      "java/io/InputStream",
+      "java/lang/Exception",
+      "java/lang/Object",
+      "java/lang/Runnable",
+      "java/lang/String",
+      "java/lang/Thread",
+      "javax/microedition/media/Manager",
+      "javax/microedition/media/Player"
+    ]
+  },
+  {
+    "path": "bc.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 2,
+        "value": " "
+      },
+      {
+        "constant_pool_index": 3,
+        "value": "&"
+      },
+      {
+        "constant_pool_index": 4,
+        "value": "("
+      },
+      {
+        "constant_pool_index": 5,
+        "value": ")"
+      },
+      {
+        "constant_pool_index": 6,
+        "value": "."
+      },
+      {
+        "constant_pool_index": 7,
+        "value": "/"
+      },
+      {
+        "constant_pool_index": 8,
+        "value": "0"
+      },
+      {
+        "constant_pool_index": 9,
+        "value": ":"
+      },
+      {
+        "constant_pool_index": 10,
+        "value": ";"
+      },
+      {
+        "constant_pool_index": 11,
+        "value": "="
+      },
+      {
+        "constant_pool_index": 12,
+        "value": "\">"
+      },
+      {
+        "constant_pool_index": 13,
+        "value": "-1"
+      },
+      {
+        "constant_pool_index": 14,
+        "value": "25"
+      },
+      {
+        "constant_pool_index": 15,
+        "value": "26"
+      },
+      {
+        "constant_pool_index": 16,
+        "value": "32"
+      },
+      {
+        "constant_pool_index": 17,
+        "value": "41"
+      },
+      {
+        "constant_pool_index": 18,
+        "value": "] "
+      },
+      {
+        "constant_pool_index": 19,
+        "value": " & "
+      },
+      {
+        "constant_pool_index": 20,
+        "value": "EX:"
+      },
+      {
+        "constant_pool_index": 21,
+        "value": "PR:"
+      },
+      {
+        "constant_pool_index": 22,
+        "value": "RC:"
+      },
+      {
+        "constant_pool_index": 23,
+        "value": "RT:"
+      },
+      {
+        "constant_pool_index": 24,
+        "value": "\" value=\""
+      },
+      {
+        "constant_pool_index": 25,
+        "value": "(1):D7"
+      },
+      {
+        "constant_pool_index": 26,
+        "value": "(2):D8"
+      },
+      {
+        "constant_pool_index": 27,
+        "value": ".\"></form></body></html>"
+      },
+      {
+        "constant_pool_index": 28,
+        "value": ".</a>"
+      },
+      {
+        "constant_pool_index": 29,
+        "value": "/sites/index.php?c=chatroom&a=search&v=midlet"
+      },
+      {
+        "constant_pool_index": 30,
+        "value": "/sites/index.php?c=photo&v=midlet&username=%s&a=home"
+      },
+      {
+        "constant_pool_index": 31,
+        "value": "9119"
+      },
+      {
+        "constant_pool_index": 32,
+        "value": ":(1):"
+      },
+      {
+        "constant_pool_index": 33,
+        "value": ":D12-EX:"
+      },
+      {
+        "constant_pool_index": 34,
+        "value": ":D12:EX:"
+      },
+      {
+        "constant_pool_index": 35,
+        "value": ":D1:PS:"
+      },
+      {
+        "constant_pool_index": 36,
+        "value": ":D4-EX:"
+      },
+      {
+        "constant_pool_index": 37,
+        "value": ":D4:PS:"
+      },
+      {
+        "constant_pool_index": 38,
+        "value": ":D5-EX:"
+      },
+      {
+        "constant_pool_index": 39,
+        "value": ":D5:EX:"
+      },
+      {
+        "constant_pool_index": 40,
+        "value": ":ERNM:RC"
+      },
+      {
+        "constant_pool_index": 41,
+        "value": ":PNR"
+      },
+      {
+        "constant_pool_index": 42,
+        "value": ":RNC:RC"
+      },
+      {
+        "constant_pool_index": 43,
+        "value": ":SD:RC:"
+      },
+      {
+        "constant_pool_index": 44,
+        "value": "</body></html>"
+      },
+      {
+        "constant_pool_index": 45,
+        "value": "</p><br><a href=\""
+      },
+      {
+        "constant_pool_index": 46,
+        "value": "</p><br><form method=\"POST\" action=\""
+      },
+      {
+        "constant_pool_index": 47,
+        "value": "</title></head><body><p>["
+      },
+      {
+        "constant_pool_index": 48,
+        "value": "<html><head><title>"
+      },
+      {
+        "constant_pool_index": 49,
+        "value": "<input type=\"hidden\" name=\""
+      },
+      {
+        "constant_pool_index": 50,
+        "value": "<input type=\"submit\" value=\""
+      },
+      {
+        "constant_pool_index": 51,
+        "value": "J2MEv"
+      },
+      {
+        "constant_pool_index": 52,
+        "value": "RP:OK:"
+      },
+      {
+        "constant_pool_index": 53,
+        "value": "gateway.mig33.com"
+      },
+      {
+        "constant_pool_index": 54,
+        "value": "http://"
+      },
+      {
+        "constant_pool_index": 55,
+        "value": "http://gateway.mig33.com/"
+      }
+    ],
+    "referenced_classes": [
+      "h",
+      "j",
+      "k",
+      "s",
+      "t",
+      "u",
+      "y",
+      "[B",
+      "ac",
+      "af",
+      "aj",
+      "au",
+      "av",
+      "ay",
+      "bc",
+      "bj",
+      "bl",
+      "[Lay;",
+      "[Ljava/lang/String;",
+      "java/io/IOException",
+      "java/lang/Byte",
+      "java/lang/Exception",
+      "java/lang/Integer",
+      "java/lang/Long",
+      "java/lang/Object",
+      "java/lang/Short",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/System",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "java/util/Date",
+      "java/util/Hashtable",
+      "java/util/Timer",
+      "java/util/Vector",
+      "javax/microedition/lcdui/Image",
+      "javax/microedition/midlet/MIDlet",
+      "javax/microedition/rms/RecordStore",
+      "main/Main"
+    ]
+  },
+  {
+    "path": "bj.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 2,
+        "value": "/"
+      },
+      {
+        "constant_pool_index": 3,
+        "value": "0"
+      },
+      {
+        "constant_pool_index": 4,
+        "value": "1"
+      },
+      {
+        "constant_pool_index": 5,
+        "value": "["
+      },
+      {
+        "constant_pool_index": 6,
+        "value": "µ"
+      },
+      {
+        "constant_pool_index": 7,
+        "value": "▲"
+      },
+      {
+        "constant_pool_index": 8,
+        "value": "♣"
+      },
+      {
+        "constant_pool_index": 9,
+        "value": "-1"
+      },
+      {
+        "constant_pool_index": 10,
+        "value": "] "
+      },
+      {
+        "constant_pool_index": 11,
+        "value": "sh"
+      },
+      {
+        "constant_pool_index": 12,
+        "value": "sw"
+      },
+      {
+        "constant_pool_index": 13,
+        "value": "GET"
+      },
+      {
+        "constant_pool_index": 14,
+        "value": "lac"
+      },
+      {
+        "constant_pool_index": 15,
+        "value": "mcc"
+      },
+      {
+        "constant_pool_index": 16,
+        "value": "mnc"
+      },
+      {
+        "constant_pool_index": 17,
+        "value": "ver"
+      },
+      {
+        "constant_pool_index": 18,
+        "value": "&hash="
+      },
+      {
+        "constant_pool_index": 19,
+        "value": "&utmp="
+      },
+      {
+        "constant_pool_index": 20,
+        "value": "&utmvid="
+      },
+      {
+        "constant_pool_index": 21,
+        "value": "/sites/index.php?c=group&v=midlet&a=list_my_groups&e=3"
+      },
+      {
+        "constant_pool_index": 22,
+        "value": "ACTION_CHANGELANGUAGE_PAGE"
+      },
+      {
+        "constant_pool_index": 23,
+        "value": "ACTION_CONNECTIONSETTING_PAGE"
+      },
+      {
+        "constant_pool_index": 24,
+        "value": "ACTION_LOGIN_PAGE"
+      },
+      {
+        "constant_pool_index": 25,
+        "value": "ACTION_NA"
+      },
+      {
+        "constant_pool_index": 26,
+        "value": "ACTION_REGISTER_STEP1_NAMEXIST"
+      },
+      {
+        "constant_pool_index": 27,
+        "value": "ACTION_REGISTER_STEP1_PAGE"
+      },
+      {
+        "constant_pool_index": 28,
+        "value": "ACTION_REGISTER_STEP1_USEDSUGGESTEDNAME"
+      },
+      {
+        "constant_pool_index": 29,
+        "value": "ACTION_REGISTER_STEP2_FAILED"
+      },
+      {
+        "constant_pool_index": 30,
+        "value": "ACTION_REGISTER_STEP2_PAGE"
+      },
+      {
+        "constant_pool_index": 31,
+        "value": "ACTION_REGISTER_STEP2_SUCCESS"
+      },
+      {
+        "constant_pool_index": 32,
+        "value": "ACTION_REGISTER_STEP3_CODEACTIVATED"
+      },
+      {
+        "constant_pool_index": 33,
+        "value": "ACTION_REGISTER_STEP3_PAGE"
+      },
+      {
+        "constant_pool_index": 34,
+        "value": "ACTION_REGISTER_STEP3_REMINDLATER"
+      },
+      {
+        "constant_pool_index": 35,
+        "value": "ACTION_REGISTER_STEP3_RESENDSMSCODE"
+      },
+      {
+        "constant_pool_index": 36,
+        "value": "ACTION_WELCOME1STTIMEUSER_PAGE"
+      },
+      {
+        "constant_pool_index": 37,
+        "value": "ACTION_WELCOME_PAGE"
+      },
+      {
+        "constant_pool_index": 38,
+        "value": "Content-Length"
+      },
+      {
+        "constant_pool_index": 39,
+        "value": "Location"
+      },
+      {
+        "constant_pool_index": 40,
+        "value": "UTF-8"
+      },
+      {
+        "constant_pool_index": 41,
+        "value": "User-Agent"
+      },
+      {
+        "constant_pool_index": 42,
+        "value": "cellid"
+      },
+      {
+        "constant_pool_index": 43,
+        "value": "epoch"
+      },
+      {
+        "constant_pool_index": 44,
+        "value": "gamerz-"
+      },
+      {
+        "constant_pool_index": 45,
+        "value": "http://www.mig33.com/sites/lib/ga_midlet.php?"
+      },
+      {
+        "constant_pool_index": 46,
+        "value": "lang"
+      },
+      {
+        "constant_pool_index": 47,
+        "value": "utmr="
+      }
+    ],
+    "referenced_classes": [
+      "j",
+      "s",
+      "t",
+      "y",
+      "[B",
+      "[C",
+      "[I",
+      "aj",
+      "au",
+      "av",
+      "ay",
+      "bc",
+      "be",
+      "bj",
+      "bl",
+      "[Ljava/lang/String;",
+      "java/io/ByteArrayInputStream",
+      "java/io/ByteArrayOutputStream",
+      "java/io/DataInputStream",
+      "java/io/DataOutputStream",
+      "java/io/IOException",
+      "java/io/InputStream",
+      "java/io/OutputStream",
+      "java/lang/Byte",
+      "java/lang/Exception",
+      "java/lang/Integer",
+      "java/lang/InterruptedException",
+      "java/lang/Long",
+      "java/lang/Object",
+      "java/lang/Runnable",
+      "java/lang/SecurityException",
+      "java/lang/Short",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/System",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "java/util/Timer",
+      "java/util/TimerTask",
+      "java/util/Vector",
+      "javax/microedition/io/Connection",
+      "javax/microedition/io/ConnectionNotFoundException",
+      "javax/microedition/io/Connector",
+      "javax/microedition/io/HttpConnection",
+      "javax/microedition/io/InputConnection",
+      "javax/microedition/io/OutputConnection",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics",
+      "javax/microedition/lcdui/Image",
+      "javax/microedition/rms/RecordFilter"
+    ]
+  },
+  {
+    "path": "main/Main.class",
+    "class_version": "45.3",
+    "strings": [],
+    "referenced_classes": [
+      "aj",
+      "javax/microedition/lcdui/Display",
+      "javax/microedition/midlet/MIDlet",
+      "main/Main"
+    ]
+  },
+  {
+    "path": "d.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": " "
+      },
+      {
+        "constant_pool_index": 2,
+        "value": " FreeMEM: "
+      },
+      {
+        "constant_pool_index": 3,
+        "value": "&width=120&height=160"
+      },
+      {
+        "constant_pool_index": 4,
+        "value": "&width=160&height=120"
+      },
+      {
+        "constant_pool_index": 5,
+        "value": "&width=240&height=320"
+      },
+      {
+        "constant_pool_index": 6,
+        "value": "&width=288&height=352"
+      },
+      {
+        "constant_pool_index": 7,
+        "value": "&width=320&height=240"
+      },
+      {
+        "constant_pool_index": 8,
+        "value": "&width=352&height=288"
+      },
+      {
+        "constant_pool_index": 9,
+        "value": "&width=480&height=640"
+      },
+      {
+        "constant_pool_index": 10,
+        "value": "&width=640&height=480"
+      },
+      {
+        "constant_pool_index": 11,
+        "value": "ERR01: "
+      },
+      {
+        "constant_pool_index": 12,
+        "value": "ERR02: "
+      },
+      {
+        "constant_pool_index": 13,
+        "value": "ERR03: "
+      },
+      {
+        "constant_pool_index": 14,
+        "value": "ERR04: "
+      },
+      {
+        "constant_pool_index": 15,
+        "value": "ERR05: "
+      },
+      {
+        "constant_pool_index": 16,
+        "value": "ERR06: "
+      },
+      {
+        "constant_pool_index": 17,
+        "value": "EricssonW300c"
+      },
+      {
+        "constant_pool_index": 18,
+        "value": "TotalMEM: "
+      },
+      {
+        "constant_pool_index": 19,
+        "value": "VideoControl"
+      },
+      {
+        "constant_pool_index": 20,
+        "value": "capture://image"
+      },
+      {
+        "constant_pool_index": 21,
+        "value": "capture://video"
+      },
+      {
+        "constant_pool_index": 22,
+        "value": "encoding=jpeg"
+      }
+    ],
+    "referenced_classes": [
+      "d",
+      "j",
+      "y",
+      "aj",
+      "java/lang/Exception",
+      "java/lang/IllegalArgumentException",
+      "java/lang/Object",
+      "java/lang/OutOfMemoryError",
+      "java/lang/Runtime",
+      "java/lang/SecurityException",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/System",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "javax/microedition/lcdui/Display",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Form",
+      "javax/microedition/lcdui/Graphics",
+      "javax/microedition/lcdui/Image",
+      "javax/microedition/lcdui/Item",
+      "javax/microedition/media/Controllable",
+      "javax/microedition/media/Manager",
+      "javax/microedition/media/MediaException",
+      "javax/microedition/media/Player",
+      "javax/microedition/media/control/VideoControl"
+    ]
+  },
+  {
+    "path": "bl.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": " "
+      },
+      {
+        "constant_pool_index": 2,
+        "value": "/"
+      },
+      {
+        "constant_pool_index": 3,
+        "value": ":"
+      },
+      {
+        "constant_pool_index": 4,
+        "value": "P"
+      },
+      {
+        "constant_pool_index": 5,
+        "value": "/icon_dialog_happy.png"
+      },
+      {
+        "constant_pool_index": 6,
+        "value": "<prefetch"
+      },
+      {
+        "constant_pool_index": 7,
+        "value": "UTF-8"
+      },
+      {
+        "constant_pool_index": 8,
+        "value": "http://www.mig33.com/sites/c=migworld&v=midlet&a=new_home"
+      },
+      {
+        "constant_pool_index": 9,
+        "value": "local:"
+      },
+      {
+        "constant_pool_index": 10,
+        "value": "migbotHappy"
+      },
+      {
+        "constant_pool_index": 11,
+        "value": "migbotLoading"
+      },
+      {
+        "constant_pool_index": 12,
+        "value": "url="
+      }
+    ],
+    "referenced_classes": [
+      "s",
+      "y",
+      "[B",
+      "aj",
+      "bc",
+      "bj",
+      "bl",
+      "java/io/ByteArrayInputStream",
+      "java/io/InputStreamReader",
+      "java/lang/Exception",
+      "java/lang/Object",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/System",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "java/util/Hashtable",
+      "java/util/Vector",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Image"
+    ]
+  },
+  {
+    "path": "t.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": "¤"
+      }
+    ],
+    "referenced_classes": [
+      "t",
+      "java/io/ByteArrayOutputStream",
+      "java/io/DataOutputStream",
+      "java/lang/Exception",
+      "java/lang/Integer",
+      "java/lang/Object",
+      "java/lang/String",
+      "java/lang/Throwable",
+      "java/util/Enumeration",
+      "java/util/Hashtable"
+    ]
+  },
+  {
+    "path": "av.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 2,
+        "value": " "
+      },
+      {
+        "constant_pool_index": 3,
+        "value": "-"
+      },
+      {
+        "constant_pool_index": 4,
+        "value": ":"
+      },
+      {
+        "constant_pool_index": 5,
+        "value": "<a"
+      },
+      {
+        "constant_pool_index": 6,
+        "value": "< 1"
+      },
+      {
+        "constant_pool_index": 7,
+        "value": "</a>"
+      },
+      {
+        "constant_pool_index": 8,
+        "value": "href="
+      }
+    ],
+    "referenced_classes": [
+      "j",
+      "u",
+      "y",
+      "aj",
+      "av",
+      "bc",
+      "bj",
+      "java/lang/Exception",
+      "java/lang/Object",
+      "java/lang/String",
+      "java/lang/StringBuffer",
+      "java/lang/System",
+      "java/lang/Thread",
+      "java/lang/Throwable",
+      "java/util/Hashtable",
+      "java/util/Vector",
+      "javax/microedition/lcdui/Font",
+      "javax/microedition/lcdui/Graphics",
+      "javax/microedition/lcdui/Image"
+    ]
+  },
+  {
+    "path": "ay.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": "Invalid packet id:2"
+      }
+    ],
+    "referenced_classes": [
+      "ay",
+      "bj",
+      "java/io/ByteArrayInputStream",
+      "java/io/ByteArrayOutputStream",
+      "java/io/DataInputStream",
+      "java/io/DataOutputStream",
+      "java/io/IOException",
+      "java/lang/Object",
+      "java/lang/Short",
+      "java/util/Enumeration",
+      "java/util/Hashtable",
+      "java/util/Vector"
+    ]
+  },
+  {
+    "path": "j.class",
+    "class_version": "45.3",
+    "strings": [
+      {
+        "constant_pool_index": 1,
+        "value": ""
+      },
+      {
+        "constant_pool_index": 2,
+        "value": "32"
+      },
+      {
+        "constant_pool_index": 3,
+        "value": "33"
+      },
+      {
+        "constant_pool_index": 4,
+        "value": "37"
+      },
+      {
+        "constant_pool_index": 5,
+        "value": "46"
+      },
+      {
+        "constant_pool_index": 6,
+        "value": "49"
+      },
+      {
+        "constant_pool_index": 7,
+        "value": "50"
+      },
+      {
+        "constant_pool_index": 8,
+        "value": "en-US"
+      }
+    ],
+    "referenced_classes": [
+      "j",
+      "[B",
+      "aj",
+      "ay",
+      "bj",
+      "java/io/ByteArrayInputStream",
+      "java/lang/Exception",
+      "java/lang/Integer",
+      "java/lang/Object",
+      "java/lang/String",
+      "java/lang/Throwable",
+      "java/util/Vector",
+      "javax/microedition/rms/RecordEnumeration",
+      "javax/microedition/rms/RecordStore"
+    ]
+  }
+]

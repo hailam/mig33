@@ -1,0 +1,47 @@
+[
+  {
+    "path": "j.png",
+    "bytes": 3084,
+    "sha256": "8a129a43efd442072a4e500b5815b84bc2402dcda78998776d3dd0eb4ece46e6",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ],
+    "width": 132,
+    "height": 48
+  },
+  {
+    "path": "k.png",
+    "bytes": 803,
+    "sha256": "15e482baa119ea166345daa3b5927d21ee526f2eb790f7cc68a42c867e865d46",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ],
+    "width": 118,
+    "height": 62
+  },
+  {
+    "path": "MiG33.png",
+    "bytes": 283,
+    "sha256": "76d8e944c037169636214a734578585c39a57b66ac6795679cd2e55fe45b84a1",
+    "zip_timestamp": [
+      2009,
+      4,
+      10,
+      10,
+      45,
+      54
+    ],
+    "width": 16,
+    "height": 16
+  }
+]

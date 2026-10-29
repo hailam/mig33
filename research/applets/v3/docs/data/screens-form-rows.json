@@ -1,0 +1,1049 @@
+{
+  "description": "Constructor statements in original order, not rendered or line-wrapped; paragraph and checkbox wrapping depends on target Font metrics. Shared server-text cases explicitly marked. Java expressions preserve dynamic defaults.",
+  "forms": [
+    {
+      "id": 13,
+      "rows": [
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:56",
+          "java": "this.c(\"Server\", com.projectgoth.Roshan.b.a);",
+          "kind": "label_text_spacer",
+          "string_literals": [
+            "Server"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:57",
+          "java": "this.c(\"Port\", com.projectgoth.Roshan.b.b);",
+          "kind": "label_text_spacer",
+          "string_literals": [
+            "Port"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:58",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:59",
+          "java": "this.m.addElement(new a(false, null, 5, \"Connect\"));",
+          "kind": "button",
+          "string_literals": [
+            "Connect"
+          ]
+        }
+      ],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:55",
+      "raw_constructor_block": "            case 13: {\n                this.c(\"Server\", com.projectgoth.Roshan.b.a);\n                this.c(\"Port\", com.projectgoth.Roshan.b.b);\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"Connect\"));\n                break;\n            }",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 15,
+      "rows": [],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:294",
+      "raw_constructor_block": "            case 15: {\n                this.c(\"Username\", null);\n                this.m.addElement(new a(false, null, 2, \"Password\"));\n                this.m.addElement(new a(false, null, 1, \"Password\"));\n                this.a(\"Save Password\", com.projectgoth.Roshan.c.c(1) == 1, \"Save Password\");\n                this.a(\"Sign in as Invisible\", com.projectgoth.Roshan.c.c(13) == 1, \"Sign in as Invisible\");\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"Login\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"Register\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"Forgot Details\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"Connection Type\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.a(\"Connect to:\");\n                this.a(\"MSN\", com.projectgoth.Roshan.c.c(4) == 1, \"MSN\");\n                this.a(\"Yahoo!\", com.projectgoth.Roshan.c.c(5) == 1, \"Yahoo!\");\n                this.a(\"Google Talk\", com.projectgoth.Roshan.c.c(3) == 1, \"Google Talk\");\n                this.a(\"AIM\", com.projectgoth.Roshan.c.c(7) == 1, \"AIM\");\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 4, null));\n                this.a(\"Show offline contacts\", com.projectgoth.Roshan.c.c(6) == 1, \"Show offline contacts\");\n                break;\n            }",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 30,
+      "rows": [
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:88",
+          "java": "this.c(\"Username\", null);",
+          "kind": "label_text_spacer",
+          "string_literals": [
+            "Username"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:89",
+          "java": "this.c(\"Password\", null);",
+          "kind": "label_text_spacer",
+          "string_literals": [
+            "Password"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:90",
+          "java": "this.m.addElement(new a(false, null, 2, \"Mobile Number\"));",
+          "kind": "label",
+          "string_literals": [
+            "Mobile Number"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:91",
+          "java": "this.m.addElement(new a(false, null, 2, \"(Inc. Country Code)\"));",
+          "kind": "label",
+          "string_literals": [
+            "(Inc. Country Code)"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:92",
+          "java": "this.m.addElement(new a(false, j.f((short)1), 0, \"Mobile Number\"));",
+          "kind": "text_field",
+          "string_literals": [
+            "Mobile Number"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:93",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:94",
+          "java": "this.m.addElement(new a(false, null, 2, \"Enter Security Code\"));",
+          "kind": "label",
+          "string_literals": [
+            "Enter Security Code"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:95",
+          "java": "this.m.addElement(new a(false, null, 16, \"Enter Security Code\"));",
+          "kind": "security_code",
+          "string_literals": [
+            "Enter Security Code"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:99",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:100",
+          "java": "this.a(\"I agree to the terms and conditions (see www.mig33.com)\", true, \"TC\");",
+          "kind": "checkbox",
+          "string_literals": [
+            "I agree to the terms and conditions (see www.mig33.com)",
+            "TC"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:101",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:102",
+          "java": "this.m.addElement(new a(false, null, 5, \"Submit\"));",
+          "kind": "button",
+          "string_literals": [
+            "Submit"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:103",
+          "java": "this.m.addElement(new a(false, null, 5, \"Help?\"));",
+          "kind": "button",
+          "string_literals": [
+            "Help?"
+          ]
+        }
+      ],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:87",
+      "raw_constructor_block": "            case 30: {\n                this.c(\"Username\", null);\n                this.c(\"Password\", null);\n                this.m.addElement(new a(false, null, 2, \"Mobile Number\"));\n                this.m.addElement(new a(false, null, 2, \"(Inc. Country Code)\"));\n                this.m.addElement(new a(false, j.f((short)1), 0, \"Mobile Number\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 2, \"Enter Security Code\"));\n                this.m.addElement(new a(false, null, 16, \"Enter Security Code\"));\n                Image image = Image.createImage((byte[])j.g((short)3), (int)0, (int)j.g((short)3).length);\n                r = image.getHeight();\n                image = null;\n                this.m.addElement(new a(false, null, 4, null));\n                this.a(\"I agree to the terms and conditions (see www.mig33.com)\", true, \"TC\");\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"Submit\"));\n                this.m.addElement(new a(false, null, 5, \"Help?\"));\n                break;\n            }",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 42,
+      "rows": [
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:107",
+          "java": "this.a(\"Please select your connection type below. If you are unsure, try TCP first.\");",
+          "kind": "paragraph",
+          "string_literals": [
+            "Please select your connection type below. If you are unsure, try TCP first."
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:108",
+          "java": "this.m.addElement(new a(false, null, 5, \"TCP\"));",
+          "kind": "button",
+          "string_literals": [
+            "TCP"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:109",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:110",
+          "java": "this.m.addElement(new a(false, null, 5, \"HTTP\"));",
+          "kind": "button",
+          "string_literals": [
+            "HTTP"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:111",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:112",
+          "java": "this.m.addElement(new a(false, null, 5, \"Manual\"));",
+          "kind": "button",
+          "string_literals": [
+            "Manual"
+          ]
+        }
+      ],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:106",
+      "raw_constructor_block": "            case 42: {\n                this.a(\"Please select your connection type below. If you are unsure, try TCP first.\");\n                this.m.addElement(new a(false, null, 5, \"TCP\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"HTTP\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"Manual\"));\n                break;\n            }",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 43,
+      "rows": [
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:116",
+          "java": "this.a(\"Connection test using \" + (Main.c == Main.b ? \"TCP\" : \"HTTP\") + \" is successful. Please select:\");",
+          "kind": "paragraph",
+          "string_literals": [
+            "Connection test using ",
+            "TCP",
+            "HTTP",
+            " is successful. Please select:"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:117",
+          "java": "this.m.addElement(new a(false, null, 5, \"Login\"));",
+          "kind": "button",
+          "string_literals": [
+            "Login"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:118",
+          "java": "this.a(\"Or\");",
+          "kind": "paragraph",
+          "string_literals": [
+            "Or"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:119",
+          "java": "this.m.addElement(new a(false, null, 5, \"Registration\"));",
+          "kind": "button",
+          "string_literals": [
+            "Registration"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:120",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        }
+      ],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:115",
+      "raw_constructor_block": "            case 43: {\n                this.a(\"Connection test using \" + (Main.c == Main.b ? \"TCP\" : \"HTTP\") + \" is successful. Please select:\");\n                this.m.addElement(new a(false, null, 5, \"Login\"));\n                this.a(\"Or\");\n                this.m.addElement(new a(false, null, 5, \"Registration\"));\n                this.m.addElement(new a(false, null, 4, null));\n                break;\n            }",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 3,
+      "rows": [
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:124",
+          "java": "this.a(\"Type of Contact:\");",
+          "kind": "paragraph",
+          "string_literals": [
+            "Type of Contact:"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:125",
+          "java": "this.m.addElement(new a(false, null, 5, \"mig33\"));",
+          "kind": "button",
+          "string_literals": [
+            "mig33"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:126",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:127",
+          "java": "this.m.addElement(new a(false, null, 5, \"Mobile Number\"));",
+          "kind": "button",
+          "string_literals": [
+            "Mobile Number"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:128",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:129",
+          "java": "this.m.addElement(new a(false, null, 5, \"MSN\"));",
+          "kind": "button",
+          "string_literals": [
+            "MSN"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:130",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:131",
+          "java": "this.m.addElement(new a(false, null, 5, \"Yahoo!\"));",
+          "kind": "button",
+          "string_literals": [
+            "Yahoo!"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:132",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:133",
+          "java": "this.m.addElement(new a(false, null, 5, \"Google Talk\"));",
+          "kind": "button",
+          "string_literals": [
+            "Google Talk"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:134",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:135",
+          "java": "this.m.addElement(new a(false, null, 5, \"AIM\"));",
+          "kind": "button",
+          "string_literals": [
+            "AIM"
+          ]
+        }
+      ],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:123",
+      "raw_constructor_block": "            case 3: {\n                this.a(\"Type of Contact:\");\n                this.m.addElement(new a(false, null, 5, \"mig33\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"Mobile Number\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"MSN\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"Yahoo!\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"Google Talk\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"AIM\"));\n                break;\n            }",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 9,
+      "rows": [
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:139",
+          "java": "this.c(\"Display Name\", null);",
+          "kind": "label_text_spacer",
+          "string_literals": [
+            "Display Name"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:140",
+          "java": "this.c(\"mig33 Username\", null);",
+          "kind": "label_text_spacer",
+          "string_literals": [
+            "mig33 Username"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:141",
+          "java": "this.c(\"Mobile Number\", null);",
+          "kind": "label_text_spacer",
+          "string_literals": [
+            "Mobile Number"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:142",
+          "java": "this.c(\"MSN Username\", null);",
+          "kind": "label_text_spacer",
+          "string_literals": [
+            "MSN Username"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:143",
+          "java": "this.c(\"Yahoo! ID\", null);",
+          "kind": "label_text_spacer",
+          "string_literals": [
+            "Yahoo! ID"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:144",
+          "java": "this.c(\"Gtalk Username\", null);",
+          "kind": "label_text_spacer",
+          "string_literals": [
+            "Gtalk Username"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:145",
+          "java": "this.c(\"AIM Username\", null);",
+          "kind": "label_text_spacer",
+          "string_literals": [
+            "AIM Username"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:146",
+          "java": "this.m.addElement(new a(false, null, 5, \"Update\"));",
+          "kind": "button",
+          "string_literals": [
+            "Update"
+          ]
+        }
+      ],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:138",
+      "raw_constructor_block": "            case 9: {\n                this.c(\"Display Name\", null);\n                this.c(\"mig33 Username\", null);\n                this.c(\"Mobile Number\", null);\n                this.c(\"MSN Username\", null);\n                this.c(\"Yahoo! ID\", null);\n                this.c(\"Gtalk Username\", null);\n                this.c(\"AIM Username\", null);\n                this.m.addElement(new a(false, null, 5, \"Update\"));\n                break;\n            }",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 41,
+      "rows": [
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:150",
+          "java": "this.a(\"Enter your authentication code to make calls, send SMS and receive your free credit!\");",
+          "kind": "paragraph",
+          "string_literals": [
+            "Enter your authentication code to make calls, send SMS and receive your free credit!"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:151",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:152",
+          "java": "this.m.addElement(new a(false, null, 5, \"Enter Code\"));",
+          "kind": "button",
+          "string_literals": [
+            "Enter Code"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:153",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:154",
+          "java": "this.m.addElement(new a(false, null, 5, \"Resend Code\"));",
+          "kind": "button",
+          "string_literals": [
+            "Resend Code"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:155",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:156",
+          "java": "this.m.addElement(new a(false, null, 5, \"Remind me later\"));",
+          "kind": "button",
+          "string_literals": [
+            "Remind me later"
+          ]
+        }
+      ],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:149",
+      "raw_constructor_block": "            case 41: {\n                this.a(\"Enter your authentication code to make calls, send SMS and receive your free credit!\");\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"Enter Code\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"Resend Code\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"Remind me later\"));\n                break;\n            }",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 23,
+      "rows": [
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:160",
+          "java": "this.a(\"Invite your friends to join mig33. Get bonus credit when they activate their account.\");",
+          "kind": "paragraph",
+          "string_literals": [
+            "Invite your friends to join mig33. Get bonus credit when they activate their account."
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:161",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:162",
+          "java": "this.c(\"Mobile Number\", null);",
+          "kind": "label_text_spacer",
+          "string_literals": [
+            "Mobile Number"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:163",
+          "java": "this.c(\"Your name\", com.projectgoth.Roshan.a.a[0]);",
+          "kind": "label_text_spacer",
+          "string_literals": [
+            "Your name"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:164",
+          "java": "this.m.addElement(new a(false, null, 5, \"Invite Friend\"));",
+          "kind": "button",
+          "string_literals": [
+            "Invite Friend"
+          ]
+        }
+      ],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:159",
+      "raw_constructor_block": "            case 23: {\n                this.a(\"Invite your friends to join mig33. Get bonus credit when they activate their account.\");\n                this.m.addElement(new a(false, null, 4, null));\n                this.c(\"Mobile Number\", null);\n                this.c(\"Your name\", com.projectgoth.Roshan.a.a[0]);\n                this.m.addElement(new a(false, null, 5, \"Invite Friend\"));\n                break;\n            }",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 17,
+      "rows": [
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:168",
+          "java": "this.m.addElement(new a(false, null, 2, \"Destination Number\"));",
+          "kind": "label",
+          "string_literals": [
+            "Destination Number"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:169",
+          "java": "this.m.addElement(new a(false, null, 3, \"Destination Number\"));",
+          "kind": "number_history_field",
+          "string_literals": [
+            "Destination Number"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:170",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:171",
+          "java": "this.m.addElement(new a(false, null, 2, \"Origin Number\"));",
+          "kind": "label",
+          "string_literals": [
+            "Origin Number"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:172",
+          "java": "this.m.addElement(new a(false, null, 3, \"Origin Number\"));",
+          "kind": "number_history_field",
+          "string_literals": [
+            "Origin Number"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:173",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:175",
+          "java": "this.a(\"Call-through\", com.projectgoth.Roshan.c.c(15) == 2, \"Call-through\");",
+          "kind": "checkbox",
+          "string_literals": [
+            "Call-through",
+            "Call-through"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:176",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:178",
+          "java": "this.m.addElement(new a(false, null, 5, \"Call now\"));",
+          "kind": "button",
+          "string_literals": [
+            "Call now"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:179",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:181",
+          "java": "this.m.addElement(new a(false, null, 5, \"Compare Rates\"));",
+          "kind": "button",
+          "string_literals": [
+            "Compare Rates"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:182",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:184",
+          "java": "this.m.addElement(new a(false, null, 5, \"Help?\"));",
+          "kind": "button",
+          "string_literals": [
+            "Help?"
+          ]
+        }
+      ],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:167",
+      "raw_constructor_block": "            case 17: {\n                this.m.addElement(new a(false, null, 2, \"Destination Number\"));\n                this.m.addElement(new a(false, null, 3, \"Destination Number\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 2, \"Origin Number\"));\n                this.m.addElement(new a(false, null, 3, \"Origin Number\"));\n                this.m.addElement(new a(false, null, 4, null));\n                if (com.projectgoth.Roshan.c.ax) {\n                    this.a(\"Call-through\", com.projectgoth.Roshan.c.c(15) == 2, \"Call-through\");\n                    this.m.addElement(new a(false, null, 4, null));\n                }\n                this.m.addElement(new a(false, null, 5, \"Call now\"));\n                this.m.addElement(new a(false, null, 4, null));\n                if (com.projectgoth.Roshan.c.ax) {\n                    this.m.addElement(new a(false, null, 5, \"Compare Rates\"));\n                    this.m.addElement(new a(false, null, 4, null));\n                }\n                this.m.addElement(new a(false, null, 5, \"Help?\"));\n                break;\n            }",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 14,
+      "rows": [
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:188",
+          "java": "this.a(\"Your username and password will be sent by SMS to your mobile phone.\");",
+          "kind": "paragraph",
+          "string_literals": [
+            "Your username and password will be sent by SMS to your mobile phone."
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:189",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:190",
+          "java": "this.c(\"Mobile Number\", com.projectgoth.Roshan.c.z);",
+          "kind": "label_text_spacer",
+          "string_literals": [
+            "Mobile Number"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:191",
+          "java": "this.m.addElement(new a(false, null, 5, \"Continue\"));",
+          "kind": "button",
+          "string_literals": [
+            "Continue"
+          ]
+        }
+      ],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:187",
+      "raw_constructor_block": "            case 14: {\n                this.a(\"Your username and password will be sent by SMS to your mobile phone.\");\n                this.m.addElement(new a(false, null, 4, null));\n                this.c(\"Mobile Number\", com.projectgoth.Roshan.c.z);\n                this.m.addElement(new a(false, null, 5, \"Continue\"));\n                break;\n            }",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 40,
+      "rows": [],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:295",
+      "raw_constructor_block": "            case 40: {\n                this.a(\"This is your mobile number. Please change it if it is incorrect.\");\n                this.m.addElement(new a(false, null, 4, null));\n                this.c(\"Mobile Number\", com.projectgoth.Roshan.c.z);\n                this.m.addElement(new a(false, null, 5, \"Continue\"));\n                break;\n            }",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 8,
+      "rows": [
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:202",
+          "java": "this.a(String.valueOf(string2) + \" has added you to his/her contact list.\");",
+          "kind": "paragraph",
+          "string_literals": [
+            " has added you to his/her contact list."
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:203",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:204",
+          "java": "this.m.addElement(new a(false, null, 5, \"Allow\"));",
+          "kind": "button",
+          "string_literals": [
+            "Allow"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:205",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:206",
+          "java": "this.m.addElement(new a(false, null, 5, \"Reject\"));",
+          "kind": "button",
+          "string_literals": [
+            "Reject"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:207",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:208",
+          "java": "this.m.addElement(new a(false, string2, 5, \"View User\"));",
+          "kind": "button",
+          "string_literals": [
+            "View User"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:209",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:210",
+          "java": "this.m.addElement(new a(false, null, 5, \"Skip\"));",
+          "kind": "button",
+          "string_literals": [
+            "Skip"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:211",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:212",
+          "java": "this.m.addElement(new a(false, null, 5, \"Skip All\"));",
+          "kind": "button",
+          "string_literals": [
+            "Skip All"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:213",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:214",
+          "java": "this.a(\"Add \" + string2 + \" to my contact list\", true, \"Add to Contact List\");",
+          "kind": "checkbox",
+          "string_literals": [
+            "Add ",
+            " to my contact list",
+            "Add to Contact List"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:215",
+          "java": "this.a(\"Share my mobile number with \" + string2, false, \"Share Mobile\");",
+          "kind": "checkbox",
+          "string_literals": [
+            "Share my mobile number with ",
+            "Share Mobile"
+          ]
+        }
+      ],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:201",
+      "raw_constructor_block": "            case 8: {\n                this.a(String.valueOf(string2) + \" has added you to his/her contact list.\");\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"Allow\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"Reject\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, string2, 5, \"View User\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"Skip\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"Skip All\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.a(\"Add \" + string2 + \" to my contact list\", true, \"Add to Contact List\");\n                this.a(\"Share my mobile number with \" + string2, false, \"Share Mobile\");\n                break;\n            }",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 22,
+      "rows": [
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:219",
+          "java": "this.m.addElement(new a(false, null, 2, \"Username\"));",
+          "kind": "label",
+          "string_literals": [
+            "Username"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:221",
+          "java": "this.a(\"(e.g. user@mail.com)\");",
+          "kind": "paragraph",
+          "string_literals": [
+            "(e.g. user@mail.com)"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:223",
+          "java": "this.m.addElement(new a(false, null, 0, \"Username\"));",
+          "kind": "text_field",
+          "string_literals": [
+            "Username"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:224",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:225",
+          "java": "this.m.addElement(new a(false, null, 2, \"Password\"));",
+          "kind": "label",
+          "string_literals": [
+            "Password"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:226",
+          "java": "this.m.addElement(new a(false, null, 1, \"Password\"));",
+          "kind": "password_field",
+          "string_literals": [
+            "Password"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:227",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:228",
+          "java": "this.m.addElement(new a(false, null, 5, \"Save\"));",
+          "kind": "button",
+          "string_literals": [
+            "Save"
+          ]
+        }
+      ],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:218",
+      "raw_constructor_block": "            case 22: {\n                this.m.addElement(new a(false, null, 2, \"Username\"));\n                if (string2.equals(\"MSN\")) {\n                    this.a(\"(e.g. user@mail.com)\");\n                }\n                this.m.addElement(new a(false, null, 0, \"Username\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 2, \"Password\"));\n                this.m.addElement(new a(false, null, 1, \"Password\"));\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"Save\"));\n                break;\n            }",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 34,
+      "rows": [
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:232",
+          "java": "this.c(\"Room Name\", string2);",
+          "kind": "label_text_spacer",
+          "string_literals": [
+            "Room Name"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:233",
+          "java": "this.m.addElement(new a(false, null, 5, \"Search\"));",
+          "kind": "button",
+          "string_literals": [
+            "Search"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:234",
+          "java": "this.m.addElement(new a(false, null, 5, \"Help?\"));",
+          "kind": "button",
+          "string_literals": [
+            "Help?"
+          ]
+        }
+      ],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:231",
+      "raw_constructor_block": "            case 34: {\n                this.c(\"Room Name\", string2);\n                this.m.addElement(new a(false, null, 5, \"Search\"));\n                this.m.addElement(new a(false, null, 5, \"Help?\"));\n                break;\n            }",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 4,
+      "rows": [
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:238",
+          "java": "this.c(\"mig33 Username\", string2);",
+          "kind": "label_text_spacer",
+          "string_literals": [
+            "mig33 Username"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:239",
+          "java": "this.a(\"Share my mobile number\", false, \"Share Mobile\");",
+          "kind": "checkbox",
+          "string_literals": [
+            "Share my mobile number",
+            "Share Mobile"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:240",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:241",
+          "java": "this.m.addElement(new a(false, null, 5, \"Continue\"));",
+          "kind": "button",
+          "string_literals": [
+            "Continue"
+          ]
+        }
+      ],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:237",
+      "raw_constructor_block": "            case 4: {\n                this.c(\"mig33 Username\", string2);\n                this.a(\"Share my mobile number\", false, \"Share Mobile\");\n                this.m.addElement(new a(false, null, 4, null));\n                this.m.addElement(new a(false, null, 5, \"Continue\"));\n                break;\n            }",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 11,
+      "rows": [
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:245",
+          "java": "this.c(\"New room name\", null);",
+          "kind": "label_text_spacer",
+          "string_literals": [
+            "New room name"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:246",
+          "java": "this.m.addElement(new a(false, null, 5, \"Create\"));",
+          "kind": "button",
+          "string_literals": [
+            "Create"
+          ]
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:247",
+          "java": "this.m.addElement(new a(false, null, 5, \"Help?\"));",
+          "kind": "button",
+          "string_literals": [
+            "Help?"
+          ]
+        }
+      ],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:244",
+      "raw_constructor_block": "            case 11: {\n                this.c(\"New room name\", null);\n                this.m.addElement(new a(false, null, 5, \"Create\"));\n                this.m.addElement(new a(false, null, 5, \"Help?\"));\n                break;\n            }",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 49,
+      "rows": [
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:327",
+          "java": "this.m.setElementAt(new a(false, string2, this.a(n2), string), n2);",
+          "kind": "paragraph",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:334",
+          "java": "this.m.addElement(new a(false, null, 2, string));",
+          "kind": "label",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:335",
+          "java": "this.m.addElement(new a(false, string2 != null ? string2 : null, 0, string));",
+          "kind": "text_field",
+          "string_literals": []
+        },
+        {
+          "source": "research/applets/v3/artifacts/decompiled/t.java:336",
+          "java": "this.m.addElement(new a(false, null, 4, null));",
+          "kind": "spacer",
+          "string_literals": []
+        }
+      ],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:306",
+      "raw_constructor_block": "            case 49: {\n                this.a(\"Starting mig33 for the first time. We are about to perform a few tests to ensure that the phone is configured correctly\");\n                break;\n            }",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 1,
+      "rows": [],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:301",
+      "raw_constructor_block": "            case 1: {\n                this.a(\"Ver: \" + Main.d);\n                this.a(\"Web: www.mig33.com\");\n                this.a(\"Wap: wap.mig33.com\");\n                this.m.addElement(new a(false, null, 4, null));\n                this.a(\"Copyright 2006 Project Goth Inc.\");\n                break;\n            }",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 12,
+      "rows": [
+        {
+          "kind": "server_text",
+          "java": "newline-split response field 1; see state 36 shared case",
+          "source": "research/applets/v3/artifacts/decompiled/t.java:300"
+        }
+      ],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:302",
+      "raw_constructor_block": "            case 12: ",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 18,
+      "rows": [
+        {
+          "kind": "server_text",
+          "java": "newline-split response field 1; see state 36 shared case",
+          "source": "research/applets/v3/artifacts/decompiled/t.java:300"
+        }
+      ],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:303",
+      "raw_constructor_block": "            case 18: ",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 35,
+      "rows": [
+        {
+          "kind": "server_text",
+          "java": "newline-split response field 1; see state 36 shared case",
+          "source": "research/applets/v3/artifacts/decompiled/t.java:300"
+        }
+      ],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:304",
+      "raw_constructor_block": "            case 35: ",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    },
+    {
+      "id": 36,
+      "rows": [
+        {
+          "kind": "server_text",
+          "java": "newline-split response field 1; empty lines become spacer rows",
+          "source": "research/applets/v3/artifacts/decompiled/t.java:300"
+        }
+      ],
+      "source": "research/applets/v3/artifacts/decompiled/t.java:305",
+      "raw_constructor_block": "            case 36: {\n                n3 = 0;\n                int n4 = 0;\n                while (n3 < string2.length()) {\n                    n4 = string2.indexOf(\"\\n\", n3);\n                    if (n4 == -1) {\n                        this.a(string2.substring(n3, string2.length()));\n                        break block0;\n                    }\n                    if (string2.substring(n3, n4) == null || string2.substring(n3, n4).length() == 0) {\n                        this.m.addElement(new a(false, null, 4, null));\n                    } else {\n                        this.a(string2.substring(n3, n4));\n                    }\n                    n3 = n4 + 1;\n                }\n                break;\n            }\n        }\n        this.o = 0;\n        int n5 = com.projectgoth.Roshan.c.b - a;\n        n3 = 0;\n        while (n3 < this.m.size()) {\n            if ((n5 = this.a(n3, n5)) < 0) break;\n            ++n3;\n        }\n        this.p = n5 < 0 ? n3 : n3 - 1;\n        n3 = 0;\n        switch (this.i) {",
+      "conditional_note": "Conditions and shared fallthrough cases must be read from raw_constructor_block and linked source; rows are an ordered statement inventory, not unconditional visible widgets."
+    }
+  ]
+}

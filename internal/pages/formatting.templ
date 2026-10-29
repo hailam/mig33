@@ -1,0 +1,75 @@
+package pages
+
+import "github.com/hailam/mig33/internal/formatting"
+import "strconv"
+
+templ FormattedDocument(title string, document formatting.Document, body templ.Component) {
+	<html><head><title>{ title }</title></head><body if document.Background != "" { bgcolor={ document.Background } } if document.BackgroundImage != "" { background={ legacyURL(document.BackgroundImage) } }>@body</body></html>
+}
+
+templ FormattedContent(document formatting.Document) {
+	@formattedNodes(document.Nodes)
+}
+
+templ formattedNodes(nodes []formatting.Node) {
+	for _, node := range nodes {
+		@formattedNode(node)
+	}
+}
+
+templ formattedNode(node formatting.Node) {
+	switch node.Tag {
+		case "p", "div":
+			<p { formattedColorAttributes("color", node.Color)... }>
+				if node.Background != "" {
+					<span { formattedColorAttributes("background-color", node.Background)... }>@formattedNodes(node.Children)</span>
+				} else {
+					@formattedNodes(node.Children)
+				}
+			</p>
+		case "span":
+			<span { formattedAttributes(node)... }>@formattedNodes(node.Children)</span>
+		case "b", "strong", "em":
+			<b>@formattedNodes(node.Children)</b>
+		case "i":
+			<i>@formattedNodes(node.Children)</i>
+		case "u":
+			<u>@formattedNodes(node.Children)</u>
+		case "big":
+			<big>@formattedNodes(node.Children)</big>
+		case "small":
+			<small>@formattedNodes(node.Children)</small>
+		case "center":
+			<center>@formattedNodes(node.Children)</center>
+		case "br":
+			<br/>
+		case "a":
+			<a href={ legacyURL(node.Href) }>@formattedNodes(node.Children)</a>
+		case "img":
+			<img src={ legacyURL(node.Src) } width={ strconv.Itoa(node.Width) } height={ strconv.Itoa(node.Height) }/>
+		default:
+			{ node.Text }
+	}
+}
+
+templ ProfileFormattingEditor(action, csrf, source, notice string, photos []ProfileFormattingPhoto) {
+	if notice != "" {
+		@Paragraph(notice)
+	}
+	@Paragraph("Use HTML-style tags for your profile: p, span, b, i, u, big, small, center, br, a and img.")
+	@Paragraph("Example: <body bgcolor=\"#fff0cc\"><p style=\"color:red\"><b>Hello!</b></p></body>")
+	@Paragraph("Links: mig33:privateChat(username) or mig33:joinChatroom(Room Name). Images and backgrounds: photo:ID from your scrapbook.")
+	@Paragraph("Background images appear in web browsers. The Java 4.62 app displays background colours and inline photos.")
+	if source != "" {
+		@Heading("Current formatting")
+		@Paragraph(source)
+	}
+	@Form(action, []HiddenField{{Name: "csrf", Value: csrf}, {Name: "op", Value: "save"}}, TextArea("value", "New profile formatting (replaces current formatting)", "", formatting.MaxSource), "Save")
+	@Form(action, []HiddenField{{Name: "csrf", Value: csrf}, {Name: "op", Value: "reset"}}, Stack(), "Reset")
+	if len(photos) > 0 {
+		@Heading("Your photo references")
+		for _, photo := range photos {
+			@Paragraph(photo.Reference + " " + photo.Caption)
+		}
+	}
+}
