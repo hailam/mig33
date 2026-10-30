@@ -80,8 +80,9 @@ func TestVoteKickExpiryCancellationAndCooldown(t *testing.T) {
 	ids := voteRoom(t, s)
 	castVote(t, s, ids["hailam"], "Lobby", "bob", 1)
 	castVote(t, s, ids["carol"], "Lobby", "dave", 0) // One ballot per room.
-	s.kickVotes["Lobby"].ExpiresAt = time.Now().Add(-time.Second)
+	// Keep forced expiry and pruning atomic with the maintenance worker.
 	s.mu.Lock()
+	s.kickVotes["Lobby"].ExpiresAt = time.Now().Add(-time.Second)
 	s.pruneKickVote(t.Context(), "Lobby", time.Now())
 	s.mu.Unlock()
 	if s.kickVotes["Lobby"] != nil || !s.sessions[ids["bob"]].rooms["Lobby"] {
