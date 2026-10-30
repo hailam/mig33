@@ -4,8 +4,8 @@
   "type": "module",
   "packageManager": "pnpm@12.16.1",
   "scripts": {
-    "check": "node policy.mjs && node validate.mjs && tsc --project tsconfig.json",
-    "check:policy": "node policy.mjs",
+    "check": "node ../../scripts/check-node-policy.mjs . && node validate.mjs && tsc --project tsconfig.json",
+    "check:policy": "node ../../scripts/check-node-policy.mjs .",
     "check:asyncapi": "node validate.mjs",
     "check:types": "tsc --project tsconfig.json"
   },

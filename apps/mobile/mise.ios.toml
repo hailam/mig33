@@ -1,0 +1,13 @@
+# Native iOS tooling is optional: mise -C apps/mobile -E ios install node pnpm ruby
+[tools]
+ruby = "3.4.12"
+# Ruby 3.4.12 includes Bundler 2.6.9, also recorded in Gemfile.lock.
+
+[settings.ruby]
+# Use the attested precompiled Ruby; fail instead of compiling unexpectedly.
+compile = false
+
+[env]
+BUNDLE_GEMFILE = "{{ config_root }}/Gemfile"
+BUNDLE_PATH = "{{ config_root }}/../../data/mobile-gems"
+BUNDLE_APP_CONFIG = "{{ config_root }}/../../data/mobile-gems/config"

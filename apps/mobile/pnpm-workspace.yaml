@@ -1,0 +1,10 @@
+# Only this app package belongs to the workspace.
+minimumReleaseAge: 4320
+minimumReleaseAgeStrict: true
+minimumReleaseAgeIgnoreMissingTime: false
+minimumReleaseAgeExclude: []
+trustLockfile: false
+blockExoticSubdeps: true
+strictDepBuilds: true
+allowBuilds: {}
+saveExact: true

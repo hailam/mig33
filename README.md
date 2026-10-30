@@ -2,7 +2,7 @@
 
 Go compatibility backend for the recovered mig33 Java ME 4.62 client. Module: `github.com/hailam/mig33`.
 
-The backend implements direct messages, public chat rooms, private group conversations, contacts, moderation, accounts and the historical embedded-page catalog. Recovered behavior is documented separately from inferred replacements. SMS, external email, calls and payments remain local mocks; the Expo frontend and Classic v3 presentation are deferred.
+The backend implements direct messages, public chat rooms, private group conversations, contacts, moderation, accounts and the historical embedded-page catalog. Recovered behavior is documented separately from inferred replacements. SMS, external email, calls and payments remain local mocks. The [Expo client](apps/mobile/README.md) implements the first original-protocol login and messaging slice; Classic v3 presentation remains deferred.
 
 ## Run locally
 
@@ -29,6 +29,7 @@ Use `sh scripts/open-clients.sh hailam bob` to log in automatically. The [applet
 | `cmd/{http,socket,omni,cli}` | Executable entrypoints |
 | `cmd/internal/{command,wiring}` | Plumbing shared only by entrypoints |
 | `internal/` | Capability services, repository ports, adapters, controllers and generic bootstrap |
+| [apps/mobile/](apps/mobile/README.md) | Expo app and app-local original HTTP/TCP client |
 | `api/`, `db/`, `configs/` | Original HTTP/message contracts, sqlc queries/migrations and YAML configuration |
 | [docs/](docs/README.md) | Backend behavior, architecture and development guides |
 | [research/](research/README.md) | Applet references, architecture studies and acceptance reports |
@@ -52,10 +53,10 @@ sh scripts/generate-openapi.sh
 sh scripts/generate-contracts.sh --check
 sh scripts/check-go-vulnerabilities.sh
 sh scripts/generate-sqlc.sh
-python3 scripts/export-sqlc-schema.py --check
+uv run --no-project python scripts/export-sqlc-schema.py --check
 ```
 
-The [development guide](docs/development.md) explains formatting, import grouping and readability conventions. CI checks handwritten Go formatting, vet, race tests and reachable Go vulnerabilities; generated source remains owned by its generator.
+The [development guide](docs/development.md) explains formatting, import grouping and readability conventions. Python tooling runs through uv. CI checks handwritten Go formatting, vet, race tests and reachable Go vulnerabilities; generated source remains owned by its generator. A separate mobile job checks the client and both live transports against an isolated Go server.
 
 The [contract guide](api/README.txt) covers reviewed 4.62 definitions, generated AsyncAPI and TypeScript, original HTTP/TCP compatibility, and fixture validation. Its optional Node tooling uses scoped mise versions and pnpm with a three-day dependency release delay; advisory-backed exceptions require an exact version and documented reason.
 

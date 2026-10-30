@@ -1,0 +1,34 @@
+{
+  "name": "mig33-mobile",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "index.ts",
+  "packageManager": "pnpm@12.16.1",
+  "scripts": {
+    "start": "expo start --dev-client",
+    "ios": "expo run:ios",
+    "android": "expo run:android",
+    "prebuild": "expo prebuild",
+    "check": "node ../../scripts/check-node-policy.mjs . && tsc --noEmit && node --test tests/*.test.ts",
+    "check:policy": "node ../../scripts/check-node-policy.mjs .",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.ts",
+    "doctor": "expo-doctor",
+    "export:ios": "expo export --platform ios --output-dir ../../data/mobile-export/ios"
+  },
+  "dependencies": {
+    "expo": "58.0.20",
+    "expo-build-properties": "58.0.11",
+    "expo-dev-client": "58.0.16",
+    "react": "19.3.0",
+    "react-native": "0.88.0",
+    "react-native-tcp-socket": "6.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "expo-doctor": "1.21.5",
+    "typescript": "6.0.3"
+  }
+}

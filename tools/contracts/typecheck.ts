@@ -6,7 +6,7 @@ import {
   type PacketFor,
   type PacketProjection,
   type ResourceResultID,
-} from '../../api/generated/mig33-v4';
+} from '../../apps/mobile/src/mig33/generated/contracts';
 
 // Client code retains raw bytes, unknown tags and present-empty fields.
 const login: PacketFor<'Client200'> = {

@@ -2,4 +2,4 @@
 set -eu
 
 cd "$(dirname "$0")/.."
-exec python3 scripts/format-go.py "$@"
+exec uv run --no-project python scripts/format-go.py "$@"

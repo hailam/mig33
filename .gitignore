@@ -15,6 +15,12 @@
 __pycache__/
 node_modules/
 .pnpm-store/
+
+# Expo Continuous Native Generation and local development output.
+/apps/mobile/.expo/
+/apps/mobile/ios/
+/apps/mobile/android/
+/apps/mobile/dist/
 *.py[cod]
 *.class
 
