@@ -1,0 +1,289 @@
+{
+  "scope": "Original JAR provenance, whole-JAR disassembly, original serializer fixtures and offline codec checks; no MIDlet/network or server-semantic validation",
+  "original_jar": {
+    "path": "research/applets/v4/artifacts/original/mig33-4.62.jar",
+    "sha256": "dbf12ffbd44bc6e48d09cf35863736731c87c078877f76ed4b780a4dc5eff92c",
+    "bytes": 190378
+  },
+  "java_version": "openjdk version \"21.0.13.0.3\" 2026-10-24\nOpenJDK Runtime Environment Homebrew (build 21.0.13.0.3)\nOpenJDK 64-Bit Server VM Homebrew (build 21.0.13.0.3, mixed mode, sharing)",
+  "javac_version": "javac 21.0.13.0.3",
+  "javap_version": "21.0.13.0.3",
+  "catalog_inputs": [
+    {
+      "path": "research/applets/v4/docs/data/protocol-constructions.json",
+      "sha256": "bf6f69e2720e822b84bbfa64a265cb18567fcf6443aaf24e8a573a247a3e2da6"
+    },
+    {
+      "path": "research/applets/v4/docs/data/protocol-endpoints.json",
+      "sha256": "3dbabc055bcc4f716fbb9a2f65537462bb7e1aa34a651734887c438bb6946c3c"
+    },
+    {
+      "path": "research/applets/v4/docs/data/protocol-fixtures.json",
+      "sha256": "185846c5891a8be159ed5ceb093b7a8e1e65448d7481f1ffc83e01304237599d"
+    },
+    {
+      "path": "research/applets/v4/docs/data/protocol-incoming.json",
+      "sha256": "eaf6d8f44d976513bd3ed300f1c360ce15b87bb442981b15a457efc5f5b7b5e0"
+    },
+    {
+      "path": "research/applets/v4/docs/data/protocol-outgoing.json",
+      "sha256": "392ea2b821ce26f0c34235e5a6ac5ef8758707aa9e183825722e3cc373d2abe9"
+    },
+    {
+      "path": "research/applets/v4/docs/data/protocol-version-differences.json",
+      "sha256": "13d929eac2dd91807efdfcf223f70b2feb3a526056ce49464f5b59b9dd4f25dc"
+    }
+  ],
+  "disassembly": [
+    {
+      "class": "ac",
+      "path": "research/applets/v4/artifacts/bytecode/ac.txt",
+      "sha256": "bd1897b16c301bbb6cd115ec6fa78d018da8b04c5d6eb04380bd3d72b1caba59",
+      "bytes": 12430
+    },
+    {
+      "class": "af",
+      "path": "research/applets/v4/artifacts/bytecode/af.txt",
+      "sha256": "f40d935572abe279677984ae41c86025eab13c839467971e0a8c6d50d494d177",
+      "bytes": 4475
+    },
+    {
+      "class": "aj",
+      "path": "research/applets/v4/artifacts/bytecode/aj.txt",
+      "sha256": "a55c6716c517edbe57377adb50431ec21eaaecd0ddcfb59e2f009dcc146cb0ac",
+      "bytes": 1091246
+    },
+    {
+      "class": "al",
+      "path": "research/applets/v4/artifacts/bytecode/al.txt",
+      "sha256": "8a926460b0378819758a758a7d1e9fc0e0a527bb9c9ebe4d6da7785d2d5fb662",
+      "bytes": 4232
+    },
+    {
+      "class": "ao",
+      "path": "research/applets/v4/artifacts/bytecode/ao.txt",
+      "sha256": "17547b2aea4170f47ecbf869bc83822165b9dd4c4901bedaca09a9b030145ac1",
+      "bytes": 59101
+    },
+    {
+      "class": "aq",
+      "path": "research/applets/v4/artifacts/bytecode/aq.txt",
+      "sha256": "3deb7bcc05f9f83b252b6b79f1c8e2961c3a8e89b62ea55d01403783c56ea81f",
+      "bytes": 577
+    },
+    {
+      "class": "au",
+      "path": "research/applets/v4/artifacts/bytecode/au.txt",
+      "sha256": "1527379577729592f09ca41bc61342375b4c1946dd4d778073d5ab58c2645bed",
+      "bytes": 247435
+    },
+    {
+      "class": "av",
+      "path": "research/applets/v4/artifacts/bytecode/av.txt",
+      "sha256": "0d4bf11bd22fb4c5d093095709d7200d544e02da9bf83ab9d8d24ed9c5ab6150",
+      "bytes": 97959
+    },
+    {
+      "class": "aw",
+      "path": "research/applets/v4/artifacts/bytecode/aw.txt",
+      "sha256": "67d197d02d42289f28ac0b241d28f8754d9f6c29fdb509f853b00ea24bd83bb8",
+      "bytes": 1010
+    },
+    {
+      "class": "ay",
+      "path": "research/applets/v4/artifacts/bytecode/ay.txt",
+      "sha256": "d8de0246f03e9dc82f4b77dfab7c7547ab8ec9feb008dee74911470a0e92ff34",
+      "bytes": 12968
+    },
+    {
+      "class": "bc",
+      "path": "research/applets/v4/artifacts/bytecode/bc.txt",
+      "sha256": "6f5b8e38d761a0f9bc021e6d8cea1e1efc9d858bd8800963c245f87ac1862b9b",
+      "bytes": 431115
+    },
+    {
+      "class": "bd",
+      "path": "research/applets/v4/artifacts/bytecode/bd.txt",
+      "sha256": "fbb3907a89b35b171b30e310996c3cfb1343e7500c1c4c25dae2d015031f83ae",
+      "bytes": 6009
+    },
+    {
+      "class": "be",
+      "path": "research/applets/v4/artifacts/bytecode/be.txt",
+      "sha256": "5a34c26e1249c95a926162e15a3967c51dc2685393b7e444c1cba39b03fbc94e",
+      "bytes": 626
+    },
+    {
+      "class": "bg",
+      "path": "research/applets/v4/artifacts/bytecode/bg.txt",
+      "sha256": "9af04d49a74df725f2f1357655e0a4cb8412678fc62e7bd5fe9002423f0dbd19",
+      "bytes": 1603
+    },
+    {
+      "class": "bj",
+      "path": "research/applets/v4/artifacts/bytecode/bj.txt",
+      "sha256": "a17ff57e44afee88a888a1f9cb2ead88e9ddd61c0ff1ae9d4da3d71885cb4eb0",
+      "bytes": 316141
+    },
+    {
+      "class": "bl",
+      "path": "research/applets/v4/artifacts/bytecode/bl.txt",
+      "sha256": "18f354859aa808efcc3dad4f316825f6e38baf535c843bc0000f4ac8baff2910",
+      "bytes": 46794
+    },
+    {
+      "class": "d",
+      "path": "research/applets/v4/artifacts/bytecode/d.txt",
+      "sha256": "8052b727b0dc693b8a862aa1d824e21a1d94ef8e83c24f52c373a7534e0ddfaf",
+      "bytes": 46357
+    },
+    {
+      "class": "h",
+      "path": "research/applets/v4/artifacts/bytecode/h.txt",
+      "sha256": "a1cf51a41e41b5408be7563067082b83469d5fdb9fd6a627623b38df6514ff6f",
+      "bytes": 17431
+    },
+    {
+      "class": "i",
+      "path": "research/applets/v4/artifacts/bytecode/i.txt",
+      "sha256": "fce689b513d0ebc24b4e9742f89a39cb2c08570e3b39517145a4c3be50114f66",
+      "bytes": 2414
+    },
+    {
+      "class": "j",
+      "path": "research/applets/v4/artifacts/bytecode/j.txt",
+      "sha256": "0ba48563d5ae00d61e9972ae5301899ebb5b1a9f927fa9cbd91c622dd2d3f3f1",
+      "bytes": 38863
+    },
+    {
+      "class": "k",
+      "path": "research/applets/v4/artifacts/bytecode/k.txt",
+      "sha256": "fa64ed178c1a9a81cea835dbb7ee8ba2fa2d7056ed7cba2d8ca7f304b51a0a94",
+      "bytes": 138400
+    },
+    {
+      "class": "main.Main",
+      "path": "research/applets/v4/artifacts/bytecode/main.Main.txt",
+      "sha256": "d6ba06ebb1137ce57cd2d276d7c8128bc71e6c0665024c16d48e46a76511bbf0",
+      "bytes": 1541
+    },
+    {
+      "class": "s",
+      "path": "research/applets/v4/artifacts/bytecode/s.txt",
+      "sha256": "b45705548671201f171eee65a90c69ae23846a3dd0771d75c74375f937eb3c44",
+      "bytes": 379755
+    },
+    {
+      "class": "t",
+      "path": "research/applets/v4/artifacts/bytecode/t.txt",
+      "sha256": "675fab93c6e13905ef8219c64b339d8fd58e7081f0c036b25e0adcbabd8216e1",
+      "bytes": 20846
+    },
+    {
+      "class": "u",
+      "path": "research/applets/v4/artifacts/bytecode/u.txt",
+      "sha256": "8eddc7d75c24d61a7ea0fcfc7c82efedc2dd57ffd5aa2c70f45a403151e37cc4",
+      "bytes": 93421
+    },
+    {
+      "class": "y",
+      "path": "research/applets/v4/artifacts/bytecode/y.txt",
+      "sha256": "5058172b4d4210ccfab9286e37275234f4fe32ef8ffc892827e4562b0273f84d",
+      "bytes": 471520
+    }
+  ],
+  "disassembly_arguments": [
+    "javap",
+    "-classpath",
+    "research/applets/v4/artifacts/original/mig33-4.62.jar",
+    "-c",
+    "-p",
+    "-s",
+    "<class>"
+  ],
+  "endpoint_line_references": {
+    "checked": 128,
+    "matched": 128,
+    "mismatches": []
+  },
+  "outgoing_markdown_consistency": {
+    "json_rows": 56,
+    "markdown_rows": 56,
+    "opcode_sets_equal": true,
+    "differences": []
+  },
+  "version_comparison_consistency": {
+    "scope": "Comparison against the existing v3/v4 catalogs, not a fresh original-v3 source audit",
+    "matches": true,
+    "shared_opcodes": 29,
+    "changed_field_sets": 13
+  },
+  "microemulator": {
+    "path": "tools/applets/bin/microemulator-2.0.4.jar",
+    "sha256": "dbd5f3eb8365d3e839d6a203149e0e3776fc1a0585e16ac1fc23f76c9fcae1c6"
+  },
+  "serializer_fixtures": [
+    {
+      "name": "ping",
+      "opcode": 2,
+      "byte_exact": true,
+      "decoded_equal": true
+    },
+    {
+      "name": "error",
+      "opcode": 0,
+      "byte_exact": true,
+      "decoded_equal": true
+    },
+    {
+      "name": "ack",
+      "opcode": 1,
+      "byte_exact": true,
+      "decoded_equal": true
+    },
+    {
+      "name": "chat_utf8",
+      "opcode": 500,
+      "byte_exact": true,
+      "decoded_equal": true
+    },
+    {
+      "name": "registration_duplicate_tag",
+      "opcode": 101,
+      "byte_exact": true,
+      "decoded_equal": true
+    },
+    {
+      "name": "contact_delta_long",
+      "opcode": 419,
+      "byte_exact": true,
+      "decoded_equal": true
+    },
+    {
+      "name": "contact_string_array",
+      "opcode": 407,
+      "byte_exact": true,
+      "decoded_equal": true
+    },
+    {
+      "name": "colored_room_message",
+      "opcode": 500,
+      "byte_exact": true,
+      "decoded_equal": true
+    },
+    {
+      "name": "avatar_duplicate_tag",
+      "opcode": 602,
+      "byte_exact": true,
+      "decoded_equal": true
+    }
+  ],
+  "fixture_copies": {
+    "research_sha256": "185846c5891a8be159ed5ceb093b7a8e1e65448d7481f1ffc83e01304237599d",
+    "go_sha256": "185846c5891a8be159ed5ceb093b7a8e1e65448d7481f1ffc83e01304237599d",
+    "byte_identical": true
+  },
+  "harness_sha256": "61a5a7cff6601908ce2823b7a0e255c2d3495b05ee7b8fb42d838b8f335143e8",
+  "python_codec_self_test": "Validated 9 original v4 packets; 5 common packets byte-identical to original v3: ping, error, ack, chat_utf8, registration_duplicate_tag.",
+  "passed": true
+}

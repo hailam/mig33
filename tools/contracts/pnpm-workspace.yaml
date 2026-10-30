@@ -1,0 +1,12 @@
+# This scope contains only the contract-validator package, not a root JS workspace.
+minimumReleaseAge: 4320
+minimumReleaseAgeStrict: true
+minimumReleaseAgeIgnoreMissingTime: false
+minimumReleaseAgeExclude: []
+trustLockfile: false
+blockExoticSubdeps: true
+strictDepBuilds: true
+allowBuilds:
+  # AsyncAPI's optional install telemetry is unnecessary for local validation.
+  '@scarf/scarf': false
+saveExact: true

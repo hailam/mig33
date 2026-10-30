@@ -1,0 +1,39 @@
+name: Compatibility contracts
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version-file: go.mod
+          cache: true
+      - name: Check generated contract drift
+        run: sh scripts/generate-contracts.sh --check
+      - name: Test contract generation and protocol compatibility
+        run: go test ./tools/contracts ./internal/protocol ./internal/adapters/httpapi
+      - name: Validate OpenAPI and generated Go adapter
+        run: |
+          sh scripts/generate-openapi.sh
+          git diff --exit-code -- internal/adapters/httpapi/openapi.gen.go
+      - name: Install scoped contract validation tools
+        uses: jdx/mise-action@9149ea85001c7435d5a66bb127d6a1b6227cb0a5 # v5.0.0
+        with:
+          working_directory: tools/contracts
+          install_args: node pnpm
+          minimum_release_age: 3d
+      - name: Install locked validator dependencies
+        run: pnpm --dir tools/contracts install --frozen-lockfile
+      - name: Validate AsyncAPI and generated TypeScript
+        run: pnpm --dir tools/contracts run check
+      - name: Check known Node tooling vulnerabilities
+        run: pnpm --dir tools/contracts audit

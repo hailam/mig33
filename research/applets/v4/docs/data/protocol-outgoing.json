@@ -124,7 +124,7 @@
     {
       "opcode": 419,
       "purpose": "Incremental contact synchronization",
-      "schema_and_flow": "1:L saved timestamp \u2192cache updates/403"
+      "schema_and_flow": "1:L saved timestamp, or current time when no saved timestamp exists \u2192cache updates/403"
     },
     {
       "opcode": 500,
@@ -244,7 +244,7 @@
     {
       "opcode": 913,
       "purpose": "Get emoticon",
-      "schema_and_flow": "1:T token **plus a trailing space**;2:I action mode.914's mode1 path can open animated/photo content"
+      "schema_and_flow": "1:T token **plus a trailing space**;2:I action mode. Pending mode1 enables914 type2 vibration/type4 audio side effects; it is not a photo-viewer mode"
     },
     {
       "opcode": 921,

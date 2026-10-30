@@ -1,0 +1,3390 @@
+{
+  "scope": "Every top-level incoming dispatcher case; method-scoped normal CFG, conservative exception CFG, and intraprocedural receiver provenance. Delegated/deferred consumers require the separately reviewed annex; no complete server schema is inferred.",
+  "source": {
+    "jar": "research/applets/v4/artifacts/original/mig33-4.62.jar",
+    "jar_sha256": "dbf12ffbd44bc6e48d09cf35863736731c87c078877f76ed4b780a4dc5eff92c",
+    "dispatcher": "bc.a:([Lay;)V",
+    "dispatch_offset": 84,
+    "iteration_boundary": 14677,
+    "bytecode_sha256": {
+      "bc": "6f5b8e38d761a0f9bc021e6d8cea1e1efc9d858bd8800963c245f87ac1862b9b",
+      "ay": "d8de0246f03e9dc82f4b77dfab7c7547ab8ec9feb008dee74911470a0e92ff34",
+      "aj": "a55c6716c517edbe57377adb50431ec21eaaecd0ddcfb59e2f009dcc146cb0ac",
+      "j": "0ba48563d5ae00d61e9972ae5301899ebb5b1a9f927fa9cbd91c622dd2d3f3f1",
+      "y": "5058172b4d4210ccfab9286e37275234f4fe32ef8ffc892827e4562b0273f84d"
+    }
+  },
+  "checks": {
+    "top_level_cases": 55,
+    "catalog_rows": 55,
+    "catalog_rows_matching_source": 55,
+    "catalog_schema_and_scope_preserved": true,
+    "unchanged_extractor_byte_identical_reproduction_sha256": "eaf6d8f44d976513bd3ed300f1c360ce15b87bb442981b15a457efc5f5b7b5e0",
+    "counts_across_case_paths": {
+      "unit": "Sum of getter instruction observations separately reachable from each opcode entry; shared handlers such as 708/755 count for each opcode.",
+      "catalog_constant_tag_typed_getters": 408,
+      "all_typed_getters": 411,
+      "current_response_typed_getters": 341
+    },
+    "unique_dispatcher_instruction_sites": {
+      "catalog_constant_tag_typed_getters": 392,
+      "all_typed_getters": 395,
+      "current_response_typed_getters": 325
+    },
+    "exception_model": "Conservative edges from every instruction in each protected interval; extra reachability is an upper bound, not proof that every handler executes."
+  },
+  "operations": [
+    {
+      "opcode": 0,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 7453,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 554,
+      "catalog_direct_field_view_count": 1,
+      "catalog_getter_read_count": 35,
+      "all_typed_getter_site_count": 35,
+      "current_response_getter_site_count": 14,
+      "current_response_field_views": [
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            7845,
+            7900,
+            7958,
+            8013,
+            8177,
+            8264,
+            8284,
+            8391,
+            8443,
+            8483,
+            8590,
+            8691,
+            8791,
+            8867
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 21,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 737
+    },
+    {
+      "opcode": 1,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 9188,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 720,
+      "catalog_direct_field_view_count": 1,
+      "catalog_getter_read_count": 37,
+      "all_typed_getter_site_count": 37,
+      "current_response_getter_site_count": 10,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "T",
+          "presence_guard_offsets": [
+            10082,
+            10124,
+            10250
+          ],
+          "value_read_offsets": [
+            9681,
+            10036,
+            10096,
+            10138,
+            10305,
+            10815,
+            10952
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 27,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 1059
+    },
+    {
+      "opcode": 3,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 3990,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 81,
+      "catalog_direct_field_view_count": 0,
+      "catalog_getter_read_count": 0,
+      "all_typed_getter_site_count": 0,
+      "current_response_getter_site_count": 0,
+      "current_response_field_views": [],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 168
+    },
+    {
+      "opcode": 5,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 9123,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 36,
+      "catalog_direct_field_view_count": 4,
+      "catalog_getter_read_count": 4,
+      "all_typed_getter_site_count": 4,
+      "current_response_getter_site_count": 4,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            9132
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            9142
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            9149
+          ]
+        },
+        {
+          "tag": 4,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            9159
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 36
+    },
+    {
+      "opcode": 6,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 1192,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 56,
+      "catalog_direct_field_view_count": 1,
+      "catalog_getter_read_count": 2,
+      "all_typed_getter_site_count": 2,
+      "current_response_getter_site_count": 1,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            1257
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 1,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 73
+    },
+    {
+      "opcode": 8,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 11020,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 66,
+      "catalog_direct_field_view_count": 5,
+      "catalog_getter_read_count": 6,
+      "all_typed_getter_site_count": 6,
+      "current_response_getter_site_count": 6,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            11029
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            11041
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            11050
+          ]
+        },
+        {
+          "tag": 4,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            11059
+          ]
+        },
+        {
+          "tag": 5,
+          "view": "I",
+          "presence_guard_offsets": [
+            11068
+          ],
+          "value_read_offsets": [
+            11078
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 89
+    },
+    {
+      "opcode": 11,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 12511,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 43,
+      "catalog_direct_field_view_count": 3,
+      "catalog_getter_read_count": 6,
+      "all_typed_getter_site_count": 6,
+      "current_response_getter_site_count": 6,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            12515,
+            12529
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            12543,
+            12564
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            12550,
+            12574
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 43
+    },
+    {
+      "opcode": 12,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 4177,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 63,
+      "catalog_direct_field_view_count": 2,
+      "catalog_getter_read_count": 8,
+      "all_typed_getter_site_count": 8,
+      "current_response_getter_site_count": 8,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            4181,
+            4196,
+            4245,
+            4260
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            4206,
+            4220,
+            4270,
+            4277
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 63
+    },
+    {
+      "opcode": 14,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 1767,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 39,
+      "catalog_direct_field_view_count": 2,
+      "catalog_getter_read_count": 3,
+      "all_typed_getter_site_count": 3,
+      "current_response_getter_site_count": 3,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "T",
+          "presence_guard_offsets": [
+            1771
+          ],
+          "value_read_offsets": [
+            1798
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            1805
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 65
+    },
+    {
+      "opcode": 16,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 1839,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 75,
+      "catalog_direct_field_view_count": 3,
+      "catalog_getter_read_count": 6,
+      "all_typed_getter_site_count": 6,
+      "current_response_getter_site_count": 6,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "T",
+          "presence_guard_offsets": [
+            1905
+          ],
+          "value_read_offsets": [
+            1915
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "X",
+          "presence_guard_offsets": [
+            1925
+          ],
+          "value_read_offsets": [
+            1936
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "T",
+          "presence_guard_offsets": [
+            1951
+          ],
+          "value_read_offsets": [
+            1961
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 244
+    },
+    {
+      "opcode": 102,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 12586,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 70,
+      "catalog_direct_field_view_count": 3,
+      "catalog_getter_read_count": 6,
+      "all_typed_getter_site_count": 6,
+      "current_response_getter_site_count": 6,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "T",
+          "presence_guard_offsets": [
+            12613
+          ],
+          "value_read_offsets": [
+            12623
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [
+            12659
+          ],
+          "value_read_offsets": [
+            12669
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "X",
+          "presence_guard_offsets": [
+            12633
+          ],
+          "value_read_offsets": [
+            12644
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 147
+    },
+    {
+      "opcode": 104,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 2018,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 104,
+      "catalog_direct_field_view_count": 3,
+      "catalog_getter_read_count": 7,
+      "all_typed_getter_site_count": 7,
+      "current_response_getter_site_count": 7,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "T",
+          "presence_guard_offsets": [
+            2074
+          ],
+          "value_read_offsets": [
+            2084,
+            2167
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [
+            2120
+          ],
+          "value_read_offsets": [
+            2130
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "X",
+          "presence_guard_offsets": [
+            2094
+          ],
+          "value_read_offsets": [
+            2105
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 221
+    },
+    {
+      "opcode": 201,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 2493,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 99,
+      "catalog_direct_field_view_count": 2,
+      "catalog_getter_read_count": 3,
+      "all_typed_getter_site_count": 3,
+      "current_response_getter_site_count": 2,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            2624
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            2589
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 1,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 135
+    },
+    {
+      "opcode": 203,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 536,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 606,
+      "catalog_direct_field_view_count": 25,
+      "catalog_getter_read_count": 35,
+      "all_typed_getter_site_count": 35,
+      "current_response_getter_site_count": 35,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            662
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            672
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "T",
+          "presence_guard_offsets": [
+            13865
+          ],
+          "value_read_offsets": [
+            13893,
+            13906
+          ]
+        },
+        {
+          "tag": 4,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            13875
+          ]
+        },
+        {
+          "tag": 13,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            13807
+          ]
+        },
+        {
+          "tag": 14,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            13822
+          ]
+        },
+        {
+          "tag": 16,
+          "view": "I",
+          "presence_guard_offsets": [
+            14125
+          ],
+          "value_read_offsets": [
+            14139,
+            14153
+          ]
+        },
+        {
+          "tag": 18,
+          "view": "B",
+          "presence_guard_offsets": [
+            13836
+          ],
+          "value_read_offsets": [
+            13847
+          ]
+        },
+        {
+          "tag": 20,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            14293
+          ]
+        },
+        {
+          "tag": 23,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            13976
+          ]
+        },
+        {
+          "tag": 24,
+          "view": "I",
+          "presence_guard_offsets": [
+            14022
+          ],
+          "value_read_offsets": [
+            14033
+          ]
+        },
+        {
+          "tag": 26,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            13990,
+            13999
+          ]
+        },
+        {
+          "tag": 27,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            708,
+            723
+          ]
+        },
+        {
+          "tag": 28,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            697
+          ]
+        },
+        {
+          "tag": 29,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            14435
+          ]
+        },
+        {
+          "tag": 31,
+          "view": "I",
+          "presence_guard_offsets": [
+            13917
+          ],
+          "value_read_offsets": [
+            13953
+          ]
+        },
+        {
+          "tag": 31,
+          "view": "S",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            14056
+          ]
+        },
+        {
+          "tag": 32,
+          "view": "I",
+          "presence_guard_offsets": [
+            13928
+          ],
+          "value_read_offsets": [
+            13939
+          ]
+        },
+        {
+          "tag": 32,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            14095
+          ]
+        },
+        {
+          "tag": 33,
+          "view": "B",
+          "presence_guard_offsets": [
+            735
+          ],
+          "value_read_offsets": []
+        },
+        {
+          "tag": 33,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            746
+          ]
+        },
+        {
+          "tag": 35,
+          "view": "B",
+          "presence_guard_offsets": [
+            13719
+          ],
+          "value_read_offsets": []
+        },
+        {
+          "tag": 35,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            13730
+          ]
+        },
+        {
+          "tag": 37,
+          "view": "B",
+          "presence_guard_offsets": [
+            13763
+          ],
+          "value_read_offsets": []
+        },
+        {
+          "tag": 37,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            13774
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [
+        {
+          "bytecode_offset": 14424,
+          "tag": 29,
+          "type": "raw-field",
+          "receiver_origins": [
+            "response"
+          ]
+        }
+      ],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 26,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 5530
+    },
+    {
+      "opcode": 207,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 12339,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 73,
+      "catalog_direct_field_view_count": 3,
+      "catalog_getter_read_count": 3,
+      "all_typed_getter_site_count": 3,
+      "current_response_getter_site_count": 3,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            12364
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            12343
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            12434
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 134
+    },
+    {
+      "opcode": 208,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 4729,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 130,
+      "catalog_direct_field_view_count": 5,
+      "catalog_getter_read_count": 6,
+      "all_typed_getter_site_count": 6,
+      "current_response_getter_site_count": 6,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            4742
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            4733
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            4754
+          ]
+        },
+        {
+          "tag": 4,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            4766
+          ]
+        },
+        {
+          "tag": 5,
+          "view": "B",
+          "presence_guard_offsets": [
+            4780
+          ],
+          "value_read_offsets": [
+            4790
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 316
+    },
+    {
+      "opcode": 301,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 1990,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 13,
+      "catalog_direct_field_view_count": 1,
+      "catalog_getter_read_count": 1,
+      "all_typed_getter_site_count": 1,
+      "current_response_getter_site_count": 1,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            1995
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 13
+    },
+    {
+      "opcode": 401,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 1304,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 217,
+      "catalog_direct_field_view_count": 2,
+      "catalog_getter_read_count": 2,
+      "all_typed_getter_site_count": 2,
+      "current_response_getter_site_count": 2,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            1319
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            1312
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 503
+    },
+    {
+      "opcode": 402,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 11135,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 560,
+      "catalog_direct_field_view_count": 11,
+      "catalog_getter_read_count": 21,
+      "all_typed_getter_site_count": 21,
+      "current_response_getter_site_count": 21,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            11164,
+            12222
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "I",
+          "presence_guard_offsets": [
+            11183
+          ],
+          "value_read_offsets": [
+            11204
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "T",
+          "presence_guard_offsets": [
+            11220
+          ],
+          "value_read_offsets": [
+            11233
+          ]
+        },
+        {
+          "tag": 8,
+          "view": "T",
+          "presence_guard_offsets": [
+            11244
+          ],
+          "value_read_offsets": [
+            11258
+          ]
+        },
+        {
+          "tag": 12,
+          "view": "T",
+          "presence_guard_offsets": [
+            11269
+          ],
+          "value_read_offsets": [
+            11451
+          ]
+        },
+        {
+          "tag": 13,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            11473
+          ]
+        },
+        {
+          "tag": 27,
+          "view": "T",
+          "presence_guard_offsets": [
+            11836
+          ],
+          "value_read_offsets": [
+            11850
+          ]
+        },
+        {
+          "tag": 28,
+          "view": "T",
+          "presence_guard_offsets": [
+            11861
+          ],
+          "value_read_offsets": [
+            11876
+          ]
+        },
+        {
+          "tag": 31,
+          "view": "X",
+          "presence_guard_offsets": [
+            11280
+          ],
+          "value_read_offsets": [
+            11305,
+            11599
+          ]
+        },
+        {
+          "tag": 32,
+          "view": "X",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            11325
+          ]
+        },
+        {
+          "tag": 33,
+          "view": "TA",
+          "presence_guard_offsets": [
+            11291
+          ],
+          "value_read_offsets": [
+            11315
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 2337
+    },
+    {
+      "opcode": 403,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 4290,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 72,
+      "catalog_direct_field_view_count": 0,
+      "catalog_getter_read_count": 2,
+      "all_typed_getter_site_count": 2,
+      "current_response_getter_site_count": 0,
+      "current_response_field_views": [],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 2,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 101
+    },
+    {
+      "opcode": 404,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 796,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 74,
+      "catalog_direct_field_view_count": 4,
+      "catalog_getter_read_count": 10,
+      "all_typed_getter_site_count": 10,
+      "current_response_getter_site_count": 10,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "I",
+          "presence_guard_offsets": [
+            810,
+            874
+          ],
+          "value_read_offsets": [
+            824,
+            888
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "B",
+          "presence_guard_offsets": [
+            800
+          ],
+          "value_read_offsets": [
+            836
+          ]
+        },
+        {
+          "tag": 9,
+          "view": "X",
+          "presence_guard_offsets": [
+            853
+          ],
+          "value_read_offsets": [
+            899
+          ]
+        },
+        {
+          "tag": 10,
+          "view": "X",
+          "presence_guard_offsets": [
+            864
+          ],
+          "value_read_offsets": [
+            907
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 11,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 74
+    },
+    {
+      "opcode": 406,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 2013,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 52,
+      "catalog_direct_field_view_count": 1,
+      "catalog_getter_read_count": 1,
+      "all_typed_getter_site_count": 1,
+      "current_response_getter_site_count": 1,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            14591
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 14,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 74
+    },
+    {
+      "opcode": 420,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 4989,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 34,
+      "catalog_direct_field_view_count": 2,
+      "catalog_getter_read_count": 2,
+      "all_typed_getter_site_count": 2,
+      "current_response_getter_site_count": 2,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            5023
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "L",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            5033
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 34
+    },
+    {
+      "opcode": 421,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 5941,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 77,
+      "catalog_direct_field_view_count": 4,
+      "catalog_getter_read_count": 6,
+      "all_typed_getter_site_count": 6,
+      "current_response_getter_site_count": 6,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "I",
+          "presence_guard_offsets": [
+            5951
+          ],
+          "value_read_offsets": [
+            5961
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [
+            5977
+          ],
+          "value_read_offsets": [
+            5987
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "L",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            6076
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "T",
+          "presence_guard_offsets": [
+            6050
+          ],
+          "value_read_offsets": []
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 178
+    },
+    {
+      "opcode": 422,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 12770,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 80,
+      "catalog_direct_field_view_count": 4,
+      "catalog_getter_read_count": 6,
+      "all_typed_getter_site_count": 6,
+      "current_response_getter_site_count": 6,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            12817
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            12827
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            12837
+          ]
+        },
+        {
+          "tag": 4,
+          "view": "T",
+          "presence_guard_offsets": [
+            12788
+          ],
+          "value_read_offsets": [
+            12798,
+            12844
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 80
+    },
+    {
+      "opcode": 423,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 1023,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 77,
+      "catalog_direct_field_view_count": 4,
+      "catalog_getter_read_count": 6,
+      "all_typed_getter_site_count": 6,
+      "current_response_getter_site_count": 6,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "I",
+          "presence_guard_offsets": [
+            1033
+          ],
+          "value_read_offsets": [
+            1043
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [
+            1059
+          ],
+          "value_read_offsets": [
+            1069
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "L",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            1132
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "T",
+          "presence_guard_offsets": [
+            1106
+          ],
+          "value_read_offsets": []
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 178
+    },
+    {
+      "opcode": 500,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 5055,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 362,
+      "catalog_direct_field_view_count": 13,
+      "catalog_getter_read_count": 38,
+      "all_typed_getter_site_count": 38,
+      "current_response_getter_site_count": 38,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            5219,
+            5506
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            5231,
+            5240,
+            5518
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            5059,
+            5083,
+            5249,
+            5404,
+            5527
+          ]
+        },
+        {
+          "tag": 4,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            5391,
+            5422,
+            5539
+          ]
+        },
+        {
+          "tag": 5,
+          "view": "I",
+          "presence_guard_offsets": [
+            5181
+          ],
+          "value_read_offsets": [
+            5191
+          ]
+        },
+        {
+          "tag": 6,
+          "view": "S",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            5272,
+            5559
+          ]
+        },
+        {
+          "tag": 8,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            5210,
+            5497
+          ]
+        },
+        {
+          "tag": 9,
+          "view": "B",
+          "presence_guard_offsets": [
+            5479
+          ],
+          "value_read_offsets": []
+        },
+        {
+          "tag": 10,
+          "view": "T",
+          "presence_guard_offsets": [
+            5098,
+            5439
+          ],
+          "value_read_offsets": [
+            5109,
+            5122,
+            5450,
+            5463
+          ]
+        },
+        {
+          "tag": 11,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            5262,
+            5549
+          ]
+        },
+        {
+          "tag": 12,
+          "view": "I",
+          "presence_guard_offsets": [
+            5285,
+            5572
+          ],
+          "value_read_offsets": [
+            5296,
+            5583
+          ]
+        },
+        {
+          "tag": 13,
+          "view": "I",
+          "presence_guard_offsets": [
+            5315,
+            5602
+          ],
+          "value_read_offsets": [
+            5326,
+            5613
+          ]
+        },
+        {
+          "tag": 14,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            5366,
+            5655
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 1062
+    },
+    {
+      "opcode": 502,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 1170,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 11,
+      "catalog_direct_field_view_count": 0,
+      "catalog_getter_read_count": 0,
+      "all_typed_getter_site_count": 0,
+      "current_response_getter_site_count": 0,
+      "current_response_field_views": [],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 11
+    },
+    {
+      "opcode": 503,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 13400,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 15,
+      "catalog_direct_field_view_count": 1,
+      "catalog_getter_read_count": 1,
+      "all_typed_getter_site_count": 1,
+      "current_response_getter_site_count": 1,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            13404
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 15
+    },
+    {
+      "opcode": 603,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 2217,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 81,
+      "catalog_direct_field_view_count": 4,
+      "catalog_getter_read_count": 8,
+      "all_typed_getter_site_count": 8,
+      "current_response_getter_site_count": 8,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "T",
+          "presence_guard_offsets": [
+            2221
+          ],
+          "value_read_offsets": [
+            2239
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [
+            2252
+          ],
+          "value_read_offsets": [
+            2274
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "T",
+          "presence_guard_offsets": [
+            2290
+          ],
+          "value_read_offsets": [
+            2300
+          ]
+        },
+        {
+          "tag": 4,
+          "view": "T",
+          "presence_guard_offsets": [
+            2310
+          ],
+          "value_read_offsets": [
+            2329
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 157
+    },
+    {
+      "opcode": 701,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 2804,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 228,
+      "catalog_direct_field_view_count": 8,
+      "catalog_getter_read_count": 13,
+      "all_typed_getter_site_count": 13,
+      "current_response_getter_site_count": 13,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            2855,
+            2986,
+            3189
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            2903
+          ]
+        },
+        {
+          "tag": 4,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            2885
+          ]
+        },
+        {
+          "tag": 6,
+          "view": "S",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            2864
+          ]
+        },
+        {
+          "tag": 8,
+          "view": "I",
+          "presence_guard_offsets": [
+            3078
+          ],
+          "value_read_offsets": [
+            3089
+          ]
+        },
+        {
+          "tag": 10,
+          "view": "T",
+          "presence_guard_offsets": [
+            3104
+          ],
+          "value_read_offsets": [
+            3115
+          ]
+        },
+        {
+          "tag": 11,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            3125
+          ]
+        },
+        {
+          "tag": 12,
+          "view": "T",
+          "presence_guard_offsets": [
+            3163
+          ],
+          "value_read_offsets": [
+            3174
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 378
+    },
+    {
+      "opcode": 708,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 6088,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 348,
+      "catalog_direct_field_view_count": 4,
+      "catalog_getter_read_count": 16,
+      "all_typed_getter_site_count": 16,
+      "current_response_getter_site_count": 16,
+      "current_response_field_views": [
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [
+            6355
+          ],
+          "value_read_offsets": [
+            6367,
+            6380,
+            6396
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "T",
+          "presence_guard_offsets": [
+            6177
+          ],
+          "value_read_offsets": [
+            6189,
+            6202,
+            6220
+          ]
+        },
+        {
+          "tag": 4,
+          "view": "T",
+          "presence_guard_offsets": [
+            6249
+          ],
+          "value_read_offsets": [
+            6261,
+            6274,
+            6292
+          ]
+        },
+        {
+          "tag": 5,
+          "view": "B",
+          "presence_guard_offsets": [
+            6321,
+            6628
+          ],
+          "value_read_offsets": [
+            6333,
+            6638
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 1690
+    },
+    {
+      "opcode": 714,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 8892,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 123,
+      "catalog_direct_field_view_count": 5,
+      "catalog_getter_read_count": 8,
+      "all_typed_getter_site_count": 8,
+      "current_response_getter_site_count": 8,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "S",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            8943,
+            9046,
+            9083
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            9039,
+            9105
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            9009
+          ]
+        },
+        {
+          "tag": 4,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            8910
+          ]
+        },
+        {
+          "tag": 5,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            8988
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 213
+    },
+    {
+      "opcode": 715,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 917,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 50,
+      "catalog_direct_field_view_count": 0,
+      "catalog_getter_read_count": 0,
+      "all_typed_getter_site_count": 0,
+      "current_response_getter_site_count": 0,
+      "current_response_field_views": [],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 50
+    },
+    {
+      "opcode": 717,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 13432,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 48,
+      "catalog_direct_field_view_count": 1,
+      "catalog_getter_read_count": 3,
+      "all_typed_getter_site_count": 3,
+      "current_response_getter_site_count": 1,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            13506
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 2,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 48
+    },
+    {
+      "opcode": 718,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 12713,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 24,
+      "catalog_direct_field_view_count": 2,
+      "catalog_getter_read_count": 2,
+      "all_typed_getter_site_count": 2,
+      "current_response_getter_site_count": 2,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            12724
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            12731
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 24
+    },
+    {
+      "opcode": 719,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 7166,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 145,
+      "catalog_direct_field_view_count": 15,
+      "catalog_getter_read_count": 15,
+      "all_typed_getter_site_count": 15,
+      "current_response_getter_site_count": 15,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            7170
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            7234
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            7246
+          ]
+        },
+        {
+          "tag": 4,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            7302
+          ]
+        },
+        {
+          "tag": 5,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            7314
+          ]
+        },
+        {
+          "tag": 6,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            7327
+          ]
+        },
+        {
+          "tag": 7,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            7340
+          ]
+        },
+        {
+          "tag": 8,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            7353
+          ]
+        },
+        {
+          "tag": 9,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            7366
+          ]
+        },
+        {
+          "tag": 10,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            7379
+          ]
+        },
+        {
+          "tag": 11,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            7392
+          ]
+        },
+        {
+          "tag": 12,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            7405
+          ]
+        },
+        {
+          "tag": 13,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            7418
+          ]
+        },
+        {
+          "tag": 14,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            7431
+          ]
+        },
+        {
+          "tag": 15,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            7444
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 261
+    },
+    {
+      "opcode": 750,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 7003,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 93,
+      "catalog_direct_field_view_count": 3,
+      "catalog_getter_read_count": 8,
+      "all_typed_getter_site_count": 8,
+      "current_response_getter_site_count": 7,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            7031,
+            7104
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            7113
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "B",
+          "presence_guard_offsets": [
+            7048,
+            7122
+          ],
+          "value_read_offsets": [
+            7058,
+            7132
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 1,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 122
+    },
+    {
+      "opcode": 755,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 6088,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 348,
+      "catalog_direct_field_view_count": 4,
+      "catalog_getter_read_count": 16,
+      "all_typed_getter_site_count": 16,
+      "current_response_getter_site_count": 16,
+      "current_response_field_views": [
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [
+            6355
+          ],
+          "value_read_offsets": [
+            6367,
+            6380,
+            6396
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "T",
+          "presence_guard_offsets": [
+            6177
+          ],
+          "value_read_offsets": [
+            6189,
+            6202,
+            6220
+          ]
+        },
+        {
+          "tag": 4,
+          "view": "T",
+          "presence_guard_offsets": [
+            6249
+          ],
+          "value_read_offsets": [
+            6261,
+            6274,
+            6292
+          ]
+        },
+        {
+          "tag": 5,
+          "view": "B",
+          "presence_guard_offsets": [
+            6321,
+            6628
+          ],
+          "value_read_offsets": [
+            6333,
+            6638
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 1690
+    },
+    {
+      "opcode": 804,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 2712,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 47,
+      "catalog_direct_field_view_count": 2,
+      "catalog_getter_read_count": 3,
+      "all_typed_getter_site_count": 3,
+      "current_response_getter_site_count": 3,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            2737
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [
+            2747
+          ],
+          "value_read_offsets": [
+            2761
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 47
+    },
+    {
+      "opcode": 906,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 3888,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 46,
+      "catalog_direct_field_view_count": 0,
+      "catalog_getter_read_count": 3,
+      "all_typed_getter_site_count": 3,
+      "current_response_getter_site_count": 3,
+      "current_response_field_views": [
+        {
+          "tag": 30,
+          "view": "B",
+          "presence_guard_offsets": [
+            3907
+          ],
+          "value_read_offsets": [
+            3922,
+            3956
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [
+        {
+          "bytecode_offset": 3907,
+          "tag": 30,
+          "type": "B",
+          "receiver_origins": [
+            "response"
+          ]
+        },
+        {
+          "bytecode_offset": 3922,
+          "tag": 30,
+          "type": "B",
+          "receiver_origins": [
+            "response"
+          ]
+        },
+        {
+          "bytecode_offset": 3956,
+          "tag": 30,
+          "type": "B",
+          "receiver_origins": [
+            "response"
+          ]
+        }
+      ],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 51
+    },
+    {
+      "opcode": 911,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 4450,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 101,
+      "catalog_direct_field_view_count": 4,
+      "catalog_getter_read_count": 4,
+      "all_typed_getter_site_count": 4,
+      "current_response_getter_site_count": 4,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            4454
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            4482
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            4470
+          ]
+        },
+        {
+          "tag": 4,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            4492
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 101
+    },
+    {
+      "opcode": 914,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 5719,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 116,
+      "catalog_direct_field_view_count": 5,
+      "catalog_getter_read_count": 9,
+      "all_typed_getter_site_count": 9,
+      "current_response_getter_site_count": 8,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            5781
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            5788
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            5795
+          ]
+        },
+        {
+          "tag": 4,
+          "view": "X",
+          "presence_guard_offsets": [
+            5764
+          ],
+          "value_read_offsets": [
+            5802,
+            5850
+          ]
+        },
+        {
+          "tag": 5,
+          "view": "B",
+          "presence_guard_offsets": [
+            5743
+          ],
+          "value_read_offsets": [
+            5753
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 1,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 290
+    },
+    {
+      "opcode": 915,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 12759,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 5,
+      "catalog_direct_field_view_count": 0,
+      "catalog_getter_read_count": 0,
+      "all_typed_getter_site_count": 0,
+      "current_response_getter_site_count": 0,
+      "current_response_field_views": [],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 5
+    },
+    {
+      "opcode": 916,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 12487,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 14,
+      "catalog_direct_field_view_count": 2,
+      "catalog_getter_read_count": 2,
+      "all_typed_getter_site_count": 2,
+      "current_response_getter_site_count": 2,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            12495
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            12502
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 14
+    },
+    {
+      "opcode": 918,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 13316,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 31,
+      "catalog_direct_field_view_count": 2,
+      "catalog_getter_read_count": 2,
+      "all_typed_getter_site_count": 2,
+      "current_response_getter_site_count": 2,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            13326
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "B",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            13338
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 39
+    },
+    {
+      "opcode": 920,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 6858,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 49,
+      "catalog_direct_field_view_count": 1,
+      "catalog_getter_read_count": 1,
+      "all_typed_getter_site_count": 1,
+      "current_response_getter_site_count": 1,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            6862
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 59
+    },
+    {
+      "opcode": 923,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 3305,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 303,
+      "catalog_direct_field_view_count": 5,
+      "catalog_getter_read_count": 29,
+      "all_typed_getter_site_count": 29,
+      "current_response_getter_site_count": 15,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "I",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            3394,
+            3426,
+            3635,
+            3765
+          ]
+        },
+        {
+          "tag": 2,
+          "view": "X",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            3496,
+            3694,
+            3821,
+            3840
+          ]
+        },
+        {
+          "tag": 3,
+          "view": "L",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            3447,
+            3515,
+            3669,
+            3725
+          ]
+        },
+        {
+          "tag": 6,
+          "view": "I",
+          "presence_guard_offsets": [
+            3790
+          ],
+          "value_read_offsets": [
+            3801
+          ]
+        },
+        {
+          "tag": 11,
+          "view": "TA",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            3328
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [
+        {
+          "bytecode_offset": 3437,
+          "tag": 3,
+          "type": "raw-field",
+          "receiver_origins": [
+            "response"
+          ]
+        },
+        {
+          "bytecode_offset": 3505,
+          "tag": 3,
+          "type": "raw-field",
+          "receiver_origins": [
+            "response"
+          ]
+        },
+        {
+          "bytecode_offset": 3620,
+          "tag": 5,
+          "type": "raw-field",
+          "receiver_origins": [
+            "pending-request"
+          ]
+        },
+        {
+          "bytecode_offset": 3659,
+          "tag": 3,
+          "type": "raw-field",
+          "receiver_origins": [
+            "response"
+          ]
+        },
+        {
+          "bytecode_offset": 3715,
+          "tag": 3,
+          "type": "raw-field",
+          "receiver_origins": [
+            "response"
+          ]
+        }
+      ],
+      "non_response_getter_site_count": 14,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 424
+    },
+    {
+      "opcode": 924,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 2373,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 58,
+      "catalog_direct_field_view_count": 1,
+      "catalog_getter_read_count": 1,
+      "all_typed_getter_site_count": 1,
+      "current_response_getter_site_count": 1,
+      "current_response_field_views": [
+        {
+          "tag": 2,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            2407
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 93
+    },
+    {
+      "opcode": 927,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 3251,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 28,
+      "catalog_direct_field_view_count": 0,
+      "catalog_getter_read_count": 0,
+      "all_typed_getter_site_count": 0,
+      "current_response_getter_site_count": 0,
+      "current_response_field_views": [],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 28
+    },
+    {
+      "opcode": 928,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 6780,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 31,
+      "catalog_direct_field_view_count": 0,
+      "catalog_getter_read_count": 0,
+      "all_typed_getter_site_count": 0,
+      "current_response_getter_site_count": 0,
+      "current_response_field_views": [],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 31
+    },
+    {
+      "opcode": 1000,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 13285,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 16,
+      "catalog_direct_field_view_count": 0,
+      "catalog_getter_read_count": 0,
+      "all_typed_getter_site_count": 0,
+      "current_response_getter_site_count": 0,
+      "current_response_field_views": [],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 16
+    },
+    {
+      "opcode": 1002,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 12927,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 65,
+      "catalog_direct_field_view_count": 0,
+      "catalog_getter_read_count": 0,
+      "all_typed_getter_site_count": 3,
+      "current_response_getter_site_count": 3,
+      "current_response_field_views": [
+        {
+          "tag": null,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            12983,
+            12993,
+            13001
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [
+        {
+          "bytecode_offset": 12983,
+          "tag": null,
+          "type": "T",
+          "receiver_origins": [
+            "response"
+          ]
+        },
+        {
+          "bytecode_offset": 12993,
+          "tag": null,
+          "type": "T",
+          "receiver_origins": [
+            "response"
+          ]
+        },
+        {
+          "bytecode_offset": 13001,
+          "tag": null,
+          "type": "T",
+          "receiver_origins": [
+            "response"
+          ]
+        }
+      ],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 112
+    },
+    {
+      "opcode": 1004,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 13043,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 107,
+      "catalog_direct_field_view_count": 1,
+      "catalog_getter_read_count": 1,
+      "all_typed_getter_site_count": 1,
+      "current_response_getter_site_count": 1,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "T",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            13091
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 122
+    },
+    {
+      "opcode": 1005,
+      "status": "matches_declared_extractor_scope",
+      "entry": {
+        "class": "bc",
+        "method": "bc.a:([Lay;)V",
+        "bytecode_offset": 13369,
+        "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+      },
+      "normal_cfg_instruction_count": 15,
+      "catalog_direct_field_view_count": 1,
+      "catalog_getter_read_count": 1,
+      "all_typed_getter_site_count": 1,
+      "current_response_getter_site_count": 1,
+      "current_response_field_views": [
+        {
+          "tag": 1,
+          "view": "X",
+          "presence_guard_offsets": [],
+          "value_read_offsets": [
+            13388
+          ]
+        }
+      ],
+      "additional_response_reads_outside_direct_fields_scope": [],
+      "raw_field_getters_outside_typed_getter_scope": [],
+      "non_response_getter_site_count": 0,
+      "extra_exception_reachable_instruction_count": 8,
+      "extra_exception_getter_offsets": [],
+      "abstract_interpretation_steps": 15
+    }
+  ],
+  "reviewed_delegated_alias_and_dynamic_annex": [
+    {
+      "opcode": 208,
+      "classification": "cached-other-packet-not-response",
+      "finding": "The aj.c(ay) call receives the cached icon packet returned by aj.g(int), not the current 208 response. Its image fields must not be merged into the 208 response schema.",
+      "evidence": [
+        {
+          "class": "bc",
+          "method": "bc.a:([Lay;)V",
+          "bytecode_offset": 4867,
+          "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+        },
+        {
+          "class": "bc",
+          "method": "bc.a:([Lay;)V",
+          "bytecode_offset": 4925,
+          "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+        }
+      ]
+    },
+    {
+      "opcode": 502,
+      "classification": "deferred-response-reads",
+      "finding": "Current packet is queued in aj.bW by aj.a(ay), returned by aj.ai(), and later read by the UI: tag 4 text for display and tag 5 text for the accepted URL.",
+      "evidence": [
+        {
+          "class": "bc",
+          "method": "bc.a:([Lay;)V",
+          "bytecode_offset": 1177,
+          "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+        },
+        {
+          "class": "aj",
+          "method": "aj.a:(Lay;)V",
+          "bytecode_offset": 12,
+          "file": "research/applets/v4/artifacts/bytecode/aj.txt"
+        },
+        {
+          "class": "aj",
+          "method": "aj.ai:()Lay;",
+          "bytecode_offset": 22,
+          "file": "research/applets/v4/artifacts/bytecode/aj.txt"
+        },
+        {
+          "class": "aj",
+          "method": "aj.paint:(Ljavax/microedition/lcdui/Graphics;)V",
+          "bytecode_offset": 4353,
+          "file": "research/applets/v4/artifacts/bytecode/aj.txt"
+        },
+        {
+          "class": "aj",
+          "method": "aj.commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "bytecode_offset": 20483,
+          "file": "research/applets/v4/artifacts/bytecode/aj.txt"
+        }
+      ],
+      "response_fields": [
+        {
+          "tag": 4,
+          "view": "T",
+          "method": "aj.paint:(Ljavax/microedition/lcdui/Graphics;)V",
+          "offset": 4353
+        },
+        {
+          "tag": 5,
+          "view": "T",
+          "method": "aj.commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 20483
+        }
+      ]
+    },
+    {
+      "opcode": 906,
+      "classification": "response-alias-not-direct-pattern",
+      "finding": "Response is stored as aj.aD, then tag 30 is read through that alias. All three reads are already in all_getter_reads, but direct_response_read is false because the extractor recognizes only an immediate array-load sequence. The null branch repeats the same getter and unboxes it; no optional-field guarantee follows.",
+      "evidence": [
+        {
+          "class": "bc",
+          "method": "bc.a:([Lay;)V",
+          "bytecode_offset": 3895,
+          "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+        },
+        {
+          "class": "bc",
+          "method": "bc.a:([Lay;)V",
+          "bytecode_offset": 3907,
+          "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+        },
+        {
+          "class": "bc",
+          "method": "bc.a:([Lay;)V",
+          "bytecode_offset": 3922,
+          "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+        },
+        {
+          "class": "bc",
+          "method": "bc.a:([Lay;)V",
+          "bytecode_offset": 3956,
+          "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+        }
+      ]
+    },
+    {
+      "opcode": 927,
+      "classification": "delegated-response-reads",
+      "finding": "Current response is passed to aj.c(ay), which reads tag 1 as byte and tags 2 through 6 as image byte arrays. Success passes the same response to aj.d(ay), which reads tag 1 before caching serialized bytes.",
+      "evidence": [
+        {
+          "class": "bc",
+          "method": "bc.a:([Lay;)V",
+          "bytecode_offset": 3282,
+          "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+        },
+        {
+          "class": "bc",
+          "method": "bc.a:([Lay;)V",
+          "bytecode_offset": 3291,
+          "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+        }
+      ],
+      "delegates": [
+        {
+          "method": "aj.c:(Lay;)Z",
+          "getter_sites": [
+            {
+              "tag": 1,
+              "view": "B",
+              "offset": 2
+            },
+            {
+              "tag": 1,
+              "view": "B",
+              "offset": 10
+            },
+            {
+              "tag": 2,
+              "view": "X",
+              "offset": 20
+            },
+            {
+              "tag": 3,
+              "view": "X",
+              "offset": 26
+            },
+            {
+              "tag": 4,
+              "view": "X",
+              "offset": 32
+            },
+            {
+              "tag": 5,
+              "view": "X",
+              "offset": 39
+            },
+            {
+              "tag": 6,
+              "view": "X",
+              "offset": 47
+            }
+          ]
+        },
+        {
+          "method": "aj.d:(Lay;)V",
+          "getter_sites": [
+            {
+              "tag": 1,
+              "view": "B",
+              "offset": 49
+            },
+            {
+              "tag": 1,
+              "view": "B",
+              "offset": 57
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "opcode": 1000,
+      "classification": "whole-packet-persistence-and-deferred-config",
+      "finding": "j.a(ay) serializes the entire incoming resource; its own tag 1 reads target settings j.a, not this packet. Dispatcher installs current response as aj.j. Subsequent consumers use dynamic integer/presence/image accessors; login reads config tag 1 as the revision. An empty dispatcher direct_fields array does not mean an empty config schema.",
+      "evidence": [
+        {
+          "class": "bc",
+          "method": "bc.a:([Lay;)V",
+          "bytecode_offset": 13288,
+          "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+        },
+        {
+          "class": "j",
+          "method": "j.a:(Lay;)V",
+          "bytecode_offset": 13,
+          "file": "research/applets/v4/artifacts/bytecode/j.txt"
+        },
+        {
+          "class": "bc",
+          "method": "bc.a:([Lay;)V",
+          "bytecode_offset": 13294,
+          "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+        },
+        {
+          "class": "y",
+          "method": "y.d:(I)I",
+          "bytecode_offset": 16,
+          "file": "research/applets/v4/artifacts/bytecode/y.txt"
+        },
+        {
+          "class": "y",
+          "method": "y.c:(I)Z",
+          "bytecode_offset": 5,
+          "file": "research/applets/v4/artifacts/bytecode/y.txt"
+        },
+        {
+          "class": "y",
+          "method": "y.d:(I)Ljavax/microedition/lcdui/Image;",
+          "bytecode_offset": 179,
+          "file": "research/applets/v4/artifacts/bytecode/y.txt"
+        },
+        {
+          "class": "bc",
+          "method": "bc.a:(Ljava/lang/String;Ljava/lang/String;)V",
+          "bytecode_offset": 362,
+          "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+        }
+      ],
+      "limit": "This audits packet forwarding and generic accessors. It does not infer every UI theme key or meaning from all call sites."
+    },
+    {
+      "opcode": 1002,
+      "classification": "dynamic-tag-reads-omitted",
+      "finding": "Three direct current-response text getters are absent even from all_getter_reads because the tag is computed. The loop starts i=0, iterates i<field_count, and reads only when i%3==1.",
+      "dynamic_getters": [
+        {
+          "offset": 12983,
+          "tag_expression": "(short)(i+1)",
+          "view": "T"
+        },
+        {
+          "offset": 12993,
+          "tag_expression": "(short)(i+2)",
+          "view": "T"
+        },
+        {
+          "offset": 13001,
+          "tag_expression": "(short)i",
+          "view": "T"
+        }
+      ],
+      "evidence": [
+        {
+          "class": "bc",
+          "method": "bc.a:([Lay;)V",
+          "bytecode_offset": 12956,
+          "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+        },
+        {
+          "class": "bc",
+          "method": "bc.a:([Lay;)V",
+          "bytecode_offset": 12983,
+          "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+        },
+        {
+          "class": "bc",
+          "method": "bc.a:([Lay;)V",
+          "bytecode_offset": 12993,
+          "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+        },
+        {
+          "class": "bc",
+          "method": "bc.a:([Lay;)V",
+          "bytecode_offset": 13001,
+          "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+        }
+      ],
+      "limit": "Field count is not maximum tag; dense triples are a client assumption, not a recovered server validation rule."
+    },
+    {
+      "opcode": 1004,
+      "classification": "delegated-and-deferred-language",
+      "finding": "aj.b(ay) persists the whole response, installs it as aj.s, and reads tag 1 text into settings. Later y.e(int) reads a dynamic text tag from aj.s. Dispatcher itself also reads tag 1 before sending language confirmation.",
+      "evidence": [
+        {
+          "class": "bc",
+          "method": "bc.a:([Lay;)V",
+          "bytecode_offset": 13053,
+          "file": "research/applets/v4/artifacts/bytecode/bc.txt"
+        },
+        {
+          "class": "aj",
+          "method": "aj.b:(Lay;)Z",
+          "bytecode_offset": 67,
+          "file": "research/applets/v4/artifacts/bytecode/aj.txt"
+        },
+        {
+          "class": "aj",
+          "method": "aj.b:(Lay;)Z",
+          "bytecode_offset": 81,
+          "file": "research/applets/v4/artifacts/bytecode/aj.txt"
+        },
+        {
+          "class": "y",
+          "method": "y.e:(I)Ljava/lang/String;",
+          "bytecode_offset": 11,
+          "file": "research/applets/v4/artifacts/bytecode/y.txt"
+        }
+      ],
+      "limit": "The runtime lookup accepts dynamic resource IDs; dispatcher direct_fields is not a complete language-resource schema."
+    }
+  ],
+  "interpretation_notes": [
+    "All 55 rows reproduce and match the extractor scope. This is not a finding that their fields are a complete wire schema.",
+    "906 alias getters already occur in all_getter_reads. Only direct_fields excludes them. 1002 dynamic getters are absent from all_getter_reads itself.",
+    "203 tags 31/32 have multiple value interpretations. Raw binary fields carry no discriminator, so simultaneous typed views do not prove impossible serialization.",
+    "203 tags 33/35/37 use a byte presence guard then an integer value read. 421/423 tag 3 uses text presence then a long value read. These differ from multiple semantic value uses.",
+    "Field-view presence/value labels classify immediate null checks versus other uses; they do not establish requiredness, complete semantic use, or server validation.",
+    "The conservative exception-edge audit adds no dispatcher typed getter sites for any opcode. Error effects remain distinct from field discovery.",
+    "The normal CFG follows both sides of branches; it is not a proof that every path is feasible for one concrete packet."
+  ]
+}

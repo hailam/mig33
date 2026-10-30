@@ -10,7 +10,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE_ROOTS = ("cmd", "configs", "db", "internal")
+SOURCE_ROOTS = ("cmd", "configs", "db", "internal", "tools/contracts")
 TOOLS = {
     "goimports": ("golang.org/x/tools", "golang.org/x/tools/cmd/goimports", "v0.52.0"),
     "gofumpt": ("mvdan.cc/gofumpt", "mvdan.cc/gofumpt", "v0.12.0"),
@@ -55,7 +55,7 @@ def source_files(root):
         if directory.is_symlink():
             continue
         for current, directories, names in os.walk(directory, followlinks=False):
-            directories[:] = sorted(d for d in directories if not (Path(current) / d).is_symlink())
+            directories[:] = sorted(d for d in directories if d != "node_modules" and not (Path(current) / d).is_symlink())
             for name in sorted(names):
                 path = Path(current) / name
                 if path.suffix != ".go" or path.is_symlink():

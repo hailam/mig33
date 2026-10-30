@@ -29,7 +29,7 @@ Use `sh scripts/open-clients.sh hailam bob` to log in automatically. The [applet
 | `cmd/{http,socket,omni,cli}` | Executable entrypoints |
 | `cmd/internal/{command,wiring}` | Plumbing shared only by entrypoints |
 | `internal/` | Capability services, repository ports, adapters, controllers and generic bootstrap |
-| `api/`, `db/`, `configs/` | OpenAPI, sqlc queries/migrations and YAML configuration |
+| `api/`, `db/`, `configs/` | Original HTTP/message contracts, sqlc queries/migrations and YAML configuration |
 | [docs/](docs/README.md) | Backend behavior, architecture and development guides |
 | [research/](research/README.md) | Applet references, architecture studies and acceptance reports |
 | [tools/applets/](tools/applets/README.md) | Reusable analysis, emulator and compatibility-test tooling |
@@ -49,10 +49,14 @@ sh scripts/format-go.sh --check
 go test -race ./...
 go vet ./...
 sh scripts/generate-openapi.sh
+sh scripts/generate-contracts.sh --check
+sh scripts/check-go-vulnerabilities.sh
 sh scripts/generate-sqlc.sh
 python3 scripts/export-sqlc-schema.py --check
 ```
 
-The [development guide](docs/development.md) explains formatting, import grouping and readability conventions. CI checks handwritten Go formatting, vet and race tests; generated source remains owned by its generator.
+The [development guide](docs/development.md) explains formatting, import grouping and readability conventions. CI checks handwritten Go formatting, vet, race tests and reachable Go vulnerabilities; generated source remains owned by its generator.
+
+The [contract guide](api/README.txt) covers reviewed 4.62 definitions, generated AsyncAPI and TypeScript, original HTTP/TCP compatibility, and fixture validation. Its optional Node tooling uses scoped mise versions and pnpm with a three-day dependency release delay; advisory-backed exceptions require an exact version and documented reason.
 
 The [backend architecture](docs/backend.md#composition-routing-and-persistence) describes capability ownership, typed adapters, transactions and lifecycle handling. [Configuration](configs/README.md) documents YAML overlays and environment overrides. [Reconstruction notes](docs/reconstruction-notes.md) retain the earlier feature milestones and evidence links.

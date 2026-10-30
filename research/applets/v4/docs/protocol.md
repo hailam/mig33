@@ -18,7 +18,7 @@ Types: `B` signed byte, `S` signed 16-bit big-endian short, `I` signed 32-bit bi
 
 The framing is unchanged from 3.08: `[02:B][opcode:S][transaction:S][bodyLength:I][fields...]`, with a nine-byte header. Each field is `[tag:S][length:I][payload]`; no field count or trailing marker exists. Fields are stored in a `Hashtable` and duplicate tags replace earlier values. Enumeration order is not guaranteed. A receiver must accept arbitrary field order. Multiple packets can be concatenated in an HTTP response. See [ay.java](../artifacts/vineflower/ay.java) and original [bj field constructors/accessors](../artifacts/bytecode/bj.txt).
 
-The primitive accessors return null for absent fields and read from the start of the raw payload. Strings are UTF-8 without Java `writeUTF` framing. `TA` writes a zero **between** values, with no final zero; its decoder's handling of empty segments is quirky, so do not silently substitute a conventional nullable-array encoding. Long values and string arrays are used by v4 contact synchronization and generic external IM accounts. The original parser trusts lengths; the supplied offline codec rejects truncated or invalid lengths.
+The primitive accessors return null for absent fields and read from the start of the raw payload. A present empty raw field is different: the byte accessor throws `ArrayIndexOutOfBoundsException`, while undersized short/int/long reads return null. A raw field can support several accessor views at once; this does not establish a single transmitted type. Strings are UTF-8 without Java `writeUTF` framing. `TA` writes a zero **between** values, with no final zero, but its original raw-field decoder can lose the final unterminated element even for ordinary nonempty strings: `a\0b` decodes as `[a]`, and `ab\0cd\0ef` as `[ab,cd]`. These are original-client decoding behaviors, not a reason to change the recorded wire bytes or assume the historical server shared the same decoder. Long values and string arrays are used by v4 contact synchronization and generic external IM accounts. The original parser trusts lengths; the supplied offline codec rejects truncated or invalid lengths. The [source audit](protocol-catalog-audit.md) records original-class probes and the limits of these observations.
 
 | Interface | Observed behavior | Evidence |
 |---|---|---|
@@ -67,7 +67,7 @@ Login remains **200 →201 →202 →203**.201 provides1:T challenge and2:T sess
 
 ### Incoming login203
 
-N:1846–2077 and [original opcode203 instructions](data/protocol-opcode-203.txt) are important: this build contains conflicting accesses that must not be “corrected” from assumptions about protocol design.
+N:1846–2077 and [original opcode203 instructions](data/protocol-opcode-203.txt) are important: this build reads some raw fields through several accessors, which must not be “corrected” from assumptions about a single field type.
 
 | Tags | Reads and effect |
 |---|---|
@@ -84,12 +84,12 @@ N:1846–2077 and [original opcode203 instructions](data/protocol-opcode-203.txt
 | 28:T | Own profile string `aj.n`, later also updated by603 tag3 |
 | 29?:B | Absent or1 triggers device/system information upload10 for every string from `aj.l()` |
 | 31:I and32:I | If both exist, used as avatar width/height |
-| 31:S and32:T | **The same tags are subsequently read again with incompatible interpretations**: short saved as settings11, string appended to site base and saved as settings10 |
+| 31:S and32:T | **The same raw tags are subsequently read through different accessors**: short saved as settings11, string appended to site base and saved as settings10 |
 | 33:B→I,35:B→I,37:B→I | Existence tested with byte accessor, then int accessor's low byte compared with1. Control parallel HTTP queue, feature flag `bc.a`, and feature flag `bc.b`. Absent defaults: true,false,true respectively |
 
-Tags31/32 are an unresolved binary-level inconsistency, not a license to invent substitute tags. A fixture intended to drive this original build must model both reads or deliberately document which branch it exercises. Tags33/35/37 can be represented as four-byte integers to satisfy both accessors; the initial byte read only tests non-null.
+Tags31/32 have multiple confirmed accessor interpretations whose combined application meaning remains uncertain. They are not an impossible binary encoding: received fields contain raw bytes, and numeric getters read prefixes. For example, raw `00010002` is int65538, short1, and a four-character control string. A fixture intended to drive this original build must account for both reads or document which branch it exercises; do not invent substitute tags. Tags33/35/37 can be represented as four-byte integers to satisfy both accessors; the initial byte read only tests non-null. See the [source audit](protocol-catalog-audit.md) for the distinction between presence checks and value reads.
 
-After203, the client ensures room categories713 are requested. If203 tag20 equals the saved contact revision, it requests **419 with1:L saved synchronization time**; otherwise400 performs a full list.401/402 records,406 deletions,421/423 metadata changes and420 checkpoints update the persistent contact cache.403 marks completion. This is substantially different from v3's unconditional full400 download. During reconnect, some203 profile initialization is skipped, and chats retain local state.
+After203, the client ensures room categories713 are requested. If203 tag20 equals the saved contact revision, it requests **419 with1:L saved synchronization time**, falling back to current time when no timestamp is saved; otherwise400 performs a full list.401/402 records,406 deletions,421/423 metadata changes and420 checkpoints update the persistent contact cache.403 marks completion. This is substantially different from v3's unconditional full400 download. During reconnect, some203 profile initialization is skipped, and chats retain local state.
 
 Registration101 still inserts width and height under **the same tag1:I**, so only height survives.103 has1:T username,2:T password,3:T mobile,4:T challenge identifier,5:T entered captcha,9:T client build string and10:T the **same client build string**.102 returns1:T prompt/mobile string,2:T challenge token,3:X image;104 replaces prompt/token/image. A separate security challenge16 uses1:T prompt,2:X image,3:T token and answer17 sends1:T entered text. Registration username checking uses the local1005 HTTP job described below.
 
@@ -123,7 +123,7 @@ This table describes network requests and explicitly labels local jobs. A [machi
 | 410 | Rename group | 1:I group;2:T name →ack |
 | 411 | Move contact | 1:I contact;2?:I group, omitted for−1 →ack |
 | 417 | Block user | 1:T username;2:B2 **always**; boolean parameter ignored |
-| 419 | Incremental contact synchronization | 1:L saved timestamp →cache updates/403 |
+| 419 | Incremental contact synchronization | 1:L saved timestamp, or current time when no saved timestamp exists →cache updates/403 |
 | 500 | Send message/photo | Dedicated table below →ack/error |
 | 504 | Upload photo | 1:S1;2:X bytes;4?:S parameter, omitted−1;5:B purpose. Ack1:T opens URL; absent URL with purpose0 opens photo home |
 | 600 | Set presence | 1:B new presence;2:B old presence for rollback →ack/error |
@@ -183,6 +183,8 @@ Original `s.a(...)` offsets84–111 select theme category5, remove the displayed
 ## Incoming operation catalog
 
 Every top-level case in the recovered dispatcher appears here. Some require a matching pending transaction; pushes such as500 or menu/theme updates do not.0 errors and1 acknowledgments dispatch further on the pending request opcode. Unknown top-level opcodes fall through. Each row has its original bytecode evidence in `data/protocol-opcode-<number>.txt`.
+
+The machine catalog records immediate constant-tag getter reads in this dispatcher, not a complete response schema. Its `all_getter_reads` also includes pending-request/settings reads. In particular,906 tag30 is read through a stored response alias,1002 uses three computed text tags, and502/927/1000/1004 have delegated or deferred consumers. The [incoming audit](data/protocol-audit-incoming.json) verifies all55 existing rows against the original bytecode and records those additional paths without changing the meaning of `direct_fields`. An empty `direct_fields` array is not evidence that an operation has no payload.
 
 | Opcode | Fields consumed and result |
 |---:|---|

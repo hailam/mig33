@@ -1,7 +1,7 @@
 {
   "version": "4.62",
   "common": {
-    "scope": "All17 literal /sites/ templates containing%s plus assembled group/location/photo routes and dynamic extension rules. Analysis-only normal-flow references are corroborated by original javap; no live legacy requests were made.",
+    "scope": "All17 literal templates containing%s (16 relative /sites/ templates and one absolute registration URL) plus assembled group/location/photo routes and dynamic extension rules. Analysis-only normal-flow references are corroborated by original javap; no live legacy requests were made.",
     "base_and_substitution": {
       "rule": "y.e(path,value) returns null if aj.Q==null, even when path is absolute. Otherwise if path does not case-sensitively start with http, y.c(path,Q) joins slash boundaries; non-null value replaces FIRST occurrence of literal%s. Null value leaves%s unchanged. Empty value removes that occurrence. There is no generic printf or query encoder.",
       "sources": [

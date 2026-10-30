@@ -1,0 +1,2231 @@
+{
+  "scope": "All56 outgoing rows: request construction and original-client argument/branch behavior. Purpose names remain contextual interpretations. Response arrows are not proof of server behavior; incoming and transport audits cover their client-side consumers.",
+  "original_jar_sha256": "dbf12ffbd44bc6e48d09cf35863736731c87c078877f76ed4b780a4dc5eff92c",
+  "catalog_sha256": "392ea2b821ce26f0c34235e5a6ac5ef8758707aa9e183825722e3cc373d2abe9",
+  "status_meaning": {
+    "verified": "Reviewed request fields agree with original construction; not a complete server contract",
+    "correction_required": "Confirmed contradictory catalog claim",
+    "corrected": "Previously contradictory claim removed; evidence retained"
+  },
+  "evidence": {
+    "disassembly": "Original javap -c -p -s, method descriptors and instruction offsets",
+    "constructor_sites": 67,
+    "constructor_inventory": "exact opcode/class/declaration/line multiset match",
+    "generic_call_sites": 25,
+    "generic_opcodes": [
+      2,
+      204,
+      205,
+      206,
+      300,
+      302,
+      400,
+      406,
+      409,
+      704,
+      706,
+      707,
+      709,
+      710
+    ],
+    "generic_opcodes_outside_catalog": [],
+    "checked_field_constructor_references": 152,
+    "distinct_field_constructor_offsets": 141,
+    "runtime_cases": 62,
+    "runtime_opcode_count": 49,
+    "runtime_opcodes": [
+      2,
+      7,
+      9,
+      11,
+      17,
+      101,
+      103,
+      204,
+      205,
+      206,
+      300,
+      302,
+      400,
+      405,
+      406,
+      407,
+      408,
+      409,
+      410,
+      411,
+      417,
+      504,
+      600,
+      601,
+      602,
+      703,
+      704,
+      706,
+      707,
+      709,
+      710,
+      711,
+      712,
+      713,
+      716,
+      751,
+      752,
+      753,
+      754,
+      800,
+      900,
+      904,
+      907,
+      913,
+      921,
+      925,
+      1001,
+      1003,
+      1005
+    ],
+    "static_only_opcodes": [
+      10,
+      200,
+      202,
+      419,
+      500,
+      922,
+      926
+    ],
+    "runtime_scope": "Actual original bc builders and ay serializer; private queue captured. Local-job serialization is only an inspection technique, not transport evidence.",
+    "harness_sha256": "7cd871c86e96d120cf05d9ade90399d4528257a21e74e4ab74781d07228fedf6"
+  },
+  "limitations": [
+    "Field/tag/value/condition annotations are manual source review; the automatic static check verifies method and constructor-overload offsets, not arbitrary Java semantics.",
+    "Runtime probes cover representative present/absent and ignored-argument paths for49 operations;200/202/10/419/500/922/926 are static-only.",
+    "No historical server is available here. Catalog completeness is bounded by observed code in this exact original client, not all server operations.",
+    "TLV fields have no on-wire type discriminator. Builder/accessor usage supplies these type labels; absence/mandatory/server-validation rules require separate evidence."
+  ],
+  "operations": [
+    {
+      "opcode": 2,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(S)V",
+          "constructor_offset": 6,
+          "fields": []
+        },
+        {
+          "class_name": "bc",
+          "method": "run:()V",
+          "constructor_offset": 2103,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "I",
+              "offset": 2114,
+              "value": "1 automatic heartbeat"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "generic_test"
+      ],
+      "generic_callers": [
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 15556,
+          "line": 10860,
+          "opcode": 2,
+          "helper": "bc.a:(S)V"
+        },
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 16202,
+          "line": 11149,
+          "opcode": 2,
+          "helper": "bc.a:(S)V"
+        },
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 16279,
+          "line": 11184,
+          "opcode": 2,
+          "helper": "bc.a:(S)V"
+        }
+      ]
+    },
+    {
+      "opcode": 7,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(I)V",
+          "constructor_offset": 7,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "I",
+              "offset": 17,
+              "value": "argument1 topic"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "help"
+      ]
+    },
+    {
+      "opcode": 9,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(BS)V",
+          "constructor_offset": 7,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "B",
+              "offset": 17,
+              "value": "argument1 accept/decline"
+            },
+            {
+              "tag": 2,
+              "type": "S",
+              "offset": 30,
+              "value": "argument2 prompt transaction"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "prompt"
+      ]
+    },
+    {
+      "opcode": 10,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:([Lay;)V",
+          "constructor_offset": 14481,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "S",
+              "offset": 14491,
+              "value": "1"
+            },
+            {
+              "tag": 2,
+              "type": "T",
+              "offset": 14505,
+              "value": "one element of aj.l properties"
+            }
+          ],
+          "note": "After 203, loops properties when response tag29 absent or byte1."
+        }
+      ],
+      "runtime_cases": []
+    },
+    {
+      "opcode": 11,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(BLjava/lang/String;Ljava/lang/String;)V",
+          "constructor_offset": 6,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "B",
+              "offset": 19,
+              "value": "argument1 store type"
+            },
+            {
+              "tag": 2,
+              "type": "T",
+              "offset": 33,
+              "value": "argument2 key"
+            },
+            {
+              "tag": 3,
+              "type": "T",
+              "offset": 51,
+              "value": "argument3 value",
+              "when": "argument3 != null"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "preference_present",
+        "preference_absent"
+      ]
+    },
+    {
+      "opcode": 17,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "d:(Ljava/lang/String;)V",
+          "constructor_offset": 7,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 17,
+              "value": "argument1 entered text"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "security"
+      ]
+    },
+    {
+      "opcode": 101,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:()V",
+          "constructor_offset": 7,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "I",
+              "offset": 19,
+              "value": "aj.e width"
+            },
+            {
+              "tag": 1,
+              "type": "I",
+              "offset": 34,
+              "value": "aj.f height overwrites width"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "registration_start"
+      ]
+    },
+    {
+      "opcode": 103,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
+          "constructor_offset": 33,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 43,
+              "value": "argument1 username"
+            },
+            {
+              "tag": 2,
+              "type": "T",
+              "offset": 56,
+              "value": "argument2 password"
+            },
+            {
+              "tag": 3,
+              "type": "T",
+              "offset": 69,
+              "value": "argument3 mobile"
+            },
+            {
+              "tag": 4,
+              "type": "T",
+              "offset": 83,
+              "value": "argument4 challenge identifier"
+            },
+            {
+              "tag": 5,
+              "type": "T",
+              "offset": 97,
+              "value": "argument5 captcha"
+            },
+            {
+              "tag": 9,
+              "type": "T",
+              "offset": 112,
+              "value": "J2MEv + aj.c + aj.a"
+            },
+            {
+              "tag": 10,
+              "type": "T",
+              "offset": 127,
+              "value": "same client string as tag9"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "registration_submit"
+      ]
+    },
+    {
+      "opcode": 200,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(Ljava/lang/String;Ljava/lang/String;)V",
+          "constructor_offset": 188,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "S",
+              "offset": 199,
+              "value": "1"
+            },
+            {
+              "tag": 2,
+              "type": "B",
+              "offset": 212,
+              "value": "2"
+            },
+            {
+              "tag": 3,
+              "type": "S",
+              "offset": 226,
+              "value": "parsed version without decimal point"
+            },
+            {
+              "tag": 5,
+              "type": "T",
+              "offset": 239,
+              "value": "argument1 username"
+            },
+            {
+              "tag": 7,
+              "type": "T",
+              "offset": 253,
+              "value": "J2MEv + aj.c + aj.a"
+            },
+            {
+              "tag": 8,
+              "type": "T",
+              "offset": 269,
+              "value": "platform"
+            },
+            {
+              "tag": 11,
+              "type": "I",
+              "offset": 285,
+              "value": "aj.D font setting"
+            },
+            {
+              "tag": 12,
+              "type": "I",
+              "offset": 304,
+              "value": "aj.e width minus6"
+            },
+            {
+              "tag": 13,
+              "type": "I",
+              "offset": 324,
+              "value": "aj.f height minus aj.g bottom bar"
+            },
+            {
+              "tag": 15,
+              "type": "T",
+              "offset": 345,
+              "value": "settings tag6 language"
+            },
+            {
+              "tag": 16,
+              "type": "I",
+              "offset": 368,
+              "value": "configuration tag1 revision"
+            },
+            {
+              "tag": 17,
+              "type": "T",
+              "offset": 388,
+              "value": "cell ID"
+            },
+            {
+              "tag": 18,
+              "type": "T",
+              "offset": 410,
+              "value": "u.a prior session",
+              "when": "session != null"
+            },
+            {
+              "tag": 9,
+              "type": "B",
+              "offset": 431,
+              "value": "bc.u.am desired presence",
+              "when": "session != null"
+            },
+            {
+              "tag": 9,
+              "type": "B",
+              "offset": 463,
+              "value": "1",
+              "when": "session == null and preference7 != 1"
+            },
+            {
+              "tag": 9,
+              "type": "B",
+              "offset": 481,
+              "value": "99",
+              "when": "session == null and preference7 == 1"
+            },
+            {
+              "tag": 19,
+              "type": "B",
+              "offset": 518,
+              "value": "preference17 == 1 ? 1 : 0"
+            },
+            {
+              "tag": 20,
+              "type": "T",
+              "offset": 538,
+              "value": "LAC"
+            },
+            {
+              "tag": 21,
+              "type": "T",
+              "offset": 558,
+              "value": "MCC"
+            },
+            {
+              "tag": 22,
+              "type": "T",
+              "offset": 578,
+              "value": "MNC"
+            }
+          ],
+          "note": "Credentials are persisted before packet creation; no password field is emitted. Full table reviewed in protocol.md."
+        }
+      ],
+      "runtime_cases": [],
+      "detail_location": "protocol.md dedicated table, reviewed together with JSON summary"
+    },
+    {
+      "opcode": 202,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:([Lay;)V",
+          "constructor_offset": 2637,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "I",
+              "offset": 2672,
+              "value": "Java hashCode(response201 tag1 challenge + settings password.toLowerCase())"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": []
+    },
+    {
+      "opcode": 204,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(SLjava/lang/String;)V",
+          "constructor_offset": 6,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 16,
+              "value": "activation code"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "generic_activate"
+      ],
+      "generic_callers": [
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 16107,
+          "line": 11106,
+          "opcode": 204,
+          "helper": "bc.a:(SLjava/lang/String;)V"
+        }
+      ]
+    },
+    {
+      "opcode": 205,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(SLjava/lang/String;)V",
+          "constructor_offset": 6,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 16,
+              "value": "mobile"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "generic_mobile"
+      ],
+      "generic_callers": [
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 15782,
+          "line": 10964,
+          "opcode": 205,
+          "helper": "bc.a:(SLjava/lang/String;)V"
+        },
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 16960,
+          "line": 11450,
+          "opcode": 205,
+          "helper": "bc.a:(SLjava/lang/String;)V"
+        }
+      ]
+    },
+    {
+      "opcode": 206,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(SIIZ)V",
+          "constructor_offset": 5,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "B",
+              "offset": 19,
+              "value": "argument2 service"
+            },
+            {
+              "tag": 2,
+              "type": "B",
+              "offset": 41,
+              "value": "argument3 mode",
+              "when": "opcode == 206"
+            },
+            {
+              "tag": 3,
+              "type": "B",
+              "offset": 55,
+              "value": "0",
+              "when": "opcode == 206"
+            }
+          ],
+          "note": "Boolean argument4 ignored."
+        }
+      ],
+      "runtime_cases": [
+        "connect_true",
+        "connect_false"
+      ],
+      "generic_callers": [
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 4149,
+          "line": 5788,
+          "opcode": 206,
+          "helper": "bc.a:(SIIZ)V"
+        },
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 8914,
+          "line": 7975,
+          "opcode": 206,
+          "helper": "bc.a:(SIIZ)V"
+        },
+        {
+          "class_name": "aj",
+          "method": "c:(I)Z",
+          "offset": 92,
+          "line": 24876,
+          "opcode": 206,
+          "helper": "bc.a:(SIIZ)V"
+        },
+        {
+          "class_name": "aj",
+          "method": "n:()V",
+          "offset": 122,
+          "line": 24947,
+          "opcode": 206,
+          "helper": "bc.a:(SIIZ)V"
+        },
+        {
+          "class_name": "aj",
+          "method": "n:()V",
+          "offset": 195,
+          "line": 24978,
+          "opcode": 206,
+          "helper": "bc.a:(SIIZ)V"
+        }
+      ]
+    },
+    {
+      "opcode": 300,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(S)V",
+          "constructor_offset": 6,
+          "fields": []
+        }
+      ],
+      "runtime_cases": [
+        "generic_logout"
+      ],
+      "generic_callers": [
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 8398,
+          "line": 7736,
+          "opcode": 300,
+          "helper": "bc.a:(S)V"
+        },
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 11493,
+          "line": 9138,
+          "opcode": 300,
+          "helper": "bc.a:(S)V"
+        }
+      ]
+    },
+    {
+      "opcode": 302,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(SIIZ)V",
+          "constructor_offset": 5,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "B",
+              "offset": 19,
+              "value": "argument2 service"
+            }
+          ],
+          "note": "For opcode302 only tag1 is inserted; arguments3/4 unused on this branch."
+        }
+      ],
+      "runtime_cases": [
+        "disconnect"
+      ],
+      "generic_callers": [
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 4086,
+          "line": 5762,
+          "opcode": 302,
+          "helper": "bc.a:(SIIZ)V"
+        },
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 8881,
+          "line": 7959,
+          "opcode": 302,
+          "helper": "bc.a:(SIIZ)V"
+        }
+      ]
+    },
+    {
+      "opcode": 400,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(S)V",
+          "constructor_offset": 6,
+          "fields": []
+        }
+      ],
+      "runtime_cases": [
+        "generic_empty"
+      ],
+      "generic_callers": [
+        {
+          "class_name": "bc",
+          "method": "a:([Lay;)V",
+          "offset": 14383,
+          "line": 10467,
+          "opcode": 400,
+          "helper": "bc.a:(S)V"
+        }
+      ]
+    },
+    {
+      "opcode": 405,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZLjava/lang/String;Ljava/lang/String;B)V",
+          "constructor_offset": 7,
+          "fields": [
+            {
+              "tag": 2,
+              "type": "I",
+              "offset": 27,
+              "value": "argument9 group",
+              "when": "argument9 != -1"
+            },
+            {
+              "tag": 3,
+              "type": "T",
+              "offset": 45,
+              "value": "argument1 display",
+              "when": "argument1 != null"
+            },
+            {
+              "tag": 12,
+              "type": "T",
+              "offset": 64,
+              "value": "argument3 mig33 username",
+              "when": "argument3 != null"
+            },
+            {
+              "tag": 24,
+              "type": "B",
+              "offset": 98,
+              "value": "argument10 share-mobile ? 1 : 0",
+              "when": "argument3 != null"
+            },
+            {
+              "tag": 8,
+              "type": "T",
+              "offset": 117,
+              "value": "argument2 mobile",
+              "when": "argument2 != null"
+            },
+            {
+              "tag": 30,
+              "type": "T",
+              "offset": 138,
+              "value": "argument12 external username",
+              "when": "argument12 != null"
+            },
+            {
+              "tag": 31,
+              "type": "B",
+              "offset": 160,
+              "value": "argument13 external service",
+              "when": "argument13 != -1"
+            }
+          ],
+          "note": "Arguments4/5/6/7/8/11 ignored."
+        }
+      ],
+      "runtime_cases": [
+        "add_contact_full",
+        "add_contact_min"
+      ]
+    },
+    {
+      "opcode": 406,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(SI)V",
+          "constructor_offset": 6,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "I",
+              "offset": 16,
+              "value": "contact ID"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "generic_int"
+      ],
+      "generic_callers": [
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 16886,
+          "line": 11416,
+          "opcode": 406,
+          "helper": "bc.a:(SI)V"
+        }
+      ]
+    },
+    {
+      "opcode": 407,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/Vector;Ljava/util/Vector;II)V",
+          "constructor_offset": 7,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "I",
+              "offset": 21,
+              "value": "argument6 contact ID"
+            },
+            {
+              "tag": 3,
+              "type": "T",
+              "offset": 39,
+              "value": "argument1 display",
+              "when": "argument1 != null"
+            },
+            {
+              "tag": 8,
+              "type": "T",
+              "offset": 58,
+              "value": "argument2 mobile",
+              "when": "argument2 != null"
+            },
+            {
+              "tag": 12,
+              "type": "T",
+              "offset": 77,
+              "value": "argument3 mig33 username",
+              "when": "argument3 != null"
+            },
+            {
+              "tag": 2,
+              "type": "I",
+              "offset": 98,
+              "value": "argument7 group",
+              "when": "argument7 != -1"
+            },
+            {
+              "tag": 30,
+              "type": "TA",
+              "offset": 225,
+              "value": "argument4 external usernames",
+              "when": "both vectors non-null, nonempty and equal length"
+            },
+            {
+              "tag": 31,
+              "type": "X",
+              "offset": 241,
+              "value": "argument5 services parsed with Byte.parseByte",
+              "when": "both vectors non-null, nonempty and equal length"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "edit_contact_full",
+        "edit_contact_min",
+        "edit_contact_mismatch",
+        "edit_contact_empty"
+      ]
+    },
+    {
+      "opcode": 408,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "j:(Ljava/lang/String;)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 2,
+              "type": "T",
+              "offset": 18,
+              "value": "group name"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "add_contact_group"
+      ]
+    },
+    {
+      "opcode": 409,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(SI)V",
+          "constructor_offset": 6,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "I",
+              "offset": 16,
+              "value": "group ID"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "generic_delete_group"
+      ],
+      "generic_callers": [
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 16819,
+          "line": 11386,
+          "opcode": 409,
+          "helper": "bc.a:(SI)V"
+        }
+      ]
+    },
+    {
+      "opcode": 410,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "b:(Ljava/lang/String;I)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "I",
+              "offset": 18,
+              "value": "argument2 group ID"
+            },
+            {
+              "tag": 2,
+              "type": "T",
+              "offset": 31,
+              "value": "argument1 name"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "rename_group"
+      ]
+    },
+    {
+      "opcode": 411,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "b:(II)V",
+          "constructor_offset": 7,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "I",
+              "offset": 18,
+              "value": "argument1 contact ID"
+            },
+            {
+              "tag": 2,
+              "type": "I",
+              "offset": 36,
+              "value": "argument2 group",
+              "when": "argument2 != -1"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "move_group",
+        "move_no_group"
+      ]
+    },
+    {
+      "opcode": 417,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "b:(Ljava/lang/String;Z)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 18,
+              "value": "argument1 username"
+            },
+            {
+              "tag": 2,
+              "type": "B",
+              "offset": 31,
+              "value": "2"
+            }
+          ],
+          "note": "Boolean argument ignored."
+        }
+      ],
+      "runtime_cases": [
+        "block_true",
+        "block_false"
+      ]
+    },
+    {
+      "opcode": 419,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:([Lay;)V",
+          "constructor_offset": 14327,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "L",
+              "offset": 14338,
+              "value": "Long.parseLong(aj.W), or new Date().getTime() when aj.W == null"
+            }
+          ],
+          "note": "203 tag20 matches cached contact version; timestamp branch offsets14206..14235."
+        }
+      ],
+      "runtime_cases": [],
+      "precision_note": "Before this audit, the saved-timestamp summary omitted the null-cache fallback to current time; the recovered branch is included above."
+    },
+    {
+      "opcode": 500,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(SLjava/lang/String;Ljava/lang/String;I[BSI)V",
+          "constructor_offset": 7,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "B",
+              "offset": 21,
+              "value": "argument1 channel"
+            },
+            {
+              "tag": 2,
+              "type": "T",
+              "offset": 41,
+              "value": "settings username"
+            },
+            {
+              "tag": 3,
+              "type": "B",
+              "offset": 57,
+              "value": "argument4 conversation"
+            },
+            {
+              "tag": 4,
+              "type": "T",
+              "offset": 71,
+              "value": "argument2 destination"
+            },
+            {
+              "tag": 6,
+              "type": "S",
+              "offset": 87,
+              "value": "argument6 content"
+            },
+            {
+              "tag": 8,
+              "type": "X",
+              "offset": 108,
+              "value": "argument5 bytes",
+              "when": "argument5 != null"
+            },
+            {
+              "tag": 8,
+              "type": "T",
+              "offset": 126,
+              "value": "argument3 text",
+              "when": "argument5 == null"
+            },
+            {
+              "tag": 13,
+              "type": "I",
+              "offset": 148,
+              "value": "argument7 RGB",
+              "when": "argument7 != -1"
+            }
+          ],
+          "note": "General conversation variant; no contact tag5."
+        },
+        {
+          "class_name": "bc",
+          "method": "a:(SLjava/lang/String;ILjava/lang/String;[BSI)V",
+          "constructor_offset": 7,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "B",
+              "offset": 21,
+              "value": "argument1 channel"
+            },
+            {
+              "tag": 2,
+              "type": "T",
+              "offset": 62,
+              "value": "channel2: aj.o own mobile; otherwise settings username"
+            },
+            {
+              "tag": 3,
+              "type": "B",
+              "offset": 76,
+              "value": "1"
+            },
+            {
+              "tag": 4,
+              "type": "T",
+              "offset": 90,
+              "value": "argument2 destination"
+            },
+            {
+              "tag": 5,
+              "type": "I",
+              "offset": 109,
+              "value": "argument3 contact ID",
+              "when": "argument3 != -1"
+            },
+            {
+              "tag": 6,
+              "type": "S",
+              "offset": 125,
+              "value": "argument6 content"
+            },
+            {
+              "tag": 8,
+              "type": "X",
+              "offset": 146,
+              "value": "argument5 bytes",
+              "when": "argument5 != null"
+            },
+            {
+              "tag": 8,
+              "type": "T",
+              "offset": 165,
+              "value": "argument4 text",
+              "when": "argument5 == null"
+            },
+            {
+              "tag": 13,
+              "type": "I",
+              "offset": 187,
+              "value": "argument7 RGB",
+              "when": "argument7 != -1"
+            }
+          ],
+          "note": "Private conversation variant. Protocol.md table combines incoming/outgoing fields; tags9..12/14 are not emitted by either builder."
+        }
+      ],
+      "runtime_cases": [],
+      "detail_location": "protocol.md dedicated table, reviewed together with JSON summary"
+    },
+    {
+      "opcode": 504,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(S[BSB)V",
+          "constructor_offset": 7,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "S",
+              "offset": 20,
+              "value": "1"
+            },
+            {
+              "tag": 2,
+              "type": "X",
+              "offset": 34,
+              "value": "argument2 bytes"
+            },
+            {
+              "tag": 4,
+              "type": "S",
+              "offset": 53,
+              "value": "argument3 parameter",
+              "when": "argument3 != -1"
+            },
+            {
+              "tag": 5,
+              "type": "B",
+              "offset": 68,
+              "value": "argument4 purpose"
+            }
+          ],
+          "note": "First short argument ignored."
+        }
+      ],
+      "runtime_cases": [
+        "upload_parameter",
+        "upload_no_parameter"
+      ]
+    },
+    {
+      "opcode": 600,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(II)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "B",
+              "offset": 19,
+              "value": "argument1 new presence"
+            },
+            {
+              "tag": 2,
+              "type": "B",
+              "offset": 33,
+              "value": "argument2 old presence"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "presence"
+      ]
+    },
+    {
+      "opcode": 601,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "c:(Ljava/lang/String;Ljava/lang/String;)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 18,
+              "value": "argument1 new text"
+            },
+            {
+              "tag": 2,
+              "type": "T",
+              "offset": 31,
+              "value": "argument2 old text"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "status"
+      ]
+    },
+    {
+      "opcode": 602,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "d:(Ljava/lang/String;Ljava/lang/String;)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 18,
+              "value": "argument1 new avatar"
+            },
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 31,
+              "value": "argument2 old avatar overwrites new"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "avatar"
+      ]
+    },
+    {
+      "opcode": 703,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(Ljava/lang/String;Z)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 18,
+              "value": "argument1 room"
+            }
+          ],
+          "note": "Boolean argument ignored."
+        }
+      ],
+      "runtime_cases": [
+        "join_true",
+        "join_false"
+      ]
+    },
+    {
+      "opcode": 704,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(SLjava/lang/String;)V",
+          "constructor_offset": 6,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 16,
+              "value": "room"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "generic_text"
+      ],
+      "generic_callers": [
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 2773,
+          "line": 5174,
+          "opcode": 704,
+          "helper": "bc.a:(SLjava/lang/String;)V"
+        }
+      ]
+    },
+    {
+      "opcode": 706,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(SLjava/lang/String;Ljava/lang/String;)V",
+          "constructor_offset": 6,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 16,
+              "value": "argument3 room"
+            },
+            {
+              "tag": 2,
+              "type": "T",
+              "offset": 29,
+              "value": "argument2 target"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "generic_member"
+      ],
+      "generic_callers": [
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 16727,
+          "line": 11347,
+          "opcode": 706,
+          "helper": "bc.a:(SLjava/lang/String;Ljava/lang/String;)V"
+        }
+      ]
+    },
+    {
+      "opcode": 707,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(SLjava/lang/String;)V",
+          "constructor_offset": 6,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 16,
+              "value": "room"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "generic_participants"
+      ],
+      "generic_callers": [
+        {
+          "class_name": "aj",
+          "method": "keyPressed:(I)V",
+          "offset": 1276,
+          "line": 3030,
+          "opcode": 707,
+          "helper": "bc.a:(SLjava/lang/String;)V"
+        },
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 2523,
+          "line": 5058,
+          "opcode": 707,
+          "helper": "bc.a:(SLjava/lang/String;)V"
+        },
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 20926,
+          "line": 13090,
+          "opcode": 707,
+          "helper": "bc.a:(SLjava/lang/String;)V"
+        }
+      ]
+    },
+    {
+      "opcode": 709,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(SLjava/lang/String;Ljava/lang/String;)V",
+          "constructor_offset": 6,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 16,
+              "value": "argument3 room"
+            },
+            {
+              "tag": 2,
+              "type": "T",
+              "offset": 29,
+              "value": "argument2 target"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "generic_mute"
+      ],
+      "generic_callers": [
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 16689,
+          "line": 11331,
+          "opcode": 709,
+          "helper": "bc.a:(SLjava/lang/String;Ljava/lang/String;)V"
+        }
+      ]
+    },
+    {
+      "opcode": 710,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(SLjava/lang/String;Ljava/lang/String;)V",
+          "constructor_offset": 6,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 16,
+              "value": "argument3 room"
+            },
+            {
+              "tag": 2,
+              "type": "T",
+              "offset": 29,
+              "value": "argument2 target"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "generic_unmute"
+      ],
+      "generic_callers": [
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "offset": 1152,
+          "line": 4463,
+          "opcode": 710,
+          "helper": "bc.a:(SLjava/lang/String;Ljava/lang/String;)V"
+        }
+      ]
+    },
+    {
+      "opcode": 711,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "i:(Ljava/lang/String;)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 18,
+              "value": "room"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "add_favorite"
+      ]
+    },
+    {
+      "opcode": 712,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(Ljava/lang/String;S)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "S",
+              "offset": 18,
+              "value": "argument2 category"
+            },
+            {
+              "tag": 2,
+              "type": "T",
+              "offset": 31,
+              "value": "argument1 room"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "remove_favorite"
+      ]
+    },
+    {
+      "opcode": 713,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "b:()V",
+          "constructor_offset": 8,
+          "fields": []
+        }
+      ],
+      "runtime_cases": [
+        "room_categories"
+      ]
+    },
+    {
+      "opcode": 716,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(SB)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "S",
+              "offset": 18,
+              "value": "argument1 category"
+            },
+            {
+              "tag": 2,
+              "type": "B",
+              "offset": 31,
+              "value": "argument2 flag"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "category"
+      ]
+    },
+    {
+      "opcode": 751,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;B)V",
+          "constructor_offset": 40,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 53,
+              "value": "argument1 existing peer"
+            },
+            {
+              "tag": 2,
+              "type": "T",
+              "offset": 67,
+              "value": "argument2 invitee"
+            },
+            {
+              "tag": 3,
+              "type": "B",
+              "offset": 82,
+              "value": "argument4 service"
+            }
+          ],
+          "note": "Selected when argument3 group ID == null."
+        }
+      ],
+      "runtime_cases": [
+        "private_group_new"
+      ]
+    },
+    {
+      "opcode": 752,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;B)V",
+          "constructor_offset": 11,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 24,
+              "value": "argument3 group ID"
+            },
+            {
+              "tag": 2,
+              "type": "T",
+              "offset": 67,
+              "value": "argument2 invitee"
+            },
+            {
+              "tag": 3,
+              "type": "B",
+              "offset": 82,
+              "value": "argument4 service"
+            }
+          ],
+          "note": "Selected when argument3 group ID != null."
+        }
+      ],
+      "runtime_cases": [
+        "private_group_invite"
+      ]
+    },
+    {
+      "opcode": 753,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(Ljava/lang/String;B)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 18,
+              "value": "argument1 group ID"
+            },
+            {
+              "tag": 2,
+              "type": "B",
+              "offset": 31,
+              "value": "argument2 service"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "private_group_leave"
+      ]
+    },
+    {
+      "opcode": 754,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "b:(Ljava/lang/String;B)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 18,
+              "value": "argument1 group ID"
+            },
+            {
+              "tag": 2,
+              "type": "B",
+              "offset": 31,
+              "value": "argument2 service"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "private_group_members"
+      ]
+    },
+    {
+      "opcode": 800,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(Ljava/lang/String;Ljava/lang/String;II)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 4,
+              "type": "B",
+              "offset": 18,
+              "value": "0"
+            },
+            {
+              "tag": 5,
+              "type": "B",
+              "offset": 31,
+              "value": "1"
+            },
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 44,
+              "value": "argument1 origin"
+            },
+            {
+              "tag": 2,
+              "type": "T",
+              "offset": 57,
+              "value": "argument2 destination"
+            }
+          ],
+          "note": "Both integer arguments ignored."
+        }
+      ],
+      "runtime_cases": [
+        "callback",
+        "callback_changed"
+      ]
+    },
+    {
+      "opcode": 900,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "b:(Ljava/lang/String;Ljava/lang/String;)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 18,
+              "value": "argument1 mobile"
+            },
+            {
+              "tag": 2,
+              "type": "T",
+              "offset": 31,
+              "value": "argument2 name"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "invite_friend"
+      ]
+    },
+    {
+      "opcode": 904,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "h:(Ljava/lang/String;)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 2,
+              "type": "T",
+              "offset": 18,
+              "value": "mobile"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "forgot"
+      ]
+    },
+    {
+      "opcode": 907,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "b:(B)V",
+          "constructor_offset": null,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "B",
+              "offset": 22,
+              "value": "1"
+            }
+          ],
+          "note": "Mutates aj.aD opcode at12; retains all cached fields. Byte argument ignored."
+        },
+        {
+          "class_name": "aj",
+          "method": "commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V",
+          "constructor_offset": null,
+          "fields": [
+            {
+              "tag": 30,
+              "type": "B",
+              "offset": 16565,
+              "value": "aj.ao selected service"
+            }
+          ],
+          "note": "Caller creates906 cache if absent at16536, inserts service then calls bc.b:(B)V at16598."
+        }
+      ],
+      "runtime_cases": [
+        "cached_settings",
+        "cached_settings_changed_argument"
+      ]
+    },
+    {
+      "opcode": 913,
+      "status": "corrected",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(Ljava/lang/String;I)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 36,
+              "value": "argument1 token + literal U+0020"
+            },
+            {
+              "tag": 2,
+              "type": "I",
+              "offset": 49,
+              "value": "argument2 action mode"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "emoticon"
+      ],
+      "finding": "Pre-audit JSON claimed response914 mode1 can open animated/photo content. Original request-mode1 enables type2 vibration and type4 WAV playback. Request fields themselves were correct.",
+      "response_evidence": [
+        "bc.a:([Lay;)V@5819..5867 reads pending-request mode; type4 calls aj.a([BLjava/lang/String;)V; type2 calls aj.d(I)V",
+        "aj.d:(I)V@0..10 invokes Display.vibrate(500)",
+        "aj.a:([BLjava/lang/String;)V@17..33 invokes bd(byte[])",
+        "bd.<init>:([B)V@9..12 sets audio/x-wav; bd.run:()V@132..142 creates and starts Player"
+      ]
+    },
+    {
+      "opcode": 921,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(B)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "B",
+              "offset": 18,
+              "value": "argument1 subscription flag"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "activity_on",
+        "activity_off"
+      ]
+    },
+    {
+      "opcode": 922,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lbl;I)V",
+          "constructor_offset": 7,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "B",
+              "offset": 38,
+              "value": "argument3 != null ? 2 POST : 1 GET"
+            },
+            {
+              "tag": 2,
+              "type": "T",
+              "offset": 52,
+              "value": "argument2 URL"
+            },
+            {
+              "tag": 3,
+              "type": "T",
+              "offset": 70,
+              "value": "argument3 form body",
+              "when": "argument3 != null"
+            },
+            {
+              "tag": 4,
+              "type": "I",
+              "offset": 84,
+              "value": "argument1 purpose"
+            },
+            {
+              "tag": 5,
+              "type": "T",
+              "offset": 104,
+              "value": "argument4 asset/cache key",
+              "when": "argument4 != null"
+            },
+            {
+              "tag": 6,
+              "type": "I",
+              "offset": 119,
+              "value": "0"
+            },
+            {
+              "tag": 7,
+              "type": "T",
+              "offset": 136,
+              "value": "cell ID"
+            },
+            {
+              "tag": 8,
+              "type": "T",
+              "offset": 153,
+              "value": "LAC"
+            },
+            {
+              "tag": 9,
+              "type": "T",
+              "offset": 170,
+              "value": "MCC"
+            },
+            {
+              "tag": 10,
+              "type": "T",
+              "offset": 187,
+              "value": "MNC"
+            },
+            {
+              "tag": 11,
+              "type": "TA",
+              "offset": 223,
+              "value": "one assembled Cookie header string",
+              "when": "ac.a(URL) nonempty"
+            }
+          ],
+          "note": "Final integer argument ignored; callback stored in ay.b at238 is not a wire field."
+        },
+        {
+          "class_name": "s",
+          "method": "b:(Ljavax/microedition/lcdui/Graphics;)V",
+          "constructor_offset": 5283,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "B",
+              "offset": 5293,
+              "value": "1"
+            },
+            {
+              "tag": 2,
+              "type": "T",
+              "offset": 5333,
+              "value": "resolved body background URL"
+            },
+            {
+              "tag": 4,
+              "type": "I",
+              "offset": 5347,
+              "value": "2"
+            }
+          ],
+          "note": "Minimal HTML-parser object stored in s.F vector at5359; not evidence of full network-builder mandatory fields."
+        }
+      ],
+      "runtime_cases": [],
+      "detail_location": "protocol.md dedicated table, reviewed together with JSON summary"
+    },
+    {
+      "opcode": 925,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:(Ljava/lang/String;)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 18,
+              "value": "language code"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "language"
+      ]
+    },
+    {
+      "opcode": 926,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "a:([Lay;)V",
+          "constructor_offset": 4884,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "X",
+              "offset": 4908,
+              "value": "one byte: external descriptor service ID"
+            }
+          ],
+          "note": "Issued while processing208 if descriptor icon is not cached."
+        }
+      ],
+      "runtime_cases": []
+    },
+    {
+      "opcode": 1001,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "b:(Ljava/lang/String;)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 18,
+              "value": "language-list URL"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "language_list_job"
+      ],
+      "scope": "local HTTP job; not a gateway opcode"
+    },
+    {
+      "opcode": 1003,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "c:(Ljava/lang/String;)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 18,
+              "value": "language-pack URL"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "language_pack_job"
+      ],
+      "scope": "local HTTP job; not a gateway opcode"
+    },
+    {
+      "opcode": 1005,
+      "status": "verified",
+      "builders": [
+        {
+          "class_name": "bc",
+          "method": "g:(Ljava/lang/String;)V",
+          "constructor_offset": 8,
+          "fields": [
+            {
+              "tag": 1,
+              "type": "T",
+              "offset": 18,
+              "value": "raw HTTP URL"
+            }
+          ]
+        }
+      ],
+      "runtime_cases": [
+        "raw_http_job"
+      ],
+      "scope": "local HTTP job; not a gateway opcode"
+    }
+  ]
+}

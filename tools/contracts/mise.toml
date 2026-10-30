@@ -1,0 +1,9 @@
+# Contract validation tools only. The Go backend does not require Node or pnpm.
+# Node 26.12.1: 2026-10-21; pnpm 12.16.1: 2026-10-27.
+# Keep new tool releases at least three days old when updating these pins.
+[tools]
+node = "26.12.1"
+pnpm = "12.16.1"
+
+[settings]
+minimum_release_age = "3d"

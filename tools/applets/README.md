@@ -21,6 +21,17 @@ python3 tools/applets/scripts/prepare_runtime_assets.py
 
 This verifies the JAR and all four extracted resources before writing `data/applets/resources/v4/`. It requires Python only, does not download anything, and leaves the original JAR unchanged. These files stay ignored; a clean checkout can build and run core services without them. The [setup guide](SETUP.md#prepare-optional-backend-resources) describes the resource configuration and unavailable-download behavior.
 
+For the [v4 protocol source audit](../../research/applets/v4/docs/protocol-catalog-audit.md), the original v4 JAR, MicroEmulator, Python, and a JDK are sufficient; decompiled sources are unnecessary:
+
+```sh
+python3 tools/applets/v4/verify-protocol-evidence.py
+python3 tools/applets/v4/audit-outgoing.py
+python3 tools/applets/v4/audit-incoming.py
+python3 tools/applets/v4/audit-transports.py --write-catalog
+```
+
+These commands reproduce disassembly, check all outgoing/incoming catalog entries and endpoint references, and run isolated original-class probes. They do not start a MIDlet or connect to a service. The audit scripts write reviewed result JSON; raw dumps, compiled classes, and logs remain under ignored `artifacts/bytecode` and `data/protocol-audit` directories. See the audit report for scope and limits.
+
 The following research-generation commands require the complete extraction/decompilation corpus. Restore those inputs before regenerating maintained indexes; normal client setup uses the existing indexes. From the repository root:
 
 ```sh

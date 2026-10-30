@@ -13,6 +13,8 @@
 *.test
 .DS_Store
 __pycache__/
+node_modules/
+.pnpm-store/
 *.py[cod]
 *.class
 

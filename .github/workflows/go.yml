@@ -25,5 +25,7 @@ jobs:
         run: sh scripts/format-go.sh --check
       - name: Vet
         run: go vet ./...
+      - name: Check known Go vulnerabilities
+        run: sh scripts/check-go-vulnerabilities.sh
       - name: Test with race detector
         run: go test -race ./...

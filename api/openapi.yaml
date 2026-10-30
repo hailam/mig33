@@ -5,7 +5,9 @@ info:
   version: 1.0.0
   description: Current local mig33 4.62 reconstruction HTTP surface. Modern JSON endpoints
     are reconstruction extensions, not recovered historical URLs. Legacy pages retain
-    their real query-based URLs. TCP packet opcodes remain in protocol documentation.
+    their real query-based URLs. The original binary packet protocol is shared by
+    the HTTP tunnel and TCP; its message contract is in asyncapi.yaml. Compatibility
+    clients use these original surfaces without depending on the modern JSON API.
     Public URLs and listen addresses are configurable; this contract does not imply
     real SMS/email/payment providers. Generated HTTP DTOs belong only to the transport
     adapter.
@@ -28,7 +30,8 @@ tags:
 - name: operator
   description: Allowlisted local operator browser interface.
 - name: native-gateway
-  description: Original binary protocol over HTTP; TCP is documented separately.
+  description: Original binary protocol over HTTP. Logical packets are described in
+    asyncapi.yaml and shared with the original TCP transport.
 paths:
   "/healthz":
     get:
@@ -345,8 +348,8 @@ paths:
       - c
       - a
       - v
-      implementation: "../internal/services/page_routes.go"
-      dispatch: "../internal/services/application.go#pageForm"
+      implementation: "../internal/adapters/legacyweb/page_routes.go"
+      dispatch: "../internal/adapters/legacyweb/transport.go#pageForm"
       publicSelectors:
       - c: registration_api
         a: check_username
@@ -809,8 +812,10 @@ paths:
         image/gif although bytes are NOT a GIF. POST contains one or more native framed
         packets; errors within valid protocol packets normally remain HTTP 200 and
         use protocol opcode 0. GET drains queued packets immediately and may return
-        an empty body. Authentication and registration are protocol operations. TCP
-        9119 uses the same packet codec and is documented separately, outside OpenAPI.
+        an empty body. Authentication and registration are protocol operations. One
+        HTTP response can contain several logical messages from asyncapi.yaml; it is
+        not one message. TCP uses the same packet codec; its local port is configurable
+        and defaults to 9119.
         GET requires an authenticated session from the path or sid header.
     post:
       operationId: PostNativeRoot
@@ -833,18 +838,27 @@ paths:
       requestBody:
         required: true
         content:
+          image/gif:
+            schema:
+              type: string
+              format: binary
           application/octet-stream:
             schema:
               type: string
               format: binary
-        description: The implementation does not enforce request Content-Type. Maximum
-          body size equals protocol.MaxFrameSize.
+        description: One or more concatenated native frames. Original 4.62 clients
+          send image/gif, although the payload is not an image. application/octet-stream
+          is also accepted by this reconstruction, which does not enforce request
+          Content-Type. The total POST body is limited to protocol.MaxFrameSize
+          (1048576 bytes); this is a local server limit, not a recovered original limit.
       description: Original binary packet tunnel. The response MIME is historically
         image/gif although bytes are NOT a GIF. POST contains one or more native framed
         packets; errors within valid protocol packets normally remain HTTP 200 and
         use protocol opcode 0. GET drains queued packets immediately and may return
-        an empty body. Authentication and registration are protocol operations. TCP
-        9119 uses the same packet codec and is documented separately, outside OpenAPI.
+        an empty body. Authentication and registration are protocol operations. One
+        HTTP response can contain several logical messages from asyncapi.yaml; it is
+        not one message. TCP uses the same packet codec; its local port is configurable
+        and defaults to 9119.
   "/{sid}":
     get:
       operationId: PollNativeSession
@@ -869,8 +883,10 @@ paths:
         image/gif although bytes are NOT a GIF. POST contains one or more native framed
         packets; errors within valid protocol packets normally remain HTTP 200 and
         use protocol opcode 0. GET drains queued packets immediately and may return
-        an empty body. Authentication and registration are protocol operations. TCP
-        9119 uses the same packet codec and is documented separately, outside OpenAPI.
+        an empty body. Authentication and registration are protocol operations. One
+        HTTP response can contain several logical messages from asyncapi.yaml; it is
+        not one message. TCP uses the same packet codec; its local port is configurable
+        and defaults to 9119.
         GET requires an authenticated session from the path or sid header.
     post:
       operationId: PostNativeSession
@@ -894,18 +910,27 @@ paths:
       requestBody:
         required: true
         content:
+          image/gif:
+            schema:
+              type: string
+              format: binary
           application/octet-stream:
             schema:
               type: string
               format: binary
-        description: The implementation does not enforce request Content-Type. Maximum
-          body size equals protocol.MaxFrameSize.
+        description: One or more concatenated native frames. Original 4.62 clients
+          send image/gif, although the payload is not an image. application/octet-stream
+          is also accepted by this reconstruction, which does not enforce request
+          Content-Type. The total POST body is limited to protocol.MaxFrameSize
+          (1048576 bytes); this is a local server limit, not a recovered original limit.
       description: Original binary packet tunnel. The response MIME is historically
         image/gif although bytes are NOT a GIF. POST contains one or more native framed
         packets; errors within valid protocol packets normally remain HTTP 200 and
         use protocol opcode 0. GET drains queued packets immediately and may return
-        an empty body. Authentication and registration are protocol operations. TCP
-        9119 uses the same packet codec and is documented separately, outside OpenAPI.
+        an empty body. Authentication and registration are protocol operations. One
+        HTTP response can contain several logical messages from asyncapi.yaml; it is
+        not one message. TCP uses the same packet codec; its local port is configurable
+        and defaults to 9119.
 components:
   securitySchemes:
     SessionHeader:
@@ -1599,4 +1624,18 @@ components:
           "$ref": "#/components/schemas/Token"
       required:
       - csrf
-x-protocol-documentation: "../docs/protocol.md"
+x-protocol-documentation: "../research/applets/v4/docs/protocol.md"
+x-asyncapi-document: "asyncapi.yaml"
+x-original-client:
+  profile: "Java ME 4.62 build .000"
+  evidence: "../research/applets/v4/docs/endpoints.md"
+  tunnel:
+    request-content-type: image/gif
+    base-url-opcodes: [200, 100, 2, 904]
+    session-routing: Other outgoing packets append the session to the base URL when
+      it exists. Polls also use the session URL. Opcode 100 is observed in the original
+      transport's exception list without a recovered concrete outgoing builder.
+    http-message-boundary: HTTP bodies carry zero or more concatenated packets in
+      responses and one or more packets in requests. Binary framing defines packet
+      boundaries independently of the HTTP body.
+    header-evidence: "../research/applets/v4/docs/endpoints.md#how-requests-and-authentication-work"
