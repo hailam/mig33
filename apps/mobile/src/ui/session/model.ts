@@ -1,9 +1,7 @@
 import type { ClientState, Contact, ContactGroup, EmoticonAsset, EmoticonCatalog, RoomParticipant, RoomSummary, ServerMenuEntry } from '../../mig33/client.ts';
 export type { RoomParticipant, RoomSummary } from '../../mig33/client.ts';
 
-export type ConnectionSettings =
-  | { mode: 'http'; httpURL: string }
-  | { mode: 'tcp'; host: string; port: string };
+export type { ConnectionSettings } from '../connectionSettings.ts';
 
 export interface LoginCredentials { username: string; password: string; invisible?: boolean; }
 export interface TranscriptRow {

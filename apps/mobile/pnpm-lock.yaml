@@ -165,6 +165,7 @@ settings:
 patchedDependencies:
   glob@13.0.6: 3d78a090ade9490cd8c06307bad295ae5df0c4fddc0b0349c7f89ffc97e8d870
   minimatch@10.2.6: ee6b487bb3d056ecea8ae5f853f2a8a79f273b1460e84a3f92bc8d9285c15ac2
+  react-native-tcp-socket@6.4.3: ee3504cb47324ca7b4bd42fc523eae4685c0c04b79ad5e71d8799a43eb3efbe7
 
 importers:
 
@@ -202,7 +203,7 @@ importers:
         version: 0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1)
       react-native-tcp-socket:
         specifier: 6.4.3
-        version: 6.4.3(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1))
+        version: 6.4.3(patch_hash=ee3504cb47324ca7b4bd42fc523eae4685c0c04b79ad5e71d8799a43eb3efbe7)(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1))
     devDependencies:
       '@types/node':
         specifier: 26.6.5
@@ -4743,7 +4744,7 @@ snapshots:
 
   react-is@18.3.1: {}
 
-  react-native-tcp-socket@6.4.3(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1)):
+  react-native-tcp-socket@6.4.3(patch_hash=ee3504cb47324ca7b4bd42fc523eae4685c0c04b79ad5e71d8799a43eb3efbe7)(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1)):
     dependencies:
       buffer: 5.7.1
       eventemitter3: 4.0.7

@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"crypto/tls"
 	"errors"
 	"io"
 	"log/slog"
@@ -24,6 +25,13 @@ func run(ctx context.Context, arguments []string, _ io.Writer, stderr io.Writer)
 	if err != nil {
 		return err
 	}
+	var secure *tls.Config
+	if cfg.Socket.TLSListen != "" {
+		secure, err = wiring.LoadTLS(cfg.TLS)
+		if err != nil {
+			return err
+		}
+	}
 	logger := slog.New(slog.NewTextHandler(stderr, nil))
 	graph, cleanup, err := wiring.Open(ctx, cfg, logger)
 	if err != nil {
@@ -34,8 +42,16 @@ func run(ctx context.Context, arguments []string, _ io.Writer, stderr io.Writer)
 	if err != nil {
 		return err
 	}
-	return bootstrap.Run(ctx, cfg.ShutdownTimeout, logger,
-		bootstrap.Component{Name: "application", Run: graph.Core.Run},
-		bootstrap.Component{Name: "Socket", Start: socketServer.Start, Run: socketServer.Run, Stop: socketServer.Stop},
-	)
+	components := []bootstrap.Component{
+		{Name: "application", Run: graph.Core.Run},
+		{Name: "Socket", Start: socketServer.Start, Run: socketServer.Run, Stop: socketServer.Stop},
+	}
+	if cfg.Socket.TLSListen != "" {
+		tlsServer, err := socket.NewTLSListener(socket.New(graph.Native), cfg.Socket.TLSListen, secure, cfg.TLS.HandshakeTimeout, logger)
+		if err != nil {
+			return err
+		}
+		components = append(components, bootstrap.Component{Name: "TLS socket", Start: tlsServer.Start, Run: tlsServer.Run, Stop: tlsServer.Stop})
+	}
+	return bootstrap.Run(ctx, cfg.ShutdownTimeout, logger, components...)
 }

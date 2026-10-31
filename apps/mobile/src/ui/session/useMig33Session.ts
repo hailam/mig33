@@ -1,16 +1,12 @@
 import { useEffect, useRef, useSyncExternalStore } from 'react';
 import { AppState, Platform } from 'react-native';
 import { Mig33Client } from '../../mig33/client.ts';
-import { HTTPTransport } from '../../mig33/transport/http.ts';
-import { createTCPTransport } from '../../mig33/transport/tcp.native.ts';
+import { createSecureTransport } from '../connection.ts';
 import { SessionController } from './controller.ts';
 import type { ConnectionSettings } from './model.ts';
 
 function createClient(connection: ConnectionSettings): Mig33Client {
-  if (connection.mode === 'http') return new Mig33Client(new HTTPTransport(connection.httpURL));
-  const port = Number(connection.port);
-  if (!Number.isInteger(port) || port < 1 || port > 65535) throw new Error('Enter a TCP port from 1 to 65535');
-  return new Mig33Client(createTCPTransport(connection.host.trim(), port));
+  return new Mig33Client(createSecureTransport(connection));
 }
 
 export function useMig33Session() {

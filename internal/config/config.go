@@ -28,6 +28,7 @@ type Config struct {
 	Resources       Resources     `yaml:"resources"`
 	HTTP            HTTP          `yaml:"http"`
 	Socket          Socket        `yaml:"socket"`
+	TLS             TLS           `yaml:"tls"`
 	ShutdownTimeout time.Duration `yaml:"shutdown_timeout"`
 	Operators       []string      `yaml:"operators"`
 }
@@ -44,6 +45,7 @@ type Resources struct {
 
 type HTTP struct {
 	Listen            string        `yaml:"listen"`
+	TLSListen         string        `yaml:"tls_listen"`
 	ReadHeaderTimeout time.Duration `yaml:"read_header_timeout"`
 	ReadTimeout       time.Duration `yaml:"read_timeout"`
 	WriteTimeout      time.Duration `yaml:"write_timeout"`
@@ -52,7 +54,14 @@ type HTTP struct {
 }
 
 type Socket struct {
-	Listen string `yaml:"listen"`
+	Listen    string `yaml:"listen"`
+	TLSListen string `yaml:"tls_listen"`
+}
+
+type TLS struct {
+	CertFile         string        `yaml:"cert_file"`
+	KeyFile          string        `yaml:"key_file"`
+	HandshakeTimeout time.Duration `yaml:"handshake_timeout"`
 }
 
 type LoadOptions struct {
@@ -74,8 +83,9 @@ type LoadOptions struct {
 }
 
 type Overrides struct {
-	PublicURL, DatabasePath, HTTPListen, SocketListen *string
-	Operators                                         *[]string
+	PublicURL, DatabasePath, HTTPListen, SocketListen       *string
+	HTTPTLSListen, SocketTLSListen, TLSCertFile, TLSKeyFile *string
+	Operators                                               *[]string
 }
 
 func (overrides Overrides) apply(config *Config) {
@@ -84,6 +94,10 @@ func (overrides Overrides) apply(config *Config) {
 		{overrides.DatabasePath, &config.Database.Path},
 		{overrides.HTTPListen, &config.HTTP.Listen},
 		{overrides.SocketListen, &config.Socket.Listen},
+		{overrides.HTTPTLSListen, &config.HTTP.TLSListen},
+		{overrides.SocketTLSListen, &config.Socket.TLSListen},
+		{overrides.TLSCertFile, &config.TLS.CertFile},
+		{overrides.TLSKeyFile, &config.TLS.KeyFile},
 	} {
 		if field.source != nil {
 			*field.target = *field.source
@@ -213,7 +227,8 @@ func environmentMap(environ []string) (map[string]string, error) {
 		case "MIG33_CONFIG_DIR", "MIG33_ENV", "MIG33_PUBLIC_URL", "MIG33_DATABASE_PATH", "MIG33_RESOURCES_DIRECTORY",
 			"MIG33_HTTP_LISTEN", "MIG33_HTTP_READ_HEADER_TIMEOUT", "MIG33_HTTP_READ_TIMEOUT",
 			"MIG33_HTTP_WRITE_TIMEOUT", "MIG33_HTTP_IDLE_TIMEOUT", "MIG33_HTTP_MAX_HEADER_BYTES",
-			"MIG33_SOCKET_LISTEN", "MIG33_SHUTDOWN_TIMEOUT", "MIG33_OPERATORS":
+			"MIG33_SOCKET_LISTEN", "MIG33_SHUTDOWN_TIMEOUT", "MIG33_OPERATORS",
+			"MIG33_HTTP_TLS_LISTEN", "MIG33_SOCKET_TLS_LISTEN", "MIG33_TLS_CERT_FILE", "MIG33_TLS_KEY_FILE", "MIG33_TLS_HANDSHAKE_TIMEOUT":
 			result[key] = value
 		default:
 			return nil, fmt.Errorf("unknown configuration environment variable %s", key)
@@ -228,6 +243,10 @@ func applyEnvironment(config *Config, environment map[string]string) error {
 		"MIG33_DATABASE_PATH":       &config.Database.Path,
 		"MIG33_HTTP_LISTEN":         &config.HTTP.Listen,
 		"MIG33_SOCKET_LISTEN":       &config.Socket.Listen,
+		"MIG33_HTTP_TLS_LISTEN":     &config.HTTP.TLSListen,
+		"MIG33_SOCKET_TLS_LISTEN":   &config.Socket.TLSListen,
+		"MIG33_TLS_CERT_FILE":       &config.TLS.CertFile,
+		"MIG33_TLS_KEY_FILE":        &config.TLS.KeyFile,
 		"MIG33_RESOURCES_DIRECTORY": &config.Resources.Directory,
 	}
 	for key, target := range stringsByKey {
@@ -241,6 +260,7 @@ func applyEnvironment(config *Config, environment map[string]string) error {
 		"MIG33_HTTP_WRITE_TIMEOUT":       &config.HTTP.WriteTimeout,
 		"MIG33_HTTP_IDLE_TIMEOUT":        &config.HTTP.IdleTimeout,
 		"MIG33_SHUTDOWN_TIMEOUT":         &config.ShutdownTimeout,
+		"MIG33_TLS_HANDSHAKE_TIMEOUT":    &config.TLS.HandshakeTimeout,
 	}
 	for key, target := range durations {
 		if value, ok := environment[key]; ok {
@@ -291,6 +311,7 @@ func (config Config) Validate() error {
 		"http.write_timeout":       config.HTTP.WriteTimeout,
 		"http.idle_timeout":        config.HTTP.IdleTimeout,
 		"shutdown_timeout":         config.ShutdownTimeout,
+		"tls.handshake_timeout":    config.TLS.HandshakeTimeout,
 	} {
 		if value <= 0 {
 			return fmt.Errorf("%s must be positive", name)
@@ -298,6 +319,9 @@ func (config Config) Validate() error {
 	}
 	if config.HTTP.MaxHeaderBytes < 1024 || config.HTTP.MaxHeaderBytes > 16*1024*1024 {
 		return fmt.Errorf("http.max_header_bytes must be between 1024 and 16777216")
+	}
+	if (config.TLS.CertFile == "") != (config.TLS.KeyFile == "") {
+		return fmt.Errorf("tls.cert_file and tls.key_file must be configured together")
 	}
 	for _, name := range config.Operators {
 		if strings.TrimSpace(name) == "" || strings.TrimSpace(name) != name || strings.ContainsAny(name, ",\r\n\x00") {

@@ -21,6 +21,7 @@ type Flags struct {
 	Set                                                        *flag.FlagSet
 	directory, environment, publicURL, databasePath, operators *string
 	httpAddress, socketAddress                                 *string
+	httpsAddress, tlsSocketAddress, tlsCertFile, tlsKeyFile    *string
 	overlays                                                   overlayFlags
 }
 
@@ -37,9 +38,23 @@ func NewFlags(name string, stderr io.Writer) *Flags {
 	return f
 }
 
-func (f *Flags) HTTP() { f.httpAddress = f.Set.String("http", "", "override HTTP listen address") }
+func (f *Flags) HTTP() {
+	f.httpAddress = f.Set.String("http", "", "override HTTP listen address")
+	f.httpsAddress = f.Set.String("https", "", "optional HTTPS native gateway listen address; empty disables")
+	f.tls()
+}
+
 func (f *Flags) Socket() {
 	f.socketAddress = f.Set.String("tcp", "", "override native socket listen address")
+	f.tlsSocketAddress = f.Set.String("tls-tcp", "", "optional TLS native socket listen address; empty disables")
+	f.tls()
+}
+
+func (f *Flags) tls() {
+	if f.tlsCertFile == nil {
+		f.tlsCertFile = f.Set.String("tls-cert", "", "TLS certificate chain PEM file")
+		f.tlsKeyFile = f.Set.String("tls-key", "", "TLS private key PEM file")
+	}
 }
 
 // Parse checks command syntax before reading configuration. Entrypoints can
@@ -71,6 +86,14 @@ func (f *Flags) Load() (config.Config, error) {
 			options.Overrides.HTTPListen = f.httpAddress
 		case "tcp":
 			options.Overrides.SocketListen = f.socketAddress
+		case "https":
+			options.Overrides.HTTPTLSListen = f.httpsAddress
+		case "tls-tcp":
+			options.Overrides.SocketTLSListen = f.tlsSocketAddress
+		case "tls-cert":
+			options.Overrides.TLSCertFile = f.tlsCertFile
+		case "tls-key":
+			options.Overrides.TLSKeyFile = f.tlsKeyFile
 		case "public-url":
 			options.Overrides.PublicURL = f.publicURL
 		case "db":
@@ -92,6 +115,23 @@ func (f *Flags) Load() (config.Config, error) {
 	if f.socketAddress != nil {
 		if err := config.ValidateListener("socket.listen", configuration.Socket.Listen); err != nil {
 			return config.Config{}, err
+		}
+	}
+	for _, listener := range []struct {
+		selected      *string
+		name, address string
+	}{
+		{f.httpsAddress, "http.tls_listen", configuration.HTTP.TLSListen},
+		{f.tlsSocketAddress, "socket.tls_listen", configuration.Socket.TLSListen},
+	} {
+		if listener.selected == nil || listener.address == "" {
+			continue
+		}
+		if err := config.ValidateListener(listener.name, listener.address); err != nil {
+			return config.Config{}, err
+		}
+		if configuration.TLS.CertFile == "" || configuration.TLS.KeyFile == "" {
+			return config.Config{}, fmt.Errorf("%s requires tls.cert_file and tls.key_file", listener.name)
 		}
 	}
 	return configuration, nil

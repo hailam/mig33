@@ -10,7 +10,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE_ROOTS = ("cmd", "configs", "db", "internal", "tools/contracts")
+SOURCE_ROOTS = ("cmd", "configs", "db", "internal", "tools/contracts", "tools/devcert")
 TOOLS = {
     "goimports": ("golang.org/x/tools", "golang.org/x/tools/cmd/goimports", "v0.52.0"),
     "gofumpt": ("mvdan.cc/gofumpt", "mvdan.cc/gofumpt", "v0.12.0"),

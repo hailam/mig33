@@ -24,6 +24,28 @@ type Controller interface {
 	ServeNativeGateway(http.ResponseWriter, *http.Request)
 }
 
+// NewGateway exposes only the original binary tunnel and readiness endpoint.
+// It deliberately omits browser, JSON API and direct resource routes: those
+// retain their original HTTP origin and authentication policy. Page and media
+// packets still travel through this tunnel unchanged.
+func NewGateway(app interface {
+	ServeHealth(http.ResponseWriter, *http.Request)
+	ServeNativeGateway(http.ResponseWriter, *http.Request)
+},
+) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Cache-Control", "no-store")
+		if r.URL.Path == "/healthz" {
+			app.ServeHealth(w, r)
+			return
+		}
+		// The existing handler rejects every path other than / and /{sid},
+		// including known browser/JSON/resource paths. Keep its original method,
+		// session and malformed-packet validation order.
+		app.ServeNativeGateway(w, r)
+	})
+}
+
 func New(app Controller) http.Handler {
 	mux := http.NewServeMux()
 	// Exact legacy URLs and prefixes are registered in one place. Narrower

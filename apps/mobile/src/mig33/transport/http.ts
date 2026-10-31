@@ -11,8 +11,15 @@ export class HTTPTransportError extends Error {
   }
 }
 
+export type HTTPFetch = (url: string, init: {
+  method: 'POST' | 'GET'; headers: Record<string, string>; body?: ArrayBuffer;
+  signal: AbortSignal; redirect: 'error'; credentials: 'omit';
+}) => Promise<Pick<Response, 'status' | 'headers' | 'arrayBuffer' | 'url' | 'redirected'>>;
+
 interface HTTPOptions {
-  fetch?: typeof globalThis.fetch;
+  fetch?: HTTPFetch;
+  /** App policy; plain HTTP remains available to original compatibility tests. */
+  requireHTTPS?: boolean;
   pollIntervalMs?: number;
   timeoutMs?: number;
 }
@@ -23,7 +30,7 @@ const basePathOpcodes = new Set<number>(nativeHTTP.basePathOpcodes);
 export class HTTPTransport implements PacketTransport {
   readonly kind = 'http' as const;
   private readonly base: string;
-  private readonly fetcher: typeof globalThis.fetch;
+  private readonly fetcher: HTTPFetch;
   private readonly interval: number;
   private readonly timeout: number;
   private events?: TransportEvents;
@@ -36,6 +43,7 @@ export class HTTPTransport implements PacketTransport {
 
   constructor(baseURL: string, options: HTTPOptions = {}) {
     const url = new URL(baseURL);
+    if (options.requireHTTPS && url.protocol !== 'https:') throw new Error('This app requires an HTTPS gateway.');
     if (!['http:', 'https:'].includes(url.protocol) || url.username || url.password ||
         url.search || url.hash || url.pathname !== '/') {
       throw new Error('Use an HTTP gateway origin, such as http://127.0.0.1:8080');
@@ -128,8 +136,11 @@ export class HTTPTransport implements PacketTransport {
     try {
       const response = await this.fetcher(url, {
         method: packet ? 'POST' : 'GET', headers, body,
-        signal: controller.signal, redirect: 'error',
+        signal: controller.signal, redirect: 'error', credentials: 'omit',
       });
+      // Defense in depth only: the injected fetch must reject redirects before
+      // sending any new request. A post-response check cannot prevent leakage.
+      if (response.redirected || (response.url && response.url !== url)) throw new Error('HTTP gateway redirects are not allowed.');
       if (response.status !== 200) throw new HTTPTransportError(response.status);
       // Local gateway returns at most256 frames per response; retain a total
       // bound as well as the codec's individual1MiB frame bound.

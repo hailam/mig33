@@ -2,6 +2,7 @@ import React, { useMemo, useRef, useState } from 'react';
 import { LayoutAnimation, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useAppearance } from '../appearance';
 import { ModernLogo } from '../ModernLogo';
+import type { ConnectionForm } from '../connectionSettings';
 import { V4Button, V4Checkbox, V4ChoiceGroup, V4Field, V4Icon, V4Link, V4Logo, type V4FieldRef } from '../v4/primitives';
 
 export interface LoginForm {
@@ -145,21 +146,21 @@ export function LoginScreen({ form, onChange, busy, onLogin, onConnection, onApp
 }
 
 export function ConnectionChooser({ onChoose, onManual, busy }: {
-  onChoose: (mode: 'http' | 'tcp') => void; onManual: () => void; busy: boolean;
+  onChoose: (mode: 'https' | 'tls') => void; onManual: () => void; busy: boolean;
 }) {
   const { modern, v3 } = useAppearance();
   const styles = useStyles();
   return <ScrollView contentContainerStyle={styles.form}>
     {v3 && <View pointerEvents="none" style={styles.watermark}><V4Logo width={118} /></View>}
     {modern && <Text accessibilityRole="header" style={styles.title}>Your connection</Text>}
-    <Text style={styles.text}>Please select your connection type below. If you are unsure, try TCP first.</Text>
-    <V4Button label="TCP" variant="secondary" onPress={() => onChoose('tcp')} disabled={busy} style={modern ? styles.connectionAction : undefined} />
-    <V4Button label="HTTP" variant="secondary" onPress={() => onChoose('http')} disabled={busy} style={modern ? styles.connectionAction : undefined} />
+    <Text style={styles.text}>Both connections are encrypted and verify the server certificate. If you are unsure, choose HTTPS.</Text>
+    <V4Button testID="connection.https" label="HTTPS" variant="secondary" onPress={() => onChoose('https')} disabled={busy} style={modern ? styles.connectionAction : undefined} />
+    <V4Button testID="connection.tls" label="TLS" variant="secondary" onPress={() => onChoose('tls')} disabled={busy} style={modern ? styles.connectionAction : undefined} />
     <V4Button testID="connection.manual" label="Manual" variant="secondary" onPress={onManual} disabled={busy} style={modern ? styles.connectionAction : undefined} />
   </ScrollView>;
 }
 
-export interface ConnectionForm { host: string; port: string; mode: 'http' | 'tcp'; }
+export type { ConnectionForm } from '../connectionSettings';
 /** Original manual form13. Local server addresses replace the historical host. */
 export function ManualConnectionScreen({ form, onChange, onConnect, busy }: {
   form: ConnectionForm; onChange: (change: Partial<ConnectionForm>) => void;
@@ -171,7 +172,7 @@ export function ManualConnectionScreen({ form, onChange, onConnect, busy }: {
   return <ScrollView contentContainerStyle={styles.form} keyboardShouldPersistTaps="handled" keyboardDismissMode="on-drag">
     {modern && <View style={styles.intro}>
       <Text accessibilityRole="header" style={styles.title}>Connection settings</Text>
-      <Text style={styles.subtitle}>Choose your server and connection type.</Text>
+      <Text style={styles.subtitle}>Choose your encrypted server connection. Its certificate must be trusted by this device.</Text>
     </View>}
     <V4Field testID="connection.host" label="Server" value={form.host}
       onChangeText={(host) => onChange({ host })} autoCapitalize="none" autoCorrect={false} editable={!busy}
@@ -181,12 +182,12 @@ export function ManualConnectionScreen({ form, onChange, onConnect, busy }: {
       onChangeText={(port) => onChange({ port })} keyboardType="number-pad" editable={!busy} />
     {/* Explicit transport selection extends v3 form13 for arbitrary local endpoints. */}
     {modern ? <V4ChoiceGroup label="Connection type" variant="segmented" value={form.mode} disabled={busy}
-      options={[{ value: 'tcp', label: 'TCP', testID: 'connection.tcp' }, { value: 'http', label: 'HTTP', testID: 'connection.http' }]}
-      onChange={(mode) => { if (!busy && (mode === 'http' || mode === 'tcp')) onChange({ mode }); }} /> : <>
-    <V4Checkbox testID="connection.tcp" label="TCP" checked={form.mode === 'tcp'}
-      onChange={() => onChange({ mode: 'tcp' })} disabled={busy} />
-    <V4Checkbox testID="connection.http" label="HTTP" checked={form.mode === 'http'}
-      onChange={() => onChange({ mode: 'http' })} disabled={busy} />
+      options={[{ value: 'https', label: 'HTTPS', testID: 'connection.https' }, { value: 'tls', label: 'TLS', testID: 'connection.tls' }]}
+      onChange={(mode) => { if (!busy && (mode === 'https' || mode === 'tls')) onChange({ mode }); }} /> : <>
+    <V4Checkbox testID="connection.https" label="HTTPS" checked={form.mode === 'https'}
+      onChange={() => onChange({ mode: 'https' })} disabled={busy} />
+    <V4Checkbox testID="connection.tls" label="TLS" checked={form.mode === 'tls'}
+      onChange={() => onChange({ mode: 'tls' })} disabled={busy} />
     </>}
     <V4Button testID="connection.save" label="Connect" onPress={onConnect} busy={busy} style={modern ? styles.connectionAction : undefined} />
   </ScrollView>;

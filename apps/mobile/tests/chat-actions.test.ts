@@ -26,7 +26,7 @@ class Transport implements PacketTransport {
   close(): void {}
 }
 const credentials = { username: 'alice', password: 'alice-demo' };
-const connection = { mode: 'http', httpURL: 'http://localhost:8080' } as const;
+const connection = { mode: 'https', httpURL: 'https://localhost:8443' } as const;
 async function setup() {
   const transports: Transport[] = [];
   const controller = new SessionController(() => {

@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"crypto/tls"
 	"errors"
 	"io"
 	"log/slog"
@@ -26,6 +27,13 @@ func run(ctx context.Context, arguments []string, _ io.Writer, stderr io.Writer)
 	if err != nil {
 		return err
 	}
+	var secure *tls.Config
+	if cfg.HTTP.TLSListen != "" {
+		secure, err = wiring.LoadTLS(cfg.TLS)
+		if err != nil {
+			return err
+		}
+	}
 	logger := slog.New(slog.NewTextHandler(stderr, nil))
 	graph, cleanup, err := wiring.Open(ctx, cfg, logger)
 	if err != nil {
@@ -44,8 +52,24 @@ func run(ctx context.Context, arguments []string, _ io.Writer, stderr io.Writer)
 	if err != nil {
 		return err
 	}
-	return bootstrap.Run(ctx, cfg.ShutdownTimeout, logger,
-		bootstrap.Component{Name: "application", Run: graph.Core.Run},
-		bootstrap.Component{Name: "HTTP", Start: httpServer.Start, Run: httpServer.Run, Stop: httpServer.Stop},
-	)
+	components := []bootstrap.Component{
+		{Name: "application", Run: graph.Core.Run},
+		{Name: "HTTP", Start: httpServer.Start, Run: httpServer.Run, Stop: httpServer.Stop},
+	}
+	if cfg.HTTP.TLSListen != "" {
+		httpsServer, err := httptransport.NewTLSServer(&http.Server{
+			Addr:              cfg.HTTP.TLSListen,
+			Handler:           httptransport.NewGateway(controllers.New(graph.HTTP)),
+			ReadHeaderTimeout: cfg.HTTP.ReadHeaderTimeout,
+			ReadTimeout:       cfg.HTTP.ReadTimeout,
+			WriteTimeout:      cfg.HTTP.WriteTimeout,
+			IdleTimeout:       cfg.HTTP.IdleTimeout,
+			MaxHeaderBytes:    cfg.HTTP.MaxHeaderBytes,
+		}, secure, cfg.TLS.HandshakeTimeout, logger)
+		if err != nil {
+			return err
+		}
+		components = append(components, bootstrap.Component{Name: "HTTPS", Start: httpsServer.Start, Run: httpsServer.Run, Stop: httpsServer.Stop})
+	}
+	return bootstrap.Run(ctx, cfg.ShutdownTimeout, logger, components...)
 }

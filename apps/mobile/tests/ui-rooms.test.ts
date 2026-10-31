@@ -25,7 +25,7 @@ class RoomTransport implements PacketTransport {
   receive(...packets: Packet[]): void { this.events!.packets(packets); }
 }
 const credentials = { username: 'alice', password: 'alice-demo' };
-const connection = { mode: 'http', httpURL: 'http://localhost:8080' } as const;
+const connection = { mode: 'https', httpURL: 'https://localhost:8443' } as const;
 function setup() {
   const transports: RoomTransport[] = [];
   const controller = new SessionController(() => {

@@ -1,10 +1,11 @@
-import { spawn } from 'node:child_process';
+import { execFile, spawn } from 'node:child_process';
 import { createWriteStream } from 'node:fs';
 import { mkdir, mkdtemp } from 'node:fs/promises';
 import { createServer } from 'node:net';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { setTimeout as delay } from 'node:timers/promises';
+import { promisify } from 'node:util';
 import { writeTestResources } from '../../../../tools/mobile/test-resources.mjs';
 
 export const repositoryRoot = fileURLToPath(new URL('../../../../', import.meta.url));
@@ -14,6 +15,7 @@ export interface TestServer {
   httpPort: number;
   tcpPort: number;
   outputDirectory: string;
+  secure?: { httpsURL: string; httpsPort: number; tlsPort: number; directory: string };
   close(): Promise<void>;
 }
 
@@ -34,7 +36,7 @@ async function unusedPort(): Promise<number> {
 }
 
 /** Start an isolated real Go process; never reuse the developer's database/ports. */
-export async function startServer(binary = process.env.MIG33_TEST_SERVER_BINARY): Promise<TestServer> {
+export async function startServer(binary = process.env.MIG33_TEST_SERVER_BINARY, options: { tls?: boolean } = {}): Promise<TestServer> {
   if (!binary) throw new Error('Set MIG33_TEST_SERVER_BINARY to a built cmd/omni executable');
   const outputRoot = join(repositoryRoot, 'data/mobile-integration/runs');
   await mkdir(outputRoot, { recursive: true });
@@ -44,6 +46,19 @@ export async function startServer(binary = process.env.MIG33_TEST_SERVER_BINARY)
   let tcpPort = await unusedPort();
   while (tcpPort === httpPort) tcpPort = await unusedPort();
   const httpURL = `http://127.0.0.1:${httpPort}`;
+  let secure: TestServer['secure'];
+  if (options.tls) {
+    const directory = join(outputDirectory, 'tls');
+    await promisify(execFile)('go', ['run', './tools/devcert', '-out', directory, '-test-fixtures'], { cwd: repositoryRoot });
+    const ports = new Set([httpPort, tcpPort]);
+    const nextPort = async () => {
+      let value = await unusedPort();
+      while (ports.has(value)) value = await unusedPort();
+      ports.add(value); return value;
+    };
+    const httpsPort = await nextPort(), tlsPort = await nextPort();
+    secure = { httpsURL: `https://127.0.0.1:${httpsPort}`, httpsPort, tlsPort, directory };
+  }
   // Config is explicit; inherited MIG33_TEST_* variables are not server config.
   const env = { ...process.env };
   for (const key of Object.keys(env)) if (key.startsWith('MIG33_')) delete env[key];
@@ -55,6 +70,8 @@ export async function startServer(binary = process.env.MIG33_TEST_SERVER_BINARY)
     '-config-dir', join(repositoryRoot, 'configs'), '-env', '',
     '-http', `127.0.0.1:${httpPort}`, '-tcp', `127.0.0.1:${tcpPort}`,
     '-public-url', httpURL, '-db', ':memory:', '-operators', '',
+    ...(secure ? ['-https', `127.0.0.1:${secure.httpsPort}`, '-tls-tcp', `127.0.0.1:${secure.tlsPort}`,
+      '-tls-cert', join(secure.directory, 'server.pem'), '-tls-key', join(secure.directory, 'server-key.pem')] : []),
   ], { cwd: repositoryRoot, env, stdio: ['ignore', 'pipe', 'pipe'] });
   let failure: Error | undefined;
   child.once('error', (error) => { failure = error; });
@@ -83,7 +100,7 @@ export async function startServer(binary = process.env.MIG33_TEST_SERVER_BINARY)
       }
       try {
         const response = await fetch(httpURL + '/healthz', { signal: AbortSignal.timeout(700) });
-        if (response.ok) return { httpURL, httpPort, tcpPort, outputDirectory, close };
+        if (response.ok) return { httpURL, httpPort, tcpPort, outputDirectory, secure, close };
       } catch { /* Listener is not ready yet. */ }
       await delay(50);
     }

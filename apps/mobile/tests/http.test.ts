@@ -42,6 +42,7 @@ test('HTTP preserves binary POSTs, original MIME, SID routing exceptions and HTT
       assert.equal(new Headers(call.init.headers).get('content-type'), 'image/gif');
       assert.equal(new Headers(call.init.headers).get('sid'), 'abc123');
       assert.equal(call.init.redirect, 'error');
+      assert.equal(call.init.credentials, 'omit');
       const packet = decodeFrames(new Uint8Array(call.init.body as ArrayBuffer))[0];
       assert.equal(packet.transaction, packet.opcode);
     }
@@ -164,4 +165,27 @@ test('HTTP gateway configuration rejects path, credentials and query-based origi
     assert.throws(() => new HTTPTransport(url), /origin/);
   }
   assert.throws(() => new HTTPTransport('http://localhost', { pollIntervalMs: 0 }), RangeError);
+});
+
+test('secure HTTP policy rejects cleartext before a fetch and rejects reported redirection without delivering packets', async () => {
+  let calls = 0;
+  assert.throws(() => new HTTPTransport('http://localhost:8080', {
+    requireHTTPS: true, fetch: fetcher(() => { calls++; return response(); }),
+  }), /HTTPS/);
+  assert.equal(calls, 0);
+  for (const metadata of [{ redirected: true, url: 'https://localhost:8443/' },
+    { redirected: false, url: 'https://other.example/' }, { redirected: false, url: 'http://localhost:8443/' }]) {
+    const sink = events();
+    const transport = new HTTPTransport('https://localhost:8443', { requireHTTPS: true, fetch: fetcher((call) => {
+      assert.equal(call.init.redirect, 'error');
+      assert.equal(call.init.credentials, 'omit');
+      const result = response(new Packet(201, 1).setText(2, 'unexpected'));
+      Object.defineProperties(result, { redirected: { value: metadata.redirected }, url: { value: metadata.url } });
+      return result;
+    }) });
+    await transport.connect(sink.handlers);
+    await assert.rejects(transport.send(new Packet(200, 1)), /redirects/);
+    assert.equal(sink.packets.length, 0);
+    assert.equal(sink.errors.length, 1);
+  }
 });

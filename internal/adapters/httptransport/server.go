@@ -2,6 +2,7 @@ package httptransport
 
 import (
 	"context"
+	"crypto/tls"
 	"errors"
 	"fmt"
 	"log/slog"
@@ -21,6 +22,8 @@ type Server struct {
 	stopped  bool
 	active   int
 	idle     chan struct{}
+	tls      bool
+	pending  map[net.Conn]struct{}
 }
 
 func NewServer(server *http.Server, logger *slog.Logger) (*Server, error) {
@@ -65,6 +68,48 @@ func NewServer(server *http.Server, logger *slog.Logger) (*Server, error) {
 	return s, nil
 }
 
+// NewTLSServer serves a separately configured HTTPS listener. Pending TLS
+// handshakes are closed on shutdown; accepted HTTP requests still drain.
+func NewTLSServer(server *http.Server, configuration *tls.Config, handshakeTimeout time.Duration, logger *slog.Logger) (*Server, error) {
+	if configuration == nil || len(configuration.Certificates) == 0 {
+		return nil, fmt.Errorf("HTTPS certificate is required")
+	}
+	if handshakeTimeout <= 0 {
+		return nil, fmt.Errorf("HTTPS handshake timeout must be positive")
+	}
+	s, err := NewServer(server, logger)
+	if err != nil {
+		return nil, err
+	}
+	s.tls = true
+	s.pending = make(map[net.Conn]struct{})
+	server.TLSConfig = configuration.Clone()
+	server.TLSConfig.MinVersion = max(tls.VersionTLS12, server.TLSConfig.MinVersion)
+	// net/http bounds TLS handshakes by the smallest positive read-header,
+	// read or write timeout. This also caps the HTTPS initial-header budget.
+	if server.ReadHeaderTimeout <= 0 || server.ReadHeaderTimeout > handshakeTimeout {
+		server.ReadHeaderTimeout = handshakeTimeout
+	}
+	previous := server.ConnState
+	server.ConnState = func(conn net.Conn, state http.ConnState) {
+		s.mu.Lock()
+		closePending := state == http.StateNew && s.stopped
+		if state == http.StateNew && !s.stopped {
+			s.pending[conn] = struct{}{}
+		} else {
+			delete(s.pending, conn)
+		}
+		s.mu.Unlock()
+		if closePending {
+			conn.Close()
+		}
+		if previous != nil {
+			previous(conn, state)
+		}
+	}
+	return s, nil
+}
+
 func (s *Server) Start(ctx context.Context) error {
 	if err := ctx.Err(); err != nil {
 		return err
@@ -82,7 +127,7 @@ func (s *Server) Start(ctx context.Context) error {
 	}
 
 	s.listener = listener
-	s.logger.Info("HTTP listening", "address", listener.Addr().String())
+	s.logger.Info("HTTP listening", "address", listener.Addr().String(), "tls", s.tls)
 	return nil
 }
 
@@ -97,7 +142,12 @@ func (s *Server) Run(context.Context) error {
 		return fmt.Errorf("HTTP server was not started")
 	}
 
-	err := s.server.Serve(listener)
+	var err error
+	if s.tls {
+		err = s.server.ServeTLS(listener, "", "")
+	} else {
+		err = s.server.Serve(listener)
+	}
 	if errors.Is(err, http.ErrServerClosed) || errors.Is(err, net.ErrClosed) {
 		return nil
 	}
@@ -112,9 +162,16 @@ func (s *Server) Stop(ctx context.Context) error {
 	s.mu.Lock()
 	s.stopped = true
 	listener, idle := s.listener, s.idle
+	pending := make([]net.Conn, 0, len(s.pending))
+	for conn := range s.pending {
+		pending = append(pending, conn)
+	}
 	s.mu.Unlock()
 	if listener == nil {
 		return nil
+	}
+	for _, conn := range pending {
+		conn.Close()
 	}
 
 	drain := ctx
