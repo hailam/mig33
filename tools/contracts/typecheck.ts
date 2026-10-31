@@ -7,6 +7,19 @@ import {
   type PacketProjection,
   type ResourceResultID,
 } from '../../apps/mobile/src/mig33/generated/contracts';
+import {
+  slashCommands,
+  type SlashCommandDefinition,
+} from '../../apps/mobile/src/mig33/generated/slash-commands';
+
+// Suggestion metadata has its own schema; it never broadens wire definitions.
+const suggestions: readonly SlashCommandDefinition[] = slashCommands;
+const roots = suggestions.filter((entry) => entry.parent === undefined);
+// @ts-expect-error Unsupported argument modes cannot enter the shared catalog.
+const invalidArguments: SlashCommandDefinition['arguments'] = 'freeform';
+// @ts-expect-error Catalog literals are readonly.
+slashCommands[0].command = 'kick';
+void [roots, invalidArguments];
 
 // Client code retains raw bytes, unknown tags and present-empty fields.
 const login: PacketFor<'Client200'> = {

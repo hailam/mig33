@@ -120,6 +120,38 @@ An additional28 October2026 recovery found original migGames help visibly listin
 
 Unrecovered details include the exact4.62 response catalog and punctuation, `/roll` range/distribution, random response banks, per-command target requirements, command-case rules, fees, cooldowns and every moderation context. The code and acceptance results should state local choices explicitly rather than presenting those gaps as historical facts.
 
+## Expo command discovery
+
+Expo bundles a generated command catalog for local editing assistance. Its source
+is [internal/slashcommands/catalog.go](../internal/slashcommands/catalog.go),
+projected by the existing Go contract generator into
+[slash-commands.ts](../apps/mobile/src/mig33/generated/slash-commands.ts).
+The catalog describes this server's implemented behavior: 27 root entries and
+13 gift/bot forms. It is deliberately separate from the recovered wire registry.
+There is no discovery endpoint, additional packet field or new operation.
+
+A leading slash opens suggestions while the caret is in the command token.
+Filtering is case-insensitive; the known gift/bot families also complete their
+second token. Selection replaces the command span, preserves existing argument
+text and focuses the editor. It does not send anything. Generic gift sending
+inserts `/gift ` for a recipient, never an invented `/gift send` command.
+The user can dismiss suggestions or send unlisted commands normally.
+
+Private and private-group chats offer only applicable commands. Joined rooms add
+room commands; community-linked rooms additionally expose the community forms.
+Known room mute state hides commands that the server disallows while muted.
+Community owner/moderator authority, silence and active-bot state are not fully
+observable from the original packets, so requirements are described rather than
+guessed. Room moderator status is not treated as community authority. The server
+remains authoritative. `/kick`, `/mute`, `/unmute` and `/help` are excluded because
+they currently return explanations rather than implementing those slash actions.
+
+Catalog checks exercise existing parsers/dispatch coverage; pure editor tests
+cover context, caret positions, aliases, stale taps, preserved suffixes and the
+320 UTF-16-unit bound. The focused iOS `--commands-only` workflow checks both
+original transports, unsent insertion, gift completion and real private/room
+action delivery. See [the native runner](../tools/mobile/README.md).
+
 ## Validation
 
 `go test -race ./...` and `go vet ./...` passed. Regression coverage includes all eleven command names, canonical targets, permission failures, unknown/unavailable commands without side effects, forged incoming content6, ordinary text behavior, buffered block changes, full sender queues even with another active session, durable sender/recipient actions and unchanged random output after a failed HTTP write and restart. Schema7→8 tests preserve old message IDs, bodies, colors, audiences and sequence values.
