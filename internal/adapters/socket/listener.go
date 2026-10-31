@@ -2,11 +2,13 @@ package socket
 
 import (
 	"context"
+	"crypto/tls"
 	"errors"
 	"fmt"
 	"log/slog"
 	"net"
 	"sync"
+	"time"
 )
 
 // Listener owns the network lifecycle around the native packet server.
@@ -19,6 +21,8 @@ type Listener struct {
 	cancel           context.CancelFunc
 	done             chan struct{}
 	running, stopped bool
+	tlsConfig        *tls.Config
+	handshakeTimeout time.Duration
 }
 
 func NewListener(server *Server, address string, logger *slog.Logger) (*Listener, error) {
@@ -30,6 +34,25 @@ func NewListener(server *Server, address string, logger *slog.Logger) (*Listener
 	}
 
 	return &Listener{server: server, address: address, logger: logger, done: make(chan struct{})}, nil
+}
+
+// NewTLSListener adds TLS around the unchanged native packet stream. The
+// certificate must already be loaded before any listener is acquired.
+func NewTLSListener(server *Server, address string, configuration *tls.Config, handshakeTimeout time.Duration, logger *slog.Logger) (*Listener, error) {
+	if configuration == nil || len(configuration.Certificates) == 0 {
+		return nil, fmt.Errorf("socket TLS certificate is required")
+	}
+	if handshakeTimeout <= 0 {
+		return nil, fmt.Errorf("socket TLS handshake timeout must be positive")
+	}
+	listener, err := NewListener(server, address, logger)
+	if err != nil {
+		return nil, err
+	}
+	listener.tlsConfig = configuration.Clone()
+	listener.tlsConfig.MinVersion = max(tls.VersionTLS12, listener.tlsConfig.MinVersion)
+	listener.handshakeTimeout = handshakeTimeout
+	return listener, nil
 }
 
 func (s *Listener) Start(ctx context.Context) error {
@@ -52,7 +75,7 @@ func (s *Listener) Start(ctx context.Context) error {
 	}
 
 	s.listener = listener
-	s.logger.Info("Socket listening", "address", listener.Addr().String())
+	s.logger.Info("Socket listening", "address", listener.Addr().String(), "tls", s.tlsConfig != nil)
 	return nil
 }
 
@@ -78,7 +101,12 @@ func (s *Listener) Run(ctx context.Context) error {
 	s.mu.Unlock()
 	defer cancel()
 	defer close(s.done)
-	err := s.server.Serve(running, listener)
+	var err error
+	if s.tlsConfig != nil {
+		err = s.server.serve(running, tls.NewListener(listener, s.tlsConfig), s.handshakeTimeout)
+	} else {
+		err = s.server.Serve(running, listener)
+	}
 	if errors.Is(err, net.ErrClosed) {
 		return nil
 	}

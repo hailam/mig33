@@ -8,6 +8,7 @@ resources:
   directory: data/applets/resources/v4
 http:
   listen: 127.0.0.1:8080
+  tls_listen: ""
   read_header_timeout: 5s
   read_timeout: 15s
   write_timeout: 15s
@@ -15,5 +16,10 @@ http:
   max_header_bytes: 16384
 socket:
   listen: 127.0.0.1:9119
+  tls_listen: ""
+tls:
+  cert_file: ""
+  key_file: ""
+  handshake_timeout: 5s
 shutdown_timeout: 5s
 operators: []

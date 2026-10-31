@@ -3,6 +3,7 @@ package socket
 
 import (
 	"context"
+	"crypto/tls"
 	"errors"
 	"net"
 	"sync"
@@ -16,8 +17,12 @@ type Server struct{ app ports.NativeService }
 
 func New(app ports.NativeService) *Server { return &Server{app: app} }
 
-// ServeTCP accepts original binary-protocol streams until cancellation.
+// Serve accepts original binary-protocol streams until cancellation.
 func (s *Server) Serve(ctx context.Context, listener net.Listener) error {
+	return s.serve(ctx, listener, 0)
+}
+
+func (s *Server) serve(ctx context.Context, listener net.Listener, handshakeTimeout time.Duration) error {
 	ctx, cancel := context.WithCancel(ctx)
 	var workers sync.WaitGroup
 	defer func() {
@@ -44,6 +49,19 @@ func (s *Server) Serve(ctx context.Context, listener net.Listener) error {
 		workers.Add(1)
 		go func() {
 			defer workers.Done()
+			if secure, ok := conn.(*tls.Conn); ok {
+				// No application session or decoder exists until the TLS handshake
+				// completes. Cancellation joins stalled handshakes as well as readers.
+				handshake, stop := context.WithTimeout(ctx, handshakeTimeout)
+				conn.SetDeadline(time.Now().Add(handshakeTimeout))
+				err := secure.HandshakeContext(handshake)
+				stop()
+				if err != nil {
+					conn.Close()
+					return
+				}
+				conn.SetDeadline(time.Time{})
+			}
 			s.serveConnection(ctx, conn)
 		}()
 	}
