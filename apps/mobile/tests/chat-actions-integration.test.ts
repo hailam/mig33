@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { inflateSync } from 'node:zlib';
 import { Mig33Client, type ChatMessage } from '../src/mig33/client.ts';
 import { HTTPTransport } from '../src/mig33/transport/http.ts';
 import { TCPTransport } from '../src/mig33/transport/tcp.ts';
@@ -42,6 +43,27 @@ async function createRoom(source: Mig33Client, server: TestServer, name: string)
   const created = await page(source, url + '&stage=details',
     `csrf=${csrf}&room=${hidden(details, 'room')}&binding=${hidden(details, 'binding')}&description=Integration%20room`);
   assert.ok(created.includes(`mig33:joinChatroom(${name})`));
+}
+
+/** Verify the real codec cropped the isolated synthetic atlas. Merely accepting
+ * any PNG could let recovered local assets hide a missing test config override. */
+function assertSyntheticSmile(image: Uint8Array): void {
+  const png = Buffer.from(image);
+  assert.equal(png.subarray(12, 16).toString(), 'IHDR');
+  assert.equal(png.readUInt32BE(16), 12); assert.equal(png.readUInt32BE(20), 12);
+  assert.equal(png[24], 8); assert.ok(png[25] === 2 || png[25] === 6);
+  assert.equal(png[28], 0, 'Fixture crop is not interlaced');
+  const data: Buffer[] = [];
+  for (let offset = 8; offset < png.length;) {
+    const length = png.readUInt32BE(offset);
+    if (png.subarray(offset + 4, offset + 8).toString() === 'IDAT') data.push(png.subarray(offset + 8, offset + 8 + length));
+    offset += length + 12;
+  }
+  const pixels = inflateSync(Buffer.concat(data), { maxOutputLength: 12 * (12 * 4 + 1) });
+  assert.ok(pixels[0] <= 4);
+  // All PNG predictors are zero for the first pixel of the first row. Smile
+  // is atlas cell5, whose source origin is x60,y0 in internal/testassets.
+  assert.deepEqual([...pixels.subarray(1, 4)], [15, 60, 0]);
 }
 
 for (const kind of ['http', 'tcp'] as const) {
@@ -92,6 +114,7 @@ for (const kind of ['http', 'tcp'] as const) {
       const colorMessage = await colored;
       assert.equal(colorMessage.packet.int(13), 255); assert.ok(colorMessage.packet.text(11)?.includes('[smile]'));
       const image = await alice.getEmoticon('[smile]'); assert.ok(image.image && image.imageURI);
+      assertSyntheticSmile(image.image);
       const photo = nextMessage(bob, (message) => message.kind === 1 && message.content === 5);
       await alice.sendPhoto(1, 'bob', image.image);
       const photoMessage = await photo;

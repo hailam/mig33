@@ -313,6 +313,12 @@ MIG33_TEST_SERVER_BINARY="$PWD/data/mobile-integration/server" \
   mise -C apps/mobile exec -- pnpm run check
 ```
 
+Each live test generates bounded synthetic PNG resources in its ignored run
+directory and explicitly configures the server to use them. Emoticon and photo
+round trips therefore work without extracted applet assets, including when
+those assets happen to exist locally. The fixture follows `internal/testassets`
+and is never used by the production server.
+
 To test against the unchanged original Java client, prepare the ignored JARs
 using [applet setup](../../tools/applets/SETUP.md), install JDK21 and uv, then run:
 

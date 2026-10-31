@@ -5,6 +5,7 @@ import { createServer } from 'node:net';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { setTimeout as delay } from 'node:timers/promises';
+import { writeTestResources } from '../../../../tools/mobile/test-resources.mjs';
 
 export const repositoryRoot = fileURLToPath(new URL('../../../../', import.meta.url));
 
@@ -38,6 +39,7 @@ export async function startServer(binary = process.env.MIG33_TEST_SERVER_BINARY)
   const outputRoot = join(repositoryRoot, 'data/mobile-integration/runs');
   await mkdir(outputRoot, { recursive: true });
   const outputDirectory = await mkdtemp(join(outputRoot, 'run-'));
+  const resourceDirectory = await writeTestResources(join(outputDirectory, 'resources'));
   const httpPort = await unusedPort();
   let tcpPort = await unusedPort();
   while (tcpPort === httpPort) tcpPort = await unusedPort();
@@ -45,6 +47,9 @@ export async function startServer(binary = process.env.MIG33_TEST_SERVER_BINARY)
   // Config is explicit; inherited MIG33_TEST_* variables are not server config.
   const env = { ...process.env };
   for (const key of Object.keys(env)) if (key.startsWith('MIG33_')) delete env[key];
+  // Always override the ignored recovered-resource default, even on machines
+  // where applet setup has populated it. Clean CI and local runs use one fixture.
+  env.MIG33_RESOURCES_DIRECTORY = resourceDirectory;
   const log = createWriteStream(join(outputDirectory, 'server.log'));
   const child = spawn(resolve(repositoryRoot, binary), [
     '-config-dir', join(repositoryRoot, 'configs'), '-env', '',

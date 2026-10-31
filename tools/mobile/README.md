@@ -8,6 +8,11 @@ over HTTP. All three themes must survive a process restart. Switching between
 all three while signed in must retain the conversation and unsent draft. The Bob
 peer and Go backend use temporary loopback listeners and an in-memory database.
 The developer's server on ports 8080/9119 is never reused.
+The runner generates synthetic sprite/avatar PNGs in its ignored run directory
+and explicitly supplies that resource directory to the backend. Emoticon/photo
+checks need no recovered applet assets; this fixture is shared with the Node
+live tests and never changes production resources. Its colored cells are test
+content, so native captures do not prove historical emoticon artwork fidelity.
 Modern Friends must expose the native glass marker, so this acceptance requires
 an iOS simulator that supports Liquid Glass with Reduce Transparency disabled.
 

@@ -144,6 +144,12 @@ def main():
     config_path.write_text(json.dumps(config, indent=2) + '\n')
     env = {key: value for key, value in os.environ.items() if not key.startswith('MIG33_')}
     env['EXPO_NO_TELEMETRY'] = '1'
+    # The real media flows must also work on a clean checkout without recovered
+    # applet files. Share the Node live-test fixture, never production artwork.
+    resources = output / 'resources'
+    subprocess.run(['mise', '-C', str(ROOT / 'apps/mobile'), 'exec', '--', 'node',
+        str(ROOT / 'tools/mobile/test-resources.mjs'), str(resources)], cwd=ROOT, env=env, check=True)
+    env['MIG33_RESOURCES_DIRECTORY'] = str(resources)
     backup = PROJECT_FILE.read_bytes()
     (output / 'project.pbxproj.before').write_bytes(backup)
     children = []
