@@ -15,6 +15,9 @@ export interface ModernButtonProps {
   /** Keep true for the entire unread/highlight episode; pulse its tint, not
    * the native button style, so a phase change cannot replace a press target. */
   highlighted?: boolean;
+  /** Supply `none` for read tabs too: their native background and press target
+   * stay mounted while the decorative unread field changes. */
+  unreadPhase?: 'none' | 'on' | 'off' | 'steady';
   tintColor?: string;
   foregroundColor?: string;
   controlSize?: 'regular' | 'large' | 'extraLarge';
