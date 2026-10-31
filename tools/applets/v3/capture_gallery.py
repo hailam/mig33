@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run --no-project python
 """Index actual original-bytecode captures; no synthetic screenshot generation."""
 from pathlib import Path
 import hashlib

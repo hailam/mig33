@@ -26,6 +26,12 @@ const config: ExpoConfig = {
   },
   plugins: [
     'expo-dev-client',
+    'expo-secure-store',
+    ['expo-image-picker', {
+      photosPermission: 'Choose a photo to share in mig33.',
+      cameraPermission: 'Take a photo to share in mig33.',
+      microphonePermission: false,
+    }],
     ['expo-build-properties', { android: { usesCleartextTraffic: true } }],
   ],
 };

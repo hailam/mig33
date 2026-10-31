@@ -55,10 +55,82 @@ test('original login performs 200/201/202/203 with session assignment and UTF-16
     assert.equal(login.text(5), 'alice');
     assert.equal(login.text(7), 'J2MEv4.62.000');
     assert.equal(login.short(3), 462);
+    assert.equal(login.byte(9), 1);
     assert.equal(login.fields.has(6), false, 'Login200 must not introduce a password field');
     assert.equal(proof.int(1), loginChallengeHash('challenge', 'MiXeD 😀'));
     assert.notEqual(login.transaction, proof.transaction);
     await assert.rejects(client.login({ username: 'alice', password: 'x' }), /new client/i);
+  } finally { client.close(); }
+});
+
+test('Login As Invisible uses original login200 presence99', async () => {
+  const transport = new FakeTransport();
+  const client = new Mig33Client(transport);
+  try {
+    await client.login({ username: 'alice', password: 'alice-demo', invisible: true });
+    assert.equal(transport.sent[0].byte(9), 99);
+    assert.deepEqual(transport.sent.map((packet) => packet.opcode), [200, 202]);
+  } finally { client.close(); }
+});
+
+test('group order and contact metadata follow replacement records and targeted pushes in wire order', async () => {
+  const { transport, client } = await online();
+  try {
+    const snapshot = client.syncContacts();
+    await tick();
+    const transaction = transport.sent.at(-1)!.transaction;
+    transport.receive(
+      new Packet(401, transaction).setInt(1, 8).setText(2, 'Family'),
+      new Packet(401, transaction).setInt(1, 3).setText(2, 'Friends'),
+      new Packet(402, transaction).setInt(1, 1).setInt(2, 8).setText(12, 'bob').setText(3, 'Bob')
+        .setByte(13, 3).setText(27, 'Reading').setText(28, 'avatar-a'),
+      new Packet(403, transaction),
+    );
+    await snapshot;
+    assert.equal(client.contacts[0].status, 'Reading', 'original402 tag27 reaches rendered text t.h');
+    assert.equal(client.contacts[0].avatar, 'avatar-a', 'original402 tag28 reaches image key t.p');
+    transport.receive(
+      new Packet(401, 0).setInt(1, 8).setText(2, 'My family'),
+      new Packet(421, 0).setInt(1, 1).setText(2, 'Back soon'),
+    );
+    assert.equal(client.contacts[0].status, 'Back soon');
+    assert.equal(client.contacts[0].avatar, 'avatar-a', '421 leaves the avatar unchanged');
+    transport.receive(new Packet(423, 0).setInt(1, 1).setText(2, 'avatar-b'));
+    assert.deepEqual(client.groups, [{ id: 8, name: 'My family' }, { id: 3, name: 'Friends' }]);
+    const before = client.contacts[0];
+    assert.deepEqual(
+      (({ groupId, username, display, presence, avatar, status }) => ({ groupId, username, display, presence, avatar, status }))(client.contacts[0]),
+      { groupId: 8, username: 'bob', display: 'Bob', presence: 3, avatar: 'avatar-b', status: 'Back soon' },
+    );
+    transport.receive(new Packet(404, 0).setInt(1, 1).setByte(2, 4));
+    assert.equal(before.presence, 3, 'published contact snapshots are not mutated by later pushes');
+    assert.equal(client.contacts[0].presence, 4);
+    transport.receive(new Packet(421, 0).setInt(1, 1).setText(2, ''), new Packet(423, 0).setInt(1, 1));
+    assert.equal(client.contacts[0].status, '');
+    assert.equal(client.contacts[0].avatar, '');
+    transport.receive(new Packet(402, 0).setInt(1, 1).setText(12, 'bob').setByte(13, 1).setText(3, 'Bobby'));
+    assert.deepEqual(
+      (({ groupId, username, display, presence, avatar, status }) => ({ groupId, username, display, presence, avatar, status }))(client.contacts[0]),
+      { groupId: -1, username: 'bob', display: 'Bobby', presence: 1, avatar: '', status: '' },
+      'a fresh402 record replaces absent optional fields instead of merging stale values',
+    );
+  } finally { client.close(); }
+});
+
+test('a second full roster sync removes old groups along with old contacts', async () => {
+  const { transport, client } = await online();
+  try {
+    let snapshot = client.syncContacts();
+    await tick();
+    let transaction = transport.sent.at(-1)!.transaction;
+    transport.receive(new Packet(401, transaction).setInt(1, 8).setText(2, 'Old group'), new Packet(403, transaction));
+    await snapshot;
+    snapshot = client.syncContacts();
+    await tick();
+    transaction = transport.sent.at(-1)!.transaction;
+    transport.receive(new Packet(401, transaction).setInt(1, 3).setText(2, 'Current'), new Packet(403, transaction));
+    await snapshot;
+    assert.deepEqual(client.groups, [{ id: 3, name: 'Current' }]);
   } finally { client.close(); }
 });
 

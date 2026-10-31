@@ -19,10 +19,14 @@ import javax.microedition.io.Connector;
  *
  * Standard output is NDJSON. Original emulator/Connector diagnostics go to
  * standard error. Input is one command per line with tab-separated base64 UTF-8
- * arguments: EXPECT peer text, SEND peer text, or STOP (without arguments).
+ * arguments: EXPECT peer text, SEND peer text, PRESENCE peer value;
+ * ROOM_JOIN room, ROOM_SEND room text, ROOM_EXPECT room sender text,
+ * ROOM_PARTICIPANTS room semicolon-separated-names, ROOM_LEAVE room;
+ * or STOP (without arguments).
  */
-public final class V4MobilePeer extends V4GroupIntegration {
+public final class V4MobilePeer extends V4RoomIntegration {
     private static final PrintStream replies = System.out;
+    private static int roomCapture;
 
     private static String quote(String value) {
         StringBuilder result = new StringBuilder("\"");
@@ -59,6 +63,10 @@ public final class V4MobilePeer extends V4GroupIntegration {
 
     /** Parse captured bytes with original ay, then require original UI dispatch. */
     private static boolean receivedMessage(String sender, String text) throws Exception {
+        return receivedMessage(sender, text, null);
+    }
+
+    private static boolean receivedMessage(String sender, String text, String room) throws Exception {
         List<String> files = new ArrayList<>();
         synchronized (Connector.events) {
             for (String event : Connector.events) {
@@ -78,10 +86,56 @@ public final class V4MobilePeer extends V4GroupIntegration {
                     .invoke(packet, (short) 2);
                 String body = (String) method(packetClass, "f", String.class, short.class)
                     .invoke(packet, (short) 8);
-                if (sender.equals(from) && text.equals(body) && privateTabFor(text) >= 0) return true;
+                Byte kind = (Byte) method(packetClass, "b", Byte.class, short.class)
+                    .invoke(packet, (short) 3);
+                String target = (String) method(packetClass, "f", String.class, short.class)
+                    .invoke(packet, (short) 4);
+                if (!sender.equals(from) || !text.equals(body) || kind == null) continue;
+                if (room == null && kind == 1 && privateTabFor(text) >= 0) return true;
+                if (room != null && kind == 3 && room.equals(target) && roomRows(room).contains(text)) return true;
             }
         }
         return false;
+    }
+
+    /** Require both an original-decoded404 and its completed roster dispatch. */
+    private static boolean receivedPresence(String peer, byte presence) throws Exception {
+        // bc.a(ay[]) owns this monitor while updating the roster. Acquiring it
+        // avoids treating bytes observed by Connector as completed UI dispatch.
+        synchronized (network) {
+            Object roster = get(canvas, "Z");
+            int count = (Integer) method(roster.getClass(), "c", int.class).invoke(roster);
+            int contactID = -1;
+            for (int index = 0; index < count; index++) {
+                Object row = method(roster.getClass(), "e", Class.forName("t"), int.class).invoke(roster, index);
+                if (row != null && peer.equals(field(row.getClass(), "e", String.class).get(row))) {
+                    // Original au.a(I[B[BI)V sets key69; t maps it to j at240.
+                    if (field(row.getClass(), "j", byte.class).getByte(row) != presence) return false;
+                    contactID = field(row.getClass(), "a", int.class).getInt(row);
+                    break;
+                }
+            }
+            if (contactID == -1) return false;
+            List<String> files = new ArrayList<>();
+            synchronized (Connector.events) {
+                for (String event : Connector.events) {
+                    String[] columns = event.split("\t");
+                    if (columns.length >= 5 && columns[0].equals("RX") && columns[1].equals("404")) files.add(columns[4]);
+                }
+            }
+            Class<?> packetClass = Class.forName("ay");
+            Class<?> arrayClass = java.lang.reflect.Array.newInstance(packetClass, 0).getClass();
+            for (String filename : files) {
+                Object[] packets = (Object[]) method(packetClass, "a", arrayClass, byte[].class)
+                    .invoke(null, Files.readAllBytes(out.resolve(filename)));
+                for (Object packet : packets) {
+                    Integer id = (Integer) method(packetClass, "d", Integer.class, short.class).invoke(packet, (short) 1);
+                    Byte value = (Byte) method(packetClass, "b", Byte.class, short.class).invoke(packet, (short) 2);
+                    if (id != null && id == contactID && value != null && value == presence) return true;
+                }
+            }
+            return false;
+        }
     }
 
     public static void main(String[] args) {
@@ -110,7 +164,50 @@ public final class V4MobilePeer extends V4GroupIntegration {
                         stopped = true;
                         break;
                     }
-                    if (command.length != 3) throw new IllegalArgumentException("Expected SEND/EXPECT with two base64 arguments, or STOP");
+                    if (command.length == 2 && command[0].equals("ROOM_JOIN")) {
+                        String room = argument(command[1]);
+                        join(room);
+                        emit("room-joined", "room", room, "proof", "original-703-701-ack-and-ready-room-model");
+                        continue;
+                    }
+                    if (command.length == 2 && command[0].equals("ROOM_LEAVE")) {
+                        String room = argument(command[1]);
+                        leave(room);
+                        emit("room-left", "room", room, "proof", "original-704-ack-closed-tab-cleared-suppression");
+                        continue;
+                    }
+                    if (command.length == 4 && command[0].equals("ROOM_EXPECT")) {
+                        String room = argument(command[1]);
+                        String sender = argument(command[2]);
+                        String text = argument(command[3]);
+                        until("original incoming room packet and UI model", () -> receivedMessage(sender, text, room));
+                        selectRoom(room);
+                        String capture = "mobile-room-received-" + (++roomCapture);
+                        save(capture);
+                        Files.writeString(out.resolve(capture + "-model.txt"), roomRows(room));
+                        emit("room-received", "room", room, "from", sender, "text", text,
+                            "proof", "original-ay-kind3-target-sender-and-room-model");
+                        continue;
+                    }
+                    if (command.length == 3 && command[0].equals("ROOM_SEND")) {
+                        String room = argument(command[1]);
+                        String text = argument(command[2]);
+                        int transaction = request(500, 1, () -> method(bc, "a", void.class, short.class,
+                            String.class, String.class, int.class, byte[].class, short.class, int.class)
+                            .invoke(network, (short) 1, room, text, 3, null, (short) 1, -1));
+                        emit("room-sent", "room", room, "text", text, "transaction", Integer.toString(transaction),
+                            "proof", "original-kind3-builder-and-correlated-ack");
+                        continue;
+                    }
+                    if (command.length == 3 && command[0].equals("ROOM_PARTICIPANTS")) {
+                        String room = argument(command[1]);
+                        String names = argument(command[2]);
+                        roomParticipants(room, "mobile-room-participants-" + (++roomCapture), names.split(";"));
+                        emit("room-participants", "room", room, "names", names,
+                            "proof", "original-707-708-and-participant-popup");
+                        continue;
+                    }
+                    if (command.length != 3) throw new IllegalArgumentException("Expected SEND/EXPECT/PRESENCE with two base64 arguments, or STOP");
                     String peer = argument(command[1]);
                     String text = argument(command[2]);
                     if (command[0].equals("EXPECT")) {
@@ -120,6 +217,10 @@ public final class V4MobilePeer extends V4GroupIntegration {
                         int transaction = request(500, 1, () -> send(peer, text));
                         emit("sent", "to", peer, "text", text, "transaction", Integer.toString(transaction),
                             "proof", "original-builder-and-correlated-ack");
+                    } else if (command[0].equals("PRESENCE")) {
+                        byte presence = Byte.parseByte(text);
+                        until("original404 and roster presence " + peer + "=" + presence, () -> receivedPresence(peer, presence));
+                        emit("presence", "peer", peer, "value", Byte.toString(presence), "proof", "original-404-and-roster-model");
                     } else {
                         throw new IllegalArgumentException("Unknown command " + command[0]);
                     }
