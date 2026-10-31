@@ -76,7 +76,7 @@ func TestBrowserThemeAndAvatarChangesKeepNativeQueuesIsolated(t *testing.T) {
 		seenTheme, seenAvatar := false, false
 		for _, packet := range packets {
 			seenTheme = seenTheme || packet.Opcode == 1000
-			seenAvatar = seenAvatar || packet.Opcode == 421
+			seenAvatar = seenAvatar || packet.Opcode == 423
 		}
 		if !seenTheme || !seenAvatar {
 			t.Fatalf("native theme/avatar update lost at %d", i)

@@ -2,6 +2,7 @@ package nativecodec
 
 import (
 	"bytes"
+	"math"
 	"reflect"
 	"testing"
 
@@ -11,6 +12,20 @@ import (
 	"github.com/hailam/mig33/internal/protocol"
 	"github.com/hailam/mig33/internal/rooms"
 )
+
+func TestJoinedRoomCommunityIDUsesOriginalIntTag8(t *testing.T) {
+	for _, id := range []int64{0, -1, 37, math.MaxInt32, int64(math.MaxInt32) + 1} {
+		packet, _ := EncodeRoom(events.New(31, events.Room{Room: rooms.Room{Name: "Club Room"}, CommunityID: id}))
+		value, ok := packet.Int(8)
+		if id > 0 && id <= math.MaxInt32 {
+			if !ok || int64(value) != id {
+				t.Fatalf("community %d must survive original int tag8: %d, present=%v", id, value, ok)
+			}
+		} else if ok {
+			t.Fatalf("unrepresentable community %d became a different native group: %d", id, value)
+		}
+	}
+}
 
 func TestContactDecodePreservesOptionalFieldsAndExternalFraming(t *testing.T) {
 	request, _ := DecodeContact(protocol.New(407, 11).SetBytes(1, []byte{0, 0, 1}).SetBytes(24, nil))
@@ -53,7 +68,7 @@ func TestNativeContactDetailOptionalFieldsAndExternalPresence(t *testing.T) {
 	if _, present := packet.Fields[12]; present {
 		t.Fatal("external contact gained a mig33 username")
 	}
-	if status, present := packet.Text(28); !present || status != "" {
+	if status, present := packet.Text(27); !present || status != "" {
 		t.Fatal("present empty status was lost")
 	}
 	if names, _ := packet.Text(33); names != "alice\x00bob" {
@@ -61,6 +76,35 @@ func TestNativeContactDetailOptionalFieldsAndExternalPresence(t *testing.T) {
 	}
 	if !bytes.Equal(packet.Fields[31], []byte{2, 4}) || !bytes.Equal(packet.Fields[32], []byte{99, 99}) {
 		t.Fatal("external identity/presence arrays differ")
+	}
+}
+
+// The unchanged v4 consumer routes402 tag27 and421 through t.a(2) to
+// t.h (rendered status); tag28 and423 go through t.a(91) to t.p (avatar).
+// Distinct values prevent a mutually swapped producer/consumer from passing.
+func TestContactStatusAndAvatarMatchOriginalV4Slots(t *testing.T) {
+	status := "Status rendered beside Bob"
+	avatar := "photos/42"
+	packet, ok := EncodeContact(events.New(19, events.Contact{
+		Contact: contacts.Contact{ID: 2, GroupID: -1, Username: "bob", Display: "Bob"},
+		Status:  &status, Avatar: avatar,
+	}))
+	if !ok || packet.Opcode != 402 || packet.Transaction != 19 {
+		t.Fatal(packet)
+	}
+	if value, _ := packet.Text(27); value != status {
+		t.Fatalf("original status slot27: %q", value)
+	}
+	if value, _ := packet.Text(28); value != avatar {
+		t.Fatalf("original avatar slot28: %q", value)
+	}
+	statusPush, _ := EncodeContact(events.New(20, events.ContactStatus{ID: 2, Status: status}))
+	if value, _ := statusPush.Text(2); statusPush.Opcode != 421 || value != status {
+		t.Fatalf("original status update421: %v", statusPush)
+	}
+	avatarPush := New(nil).Encode(t.Context(), events.New(21, events.Avatar{ContactID: 2, Key: avatar}), "")
+	if value, _ := avatarPush.Text(2); avatarPush.Opcode != 423 || value != avatar {
+		t.Fatalf("original avatar update423: %v", avatarPush)
 	}
 }
 

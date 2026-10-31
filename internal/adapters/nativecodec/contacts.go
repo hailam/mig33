@@ -89,10 +89,12 @@ func EncodeContact(event *events.Event) (*protocol.Packet, bool) {
 			p.SetText(8, c.Mobile)
 		}
 		if data.Status != nil {
-			p.SetText(28, *data.Status)
+			// Original v4 bc402: tag27 -> t.a(2) -> t.h, painted as text.
+			p.SetText(27, *data.Status)
 		}
 		if data.Avatar != "" {
-			p.SetText(27, data.Avatar)
+			// Tag28 -> t.a(91) -> t.p, consumed by the avatar image loader.
+			p.SetText(28, data.Avatar)
 		}
 
 		return p, true
@@ -103,7 +105,7 @@ func EncodeContact(event *events.Event) (*protocol.Packet, bool) {
 	case events.ContactPresence:
 		return protocol.New(404, event.Correlation).SetInt(1, data.ID).SetByte(2, data.Presence), true
 	case events.ContactStatus:
-		return protocol.New(423, event.Correlation).SetInt(1, data.ID).SetText(2, data.Status), true
+		return protocol.New(421, event.Correlation).SetInt(1, data.ID).SetText(2, data.Status), true
 	case events.ContactCheckpoint:
 		return protocol.New(420, event.Correlation).SetInt(1, data.Revision).SetLong(2, data.Checkpoint), true
 	case events.ContactsComplete:

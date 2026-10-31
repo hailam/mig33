@@ -186,7 +186,7 @@ func (c *Codec) Encode(ctx context.Context, event *events.Event, publicURL strin
 
 		return packet
 	case events.Avatar:
-		return protocol.New(421, event.Correlation).SetInt(1, payload.ContactID).SetText(2, payload.Key)
+		return protocol.New(423, event.Correlation).SetInt(1, payload.ContactID).SetText(2, payload.Key)
 	case events.Message:
 		return encodeMessage(event.Correlation, payload)
 	case events.Notice:

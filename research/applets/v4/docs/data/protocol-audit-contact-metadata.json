@@ -1,0 +1,300 @@
+{
+  "source": {
+    "jar": "research/applets/v4/artifacts/original/mig33-4.62.jar",
+    "jar_sha256": "dbf12ffbd44bc6e48d09cf35863736731c87c078877f76ed4b780a4dc5eff92c",
+    "command": "javap -classpath <original-jar> -c -p -s <class>"
+  },
+  "scope": "Reviewed incoming contact status/avatar chains; checked instruction anchors, not full interprocedural verification or historical-server execution.",
+  "dispatch_entries": {
+    "402": 11135,
+    "421": 5941,
+    "423": 1023
+  },
+  "setter_switch_targets": {
+    "2": 329,
+    "91": 228
+  },
+  "model": {
+    "status": {
+      "field": "t.h",
+      "setter_key": 2,
+      "meaning": "status text",
+      "anchors": [
+        {
+          "method": "t.a:(ILjava/lang/String;II)V",
+          "instructions": [
+            {
+              "offset": 331,
+              "instruction": "putfield #19                 // Field h:Ljava/lang/String;"
+            }
+          ]
+        },
+        {
+          "method": "au.a:(Ljavax/microedition/lcdui/Graphics;Z)I",
+          "instructions": [
+            {
+              "offset": 2939,
+              "instruction": "getfield #51                 // Field t.h:Ljava/lang/String;"
+            }
+          ]
+        },
+        {
+          "method": "au.a:(IIZLt;Ljava/lang/String;Ljava/lang/String;ILjavax/microedition/lcdui/Graphics;ILjava/lang/String;ZI)Z",
+          "instructions": [
+            {
+              "offset": 318,
+              "instruction": "aload 6"
+            },
+            {
+              "offset": 336,
+              "instruction": "invokevirtual #239                // Method javax/microedition/lcdui/Graphics.drawString:(Ljava/lang/String;III)V"
+            }
+          ]
+        }
+      ]
+    },
+    "avatar": {
+      "field": "t.p",
+      "setter_key": 91,
+      "meaning": "avatar image/cache key",
+      "anchors": [
+        {
+          "method": "t.a:(ILjava/lang/String;II)V",
+          "instructions": [
+            {
+              "offset": 230,
+              "instruction": "putfield #26                 // Field p:Ljava/lang/String;"
+            }
+          ]
+        },
+        {
+          "method": "au.a:(Ljavax/microedition/lcdui/Graphics;Z)I",
+          "instructions": [
+            {
+              "offset": 2955,
+              "instruction": "getfield #59                 // Field t.p:Ljava/lang/String;"
+            }
+          ]
+        },
+        {
+          "method": "au.a:(IIZLt;Ljava/lang/String;Ljava/lang/String;ILjavax/microedition/lcdui/Graphics;ILjava/lang/String;ZI)Z",
+          "instructions": [
+            {
+              "offset": 362,
+              "instruction": "aload 10"
+            },
+            {
+              "offset": 379,
+              "instruction": "invokespecial #158                // Method a:(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIZ)V"
+            }
+          ]
+        },
+        {
+          "method": "au.a:(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIZ)V",
+          "instructions": [
+            {
+              "offset": 45,
+              "instruction": "invokestatic #147                // Method aj.d:(Ljava/lang/String;)Ljava/lang/String;"
+            },
+            {
+              "offset": 49,
+              "instruction": "invokestatic #146                // Method aj.c:(Ljava/lang/String;Z)Ljavax/microedition/lcdui/Image;"
+            },
+            {
+              "offset": 134,
+              "instruction": "invokevirtual #237                // Method javax/microedition/lcdui/Graphics.drawImage:(Ljavax/microedition/lcdui/Image;III)V"
+            },
+            {
+              "offset": 150,
+              "instruction": "invokevirtual #148                // Method aj.d:(Ljava/lang/String;Ljava/lang/String;)V"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fields": [
+    {
+      "opcode": 402,
+      "tag": 27,
+      "semantic": "status",
+      "model": "/model/status",
+      "anchors": [
+        {
+          "method": "bc.a:([Lay;)V",
+          "instructions": [
+            {
+              "offset": 11834,
+              "instruction": "bipush 27"
+            },
+            {
+              "offset": 11844,
+              "instruction": "iconst_2"
+            },
+            {
+              "offset": 11848,
+              "instruction": "bipush 27"
+            },
+            {
+              "offset": 11850,
+              "instruction": "invokevirtual #405               // Method ay.f:(S)Ljava/lang/String;"
+            },
+            {
+              "offset": 11853,
+              "instruction": "invokevirtual #278               // Method t.a:(ILjava/lang/String;)V"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "opcode": 402,
+      "tag": 28,
+      "semantic": "avatar",
+      "model": "/model/avatar",
+      "anchors": [
+        {
+          "method": "bc.a:([Lay;)V",
+          "instructions": [
+            {
+              "offset": 11859,
+              "instruction": "bipush 28"
+            },
+            {
+              "offset": 11869,
+              "instruction": "bipush 91"
+            },
+            {
+              "offset": 11874,
+              "instruction": "bipush 28"
+            },
+            {
+              "offset": 11876,
+              "instruction": "invokevirtual #405               // Method ay.f:(S)Ljava/lang/String;"
+            },
+            {
+              "offset": 11879,
+              "instruction": "invokevirtual #278               // Method t.a:(ILjava/lang/String;)V"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "opcode": 421,
+      "tag": 2,
+      "semantic": "status",
+      "model": "/model/status",
+      "anchors": [
+        {
+          "method": "bc.a:([Lay;)V",
+          "instructions": [
+            {
+              "offset": 5986,
+              "instruction": "iconst_2"
+            },
+            {
+              "offset": 5987,
+              "instruction": "invokevirtual #405                // Method ay.f:(S)Ljava/lang/String;"
+            },
+            {
+              "offset": 6002,
+              "instruction": "aload 8"
+            },
+            {
+              "offset": 6004,
+              "instruction": "aconst_null"
+            },
+            {
+              "offset": 6005,
+              "instruction": "invokevirtual #378                // Method au.a:(ILjava/lang/String;Ljava/lang/String;)Lt;"
+            }
+          ]
+        },
+        {
+          "method": "au.a:(ILjava/lang/String;Ljava/lang/String;)Lt;",
+          "instructions": [
+            {
+              "offset": 74,
+              "instruction": "aload_2"
+            },
+            {
+              "offset": 80,
+              "instruction": "iconst_2"
+            },
+            {
+              "offset": 88,
+              "instruction": "aload_2"
+            },
+            {
+              "offset": 95,
+              "instruction": "invokevirtual #119                // Method t.a:(ILjava/lang/String;)V"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "opcode": 423,
+      "tag": 2,
+      "semantic": "avatar",
+      "model": "/model/avatar",
+      "anchors": [
+        {
+          "method": "bc.a:([Lay;)V",
+          "instructions": [
+            {
+              "offset": 1068,
+              "instruction": "iconst_2"
+            },
+            {
+              "offset": 1069,
+              "instruction": "invokevirtual #405                // Method ay.f:(S)Ljava/lang/String;"
+            },
+            {
+              "offset": 1084,
+              "instruction": "aconst_null"
+            },
+            {
+              "offset": 1085,
+              "instruction": "aload 8"
+            },
+            {
+              "offset": 1087,
+              "instruction": "invokevirtual #378                // Method au.a:(ILjava/lang/String;Ljava/lang/String;)Lt;"
+            }
+          ]
+        },
+        {
+          "method": "au.a:(ILjava/lang/String;Ljava/lang/String;)Lt;",
+          "instructions": [
+            {
+              "offset": 110,
+              "instruction": "aload_3"
+            },
+            {
+              "offset": 116,
+              "instruction": "bipush 91"
+            },
+            {
+              "offset": 125,
+              "instruction": "aload_3"
+            },
+            {
+              "offset": 132,
+              "instruction": "invokevirtual #119                // Method t.a:(ILjava/lang/String;)V"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "unchanged": [
+    "203 tag28 remains own status",
+    "500 tag10 remains message avatar",
+    "601 remains outgoing status",
+    "602 remains outgoing avatar with original duplicate-tag1 behavior",
+    "603 tag1 remains own status and tag2 own avatar",
+    "Packet opcodes, tags, raw widths and transport framing remain unchanged"
+  ]
+}

@@ -9,7 +9,7 @@ The original v4 **Add a Friend** flow now creates a saved address-book entry. Li
 | Request | Behavior | Response |
 | --- | --- | --- |
 |400|Complete saved contact/group list|401 groups,402 contacts,420 checkpoint,403 end|
-|419,1:L checkpoint|Contact edits/deletions since checkpoint; refresh current contact presence/status|402/406 changes,404/423 live state,420/403|
+|419,1:L checkpoint|Contact edits/deletions since checkpoint; refresh current contact presence/status|402/406 changes,404/421 live state,420/403|
 |405,12?:T username,2?:I group,3?:T display,8?:T mobile,24?:B share-mobile,30?:T external username,31?:B service|Add a known mig33 user, phone-only entry or supported external identity; duplicate add preserves metadata|402 with matching transaction|
 |406,1:I contact|Remove from your own list|1 acknowledgment;406 to your other sessions|
 |407,1:I contact,2?:I group,3?:T display,8?:T mobile,12?:T same username,30?:TA external names,31?:X services|Edit metadata or aligned external identities; changing between mig33/phone/IM kinds requires remove/add|402 with matching transaction|

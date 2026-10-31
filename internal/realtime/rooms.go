@@ -78,9 +78,13 @@ func (s *Coordinator) roomOperation(ctx context.Context, x *session, p *commands
 		if err := s.roomsService.CheckJoin(ctx, x.username, room, x.rooms[room.Name], participants); err != nil {
 			return []*events.Event{roomFailure(p, err)}
 		}
+		controls, err := s.roomsService.GroupRoomControls(ctx, room.Name)
+		if err != nil && !errors.Is(err, faults.ErrNotFound) {
+			return []*events.Event{roomFailure(p, err)}
+		}
 		if x.rooms[room.Name] {
 			// 701 updates an existing native tab. The ACK still completes703.
-			return []*events.Event{s.roomEntry(room, p.Correlation), ack}
+			return []*events.Event{s.joinedRoomEntry(room, p.Correlation, controls.GroupID), ack}
 		}
 
 		alreadyPresent := roomHasUser(participants, x.username)
@@ -100,7 +104,7 @@ func (s *Coordinator) roomOperation(ctx context.Context, x *session, p *commands
 		// 701 does not remove the pending703. ACK must follow it, and the
 		// welcome follows both in this response, never in a competing HTTP poll.
 		return []*events.Event{
-			s.roomEntry(room, p.Correlation), ack, roomSystemPacket(room.Name, welcome),
+			s.joinedRoomEntry(room, p.Correlation, controls.GroupID), ack, roomSystemPacket(room.Name, welcome),
 		}
 	case commands.RoomLeave:
 		if !x.rooms[room.Name] {
@@ -251,8 +255,8 @@ func roomFailure(p *commands.Request, err error) *events.Event {
 	return failure(p, "The chat room could not be loaded; try again")
 }
 
-func (s *Coordinator) roomEntry(room rooms.Room, correlation int16) *events.Event {
-	return s.roomEntryCategory(room, correlation, room.Category)
+func (s *Coordinator) joinedRoomEntry(room rooms.Room, correlation int16, communityID int64) *events.Event {
+	return events.New(correlation, events.Room{Room: room, Participants: len(s.roomParticipants(room.Name)), Category: room.Category, CommunityID: communityID})
 }
 
 func (s *Coordinator) roomEntryCategory(room rooms.Room, correlation, category int16) *events.Event {

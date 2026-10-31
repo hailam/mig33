@@ -51,7 +51,7 @@ V4's mixed203 accessor reads are real:31 and32 are used as integers for dimensio
 |---|---|---|
 | Initial list | Always400→401/402→403 | If203 revision matches saved revision,4191:L checkpoint; otherwise400.420 carries revision/time; contacts cached in RMS |
 |402 fixed external accounts |14/15 MSN,16/17 AIM,18/19 Yahoo,22/23 Google Talk |31:X service IDs,32:X presence bytes,33:TA usernames; native mig33 and generic external branches separate |
-|402 profile metadata | No avatar/status fields read |27:T avatar key,28:T status text |
+|402 profile metadata | No avatar/status fields read |27:T status text,28:T avatar key; [verified through the original renderer](../v4/docs/data/protocol-audit-contact-metadata.json) |
 |404 presence | Fixed byte tags2/3/4/5/7 |2:B mig33 or9:X service IDs +10:X presence bytes |
 |405 add | Fixed14/16/18/22 external usernames |30:T username +31:B generic service; fixed external tags not emitted |
 |407 edit | Fixed external username tags;2:I group always |30:TA usernames +31:X services;2:I group omitted−1 |
@@ -62,7 +62,7 @@ V4's mixed203 accessor reads are real:31 and32 are used as integers for dimensio
 |417 |2:B2 block or1 unblock |2:B2 always; boolean parameter ignored |
 |600 presence |1:B new status | Adds2:B previous status; error branch incorrectly reads2:I |
 |601/602/603 | Absent | Status/avatar update requests and own-profile result;602 overwrites tag1 with old avatar and omits rollback2 |
-|421/423 | Absent | Incremental avatar/status update + optional3:L checkpoint |
+|421/423 | Absent | Incremental status/avatar update respectively + optional3:L checkpoint |
 |422/921 | Absent | HTML-like Updates feed items and subscription toggle |
 |206 connect |3:B show-offline flag |3:B0 always |
 |207 service state | Four hard-coded services | Registry lookup by208 descriptor |

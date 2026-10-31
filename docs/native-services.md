@@ -8,7 +8,7 @@ Historical theme, English-pack, emoticon and provider-icon downloads read local 
 
 | Request | Local response and state |
 | --- | --- |
-|602 avatar | Accepts an owned `photos/ID` key in tag1, or empty/default-avatar.png to clear it. Saves the choice and broadcasts603/421. The original builder writes the old ID over the new ID in tag1; the server applies only what arrives. The gallery remains the reliable native way to choose a new image. |
+|602 avatar | Accepts an owned `photos/ID` key in tag1, or empty/default-avatar.png to clear it. Saves the choice and broadcasts603/423. The original builder writes the old ID over the new ID in tag1; the server applies only what arrives. The gallery remains the reliable native way to choose a new image. |
 |800 callback | Validates origin/destination phone numbers, stores a pending_provider call and returns a correlated acknowledgment plus a notification. Never returns804 or starts a telephone call. |
 |900 invite | Saves a pending_provider invitation and returns its explicit request receipt in ACK tag1. No SMS is sent. |
 |500 channel2 | Saves a text SMS request as pending_provider. Returns an explicit0 response containing the saved request ID and status: the original ACK path hardcodes “SMS sent”, so ACK would be false. |

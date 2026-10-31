@@ -25,7 +25,7 @@
     },
     {
       "path": "research/applets/v4/docs/protocol.md",
-      "sha256": "de8f1bcd8faf5f0382934ce38ca020bf4a39996adb729c6479c4c3e3bf903956"
+      "sha256": "2ae9c136482bcbeebefa8022266071ef61677f9f67c04776f4ba968be9562f29"
     },
     {
       "path": "research/applets/v4/docs/endpoints.md",
@@ -34,6 +34,10 @@
     {
       "path": "internal/protocol/testdata/original_v4_packets.json",
       "sha256": "185846c5891a8be159ed5ceb093b7a8e1e65448d7481f1ffc83e01304237599d"
+    },
+    {
+      "path": "research/applets/v4/docs/data/protocol-audit-contact-metadata.json",
+      "sha256": "0ef5c4acaa184cc3f3c5e5263b7d71ddde3aa4daffae05e5699de53db32eb2a2"
     }
   ],
   "messages": [
@@ -7454,6 +7458,14 @@
         },
         {
           "path": "research/applets/v4/docs/protocol.md"
+        },
+        {
+          "path": "research/applets/v4/docs/data/protocol-audit-contact-metadata.json",
+          "pointer": "/fields/0"
+        },
+        {
+          "path": "research/applets/v4/docs/data/protocol-audit-contact-metadata.json",
+          "pointer": "/fields/1"
         }
       ],
       "fields": [
@@ -7576,7 +7588,7 @@
           "views": [
             "T"
           ],
-          "description": "Avatar key t.h.",
+          "description": "Status text t.h.",
           "presence": "conditional",
           "evidence": [
             {
@@ -7585,6 +7597,10 @@
             {
               "path": "research/applets/v4/docs/data/protocol-audit-incoming.json",
               "pointer": "/operations/18/current_response_field_views/6"
+            },
+            {
+              "path": "research/applets/v4/docs/data/protocol-audit-contact-metadata.json",
+              "pointer": "/fields/0"
             }
           ],
           "presence_views": [
@@ -7596,7 +7612,7 @@
           "views": [
             "T"
           ],
-          "description": "Status text t.p.",
+          "description": "Avatar/cache key t.p.",
           "presence": "conditional",
           "evidence": [
             {
@@ -7605,6 +7621,10 @@
             {
               "path": "research/applets/v4/docs/data/protocol-audit-incoming.json",
               "pointer": "/operations/18/current_response_field_views/7"
+            },
+            {
+              "path": "research/applets/v4/docs/data/protocol-audit-contact-metadata.json",
+              "pointer": "/fields/1"
             }
           ],
           "presence_views": [
@@ -7935,8 +7955,8 @@
         "tcp",
         "http-tunnel"
       ],
-      "summary": "Contact avatar update",
-      "description": "1?:I contact(default−1),2?:T avatar(defaultempty),3?:L checkpoint time; **presence of3 tested with text accessor before long read**",
+      "summary": "Contact status update",
+      "description": "1?:I contact(default−1),2?:T status text(defaultempty),3?:L checkpoint time; **presence of3 tested with text accessor before long read**",
       "evidence": [
         {
           "path": "research/applets/v4/docs/data/protocol-incoming.json",
@@ -7948,6 +7968,10 @@
         },
         {
           "path": "research/applets/v4/docs/protocol.md"
+        },
+        {
+          "path": "research/applets/v4/docs/data/protocol-audit-contact-metadata.json",
+          "pointer": "/fields/2"
         }
       ],
       "fields": [
@@ -7976,7 +8000,7 @@
           "views": [
             "T"
           ],
-          "description": "Avatar/cache key; client defaults to an empty string.",
+          "description": "Status text; client defaults to an empty string.",
           "presence": "conditional",
           "evidence": [
             {
@@ -7985,6 +8009,10 @@
             {
               "path": "research/applets/v4/docs/data/protocol-audit-incoming.json",
               "pointer": "/operations/23/current_response_field_views/1"
+            },
+            {
+              "path": "research/applets/v4/docs/data/protocol-audit-contact-metadata.json",
+              "pointer": "/fields/2"
             }
           ],
           "presence_views": [
@@ -8130,8 +8158,8 @@
         "tcp",
         "http-tunnel"
       ],
-      "summary": "Contact status update",
-      "description": "1?:I contact,2?:T status text,3?:L checkpoint; same3 text-presence check as421",
+      "summary": "Contact avatar update",
+      "description": "1?:I contact,2?:T avatar/cache key,3?:L checkpoint; same3 text-presence check as421",
       "evidence": [
         {
           "path": "research/applets/v4/docs/data/protocol-incoming.json",
@@ -8143,6 +8171,10 @@
         },
         {
           "path": "research/applets/v4/docs/protocol.md"
+        },
+        {
+          "path": "research/applets/v4/docs/data/protocol-audit-contact-metadata.json",
+          "pointer": "/fields/3"
         }
       ],
       "fields": [
@@ -8171,7 +8203,7 @@
           "views": [
             "T"
           ],
-          "description": "Status text; client defaults to an empty string.",
+          "description": "Avatar/cache key; client defaults to an empty string.",
           "presence": "conditional",
           "evidence": [
             {
@@ -8180,6 +8212,10 @@
             {
               "path": "research/applets/v4/docs/data/protocol-audit-incoming.json",
               "pointer": "/operations/25/current_response_field_views/1"
+            },
+            {
+              "path": "research/applets/v4/docs/data/protocol-audit-contact-metadata.json",
+              "pointer": "/fields/3"
             }
           ],
           "presence_views": [
@@ -8705,7 +8741,7 @@
         "http-tunnel"
       ],
       "summary": "Room listing or joined-room state",
-      "description": "1:T room,3:I capacity,4:I occupancy,6:S category for lists. A reply to703 instead builds room conversation using8?:I room parameter(default0),10?:T `s.h`,11?:I theme ID,12?:T `s.i`.711 reply adds favorite",
+      "description": "1:T room,3:I capacity,4:I occupancy,6:S category for lists. A reply to703 instead builds room conversation using8?:I community ID(default0; positive enables Group Menu),10?:T `s.h`,11?:I theme ID,12?:T `s.i`.711 reply adds favorite",
       "evidence": [
         {
           "path": "research/applets/v4/docs/data/protocol-incoming.json",
@@ -8793,7 +8829,7 @@
           "views": [
             "I"
           ],
-          "description": "Joined-room parameter when replying to703; defaults to0.",
+          "description": "Community ID when replying to703; defaults to0. A positive value enables Group Menu and supplies cid for community chat-room, forum and member pages. Distinct from a private-group chat identifier.",
           "presence": "conditional",
           "evidence": [
             {

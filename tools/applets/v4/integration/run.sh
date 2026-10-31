@@ -5,7 +5,7 @@ JAVA_BIN=${JAVA_BIN:-/opt/homebrew/opt/openjdk@21/bin/java}
 JAVAC_BIN=${JAVAC_BIN:-/opt/homebrew/opt/openjdk@21/bin/javac}
 mkdir -p data/applets/build/integration/classes data/applets/integration/out
 if [ "${INTEGRATION_SKIP_BUILD:-0}" != 1 ]; then
-python3 - <<'PY'
+uv run --no-project python - <<'PY'
 import hashlib
 from zipfile import ZipFile
 p='research/applets/v4/artifacts/original/mig33-4.62.jar'

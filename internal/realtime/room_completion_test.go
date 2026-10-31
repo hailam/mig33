@@ -26,6 +26,42 @@ func linkedRoomFixture(t *testing.T, s *Application) {
 	}
 }
 
+func TestJoinedRoomExposesCommunityIDAndRejoinClearsUnlinkedGroup(t *testing.T) {
+	s := newTestServer(t)
+	a := login(t, s, "alice")
+	linkedRoomFixture(t, s)
+	controls, err := s.store.GroupRoomControls(t.Context(), "Club One")
+	if err != nil || controls.GroupID <= 0 {
+		t.Fatalf("linked fixture: %+v, %v", controls, err)
+	}
+	joined := joinTestRoom(t, s, a, "Club One", 61)
+	if id, ok := joined[0].Int(8); !ok || int64(id) != controls.GroupID {
+		t.Fatalf("joined701 lost Community Group ID: %d, present=%v", id, ok)
+	}
+	// Listing/favorite701 has a different parser branch. It must not create
+	// a group-backed conversation or inherit the previously joined metadata.
+	listed, _ := s.Handle(t.Context(), a, protocol.New(716, 62).SetShort(1, 1).SetByte(2, 1))
+	for _, packet := range listed {
+		if packet.Opcode == 701 {
+			if _, ok := packet.Int(8); ok {
+				t.Fatal("category listing included joined-room-only community metadata")
+			}
+		}
+	}
+	if err := s.store.LinkCommunityRoom(t.Context(), controls.GroupID, "alice", "Club One", true); err != nil {
+		t.Fatal(err)
+	}
+	// An already-joined703 is the original authoritative metadata refresh.
+	rejoined := joinTestRoom(t, s, a, "Club One", 63)
+	if _, ok := rejoined[0].Int(8); ok {
+		t.Fatal("unlinked room retained its old Group Menu ID")
+	}
+	ordinary := joinTestRoom(t, s, a, "Lobby", 64)
+	if _, ok := ordinary[0].Int(8); ok {
+		t.Fatal("ordinary room unexpectedly advertises a Community Group")
+	}
+}
+
 func roomCommand(t *testing.T, s *Application, sid, room, body string, want int16) {
 	t.Helper()
 	r, _ := s.Handle(t.Context(), sid, protocol.New(500, 50).SetByte(1, 1).SetByte(3, 3).SetText(4, room).SetShort(6, 1).SetText(8, body))
