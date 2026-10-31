@@ -67,8 +67,7 @@ EXPO_NO_TELEMETRY=1 NODE_OPTIONS=--dns-result-order=ipv4first \
   mise -C apps/mobile exec -- pnpm start --localhost
 ```
 
-Then run with the dedicated simulator's UDID. The native secure acceptance
-result is currently **pending**; this command defines the required verification:
+Then run with the dedicated simulator's UDID:
 
 ```sh
 uv run --no-project python tools/mobile/ios_smoke.py \
@@ -76,12 +75,22 @@ uv run --no-project python tools/mobile/ios_smoke.py \
   --appearance light --secure-only
 ```
 
-`--secure-only` first rejects wrong-host, expired and untrusted certificates on
-both HTTPS and TLS, plus an HTTPS-to-HTTP redirect. It requires rejection
-captures and zero application requests at the invalid-certificate/redirect
-targets, then runs the expanded room, group, moderation, page and photo flow
-over Modern HTTPS and Classic v3 TLS. It is mutually exclusive with other
-focused modes. Probe events stay in `secure-probe-events.jsonl`.
+`--secure-only` first rejects plaintext targets and wrong-host, expired and
+untrusted certificates on both HTTPS and TLS, plus an HTTPS-to-HTTP redirect:
+nine rejection cases. It requires rejection captures, stops and drains the
+probes, checks their `probes-stopped` marker, and verifies zero application
+payloads at rejected targets. It then runs the expanded room, group,
+moderation, page and photo flow over Modern HTTPS and Classic v3 TLS. It is
+mutually exclusive with other focused modes. Probe events stay in
+`secure-probe-events.jsonl`.
+
+This workflow passed in `data/mobile-ui/runs/run-uo2mqrvl` on the dedicated
+`mig33-Secure` simulator (`F3680A72-058D-41B7-ACD0-A3EB3FE27A3A`). Its
+`result.json` records all security checks and the complete feature workflow;
+XCTest completed with zero failures, the runner exited successfully, and the
+generated project and simulator appearance were restored. This run does not
+verify Android, physical iOS devices, software-keyboard geometry or the
+separate full Keychain lifecycle workflow.
 
 All modes now require TLS material; `--tls-dir` defaults to `data/local-tls`.
 Omit `--secure-only` for the original full appearance/Keychain workflow, now

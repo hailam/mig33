@@ -364,14 +364,27 @@ Python launch points use uv.
 
 The Node-executed core passes the nine original serializer fixtures, malformed
 and fragmented-frame tests, live Go transport tests, and bidirectional
-original-Java interoperability. The new HTTPS/TLS native certificate/redirect
-and feature run is pending. The following native results are the **previous
-plain-transport baseline**, before the secure-only migration: iOS prebuild,
-native build and Metro/Hermes export passed, and XCTest on an iPhone18 Pro
-simulator running iOS27.2 verified HTTP/TCP messaging and real Keychain login
-preferences. Android native operation and physical iOS devices have not been
-verified.
-The full light-mode run also verifies appearance persistence and retaining a
+original-Java interoperability. The secure implementation's full mobile check
+passed 191 tests with four optional skips; all four separate original-Java
+checks passed. Go race tests, vet, formatting and govulncheck passed, generated
+contracts are current, and iOS Hermes export passed.
+
+Native secure acceptance passed in `data/mobile-ui/runs/run-uo2mqrvl` on the
+dedicated `mig33-Secure` simulator. All nine rejection cases passed: plaintext
+targets and expired, wrong-host and untrusted certificates for both HTTPS and
+TLS, plus an HTTPS-to-HTTP redirect. The harness drained the probes before
+verifying zero application payloads at rejected targets. Modern HTTPS and
+Classic v3 TLS then completed Unicode room/page forms, moderation, private
+blocks, photos, colors/emoticons, group creation/invitation/participants/chat/
+leave and logout against the retained plain HTTP compatibility peer. The run
+exited successfully and restored the generated project and simulator appearance.
+See [secure transport evidence](../../docs/mobile-secure-transports.md#acceptance-and-follow-up).
+
+The following results are the **previous plain-transport baseline**, before
+the secure-only migration: iOS prebuild, native build and Metro/Hermes export
+passed, and XCTest on an iPhone18 Pro simulator running iOS27.2 verified
+HTTP/TCP messaging and real Keychain login preferences. That full light-mode
+run also verified appearance persistence and retaining a
 live conversation and draft across theme changes. Native control acceptance
 passes in light mode and dark mode with accessibility-large Dynamic Type,
 including retained browse state, native menus/alerts/sheet detents, private and
@@ -382,6 +395,7 @@ incoming messages. Dark-mode expanded-feature acceptance also passes Modern
 HTTP and Classic v3 TCP moderation, groups, personal blocks and photos.
 These simulator runs used hardware-keyboard input; software-keyboard geometry
 remains unverified because the run did not expose enough visible software keys.
+Android native operation and physical iOS devices have not been verified.
 The focused Classic v3 run also passes HTTP and TCP messaging, appearance
 restoration after restart, and conversation/draft retention through
 v3 → Modern → v4 → v3. Its source-color checks use independently extracted

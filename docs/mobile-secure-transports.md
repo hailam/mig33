@@ -1,8 +1,8 @@
 # Secure transports for Expo
 
 Implementation date: 2026-10-31. Expo now accepts only HTTPS and TLS sockets.
-The native certificate/redirect acceptance run is pending; the implementation
-and available checks below do not imply that native acceptance has passed.
+Native iOS secure acceptance passed in `data/mobile-ui/runs/run-uo2mqrvl`:
+all nine rejection cases and the complete HTTPS/TLS feature workflow passed.
 
 ## Compatibility boundary
 
@@ -153,11 +153,27 @@ uv run --no-project python tools/mobile/ios_smoke.py \
 ```
 
 Prepare the native development build and Metro first, as described in the
-[harness setup](../tools/mobile/README.md). This workflow checks certificate and
-downgrade rejection, requires zero application requests at the invalid/redirect
-targets, then exercises HTTPS/TLS room, group, page and photo operations with
-the retained plain compatibility peer. Native acceptance is still pending;
-Android/device trust and presentation need their own actual-device validation.
+[harness setup](../tools/mobile/README.md). The passing run
+`data/mobile-ui/runs/run-uo2mqrvl` used the dedicated `mig33-Secure` simulator
+(`F3680A72-058D-41B7-ACD0-A3EB3FE27A3A`). Its `result.json` records nine rejected
+connections: plaintext targets, expired certificates, wrong-host certificates
+and untrusted certificates for both HTTPS and TLS, plus an HTTPS-to-HTTP
+redirect. After shutting down and draining the probes, the harness verified
+the `probes-stopped` marker and zero application payloads at rejected targets.
+
+The same run completed Modern HTTPS and Classic v3 TLS login, Unicode room
+creation and original page forms, room information, mute/unmute, moderator
+kick and ordinary vote-kick, block/unblock, photo preview, text color and
+emoticons, group creation/invitation/participants/messaging/leave, and logout.
+The compatibility peer used the retained plain HTTP listener. XCTest passed
+with zero failures; the runner exited successfully and restored the generated
+project and simulator appearance.
+
+The full mobile check passed 191 tests with four optional skips; four separate
+original-Java interoperability checks also passed. Go race tests, vet,
+formatting and govulncheck passed; the 111 packet contracts and five generated
+artifacts are current, and iOS Hermes export passed. Android native operation,
+physical iOS devices and software-keyboard geometry remain unverified.
 
 No dependency additions were needed by the transport adapters. Retain
 app-local mise/pnpm, exact pins and the 72-hour Node release-age policy; only a
