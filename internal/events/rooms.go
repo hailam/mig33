@@ -15,6 +15,8 @@ type (
 		Room         rooms.Room
 		Participants int
 		Category     int16
+		// CommunityID enables the original Group Menu for a joined room.
+		CommunityID int64
 	}
 )
 

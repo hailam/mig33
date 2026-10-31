@@ -1,6 +1,7 @@
 package nativecodec
 
 import (
+	"math"
 	"strings"
 
 	"github.com/hailam/mig33/internal/commands"
@@ -58,7 +59,13 @@ func EncodeRoom(event *events.Event) (*protocol.Packet, bool) {
 	case events.RoomListingComplete:
 		return protocol.New(717, event.Correlation).SetText(1, data.Action), true
 	case events.Room:
-		return protocol.New(701, event.Correlation).SetText(1, data.Room.Name).SetInt(3, int32(data.Room.Capacity)).SetInt(4, int32(data.Participants)).SetShort(6, data.Category), true
+		packet := protocol.New(701, event.Correlation).SetText(1, data.Room.Name).SetInt(3, int32(data.Room.Capacity)).SetInt(4, int32(data.Participants)).SetShort(6, data.Category)
+		// Original bc's703 reply passes tag8 to s.a; aj.U enables Group
+		// Menu when positive and its pages append that value as community cid.
+		if data.CommunityID > 0 && data.CommunityID <= math.MaxInt32 {
+			packet.SetInt(8, int32(data.CommunityID))
+		}
+		return packet, true
 	case events.RoomParticipants:
 		return protocol.New(708, event.Correlation).SetText(2, strings.Join(data.Participants, ";")+";").SetText(3, terminatedNames(data.Moderators)).SetText(4, terminatedNames(data.Muted)).SetByte(5, 1), true
 	case events.RoomKicked:

@@ -1,6 +1,6 @@
 # Expo integration with the original mig33 API
 
-Research date: 2026-10-30. Current-phase constraint: retain the original API and protocol through both original transports, HTTP and TCP/socket. Both are required compatibility surfaces. Introducing a new application API is a separate future phase. The [reviewed contract and generation workflow](../../api/README.txt) now implement the contract stage of this research. Expo runtime, binary-codec and device experiments remain to be run.
+Research date: 2026-10-30; implementation update: 2026-10-31. Current-phase constraint: retain the original API and protocol through both original transports, HTTP and TCP/socket. Both are required compatibility surfaces. Introducing a new application API is a separate future phase. The [contract workflow](../../api/README.txt) and [Expo client slice](../../apps/mobile/README.md) implement the initial stages. The codec and Node-executed client pass original-Java interoperability over both transports; native iOS simulator validation remains pending Xcode. Sections below retain the research rationale; the app README records current commands and limitations.
 
 The Expo app should act as another compatible client of the reconstructed original service. Its UI and internal TypeScript abstractions can be new, while its network requests retain the original routes, packet formats, authentication, and operation semantics. The client design needs a shared packet codec and session core with separate HTTP and TCP/socket adapters. Both existing server transports remain supported and independently verified. An HTTP-first experiment is only a testing sequence, not a decision to drop socket support.
 
@@ -220,4 +220,4 @@ Keep the preserved Java launchers, probes, and integration tools: they supply in
 
 A newly designed JSON API, REST login and room endpoints, WebSocket/SSE events, a new replay cursor, or different authentication/session semantics require a separate product and protocol design phase. The earlier HTTP-generator and modern-event approach belongs there. None is a prerequisite for the current compatible Expo client.
 
-Only research documentation has changed. No Expo app, client codec, API alteration, or new protocol has been implemented by this study.
+The initial study changed research documentation only. The subsequent app-local implementation now provides the codec, original login/contact/message session, and both transports. It introduces no new server endpoint or wire protocol. The user selected the iOS simulator as the first native target.

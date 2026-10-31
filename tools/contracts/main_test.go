@@ -144,7 +144,7 @@ func TestStaleOutputFailsWithoutWriting(t *testing.T) {
 		t.Fatal(err)
 	}
 	root := t.TempDir()
-	for _, path := range append([]string{sourcePath}, evidencePaths(c)...) {
+	for _, path := range append([]string{sourcePath, "api/openapi.yaml"}, evidencePaths(c)...) {
 		data, err := os.ReadFile(filepath.Join("../..", path))
 		if err != nil {
 			t.Fatal(err)

@@ -47,7 +47,7 @@ Photo chat sends accept500 content2 (upload bytes) or5 (own scrapbook ID). Rejec
 
 914 type2 triggers vibration, type3 carries framed animation, and type4 carries an image plus WAV data; type4 is not a generic photo format. The [protocol reference](../research/applets/v4/docs/protocol.md) documents these distinctions.
 
-Avatar selection persists the chosen photo, sends603/421 updates and includes avatar keys in contact snapshots. Images use the advertised local asset base. A private photo shared in chat remains accessible to its saved audience; blocking prevents subsequent image retrieval. Previously downloaded device caches cannot be remotely erased.
+Avatar selection persists the chosen photo, sends603/423 updates and includes avatar keys in contact snapshots. Images use the advertised local asset base. A private photo shared in chat remains accessible to its saved audience; blocking prevents subsequent image retrieval. Previously downloaded device caches cannot be remotely erased.
 
 ## Room settings recovered from historical visuals
 

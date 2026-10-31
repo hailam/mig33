@@ -8,203 +8,203 @@
     "en-US"
   ],
   "displayable_source": "https://github.com/barteo/microemu/blob/578b56783b417ea72349290c9b11dce4e895ccb7/microemulator/microemu-midp/src/main/java/javax/microedition/lcdui/Displayable.java",
-  "displayable_source_sha256": "074d9d84c663ae12196db289204fd98c5757911b2ffa32d4204efa247d1d279d",
+  "displayable_source_sha256": "3db319531d298c153013d1ffc0775d164d18e985086339ad6b9fa6531dc1b9e8",
   "network": "Connector throws for all protocols. Validation run:4 refused attempts including mandatory self-test.",
   "images": [
     {
       "file": "startup.png",
       "description": "Original offline startup state; all network refused",
-      "sha256": "fc60e8a4af6291a3057751ce56d6fb58981b6022224f4edf942f60ab7e7a4be0"
+      "sha256": "a9b7e7f7e1a8843c238e8cb3f727f14a351b334ed43f08e70f376ce38ddaca07"
     },
     {
       "file": "01-add-im-contact-fixture.png",
       "description": "Add IM Friend; original form constructor state 1; SYNTHETIC IM provider",
-      "sha256": "dfc1d885269acdffb3dd27f3a73fa8cd6320f42c1a72dc170fc87a0acbd048c4"
+      "sha256": "7796909d2de20860efdeffc94ed11d9e0a52690df30b4888c6e4cd888904758d"
     },
     {
       "file": "09-contact-details.png",
       "description": "Contact Details; original form constructor state 9; empty offline defaults",
-      "sha256": "04e334687779286b5878b684101bebf020083ef5556e3c850f6bd99a7fbac2e3"
+      "sha256": "d9371c7e72049effdc98871bf65b6f67e52ab9fb4069364e4ef85c8ca0b6ef81"
     },
     {
       "file": "09-contact-details-end.png",
       "description": "Contact Details; final focus/scroll position; same fixture values",
-      "sha256": "973f686ad99f142da70ed212d23f612476fa11c70a2da3c223811b44e3049e65"
+      "sha256": "03c71bc3894661b7eceb9f8f4101f97bdb2c46348a7eed353cab37bdc5420133"
     },
     {
       "file": "13-manual-connection.png",
       "description": "Connection Settings; original form constructor state 13; empty offline defaults",
-      "sha256": "714a768181f32038f490fcb8959ab1a3b6286f5ffe196dc80f14840ea99eff3f"
+      "sha256": "0b48b4de8023c562d2d85fc26ed401145c409490136e70d1b2f947a04b44ef24"
     },
     {
       "file": "14-forgot-details-fixture.png",
       "description": "Forgot Details; original form constructor state 14; SYNTHETIC mobile number",
-      "sha256": "319925acc0acde159dcaeb72e55d0d2b437e14238164bc1beea58c7faa6083db"
+      "sha256": "e8162c742c59eebbdb2b8a98f5199dbc820d5cdaaa9b6da7f85afc4d6955e3b8"
     },
     {
       "file": "15-login.png",
       "description": "Login; original form constructor state 15; empty offline defaults",
-      "sha256": "ba2ca2f2ba9b81bade4def146bc59f07fb77a4f08c4c6e3b838c1f79bbf2b48b"
+      "sha256": "0c3dd181996d65a68fc589c682586fdf798cae0f3feb24c64c29ee06c0aee7c1"
     },
     {
       "file": "15-login-end.png",
       "description": "Login; final focus/scroll position; same fixture values",
-      "sha256": "6b64ea93bf7d604333afdc021fd8a5fe352acacdc7c3c1883643e2a7bbc765a9"
+      "sha256": "f8b57258861b1738cae5b7ef1a7047db2790de482348748fe3eb307aa8865f75"
     },
     {
       "file": "23-invite-friend.png",
       "description": "Invite 2 mig33; original form constructor state 23; empty offline defaults",
-      "sha256": "74bce208027083119d219bb6fc64455d359738a5dbbcfed7a40d6e9ad9c0176b"
+      "sha256": "aaff2d01f39433efcb925e0cadb168d308c15da28f57e993c123e0b883d00574"
     },
     {
       "file": "30-registration-no-captcha.png",
       "description": "Registration; original form constructor state 30; empty offline defaults",
-      "sha256": "606397d23de55878e6f126dfafee3ff5ab01eb030c3d33c0188733fa09d29854"
+      "sha256": "93088f201fb52289a7d5fc10fecb6d93622f6e7f88f5ea153a27e11baab3fe24"
     },
     {
       "file": "30-registration-no-captcha-end.png",
       "description": "Registration; final focus/scroll position; same fixture values",
-      "sha256": "9ea8d51ce69a3fec7adda10d4d8a0fd81e00ba76d8905b694cdfe67115c600a8"
+      "sha256": "5bf6d3e654f0bca3082765d9f3f96affc1802018b491d5c52039b9ac3889cb6d"
     },
     {
       "file": "36-information-fixture.png",
       "description": "Info; original form constructor state 36; SYNTHETIC supplied text",
-      "sha256": "9fde23888b5f5c1739633364da0f89af347ea48ae2311ca43d6a0c4ae8534ce0"
+      "sha256": "a41061fac7e9e06b3c8f5d2f588ba27765573a3cc7b61eefdb146a7054d38b20"
     },
     {
       "file": "40-resend-code-fixture.png",
       "description": "Resend Code; original form constructor state 40; SYNTHETIC mobile number",
-      "sha256": "99fa42e0bf335ea17b0c8f399a8d8bb07aa542d43905e49df45b212231f2fa97"
+      "sha256": "78f9d9c041fdc12d787d70844c77f33a08feb82775e775a4fa85ba82bb8cc656"
     },
     {
       "file": "41-authenticate.png",
       "description": "Authenticate Account; original form constructor state 41; empty offline defaults",
-      "sha256": "594a4930dbe603bbd852411a36f84390977994c35a6a32b80d1f5ee6fcf3d75b"
+      "sha256": "6a6fab8c82b2e9f00f8d364141fb3408a26c6a5555009232c8666320469e3ea7"
     },
     {
       "file": "43-welcome.png",
       "description": "Welcome to mig33; original form constructor state 43; empty offline defaults",
-      "sha256": "edb71c378c316b37778f5391f9fa480921cc70e6346a5fdca730ddd940adf48a"
+      "sha256": "a8f5503333f9d5a8a23f2f6e87ac714ed6531a81fc5ea98eba307d58103be102"
     },
     {
       "file": "49-first-run.png",
       "description": "mig33; original form constructor state 49; empty offline defaults",
-      "sha256": "fc60e8a4af6291a3057751ce56d6fb58981b6022224f4edf942f60ab7e7a4be0"
+      "sha256": "a9b7e7f7e1a8843c238e8cb3f727f14a351b334ed43f08e70f376ce38ddaca07"
     },
     {
       "file": "52-add-phone-contact.png",
       "description": "Add Phone Contact; original form constructor state 52; empty offline defaults",
-      "sha256": "2da94997eb0c785ec795e6ea5ce740ab23bda418faaf65729ef89aff90265f20"
+      "sha256": "d596795fbddd261b5d71335c9c5e24d7998b97f5ae9c66e6e36cdc7ea1265636"
     },
     {
       "file": "54-connection-type.png",
       "description": "Connection Settings; original form constructor state 54; empty offline defaults",
-      "sha256": "b63f4cbdd0d627b589d71c05171127ca65cfee29a7f9c0d6a3be82aab00e3b76"
+      "sha256": "c4c5e3b5a3b23291a592070ba00ac6ca39d9d95f455aa8f35675b8450bd28cef"
     },
     {
       "file": "57-add-mig33-contact.png",
       "description": "Add a Friend; original form constructor state 57; empty offline defaults",
-      "sha256": "c546766f22408f3fd43f1dfe5fd97b9b2b9cd45c4798720269035e8897218ded"
+      "sha256": "ad7f61e8b8b668f2211f18b26c490c51753d4847391ff239c004c7c9cf4d43d8"
     },
     {
       "file": "62-registration-username.png",
       "description": "Registration; original form constructor state 62; empty offline defaults",
-      "sha256": "a32b8dca3a43583e8fc3d3cff60c81439b21f145cb6edf36d8afd23d202662ab"
+      "sha256": "d572c60b1970574004e6c905934b73bc61d8af979f4aaf7241908f38173b3519"
     },
     {
       "file": "60-captcha-fixture.png",
       "description": "Captcha Form; original form constructor state 60; SYNTHETIC CAPTCHA image and prompt",
-      "sha256": "5db45d9d1a2a0d7b5a791e966f39690fc2d847ac0ace5d7ad245b3fee203ea49"
+      "sha256": "7776cca41140eaf91e837fa0554c6c978132739916ae8b445d5870ccacdbafc1"
     },
     {
       "file": "menu-G.png",
       "description": "Original menu factory aj.G(); offline flags; login underlay",
-      "sha256": "d8a2be2480247d4f5cc1062e4c7a9afde188878c9abdb1f16746cb2fd1489fb2"
+      "sha256": "67a91a40861c37070878fe9ee2ece049abc7aef048762e3853cd9d0e5cce53e3"
     },
     {
       "file": "menu-J.png",
       "description": "Original menu factory aj.J(); offline flags; login underlay",
-      "sha256": "f202c2c32e784d6ab51973826f8e615d4babe0cbb25a8de912905b5cf3cabaef"
+      "sha256": "4ec780f04c6da05602b53d09223a7280731de3fcaa3dd15476525b2e31e95b67"
     },
     {
       "file": "menu-N.png",
       "description": "Original menu factory aj.N(); offline flags; login underlay",
-      "sha256": "c73e89a03f805ec5db8678e410264f73205eb0691f0c88f9a57d991fd3ce4ea6"
+      "sha256": "3a6d790cef89b7879c0bcf2a921d09ef3a5ee8c86591682b448b64125a64d956"
     },
     {
       "file": "menu-Q.png",
       "description": "Original menu factory aj.Q(); offline flags; login underlay",
-      "sha256": "2c53c0bfc9aa1e367653ed2c2fd46597e2df7e73dcc50c1667c619caeebfda48"
+      "sha256": "689a810387a72ddab7da7d388ac1e733b066f452066a70830d836830d120de9d"
     },
     {
       "file": "menu-S.png",
       "description": "Original menu factory aj.S(); offline flags; login underlay",
-      "sha256": "d54a6257b2ae75d61226782968f3dcb2f64ddff7c43a9a75950812a36321988a"
+      "sha256": "c1275325b08cdbb8db2ed9f40cfb25bbd18c042532ce920904e13a881d55a173"
     },
     {
       "file": "menu-X.png",
       "description": "Original menu factory aj.X(); offline flags; login underlay",
-      "sha256": "93141295409eef6e07a347063f5edd4c5c32550e93fd6096ce83752af55ee4cf"
+      "sha256": "2c5ee648e87f13a6a7fd2a1b3ade033e2bd84a42d0e9311f1ab17ba924ba3fa0"
     },
     {
       "file": "menu-I.png",
       "description": "Original menu factory aj.I(); offline flags; login underlay",
-      "sha256": "9e40d5b521767e81e38e8a686ce6c35d4199e8f5a68dac37dcc8ed96b63fc8e7"
+      "sha256": "ce4b761ba8b46d72fb2d3fd6d43f862ca76c0ee6eb7f82924d549277a74436f6"
     },
     {
       "file": "menu-Y.png",
       "description": "Original menu factory aj.Y(); offline flags; login underlay",
-      "sha256": "f31dfa04ac77dd93ffb02626b9919886d7edaee839b02c3d1b5926d7110a7e91"
+      "sha256": "d2df5ad3503b0a224e801c7ec6a3a815b45898a4411bffa71eb250e278c4cc41"
     },
     {
       "file": "menu-P.png",
       "description": "Original menu factory aj.P(); offline flags; login underlay",
-      "sha256": "610945c65b767f91caff07ee6da1a26edf835999e3311a2e5cc2a0113a3b72d9"
+      "sha256": "2cf8e58785e594175b3554e41041c6fd7d970f20440ca2fdd922e5722dd7c23e"
     },
     {
       "file": "menu-W.png",
       "description": "Original menu factory aj.W(); offline flags; login underlay",
-      "sha256": "68d9a26b8c88bdc715c0da03b1f62b25ef145794341d18a72165d5229600cf9f"
+      "sha256": "dd00e1c2bf062d3c032b864e0345eb865e77b4c20bccc032122e5cab72ba1880"
     },
     {
       "file": "menu-H.png",
       "description": "Original menu factory aj.H(); offline flags; login underlay",
-      "sha256": "65906856d2f14be36170b6765a0ad14f8cc671a8a024c4bf6758ab7c2171b63f"
+      "sha256": "d4ce64ef0ddf5264151cc06873fbee65a7cfdbfd93fe0e34afff45056c7be3cd"
     },
     {
       "file": "menu-ab.png",
       "description": "Original menu factory aj.ab(); offline flags; login underlay",
-      "sha256": "61d583dbd7536cfc0ea885a89dcc3b0fd113b246686c1f8a455518d820d05313"
+      "sha256": "057040e60e6721bb7c119a32de0fb81026b96b70ea87874246249faae7c30b69"
     },
     {
       "file": "menu-T.png",
       "description": "Original menu factory aj.T(); offline flags; login underlay",
-      "sha256": "361be5e63e8c156357086850df5ed67cdaaf8d1c000a94bee4c7b0d855e781a1"
+      "sha256": "fbc7661e44132b8a67c01b1dccf760af010bc0108fd592810b52c3dde7c6a16c"
     },
     {
       "file": "menu-M.png",
       "description": "Original menu factory aj.M(); offline flags; login underlay",
-      "sha256": "8d673949f8b5f96761fcb1b5241ce99bea996d919e681a63b706f97b4443d1f4"
+      "sha256": "823faf65a72ca5675165b9d5321d48d87fd4fe9f1b079ca00434452432c9bfaf"
     },
     {
       "file": "menu-O.png",
       "description": "Original menu factory aj.O(); offline flags; login underlay",
-      "sha256": "320d4ee0d3f526b161e85e50e3f08701399309f3f311ec9c5deefa62ad46da32"
+      "sha256": "b07ceb0315ec156ece3be0bd72b6466225b353684cb6bb7d7633b8fc45a5da30"
     },
     {
       "file": "menu-K.png",
       "description": "Original menu factory aj.K(); offline flags; login underlay",
-      "sha256": "e0d8493d46948a263702d19fa4839686420e99222519535e0b291a5d2f21182f"
+      "sha256": "7ba35037181a3d30b3fda02164c5c404955c0c73c9dfca20771f7b602431b3b4"
     },
     {
       "file": "menu-L.png",
       "description": "Original menu factory aj.L(); offline flags; login underlay",
-      "sha256": "451ead2ac54a8d0de7a71308124818087f01ac7583b328661c56552ad9106ff1"
+      "sha256": "6e31132c3657760124aacb5cf56f6d651ee5df7ce9623a189cd46aeaa3828212"
     },
     {
       "file": "menu-R.png",
       "description": "Original menu factory aj.R(); offline flags; login underlay",
-      "sha256": "71a06c94ca9d390fd121e435894fce58d65050f55f26109ddf8dd8d6d446d31c"
+      "sha256": "ba85cb6c6ec8af503b3c6600276c8f8c968dcaa4cb009959cb6dd1ccd50c07ff"
     }
   ]
 }

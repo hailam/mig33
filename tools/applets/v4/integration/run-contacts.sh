@@ -3,7 +3,7 @@ set -eu
 cd "$(dirname "$0")/../../../.."
 curl --silent --fail http://127.0.0.1:8080/healthz >/dev/null
 sh tools/applets/v4/integration/run.sh --compile-only
-python3 - <<'PY'
+uv run --no-project python - <<'PY'
 from pathlib import Path
 root=Path('data/applets/integration/contact-out')
 for folder in [root]+[root/u for u in ['hailam','bob']]:

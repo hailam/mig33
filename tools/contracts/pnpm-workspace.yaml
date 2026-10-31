@@ -10,3 +10,9 @@ allowBuilds:
   # AsyncAPI's optional install telemetry is unnecessary for local validation.
   '@scarf/scarf': false
 saveExact: true
+# Spectral's only minimatch consumer is adapted to the named v11 export.
+# See DEPENDENCIES.md and the matching version-specific package patch.
+overrides:
+  '@stoplight/spectral-core@1.24.0>minimatch': 11.0.2
+patchedDependencies:
+  '@stoplight/spectral-core@1.24.0': patches/@stoplight__spectral-core@1.24.0.patch

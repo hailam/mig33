@@ -6077,6 +6077,10 @@ components:
           - path: research/applets/v4/docs/data/protocol-audit-incoming.json
             pointer: /operations/18
           - path: research/applets/v4/docs/protocol.md
+          - path: research/applets/v4/docs/data/protocol-audit-contact-metadata.json
+            pointer: /fields/0
+          - path: research/applets/v4/docs/data/protocol-audit-contact-metadata.json
+            pointer: /fields/1
         fields:
           - description: Contact identifier.
             evidence:
@@ -6140,22 +6144,26 @@ components:
             tag: 13
             views:
               - B
-          - description: Avatar key t.h.
+          - description: Status text t.h.
             evidence:
               - path: research/applets/v4/docs/protocol.md
               - path: research/applets/v4/docs/data/protocol-audit-incoming.json
                 pointer: /operations/18/current_response_field_views/6
+              - path: research/applets/v4/docs/data/protocol-audit-contact-metadata.json
+                pointer: /fields/0
             presence: conditional
             presence_views:
               - T
             tag: 27
             views:
               - T
-          - description: Status text t.p.
+          - description: Avatar/cache key t.p.
             evidence:
               - path: research/applets/v4/docs/protocol.md
               - path: research/applets/v4/docs/data/protocol-audit-incoming.json
                 pointer: /operations/18/current_response_field_views/7
+              - path: research/applets/v4/docs/data/protocol-audit-contact-metadata.json
+                pointer: /fields/1
             presence: conditional
             presence_views:
               - T
@@ -6417,19 +6425,19 @@ components:
         description: Transaction field in the decoded projection. Only matching pending flows correlate; pushes and resource downloads need not have a pending request. This does not imply uniqueness across sessions, exactly-once delivery, or one reply per request.
         location: $message.payload#/transaction
       description: |-
-        1?:I contact(default−1),2?:T avatar(defaultempty),3?:L checkpoint time; **presence of3 tested with text accessor before long read**
+        1?:I contact(default−1),2?:T status text(defaultempty),3?:L checkpoint time; **presence of3 tested with text accessor before long read**
 
         The T read on tag3 is only a presence guard. Its value view is L; preserve both metadata roles.
       name: Server421
       payload:
         $ref: '#/components/schemas/Server421Packet'
-      summary: Contact avatar update
-      title: Contact avatar update
+      summary: Contact status update
+      title: Contact status update
       x-mig33-observation:
         delivery:
           - tcp
           - http-tunnel
-        description: 1?:I contact(default−1),2?:T avatar(defaultempty),3?:L checkpoint time; **presence of3 tested with text accessor before long read**
+        description: 1?:I contact(default−1),2?:T status text(defaultempty),3?:L checkpoint time; **presence of3 tested with text accessor before long read**
         direction: server-to-client
         evidence:
           - path: research/applets/v4/docs/data/protocol-incoming.json
@@ -6437,6 +6445,8 @@ components:
           - path: research/applets/v4/docs/data/protocol-audit-incoming.json
             pointer: /operations/23
           - path: research/applets/v4/docs/protocol.md
+          - path: research/applets/v4/docs/data/protocol-audit-contact-metadata.json
+            pointer: /fields/2
         fields:
           - description: Contact identifier; client defaults to-1.
             evidence:
@@ -6449,11 +6459,13 @@ components:
             tag: 1
             views:
               - I
-          - description: Avatar/cache key; client defaults to an empty string.
+          - description: Status text; client defaults to an empty string.
             evidence:
               - path: research/applets/v4/docs/protocol.md
               - path: research/applets/v4/docs/data/protocol-audit-incoming.json
                 pointer: /operations/23/current_response_field_views/1
+              - path: research/applets/v4/docs/data/protocol-audit-contact-metadata.json
+                pointer: /fields/2
             presence: conditional
             presence_views:
               - T
@@ -6478,7 +6490,7 @@ components:
           - The T read on tag3 is only a presence guard. Its value view is L; preserve both metadata roles.
         opcode: 421
         open_fields: true
-        summary: Contact avatar update
+        summary: Contact status update
       x-mig33-representation: decoded-raw-field-hex; documentation only
     Server422:
       contentType: application/octet-stream
@@ -6558,19 +6570,19 @@ components:
         description: Transaction field in the decoded projection. Only matching pending flows correlate; pushes and resource downloads need not have a pending request. This does not imply uniqueness across sessions, exactly-once delivery, or one reply per request.
         location: $message.payload#/transaction
       description: |-
-        1?:I contact,2?:T status text,3?:L checkpoint; same3 text-presence check as421
+        1?:I contact,2?:T avatar/cache key,3?:L checkpoint; same3 text-presence check as421
 
         The T read on tag3 is only a presence guard. Its value view is L; preserve both metadata roles.
       name: Server423
       payload:
         $ref: '#/components/schemas/Server423Packet'
-      summary: Contact status update
-      title: Contact status update
+      summary: Contact avatar update
+      title: Contact avatar update
       x-mig33-observation:
         delivery:
           - tcp
           - http-tunnel
-        description: 1?:I contact,2?:T status text,3?:L checkpoint; same3 text-presence check as421
+        description: 1?:I contact,2?:T avatar/cache key,3?:L checkpoint; same3 text-presence check as421
         direction: server-to-client
         evidence:
           - path: research/applets/v4/docs/data/protocol-incoming.json
@@ -6578,6 +6590,8 @@ components:
           - path: research/applets/v4/docs/data/protocol-audit-incoming.json
             pointer: /operations/25
           - path: research/applets/v4/docs/protocol.md
+          - path: research/applets/v4/docs/data/protocol-audit-contact-metadata.json
+            pointer: /fields/3
         fields:
           - description: Contact identifier; client defaults to-1.
             evidence:
@@ -6590,11 +6604,13 @@ components:
             tag: 1
             views:
               - I
-          - description: Status text; client defaults to an empty string.
+          - description: Avatar/cache key; client defaults to an empty string.
             evidence:
               - path: research/applets/v4/docs/protocol.md
               - path: research/applets/v4/docs/data/protocol-audit-incoming.json
                 pointer: /operations/25/current_response_field_views/1
+              - path: research/applets/v4/docs/data/protocol-audit-contact-metadata.json
+                pointer: /fields/3
             presence: conditional
             presence_views:
               - T
@@ -6619,7 +6635,7 @@ components:
           - The T read on tag3 is only a presence guard. Its value view is L; preserve both metadata roles.
         opcode: 423
         open_fields: true
-        summary: Contact status update
+        summary: Contact avatar update
       x-mig33-representation: decoded-raw-field-hex; documentation only
     Server500:
       contentType: application/octet-stream
@@ -6985,7 +7001,7 @@ components:
         description: Transaction field in the decoded projection. Only matching pending flows correlate; pushes and resource downloads need not have a pending request. This does not imply uniqueness across sessions, exactly-once delivery, or one reply per request.
         location: $message.payload#/transaction
       description: |-
-        1:T room,3:I capacity,4:I occupancy,6:S category for lists. A reply to703 instead builds room conversation using8?:I room parameter(default0),10?:T `s.h`,11?:I theme ID,12?:T `s.i`.711 reply adds favorite
+        1:T room,3:I capacity,4:I occupancy,6:S category for lists. A reply to703 instead builds room conversation using8?:I community ID(default0; positive enables Group Menu),10?:T `s.h`,11?:I theme ID,12?:T `s.i`.711 reply adds favorite
 
         Listing, joined-room and favorite-room behavior depends on the matching request.703 creates room conversation state;711 adds a favorite. Fields shown are a union of these observed branches.
       name: Server701
@@ -6997,7 +7013,7 @@ components:
         delivery:
           - tcp
           - http-tunnel
-        description: 1:T room,3:I capacity,4:I occupancy,6:S category for lists. A reply to703 instead builds room conversation using8?:I room parameter(default0),10?:T `s.h`,11?:I theme ID,12?:T `s.i`.711 reply adds favorite
+        description: 1:T room,3:I capacity,4:I occupancy,6:S category for lists. A reply to703 instead builds room conversation using8?:I community ID(default0; positive enables Group Menu),10?:T `s.h`,11?:I theme ID,12?:T `s.i`.711 reply adds favorite
         direction: server-to-client
         evidence:
           - path: research/applets/v4/docs/data/protocol-incoming.json
@@ -7042,7 +7058,7 @@ components:
             tag: 6
             views:
               - S
-          - description: Joined-room parameter when replying to703; defaults to0.
+          - description: Community ID when replying to703; defaults to0. A positive value enables Group Menu and supplies cid for community chat-room, forum and member pages. Distinct from a private-group chat identifier.
             evidence:
               - path: research/applets/v4/docs/protocol.md
               - path: research/applets/v4/docs/data/protocol-audit-incoming.json
@@ -13625,15 +13641,17 @@ components:
                 views:
                   - B
             "27":
-              description: Avatar key t.h.
+              description: Status text t.h.
               pattern: ^(?:[0-9a-f]{2})*$
               type: string
               x-mig33-field:
-                description: Avatar key t.h.
+                description: Status text t.h.
                 evidence:
                   - path: research/applets/v4/docs/protocol.md
                   - path: research/applets/v4/docs/data/protocol-audit-incoming.json
                     pointer: /operations/18/current_response_field_views/6
+                  - path: research/applets/v4/docs/data/protocol-audit-contact-metadata.json
+                    pointer: /fields/0
                 presence: conditional
                 presence_views:
                   - T
@@ -13641,15 +13659,17 @@ components:
                 views:
                   - T
             "28":
-              description: Status text t.p.
+              description: Avatar/cache key t.p.
               pattern: ^(?:[0-9a-f]{2})*$
               type: string
               x-mig33-field:
-                description: Status text t.p.
+                description: Avatar/cache key t.p.
                 evidence:
                   - path: research/applets/v4/docs/protocol.md
                   - path: research/applets/v4/docs/data/protocol-audit-incoming.json
                     pointer: /operations/18/current_response_field_views/7
+                  - path: research/applets/v4/docs/data/protocol-audit-contact-metadata.json
+                    pointer: /fields/1
                 presence: conditional
                 presence_views:
                   - T
@@ -13965,15 +13985,17 @@ components:
                 views:
                   - I
             "2":
-              description: Avatar/cache key; client defaults to an empty string.
+              description: Status text; client defaults to an empty string.
               pattern: ^(?:[0-9a-f]{2})*$
               type: string
               x-mig33-field:
-                description: Avatar/cache key; client defaults to an empty string.
+                description: Status text; client defaults to an empty string.
                 evidence:
                   - path: research/applets/v4/docs/protocol.md
                   - path: research/applets/v4/docs/data/protocol-audit-incoming.json
                     pointer: /operations/23/current_response_field_views/1
+                  - path: research/applets/v4/docs/data/protocol-audit-contact-metadata.json
+                    pointer: /fields/2
                 presence: conditional
                 presence_views:
                   - T
@@ -14129,15 +14151,17 @@ components:
                 views:
                   - I
             "2":
-              description: Status text; client defaults to an empty string.
+              description: Avatar/cache key; client defaults to an empty string.
               pattern: ^(?:[0-9a-f]{2})*$
               type: string
               x-mig33-field:
-                description: Status text; client defaults to an empty string.
+                description: Avatar/cache key; client defaults to an empty string.
                 evidence:
                   - path: research/applets/v4/docs/protocol.md
                   - path: research/applets/v4/docs/data/protocol-audit-incoming.json
                     pointer: /operations/25/current_response_field_views/1
+                  - path: research/applets/v4/docs/data/protocol-audit-contact-metadata.json
+                    pointer: /fields/3
                 presence: conditional
                 presence_views:
                   - T
@@ -14654,11 +14678,11 @@ components:
                 views:
                   - S
             "8":
-              description: Joined-room parameter when replying to703; defaults to0.
+              description: Community ID when replying to703; defaults to0. A positive value enables Group Menu and supplies cid for community chat-room, forum and member pages. Distinct from a private-group chat identifier.
               pattern: ^(?:[0-9a-f]{2})*$
               type: string
               x-mig33-field:
-                description: Joined-room parameter when replying to703; defaults to0.
+                description: Community ID when replying to703; defaults to0. A positive value enables Group Menu and supplies cid for community chat-room, forum and member pages. Distinct from a private-group chat identifier.
                 evidence:
                   - path: research/applets/v4/docs/protocol.md
                   - path: research/applets/v4/docs/data/protocol-audit-incoming.json
@@ -16655,11 +16679,13 @@ x-mig33-source:
     - path: research/applets/v4/docs/data/protocol-audit-transports.json
       sha256: 2dc7195f037a57b768068d333a9d82ee427756b04471104f55759c45446d8e4e
     - path: research/applets/v4/docs/protocol.md
-      sha256: de8f1bcd8faf5f0382934ce38ca020bf4a39996adb729c6479c4c3e3bf903956
+      sha256: 2ae9c136482bcbeebefa8022266071ef61677f9f67c04776f4ba968be9562f29
     - path: research/applets/v4/docs/endpoints.md
       sha256: ddcbb8d28794cbee3a5dc1da72a48af3cbc194475c6ea7a4b17ad961cba8c895
     - path: internal/protocol/testdata/original_v4_packets.json
       sha256: 185846c5891a8be159ed5ceb093b7a8e1e65448d7481f1ffc83e01304237599d
+    - path: research/applets/v4/docs/data/protocol-audit-contact-metadata.json
+      sha256: 0ef5c4acaa184cc3f3c5e5263b7d71ddde3aa4daffae05e5699de53db32eb2a2
   original_jar_sha256: dbf12ffbd44bc6e48d09cf35863736731c87c078877f76ed4b780a4dc5eff92c
   path: api/mig33-v4.json
 x-mig33-wire:

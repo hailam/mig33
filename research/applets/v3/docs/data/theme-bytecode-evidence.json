@@ -1,0 +1,300 @@
+{
+  "original_jar_sha256": "2b416199dca5f6593eefe8fa1c9b84ec4be6cdc36f68bcf17e1a94193bfd2934",
+  "method": "Integer operands read from javap disassembly of the hash-verified original JAR; no prose or app theme input.",
+  "colors": {
+    "stripTop": "#c5daf7",
+    "stripBottom": "#f3f8fe",
+    "buttonTop": "#ffffff",
+    "buttonBottom": "#bcd4f6",
+    "activeTabTop": "#d5e6fb",
+    "activeTabBottom": "#8eb3e7",
+    "unreadTop": "#f5c258",
+    "unreadBottom": "#ff8000",
+    "inactiveTabTop": "#e4eefc",
+    "inactiveTabBottom": "#c0d8f9"
+  },
+  "color_evidence": {
+    "stripTop": {
+      "class": "ab",
+      "class_sha256": "8d60e2e61de35ef6d9b16a6b45609ad68e2633246e6320071900d8f8d05a569b",
+      "method": "public void a(javax.microedition.lcdui.Graphics);",
+      "descriptor": "(Ljavax/microedition/lcdui/Graphics;)V",
+      "bytecode_offsets": [
+        20,
+        23,
+        26
+      ],
+      "disassembly": "artifacts/bytecode/ab.javap.txt",
+      "gradient_call_offset": 46,
+      "rgb": [
+        197,
+        218,
+        247
+      ]
+    },
+    "stripBottom": {
+      "class": "ab",
+      "class_sha256": "8d60e2e61de35ef6d9b16a6b45609ad68e2633246e6320071900d8f8d05a569b",
+      "method": "public void a(javax.microedition.lcdui.Graphics);",
+      "descriptor": "(Ljavax/microedition/lcdui/Graphics;)V",
+      "bytecode_offsets": [
+        29,
+        32,
+        35
+      ],
+      "disassembly": "artifacts/bytecode/ab.javap.txt",
+      "gradient_call_offset": 46,
+      "rgb": [
+        243,
+        248,
+        254
+      ]
+    },
+    "buttonTop": {
+      "class": "t",
+      "class_sha256": "ed345544e01c22b95804643743ddb9ecc4293cc2821f3a994fc99046dc5f1a29",
+      "method": "private int a(javax.microedition.lcdui.Graphics, java.lang.String, int, int, boolean);",
+      "descriptor": "(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIZ)I",
+      "bytecode_offsets": [
+        42,
+        45,
+        48
+      ],
+      "disassembly": "artifacts/bytecode/t.javap.txt",
+      "gradient_call_offset": 60,
+      "rgb": [
+        255,
+        255,
+        255
+      ]
+    },
+    "buttonBottom": {
+      "class": "t",
+      "class_sha256": "ed345544e01c22b95804643743ddb9ecc4293cc2821f3a994fc99046dc5f1a29",
+      "method": "private int a(javax.microedition.lcdui.Graphics, java.lang.String, int, int, boolean);",
+      "descriptor": "(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIZ)I",
+      "bytecode_offsets": [
+        51,
+        54,
+        57
+      ],
+      "disassembly": "artifacts/bytecode/t.javap.txt",
+      "gradient_call_offset": 60,
+      "rgb": [
+        188,
+        212,
+        246
+      ]
+    },
+    "activeTabTop": {
+      "class": "ab",
+      "class_sha256": "8d60e2e61de35ef6d9b16a6b45609ad68e2633246e6320071900d8f8d05a569b",
+      "method": "public int a(int, int, boolean, javax.microedition.lcdui.Graphics);",
+      "descriptor": "(IIZLjavax/microedition/lcdui/Graphics;)I",
+      "bytecode_offsets": [
+        184,
+        187,
+        190
+      ],
+      "disassembly": "artifacts/bytecode/ab.javap.txt",
+      "gradient_call_offset": 210,
+      "rgb": [
+        213,
+        230,
+        251
+      ]
+    },
+    "activeTabBottom": {
+      "class": "ab",
+      "class_sha256": "8d60e2e61de35ef6d9b16a6b45609ad68e2633246e6320071900d8f8d05a569b",
+      "method": "public int a(int, int, boolean, javax.microedition.lcdui.Graphics);",
+      "descriptor": "(IIZLjavax/microedition/lcdui/Graphics;)I",
+      "bytecode_offsets": [
+        193,
+        196,
+        199
+      ],
+      "disassembly": "artifacts/bytecode/ab.javap.txt",
+      "gradient_call_offset": 210,
+      "rgb": [
+        142,
+        179,
+        231
+      ]
+    },
+    "unreadTop": {
+      "class": "ab",
+      "class_sha256": "8d60e2e61de35ef6d9b16a6b45609ad68e2633246e6320071900d8f8d05a569b",
+      "method": "public int a(int, int, boolean, javax.microedition.lcdui.Graphics);",
+      "descriptor": "(IIZLjavax/microedition/lcdui/Graphics;)I",
+      "bytecode_offsets": [
+        261,
+        264,
+        267
+      ],
+      "disassembly": "artifacts/bytecode/ab.javap.txt",
+      "gradient_call_offset": 284,
+      "rgb": [
+        245,
+        194,
+        88
+      ]
+    },
+    "unreadBottom": {
+      "class": "ab",
+      "class_sha256": "8d60e2e61de35ef6d9b16a6b45609ad68e2633246e6320071900d8f8d05a569b",
+      "method": "public int a(int, int, boolean, javax.microedition.lcdui.Graphics);",
+      "descriptor": "(IIZLjavax/microedition/lcdui/Graphics;)I",
+      "bytecode_offsets": [
+        269,
+        272,
+        275
+      ],
+      "disassembly": "artifacts/bytecode/ab.javap.txt",
+      "gradient_call_offset": 284,
+      "rgb": [
+        255,
+        128,
+        0
+      ]
+    },
+    "inactiveTabTop": {
+      "class": "ab",
+      "class_sha256": "8d60e2e61de35ef6d9b16a6b45609ad68e2633246e6320071900d8f8d05a569b",
+      "method": "public int a(int, int, boolean, javax.microedition.lcdui.Graphics);",
+      "descriptor": "(IIZLjavax/microedition/lcdui/Graphics;)I",
+      "bytecode_offsets": [
+        292,
+        295,
+        298
+      ],
+      "disassembly": "artifacts/bytecode/ab.javap.txt",
+      "gradient_call_offset": 318,
+      "rgb": [
+        228,
+        238,
+        252
+      ]
+    },
+    "inactiveTabBottom": {
+      "class": "ab",
+      "class_sha256": "8d60e2e61de35ef6d9b16a6b45609ad68e2633246e6320071900d8f8d05a569b",
+      "method": "public int a(int, int, boolean, javax.microedition.lcdui.Graphics);",
+      "descriptor": "(IIZLjavax/microedition/lcdui/Graphics;)I",
+      "bytecode_offsets": [
+        301,
+        304,
+        307
+      ],
+      "disassembly": "artifacts/bytecode/ab.javap.txt",
+      "gradient_call_offset": 318,
+      "rgb": [
+        192,
+        216,
+        249
+      ]
+    }
+  },
+  "transcriptColors": [
+    "#086834",
+    "#406ac0",
+    "#ff0000",
+    "#ff7300",
+    "#fcc504",
+    "#993300",
+    "#000000"
+  ],
+  "transcript_evidence": [
+    {
+      "class": "com.projectgoth.Roshan.d",
+      "class_sha256": "028e669f768e93c5dad31f4b6c998c1e71f44d0b0f378c4bdd901488a1325aed",
+      "method": "public static int a(int);",
+      "descriptor": "(I)I",
+      "bytecode_offsets": [
+        44
+      ],
+      "disassembly": "artifacts/bytecode/com/projectgoth/Roshan/d.javap.txt",
+      "category": 0,
+      "decimal": 550964,
+      "switch_offset": 1
+    },
+    {
+      "class": "com.projectgoth.Roshan.d",
+      "class_sha256": "028e669f768e93c5dad31f4b6c998c1e71f44d0b0f378c4bdd901488a1325aed",
+      "method": "public static int a(int);",
+      "descriptor": "(I)I",
+      "bytecode_offsets": [
+        47
+      ],
+      "disassembly": "artifacts/bytecode/com/projectgoth/Roshan/d.javap.txt",
+      "category": 1,
+      "decimal": 4221632,
+      "switch_offset": 1
+    },
+    {
+      "class": "com.projectgoth.Roshan.d",
+      "class_sha256": "028e669f768e93c5dad31f4b6c998c1e71f44d0b0f378c4bdd901488a1325aed",
+      "method": "public static int a(int);",
+      "descriptor": "(I)I",
+      "bytecode_offsets": [
+        50
+      ],
+      "disassembly": "artifacts/bytecode/com/projectgoth/Roshan/d.javap.txt",
+      "category": 2,
+      "decimal": 16711680,
+      "switch_offset": 1
+    },
+    {
+      "class": "com.projectgoth.Roshan.d",
+      "class_sha256": "028e669f768e93c5dad31f4b6c998c1e71f44d0b0f378c4bdd901488a1325aed",
+      "method": "public static int a(int);",
+      "descriptor": "(I)I",
+      "bytecode_offsets": [
+        53
+      ],
+      "disassembly": "artifacts/bytecode/com/projectgoth/Roshan/d.javap.txt",
+      "category": 3,
+      "decimal": 16741120,
+      "switch_offset": 1
+    },
+    {
+      "class": "com.projectgoth.Roshan.d",
+      "class_sha256": "028e669f768e93c5dad31f4b6c998c1e71f44d0b0f378c4bdd901488a1325aed",
+      "method": "public static int a(int);",
+      "descriptor": "(I)I",
+      "bytecode_offsets": [
+        56
+      ],
+      "disassembly": "artifacts/bytecode/com/projectgoth/Roshan/d.javap.txt",
+      "category": 4,
+      "decimal": 16565508,
+      "switch_offset": 1
+    },
+    {
+      "class": "com.projectgoth.Roshan.d",
+      "class_sha256": "028e669f768e93c5dad31f4b6c998c1e71f44d0b0f378c4bdd901488a1325aed",
+      "method": "public static int a(int);",
+      "descriptor": "(I)I",
+      "bytecode_offsets": [
+        59
+      ],
+      "disassembly": "artifacts/bytecode/com/projectgoth/Roshan/d.javap.txt",
+      "category": 5,
+      "decimal": 10040064,
+      "switch_offset": 1
+    },
+    {
+      "class": "com.projectgoth.Roshan.d",
+      "class_sha256": "028e669f768e93c5dad31f4b6c998c1e71f44d0b0f378c4bdd901488a1325aed",
+      "method": "public static int a(int);",
+      "descriptor": "(I)I",
+      "bytecode_offsets": [
+        62
+      ],
+      "disassembly": "artifacts/bytecode/com/projectgoth/Roshan/d.javap.txt",
+      "category": 6,
+      "decimal": 0,
+      "switch_offset": 1
+    }
+  ]
+}

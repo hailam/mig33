@@ -178,7 +178,7 @@ Generic helpers accept arbitrary opcode with no fields,1:T,1:I,or1:T+2:T; that c
 
 Original `s.a(...)` offsets84–111 select theme category5, remove the displayed sender/colon prefix and disable the avatar prefix for incoming content6 when body RGB is−1. Category5 uses theme field148, with bundled/fallback brown `#993300`. This establishes the rendering contract, not a server command catalog. Slash commands still leave the original client as content1. See the [reconstruction's command evidence and adapter behavior](../../../../docs/slash-commands.md), including special peer routing for an author's own private-action response.
 
-402 retains1:I contact ID,2?:I group,3?:T display,8?:T mobile,12?:T mig33,13:B mig33 presence.27?:T is avatar key (`t.h`);28?:T status text (`t.p`). Generic external accounts use31:X service IDs,32?:X presence bytes (defaults99),33:TA usernames. The normal path chooses the mig33 branch when12 is present and the generic external branch otherwise; do not assume one402 mixes both. Arrays are positional, so lengths and ordering matter.404 uses1:I contact,2?:B mig33 presence,9?:X external service IDs,10?:X corresponding presences. Presence values remain1 online,3 busy,4 away,99 offline/invisible. N:2164–2381; [t.java](../artifacts/vineflower/t.java).
+402 retains1:I contact ID,2?:I group,3?:T display,8?:T mobile,12?:T mig33,13:B mig33 presence.27?:T is status text (`t.h`);28?:T avatar key (`t.p`). These semantics follow the original setter keys2/91 through the contact text/image renderer; see the [checked bytecode evidence](data/protocol-audit-contact-metadata.json) and [semantic audit correction](protocol-catalog-audit.md#contact-statusavatar-semantic-correction-2026-10-31). Generic external accounts use31:X service IDs,32?:X presence bytes (defaults99),33:TA usernames. The normal path chooses the mig33 branch when12 is present and the generic external branch otherwise; do not assume one402 mixes both. Arrays are positional, so lengths and ordering matter.404 uses1:I contact,2?:B mig33 presence,9?:X external service IDs,10?:X corresponding presences. Presence values remain1 online,3 busy,4 away,99 offline/invisible. N:2164–2381; [t.java](../artifacts/vineflower/t.java).
 
 ## Incoming operation catalog
 
@@ -211,14 +211,14 @@ The machine catalog records immediate constant-tag getter reads in this dispatch
 | 404 | 1:I contact,2?:B mig33 presence,9?:X external services,10?:X external presences |
 | 406 | 1:I deleted contact; removes cache and associated conversation |
 | 420 | 1:I contact revision,2:L checkpoint time; matched synchronization stores checkpoint pending completion, unsolicited packet applies immediately |
-| 421 | 1?:I contact(default−1),2?:T avatar(defaultempty),3?:L checkpoint time; **presence of3 tested with text accessor before long read** |
+| 421 | 1?:I contact(default−1),2?:T status text(defaultempty),3?:L checkpoint time; **presence of3 tested with text accessor before long read** |
 | 422 | 1:I age in seconds,2:B feed item type,3:T avatar/cache key,4:T small HTML/text item; appends activity entry and marks Updates tab unread. `av.a` computes timestamp as current time−age*1000 |
-| 423 | 1?:I contact,2?:T status text,3?:L checkpoint; same3 text-presence check as421 |
+| 423 | 1?:I contact,2?:T avatar/cache key,3?:L checkpoint; same3 text-presence check as421 |
 | 500 | Message; dedicated schema above |
 | 502 | Queues whole packet; delegated UI reads4:T notification and5:T URL on acceptance (J:289,1677) |
 | 503 | 1:I unread mail count |
 | 603 | 1?:T own status saved settings4;2?:T own avatar saved settings3;3?:T profile string `aj.n`;4?:T own profile data saved settings12 |
-| 701 | 1:T room,3:I capacity,4:I occupancy,6:S category for lists. A reply to703 instead builds room conversation using8?:I room parameter(default0),10?:T `s.h`,11?:I theme ID,12?:T `s.i`.711 reply adds favorite |
+| 701 | 1:T room,3:I capacity,4:I occupancy,6:S category for lists. A reply to703 instead builds room conversation using8?:I community ID(default0; positive enables Group Menu),10?:T `s.h`,11?:I theme ID,12?:T `s.i`.711 reply adds favorite |
 | 708 | 2:T participants,3?:T admins,4?:T muted users; semicolon-terminated lists;5?:B service(default1) |
 | 714 | 1:S category ID,2:T label,3:B,4:B,5:B category flags;4 controls expansion and is combined with locally saved category state |
 | 715 | No fields; categories complete; appends search URL and schedules category contents |
@@ -255,6 +255,8 @@ Incoming500 tag11 provides space-separated special-token aliases. The renderer m
 Evidence: [914 dispatcher bytecode](data/protocol-opcode-914.txt); [aj.txt](../artifacts/bytecode/aj.txt), methods `a(byte[]):Image[]` at14560, `b(byte[]):Object[]` at14644 and `d(int)` at17169; [bd.txt](../artifacts/bytecode/bd.txt) for WAV playback. Reading aids: `aj.java` lines5532–5573,6377–6379,8430–8473; `bc.java` lines2946–2974; `s.java` lines736–780 and1190. See [text-and-page-formatting.md](../../../../docs/text-and-page-formatting.md) for the distinction between chat metadata and HTML pages.
 
 ### Dynamic menu911 and room theme719
+
+Joined-room701 tag8 is a community ID, distinct from the private-group chat identifier returned by750. Original `bc.a:([Lay;)V` reads the optional integer at3071–3095, defaults it to0, and passes it as the final argument to `s.<init>:(Lt;ILjava/lang/String;ILaj;I)V` at3200–3201. That constructor stores it in `s.a` at133–136. `aj.U:()Ly;` includes Group Menu only when `s.a > 0` at51–71; `aj.commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V` appends this value as `&cid=` for the community chat-room route at3118–3175 and adjacent forum/member routes. See the [semantic audit](protocol-catalog-audit.md#joined-room701-community-id-refinement-2026-10-31). This identifies the existing field; its tag, integer width, optionality and transport remain unchanged.
 
 Menu category mapping is **different from3.08**:1→`aj.ar` own-profile menu;2→`aj.as` home/contact-list menu;3→`aj.at` Updates menu;4→`aj.au` contact context menu;5→`aj.av` group context menu;6→`aj.aw` Settings;7→`aj.ax` embedded page;8→`aj.ay` room listing;9→`aj.az` private chat;10→`aj.aA` group chat;11→`aj.aB` room chat. Compare N:2941–2979 with J:6028,7274–7469,7697,8106–8153. Category values12–14 used by v3 no longer have branches.
 

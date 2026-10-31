@@ -1,5 +1,6 @@
 import java.nio.file.*;
 import java.util.*;
+import java.util.regex.*;
 import javax.microedition.io.Connector;
 import javax.microedition.lcdui.*;
 import org.microemu.MIDletBridge;
@@ -10,6 +11,8 @@ import org.microemu.device.j2se.*;
 /** Original contact forms/builders/dispatcher, with two isolated client JVMs. */
 public class V4ContactIntegration extends V4GroupIntegration {
     static final Path contactRoot = Paths.get("data/applets/integration/contact-out");
+    static final String initialStatus = "Status from 402";
+    static final String updatedStatus = "Status from 421";
 
     static void peer(String who, String marker) throws Exception {
         until(who + " reached " + marker, () -> Files.exists(contactRoot.resolve(who).resolve(marker)));
@@ -120,10 +123,117 @@ public class V4ContactIntegration extends V4GroupIntegration {
             throw new AssertionError("Reauthentication lost edited Bob contact");
         friends("after-incremental-relogin");
     }
+
+    // Exercise the publisher's builders, dispatcher, renderer model and RMS
+    // serializer; no generated contract or modern client interprets the fields.
+    static void publishStatus(String value) throws Exception {
+        request(601, 1, () -> method(bc, "c", void.class, String.class, String.class).invoke(network, value, ""));
+    }
+    static void publishAvatar(String key) throws Exception {
+        request(602, 1, () -> method(bc, "d", void.class, String.class, String.class).invoke(network, "overwritten-tag-one", key));
+    }
+    static long newestGalleryPhoto() throws Exception {
+        java.util.List<String> responses = new ArrayList<>();
+        synchronized (Connector.events) {
+            for (String event : Connector.events) {
+                String[] parts = event.split("\t");
+                if (parts.length >= 5 && parts[0].equals("RX") && parts[1].equals("923")) responses.add(parts[4]);
+            }
+        }
+        Class<?> ay = Class.forName("ay");
+        long newest = 0;
+        for (String response : responses) {
+            Object[] packets = (Object[]) method(ay, "a", java.lang.reflect.Array.newInstance(ay, 0).getClass(), byte[].class)
+                .invoke(null, Files.readAllBytes(out.resolve(response)));
+            for (Object packet : packets) {
+                String html = (String) method(ay, "f", String.class, short.class).invoke(packet, (short) 2);
+                if (html == null) continue;
+                Matcher photos = Pattern.compile("/assets/photos/(\\d+)").matcher(html);
+                while (photos.find()) newest = Math.max(newest, Long.parseLong(photos.group(1)));
+            }
+        }
+        return newest;
+    }
+    static String uploadAvatar(int color) throws Exception {
+        java.awt.image.BufferedImage image = new java.awt.image.BufferedImage(12, 12, java.awt.image.BufferedImage.TYPE_INT_RGB);
+        for (int y = 0; y < 12; y++) for (int x = 0; x < 12; x++) image.setRGB(x, y, color);
+        java.io.ByteArrayOutputStream bytes = new java.io.ByteArrayOutputStream();
+        javax.imageio.ImageIO.write(image, "png", bytes);
+        long previous = newestGalleryPhoto();
+        request(504, 1, () -> method(bc, "a", void.class, short.class, byte[].class, short.class, byte.class)
+            .invoke(network, (short) 1, bytes.toByteArray(), (short) -1, (byte) 0));
+        // The native504 success dispatcher opens its gallery and also issues
+        // image fetches. Inspect gallery HTML rather than the last922 request.
+        until("original gallery returned uploaded avatar", () -> newestGalleryPhoto() > previous);
+        return "photos/" + newestGalleryPhoto();
+    }
+    static String text(Object row, String name) throws Exception {
+        return (String) field(row.getClass(), name, String.class).get(row);
+    }
+    static Object cachedBob() throws Exception {
+        javax.microedition.rms.RecordStore store;
+        try { store = javax.microedition.rms.RecordStore.openRecordStore("31", false); }
+        catch (javax.microedition.rms.RecordStoreNotFoundException absent) { return null; }
+        try {
+            javax.microedition.rms.RecordEnumeration records = store.enumerateRecords(null, null, false);
+            try {
+                while (records.hasNextElement()) {
+                    Object row = method(roster().getClass(), "a", Class.forName("t"), byte[].class).invoke(null, records.nextRecord());
+                    if (row != null && "bob".equals(text(row, "e"))) return row;
+                }
+            } finally { records.destroy(); }
+            return null;
+        } finally { store.closeRecordStore(); }
+    }
+    static void expectFields(String status, String avatar, String capture) throws Exception {
+        until("original roster " + capture, () -> contact("bob") != null && status.equals(text(contact("bob"), "h")) && avatar.equals(text(contact("bob"), "p")));
+        until("original RMS cache " + capture, () -> {
+            Object cached = cachedBob();
+            return cached != null && status.equals(text(cached, "h")) && avatar.equals(text(cached, "p"));
+        });
+        Object row = contact("bob");
+        byte[] encoded = (byte[]) method(row.getClass(), "a", byte[].class, row.getClass()).invoke(null, row);
+        Object restored = method(roster().getClass(), "a", row.getClass(), byte[].class).invoke(null, encoded);
+        if (!status.equals(text(restored, "h")) || !avatar.equals(text(restored, "p")))
+            throw new AssertionError("Original contact RMS round trip swapped status/avatar");
+        Files.write(out.resolve(capture + "-rms.bin"), encoded);
+        friends(capture);
+        Files.writeString(out.resolve(capture + "-fields.tsv"), "source\tstatus_t.h\tavatar_t.p\nroster\t" + text(row, "h") + "\t" + text(row, "p")
+            + "\nrms-roundtrip\t" + text(restored, "h") + "\t" + text(restored, "p")
+            + "\nrms-recordstore-31\t" + text(cachedBob(), "h") + "\t" + text(cachedBob(), "p") + "\n");
+    }
+    static void expectFieldsPacket(int opcode, String status, String avatar) throws Exception {
+        Object packet = V4BlockIntegration.packet("RX", opcode);
+        int contactID = (Integer) method(packet.getClass(), "d", Integer.class, short.class).invoke(packet, (short) 1);
+        if (contactID != id(contact("bob"), "a")) throw new AssertionError("Wrong contact ID in " + opcode);
+        String first = (String) method(packet.getClass(), "f", String.class, short.class).invoke(packet, (short) (opcode == 402 ? 27 : 2));
+        String expected = opcode == 423 ? avatar : status;
+        if (!expected.equals(first)) throw new AssertionError("Wrong status/avatar wire slot in " + opcode + ": " + first);
+        if (opcode == 402 && !avatar.equals(method(packet.getClass(), "f", String.class, short.class).invoke(packet, (short) 28)))
+            throw new AssertionError("402 tag28 must be the avatar key");
+    }
+    static void contactFieldUpdates() throws Exception {
+        String firstAvatar = Files.readString(contactRoot.resolve("bob/initial-avatar.txt")).trim();
+        expectFields(initialStatus, firstAvatar, "contact-fields-402");
+        expectFieldsPacket(402, initialStatus, firstAvatar);
+        mark("fields-402-checked");
+        peer("bob", "status-updated");
+        until("original421 status push", () -> Connector.count("RX", 421) > 0);
+        expectFields(updatedStatus, firstAvatar, "contact-fields-421");
+        expectFieldsPacket(421, updatedStatus, firstAvatar);
+        mark("fields-421-checked");
+        peer("bob", "avatar-updated");
+        String nextAvatar = Files.readString(contactRoot.resolve("bob/updated-avatar.txt")).trim();
+        if (firstAvatar.equals(nextAvatar)) throw new AssertionError("Avatar fixtures must be distinct");
+        until("original423 avatar push", () -> Connector.count("RX", 423) > 0);
+        expectFields(updatedStatus, nextAvatar, "contact-fields-423");
+        expectFieldsPacket(423, updatedStatus, nextAvatar);
+        mark("fields-423-checked");
+    }
     static void hailam() throws Exception {
-        peer("bob", "ready");
+        peer("bob", "fields-ready");
         if (contact("bob") != null) throw new AssertionError("Use a fresh backend database: Hailam should initially have an empty address book");
-        nativeAddBob("added-bob"); removeBob(); nativeAddBob("readded-bob");
+        nativeAddBob("added-bob"); contactFieldUpdates(); removeBob(); nativeAddBob("readded-bob");
         request(408, 401, () -> method(bc, "j", void.class, String.class).invoke(network, "Contact Test"));
         until("new original contact group", () -> contactGroup("Contact Test") != null);
         int groupID = id(contactGroup("Contact Test"), "b");
@@ -154,6 +264,17 @@ public class V4ContactIntegration extends V4GroupIntegration {
         save("chat-after-add-contact"); mark("finished");
     }
     static void bob() throws Exception {
+        String firstAvatar = uploadAvatar(0xc06040);
+        publishStatus(initialStatus); publishAvatar(firstAvatar);
+        Files.writeString(out.resolve("initial-avatar.txt"), firstAvatar + "\n"); mark("fields-ready");
+        peer("hailam", "fields-402-checked");
+        publishStatus(updatedStatus); mark("status-updated");
+        peer("hailam", "fields-421-checked");
+        String nextAvatar = uploadAvatar(0x40a060);
+        publishAvatar(nextAvatar);
+        Files.writeString(out.resolve("updated-avatar.txt"), nextAvatar + "\n"); mark("avatar-updated");
+        peer("hailam", "fields-423-checked");
+        friends("after-profile-updates");
         until("Hailam message reached Bob original chat", () -> privateTabFor("Contact test from Hailam") >= 0);
         if (contact("hailam") == null) throw new AssertionError("Hailam's edits changed Bob's independent address book");
         friends("independent-roster");
@@ -166,7 +287,7 @@ public class V4ContactIntegration extends V4GroupIntegration {
         try {
             user = args[0]; transport = args[1]; out = contactRoot.resolve(user); Connector.out = out;
             start(); if (user.equals("hailam")) hailam(); else bob(); logout();
-            Files.writeString(out.resolve("result.txt"), "PASS original v4.62 contact integration: " + user + " over " + transport + ".\n");
+            Files.writeString(out.resolve("result.txt"), "PASS original v4.62 contact integration: " + user + " over " + transport + "; distinct402 status/tag27 and avatar/tag28, independent421 status and423 avatar pushes, original roster/RMS/Canvas.\n");
             System.exit(0);
         } catch (Throwable error) { error.printStackTrace(); try { save("failure"); } catch (Throwable ignored) {} System.exit(1); }
     }

@@ -282,6 +282,14 @@ func checkCatalogCoverage(sources map[string][]byte, ids map[string]bool) error 
 }
 
 func generate(root string, c *contract) (map[string][]byte, error) {
+	slashCommands, err := generateSlashCommands()
+	if err != nil {
+		return nil, err
+	}
+	httpMetadata, err := generateHTTP(root)
+	if err != nil {
+		return nil, err
+	}
 	examples, err := fixtureExamples(root)
 	if err != nil {
 		return nil, err
@@ -309,9 +317,11 @@ func generate(root string, c *contract) (map[string][]byte, error) {
 		return nil, err
 	}
 	return map[string][]byte{
-		"api/asyncapi.yaml":           yamlOut.Bytes(),
-		"api/generated/mig33-v4.ts":   typeScript(c),
-		"api/generated/coverage.json": append(coverage, '\n'),
+		slashCommandsPath:   slashCommands,
+		"api/asyncapi.yaml": yamlOut.Bytes(),
+		"apps/mobile/src/mig33/generated/contracts.ts": typeScript(c),
+		"apps/mobile/src/mig33/generated/http.ts":      httpMetadata,
+		"api/generated/coverage.json":                  append(coverage, '\n'),
 	}, nil
 }
 

@@ -10,8 +10,12 @@ Contract ownership and generation
         -> reviewed api/mig33-v4.json
         -> Go generator in tools/contracts/
         -> api/asyncapi.yaml
-        -> api/generated/mig33-v4.ts
+        -> apps/mobile/src/mig33/generated/contracts.ts
         -> api/generated/coverage.json
+
+api/openapi.yaml also generates apps/mobile/src/mig33/generated/http.ts:
+the original gateway paths, binary MIME types, operations and session-routing
+metadata used by the HTTP adapter. It does not add a JSON SDK.
 
 mig33-v4.json is the single reviewed message-definition source. It has 111
 records: all 56 outgoing catalog entries and all 55 incoming dispatcher
@@ -67,8 +71,8 @@ opcode/tag metadata, transport membership and optional observed accessor
 types. Long accessor values use bigint. It is a type/index artifact, not
 a client SDK, decoder, request builder, or session implementation.
 Full conditions and dynamic fields remain in the source and AsyncAPI.
-Future Expo code can consume these declarations without a separately
-published package; its codec/session core can stay app-local.
+The Expo app consumes these declarations directly. Its codec/session core
+lives under apps/mobile/src/mig33, without a separately published package.
 
 Standards validation and dependency policy
 

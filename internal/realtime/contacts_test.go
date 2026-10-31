@@ -184,7 +184,7 @@ func TestIncrementalContactsRefreshTransientPresenceAndStatus(t *testing.T) {
 			id, _ := p.Int(1)
 			value, _ := p.Byte(2)
 			presence = id == 2 && value == 99
-		case 423:
+		case 421:
 			id, _ := p.Int(1)
 			value, _ := p.Text(2)
 			status = id == 2 && value == "Changed while you were away"

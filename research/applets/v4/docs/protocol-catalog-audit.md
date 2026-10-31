@@ -4,6 +4,8 @@ Audit date: 2026-10-30. Target: preserved mig33 Java ME 4.62 build .000.
 
 The protocol catalogs are largely faithful to the original client within their documented scopes. They are compact research references, not complete server schemas. The audit found a stale description, several details worth clarifying, and extraction boundaries that must be represented before code generation. The earlier description of “conflicting historical field interpretations” was too broad: the original wire format has raw fields, and several accessor views can coexist without an encoding contradiction.
 
+A follow-up on 2026-10-31 found a separate semantic error that the getter-scope audit did not detect: the descriptions of contact status and avatar were reversed. The correction and original renderer evidence are recorded below. Matching field reads establishes their wire representation, but does not alone establish their application meaning.
+
 ## Authority and method
 
 The unchanged publisher JAR has SHA-256:
@@ -40,6 +42,38 @@ The constructor-site count includes synthetic responses, local jobs, and RMS obj
 Static-only outgoing operations are `10, 200, 202, 419, 500, 922, 926`. Their audit entries include exact methods, field writes, values, and conditions. They were not invoked merely to inflate runtime coverage, because some involve login, settings, or broader application state.
 
 ## Corrections and refinements
+
+### Contact status/avatar semantic correction (2026-10-31)
+
+The original402 handler stores tag27 through model key2 into `t.h`, which the contact renderer draws as text. It stores tag28 through key91 into `t.p`, which the renderer resolves as an image/cache key. Original421 updates the same status slot; original423 updates the avatar slot. The earlier prose and generated contract had these meanings reversed, and the reconstruction inherited that mistake. This is an application-semantic correction, not a new protocol version or an accessor-view ambiguity.
+
+| Original path | Checked bytecode anchors | Established meaning |
+|---|---|---|
+|402 tag27 | `bc.a:([Lay;)V` reads27 at11850 and calls `t.a(2, value)` at11853; `t.a:(ILjava/lang/String;II)V` key2 branches329 and writes `h` at331 | Contact status text |
+|402 tag28 | Same dispatcher reads28 at11876 and calls `t.a(91, value)` at11879; model key91 branches228 and writes `p` at230 | Contact avatar/cache key |
+|421 tag2 | Dispatcher entry5941 passes `(contactID, value, null)` to `au.a:(ILjava/lang/String;Ljava/lang/String;)Lt;` at6005; that method maps argument2 to key2 at80–95 | Status update |
+|423 tag2 | Dispatcher entry1023 passes `(contactID, null, value)` to the same method at1087; it maps argument3 to key91 at116–132 | Avatar update |
+|Text consumer | `au.a:(Ljavax/microedition/lcdui/Graphics;Z)I` reads `t.h` at2939 as argument6 to the row renderer; the renderer loads6 at318 and calls `Graphics.drawString` at336 | Confirms `t.h` is displayed text |
+|Image consumer | Same painter reads `t.p` at2955 as argument10; row renderer loads10 at362 and invokes the image helper379. `au.a:(Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;IIZ)V` resolves the key through `aj.d`45/`aj.c`49, draws the image134, or requests it through `aj.d`150 | Confirms `t.p` is an image key |
+
+The row-renderer descriptor is `au.a:(IIZLt;Ljava/lang/String;Ljava/lang/String;ILjavax/microedition/lcdui/Graphics;ILjava/lang/String;ZI)Z`. Explicit descriptors avoid confusing the obfuscated overloads. See the [small checked evidence record](data/protocol-audit-contact-metadata.json) and [audit tool](../../../../tools/applets/v4/audit-contact-metadata.py), which verifies the original JAR hash, freshly disassembles `bc`, `t`, and `au`, then checks the cited dispatch entries, setter branches, and instructions. These mechanically checked anchors support a hand-reviewed chain; they do not claim general data-flow verification or execution of the historical server.
+
+The correction changes402/421/423 semantic descriptions, TypeScript contact decoding, and Go response emission together. It retains numeric opcodes, tags, widths, framing, and both original HTTP and TCP transports. Adjacent203 tag28,500 tag10,601,602, and603 retain their existing meanings; tag numbers are local to each operation. In particular,603 tag1 is own status and tag2 own avatar, and602's duplicate-tag1 behavior remains documented.
+
+The original scope catalog and its getter-scope audit remain unchanged: they correctly recorded which fields were read but did not establish text-versus-image consumers. The canonical contract now references this additional semantic evidence. Historical acceptance captures are retained with a correction to their interpretation, rather than being represented as new successful metadata captures.
+
+### Joined-room701 community ID refinement (2026-10-31)
+
+The previously unnamed701 tag8 integer is the joined room's community ID. This conclusion follows the original response value through its model setter and menu/page consumers; it does not derive the field's meaning from the reconstructed server.
+
+| Original path | Reviewed bytecode anchors | Established meaning |
+|---|---|---|
+|701 after703 | `bc.a:([Lay;)V`3071–3095 reads optional tag8 as an integer, default0;3200–3201 passes it as constructor argument6 | Existing optional joined-room value |
+|Conversation model | `s.<init>:(Lt;ILjava/lang/String;ILaj;I)V`133–136 stores argument6 in `s.a` | Stored community identity |
+|Menu consumer | `aj.U:()Ly;`51–71 tests `s.a > 0` before adding language key403 (Group Menu) | Positive identity enables community navigation |
+|Page consumer | `aj.commandAction:(Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V`3118–3175 reads `s.a` at3146 and appends it as `&cid=` to `/sites/index.php?c=group&v=midlet&a=list_chatrooms`; adjacent forum/member branches reuse this identity | Community ID, distinct from750's private-group chat ID |
+
+The anchors were inspected in the original [bc](../artifacts/bytecode/bc.txt), [s](../artifacts/bytecode/s.txt), and [aj](../artifacts/bytecode/aj.txt) disassemblies. The existing [screen inventory](screens.md#ordered-menus) independently records the positive-ID Group Menu condition. The canonical contract and generated AsyncAPI descriptions now name this meaning; numeric opcode/tag, integer view, conditional presence, and both transports are unchanged. The getter-scope catalog remains unchanged because it already records the correct field read.
 
 ### Opcode 913 response description
 
@@ -124,10 +158,11 @@ Prerequisites are the verified original v4 JAR, pinned MicroEmulator JAR, an ins
 From the repository root:
 
 ```sh
-python3 tools/applets/v4/verify-protocol-evidence.py --output research/applets/v4/docs/data/protocol-audit-reproduction.json
-python3 tools/applets/v4/audit-outgoing.py
-python3 tools/applets/v4/audit-incoming.py
-python3 tools/applets/v4/audit-transports.py --write-catalog
+uv run --no-project python tools/applets/v4/verify-protocol-evidence.py --output research/applets/v4/docs/data/protocol-audit-reproduction.json
+uv run --no-project python tools/applets/v4/audit-outgoing.py
+uv run --no-project python tools/applets/v4/audit-incoming.py
+uv run --no-project python tools/applets/v4/audit-transports.py --write-catalog
+uv run --no-project python tools/applets/v4/audit-contact-metadata.py --check
 go test ./internal/protocol
 ```
 
@@ -139,4 +174,4 @@ The incoming catalog and its original extractor remain unchanged. The source aud
 
 This is an audit of this exact client build and the named catalogs. It does not recover the original server implementation, all server-driven form submissions, every dynamic resource key, or every handset runtime behavior. Route construction checks do not cover every preceding username-editor normalization step or complete subsequent photo/UI flow. The original JAD is absent locally, so its distribution-URL claim is explicitly not revalidated; the JAR manifest's installer notification is verified independently. The v3 comparison check validates existing metadata, not a fresh v3 source audit. Desktop-JVM probes should not be extended into claims about all CLDC Unicode, locale, or charset behavior.
 
-No Expo code, AsyncAPI implementation, Go behavior, or original transport was changed. The changes are catalog/documentation corrections and reproducible audit tooling.
+The initial2026-10-30 audit changed catalog/documentation and reproducible tooling only. The2026-10-31 follow-up also corrects contact metadata in the generated contracts, Expo decoder, and Go responses to match the original client. It does not change the original transports.

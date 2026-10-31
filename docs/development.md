@@ -4,6 +4,9 @@ Use the Go version declared in `go.mod` and a C compiler for SQLite. Ordinary Go
 
 ## Formatting commands
 
+Install uv for Python tooling. The formatting wrapper executes its Python
+entrypoint through `uv run --no-project`; no root Python package is needed.
+
 Install the pinned tools once, then use the same commands locally and in CI:
 
 ```sh
@@ -18,7 +21,7 @@ The wrapper runs from any working directory. `--write` is the default. `--check`
 
 Versions are pinned in [format-go.py](../scripts/format-go.py): `goimports` from `golang.org/x/tools v0.52.0`, followed by `gofumpt v0.12.0`. Installation uses versioned commands independently of application dependencies and caches executable tools under the ignored `data/tools/` directory. It does not modify `go.mod` or `go.sum`. Imports are grouped with this module after external dependencies; the language version comes from `go.mod`.
 
-Only handwritten `.go` files under `cmd/`, `configs/`, `db/` and `internal/` are candidates. Generated files with a standard `Code generated ... DO NOT EDIT.` marker are skipped, including OpenAPI, sqlc and templ output. The formatter does not follow symbolic links or traverse `research/`, `data/` or applet tooling. Change generator inputs and rerun the appropriate generator when generated code needs updating.
+Only handwritten `.go` files under `cmd/`, `configs/`, `db/`, `internal/` and `tools/contracts/` are candidates. Generated files with a standard `Code generated ... DO NOT EDIT.` marker are skipped, including OpenAPI, sqlc and templ output. The formatter does not follow symbolic links or traverse `node_modules/`, `research/`, `data/` or applet tooling. Change generator inputs and rerun the appropriate generator when generated code needs updating.
 
 ## Readability conventions
 
@@ -50,6 +53,6 @@ The blank line marks the change from loading a profile to preparing a notificati
 
 ## Continuous integration
 
-[The Go workflow](../.github/workflows/go.yml) checks formatting, runs `go vet` and runs all Go tests with the race detector on Linux. It reads the Go version from `go.mod`. GitHub actions are pinned to the verified release commits for [checkout v7.0.1](https://github.com/actions/checkout/releases/tag/v7.0.1) and [setup-go v7.0.0](https://github.com/actions/setup-go/releases/tag/v7.0.0). The workflow needs no local applet files or Java setup.
+[The Go workflow](../.github/workflows/go.yml) installs pinned uv for formatting, runs `go vet`, `govulncheck`, and all Go tests with the race detector on Linux. It reads the Go version from `go.mod`. Actions are pinned to verified release commits. The workflow needs no Node, local applet files or Java setup. Separate contract and mobile jobs validate generation, dependency policy, TypeScript and the live HTTP/TCP client against an isolated Go server.
 
 Use conventional commit messages, for example `refactor: format handwritten Go source` or `chore: add Go formatting checks`.

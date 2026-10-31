@@ -8,5 +8,5 @@
     "skipLibCheck": false,
     "types": []
   },
-  "include": ["typecheck.ts", "../../api/generated/mig33-v4.ts"]
+  "include": ["typecheck.ts", "../../apps/mobile/src/mig33/generated/contracts.ts"]
 }

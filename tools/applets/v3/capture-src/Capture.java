@@ -66,7 +66,7 @@ public class Capture {
   System.setProperty("microedition.platform","Offline MicroEmulator capture");
   // Prove the shim is the class resolved before any application bytecode starts.
   try{javax.microedition.io.Connector.open("http://offline-proof.invalid");throw new AssertionError("Connector was not blocked");}catch(javax.microedition.io.ConnectionNotFoundException expected){}
-  if(!javax.microedition.io.Connector.class.getProtectionDomain().getCodeSource().getLocation().toString().contains("capture-classes"))throw new AssertionError("Wrong Connector loaded");
+  if(!javax.microedition.io.Connector.class.getProtectionDomain().getCodeSource().getLocation().equals(Capture.class.getProtectionDomain().getCodeSource().getLocation()))throw new AssertionError("Wrong Connector loaded");
   Headless headless=new Headless(); Common emu=(Common)get(headless,"emulator");
   org.microemu.EmulatorContext ctx=(org.microemu.EmulatorContext)get(headless,"context");
   ArrayList<String> params=new ArrayList<>(Arrays.asList("--rms","memory","--appclassloader","system","com.projectgoth.Roshan.Main"));
@@ -132,7 +132,7 @@ public class Capture {
   Object tabs=get(canvas,"f");call(tabs,"a",new Class[]{nc,int.class,int.class},friend,1,1);
   Object chat=call(tabs,"a",new Class[]{int.class},0);
   call(chat,"a",new Class[]{int.class,String.class,String.class,String.class,short.class,int.class,int.class},1,"sample.friend","Hello from a synthetic fixture.",null,(short)1,-1,-1);
-  call(chat,"a",new Class[]{int.class,String.class,String.class,String.class,short.class,int.class,int.class},1,"sample.you","This demonstrates the original chat renderer.",null,(short)1,-1,-1);
+  call(chat,"a",new Class[]{int.class,String.class,String.class,String.class,short.class,int.class,int.class},0,"sample.you","This demonstrates the original chat renderer.",null,(short)1,-1,-1);
   staticSet(cc,"al",6);snapshot("06-chat-fixture","SYNTHETIC private chat messages; original tab/chat renderer",canvas,"paint");
   Files.write(out.resolve("index.tsv"),index);
   System.out.println("Captured "+count+" images at "+width+"x"+height+"; Connector blocks="+javax.microedition.io.Connector.blocked+" (includes one mandatory self-test)");

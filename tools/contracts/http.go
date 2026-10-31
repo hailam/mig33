@@ -1,0 +1,146 @@
+package main
+
+import (
+	"crypto/sha256"
+	"encoding/json"
+	"fmt"
+	"os"
+	"path/filepath"
+	"slices"
+	"strings"
+
+	"go.yaml.in/yaml/v3"
+)
+
+type httpMedia struct {
+	Schema struct {
+		Type   string `yaml:"type"`
+		Format string `yaml:"format"`
+	} `yaml:"schema"`
+}
+
+type httpBody struct {
+	Required bool                 `yaml:"required"`
+	Content  map[string]httpMedia `yaml:"content"`
+}
+
+type httpOperation struct {
+	ID          string              `yaml:"operationId"`
+	Tags        []string            `yaml:"tags"`
+	RequestBody httpBody            `yaml:"requestBody"`
+	Responses   map[string]httpBody `yaml:"responses"`
+}
+
+// This is only the inspected subset. The pinned OpenAPI validator remains
+// responsible for validating the complete document and resolving its references.
+type httpSource struct {
+	Version        string                              `yaml:"openapi"`
+	Paths          map[string]map[string]httpOperation `yaml:"paths"`
+	OriginalClient struct {
+		Tunnel struct {
+			RequestContentType string `yaml:"request-content-type"`
+			BaseURLOpcodes     []int  `yaml:"base-url-opcodes"`
+			SessionRouting     string `yaml:"session-routing"`
+			MessageBoundary    string `yaml:"http-message-boundary"`
+		} `yaml:"tunnel"`
+	} `yaml:"x-original-client"`
+}
+
+type nativeHTTPMetadata struct {
+	RootPath            string `json:"rootPath"`
+	SessionPath         string `json:"sessionPath"`
+	RequestContentType  string `json:"requestContentType"`
+	ResponseContentType string `json:"responseContentType"`
+	BasePathOpcodes     []int  `json:"basePathOpcodes"`
+	Operations          struct {
+		RootGet     string `json:"rootGet"`
+		RootPost    string `json:"rootPost"`
+		SessionGet  string `json:"sessionGet"`
+		SessionPost string `json:"sessionPost"`
+	} `json:"operations"`
+	SessionRouting  string `json:"sessionRouting"`
+	MessageBoundary string `json:"messageBoundary"`
+}
+
+// generateHTTP projects the original gateway portion of OpenAPI into constants
+// for the handwritten binary adapter. It does not generate a JSON SDK or infer
+// packet fields from an HTTP body. There can be many frames in one HTTP exchange.
+func generateHTTP(root string) ([]byte, error) {
+	raw, err := os.ReadFile(filepath.Join(root, "api/openapi.yaml"))
+	if err != nil {
+		return nil, err
+	}
+	var source httpSource
+	if err := yaml.Unmarshal(raw, &source); err != nil {
+		return nil, fmt.Errorf("read HTTP contract: %w", err)
+	}
+	if source.Version != "3.0.3" {
+		return nil, fmt.Errorf("HTTP projection expects validated OpenAPI 3.0.3, got %q", source.Version)
+	}
+	tunnel := source.OriginalClient.Tunnel
+	if tunnel.RequestContentType == "" || len(tunnel.BaseURLOpcodes) == 0 ||
+		strings.TrimSpace(tunnel.SessionRouting) == "" || strings.TrimSpace(tunnel.MessageBoundary) == "" {
+		return nil, fmt.Errorf("HTTP contract is missing original tunnel metadata")
+	}
+	seen := map[int]bool{}
+	for _, opcode := range tunnel.BaseURLOpcodes {
+		if !signedShort(opcode) || seen[opcode] {
+			return nil, fmt.Errorf("invalid or duplicate HTTP base-path opcode: %d", opcode)
+		}
+		seen[opcode] = true
+	}
+
+	metadata := nativeHTTPMetadata{
+		RootPath: "/", SessionPath: "/{sid}", RequestContentType: tunnel.RequestContentType,
+		BasePathOpcodes: tunnel.BaseURLOpcodes,
+		SessionRouting:  tunnel.SessionRouting, MessageBoundary: tunnel.MessageBoundary,
+	}
+	ids := []*string{
+		&metadata.Operations.RootGet, &metadata.Operations.RootPost,
+		&metadata.Operations.SessionGet, &metadata.Operations.SessionPost,
+	}
+	index := 0
+	for _, path := range []string{metadata.RootPath, metadata.SessionPath} {
+		for _, method := range []string{"get", "post"} {
+			operation, ok := source.Paths[path][method]
+			if !ok || operation.ID == "" || !slices.Contains(operation.Tags, "native-gateway") {
+				return nil, fmt.Errorf("missing original %s %s operation", method, path)
+			}
+			*ids[index] = operation.ID
+			index++
+			if method == "post" {
+				if !operation.RequestBody.Required || !binaryMedia(operation.RequestBody.Content[tunnel.RequestContentType]) {
+					return nil, fmt.Errorf("%s %s must accept a required binary %s body", method, path, tunnel.RequestContentType)
+				}
+			}
+			response := operation.Responses["200"]
+			if len(response.Content) != 1 {
+				return nil, fmt.Errorf("%s %s needs one explicit binary HTTP 200 response media type", method, path)
+			}
+			for contentType, media := range response.Content {
+				if !binaryMedia(media) {
+					return nil, fmt.Errorf("%s %s HTTP 200 response is not binary", method, path)
+				}
+				if metadata.ResponseContentType == "" {
+					metadata.ResponseContentType = contentType
+				} else if metadata.ResponseContentType != contentType {
+					return nil, fmt.Errorf("native HTTP operations disagree on response media type")
+				}
+			}
+		}
+	}
+	generated, err := json.MarshalIndent(metadata, "", "  ")
+	if err != nil {
+		return nil, err
+	}
+	header := fmt.Sprintf("// Code generated by sh scripts/generate-contracts.sh. DO NOT EDIT.\n"+
+		"// Source: api/openapi.yaml (SHA-256 %x).\n"+
+		"// The payload is binary mig33 frames; image/gif is the historical tunnel MIME.\n"+
+		"// One HTTP exchange may carry multiple packets; this is transport metadata, not a JSON SDK.\n\n"+
+		"export const nativeHTTP = ", sha256.Sum256(raw))
+	return append(append([]byte(header), generated...), []byte(" as const;\n")...), nil
+}
+
+func binaryMedia(media httpMedia) bool {
+	return media.Schema.Type == "string" && media.Schema.Format == "binary"
+}

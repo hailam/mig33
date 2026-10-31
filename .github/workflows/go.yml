@@ -19,6 +19,11 @@ jobs:
         with:
           go-version-file: go.mod
           cache: true
+      - name: Install uv for Python tooling
+        uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e # v10.3.2
+        with:
+          version: "0.13.6"
+          enable-cache: false
       - name: Install pinned formatters
         run: sh scripts/format-go.sh --install
       - name: Check Go formatting

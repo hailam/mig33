@@ -16,7 +16,7 @@ JARs are local and ignored. Their required versions and hashes are in [bin/manif
 Prepare the backend's optional historical downloads from the verified local v4 JAR:
 
 ```sh
-python3 tools/applets/scripts/prepare_runtime_assets.py
+uv run --no-project python tools/applets/scripts/prepare_runtime_assets.py
 ```
 
 This verifies the JAR and all four extracted resources before writing `data/applets/resources/v4/`. It requires Python only, does not download anything, and leaves the original JAR unchanged. These files stay ignored; a clean checkout can build and run core services without them. The [setup guide](SETUP.md#prepare-optional-backend-resources) describes the resource configuration and unavailable-download behavior.
@@ -24,10 +24,10 @@ This verifies the JAR and all four extracted resources before writing `data/appl
 For the [v4 protocol source audit](../../research/applets/v4/docs/protocol-catalog-audit.md), the original v4 JAR, MicroEmulator, Python, and a JDK are sufficient; decompiled sources are unnecessary:
 
 ```sh
-python3 tools/applets/v4/verify-protocol-evidence.py
-python3 tools/applets/v4/audit-outgoing.py
-python3 tools/applets/v4/audit-incoming.py
-python3 tools/applets/v4/audit-transports.py --write-catalog
+uv run --no-project python tools/applets/v4/verify-protocol-evidence.py
+uv run --no-project python tools/applets/v4/audit-outgoing.py
+uv run --no-project python tools/applets/v4/audit-incoming.py
+uv run --no-project python tools/applets/v4/audit-transports.py --write-catalog
 ```
 
 These commands reproduce disassembly, check all outgoing/incoming catalog entries and endpoint references, and run isolated original-class probes. They do not start a MIDlet or connect to a service. The audit scripts write reviewed result JSON; raw dumps, compiled classes, and logs remain under ignored `artifacts/bytecode` and `data/protocol-audit` directories. See the audit report for scope and limits.
@@ -35,14 +35,14 @@ These commands reproduce disassembly, check all outgoing/incoming catalog entrie
 The following research-generation commands require the complete extraction/decompilation corpus. Restore those inputs before regenerating maintained indexes; normal client setup uses the existing indexes. From the repository root:
 
 ```sh
-python3 tools/applets/scripts/inventory.py v3
-python3 tools/applets/scripts/inventory.py v4
-python3 tools/applets/scripts/extract_v4_theme.py
-python3 tools/applets/scripts/build_v4_endpoints.py
-python3 tools/applets/scripts/build_comparison.py
-python3 tools/applets/scripts/validate_reference.py
-python3 tools/applets/v3/protocol-codec.py --self-test
-python3 tools/applets/v4/protocol-codec.py --self-test
+uv run --no-project python tools/applets/scripts/inventory.py v3
+uv run --no-project python tools/applets/scripts/inventory.py v4
+uv run --no-project python tools/applets/scripts/extract_v4_theme.py
+uv run --no-project python tools/applets/scripts/build_v4_endpoints.py
+uv run --no-project python tools/applets/scripts/build_comparison.py
+uv run --no-project python tools/applets/scripts/validate_reference.py
+uv run --no-project python tools/applets/v3/protocol-codec.py --self-test
+uv run --no-project python tools/applets/v4/protocol-codec.py --self-test
 ```
 
 Original offline screen capture:
@@ -62,7 +62,7 @@ sh scripts/open-clients.sh
 For isolated backend acceptance, choose a new output directory:
 
 ```sh
-python3 tools/applets/v4/integration/isolated_acceptance.py --evidence data/applets/validation/manual-run
+uv run --no-project python tools/applets/v4/integration/isolated_acceptance.py --evidence data/applets/validation/manual-run
 ```
 
 The driver builds the backend, uses separate ports and databases, prepares verified runtime resources in its temporary directory, and retains its binary/source/harness evidence plus resource hashes. Existing documented room-name and presence-helper corrections apply only to isolated harness copies. The publisher JAR is unchanged. See the [acceptance guide](../../research/acceptance/v4/README.md) for individual suites and prior results.
