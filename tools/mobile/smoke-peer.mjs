@@ -40,9 +40,9 @@ client.subscribe((event) => {
   }
   if (values.features && kind === 1) receivedPrivate.push(body);
   const room = values.rooms && kind === 3 && target === 'Lobby'
-    && ['Hello room from iOS HTTP', 'Hello room from iOS TCP'].includes(body);
-  const privateChat = kind === 1 && ['Hello from iOS HTTP', 'Hello from iOS TCP'].includes(body);
-  const group = values.features && kind === 2 && ['Hello group from iOS HTTP', 'Hello group from iOS TCP'].includes(body);
+    && ['Hello room from iOS HTTPS', 'Hello room from iOS TLS'].includes(body);
+  const privateChat = kind === 1 && ['Hello from iOS HTTPS', 'Hello from iOS TLS'].includes(body);
+  const group = values.features && kind === 2 && ['Hello group from iOS HTTPS', 'Hello group from iOS TLS'].includes(body);
   if (!room && !privateChat && !group) return;
   replying = replying.then(async () => {
     await record({ event: 'received', sender: 'alice', kind, target, body });

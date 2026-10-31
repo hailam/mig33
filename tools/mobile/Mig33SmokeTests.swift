@@ -122,6 +122,7 @@ final class Mig33SmokeTests: XCTestCase {
     }
 
     private func tap(_ id: String) {
+        dismissSystemSavePassword()
         if element("theme.modern").exists && ["chat.action.kick", "chat.action.mute", "chat.action.unmute"].contains(id)
             && !menuControl(id).exists && menuControl("chat.menu.moderation").exists {
             tap("chat.menu.moderation")
@@ -133,15 +134,31 @@ final class Mig33SmokeTests: XCTestCase {
         }
         reveal(control)
         waitUntilHittable(control, description: id)
-        control.tap()
+        if id == "chat.send" && element("theme.classic-v3").exists {
+            // XCTest's implicit scroll-to-visible can return {-1,-1} for
+            // this fixed React Native footer while the keyboard is present.
+            // Use the verified visible element's center, never a fixed point.
+            let frame = control.frame
+            XCTAssertTrue(app.frame.contains(frame), "Composer Send is outside the screen")
+            if app.keyboards.firstMatch.exists {
+                XCTAssertLessThanOrEqual(frame.maxY, app.keyboards.firstMatch.frame.minY,
+                    "Composer Send is covered by the keyboard")
+            }
+            control.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).tap()
+        } else {
+            control.tap()
+        }
     }
 
     private func waitUntilHittable(_ control: XCUIElement, description: String) {
-        let deadline = Date().addingTimeInterval(5)
+        // A reveal can dismiss the software keyboard and relayout a long form.
+        // Keep time for stable samples after XCTest's synchronous drag completes.
+        let deadline = Date().addingTimeInterval(15)
         var previousFrame: CGRect?
         var readySince: Date?
         var revealAttempts = 0
         while Date() < deadline {
+            dismissSystemSavePassword()
             if control.exists {
                 let frame = control.frame
                 if control.isHittable {
@@ -170,6 +187,17 @@ final class Mig33SmokeTests: XCTestCase {
         // The caller taps exactly once only after consecutive stable samples.
         // Do not add a contradictory third snapshot or retry a failed tap.
         XCTFail("Control did not become stably touchable: \(description)")
+    }
+
+    private func dismissSystemSavePassword() {
+        // iOS presents this as an in-app Sheet, not an interruption Alert.
+        // Decline only the observed system prompt; preserve every app dialog.
+        let sheet = app.sheets["Save Password?"].firstMatch
+        guard sheet.exists, sheet.staticTexts["Save Password?"].exists,
+              sheet.buttons["Not Now"].isHittable else { return }
+        sheet.buttons["Not Now"].tap()
+        let dismissed = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: sheet)
+        XCTAssertEqual(XCTWaiter.wait(for: [dismissed], timeout: 5), .completed, "System password prompt remained visible")
     }
 
     /// Long legacy menus expose offscreen accessibility frames. Use the
@@ -899,7 +927,7 @@ final class Mig33SmokeTests: XCTestCase {
 
     private func exerciseModernPresentation() throws {
         chooseTheme("modern")
-        configure("http", port: try XCTUnwrap(environment["MIG33_SMOKE_HTTP_PORT"]))
+        configure("https", port: try XCTUnwrap(environment["MIG33_SMOKE_HTTPS_PORT"]))
         let logo = app.images["mig33"].firstMatch
         XCTAssertTrue(logo.exists || logo.waitForExistence(timeout: 10), "Missing original mig33 mark on Modern Login")
         XCTAssertTrue(app.switches["login.remember"].firstMatch.exists, "Remember Login is not a native switch")
@@ -935,7 +963,7 @@ final class Mig33SmokeTests: XCTestCase {
         capture("modern-friends-native-options")
         tap("chat.action.private")
         _ = wait("chat.screen")
-        editor().tap(); editor().typeText("Hello from iOS HTTP")
+        editor().tap(); editor().typeText("Hello from iOS HTTPS")
         let keyboard = app.keyboards.firstMatch
         XCTAssertTrue(keyboard.exists, "Modern composer did not expose the native keyboard responder")
         let keyboardFrame = keyboard.frame.intersection(app.frame)
@@ -955,7 +983,7 @@ final class Mig33SmokeTests: XCTestCase {
             captureTree("modern-private-keyboard-geometry")
         }
         tap("chat.send")
-        assertReply("Hello from iOS HTTP")
+        assertReply("Hello from iOS HTTPS")
         assertEmptyComposerSendDisabled()
         capture("modern-private-reply")
 
@@ -979,14 +1007,14 @@ final class Mig33SmokeTests: XCTestCase {
         _ = wait("chat.screen")
 
         tap("tab.friends")
-        _ = try peer(["action": "private-send", "body": "Modern unread HTTP"])
+        _ = try peer(["action": "private-send", "body": "Modern unread HTTPS"])
         revealTab("tab.peer:bob")
         for phase in ["on", "off"] {
             _ = wait("tab.unread-\(phase).peer:bob", timeout: 10)
             capture("modern-polished-unread-\(phase)")
         }
         tap("tab.peer:bob")
-        assertRoomText("Modern unread HTTP")
+        assertRoomText("Modern unread HTTPS")
         XCTAssertFalse(element("tab.peer:bob").label.contains("unread messages"))
         try exerciseLongTranscript()
 
@@ -1007,8 +1035,8 @@ final class Mig33SmokeTests: XCTestCase {
         capture("modern-room-native-options")
         tap("room.join")
         _ = wait("chat.screen")
-        sendFeatureText("Hello room from iOS HTTP", theme: "modern")
-        assertRoomText("Room reply: Hello room from iOS HTTP")
+        sendFeatureText("Hello room from iOS HTTPS", theme: "modern")
+        assertRoomText("Room reply: Hello room from iOS HTTPS")
         capture("modern-room-reply")
         tap("command.menu"); tap("room.participants")
         _ = wait("participants.user.bob")
@@ -1135,7 +1163,7 @@ final class Mig33SmokeTests: XCTestCase {
 
     private func exerciseModernAccessibility(_ name: String, opaque: Bool) throws {
         _ = wait("theme.modern")
-        configure("http", port: try XCTUnwrap(environment["MIG33_SMOKE_HTTP_PORT"]))
+        configure("https", port: try XCTUnwrap(environment["MIG33_SMOKE_HTTPS_PORT"]))
         capture("modern-\(name)-login-controls")
         fill("login.username", "alice")
         fill("login.password", "alice-demo", secure: true)
@@ -1457,12 +1485,41 @@ final class Mig33SmokeTests: XCTestCase {
         capture("remember-deleted")
     }
 
+    private func exerciseSecureRejections() throws {
+        chooseTheme("modern")
+        tap("login.connection")
+        XCTAssertFalse(element("connection.http").exists)
+        XCTAssertFalse(element("connection.tcp").exists)
+        tap("connection.manual")
+        for name in ["https-wrong-host", "https-expired", "https-untrusted", "https-downgrade", "https-plaintext",
+                     "tls-wrong-host", "tls-expired", "tls-untrusted", "tls-plaintext"] {
+            let mode = String(name.split(separator: "-")[0])
+            selectTransport(mode)
+            fill("connection.host", "127.0.0.1")
+            let key = "MIG33_SMOKE_BAD_" + name.uppercased().replacingOccurrences(of: "-", with: "_") + "_PORT"
+            fill("connection.port", try XCTUnwrap(environment[key]))
+            tap("connection.save")
+            _ = wait("dialog.ok", timeout: 25)
+            XCTAssertFalse(element("friends.screen").exists, "Rejected endpoint authenticated a session")
+            capture("secure-rejected-\(name)")
+            tap("dialog.ok")
+            _ = wait("connection.save")
+        }
+        // A valid connection probe must recover after every rejection, using
+        // the same secure selector and native trust policy.
+        selectTransport("https")
+        fill("connection.port", try XCTUnwrap(environment["MIG33_SMOKE_HTTPS_PORT"]))
+        tap("connection.save")
+        loginScreen()
+    }
+
     func testOriginalHTTPAndTCP() throws {
         loginScreen()
         capture("login")
+        if environment["MIG33_SMOKE_SECURE_ONLY"] == "1" { try exerciseSecureRejections() }
         if environment["MIG33_SMOKE_COMMANDS_ONLY"] == "1" {
-            try exerciseCommands("http", theme: "modern")
-            try exerciseCommands("tcp", theme: "classic-v3")
+            try exerciseCommands("https", theme: "modern")
+            try exerciseCommands("tls", theme: "classic-v3")
             capture("commands-logged-out")
             return
         }
@@ -1487,40 +1544,40 @@ final class Mig33SmokeTests: XCTestCase {
         if environment["MIG33_SMOKE_UNREAD_ONLY"] == "1" {
             let originalReduceMotion = try setSystemReduceMotion(false)
             defer { _ = try? setSystemReduceMotion(originalReduceMotion) }
-            try exerciseUnread("http")
+            try exerciseUnread("https")
             _ = try setSystemReduceMotion(true)
-            try exerciseUnread("http", steady: true)
+            try exerciseUnread("https", steady: true)
             _ = try setSystemReduceMotion(false)
-            try exerciseUnread("tcp")
+            try exerciseUnread("tls")
             capture("unread-logged-out")
             return
         }
         if environment["MIG33_SMOKE_FEATURES_ONLY"] == "1" {
-            try exerciseFeatures("http", theme: "modern")
-            try exerciseFeatures("tcp", theme: "classic-v3")
+            try exerciseFeatures("https", theme: "modern")
+            try exerciseFeatures("tls", theme: "classic-v3")
             capture("features-logged-out")
             return
         }
         if environment["MIG33_SMOKE_ROOMS_ONLY"] == "1" {
-            try exerciseRooms("http", theme: "modern")
-            try exerciseRooms("tcp", theme: "classic-v3")
+            try exerciseRooms("https", theme: "modern")
+            try exerciseRooms("tls", theme: "classic-v3")
             capture("rooms-logged-out")
             return
         }
         if environment["MIG33_SMOKE_VISUAL_ONLY"] == "1" {
-            try exercise("http", theme: "modern", verifyThemeLifecycle: false)
+            try exercise("https", theme: "modern", verifyThemeLifecycle: false)
             capture("logged-out")
             return
         }
         if environment["MIG33_SMOKE_V3_ONLY"] == "1" {
-            try exercise("http", theme: "classic-v3")
-            try exercise("tcp", theme: "classic-v3", verifyThemeLifecycle: false)
+            try exercise("https", theme: "classic-v3")
+            try exercise("tls", theme: "classic-v3", verifyThemeLifecycle: false)
             capture("v3-logged-out")
             return
         }
-        try exercise("http", theme: "modern")
-        try exercise("tcp", theme: "classic")
-        try exercise("http", theme: "classic-v3")
+        try exercise("https", theme: "modern")
+        try exercise("tls", theme: "classic")
+        try exercise("https", theme: "classic-v3")
         chooseTheme("classic")
         try exerciseRememberedLogin()
         chooseTheme("modern")

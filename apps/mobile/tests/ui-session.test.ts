@@ -34,7 +34,7 @@ class FakeTransport implements PacketTransport {
   acknowledge(): void { this.receive(new Packet(1, this.sent.at(-1)!.transaction)); }
 }
 
-const connection = { mode: 'http', httpURL: 'http://127.0.0.1:8080' } as const;
+const connection = { mode: 'https', httpURL: 'https://localhost:8443' } as const;
 const credentials = { username: 'Alice', password: 'alice-demo' };
 function setup() {
   const transports: FakeTransport[] = [];

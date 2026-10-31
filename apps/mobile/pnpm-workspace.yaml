@@ -11,3 +11,4 @@ saveExact: true
 patchedDependencies:
   glob@13.0.6: patches/glob@13.0.6.patch
   minimatch@10.2.6: patches/minimatch@10.2.6.patch
+  react-native-tcp-socket@6.4.3: patches/react-native-tcp-socket@6.4.3.patch

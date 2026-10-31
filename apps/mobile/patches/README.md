@@ -24,3 +24,42 @@ Promise, streaming and synchronous traversal paths are checked, along with
 normal Expo patterns and fingerprint exclusions. Raw `pnpm audit` continues to
 report the original versions and all four findings; see
 [dependency decisions](../DEPENDENCIES.md) for the unresolved findings.
+
+## Native TLS hardening
+
+`react-native-tcp-socket@6.4.3.patch` is a local security correction to the
+already pinned release, not an upstream advisory backport or a dependency-age
+exception. It is registered and hashed in the same workspace and lockfile.
+Rebuild the native development client after installing it; reloading JavaScript
+cannot replace its Objective-C/Java changes.
+
+The app's `createTLSTransport(host, port)` retains the original packet framing
+and uses platform certificate-chain and hostname trust. Its API exposes no
+custom CA, trust-all option, or plaintext fallback. The package's other TLS
+configuration APIs are outside this adapter's supported surface.
+
+The reviewed Android source validated the chain using the default factory but
+lost the requested hostname when resolving its address. Raw `SSLSocket` does
+not enable hostname verification automatically. The patch layers TLS with the
+original hostname, sets `SSLParameters` endpoint identification to `HTTPS`,
+and sends DNS SNI while omitting SNI for numeric addresses. Verification occurs
+during the handshake, before readiness or application reads. These APIs require
+Android API24 or newer. See [Android's SSLSocket warning](https://developer.android.com/privacy-and-security/security-ssl#WarningsSslSocket),
+[endpoint verification](https://developer.android.com/reference/javax/net/ssl/SSLParameters#setEndpointIdentificationAlgorithm(java.lang.String)),
+and [SNIHostName](https://developer.android.com/reference/javax/net/ssl/SNIHostName).
+
+On iOS, the existing default path supplies `kCFStreamSSLPeerName` to
+CocoaAsyncSocket and retains system trust evaluation. The patch exports
+`socketDidSecure` as a native `secureConnect` event. Android emits that event
+only after its handshake returns, before starting its reader. The JavaScript
+bridge no longer invents the event from an ordinary `connect`. Android also
+bounds the handshake with the connection timeout, reports read failures, and
+emits close even when a failed handshake has already closed the descriptor.
+
+`tests/native-socket.test.ts` covers readiness, early-data rejection,
+cancellation, binary-copy ownership, and native write completion/failure.
+`tests/native-tls-bridge.test.ts` executes the installed package bridge against
+an injected native event bus, checking event provenance and listener cleanup.
+These tests do not prove platform certificate verification. Native acceptance
+must separately exercise trusted, untrusted, wrong-host and plaintext servers;
+Android runtime validation remains pending until an SDK/emulator is available.

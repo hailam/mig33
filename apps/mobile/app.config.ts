@@ -13,11 +13,9 @@ const config: ExpoConfig = {
     supportsTablet: true,
     infoPlist: {
       NSLocalNetworkUsageDescription: 'Connect to your mig33 server on the local network.',
-      // The preserved HTTP gateway is cleartext HTTP. Native TCP uses its
-      // original raw socket protocol; neither transport adds a new API.
       NSAppTransportSecurity: {
-        NSAllowsArbitraryLoads: true,
-        NSAllowsLocalNetworking: true,
+        NSAllowsArbitraryLoads: false,
+        NSAllowsLocalNetworking: false,
       },
     },
   },
@@ -32,7 +30,8 @@ const config: ExpoConfig = {
       cameraPermission: 'Take a photo to share in mig33.',
       microphonePermission: false,
     }],
-    ['expo-build-properties', { android: { usesCleartextTraffic: true } }],
+    ['expo-build-properties', { android: { usesCleartextTraffic: false } }],
+    './plugins/withSecureNetworking.cjs',
   ],
 };
 

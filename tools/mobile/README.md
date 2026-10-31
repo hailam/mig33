@@ -2,12 +2,15 @@
 
 This harness drives the real Expo development app with XCTest. It signs in as
 Alice, opens Bob from Friends, writes a message, verifies Bob's network reply,
-opens the menu and logs out, using Modern's inline composer over HTTP,
-Classic v4's separate Write Message screen over native TCP, and Classic v3
-over HTTP. All three themes must survive a process restart. Switching between
+opens the menu and logs out, using Modern's inline composer over HTTPS,
+Classic v4's separate Write Message screen over TLS, and Classic v3
+over HTTPS. All three themes must survive a process restart. Switching between
 all three while signed in must retain the conversation and unsent draft. The Bob
 peer and Go backend use temporary loopback listeners and an in-memory database.
-The developer's server on ports 8080/9119 is never reused.
+The harness assigns temporary HTTPS/TLS and original HTTP/TCP listeners; it
+does not reuse the developer's default 8443/9120 or 8080/9119 listeners. The Bob
+fixture still uses the original plain loopback HTTP gateway, checking that the
+secure app and retained compatibility transports share the same services.
 The runner generates synthetic sprite/avatar PNGs in its ignored run directory
 and explicitly supplies that resource directory to the backend. Emoticon/photo
 checks need no recovered applet assets; this fixture is shared with the Node
@@ -25,6 +28,31 @@ Prerequisites are the app's existing mise Node/pnpm/Ruby profile, installed
 CocoaPods bundle, generated iOS workspace, full Xcode and a simulator. No extra
 Node, Ruby or Python dependencies are installed by these tools.
 
+Use a newly created **dedicated simulator** with the local development CA
+installed. Generate new ignored certificate material from the repository root:
+
+```sh
+go run ./tools/devcert -out data/local-tls --test-fixtures
+```
+
+The output directory must not already exist. Reuse valid existing material or
+choose a fresh `-out` directory and pass it with `--tls-dir`. Certificates cover
+`localhost`, `127.0.0.1` and `::1`; `--test-fixtures` additionally creates
+wrong-host, expired and untrusted certificates. Follow
+[dedicated simulator setup](../../docs/mobile-secure-transports.md#local-setup)
+to select available device/runtime IDs and create a separate simulator. After
+booting that new simulator, trust only the normal CA:
+
+```sh
+xcrun simctl keychain DEDICATED_SIMULATOR_UDID add-root-cert data/local-tls/ca.pem
+```
+
+No existing simulator is reset. The runner does not install or remove trust,
+and private keys stay local. Rebuild native code after applying the TLS package
+patch and secure-network config plugin; see the [app setup](../../apps/mobile/README.md).
+[SECURITY.md](../../apps/mobile/SECURITY.md) describes certificate verification,
+native redirect rejection, retired saved logins and Debug-only Metro exceptions.
+
 Build the backend from the repository root:
 
 ```sh
@@ -39,24 +67,36 @@ EXPO_NO_TELEMETRY=1 NODE_OPTIONS=--dns-result-order=ipv4first \
   mise -C apps/mobile exec -- pnpm start --localhost
 ```
 
-Then run, substituting an installed simulator UDID from `xcrun simctl list devices available`:
+Then run with the dedicated simulator's UDID. The native secure acceptance
+result is currently **pending**; this command defines the required verification:
 
 ```sh
 uv run --no-project python tools/mobile/ios_smoke.py \
-  --device 4C025D8B-B370-4F93-B46E-CFF51B6D5164 --appearance light
+  --device DEDICATED_SIMULATOR_UDID --tls-dir data/local-tls \
+  --appearance light --secure-only
 ```
 
-After the full pass, capture Dark Mode with the shorter Modern HTTP flow:
+`--secure-only` first rejects wrong-host, expired and untrusted certificates on
+both HTTPS and TLS, plus an HTTPS-to-HTTP redirect. It requires rejection
+captures and zero application requests at the invalid-certificate/redirect
+targets, then runs the expanded room, group, moderation, page and photo flow
+over Modern HTTPS and Classic v3 TLS. It is mutually exclusive with other
+focused modes. Probe events stay in `secure-probe-events.jsonl`.
+
+All modes now require TLS material; `--tls-dir` defaults to `data/local-tls`.
+Omit `--secure-only` for the original full appearance/Keychain workflow, now
+over secure app transports. After that pass, capture Dark Mode with the shorter
+Modern HTTPS flow:
 
 ```sh
 uv run --no-project python tools/mobile/ios_smoke.py \
-  --device 4C025D8B-B370-4F93-B46E-CFF51B6D5164 --appearance dark --visual-only
+  --device DEDICATED_SIMULATOR_UDID --appearance dark --visual-only
 ```
 
 `--appearance` is optional and restores the simulator's previous setting even
 when the test fails. `appearance.json` records that restoration. `--visual-only`
 checks login, native glass Friends, inline messaging, both chat and Friends
-menus, and logout; it omits TCP,
+menus, and logout; it omits TLS sockets,
 theme restart/switching and Keychain lifecycle checks. Its `result.json` records
 only that narrower scope.
 
@@ -64,22 +104,22 @@ For focused v3 validation on both original transports:
 
 ```sh
 uv run --no-project python tools/mobile/ios_smoke.py \
-  --device 4C025D8B-B370-4F93-B46E-CFF51B6D5164 --appearance light --v3-only
+  --device DEDICATED_SIMULATOR_UDID --appearance light --v3-only
 ```
 
 This checks Classic v3 login, Friends, Write Message, replies, menus and logout
-over HTTP and TCP, saved appearance after a restart, and live conversation/draft
+over HTTPS and TLS, saved appearance after a restart, and live conversation/draft
 preservation through v3 → Modern → v4 → v3. It leaves Classic v3 selected and
 does not repeat the saved-login/Keychain lifecycle checks.
 
-For room acceptance on the original HTTP and TCP protocols:
+For room acceptance using the original protocol over HTTPS and TLS:
 
 ```sh
 uv run --no-project python tools/mobile/ios_smoke.py \
-  --device 4C025D8B-B370-4F93-B46E-CFF51B6D5164 --appearance light --rooms-only
+  --device DEDICATED_SIMULATOR_UDID --appearance light --rooms-only
 ```
 
-This uses Modern over HTTP and Classic v3 over TCP. It expands the public
+This uses Modern over HTTPS and Classic v3 over TLS. It expands the public
 category, locally filters Lobby, joins and checks the first welcome message,
 opens participants and finds Bob, adds and removes a favorite, and sends a room
 message that the isolated Bob peer acknowledges and answers. Bob joins Lobby
@@ -99,10 +139,10 @@ For the expanded original chat features on both transports:
 
 ```sh
 uv run --no-project python tools/mobile/ios_smoke.py \
-  --device 4C025D8B-B370-4F93-B46E-CFF51B6D5164 --appearance light --features-only
+  --device DEDICATED_SIMULATOR_UDID --appearance light --features-only
 ```
 
-This focused workflow uses Modern over HTTP and Classic v3 over TCP. Alice
+This focused workflow uses Modern over HTTPS and Classic v3 over TLS. Alice
 creates a room through the original two-stage page form, submits Unicode and
 punctuation in its description, and checks the rendered Room Info round trip.
 Real Bob, Carol, Dave and Hailam gateway clients then join that room. The UI
@@ -138,7 +178,7 @@ Use `--unread-only` for focused unread-tab acceptance. The authenticated Bob
 fixture sends real private messages while Friends is selected. XCTest captures
 the whole-tab orange and normal phases in Modern, Classic v4 and Classic v3,
 checks that changing themes retains unread state, and verifies opening the
-conversation clears it. It covers HTTP and TCP. A separate HTTP pass enables
+conversation clears it. It covers HTTPS and TLS. A separate HTTPS pass enables
 the real iOS Reduce Motion setting, checks steady orange in all three themes,
 then restores the previous system setting. Settings changes happen while
 logged out because backgrounding the app intentionally suspends its session.
@@ -171,11 +211,11 @@ settings in separate, logged-out passes. It checks the app's solid glass
 fallback and captures login controls, Friends and native sheets for contrast
 review. It restores each original setting using normal cleanup plus registered
 XCTest teardown, including on interrupted assertions. The runner's appearance
-override is independently restored. It uses HTTP; `--features-only` remains
-the broader HTTP/TCP protocol and native-presentation regression workflow.
+override is independently restored. It uses HTTPS; `--features-only` remains
+the broader HTTPS/TLS protocol and native-presentation regression workflow.
 
 Use `--commands-only --appearance light` for the local slash picker workflow.
-It runs Modern over HTTP and Classic v3 over TCP, covering `/` discovery, prefix
+It runs Modern over HTTPS and Classic v3 over TLS, covering `/` discovery, prefix
 filtering, private/room scope, gift subcommands, dismissal and retained draft,
 selection without sending, and explicit private/room `/wave` delivery. The peer
 asserts exactly two private and two Lobby action results across both transports;

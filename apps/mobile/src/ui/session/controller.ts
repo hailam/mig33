@@ -2,6 +2,7 @@ import { Mig33Client, type AddContactOptions, type ContactDetails, type OwnPrese
   type ChatMessage, type ClientEvent, type OriginalRequest } from '../../mig33/client.ts';
 import type { Packet } from '../../mig33/protocol/index.ts';
 import { imageDataURI } from '../../mig33/media.ts';
+import { validateConnection } from '../connectionSettings.ts';
 import {
   appendTranscript, initialSession, newConversation, newRoomConversation, newGroupConversation, normalizePeer, roomKey,
   type ConnectionSettings, type Conversation, type LoginCredentials, type RoomConversation, type GroupConversation,
@@ -72,7 +73,7 @@ export class SessionController {
     this.notify();
     let session: LiveSession | undefined;
     try {
-      const client = this.createClient(connection);
+      const client = this.createClient(validateConnection(connection));
       session = { client, unsubscribe: () => {} };
       const current = session;
       this.live = current;

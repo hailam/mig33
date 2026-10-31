@@ -70,19 +70,26 @@ def main():
     parser.add_argument('--device', required=True, help='Installed simulator UDID')
     parser.add_argument('--server-binary', type=Path, default=ROOT / 'data/mobile-integration/server')
     parser.add_argument('--metro-url', default='http://127.0.0.1:8081')
+    parser.add_argument('--tls-dir', type=Path, default=ROOT / 'data/local-tls', help='Local certificates; trust ca.pem on the dedicated simulator first')
     parser.add_argument('--appearance', choices=('light', 'dark'), help='Temporarily set simulator appearance; restore it afterward')
     content_sizes = ('extra-small', 'small', 'medium', 'large', 'extra-large', 'extra-extra-large', 'extra-extra-extra-large',
         'accessibility-medium', 'accessibility-large', 'accessibility-extra-large', 'accessibility-extra-extra-large', 'accessibility-extra-extra-extra-large')
     parser.add_argument('--content-size', choices=content_sizes, help='Temporarily set simulator Dynamic Type size; restore it afterward')
     scope = parser.add_mutually_exclusive_group()
-    scope.add_argument('--visual-only', action='store_true', help='Capture Modern HTTP login, Friends and chat; skip theme/Keychain lifecycle checks')
-    scope.add_argument('--v3-only', action='store_true', help='Test Classic v3 over HTTP and TCP, appearance restart and live switching across all three themes')
-    scope.add_argument('--rooms-only', action='store_true', help='Test room catalog, favorites, participants, messaging, drafts, all three themes and leave over HTTP/TCP')
-    scope.add_argument('--features-only', action='store_true', help='Test original room moderation/votes, private blocks, groups and linked page forms over Modern HTTP and Classic v3 TCP')
-    scope.add_argument('--unread-only', action='store_true', help='Test whole-tab unread phases, theme retention, clearing and real system Reduce Motion over HTTP/TCP')
-    scope.add_argument('--modern-only', action='store_true', help='Test Modern native glass/navigation/menus/alerts/sheet detents, private/room chat and unread over HTTP')
-    scope.add_argument('--commands-only', action='store_true', help='Test slash suggestions, retained draft/focus, gift completion and explicit private/room action sends over Modern HTTP and Classic v3 TCP')
+    scope.add_argument('--visual-only', action='store_true', help='Capture Modern HTTPS login, Friends and chat; skip theme/Keychain lifecycle checks')
+    scope.add_argument('--v3-only', action='store_true', help='Test Classic v3 over HTTPS and TLS, appearance restart and live switching across all three themes')
+    scope.add_argument('--rooms-only', action='store_true', help='Test room catalog, favorites, participants, messaging, drafts, all three themes and leave over HTTPS/TLS')
+    scope.add_argument('--features-only', action='store_true', help='Test original room moderation/votes, private blocks, groups and linked page forms over Modern HTTPS and Classic v3 TLS')
+    scope.add_argument('--unread-only', action='store_true', help='Test whole-tab unread phases, theme retention, clearing and real system Reduce Motion over HTTPS/TLS')
+    scope.add_argument('--modern-only', action='store_true', help='Test Modern native glass/navigation/menus/alerts/sheet detents, private/room chat and unread over HTTPS')
+    scope.add_argument('--commands-only', action='store_true', help='Test slash suggestions, retained draft/focus, gift completion and explicit private/room action sends over Modern HTTPS and Classic v3 TLS')
+    scope.add_argument('--secure-only', action='store_true', help='Reject invalid certificates/redirects, then test real HTTPS/TLS room, private/group, page and photo workflows')
     args = parser.parse_args()
+    args.features_only = args.features_only or args.secure_only
+    tls_dir = args.tls_dir.resolve()
+    for name in ['ca.pem', 'server.pem', 'server-key.pem'] + ([prefix + suffix for prefix in ('wrong-host', 'expired', 'untrusted') for suffix in ('.pem', '-key.pem')] if args.secure_only else []):
+        if not (tls_dir / name).is_file():
+            parser.error(f'Missing {tls_dir / name}; run go run ./tools/devcert -out data/local-tls -test-fixtures')
     metro = urllib.parse.urlparse(args.metro_url)
     if metro.scheme != 'http' or metro.hostname not in ('127.0.0.1', 'localhost', '::1'):
         parser.error('--metro-url must be the local Metro HTTP origin')
@@ -108,10 +115,18 @@ def main():
     while control_port in (http_port, tcp_port, 8080, 9119):
         control_port = unused_port()
     control_token = secrets.token_hex(24)
+    selected_ports = {http_port, tcp_port, control_port, 8080, 9119, 8443, 9120}
+    def secure_port():
+        port = unused_port()
+        while port in selected_ports:
+            port = unused_port()
+        selected_ports.add(port)
+        return port
+    https_port, tls_port = secure_port(), secure_port()
     config = {
         'test_environment': {
-            'MIG33_SMOKE_HTTP_PORT': str(http_port),
-            'MIG33_SMOKE_TCP_PORT': str(tcp_port),
+            'MIG33_SMOKE_HTTPS_PORT': str(https_port),
+            'MIG33_SMOKE_TLS_PORT': str(tls_port),
             'MIG33_SMOKE_DEEP_LINK': 'exp+mig33-mobile://?' + urllib.parse.urlencode({
                 '__expo_url': args.metro_url,
                 '__expo_disable_fab': '1',
@@ -124,21 +139,24 @@ def main():
             'MIG33_SMOKE_UNREAD_ONLY': '1' if args.unread_only else '0',
             'MIG33_SMOKE_MODERN_ONLY': '1' if args.modern_only else '0',
             'MIG33_SMOKE_COMMANDS_ONLY': '1' if args.commands_only else '0',
+            'MIG33_SMOKE_SECURE_ONLY': '1' if args.secure_only else '0',
             'MIG33_SMOKE_CONTROL_URL': f'http://127.0.0.1:{control_port}/' if args.features_only or args.unread_only or args.modern_only else '',
             'MIG33_SMOKE_CONTROL_TOKEN': control_token if args.features_only or args.unread_only or args.modern_only else '',
         },
         'device': args.device,
+        'tls_directory': str(tls_dir),
         'server_binary': str(binary),
         'appearance': args.appearance,
         'content_size': args.content_size,
-        'scope': ('Modern HTTP and Classic v3 TCP slash commands: context filtering, dismiss/reopen, insertion without execution, retained draft/caret/keyboard responder, gift subcommands and explicit private/room action sends; Modern picker geometry. No system accessibility settings changes.'
-            if args.commands_only else 'Modern HTTP: original login mark, stable arrival/native glass navigation, private and room round trips, native menus/alerts, medium-to-large sheet drag, text editing, retained browse state and unread on/off/clear; real Reduce Transparency and Increase Contrast passes with restoration. Software-keyboard layout is not verified unless a visible-keyboard geometry capture is recorded. Appearance follows --appearance.'
-            if args.modern_only else 'All three themes over HTTP/TCP: real incoming unread messages, complete-tab on/off phases, steady Reduce Motion rendering, theme retention and clear-on-select. System Reduce Motion is changed through Settings and restored.'
-            if args.unread_only else 'Modern HTTP and Classic v3 TCP original feature flows: room creation/Unicode forms, moderator mute/unmute/kick, ordinary706 votes, personal block/unblock, private-group creation/invite/participants/message/leave; isolated demo data and real gateway peers.'
-            if args.features_only else 'Modern HTTP and Classic v3 TCP rooms: catalog/filter, favorites, join welcome, participants, room round trip, two-room drafts, live switching across all three themes and leave; isolated demo data.'
-            if args.rooms_only else 'Modern HTTP login, native glass Friends, inline chat round trip, menu and logout captures; isolated demo data.'
-            if args.visual_only else 'Classic v3 HTTP/TCP Write Message, restart persistence, live conversation and draft across all three themes; isolated demo data.'
-            if args.v3_only else 'Modern and Classic v3 HTTP, Classic v4 TCP; native glass, theme persistence and live chat/draft preservation; Friends, menus, logout; Keychain remember/auto-login/delete across restarts; isolated demo data.'),
+        'scope': ('Real iOS rejection of wrong-host, expired and untrusted certificates on HTTPS/TLS, and HTTPS-to-HTTP redirects; then original room moderation, private/group chat, pages and photos over both encrypted transports with a plain HTTP compatibility peer.'
+            if args.secure_only else 'Modern HTTPS and Classic v3 TLS slash commands: context filtering, dismiss/reopen, insertion without execution, retained draft/caret/keyboard responder, gift subcommands and explicit private/room action sends; Modern picker geometry. No system accessibility settings changes.'
+            if args.commands_only else 'Modern HTTPS: original login mark, stable arrival/native glass navigation, private and room round trips, native menus/alerts, medium-to-large sheet drag, text editing, retained browse state and unread on/off/clear; real Reduce Transparency and Increase Contrast passes with restoration. Software-keyboard layout is not verified unless a visible-keyboard geometry capture is recorded. Appearance follows --appearance.'
+            if args.modern_only else 'All three themes over HTTPS/TLS: real incoming unread messages, complete-tab on/off phases, steady Reduce Motion rendering, theme retention and clear-on-select. System Reduce Motion is changed through Settings and restored.'
+            if args.unread_only else 'Modern HTTPS and Classic v3 TLS original feature flows: room creation/Unicode forms, moderator mute/unmute/kick, ordinary706 votes, personal block/unblock, private-group creation/invite/participants/message/leave; isolated demo data and real gateway peers.'
+            if args.features_only else 'Modern HTTPS and Classic v3 TLS rooms: catalog/filter, favorites, join welcome, participants, room round trip, two-room drafts, live switching across all three themes and leave; isolated demo data.'
+            if args.rooms_only else 'Modern HTTPS login, native glass Friends, inline chat round trip, menu and logout captures; isolated demo data.'
+            if args.visual_only else 'Classic v3 HTTPS/TLS Write Message, restart persistence, live conversation and draft across all three themes; isolated demo data.'
+            if args.v3_only else 'Modern and Classic v3 HTTPS, Classic v4 TLS; native glass, theme persistence and live chat/draft preservation; Friends, menus, logout; Keychain remember/auto-login/delete across restarts; isolated demo data.'),
     }
     config_path = output / 'config.json'
     config_path.write_text(json.dumps(config, indent=2) + '\n')
@@ -178,8 +196,19 @@ def main():
                 child = subprocess.Popen(command, cwd=ROOT, env=env, stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
                 children.append(child)
                 return child
+            if args.secure_only:
+                probe_ready = output / 'secure-probes.json'
+                probes = spawn(['mise', '-C', str(ROOT / 'apps/mobile'), 'exec', '--', 'node',
+                    str(ROOT / 'tools/mobile/secure-probes.mjs'), str(tls_dir), str(probe_ready),
+                    str(output / 'secure-probe-events.jsonl')], 'secure-probes.log')
+                wait_until(probe_ready.is_file, [probes], 'negative TLS fixtures')
+                for name, port in json.loads(probe_ready.read_text()).items():
+                    config['test_environment']['MIG33_SMOKE_BAD_' + name.upper().replace('-', '_') + '_PORT'] = str(port)
+                config_path.write_text(json.dumps(config, indent=2) + '\n')
             server = spawn([str(binary), '-config-dir', str(ROOT / 'configs'), '-env', '',
                 '-http', f'127.0.0.1:{http_port}', '-tcp', f'127.0.0.1:{tcp_port}',
+                '-https', f'127.0.0.1:{https_port}', '-tls-tcp', f'127.0.0.1:{tls_port}',
+                '-tls-cert', str(tls_dir / 'server.pem'), '-tls-key', str(tls_dir / 'server-key.pem'),
                 '-public-url', origin, '-db', ':memory:', '-operators', ''], 'server.log')
             wait_until(lambda: healthy(origin + '/healthz'), [server], 'isolated Go listeners')
             ready = output / 'peer-ready'
@@ -196,7 +225,7 @@ def main():
                 peer_command.extend(['--unread', '--control-port', str(control_port), '--control-token', control_token])
             peer = spawn(peer_command, 'peer.log')
             wait_until(ready.is_file, [server, peer], 'Bob echo peer')
-            print(f'Isolated HTTP {http_port}, TCP {tcp_port}; Bob is ready', flush=True)
+            print(f'Expo HTTPS {https_port}, TLS {tls_port}; plain HTTP {http_port}/TCP {tcp_port} retained; Bob is ready', flush=True)
             changed_project = True
             # mise resolves the pinned Ruby directly. `bundle exec ruby` adds
             # a second PATH lookup that can select macOS Ruby under Bundler's
@@ -220,7 +249,26 @@ def main():
             if returncode:
                 raise RuntimeError(f'XCTest failed ({returncode}); inspect {output / "xcodebuild.log"}')
             events = [json.loads(line) for line in (output / 'peer-events.jsonl').read_text().splitlines()]
-            transports = ['http'] if args.visual_only or args.modern_only else ['http', 'tcp']
+            if args.secure_only:
+                # The fixture drains queued writes before its completion marker.
+                # Read only after shutdown so late payload evidence is included.
+                stop(probes)
+                probe_events = [json.loads(line) for line in (output / 'secure-probe-events.jsonl').read_text().splitlines()]
+                if not any(event['event'] == 'probes-stopped' for event in probe_events):
+                    raise AssertionError('Security probe log did not finish flushing')
+                if any(event['event'].startswith('unexpected-') for event in probe_events):
+                    raise AssertionError('Native app sent a request to an invalid-certificate or redirect target')
+                if not any(event['event'] == 'redirect-offered' for event in probe_events):
+                    raise AssertionError('Native redirect rejection was not exercised')
+                log = (output / 'xcodebuild.log').read_text()
+                for name in ('https-plaintext', 'tls-plaintext'):
+                    if not any(event['event'] == 'plaintext-rejected-handshake' and event.get('probe') == name for event in probe_events):
+                        raise AssertionError('Plaintext endpoint rejection was not exercised: ' + name)
+                for name in ('https-wrong-host', 'https-expired', 'https-untrusted', 'https-downgrade', 'https-plaintext',
+                             'tls-wrong-host', 'tls-expired', 'tls-untrusted', 'tls-plaintext'):
+                    if f"Added attachment named 'secure-rejected-{name}'" not in log:
+                        raise AssertionError('Missing native certificate rejection: ' + name)
+            transports = ['https'] if args.visual_only or args.modern_only else ['https', 'tls']
             if args.commands_only:
                 # One explicit private wave and one room wave per transport.
                 # Extra action deliveries would expose completion auto-sending.
@@ -234,7 +282,7 @@ def main():
                 if args.commands_only:
                     continue
                 if args.unread_only:
-                    suffixes = ['pulsing', 'steady'] if transport == 'http' else ['pulsing']
+                    suffixes = ['pulsing', 'steady'] if transport == 'https' else ['pulsing']
                     for suffix in suffixes:
                         if not any(event.get('event') == 'feature-private-send'
                             and event.get('body') == 'Unread ' + transport.upper() + ' ' + suffix for event in events):
@@ -250,9 +298,9 @@ def main():
                     raise AssertionError('Missing private round trip opened from room participants for ' + transport)
                 if args.modern_only:
                     if not any(event.get('event') == 'replied' and event.get('kind') == 3
-                        and event.get('body') == 'Hello room from iOS HTTP' for event in events):
+                        and event.get('body') == 'Hello room from iOS HTTPS' for event in events):
                         raise AssertionError('Missing Modern room round trip')
-                    if not any(event.get('event') == 'feature-private-send' and event.get('body') == 'Modern unread HTTP' for event in events):
+                    if not any(event.get('event') == 'feature-private-send' and event.get('body') == 'Modern unread HTTPS' for event in events):
                         raise AssertionError('Missing Modern unread fixture delivery')
                 if args.features_only:
                     if not any(event.get('event') == 'feature-photo-send' and event.get('transport') == transport for event in events):
@@ -277,31 +325,36 @@ def main():
                 'unread_only': args.unread_only,
                 'modern_only': args.modern_only,
                 'commands_only': args.commands_only,
+                'secure_only': args.secure_only,
+                'security_checks': ['https-wrong-host', 'https-expired', 'https-untrusted', 'https-downgrade',
+                    'https-plaintext', 'tls-wrong-host', 'tls-expired', 'tls-untrusted', 'tls-plaintext',
+                    'zero-rejected-endpoint-payloads'] if args.secure_only else [],
                 'software_keyboard_layout': 'verified' if keyboard_layout_verified else 'not_verified',
-                'themes': ({'http': 'modern', 'tcp': 'classic-v3', 'checks': ['slash-context-filtering', 'dismiss-reopen', 'completion-not-execution',
+                'themes': ({'https': 'modern', 'tls': 'classic-v3', 'checks': ['slash-context-filtering', 'dismiss-reopen', 'completion-not-execution',
                     'draft-caret-keyboard-responder', 'gift-subcommands', 'picker-geometry', 'original500-content6-explicit-sends']} if args.commands_only else
-                    {'http': 'modern', 'checks': ['authentic-login', 'glass-arrival', 'native-menus-alerts', 'sheet-detents', 'text-editing', 'browse-state-retention', 'unread',
+                    {'https': 'modern', 'checks': ['authentic-login', 'glass-arrival', 'native-menus-alerts', 'sheet-detents', 'text-editing', 'browse-state-retention', 'unread',
                     'reduce-transparency-solid', 'increase-contrast-controls'] + (['software-keyboard-layout'] if keyboard_layout_verified else [])} if args.modern_only else
-                    {'http': ['modern', 'classic', 'classic-v3'], 'tcp': ['modern', 'classic', 'classic-v3'],
+                    {'https': ['modern', 'classic', 'classic-v3'], 'tls': ['modern', 'classic', 'classic-v3'],
                     'checks': ['unread-on-off', 'unread-theme-retention', 'unread-selected-clear', 'system-reduce-motion-steady']} if args.unread_only else
-                    {'http': 'modern', 'tcp': 'classic-v3', 'checks': ['native-feature-actions', 'original-page-forms']} if args.features_only else
-                    {'http': 'modern', 'tcp': 'classic-v3', 'checks': ['live-room-conversation', 'per-room-unsent-drafts', 'all-three-themes']} if args.rooms_only else
-                    {'http': 'modern', 'checks': []} if args.visual_only else
-                    {'http': 'classic-v3', 'tcp': 'classic-v3', 'checks': ['restart-persistence', 'live-conversation', 'unsent-draft', 'all-three-themes']} if args.v3_only else
-                    {'http': ['modern', 'classic-v3'], 'tcp': 'classic', 'checks': ['restart-persistence', 'live-conversation', 'unsent-draft', 'all-three-themes']}),
+                    {'https': 'modern', 'tls': 'classic-v3', 'checks': ['native-feature-actions', 'original-page-forms']} if args.features_only else
+                    {'https': 'modern', 'tls': 'classic-v3', 'checks': ['live-room-conversation', 'per-room-unsent-drafts', 'all-three-themes']} if args.rooms_only else
+                    {'https': 'modern', 'checks': []} if args.visual_only else
+                    {'https': 'classic-v3', 'tls': 'classic-v3', 'checks': ['restart-persistence', 'live-conversation', 'unsent-draft', 'all-three-themes']} if args.v3_only else
+                    {'https': ['modern', 'classic-v3'], 'tls': 'classic', 'checks': ['restart-persistence', 'live-conversation', 'unsent-draft', 'all-three-themes']}),
                 'rooms': ['categories', 'local-filter', 'favorite-add-remove', 'join-welcome', 'participants', 'participant-private-chat', 'round-trip', 'leave'] if args.rooms_only else [],
                 'features': ['room-create-unicode', 'room-info', 'mute-send-rejected', 'unmute-send-accepted', 'kick-membership-removed',
                     'ordinary-vote-kick', 'block-suppresses-delivery', 'unblock-restores-delivery', 'photo-preview', 'composer-color-emoticon', 'group-create-invite-participants-round-trip-leave'] if args.features_only else [],
                 'keychain': [] if args.visual_only or args.v3_only or args.rooms_only or args.features_only or args.unread_only or args.modern_only or args.commands_only else ['remember', 'restore', 'auto-login', 'delete'],
                 'screenshots': 'attachments/', 'xcresult': result.name}, indent=2) + '\n')
-            print('PASS Modern HTTP and Classic v3 TCP slash completion, retained draft/focus, context filtering and explicit original private/room actions' if args.commands_only else
-                ('PASS Modern HTTP native presentation, text editing, retained browse state, private/room chat, unread and system accessibility settings; software-keyboard layout '
+            print('PASS native certificate and redirect rejection, plus HTTPS/TLS original moderation, private/group chat, pages and photos' if args.secure_only else
+                'PASS Modern HTTPS and Classic v3 TLS slash completion, retained draft/focus, context filtering and explicit original private/room actions' if args.commands_only else
+                ('PASS Modern HTTPS native presentation, text editing, retained browse state, private/room chat, unread and system accessibility settings; software-keyboard layout '
                 + ('verified with visible-keyboard geometry capture' if keyboard_layout_verified else 'NOT VERIFIED')) if args.modern_only else
-                'PASS native HTTP/TCP whole-tab unread, all themes, clearing and system Reduce Motion' if args.unread_only else
-                'PASS native HTTP/TCP moderation, votes, blocks, groups and original page forms' if args.features_only else
-                'PASS native HTTP/TCP rooms, favorites, participants, drafts and all three themes' if args.rooms_only else
-                'PASS Modern HTTP visual check' if args.visual_only else 'PASS Classic v3 HTTP/TCP and all three theme transitions' if args.v3_only
-                else 'PASS native HTTP/TCP UI, all three themes and Keychain lifecycle', flush=True)
+                'PASS native HTTPS/TLS whole-tab unread, all themes, clearing and system Reduce Motion' if args.unread_only else
+                'PASS native HTTPS/TLS moderation, votes, blocks, groups and original page forms' if args.features_only else
+                'PASS native HTTPS/TLS rooms, favorites, participants, drafts and all three themes' if args.rooms_only else
+                'PASS Modern HTTPS visual check' if args.visual_only else 'PASS Classic v3 HTTPS/TLS and all three theme transitions' if args.v3_only
+                else 'PASS native HTTPS/TLS UI, all three themes and Keychain lifecycle', flush=True)
     finally:
         try:
             for child in reversed(children):

@@ -3,6 +3,8 @@ import { ActivityIndicator, Image, Keyboard, KeyboardAvoidingView, Modal, Platfo
 import type { Contact, RoomSummary } from '../mig33/client';
 import { useMig33Session, isAvailable, type ConnectionSettings } from './session/useMig33Session';
 import { connectionFromForm, connectionToForm, probeConnection } from './connection';
+import { defaultConnections as defaults } from './connectionSettings';
+import { RetiredLoginError } from './loginStorage';
 import { loginStorage } from './nativeLoginStorage';
 import { loadAppearance, saveAppearance, loadHomeTabOrder, saveHomeTabOrder } from './nativeAppearanceStorage';
 import { AppearanceProvider, useAppearance, type AppearanceMode } from './appearance';
@@ -33,10 +35,6 @@ type Screen = 'welcome' | 'login' | 'connection' | 'manual' | 'friends' | 'rooms
 interface Menu { title: string; items: V4MenuItem[]; }
 interface Picker { context: ChatContext; action: ChatAction | 'username'; title: string; returnTo: Screen; }
 interface Confirmation { title: string; message: string; label?: string; testID?: string; run: () => void | Promise<void>; }
-const defaults: Record<'http' | 'tcp', ConnectionSettings> = {
-  http: { mode: 'http', httpURL: 'http://127.0.0.1:8080' },
-  tcp: { mode: 'tcp', host: '127.0.0.1', port: '9119' },
-};
 
 export default function Application() {
   const systemDark = useColorScheme() === 'dark';
@@ -73,8 +71,8 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
   const session = useMig33Session();
   const [screen, setScreen] = useState<Screen>('login');
   const [form, setForm] = useState<LoginForm>({ username: '', password: '', remember: false, auto: false, invisible: false });
-  const [connection, setConnection] = useState<ConnectionSettings>(defaults.http);
-  const [manual, setManual] = useState<ConnectionForm>(connectionToForm(defaults.http));
+  const [connection, setConnection] = useState<ConnectionSettings>(defaults.https);
+  const [manual, setManual] = useState<ConnectionForm>(connectionToForm(defaults.https));
   const [ready, setReady] = useState(false);
   const [error, setError] = useState('');
   const [testing, setTesting] = useState('');
@@ -132,7 +130,8 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
         setForm(loaded); setConnection(saved.connection); setManual(connectionToForm(saved.connection));
         if (saved.auto) void connect(loaded, saved.connection);
       }
-    }).catch(() => { if (!cancelled) setError('Saved login could not be read. Please log in again.'); })
+    }).catch((cause: unknown) => { if (!cancelled) setError(cause instanceof RetiredLoginError
+      ? cause.message : 'Saved login could not be read. Please log in again.'); })
       .finally(() => { if (!cancelled) setReady(true); });
     return () => { cancelled = true; mounted.current = false; probe.current?.abort(); };
   }, []);
@@ -191,7 +190,7 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
     try {
       if (!await session.login(values, target) || !mounted.current) return;
       if (values.remember && currentForm.current.remember) {
-        await loginStorage.save({ version: 1, username: values.username, password: values.password,
+        await loginStorage.save({ version: 2, username: values.username, password: values.password,
           auto: values.auto, invisible: values.invisible, connection: target });
       } else {
         if (currentForm.current.username === values.username && currentForm.current.password === values.password) {

@@ -1,7 +1,7 @@
 # mig33 mobile
 
-An Expo development app using the original mig33 4.62 HTTP tunnel and TCP
-protocol. The app supports contacts, private/group/room chat, moderation,
+An Expo development app carrying the original mig33 4.62 HTTP tunnel over HTTPS
+and native packet stream over TLS. The app supports contacts, private/group/room chat, moderation,
 photos, composer tools and original service pages. Modern is the default appearance; Classic v4 follows
 the v4.62 Default V2 theme, and Classic v3 follows the 3.08 renderer.
 The Go backend stays in the root module.
@@ -97,14 +97,17 @@ Remember Login uses device-only, unlocked secure storage. Auto Login implies
 Remember Login and runs only when opening the app; it never replays a message
 or reconnects after backgrounding. Turning Remember Login off removes the saved
 credentials immediately. Login As Invisible uses the original presence 99 field.
-Connection Settings probes the selected server with original opcode 2/3.
+Connection Settings probes the selected secure server with original opcode 2/3.
+Remembered logins now use version2: old HTTP/TCP records are deleted with a
+configuration notice and never automatically replayed. Choose HTTPS or TLS and
+log in again to save the new endpoint. See [security policy](SECURITY.md).
 Classic v3 calls the same saved-credential preference Save Password and hides the
 Auto Login checkbox, which did not exist in 3.08. Switching themes preserves
 any Auto Login preference set in Modern/v4. Unlike the historical default,
 Save Password requires an explicit choice. Show offline contacts controls the
 shared roster filter. External IM login remains disabled.
-The manual connection form keeps explicit TCP/HTTP selectors so either original
-transport can use a custom local endpoint; these selectors extend the v3 form.
+The manual connection form has explicit HTTPS/TLS selectors in every appearance.
+These secure endpoint choices intentionally extend the historical v3/v4 forms.
 
 Registration, account recovery, language changes and room-avatar preferences
 remain separate from the authenticated chat scope. Historical server-page
@@ -114,7 +117,7 @@ original922/923 contract. See the [original rendering contract](../../research/a
 and [reproducible reference captures](../../research/applets/v4/docs/capture.md).
 Avatar views currently draw placeholders; fetching and displaying user images
 is a later slice. Classic v3 changes presentation only: all three appearances
-continue using the existing v4-compatible HTTP and TCP client.
+continue using the existing v4-compatible client over HTTPS and TLS.
 
 New messages illuminate the whole inactive conversation tab in orange. The
 Classic themes follow the original shared750ms on/off cadence and gradients;
@@ -125,7 +128,7 @@ eligible for unread messages; the Write editor keeps its conversation selected,
 matching the original applet's read behavior.
 
 The [native UI harness](../../tools/mobile/README.md) captures all three appearances
-while testing HTTP and TCP against isolated Go listeners. It also checks theme
+while testing HTTPS and TLS against isolated Go listeners. It also checks theme
 persistence, draft/history preservation across theme changes, saved-login
 restoration, Auto Login and credential deletion through real Keychain operations.
 
@@ -144,7 +147,7 @@ order and show Admin/Muted metadata; selecting another person opens a private
 chat. Leave confirms before discarding an unsent draft. Changing appearance
 preserves membership and all room/private drafts.
 
-Rooms use the existing original packets over both binary HTTP and TCP. Category
+Rooms use the existing original packets over HTTPS and TLS. Category
 footers preserve the server's label and append/replace behavior; Refresh reloads
 loaded categories and Favorites. A join's room record and acknowledgment are
 processed before its same-response welcome. Pending leave suppresses room
@@ -185,7 +188,7 @@ records original menu ordering, packets, permissions and compatibility limits.
   Received photos and framed emoticons use authenticated original resources.
 - Profiles, gifts/store, credit transfer, reports, calls/SMS, scrapbook,
   community groups/forums and settings use the existing service pages over
-  either HTTP or TCP. Native forms preserve hidden CSRF/nonces and text encoding;
+  either HTTPS or TLS. Native forms preserve hidden CSRF/nonces and text encoding;
   Back does not repeat purchases or other form submissions.
 - Contacts support add/edit/delete/move, contact-group creation/rename/deletion,
   presence and status updates. Original server-defined menu extensions retain
@@ -205,18 +208,29 @@ From the repository root:
 ```sh
 mise -C apps/mobile install node pnpm
 mise -C apps/mobile exec -- pnpm install --frozen-lockfile
-go run ./cmd/omni -env local
+go run ./tools/devcert -out data/local-tls --test-fixtures
+go run ./cmd/omni -env local \
+  -https 127.0.0.1:8443 -tls-tcp 127.0.0.1:9120 \
+  -tls-cert data/local-tls/server.pem -tls-key data/local-tls/server-key.pem
 ```
+
+Certificate generation requires a new directory and never replaces existing
+keys. Follow [local secure setup](../../docs/mobile-secure-transports.md#local-setup)
+to create a dedicated simulator and install only `ca.pem` into its trust store.
+The normal certificate covers `localhost`, `127.0.0.1` and `::1`; the additional
+fixtures support negative tests. No existing simulator needs to be reset.
 
 In a second terminal, after installing full Xcode and its iOS simulator runtime,
 follow [native tool setup](DEPENDENCIES.md) to install the optional Ruby/CocoaPods
-profile, then launch:
+profile. Regenerate native configuration, install pods through that profile,
+then launch on the dedicated simulator:
 
 ```sh
-EXPO_NO_TELEMETRY=1 mise -C apps/mobile -E ios exec -- pnpm ios
+mise -C apps/mobile exec -- pnpm prebuild --platform ios --no-install
+EXPO_NO_TELEMETRY=1 mise -C apps/mobile -E ios exec -- pnpm ios --device DEDICATED_SIMULATOR_UDID
 ```
 
-The app uses an Expo development build because TCP requires native code.
+The app uses an Expo development build because TLS sockets require native code.
 Expo Go cannot supply that module. For later development sessions:
 
 ```sh
@@ -224,9 +238,11 @@ mise -C apps/mobile exec -- pnpm start
 ```
 
 Sign in with `alice / alice-demo` or `bob / bob-demo`. Connection settings
-select HTTP or TCP. The iOS simulator defaults to the Mac's loopback server:
-`http://127.0.0.1:8080` and TCP `127.0.0.1:9119`. A physical device requires a
-reachable server address and listener configuration.
+select HTTPS or TLS. The iOS simulator defaults to the Mac's loopback server:
+`https://localhost:8443` and TLS `localhost:9120`. Certificates and hostnames are
+verified with no cleartext fallback. A physical device requires a reachable
+listener, matching certificate and trusted issuer. The server retains plain
+HTTP/TCP listeners for original clients; the Expo app cannot select them.
 
 If Expo's AppleScript window activation is unavailable after a successful build,
 start Metro separately and open the installed development app through `simctl`:
@@ -234,9 +250,9 @@ start Metro separately and open the installed development app through `simctl`:
 ```sh
 EXPO_NO_TELEMETRY=1 NODE_OPTIONS=--dns-result-order=ipv4first \
   mise -C apps/mobile exec -- pnpm start --localhost
-# In another terminal; use the intended simulator's UDID if several are booted.
+# In another terminal, use the dedicated simulator's UDID.
 open -a DeviceHub
-xcrun simctl openurl booted 'exp+mig33-mobile://?__expo_url=http%3A%2F%2F127.0.0.1%3A8081&__expo_disable_fab=1&__expo_disable_auto_launch=1'
+xcrun simctl openurl DEDICATED_SIMULATOR_UDID 'exp+mig33-mobile://?__expo_url=http%3A%2F%2F127.0.0.1%3A8081&__expo_disable_fab=1&__expo_disable_auto_launch=1'
 ```
 
 The IPv4 setting makes Metro's localhost listener match its advertised address.
@@ -267,18 +283,20 @@ capability announcement. It adds no endpoint, packet field or protocol operation
 selected commands still use ordinary message500. See the
 [catalog boundaries](../../docs/slash-commands.md#expo-command-discovery).
 
-Planned transport work retains plain TCP and HTTP for original clients and adds
+Secure transport support retains plain TCP and HTTP for original clients and adds
 TLS-wrapped TCP and HTTPS with the same framing, handshake, tunnel paths and
-operations. Expo will offer only the secure transports, with certificate and
+operations. Expo offers only the secure transports, with certificate and
 hostname verification and no cleartext fallback. This is a transport addition;
 new protocol features and discovery endpoints remain a separate future phase.
-The [secure transport research](../../docs/mobile-secure-transports.md) records
-certificate trust, the Android hostname-verification gap and compatibility tests.
+The [secure transport implementation](../../docs/mobile-secure-transports.md)
+records local certificates, listener scope and compatibility tests;
+[SECURITY.md](SECURITY.md) records redirect rejection, saved-login migration
+and separate Debug/Release network policies.
 
 After iOS, Android design research will assess Material 3 Expressive native
 controls, shape morphing, the extended shape library and spring motion against
 the pinned Expo/native versions, accessibility settings and performance. The
-Android presentation and secure transport acceptance are not yet implemented.
+Android presentation and native secure transport acceptance remain unverified.
 See the [Material 3 Expressive implementation plan](../../docs/mobile-android-expressive.md)
 for the installed native capabilities and the morphing APIs needing a bridge.
 
@@ -291,8 +309,9 @@ enter the shared protocol/session code.
 The HTTP adapter sends binary `image/gif` bodies, assigns the session after201,
 uses the original base/session URL rules, and polls after authentication.
 The TCP adapter shares the frame decoder and serializes writes until completion.
-The native connector supplies socket bytes; the Node connector exists only in
-test helpers. Both use the original binary login handshake.
+The native connector supplies bytes only after an authenticated TLS handshake;
+the Node connectors exist in test helpers. HTTPS uses `expo/fetch` with native
+redirect rejection. Both use the original binary login handshake.
 
 ## Checks
 
@@ -312,6 +331,12 @@ go build -o data/mobile-integration/server ./cmd/omni
 MIG33_TEST_SERVER_BINARY="$PWD/data/mobile-integration/server" \
   mise -C apps/mobile exec -- pnpm run check
 ```
+
+With a server binary configured, this includes simultaneous HTTPS, TLS and
+retained plain HTTP/TCP interoperability. The secure integration helper generates
+its own temporary certificates; it does not change OS trust. Native certificate
+and redirect acceptance uses `--secure-only` in the
+[dedicated-simulator harness](../../tools/mobile/README.md).
 
 Each live test generates bounded synthetic PNG resources in its ignored run
 directory and explicitly configures the server to use them. Emoticon and photo
@@ -339,10 +364,13 @@ Python launch points use uv.
 
 The Node-executed core passes the nine original serializer fixtures, malformed
 and fragmented-frame tests, live Go transport tests, and bidirectional
-original-Java interoperability. iOS prebuild, native build and Metro/Hermes
-export pass. XCTest on an iPhone18 Pro simulator running iOS27.2 verifies
-native HTTP and TCP messaging and real Keychain login preferences. Android
-native operation and physical iOS devices have not been verified.
+original-Java interoperability. The new HTTPS/TLS native certificate/redirect
+and feature run is pending. The following native results are the **previous
+plain-transport baseline**, before the secure-only migration: iOS prebuild,
+native build and Metro/Hermes export passed, and XCTest on an iPhone18 Pro
+simulator running iOS27.2 verified HTTP/TCP messaging and real Keychain login
+preferences. Android native operation and physical iOS devices have not been
+verified.
 The full light-mode run also verifies appearance persistence and retaining a
 live conversation and draft across theme changes. Native control acceptance
 passes in light mode and dark mode with accessibility-large Dynamic Type,

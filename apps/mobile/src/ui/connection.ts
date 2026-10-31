@@ -1,38 +1,24 @@
 import { Packet } from '../mig33/protocol';
 import { HTTPTransport } from '../mig33/transport/http';
-import { createTCPTransport } from '../mig33/transport/tcp.native';
+import { fetch as nativeFetch } from 'expo/fetch';
+import { createTLSTransport } from '../mig33/transport/tcp.native';
 import type { ConnectionSettings } from './session/model';
-import type { ConnectionForm } from './screens/AuthScreens';
+import { validateConnection } from './connectionSettings';
+export { connectionFromForm, connectionToForm } from './connectionSettings';
 
-export function connectionFromForm(form: ConnectionForm): ConnectionSettings {
-  const port = Number(form.port);
-  if (!/^\d+$/.test(form.port) || !Number.isInteger(port) || port < 1 || port > 65535) {
-    throw new Error('Enter a port from 1 to 65535.');
-  }
-  const host = form.host.trim();
-  if (!host) throw new Error('Enter a server.');
-  if (form.mode === 'http') {
-    const url = new URL(host.includes('://') ? host : `http://${host}`);
-    if (!['http:', 'https:'].includes(url.protocol) || url.username || url.password) throw new Error('Enter an HTTP server address.');
-    url.port = String(port);
-    return { mode: 'http', httpURL: url.toString().replace(/\/$/, '') };
-  }
-  return { mode: 'tcp', host: host.replace(/^http:\/\//i, '').replace(/\/$/, ''), port: String(port) };
-}
-
-export function connectionToForm(connection: ConnectionSettings): ConnectionForm {
-  if (connection.mode === 'tcp') return { ...connection };
-  const url = new URL(connection.httpURL);
-  const port = url.port || (url.protocol === 'https:' ? '443' : '80');
-  url.port = '';
-  return { mode: 'http', host: url.toString().replace(/\/$/, ''), port };
+/** Expo's native fetch honors redirect:error before following on iOS/Android;
+ * React Native's global XMLHttpRequest-backed fetch does not. Never substitute
+ * the global fetch here, even for the unauthenticated connection probe. */
+export function createSecureTransport(value: ConnectionSettings) {
+  const connection = validateConnection(value);
+  return connection.mode === 'https'
+    ? new HTTPTransport(connection.httpURL, { requireHTTPS: true, fetch: nativeFetch })
+    : createTLSTransport(connection.host, Number(connection.port));
 }
 
 /** Original opcode2/3 connection probe; no login or application session is created. */
 export function probeConnection(connection: ConnectionSettings, signal: AbortSignal): Promise<void> {
-  const transport = connection.mode === 'http'
-    ? new HTTPTransport(connection.httpURL)
-    : createTCPTransport(connection.host, Number(connection.port));
+  const transport = createSecureTransport(connection);
   return new Promise((resolve, reject) => {
     let finished = false;
     let timer: ReturnType<typeof setTimeout> | undefined;
