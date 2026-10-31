@@ -185,10 +185,13 @@ repository writes are paused.
 
 Use `--unread-only` for focused unread-tab acceptance. The authenticated Bob
 fixture sends real private messages while Friends is selected. XCTest captures
-the whole-tab orange and normal phases in Modern, Classic v4 and Classic v3,
+Modern's brighter/dimmer amber-field phases and Classic v4/v3's whole-tab
+orange/normal phases,
 checks that changing themes retains unread state, and verifies opening the
-conversation clears it. It covers HTTPS and TLS. A separate HTTPS pass enables
-the real iOS Reduce Motion setting, checks steady orange in all three themes,
+conversation clears it. Modern's native control must retain its size and open
+during the animation; a second incoming message rearms the Classic checks.
+It covers HTTPS and TLS. A separate HTTPS pass enables
+the real iOS Reduce Motion setting, checks a steady unread cue in all three themes,
 then restores the previous system setting. Settings changes happen while
 logged out because backgrounding the app intentionally suspends its session.
 Phase test IDs are non-accessible views; VoiceOver only announces unread
@@ -199,13 +202,14 @@ for focused Modern presentation acceptance. It checks the original logo on
 Login, the stable successful-login destination with native glass, real private
 and room message round trips, text editing, menu actions, system alerts,
 and a composer sheet dragged from medium to large. It also captures the whole
-orange unread plate in both phases and verifies selecting its conversation
+amber field beneath native glass in both phases and verifies selecting its conversation
 clears unread state. Transient login animation frames are not delayed or polled
 for a screenshot; a screen recording is needed to review those frames.
 It also verifies that collapsed Friends groups, expanded room categories and
 the room filter survive navigation, and captures native row-options menus.
-Modern login starts with Remember Login visible and More sign-in options
-collapsed; the harness opens it to verify native Auto Login/invisible switches.
+Modern Login keeps Remember Login visible and secondary options inside its
+ellipsis menu. The harness checks the menu's44pt target, all four entries,
+native checked states for Auto Login/invisible, and Auto Login enabling Remember.
 After a send acknowledgment it checks that the empty Send control is disabled.
 Real incoming messages overflow the transcript, then a short final reply must
 fit entirely above the composer without a repair scroll. A separate real drag

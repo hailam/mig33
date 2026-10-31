@@ -464,15 +464,15 @@ export function V4Tabs({ tabs, selected, onSelect, onMenu, menuControl, animateI
     const tabButton = (tab: V4Tab, compact = false) => {
       const active = tab.id === selected;
       const unread = !!tab.unread && !active;
-      const glowing = unread && pulse.on;
+      const unreadPhase = !unread ? 'none' : pulse.name === 'steady' ? 'steady' : pulse.on ? 'on' : 'off';
       return <View key={tab.id} onLayout={compact ? undefined : reveal.onTabLayout(tab.id)}>
         <ModernButton testID={`tab.${tab.id}`} label={tab.label} systemImage={modernSymbols[tab.icon]}
           accessibilityLabel={`${tab.label}${unread ? ', unread messages' : ''}`} onPress={() => onSelect(tab.id)}
-          variant="secondary" selected={active} highlighted={unread} iconOnly={compact}
-          // Keep the native style stable throughout the unread pulse. Changing
-          // glass/glassProminent mid-gesture can replace the pressed button.
-          tintColor={glowing ? '#f5a34e' : active || unread ? reduceTransparency ? v4.selected : colors.glassTint : v4.text}
-          foregroundColor={glowing ? '#38200d' : active ? reduceTransparency ? v4.selectedText : colors.selectedInk : v4.text}
+          variant="secondary" selected={active} unreadPhase={unreadPhase} iconOnly={compact}
+          // Every native tab retains its background and press target, including
+          // read tabs. Only the amber field beneath its glass follows the phase.
+          tintColor={active ? reduceTransparency ? v4.selected : colors.glassTint : v4.text}
+          foregroundColor={active ? reduceTransparency ? v4.selectedText : colors.selectedInk : v4.text}
           style={compact ? { width: 46, height: 48 } : { maxWidth: 188, minHeight: 48 }} />
         {unread && <UnreadPhaseMarker id={tab.id} phase={pulse.name} />}
       </View>;
@@ -604,7 +604,7 @@ const v3Styles = StyleSheet.create({
 
 export interface V4MenuItem {
   id: string; label: string; onPress?: () => void; icon?: V4IconName; disabled?: boolean; separator?: boolean; testID?: string;
-  children?: readonly V4MenuItem[]; destructive?: boolean;
+  children?: readonly V4MenuItem[]; destructive?: boolean; checked?: boolean; onCheckedChange?: (checked: boolean) => void;
 }
 export function V4Menu({ visible, title = 'Menu', items, onClose, embedded = false }: {
   visible: boolean; title?: string; items: readonly V4MenuItem[]; onClose: () => void; embedded?: boolean;

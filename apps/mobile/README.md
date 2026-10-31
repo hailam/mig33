@@ -8,7 +8,8 @@ The Go backend stays in the root module.
 
 ## Appearance
 
-Choose **Appearance** on Login or in a conversation/Friends menu. Modern uses
+Choose **Appearance** in Modern Login's ellipsis menu or a conversation/Friends
+menu; Classic keeps its Login link. Modern uses
 v4's teal/navy/orange palette with spacious controls, grouped preferences,
 clear friend lists and an inline message composer. Classic v4 retains the original
 gradients, compact rows, command bar and separate Write Message screen.
@@ -41,8 +42,9 @@ a restrained focus color. Friends and Rooms expose visible context menus,
 preserve collapsed groups, expanded categories and the room filter across
 navigation, and use a measured navigation inset for larger text sizes. Refresh
 uses an accessible glass icon button beside the room filter and participant lists.
-Modern Login keeps Remember Login visible; More sign-in options reveals Auto
-Login and invisible sign-in, with their current states summarized when collapsed.
+Modern Login keeps Remember Login visible. The ellipsis **Sign-in options**
+menu contains checked Auto Login and invisible-sign-in options, Connection
+Settings, and Appearance. The logo leads the screen; Sign in is a smaller heading.
 The transcript reserves composer space in a measured list footer and follows
 new messages only while the reader remains at the bottom.
 
@@ -119,10 +121,12 @@ Avatar views currently draw placeholders; fetching and displaying user images
 is a later slice. Classic v3 changes presentation only: all three appearances
 continue using the existing v4-compatible client over HTTPS and TLS.
 
-New messages illuminate the whole inactive conversation tab in orange. The
-Classic themes follow the original shared750ms on/off cadence and gradients;
-Modern uses the same cadence on its entire native glass button. Selecting
-the conversation clears the cue. Reduce Motion keeps a steady orange highlight.
+New messages illuminate the inactive conversation tab in orange. Classic
+retains the original gradients and shared750ms on/off cadence. On supported
+iOS, Modern moves amber color beneath a stable native glass button on that
+cadence, keeping the glass, label and touch target fixed. Selecting the
+conversation clears the cue. Reduce Motion holds the amber field steady;
+Reduce Transparency uses a solid orange control.
 An open service page or Appearance screen leaves the retained conversation
 eligible for unread messages; the Write editor keeps its conversation selected,
 matching the original applet's read behavior.
@@ -380,6 +384,18 @@ leave and logout against the retained plain HTTP compatibility peer. The run
 exited successfully and restored the generated project and simulator appearance.
 See [secure transport evidence](../../docs/mobile-secure-transports.md#acceptance-and-follow-up).
 
+Modern Login's simplified layout and native menu preferences passed the light
+presentation workflow in `data/mobile-ui/runs/run-184ilzml`, including private/
+room messaging, sheet detents, browse-state retention, Reduce Transparency and
+Increase Contrast. After the ellipsis correction and amber-strength adjustment,
+`run-fbkbwsce` passed dark-mode unread acceptance over HTTPS and TLS, including
+stable tab dimensions, tapping during animation, theme retention, clearing and
+real system Reduce Motion. Sequential native captures show changing amber
+intensity beneath readable glass controls. The final mobile suite passed191
+tests with four optional Java skips, and iOS production export passed. The
+final amber-strength adjustment has native capture evidence in dark mode;
+the light presentation run preceded that adjustment.
+
 The following results are the **previous plain-transport baseline**, before
 the secure-only migration: iOS prebuild, native build and Metro/Hermes export
 passed, and XCTest on an iPhone18 Pro simulator running iOS27.2 verified
@@ -389,7 +405,7 @@ live conversation and draft across theme changes. Native control acceptance
 passes in light mode and dark mode with accessibility-large Dynamic Type,
 including retained browse state, native menus/alerts/sheet detents, private and
 room replies, whole-tab unread cues, Reduce Transparency and Increase Contrast.
-The large-text pass verifies the login disclosure, refresh buttons, disabled
+The large-text pass verifies the then-current login disclosure, refresh buttons, disabled
 Send, the newest reply above the composer, and reading-history position during
 incoming messages. Dark-mode expanded-feature acceptance also passes Modern
 HTTP and Classic v3 TCP moderation, groups, personal blocks and photos.
