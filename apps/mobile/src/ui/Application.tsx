@@ -29,7 +29,7 @@ import { choosePhoto, type SelectedPhoto } from './nativePhoto';
 import { useRosterActions } from './useRosterActions';
 import { insertComposerText, type EditorSelection } from './composer';
 import type { SlashCommandContext } from './slashCommands';
-import { V4CommandBar, V4Dialog, V4Header, V4Icon, V4Menu, V4Tabs, type V4MenuItem, type V4Tab } from './v4/primitives';
+import { V4Button, V4CommandBar, V4Dialog, V4Header, V4Icon, V4Menu, V4Tabs, type V4MenuItem, type V4Tab } from './v4/primitives';
 
 type Screen = 'welcome' | 'login' | 'connection' | 'manual' | 'friends' | 'rooms' | 'participants' | 'conversation' | 'write' | 'appearance' | 'picker' | 'invite' | 'page';
 interface Menu { title: string; items: V4MenuItem[]; }
@@ -521,6 +521,27 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
     ] };
   }
   function openAppearance() { asyncNavigation.current++; session.setConversationVisible(false); Keyboard.dismiss(); appearanceReturn.current = screen; setScreen('appearance'); }
+  function openLoginConnection() {
+    if (busy) return;
+    Keyboard.dismiss(); setManual(connectionToForm(connection)); setScreen('connection');
+  }
+  function loginMenuModel(): Menu {
+    const setPreference = (id: 'auto' | 'invisible', value: boolean) => {
+      if (busy) return;
+      changeForm({ [id]: value, ...(id === 'auto' && value ? { remember: true } : {}) });
+    };
+    const preference = (id: 'auto' | 'invisible', label: string): V4MenuItem => ({
+      id, label: nativePresentation ? label : `${label}: ${form[id] ? 'On' : 'Off'}`,
+      checked: form[id], icon: form[id] ? 'check' : undefined, testID: `login.${id}`, disabled: busy,
+      onCheckedChange: (value) => setPreference(id, value),
+      onPress: () => setPreference(id, !currentForm.current[id]),
+    });
+    return { title: 'Sign-in options', items: [
+      preference('auto', 'Auto Login'), preference('invisible', 'Login As Invisible'),
+      { id: 'connection', label: 'Connection Settings', separator: true, testID: 'login.connection', disabled: busy, onPress: openLoginConnection },
+      { id: 'appearance', label: 'Appearance', testID: 'appearance.open', disabled: busy, onPress: () => { if (!busy) openAppearance(); } },
+    ] };
+  }
   const appearanceItem: V4MenuItem = { id: 'appearance', label: 'Appearance', onPress: openAppearance, testID: 'appearance.open' };
   const roomsItem: V4MenuItem = { id: 'rooms', label: modern ? 'Rooms' : 'Chat Rooms', onPress: openRooms, testID: 'menu.rooms', icon: 'chat' };
   function activeChats() { setMenu(activeChatsMenu()); }
@@ -873,6 +894,7 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
     onClose: () => { if (!session.sending) { setPhoto(null); setViewPhoto(null); } },
   } : menu ? { key: 'menu', title: menu.title, menu: menu.items, onClose: () => setMenu(null) } : roster.nativePrompt;
   const nativeNavigationMenu = nativePresentation && session.online ? navigationMenuModel() : null;
+  const loginMenu = modern && screen === 'login' ? loginMenuModel() : null;
   const composerContext = activeContext();
   const nativeComposerMenu = nativePresentation && composerContext ? composerMenuModel(composerContext) : null;
   function optionsAnchor(model: Menu, testID: string, label: string, disabled = false) {
@@ -902,8 +924,13 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
         {screen === 'welcome' && <WelcomeScreen onLogin={() => setScreen('login')} />}
         {screen === 'login' && <LoginScreen form={form} onChange={changeForm} busy={busy}
           onAppearance={openAppearance}
+          menuControl={loginMenu ? nativePresentation ? <NativeMenuAnchor items={loginMenu.items}
+            title={loginMenu.title} testID="login.menu" accessibilityLabel="Sign-in options"
+            systemImage="ellipsis" variant="glass" disabled={busy} />
+            : <V4Button label="⋯" accessibilityLabel="Sign-in options" testID="login.menu" variant="secondary"
+              disabled={busy} onPress={() => { Keyboard.dismiss(); setMenu(loginMenu); }} /> : undefined}
           showOffline={!hideOffline} onShowOfflineChange={(show) => setHideOffline(!show)}
-          onLogin={() => { void connect(); }} onConnection={() => { setManual(connectionToForm(connection)); setScreen('connection'); }} />}
+          onLogin={() => { void connect(); }} onConnection={openLoginConnection} />}
         {screen === 'connection' && <ConnectionChooser busy={!!testing}
           onChoose={(mode) => { void testConnection(connection.mode === mode ? connection : defaults[mode]); }}
           onManual={() => setScreen('manual')} />}

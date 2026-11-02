@@ -1,9 +1,9 @@
-import React, { useMemo, useRef, useState } from 'react';
-import { LayoutAnimation, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import React, { useMemo, useRef, type ReactNode } from 'react';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useAppearance } from '../appearance';
 import { ModernLogo } from '../ModernLogo';
 import type { ConnectionForm } from '../connectionSettings';
-import { V4Button, V4Checkbox, V4ChoiceGroup, V4Field, V4Icon, V4Link, V4Logo, type V4FieldRef } from '../v4/primitives';
+import { V4Button, V4Checkbox, V4ChoiceGroup, V4Field, V4Link, V4Logo, type V4FieldRef } from '../v4/primitives';
 
 export interface LoginForm {
   username: string;
@@ -42,21 +42,15 @@ export function WelcomeScreen({ onLogin }: { onLogin: () => void }) {
 }
 
 /** Form15: original en-US labels and row order; unsupported flows stay disabled. */
-export function LoginScreen({ form, onChange, busy, onLogin, onConnection, onAppearance, showOffline, onShowOfflineChange }: {
+export function LoginScreen({ form, onChange, busy, onLogin, onConnection, onAppearance, showOffline, onShowOfflineChange, menuControl }: {
   form: LoginForm; onChange: (change: Partial<LoginForm>) => void;
   busy: boolean; onLogin: () => void; onConnection: () => void; onAppearance: () => void;
   showOffline: boolean; onShowOfflineChange: (show: boolean) => void;
+  menuControl?: ReactNode;
 }) {
-  const { modern, v3, reduceMotion } = useAppearance();
+  const { modern, v3 } = useAppearance();
   const styles = useStyles();
   const passwordField = useRef<V4FieldRef>(null);
-  const [optionsExpanded, setOptionsExpanded] = useState(false);
-  const optionsSummary = `Auto Login ${form.auto ? 'on' : 'off'} · Invisible sign-in ${form.invisible ? 'on' : 'off'}`;
-  function toggleOptions() {
-    if (busy) return;
-    if (!reduceMotion) LayoutAnimation.configureNext({ duration: 180, update: { type: LayoutAnimation.Types.easeInEaseOut } });
-    setOptionsExpanded((expanded) => !expanded);
-  }
   const credentials = <>
     <V4Field testID="login.username" label="Username" value={form.username}
       onChangeText={(username) => onChange({ username })} autoCapitalize="none" autoCorrect={false}
@@ -103,33 +97,17 @@ export function LoginScreen({ form, onChange, busy, onLogin, onConnection, onApp
   if (modern) return <ScrollView testID="login.screen" contentContainerStyle={[styles.form, styles.login]}
     keyboardShouldPersistTaps="handled" keyboardDismissMode="on-drag">
     <View style={styles.intro}>
-      <View style={styles.brand}><ModernLogo /></View>
-      <Text accessibilityRole="header" style={styles.title}>Sign in</Text>
+      <View style={styles.brandRow}>
+        <View style={styles.brand}><ModernLogo width={176} /></View>
+        {menuControl}
+      </View>
+      <Text accessibilityRole="header" style={styles.loginTitle}>Sign in</Text>
       <Text style={styles.subtitle}>Friends and conversations, together.</Text>
     </View>
     <View style={styles.credentials}>{credentials}</View>
-    <View style={styles.preferences}>
-      <Text style={styles.sectionLabel}>Sign-in preferences</Text>
-      {rememberPreference}
-      <Pressable testID="login.options" accessibilityRole="button" accessibilityLabel="More sign-in options"
-        accessibilityState={{ expanded: optionsExpanded, disabled: busy }}
-        accessibilityValue={{ text: `${optionsExpanded ? '' : 'Collapsed. '}${optionsSummary}` }}
-        disabled={busy} onPress={toggleOptions}
-        style={({ pressed }) => [styles.optionsDisclosure, pressed && styles.optionsPressed]}>
-        <View style={styles.optionsIdentity}>
-          <Text style={styles.optionsTitle}>More sign-in options</Text>
-          {!optionsExpanded && <Text testID="login.options.summary" style={styles.optionsSummary}>{optionsSummary}</Text>}
-        </View>
-        <V4Icon name={optionsExpanded ? 'arrowDown' : 'arrowRight'} size={13} />
-      </Pressable>
-      {optionsExpanded && <View style={styles.optionalPreferences}>{optionalPreferences}</View>}
-    </View>
+    <View style={styles.preferences}>{rememberPreference}</View>
     <View style={styles.actions}>
       <V4Button testID="login.submit" label="Login" onPress={onLogin} busy={busy} style={styles.primaryButton} />
-      <View style={styles.utilities}>
-        <V4Link testID="login.connection" label="Connection Settings" onPress={onConnection} disabled={busy} />
-        <V4Link testID="appearance.open" label="Appearance" onPress={onAppearance} disabled={busy} />
-      </View>
     </View>
   </ScrollView>;
   return <ScrollView testID="login.screen" contentContainerStyle={styles.form} keyboardShouldPersistTaps="handled">
@@ -206,23 +184,14 @@ function useStyles() {
     watermark: { ...StyleSheet.absoluteFill, alignItems: 'center', justifyContent: 'center' },
     login: { paddingTop: 16 },
     intro: { marginBottom: 25 },
-    brand: { alignSelf: 'flex-start', marginLeft: -17, marginBottom: 17 },
+    brandRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 },
+    brand: { marginLeft: -17 },
+    loginTitle: { color: theme.text, fontSize: 24, lineHeight: 31, fontWeight: '600', letterSpacing: -.4, marginBottom: 8 },
     title: { color: theme.text, fontSize: 36, lineHeight: 43, fontWeight: '700', letterSpacing: -1.1, marginBottom: 8 },
     subtitle: { color: theme.secondaryText, fontSize: 16, lineHeight: 25 },
     credentials: { marginBottom: 2 },
-    preferences: { paddingVertical: 12, marginBottom: 13,
-      borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: theme.groupBorder },
-    sectionLabel: { color: theme.secondaryText, fontSize: 13, lineHeight: 19, fontWeight: '500', marginBottom: 7 },
-    optionsDisclosure: { minHeight: 44, flexDirection: 'row', alignItems: 'center', gap: 12,
-      paddingVertical: 10, borderRadius: 12 },
-    optionsPressed: { backgroundColor: theme.selected },
-    optionsIdentity: { flex: 1, minWidth: 0 },
-    optionsTitle: { color: theme.text, fontSize: metrics.font, lineHeight: metrics.lineHeight },
-    optionsSummary: { color: theme.secondaryText, fontSize: 13, lineHeight: 19, marginTop: 3 },
-    optionalPreferences: { paddingTop: 4 },
+    preferences: { paddingVertical: 8, marginBottom: 16 },
     actions: { marginTop: 'auto', paddingTop: 6 },
-    utilities: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between',
-      columnGap: 20, rowGap: 2, paddingTop: 9 },
     primaryButton: { alignSelf: 'stretch' },
     connectionAction: { alignSelf: 'stretch', marginTop: 12 },
     welcome: { paddingBottom: 32 }, welcomeIntro: { flex: 1, justifyContent: 'center', paddingVertical: 36 },

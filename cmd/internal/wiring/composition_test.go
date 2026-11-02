@@ -101,6 +101,17 @@ func launch(t *testing.T, components ...bootstrap.Component) func() {
 	return stop
 }
 
+func closeResponse(t *testing.T, response *http.Response) {
+	t.Helper()
+	// Error/status-only assertions must still consume the complete response so
+	// the fixture's transport can reuse its connection instead of racing a new
+	// dial against the previous response's asynchronous close.
+	_, readErr := io.Copy(io.Discard, response.Body)
+	if err := errors.Join(readErr, response.Body.Close()); err != nil {
+		t.Fatal(err)
+	}
+}
+
 func TestExplicitTransportSelectionsAndSharedAuthentication(t *testing.T) {
 	for _, selection := range []struct {
 		name         string
@@ -159,6 +170,9 @@ func TestExplicitTransportSelectionsAndSharedAuthentication(t *testing.T) {
 				})
 			}
 			stop := launch(t, components...)
+			transport := &http.Transport{}
+			t.Cleanup(transport.CloseIdleConnections)
+			client := &http.Client{Transport: transport, Timeout: time.Second}
 			var addresses []net.Addr
 			for range len(components) - 1 {
 				select {
@@ -169,11 +183,11 @@ func TestExplicitTransportSelectionsAndSharedAuthentication(t *testing.T) {
 				}
 			}
 			if selection.http {
-				response, err := (&http.Client{Timeout: time.Second}).Get("http://" + httpServer.Addr().String() + "/healthz")
+				response, err := client.Get("http://" + httpServer.Addr().String() + "/healthz")
 				if err != nil {
 					t.Fatal(err)
 				}
-				response.Body.Close()
+				closeResponse(t, response)
 				if response.StatusCode != 200 {
 					t.Fatal(response.StatusCode)
 				}
@@ -211,17 +225,18 @@ func TestExplicitTransportSelectionsAndSharedAuthentication(t *testing.T) {
 					}
 					request, _ := http.NewRequestWithContext(t.Context(), "GET", "http://"+httpServer.Addr().String()+"/api/chat/session", nil)
 					request.Header.Set("sid", sid)
-					response, err := (&http.Client{Timeout: time.Second}).Do(request)
+					response, err := client.Do(request)
 					if err != nil {
 						t.Fatal(err)
 					}
 					body, err := io.ReadAll(response.Body)
-					response.Body.Close()
+					closeResponse(t, response)
 					if err != nil || response.StatusCode != 200 || !bytes.Contains(body, []byte(`"username":"alice"`)) {
 						t.Fatalf("shared authentication: %d %s %v", response.StatusCode, body, err)
 					}
 				}
 			}
+			transport.CloseIdleConnections()
 			stop()
 			if len(ready) != 0 {
 				t.Fatal("unselected listener opened")

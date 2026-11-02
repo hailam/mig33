@@ -2,7 +2,7 @@ import React, { type ComponentProps } from 'react';
 import { StyleSheet, View, useWindowDimensions } from 'react-native';
 import {
   Alert, BottomSheet, Button, Divider, Group, Host, HStack, Label, Menu, Rectangle,
-  RNHostView, Section, Spacer, Text, VStack,
+  RNHostView, Section, Spacer, Text, Toggle, VStack,
 } from '@expo/ui/swift-ui';
 import {
   accessibilityHidden, accessibilityLabel, buttonBorderShape, buttonStyle, controlSize, disabled, font, labelStyle,
@@ -29,7 +29,9 @@ function menuEntries(items: readonly V4MenuItem[]): React.ReactNode {
     {item.children?.length ? <Menu label={item.label} systemImage={item.icon ? menuSymbols[item.icon] : undefined}
       testID={item.testID} modifiers={[disabled(Boolean(item.disabled))]}>
       {menuEntries(item.children)}
-    </Menu> : <Button label={item.label} testID={item.testID}
+    </Menu> : item.checked !== undefined ? <Toggle label={item.label} testID={item.testID} isOn={item.checked}
+      onIsOnChange={(next) => { if (!item.disabled) item.onCheckedChange?.(next); }}
+      modifiers={[disabled(Boolean(item.disabled || !item.onCheckedChange))]} /> : <Button label={item.label} testID={item.testID}
       systemImage={item.icon ? menuSymbols[item.icon] : undefined}
       role={item.destructive ? 'destructive' : 'default'} onPress={item.onPress}
       modifiers={[disabled(Boolean(item.disabled || !item.onPress))]} />}

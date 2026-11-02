@@ -38,6 +38,10 @@ final class Mig33SmokeTests: XCTestCase {
     }
 
     private func wait(_ id: String, timeout: TimeInterval = 20) -> XCUIElement {
+        if ["login.auto", "login.invisible", "login.connection", "appearance.open"].contains(id),
+           element("login.menu").exists, !menuControl(id).exists {
+            tap("login.menu")
+        }
         var result = menuControl(id)
         if !result.exists && nativeMenuLabels[id] != nil {
             revealNativeMenuAction(id)
@@ -79,6 +83,8 @@ final class Mig33SmokeTests: XCTestCase {
             "room.join": ["Join Room", "Open Room"],
             "rooms.create": ["Create Room"], "rooms.search": ["Search Rooms"],
             "menu.rooms": ["Rooms"], "menu.exit": ["Log out"], "appearance.open": ["Appearance"],
+            "login.connection": ["Connection Settings"], "login.auto": ["Auto Login"],
+            "login.invisible": ["Login As Invisible"],
             "composer.open.emoticons": ["Insert Emoticon"], "composer.open.colors": ["Change Text Color"],
     ]
 
@@ -302,14 +308,38 @@ final class Mig33SmokeTests: XCTestCase {
 
     private func toggleLoginPreference(_ id: String) {
         guard element("theme.modern").exists else { tap(id); return }
-        if ["login.auto", "login.invisible"].contains(id) { setExpanded("login.options", true) }
+        if ["login.auto", "login.invisible"].contains(id) {
+            let control = wait(id)
+            let previous = menuPreferenceState(control)
+            tap(id)
+            _ = wait(id) // Native menus may dismiss after changing a Toggle.
+            let changed = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+                self.menuPreferenceState(self.menuControl(id)) != previous
+            }, object: nil)
+            XCTAssertEqual(XCTWaiter.wait(for: [changed], timeout: 5), .completed, "Native menu preference did not toggle: \(id)")
+            // Close through a real nonmutating destination, then return.
+            tap("appearance.open"); tap("appearance.back")
+            return
+        }
         let control = app.switches[id].firstMatch
         XCTAssertTrue(control.exists || control.waitForExistence(timeout: 5), "Modern preference is not a native switch: \(id)")
         let previous = control.value as? String
         XCTAssertTrue(previous == "0" || previous == "1", "Native preference has no authoritative switch state: \(id)")
-        tap(id)
+        // SwiftUI exposes a full-width labelled Switch containing the actual
+        // UISwitch. Tap its control, not the noninteractive label's center.
+        let toggle = control.switches.firstMatch.exists ? control.switches.firstMatch : control
+        reveal(toggle)
+        waitUntilHittable(toggle, description: id)
+        toggle.tap()
         let changed = XCTNSPredicateExpectation(predicate: NSPredicate(format: "value == %@", previous == "1" ? "0" : "1"), object: control)
         XCTAssertEqual(XCTWaiter.wait(for: [changed], timeout: 5), .completed, "Native preference did not toggle: \(id)")
+    }
+
+    private func menuPreferenceState(_ control: XCUIElement) -> Bool {
+        // UIKit may project a SwiftUI Menu Toggle as a selected action or a
+        // switch value. Both are native state, never a glyph in the title.
+        let value = (control.value as? String ?? "").lowercased()
+        return control.isSelected || value == "1" || value == "on"
     }
 
     private func chooseTheme(_ theme: String, fromMenu: Bool = false) {
@@ -881,16 +911,43 @@ final class Mig33SmokeTests: XCTestCase {
             if theme != "modern" { chooseTheme(theme, fromMenu: true) }
             revealTab("tab.peer:bob")
             XCTAssertTrue(tab.label.contains("unread messages"), "Theme switch cleared an unread conversation")
+            let initialFrame = tab.frame
             for phase in steady ? ["steady"] : ["on", "off"] {
                 let plate = wait("tab.unread-\(phase).peer:bob", timeout: 10)
                 XCTAssertGreaterThan(plate.frame.width, 20)
                 XCTAssertGreaterThan(plate.frame.height, 20)
                 capture("\(mode)-\(theme)-unread-\(phase)")
+                if theme == "modern" {
+                    XCTAssertEqual(tab.frame.width, initialFrame.width, accuracy: 1, "Unread material changed the native tab width")
+                    XCTAssertEqual(tab.frame.height, initialFrame.height, accuracy: 1, "Unread material changed the native tab height")
+                }
             }
             if steady {
                 let flashing = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == true"), object: element("tab.unread-off.peer:bob"))
                 flashing.isInverted = true
                 XCTAssertEqual(XCTWaiter.wait(for: [flashing], timeout: 1.7), .completed, "Reduce Motion did not hold the complete unread plate steady")
+            }
+            if theme == "modern" {
+                if mode == "https", !steady {
+                    // Sample the actual native interpolation, not just the
+                    // JS phase markers, for visual review of the amber field.
+                    for sample in 0..<6 {
+                        capture("modern-unread-motion-\(sample)")
+                        Thread.sleep(forTimeInterval: 0.15)
+                    }
+                }
+                // Press the real native control while its internal field is
+                // animating, then rearm unread for the Classic retention checks.
+                _ = wait("tab.unread-\(steady ? "steady" : "on").peer:bob", timeout: 10)
+                tap("tab.peer:bob")
+                _ = wait("chat.screen")
+                assertRoomText(body)
+                XCTAssertFalse(tab.label.contains("unread messages"), "Native glass tab did not open and clear unread")
+                capture("\(mode)-modern-unread-touch-cleared")
+                tap("tab.friends")
+                _ = try peer(["action": "private-send", "body": body + " after native tap"])
+                let rearmed = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label CONTAINS %@", "unread messages"), object: tab)
+                XCTAssertEqual(XCTWaiter.wait(for: [rearmed], timeout: 15), .completed)
             }
         }
         tap("tab.peer:bob")
@@ -931,14 +988,23 @@ final class Mig33SmokeTests: XCTestCase {
         let logo = app.images["mig33"].firstMatch
         XCTAssertTrue(logo.exists || logo.waitForExistence(timeout: 10), "Missing original mig33 mark on Modern Login")
         XCTAssertTrue(app.switches["login.remember"].firstMatch.exists, "Remember Login is not a native switch")
-        assertExpanded("login.options", false)
-        XCTAssertFalse(app.switches["login.auto"].firstMatch.exists, "Collapsed sign-in options still expose Auto Login")
-        XCTAssertFalse(app.switches["login.invisible"].firstMatch.exists, "Collapsed sign-in options still expose Invisible")
-        setExpanded("login.options", true)
-        for id in ["login.auto", "login.invisible"] {
-            XCTAssertTrue(app.switches[id].firstMatch.exists, "Modern preference is not a native switch: \(id)")
+        XCTAssertFalse(element("login.options").exists, "Redundant preference disclosure remains")
+        for id in ["login.auto", "login.invisible", "login.connection", "appearance.open"] {
+            XCTAssertFalse(element(id).exists, "Secondary option is visible outside the sign-in menu: \(id)")
         }
-        setExpanded("login.options", false)
+        let options = wait("login.menu")
+        XCTAssertGreaterThanOrEqual(options.frame.width, 44)
+        XCTAssertGreaterThanOrEqual(options.frame.height, 44)
+        capture("modern-login-uncluttered")
+        tap("login.menu")
+        for id in ["login.auto", "login.invisible", "login.connection", "appearance.open"] { _ = wait(id) }
+        capture("modern-sign-in-menu")
+        captureTree("modern-sign-in-menu-state")
+        toggleLoginPreference("login.auto")
+        XCTAssertEqual(app.switches["login.remember"].firstMatch.value as? String, "1", "Auto Login did not enable Remember Login")
+        toggleLoginPreference("login.auto")
+        toggleLoginPreference("login.remember")
+        for _ in 0..<2 { toggleLoginPreference("login.invisible") }
         capture("modern-authentic-login")
         fill("login.username", "alice")
         fill("login.password", "alice-demo", secure: true)

@@ -115,7 +115,7 @@ func TestFourTransportsShareOriginalSessionsAndGateway(t *testing.T) {
 		if err != nil {
 			t.Fatal(err)
 		}
-		response.Body.Close()
+		closeResponse(t, response)
 		if response.StatusCode != http.StatusOK {
 			t.Fatalf("health on %s: %d", origin, response.StatusCode)
 		}
@@ -128,7 +128,7 @@ func TestFourTransportsShareOriginalSessionsAndGateway(t *testing.T) {
 			t.Fatal(err)
 		}
 		packet, decodeErr := protocol.Decode(response.Body)
-		response.Body.Close()
+		closeResponse(t, response)
 		if response.StatusCode != 200 || decodeErr != nil || packet.Opcode != 3 || packet.Transaction != 17 || response.Header.Get("Content-Type") != "image/gif" {
 			t.Fatalf("original gateway ping: %d %v %v", response.StatusCode, packet, decodeErr)
 		}
@@ -172,7 +172,7 @@ func TestFourTransportsShareOriginalSessionsAndGateway(t *testing.T) {
 				t.Fatal(err)
 			}
 			body, err := io.ReadAll(response.Body)
-			response.Body.Close()
+			closeResponse(t, response)
 			if err != nil || response.StatusCode != 200 {
 				t.Fatalf("shared original SID: %d %s %v", response.StatusCode, body, err)
 			}
@@ -184,7 +184,7 @@ func TestFourTransportsShareOriginalSessionsAndGateway(t *testing.T) {
 			t.Fatal(err)
 		}
 		body, err := io.ReadAll(response.Body)
-		response.Body.Close()
+		closeResponse(t, response)
 		if err != nil || response.StatusCode != 200 || !bytes.Contains(body, []byte(`"username":"`+username+`"`)) {
 			t.Fatalf("same graph: %d %s %v", response.StatusCode, body, err)
 		}
@@ -197,7 +197,7 @@ func TestFourTransportsShareOriginalSessionsAndGateway(t *testing.T) {
 		if err != nil {
 			t.Fatal(err)
 		}
-		response.Body.Close()
+		closeResponse(t, response)
 		if response.StatusCode != http.StatusNotFound || response.Header.Get("Location") != "" {
 			t.Errorf("HTTPS route %s exposed: %d", path, response.StatusCode)
 		}
@@ -214,12 +214,17 @@ func TestFourTransportsShareOriginalSessionsAndGateway(t *testing.T) {
 			if err != nil {
 				t.Fatal(err)
 			}
-			response.Body.Close()
+			closeResponse(t, response)
 			if response.StatusCode != tc.status {
 				t.Errorf("%s %s on %s: %d want %d", tc.method, tc.path, origin, response.StatusCode, tc.status)
 			}
 		}
 	}
+	// A late Transport dial can enter its idle pool without sending a request
+	// when another connection wins reuse. Close the client before stopping the
+	// listeners: net/http intentionally gives such StateNew connections 5s,
+	// which exceeds this fixture's 1s shutdown budget.
+	transport.CloseIdleConnections()
 	stop()
 	for _, address := range []net.Addr{plainHTTP.Addr(), https.Addr(), plainSocket.Addr(), tlsSocket.Addr()} {
 		connection, err := net.DialTimeout("tcp", address.String(), time.Second)
