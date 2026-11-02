@@ -25,12 +25,13 @@ function color(value: number | undefined, fallback: string): string {
 type EmoticonAssets = Readonly<Record<string, EmoticonAsset>>;
 export interface ComposerSelection { start: number; end: number; }
 export function ConversationScreen({ conversation, contacts, onWrite, sending, onChange, onSend, onTools, toolsControl, title,
-  onMediaOpen, emoticonAssets = {}, onLoadMedia, selection, onSelectionChange, commandContext, onApplyDraft }: {
+  onMediaOpen, emoticonAssets = {}, onLoadMedia, selection, onSelectionChange, commandContext, onApplyDraft, selectedTextColor }: {
   conversation: Conversation; contacts: readonly Contact[]; onWrite: () => void;
   sending: boolean; onChange: (text: string) => void; onSend: () => void;
   onTools?: () => void;
   toolsControl?: ReactNode;
   title?: string;
+  selectedTextColor?: number;
   onMediaOpen?: (row: TranscriptRow) => void;
   emoticonAssets?: EmoticonAssets;
   onLoadMedia?: (token: string) => void;
@@ -174,7 +175,8 @@ export function ConversationScreen({ conversation, contacts, onWrite, sending, o
         <GlassSurface style={styles.composerFieldSurface}><V4Field ref={slash.input} testID="chat.message" accessibilityLabel="Message" placeholder="Message" value={conversation.draft}
           onChangeText={slash.onChangeText} onFocus={slash.onFocus} onBlur={slash.onBlur} multiline maxLength={320} textAlignVertical="top"
           selection={selection} onSelectionChange={(event) => slash.onSelectionChange(event.nativeEvent.selection)}
-          variant="composer" containerStyle={styles.composerField} style={styles.composerInput} /></GlassSurface>
+          variant="composer" containerStyle={styles.composerField}
+          style={[styles.composerInput, { color: readableMessageColor(selectedTextColor, theme.text, theme.dialogBody) }]} /></GlassSurface>
         {supportsModernControls ? <ModernButton label="Send" testID="chat.send" systemImage="arrow.up" iconOnly variant="primary"
           onPress={onSend} busy={sending} disabled={!conversation.draft.trim()} style={styles.nativeSend} />
           : <MotionPressable testID="chat.send" accessibilityRole="button" accessibilityLabel="Send"

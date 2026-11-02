@@ -12,6 +12,12 @@ export interface NativeMenuAnchorProps {
   disabled?: boolean;
 }
 
+/** Native menu content can be reused inside an existing SwiftUI Host. */
+export interface NativeMenuItemsProps {
+  items: readonly V4MenuItem[];
+  title?: string;
+}
+
 export interface NativeSheetProps {
   isPresented: boolean;
   onIsPresentedChange: (presented: boolean) => void;
@@ -46,6 +52,7 @@ export interface NativeAlertProps {
 // Metro selects NativePresentation.ios.tsx on iOS. Keeping this module free of
 // SwiftUI imports lets other platforms use the existing application fallback.
 export const supportsNativePresentation: boolean = false;
+export function NativeMenuItems(_props: NativeMenuItemsProps) { return null; }
 export function NativeMenuAnchor(_props: NativeMenuAnchorProps) { return null; }
 export function NativeSheet(_props: NativeSheetProps) { return null; }
 export function NativeAlert(_props: NativeAlertProps) { return null; }

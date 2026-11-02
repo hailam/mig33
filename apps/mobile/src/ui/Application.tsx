@@ -8,28 +8,34 @@ import { RetiredLoginError } from './loginStorage';
 import { loginStorage } from './nativeLoginStorage';
 import { loadAppearance, saveAppearance, loadHomeTabOrder, saveHomeTabOrder } from './nativeAppearanceStorage';
 import { AppearanceProvider, useAppearance, type AppearanceMode } from './appearance';
-import { MotionEntrance } from './motion';
+import { ModernMotionProvider, type ModernMotionPhase } from './ModernMotion';
+import { ModernLaunch, releaseNativeLaunch } from './ModernLaunch';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { ModernBackdrop } from './ModernBackdrop';
 import { LoginArrival } from './LoginArrival';
-import { modernChatItems } from './modernMenus';
+import { modernChatItems, modernListItems } from './modernMenus';
 import { NativeMenuAnchor, supportsNativePresentation } from './NativePresentation';
 import { NativeOverlayLayer, type OverlayAlert, type OverlaySheet } from './NativeOverlayLayer';
 import { AppearanceScreen } from './screens/AppearanceScreen';
 import { ConnectionChooser, LoginScreen, ManualConnectionScreen, WelcomeScreen, type ConnectionForm, type LoginForm } from './screens/AuthScreens';
 import { FriendsScreen } from './screens/FriendsScreen';
 import { RoomsScreen, RoomParticipantsScreen } from './screens/RoomsScreens';
+import { InlineSearchField, InlineSearchResults } from './screens/InlineSearch';
+import { useOriginalSearch } from './search/useOriginalSearch';
+import type { OriginalSearchResult } from '../mig33/original-search';
 import { ConversationScreen, peerDisplay, WriteScreen } from './screens/ConversationScreen';
 import { ChatActionSheet, EmoticonPicker, InviteChatScreen, ParticipantPickerScreen, TextColorPicker, type ChatParticipant } from './screens/ChatActionsScreens';
 import { useLegacyPages } from './pages/useLegacyPages';
 import { LegacyPageScreen } from './pages/LegacyPageScreen';
-import type { NativePageAction } from '../mig33/legacy-pages';
-import type { TranscriptRow } from './session/model';
+import { canPullRefreshLegacyPage } from './pages/pageActions';
+import { parseNativeAction, type NativePageAction } from '../mig33/legacy-pages';
+import { modernGroupTitle, type TranscriptRow } from './session/model';
 import { chatActions, chatActionPage, legacySelector, type ChatAction, type ChatContext } from './chatActions';
 import { choosePhoto, type SelectedPhoto } from './nativePhoto';
 import { useRosterActions } from './useRosterActions';
 import { insertComposerText, type EditorSelection } from './composer';
 import type { SlashCommandContext } from './slashCommands';
-import { V4Button, V4CommandBar, V4Dialog, V4Header, V4Icon, V4Menu, V4Tabs, type V4MenuItem, type V4Tab } from './v4/primitives';
+import { V4Button, V4CommandBar, V4Dialog, V4Field, V4Header, V4Icon, V4Menu, V4Tabs, type V4MenuItem, type V4Tab } from './v4/primitives';
 
 type Screen = 'welcome' | 'login' | 'connection' | 'manual' | 'friends' | 'rooms' | 'participants' | 'conversation' | 'write' | 'appearance' | 'picker' | 'invite' | 'page';
 interface Menu { title: string; items: V4MenuItem[]; }
@@ -46,9 +52,7 @@ export default function Application() {
       .catch(() => { if (!cancelled) { setMode('modern'); setAppearanceError('Appearance could not be loaded. Modern is selected.'); } });
     return () => { cancelled = true; };
   }, []);
-  if (mode === null) return <SafeAreaView style={{ flex: 1, justifyContent: 'center', backgroundColor: systemDark ? '#0b151c' : '#f5f9fa' }}>
-    <ActivityIndicator accessibilityLabel="Loading appearance" />
-  </SafeAreaView>;
+  if (mode === null) return <ModernLaunch dark={systemDark} />;
   return <AppearanceProvider mode={mode} onChange={(next) => {
     setMode(next);
     void saveAppearance(next).catch(() => setAppearanceError('Appearance changed, but could not be saved. Please select it again.'));
@@ -58,22 +62,30 @@ export default function Application() {
 }
 
 function ApplicationContent({ appearanceError, clearAppearanceError }: { appearanceError: string; clearAppearanceError: () => void }) {
-  const { theme: v4, metrics: v4Metrics, modern, v3, mode, dark, setNavigationInset } = useAppearance();
+  const { theme: v4, metrics: v4Metrics, modern, v3, mode, dark, preferencesReady, setNavigationInset } = useAppearance();
+  const insets = useSafeAreaInsets();
+  const ScreenSafeArea = modern ? View : SafeAreaView;
   const nativePresentation = modern && supportsNativePresentation;
   const styles = useMemo(() => StyleSheet.create({
-    safe: { flex: 1, backgroundColor: modern ? 'transparent' : v4.body },
+    safe: { flex: 1, backgroundColor: modern ? 'transparent' : v4.body,
+      ...(modern ? { paddingTop: insets.top, paddingBottom: insets.bottom,
+        paddingLeft: insets.left, paddingRight: insets.right } : {}) },
     window: { flex: 1, backgroundColor: modern ? 'transparent' : v4.body, borderWidth: modern ? 0 : 2, borderColor: v4.border },
-    navigation: { position: 'absolute', top: 0, left: 0, right: 0, zIndex: 10 },
+    navigation: { position: 'absolute', top: 0, left: 0, right: 0, zIndex: 10,
+      minHeight: nativePresentation ? 68 : undefined },
     body: { flex: 1 }, progress: { flexDirection: 'row', alignItems: 'center', gap: 6, minHeight: 40,
       paddingHorizontal: modern ? 20 : 6, backgroundColor: v4.groupBottom, borderTopWidth: 1, borderColor: v4.groupBorder },
     progressText: { color: v4.secondaryText, fontSize: v4Metrics.smallFont },
-  }), [v4, v4Metrics, modern]);
+  }), [v4, v4Metrics, modern, insets]);
   const session = useMig33Session();
   const [screen, setScreen] = useState<Screen>('login');
   const [form, setForm] = useState<LoginForm>({ username: '', password: '', remember: false, auto: false, invisible: false });
   const [connection, setConnection] = useState<ConnectionSettings>(defaults.https);
   const [manual, setManual] = useState<ConnectionForm>(connectionToForm(defaults.https));
   const [ready, setReady] = useState(false);
+  const [restoringAutoLogin, setRestoringAutoLogin] = useState(false);
+  const [startupPending, setStartupPending] = useState(true);
+  const [startupLaidOut, setStartupLaidOut] = useState(false);
   const [error, setError] = useState('');
   const [testing, setTesting] = useState('');
   const [menu, setMenu] = useState<Menu | null>(null);
@@ -96,21 +108,53 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
   const [collapsedGroupIds, setCollapsedGroupIds] = useState<ReadonlySet<number>>(new Set());
   const [expandedCategoryIds, setExpandedCategoryIds] = useState<ReadonlySet<number>>(new Set());
   const [roomFilter, setRoomFilter] = useState('');
+  const [peopleQuery, setPeopleQuery] = useState('');
+  const [roomQuery, setRoomQuery] = useState('');
+  const [roomLanguage, setRoomLanguage] = useState('');
+  const [roomKeywords, setRoomKeywords] = useState('');
+  const [roomFiltersVisible, setRoomFiltersVisible] = useState(false);
+  const peopleSearchTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const roomSearchTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const probe = useRef<AbortController | null>(null);
   const appearanceReturn = useRef<Screen>('login');
   const pageReturn = useRef<Screen>('friends');
   const photoTarget = useRef<ChatContext | null>(null);
+  const pendingPhotoPicker = useRef<{ source: 'camera' | 'library'; context: ChatContext | null; ticket: number } | null>(null);
+  const legacyModalPresented = useRef(false);
   const asyncNavigation = useRef(0);
+  const originalJoinPending = useRef(false);
   const submitting = useRef(false);
   const mounted = useRef(true);
   const wasOnline = useRef(false);
   const participantLookup = useRef<string | null>(null);
+  const groupParticipantLookup = useRef<string | null>(null);
   const alertIdentities = useRef(new WeakMap<object, string>());
   const alertSequence = useRef(0);
   const currentForm = useRef(form);
   const currentNavigation = useRef({ screen, peer: session.activePeer, room: session.activeRoom, group: session.activeGroup });
   const pages = useLegacyPages({ requestOriginal: session.requestOriginal, siteURL: session.siteURL,
     online: session.online, onNativeAction: nativePageAction });
+  const peopleSearch = useOriginalSearch({ requestOriginal: session.requestOriginal, siteURL: session.siteURL,
+    online: session.online, kind: 'people' });
+  const roomSearch = useOriginalSearch({ requestOriginal: session.requestOriginal, siteURL: session.siteURL,
+    online: session.online, kind: 'rooms' });
+  const roomSearchActive = !!(roomQuery.trim() || roomLanguage.trim() || roomKeywords.trim());
+  useEffect(() => {
+    if (!session.online) { setPeopleQuery(''); setRoomQuery(''); setRoomLanguage(''); setRoomKeywords(''); }
+  }, [session.online]);
+  useEffect(() => {
+    if (!modern || !session.online || screen !== 'friends' || !peopleQuery.trim()
+      || peopleSearch.query === peopleQuery.trim() && peopleSearch.searched) return;
+    peopleSearchTimer.current = setTimeout(() => { void peopleSearch.search(peopleQuery); }, 350);
+    return () => clearTimeout(peopleSearchTimer.current);
+  }, [modern, session.online, screen, peopleQuery, peopleSearch.search]);
+  useEffect(() => {
+    if (!modern || !session.online || screen !== 'rooms' || !roomSearchActive
+      || roomSearch.query === roomQuery.trim() && roomSearch.language === roomLanguage.trim()
+        && roomSearch.keywords === roomKeywords.trim() && roomSearch.searched) return;
+    roomSearchTimer.current = setTimeout(() => { void roomSearch.search(roomQuery, { language: roomLanguage, keywords: roomKeywords }); }, 350);
+    return () => clearTimeout(roomSearchTimer.current);
+  }, [modern, session.online, screen, roomQuery, roomLanguage, roomKeywords, roomSearch.search]);
   const roster = useRosterActions(session, { openPage, openChat, showMenu: setMenu, confirm: setConfirmation,
     extendMenu: (items, category, context) => extendMenu(items, category, undefined, undefined, context?.groupId) });
   currentForm.current = form;
@@ -128,13 +172,26 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
           auto: saved.auto, invisible: saved.invisible ?? false };
         currentForm.current = loaded;
         setForm(loaded); setConnection(saved.connection); setManual(connectionToForm(saved.connection));
-        if (saved.auto) void connect(loaded, saved.connection);
+        if (saved.auto) {
+          setRestoringAutoLogin(true);
+          void connect(loaded, saved.connection).finally(() => {
+            if (!cancelled) setRestoringAutoLogin(false);
+          });
+        }
       }
     }).catch((cause: unknown) => { if (!cancelled) setError(cause instanceof RetiredLoginError
       ? cause.message : 'Saved login could not be read. Please log in again.'); })
       .finally(() => { if (!cancelled) setReady(true); });
     return () => { cancelled = true; mounted.current = false; probe.current?.abort(); };
   }, []);
+
+  const localReady = ready && preferencesReady;
+  useEffect(() => {
+    // Fast Auto Login can finish before accessibility preferences arrive. In
+    // that order the launch view unmounts without ever seeing ready=true;
+    // the committed signed-in destination must also release the native cover.
+    if (localReady && (!modern || session.online && screen === 'friends')) releaseNativeLaunch();
+  }, [localReady, modern, session.online, screen]);
 
   useEffect(() => {
     if (session.online && !wasOnline.current) {
@@ -143,6 +200,7 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
     if (!session.online && wasOnline.current) {
       asyncNavigation.current++; setScreen('login'); setMenu(null); setConfirmLeave(null); setConfirmation(null);
       setPicker(null); setInvite(null); setComposer(null); setPhoto(null); setViewPhoto(null); photoTarget.current = null;
+      pendingPhotoPicker.current = null;
       editorSelections.current.clear(); setForcedSelection(null);
       setArriving(false);
       setCollapsedGroupIds(new Set()); setExpandedCategoryIds(new Set()); setRoomFilter('');
@@ -159,6 +217,10 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
   }, [arriving, screen]);
 
   useEffect(() => {
+    if (screen !== 'login') setStartupPending(false);
+  }, [screen]);
+
+  useEffect(() => {
     if (!nativePresentation || !session.online || !session.activeRoom) { participantLookup.current = null; return; }
     const room = session.activeRoomConversation;
     if (room && !room.participantsLoaded && !session.roomAction && participantLookup.current !== room.name) {
@@ -168,6 +230,15 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
       void session.loadRoomParticipants(room.name);
     }
   }, [nativePresentation, session.online, session.activeRoom, session.activeRoomConversation?.participantsLoaded, session.roomAction]);
+
+  useEffect(() => {
+    if (!modern || !session.online || !session.activeGroup) { groupParticipantLookup.current = null; return; }
+    const group = session.activeGroupConversation;
+    if (group?.state === 'joined' && !group.participantsLoaded && !session.roomAction && groupParticipantLookup.current !== group.id) {
+      groupParticipantLookup.current = group.id;
+      void session.loadGroupParticipants(group.id);
+    }
+  }, [modern, session.online, session.activeGroup, session.activeGroupConversation?.participantsLoaded, session.roomAction]);
 
   useEffect(() => {
     // An acknowledged leave may finish while Appearance is open. Returning
@@ -240,6 +311,38 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
     else if (id.startsWith('peer:')) { session.openConversation(id.slice(5)); setScreen('conversation'); }
   }
   function openChat(peer: string) { asyncNavigation.current++; session.openConversation(peer); setScreen('conversation'); }
+  function closePrivateChat(peer: string) {
+    const close = () => { session.closeConversation(peer); setScreen('friends'); };
+    if (modern && session.conversations.find((chat) => chat.peer === peer)?.draft.trim()) {
+      setConfirmation({ title: 'Close chat?', message: 'Your unsent message will be discarded.',
+        label: 'Close', testID: 'chat.close.confirm', run: close });
+    } else close();
+  }
+  function changeSearch(kind: 'people' | 'rooms', value: string) {
+    const search = kind === 'people' ? peopleSearch : roomSearch;
+    clearTimeout(kind === 'people' ? peopleSearchTimer.current : roomSearchTimer.current);
+    search.clear();
+    if (kind === 'people') setPeopleQuery(value); else setRoomQuery(value);
+  }
+  function submitSearch(kind: 'people' | 'rooms') {
+    clearTimeout(kind === 'people' ? peopleSearchTimer.current : roomSearchTimer.current);
+    void (kind === 'people' ? peopleSearch.search(peopleQuery)
+      : roomSearch.search(roomQuery, { language: roomLanguage, keywords: roomKeywords }));
+  }
+  function changeRoomFilter(kind: 'language' | 'keywords', value: string) {
+    clearTimeout(roomSearchTimer.current); roomSearch.clear();
+    if (kind === 'language') setRoomLanguage(value); else setRoomKeywords(value);
+  }
+  function clearRoomSearch() { changeSearch('rooms', ''); setRoomLanguage(''); setRoomKeywords(''); }
+  function openSearch(kind: 'people' | 'rooms') {
+    if (!modern) { openPage(legacySelector(kind === 'people' ? 'profile' : 'chatroom', 'search')); return; }
+    if (kind === 'rooms') openRooms();
+    else { asyncNavigation.current++; session.selectConversation(null); setScreen('friends'); }
+  }
+  function followSearchAction(href: string) {
+    const native = parseNativeAction(href);
+    if (native) void nativePageAction(native); else openPage(href);
+  }
   function openRooms() {
     asyncNavigation.current++;
     Keyboard.dismiss(); session.selectConversation(null); setScreen('rooms');
@@ -267,6 +370,10 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
     return session.activeRoom ? { kind: 'room', id: session.activeRoom }
       : session.activeGroup ? { kind: 'group', id: session.activeGroup }
         : session.activePeer ? { kind: 'private', id: session.activePeer } : null;
+  }
+  function groupTitle(id: string) {
+    return modern ? modernGroupTitle(session.groupConversations.find((group) => group.id === id),
+      session.username, session.contacts) : 'Group Chat';
   }
   function contextParticipants(context: ChatContext): readonly ChatParticipant[] {
     return context.kind === 'room' ? session.roomConversations.find((entry) => entry.name === context.id)?.participants ?? []
@@ -302,11 +409,15 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
       case 'imMenu': openPage(legacySelector('im', 'setup_im')); return;
       case 'joinChatroom':
       case 'joinGroupChatroom': {
+        if (originalJoinPending.current || session.roomAction) return;
         const name = action.name === 'joinGroupChatroom' ? action.argument.split(',')[0] : action.argument;
         const ticket = ++asyncNavigation.current;
-        if (await session.joinRoom(name) && mounted.current && ticket === asyncNavigation.current) {
-          session.openRoom(name); setScreen('conversation');
-        }
+        originalJoinPending.current = true;
+        try {
+          if (await session.joinRoom(name) && mounted.current && ticket === asyncNavigation.current) {
+            session.openRoom(name); setScreen('conversation');
+          }
+        } finally { originalJoinPending.current = false; }
         return;
       }
       case 'sendScrapbookPhoto': {
@@ -382,12 +493,15 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
     const operation = action === 'block' && context.kind === 'room' && !modern && !v3 && participant?.muted ? 'unmute'
       : action === 'mute' && participant?.muted ? 'unmute' : action;
     if (!['kick', 'mute', 'unmute', 'block'].includes(operation)) return;
+    const vote = modern && operation === 'kick' && context.kind === 'room'
+      && !contextParticipants(context).find((entry) => entry.username.toLowerCase() === session.username.toLowerCase())?.moderator;
     const verb = operation === 'block' ? 'block' : operation === 'kick' ? 'kick' : operation === 'mute' ? 'mute' : 'unmute';
-    setConfirmation({ title: operation === 'block' ? 'Block User' : `${verb[0].toUpperCase()}${verb.slice(1)} User`,
-      message: operation === 'block' ? `Are you sure you would like to block ${target}?`
+    setConfirmation({ title: vote ? 'Vote to kick' : operation === 'block' ? 'Block User' : `${verb[0].toUpperCase()}${verb.slice(1)} User`,
+      message: vote ? `Vote to remove ${target} from ${context.id}? Other members may need to vote before they are removed.`
+        : operation === 'block' ? `Are you sure you would like to block ${target}?`
         : operation === 'kick' ? `Are you sure you would like to kick ${target}?`
           : `${verb[0].toUpperCase()}${verb.slice(1)} ${target} in ${context.id}?`,
-      label: operation === 'kick' ? 'Kick' : operation === 'block' ? 'Block' : verb[0].toUpperCase() + verb.slice(1),
+      label: vote ? 'Vote to kick' : operation === 'kick' ? 'Kick' : operation === 'block' ? 'Block' : verb[0].toUpperCase() + verb.slice(1),
       run: async () => {
         const ticket = ++asyncNavigation.current;
         const ok = operation === 'block' ? await session.blockUser(target)
@@ -402,7 +516,9 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
     const own = contextParticipants(context).find((entry) => entry.username.toLowerCase() === session.username.toLowerCase());
     const items: V4MenuItem[] = [
       { id: 'private', label: 'Private Chat', onPress: () => openChat(participant.username) },
-      ...(['profile', 'add', 'gift', 'call', 'credit', 'block'] as ChatAction[]).map((action) => ({ id: action,
+      ...(['profile', 'add', 'gift', 'call', 'credit', 'block'] as ChatAction[])
+        .filter((action) => !(modern && action === 'add' && session.contacts.some((contact) =>
+          contact.username.toLowerCase() === participant.username.toLowerCase()))).map((action) => ({ id: action,
         label: ({ profile: 'User Profile', add: 'Add as friend', gift: 'Give a Gift', call: 'Call User', credit: 'Transfer Credit', block: 'Block messages' } as Record<string, string>)[action],
         onPress: () => askAction(context, action, participant.username), testID: `chat.action.${action}` })),
     ];
@@ -454,12 +570,30 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
   }
   function photoSourcesModel(context: ChatContext | null): Menu {
     return { title: context ? 'Share Photo' : 'Upload Photo', items: [
-      { id: 'library', label: 'Choose from Photos', onPress: () => { void pickPhoto('library', context); }, testID: 'photo.library' },
-      { id: 'camera', label: 'Take Photo', onPress: () => { void pickPhoto('camera', context); }, testID: 'photo.camera' },
+      { id: 'library', label: 'Choose from Photos', onPress: () => requestPhotoPicker('library', context), testID: 'photo.library' },
+      { id: 'camera', label: 'Take Photo', onPress: () => requestPhotoPicker('camera', context), testID: 'photo.camera' },
       ...(context ? [{ id: 'scrapbook', label: 'My Scrapbook', onPress: () => {
         photoTarget.current = context; openPage(legacySelector('photo', 'home', { f: 'sendfromphoto' }));
       }, testID: 'photo.scrapbook' }] : []),
     ] };
+  }
+  function requestPhotoPicker(source: 'camera' | 'library', context: ChatContext | null) {
+    if (photoBusy || pendingPhotoPicker.current) return;
+    if (Platform.OS === 'ios' && legacyModalPresented.current) {
+      // UIKit cannot present PHPicker while the Classic RN menu's modal is
+      // being dismissed. Its real completion, rather than a timer, owns the
+      // next presentation. Keep the selected chat and reject stale navigation.
+      pendingPhotoPicker.current = { source, context, ticket: ++asyncNavigation.current };
+      setMenu(null);
+    } else void pickPhoto(source, context);
+  }
+  function legacyModalDismissed() {
+    legacyModalPresented.current = false;
+    const pending = pendingPhotoPicker.current;
+    pendingPhotoPicker.current = null;
+    if (pending && mounted.current && session.online && pending.ticket === asyncNavigation.current) {
+      void pickPhoto(pending.source, pending.context);
+    }
   }
   async function pickPhoto(source: 'camera' | 'library', context: ChatContext | null) {
     if (photoBusy) return;
@@ -517,7 +651,7 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
         { id: 'participants', label: 'Participants', onPress: () => participants(joined.name), testID: 'room.participants', disabled: !!session.roomAction },
         { id: 'leave', label: 'Leave Room', onPress: () => setConfirmLeave(joined.name), testID: 'room.leave', disabled: !!session.roomAction },
       ] : []),
-      appearanceItem,
+      ...(!modern ? [appearanceItem] : []),
     ] };
   }
   function openAppearance() { asyncNavigation.current++; session.setConversationVisible(false); Keyboard.dismiss(); appearanceReturn.current = screen; setScreen('appearance'); }
@@ -551,7 +685,7 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
       icon: 'conversation' as const, onPress: () => openChat(chat.peer) })),
       ...session.roomConversations.filter((room) => room.state === 'joined').map((room) => ({ id: `room:${room.name}`, label: `${room.name}${room.unread ? ' *' : ''}`,
         icon: 'chat' as const, onPress: () => selectTab(`room:${room.name}`) })),
-      ...session.groupConversations.map((group) => ({ id: `group:${group.id}`, label: `Group Chat${group.unread ? ' *' : ''}`,
+      ...session.groupConversations.map((group) => ({ id: `group:${group.id}`, label: `${groupTitle(group.id)}${group.unread ? modern ? ' · unread' : ' *' : ''}`,
         icon: 'conversation' as const, onPress: () => selectTab(`group:${group.id}`) }))] };
   }
   function pageItem(id: string, label: string, controller: string, action: string, values: Record<string, string> = {}): V4MenuItem {
@@ -580,8 +714,8 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
   function chatMenuModel(context: ChatContext): Menu {
     const room = context.kind === 'room' ? session.roomConversations.find((value) => value.name === context.id) : undefined;
     const own = room?.participants.find((value) => value.username.toLowerCase() === session.username.toLowerCase());
-    const mapped = chatActions(context.kind, v3).filter((item) => !(v3 && item.action === 'add' && context.kind === 'private'
-      && session.contacts.some((contact) => contact.username === context.id))).map((item): V4MenuItem => ({
+    const mapped = chatActions(context.kind, v3).filter((item) => !((v3 || modern) && item.action === 'add' && context.kind === 'private'
+      && session.contacts.some((contact) => contact.username.toLowerCase() === context.id.toLowerCase()))).map((item): V4MenuItem => ({
         id: item.action, label: modern && item.action === 'block' ? 'Block messages' : item.label,
         disabled: !!session.roomAction && ['kick', 'mute', 'unmute', 'block', 'add', 'invite'].includes(item.action)
           || item.action === 'kick' && !!own?.muted || item.action === 'mute' && room?.participantsLoaded && !own?.moderator,
@@ -599,7 +733,7 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
         onPress: () => chooseParticipant(context, 'private', 'Participants') }] : []),
       pageItem('blocks', 'Blocked Users', 'settings', 'block_list'),
       { id: 'chats', label: 'Active Chats', icon: 'arrowRight', onPress: activeChats, children: activeChatsMenu().items },
-      ...(context.kind === 'room' ? [pageItem('search', 'Search Rooms', 'chatroom', 'search')] : []),
+      ...(context.kind === 'room' && !modern ? [{ id: 'search', label: 'Search Rooms', onPress: () => openSearch('rooms') }] : []),
       pageItem('store', 'Store', 'store', 'main', { id: '111' }),
       { id: 'main', label: 'Main Menu', icon: 'arrowRight', onPress: mainMenu, children: mainMenuModel().items },
       roomsItem, appearanceItem,
@@ -613,7 +747,7 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
         { id: 'leave', label: 'Leave Room', destructive: true, onPress: () => setConfirmLeave(context.id), testID: 'room.leave', disabled: !!session.roomAction },
       ] : [{ id: 'close', label: context.kind === 'group' && modern ? 'Leave Group Chat' : 'Close Chat',
         testID: context.kind === 'group' ? 'group.leave' : 'chat.close', destructive: true, onPress: () => {
-          if (context.kind === 'private') { session.closeConversation(context.id); setScreen('friends'); }
+          if (context.kind === 'private') closePrivateChat(context.id);
           else setConfirmation({ title: 'Leave Group Chat', message: 'Leave this group chat? Your unsent message will be discarded.',
             label: 'Leave', testID: 'group.leave.confirm', run: async () => {
               const ticket = ++asyncNavigation.current;
@@ -641,16 +775,17 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
         : extras.filter((item) => item.id === 'close')), appearanceItem] : extras),
     ];
     const extended = extendMenu(items, context.kind === 'room' ? 11 : context.kind === 'group' ? 10 : 9, context);
-    return { title: context.kind === 'room' ? context.id : context.kind === 'group' ? 'Group Chat' : 'Menu',
+    return { title: context.kind === 'room' ? context.id : context.kind === 'group' ? groupTitle(context.id) : 'Menu',
       items: modern ? modernChatItems(extended, context.kind, (title, items) => setMenu({ title, items })) : extended };
   }
   function friendsMenu() { setMenu(friendsMenuModel()); }
   function friendsMenuModel(): Menu {
-    return { title: 'My Friends', items: extendMenu([
+    const items: V4MenuItem[] = [
       ...roster.friendsItems(),
       { id: 'offline', label: hideOffline ? 'Show Offline Friends' : 'Hide Offline Friends', onPress: () => setHideOffline(!hideOffline) },
       pageItem('updates', 'Updates', 'lookout', 'home'),
-    ], 2) };
+    ];
+    return { title: 'My Friends', items: extendMenu(modern ? modernListItems(items, 'friends') : items, 2) };
   }
   function v3RosterMenu(contact?: Contact) {
     setMenu({ title: 'Menu', items: [
@@ -690,7 +825,7 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
       { id: 'calls', label: 'Call / SMS', separator: true, onPress: () => setMenu({ title: 'Call / SMS', items: [
         pageItem('call', 'Call', 'call', 'home', { f: 'call' }), pageItem('sms', 'SMS', 'sms', 'home', { f: 'sms' }),
       ] }) },
-      pageItem('find', 'Search New Friends', 'profile', 'search'),
+      ...(!modern ? [{ id: 'find', label: 'Search New Friends', onPress: () => openSearch('people') }] : []),
       { id: 'settings', label: 'Settings', onPress: settingsMenu, children: settingsMenuModel().items }, pageItem('help', 'Help', 'help', 'main'),
       appearanceItem,
       { id: 'exit', label: 'Log out', onPress: () => setConfirmExit(true), testID: 'menu.exit' },
@@ -704,24 +839,29 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
   }
   function contactMenu(contact: Contact, contextual: boolean) {
     setSelectedFriend(contact.id);
-    if (!contextual && isAvailable(contact.presence)) { openChat(contact.username); return; }
+    if (!contextual && (modern && !!contact.username || isAvailable(contact.presence))) { openChat(contact.username); return; }
     if (v3) { v3RosterMenu(contact); return; }
     setMenu(contactMenuModel(contact));
   }
   function contactMenuModel(contact: Contact): Menu {
+    const moreItems: V4MenuItem[] = [...roster.contactExtraItems(contact), ...(modern && contact.username ? [{
+      id: 'email', label: 'Send Email', onPress: () => openPage(legacySelector('email', 'compose', { username: contact.username })),
+    }] : [])];
     return { title: contact.display || contact.username, items: extendMenu([
-      { id: 'private', label: isAvailable(contact.presence) ? 'Private Chat' : 'Send Email',
-        onPress: isAvailable(contact.presence) ? () => openChat(contact.username)
+      { id: 'private', label: modern && contact.username ? 'Message' : isAvailable(contact.presence) ? 'Private Chat' : 'Send Email',
+        onPress: modern && contact.username || isAvailable(contact.presence) ? () => openChat(contact.username)
           : () => openPage(legacySelector('email', 'compose', { username: contact.username })), icon: 'conversation' },
       ...(['call', 'sms', 'credit', 'profile'] as ChatAction[]).map((action) => ({
         id: action, label: ({ call: 'Call', sms: 'SMS', credit: 'Transfer Credit', profile: 'View Profile' } as Record<string, string>)[action],
         onPress: () => askAction({ kind: 'private', id: contact.username }, action),
       })),
-      { id: 'more', label: 'More Options', icon: 'arrowRight', onPress: () => setMenu({ title: contact.username, items: roster.contactExtraItems(contact) }) },
-      { id: 'main', label: 'Main Menu', separator: true, icon: 'arrowRight', onPress: mainMenu, children: mainMenuModel().items },
-      roomsItem,
-      appearanceItem,
-      { id: 'exit', label: 'Log out', onPress: () => setConfirmExit(true), testID: 'menu.exit' },
+      { id: 'more', label: 'More Options', icon: 'arrowRight', children: modern ? moreItems : undefined,
+        onPress: () => setMenu({ title: contact.username, items: moreItems }) },
+      ...(!modern ? [
+        { id: 'main', label: 'Main Menu', separator: true, icon: 'arrowRight' as const, onPress: mainMenu, children: mainMenuModel().items },
+        roomsItem, appearanceItem,
+        { id: 'exit', label: 'Log out', onPress: () => setConfirmExit(true), testID: 'menu.exit' },
+      ] : []),
     ], 4, undefined, contact) };
   }
   function openMenu() {
@@ -742,8 +882,8 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
   /** Pure descriptions let SwiftUI own each menu at its actual trigger. */
   function navigationMenuModel(forceSelf = false): Menu {
     if (screen === 'rooms') {
-      return { title: 'Chat Rooms', items: extendMenu([
-        { ...pageItem('search', 'Search Rooms', 'chatroom', 'search'), testID: 'rooms.search' },
+      const items: V4MenuItem[] = [
+        ...(!modern ? [{ ...pageItem('search', 'Search Rooms', 'chatroom', 'search'), testID: 'rooms.search' }] : []),
         { ...pageItem('create', 'Create Room', 'chatroom', 'create'), testID: 'rooms.create' },
         { id: 'chats', label: 'Active Chats', onPress: activeChats, children: activeChatsMenu().items },
         { id: 'refresh', label: 'Refresh Rooms', disabled: session.roomsLoading || !!session.roomAction,
@@ -751,24 +891,27 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
         { id: 'main', label: 'Main Menu', onPress: mainMenu, children: mainMenuModel().items },
         appearanceItem,
         { id: 'exit', label: 'Log out', onPress: () => setConfirmExit(true), testID: 'menu.exit' },
-      ], 8) };
+      ];
+      return { title: 'Chat Rooms', items: extendMenu(modern ? modernListItems(items, 'rooms') : items, 8) };
     }
     if (['conversation', 'participants', 'write', 'picker', 'invite'].includes(screen)) {
       const context = activeContext();
       if (context) return chatMenuModel(context);
     }
     if (screen === 'page') {
-      return { title: pages.page?.title ?? 'Page', items: extendMenu([
-        { id: 'refresh', label: 'Refresh', onPress: () => { void pages.refresh(); }, disabled: pages.loading },
+      const items: V4MenuItem[] = [
+        ...(!modern || !canPullRefreshLegacyPage(pages.page)
+          ? [{ id: 'refresh', label: 'Refresh', onPress: () => { void pages.refresh(); }, disabled: pages.loading }] : []),
         { id: 'close', label: 'Close Page', onPress: () => { pages.close(); setScreen(pageReturn.current); } },
         roomsItem, appearanceItem,
-      ], 7) };
+      ];
+      return { title: pages.page?.title ?? 'Page', items: extendMenu(items, 7) };
     }
     if (!modern && !forceSelf && screen === 'friends' && selectedFriend !== 'self') {
       const contact = session.contacts.find((entry) => entry.id === selectedFriend);
       if (contact) return contactMenuModel(contact);
     }
-      return { title: 'My Friends', items: extendMenu([
+      const items: V4MenuItem[] = [
         ...roster.selfItems(),
         pageItem('profile', 'My Profile', 'profile', 'home', { username: session.username }),
         { id: 'friends', label: 'My Friends', separator: true, icon: 'arrowRight', onPress: friendsMenu, children: friendsMenuModel().items },
@@ -778,7 +921,8 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
         roomsItem,
         appearanceItem,
         { id: 'exit', label: 'Log out', onPress: () => setConfirmExit(true), testID: 'menu.exit' },
-      ], 1) };
+      ];
+      return { title: 'My Friends', items: extendMenu(modern ? modernListItems(items, 'friends') : items, 1) };
   }
 
   async function logout() {
@@ -797,7 +941,7 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
   }
   function dismissError() { setError(''); session.clearError(); clearAppearanceError(); }
 
-  const busy = session.busy || !ready;
+  const busy = session.busy || !localReady;
   const conversation = session.activeRoomConversation ?? session.activeGroupConversation ?? session.activeConversation;
   const conversationKey = session.activeRoom ? `room:${session.activeRoom}` : session.activeGroup ? `group:${session.activeGroup}` : `peer:${session.activePeer}`;
   const changeDraft = (text: string) => {
@@ -827,12 +971,12 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
   const sending = session.sending || !!session.activeRoomConversation && session.activeRoomConversation.state !== 'joined'
     || !!session.activeGroupConversation && session.activeGroupConversation.state !== 'joined';
   const tabs: V4Tab[] = [...(v3 ? ['friends'] : homeOrder).map((id): V4Tab => ({ id,
-    label: id === 'friends' ? v3 ? 'Friends' : 'My Friends' : id === 'rooms' ? modern ? 'Rooms' : 'Chat Rooms' : 'migWorld',
+    label: id === 'friends' ? modern || v3 ? 'Friends' : 'My Friends' : id === 'rooms' ? modern ? 'Rooms' : 'Chat Rooms' : 'migWorld',
     icon: id === 'friends' ? 'friends' : id === 'rooms' ? 'chat' : 'page' })),
     ...session.conversations.map((chat): V4Tab => ({ id: `peer:${chat.peer}`,
       label: peerDisplay(chat.peer, session.contacts), icon: 'conversation', unread: chat.unread > 0 })),
     ...session.roomConversations.filter((room) => room.state !== 'joining').map((room): V4Tab => ({ id: `room:${room.name}`, label: room.name, icon: 'chat', unread: room.unread > 0 })),
-    ...session.groupConversations.map((group): V4Tab => ({ id: `group:${group.id}`, label: 'Group Chat', icon: 'conversation', unread: group.unread > 0 }))];
+    ...session.groupConversations.map((group): V4Tab => ({ id: `group:${group.id}`, label: groupTitle(group.id), icon: 'conversation', unread: group.unread > 0 }))];
   const selectedTab = screen === 'friends' ? 'friends' : screen === 'rooms' ? 'rooms'
     : screen === 'page' ? pages.page?.url.includes('c=migworld') ? 'migworld' : 'page' : conversationKey;
   const progress = testing || (photoBusy ? 'Preparing photo…' : loggingOut ? 'Logging out...' : session.syncing ? 'Downloading friend list...'
@@ -889,7 +1033,10 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
     key: `composer:${composer}`, title: composer === 'colors' ? 'Text Color' : 'Emoticons',
     content: composerContent, onClose: () => setComposer(null),
   } : photo || viewPhoto ? {
-    key: photo ? 'photo:send' : 'photo:view', title: photo ? photo.context ? 'Send Photo' : 'Upload Photo' : 'Photo',
+    key: photo ? 'photo:send' : 'photo:view', title: photo ? photo.context
+      ? modern ? `Send to ${photo.context.kind === 'group' ? groupTitle(photo.context.id)
+        : photo.context.kind === 'private' ? peerDisplay(photo.context.id, session.contacts) : photo.context.id}` : 'Send Photo'
+      : 'Upload Photo' : 'Photo',
     content: photoContent, dismissible: !session.sending,
     onClose: () => { if (!session.sending) { setPhoto(null); setViewPhoto(null); } },
   } : menu ? { key: 'menu', title: menu.title, menu: menu.items, onClose: () => setMenu(null) } : roster.nativePrompt;
@@ -901,28 +1048,83 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
     return <NativeMenuAnchor items={model.items} title={model.title} testID={testID}
       accessibilityLabel={label} systemImage="ellipsis" variant="plain" disabled={disabled} />;
   }
-  return <View style={{ flex: 1, backgroundColor: v4.body }} testID={`theme.${mode}`}>
+  function searchOptions(result: OriginalSearchResult) {
+    const disabled = result.key.startsWith('rooms:') && !!session.roomAction;
+    const menu = { title: result.title, items: result.actions.map((action, index) => ({
+      id: `${index}`, label: action.label, disabled, onPress: () => followSearchAction(action.href),
+    })) };
+    return nativePresentation ? optionsAnchor(menu, `search.options.${result.key}`, `Options for ${result.title}`, disabled)
+      : <V4Button label="Options" accessibilityLabel={`Options for ${result.title}`} systemImage="ellipsis" iconOnly
+        disabled={disabled} onPress={() => setMenu(menu)} style={{ width: 44, height: 44 }} />;
+  }
+  function searchField(kind: 'people' | 'rooms') {
+    return <><InlineSearchField kind={kind} value={kind === 'people' ? peopleQuery : roomQuery}
+      active={kind === 'people' ? !!peopleQuery.trim() : roomSearchActive}
+      onChange={(value) => changeSearch(kind, value)} onClear={() => kind === 'people' ? changeSearch(kind, '') : clearRoomSearch()}
+      onSubmit={() => submitSearch(kind)} />
+      {kind === 'rooms' && !roomFiltersVisible && !!(roomLanguage.trim() || roomKeywords.trim()) &&
+        <Text testID="search.rooms.active-filters" style={{ color: v4.secondaryText, marginBottom: 12 }}>
+          {[roomLanguage.trim() && `Language: ${roomLanguage.trim()}`, roomKeywords.trim() && `Keywords: ${roomKeywords.trim()}`].filter(Boolean).join(' · ')}
+        </Text>}
+      {kind === 'rooms' && roomFiltersVisible && <View>
+        <V4Field testID="search.rooms.language" label="Language" variant="search" placeholder="Any language"
+          value={roomLanguage} onChangeText={(value) => changeRoomFilter('language', value)} autoCapitalize="none"
+          autoCorrect={false} returnKeyType="search" onSubmitEditing={() => submitSearch('rooms')} />
+        <V4Field testID="search.rooms.keywords" label="Keywords" variant="search" placeholder="Any keywords"
+          value={roomKeywords} onChangeText={(value) => changeRoomFilter('keywords', value)} autoCapitalize="none"
+          autoCorrect={false} returnKeyType="search" onSubmitEditing={() => submitSearch('rooms')} />
+      </View>}</>;
+  }
+  function searchResults(kind: 'people' | 'rooms') {
+    const search = kind === 'people' ? peopleSearch : roomSearch;
+    return <InlineSearchResults kind={kind} query={kind === 'people' ? peopleQuery : roomQuery}
+      submittedQuery={search.query} results={search.results} loading={search.loading} searched={search.searched}
+      currentRequest={kind === 'people' || search.language === roomLanguage.trim() && search.keywords === roomKeywords.trim()}
+      disabled={kind === 'rooms' && !!session.roomAction}
+      notice={search.notice}
+      error={search.error} onRetry={() => submitSearch(kind)} onAction={followSearchAction} renderOptions={searchOptions} />;
+  }
+  const waitingForAuto = restoringAutoLogin && !session.online;
+  const showLaunch = modern && (!localReady || waitingForAuto || session.online && screen === 'login');
+  const entryPhase: ModernMotionPhase = !modern ? 'idle' : !localReady ? 'preparing'
+    : arriving ? 'arriving' : session.busy || waitingForAuto ? 'authenticating'
+    : startupPending && screen === 'login' ? startupLaidOut ? 'startup' : 'preparing' : 'idle';
+  return <ModernMotionProvider phase={entryPhase} connectionActive={session.busy} onSettled={(phase) => {
+    if (phase === 'arriving') setArriving(false);
+  }}><View style={{ flex: 1, backgroundColor: v4.body }} testID={`theme.${mode}`}
+    onTouchStart={() => { if (startupPending && localReady) setStartupPending(false); }}>
     {modern && <ModernBackdrop variant={['welcome', 'login', 'connection', 'manual'].includes(screen) ? 'auth'
       : screen === 'conversation' ? 'chat' : 'home'} />}
-    <SafeAreaView style={styles.safe}>
+    {showLaunch && <ModernLaunch dark={dark} ready={localReady} connecting={waitingForAuto} />}
+    <ScreenSafeArea style={styles.safe}>
     <StatusBar barStyle={dark ? 'light-content' : 'dark-content'} />
     <KeyboardAvoidingView style={styles.window} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
+      {/* Auto Login can finish before native preferences. Mount Modern's
+          navigation only once those are ready, directly in its arrival pose. */}
       {session.online && !['login', 'welcome', 'write', 'appearance'].includes(screen) && !(v3 && ['rooms', 'participants', 'picker', 'invite', 'page'].includes(screen))
-        ? modern ? <View style={styles.navigation} pointerEvents="box-none"
-          onLayout={(event) => setNavigationInset(Math.ceil(event.nativeEvent.layout.height) + 12)}>
-          <MotionEntrance fade={false}><V4Tabs tabs={tabs} selected={selectedTab} animateIn={arriving}
+        ? modern ? localReady && <View style={styles.navigation} pointerEvents="box-none"
+          onLayout={(event) => {
+            const height = Math.ceil(event.nativeEvent.layout.height);
+            // Expo reports SwiftUI size asynchronously. A provisional empty
+            // Host must not collapse the list's reserved navigation space.
+            if (height >= (nativePresentation ? 68 : 1)) setNavigationInset(height + 12);
+          }}>
+          <V4Tabs tabs={tabs} selected={selectedTab} animateIn={arriving && localReady}
+            nativeMenu={nativeNavigationMenu ?? undefined}
             menuControl={nativeNavigationMenu ? <NativeMenuAnchor items={nativeNavigationMenu.items}
               title={nativeNavigationMenu.title} testID="command.menu" accessibilityLabel="Open menu"
               systemImage="ellipsis" variant="glass" /> : undefined}
-            onSelect={selectTab} onMenu={openMenu} /></MotionEntrance>
+            onSelect={selectTab} onMenu={openMenu} />
         </View> : <V4Tabs tabs={tabs} selected={selectedTab} onSelect={selectTab} />
         : !(modern && ['login', 'welcome', 'appearance', 'connection', 'manual'].includes(screen)) && <V4Header title={title} />}
-      <MotionEntrance style={styles.body} transitionKey={`${screen}:${conversationKey}`} fade={false}>
+      <View style={styles.body}>
         {screen === 'appearance' && <AppearanceScreen />}
         {screen === 'page' && session.online && <LegacyPageScreen browser={pages}
           onViewPhoto={nativePresentation ? (uri) => { Keyboard.dismiss(); setViewPhoto(uri); } : undefined} />}
         {screen === 'welcome' && <WelcomeScreen onLogin={() => setScreen('login')} />}
-        {screen === 'login' && <LoginScreen form={form} onChange={changeForm} busy={busy}
+        {screen === 'login' && !showLaunch && <LoginScreen form={form} onChange={changeForm} busy={busy}
+          onStartupLayout={modern && startupPending ? () => setStartupLaidOut(true) : undefined}
+          onStartupComplete={() => setStartupPending(false)}
           onAppearance={openAppearance}
           menuControl={loginMenu ? nativePresentation ? <NativeMenuAnchor items={loginMenu.items}
             title={loginMenu.title} testID="login.menu" accessibilityLabel="Sign-in options"
@@ -930,7 +1132,7 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
             : <V4Button label="⋯" accessibilityLabel="Sign-in options" testID="login.menu" variant="secondary"
               disabled={busy} onPress={() => { Keyboard.dismiss(); setMenu(loginMenu); }} /> : undefined}
           showOffline={!hideOffline} onShowOfflineChange={(show) => setHideOffline(!show)}
-          onLogin={() => { void connect(); }} onConnection={openLoginConnection} />}
+          onLogin={() => { setStartupPending(false); void connect(); }} onConnection={openLoginConnection} />}
         {screen === 'connection' && <ConnectionChooser busy={!!testing}
           onChoose={(mode) => { void testConnection(connection.mode === mode ? connection : defaults[mode]); }}
           onManual={() => setScreen('manual')} />}
@@ -940,6 +1142,10 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
           <FriendsScreen username={session.username} presence={session.presence}
           ownStatus={session.ownStatus}
           contacts={session.contacts} groups={session.groups} hideOffline={hideOffline} onContact={contactMenu}
+          refreshing={modern && !!peopleQuery.trim() ? peopleSearch.loading : session.syncing}
+          onRefresh={() => { if (modern && peopleQuery.trim()) submitSearch('people'); else void session.syncContacts(); }}
+          onSearch={() => openSearch('people')} searching={modern && !!peopleQuery.trim()}
+          searchField={modern ? searchField('people') : undefined} searchResults={searchResults('people')}
           collapsedGroupIds={collapsedGroupIds} onCollapsedGroupIdsChange={setCollapsedGroupIds}
           renderContactOptions={nativePresentation ? (contact) => optionsAnchor(contactMenuModel(contact),
             `friends.options.${contact.username}`, `Options for ${contact.display || contact.username}`) : undefined}
@@ -947,15 +1153,21 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
           onRooms={openRooms}
           selected={selectedFriend} onSelf={() => { setSelectedFriend('self'); showMenu(true); }} />
         </LoginArrival>}
-        {screen === 'rooms' && session.online && <RoomsScreen categories={session.roomCategories} loading={session.roomsLoading}
+        {screen === 'rooms' && session.online && <RoomsScreen categories={session.roomCategories}
+          loading={modern && roomSearchActive ? roomSearch.loading : session.roomsLoading}
           expandedCategoryIds={expandedCategoryIds} onExpandedCategoryIdsChange={setExpandedCategoryIds}
-          filter={roomFilter} onFilterChange={setRoomFilter} onSearch={() => openPage(legacySelector('chatroom', 'search'))}
+          filter={roomFilter} onFilterChange={setRoomFilter} onSearch={() => openSearch('rooms')}
+          searching={modern && roomSearchActive} searchField={modern ? searchField('rooms') : undefined}
+          headingAction={modern ? <V4Button testID="search.rooms.filters" label="Filters" accessibilityLabel={roomFiltersVisible ? 'Hide room filters' : 'Show room filters'}
+            systemImage="line.3.horizontal.decrease" iconOnly variant="secondary" style={{ width: 48, height: 48 }}
+            onPress={() => setRoomFiltersVisible((visible) => !visible)} /> : undefined}
+          searchResults={searchResults('rooms')}
           renderRoomOptions={nativePresentation ? (room) => optionsAnchor(roomMenuModel(room), `rooms.more.${room.name}`,
             `Options for ${room.name}`, !!session.roomAction) : undefined}
           action={session.roomAction} onExpand={(id) => { void session.loadRoomCategory(id); }}
           onMore={(id) => { void session.loadRoomCategory(id); }}
           onJoin={(name) => { void joinRoom(name); }} onRoomMenu={roomMenu}
-          onRefresh={() => { void session.loadRoomCategories(); }} />}
+          onRefresh={() => { if (modern && roomSearchActive) submitSearch('rooms'); else void session.loadRoomCategories(); }} />}
         {screen === 'participants' && session.activeRoomConversation && <RoomParticipantsScreen room={session.activeRoomConversation.name}
           participants={session.activeRoomConversation.participants} username={session.username}
           loading={!!session.roomAction} onRefresh={() => { void session.loadRoomParticipants(session.activeRoomConversation!.name); }}
@@ -964,7 +1176,7 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
             kind: 'room', id: session.activeRoomConversation!.name }, participant), `participants.options.${participant.username}`,
           `Options for ${participant.username}`, !!session.roomAction) : undefined}
           onOptions={(participant) => participantOptions({ kind: 'room', id: session.activeRoomConversation!.name }, participant)} />}
-        {screen === 'picker' && picker && <ParticipantPickerScreen title={picker.title} context={picker.context.kind === 'group' ? 'Group Chat' : picker.context.id}
+        {screen === 'picker' && picker && <ParticipantPickerScreen title={picker.title} context={picker.context.kind === 'group' ? groupTitle(picker.context.id) : picker.context.id}
           username={session.username} participants={contextParticipants(picker.context)} loading={!!session.roomAction}
           allowSelf={picker.action === 'username' || picker.action === 'profile'}
           disabledUsernames={['kick', 'mute', 'unmute'].includes(picker.action)
@@ -984,7 +1196,8 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
           busy={!!session.roomAction} context={invite.kind === 'private' ? `Start a group with ${invite.id}` : 'Invite someone to this group chat'}
           onInvite={(username) => { void inviteUser(username); }} />}
         {screen === 'conversation' && conversation && <ConversationScreen key={conversationKey} conversation={conversation}
-          title={session.activeGroup ? 'Group Chat' : undefined}
+          selectedTextColor={session.selectedTextColor}
+          title={session.activeGroup ? groupTitle(session.activeGroup) : undefined}
           contacts={session.activeRoom || session.activeGroup ? [] : session.contacts} onWrite={() => setScreen('write')} sending={sending}
           onChange={changeDraft} onSend={() => { void send(); }} onTools={composerTools}
           toolsControl={nativeComposerMenu ? <NativeMenuAnchor items={nativeComposerMenu.items}
@@ -995,7 +1208,7 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
         {screen === 'write' && conversation && <WriteScreen key={conversationKey} conversation={conversation} sending={sending}
           onChange={changeDraft} onTools={composerTools} selection={selection} onSelectionChange={changeSelection}
           commandContext={commandContext} onApplyDraft={applyDraft} />}
-      </MotionEntrance>
+      </View>
       {progress !== '' && <View style={styles.progress} accessibilityLiveRegion="polite">
         <ActivityIndicator size="small" color={v4.secondaryText} /><Text style={styles.progressText}>{progress}</Text>
       </View>}
@@ -1021,6 +1234,7 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
     </KeyboardAvoidingView>
     {nativePresentation && <NativeOverlayLayer sheet={nativeSheet} alert={nativeAlert} />}
     <Modal visible={!nativePresentation && (menu !== null || confirmExit || confirmLeave !== null || confirmation !== null || composer !== null || photo !== null || viewPhoto !== null || roster.prompt !== null || !!session.notice || !!displayedError)} transparent animationType="none"
+      onShow={() => { legacyModalPresented.current = true; }} onDismiss={legacyModalDismissed}
       onRequestClose={() => { setMenu(null); setConfirmExit(false); setConfirmLeave(null); setConfirmation(null); setComposer(null); setPhoto(null); setViewPhoto(null); roster.closePrompt(); session.clearNotice(); dismissError(); }}>
       {displayedError
         ? <V4Dialog embedded visible title="Error" message={displayedError} onClose={dismissError} />
@@ -1046,5 +1260,5 @@ function ApplicationContent({ appearanceError, clearAppearanceError }: { appeara
               { label: 'Cancel', onPress: () => setConfirmLeave(null) }]} />
             : menu ? <V4Menu embedded visible title={menu.title} items={menu.items} onClose={() => setMenu(null)} /> : roster.prompt}
     </Modal>
-  </SafeAreaView></View>;
+  </ScreenSafeArea></View></ModernMotionProvider>;
 }

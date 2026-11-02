@@ -12,6 +12,7 @@ import { avatarAppearance, modernControlColors, modernDarkHighContrastTheme, mod
   modernHighContrastTheme, modernMetrics, modernTheme } from '../appearanceTheme';
 import { GlassSurface } from '../glass';
 import { ModernButton, ModernChoice, ModernSymbol, ModernToggle, supportsModernControls } from '../ModernControls';
+import { ModernNavigation, supportsModernNavigation } from '../ModernNavigation';
 import { MotionEntrance, MotionPressable } from '../motion';
 import { v3Colors, v3Metrics, v3Theme } from '../v3/theme';
 
@@ -448,9 +449,10 @@ function useSelectedTabReveal(selected: string) {
   };
 }
 
-export function V4Tabs({ tabs, selected, onSelect, onMenu, menuControl, animateIn = false }: {
+export function V4Tabs({ tabs, selected, onSelect, onMenu, menuControl, nativeMenu, animateIn = false }: {
   tabs: readonly V4Tab[]; selected: string; onSelect: (id: string) => void; onMenu?: () => void;
   menuControl?: ReactNode; animateIn?: boolean;
+  nativeMenu?: { title?: string; items: readonly V4MenuItem[] };
 }) {
   const { styles, theme: v4, modern, v3, dark, increaseContrast, reduceTransparency } = usePrimitiveAppearance();
   const viewport = useWindowDimensions();
@@ -477,12 +479,21 @@ export function V4Tabs({ tabs, selected, onSelect, onMenu, menuControl, animateI
         {unread && <UnreadPhaseMarker id={tab.id} phase={pulse.name} />}
       </View>;
     };
+    const compact = conversations.length > 0 || destinations.length > 2 || viewport.width < 390 || viewport.fontScale > 1.15;
+    if (nativeMenu && supportsModernNavigation) return <View style={styles.nativeNavigation}>
+      <ModernNavigation tabs={destinations.map((tab) => ({ id: tab.id, label: tab.label, systemImage: modernSymbols[tab.icon] }))}
+        conversations={conversations.map((tab) => ({ id: tab.id, label: tab.label, systemImage: modernSymbols[tab.icon],
+          unreadPhase: !tab.unread || tab.id === selected ? 'none' : pulse.name === 'steady' ? 'steady' : pulse.on ? 'on' : 'off' }))}
+        selected={selected} onSelect={onSelect} arriving={animateIn} compact={compact} menu={nativeMenu} />
+      {conversations.filter((tab) => tab.unread && tab.id !== selected).map((tab) =>
+        <UnreadPhaseMarker key={tab.id} id={tab.id} phase={pulse.name} />)}
+    </View>;
+    const conversationStrip = conversations.length > 0 ? <ScrollView testID="tabs.items" {...reveal.scrollProps} horizontal
+        style={{ flex: 1, minWidth: 0, overflow: 'hidden' }} showsHorizontalScrollIndicator indicatorStyle={dark ? 'white' : 'black'}
+        contentContainerStyle={styles.nativeConversations}>{conversations.map((tab) => tabButton(tab))}</ScrollView> : null;
     return <View style={styles.nativeNavigation}>
-      <View style={styles.nativeDestinations}>{destinations.map((tab) => tabButton(tab,
-        conversations.length > 0 || destinations.length > 2 || viewport.width < 390 || viewport.fontScale > 1.15))}</View>
-      {conversations.length > 0 && <ScrollView testID="tabs.items" {...reveal.scrollProps} horizontal
-        style={{ flex: 1, minWidth: 0 }} showsHorizontalScrollIndicator indicatorStyle={dark ? 'white' : 'black'}
-        contentContainerStyle={styles.nativeConversations}>{conversations.map((tab) => tabButton(tab))}</ScrollView>}
+      <View style={styles.nativeDestinations}>{destinations.map((tab) => tabButton(tab, compact))}</View>
+      {conversationStrip}
       {conversations.length === 0 && <View style={{ flex: 1 }} />}
       {menuControl ?? (onMenu && <ModernButton label="Open menu" testID="command.menu" systemImage="ellipsis"
         iconOnly variant="secondary" onPress={onMenu} style={{ width: 46, height: 48 }} />)}

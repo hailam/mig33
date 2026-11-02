@@ -1,5 +1,5 @@
 import React, { useMemo, type ReactNode } from 'react';
-import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Pressable, RefreshControl, ScrollView, StyleSheet, Text, View } from 'react-native';
 import type { RoomParticipant, RoomSummary } from '../../mig33/client';
 import type { RoomCategoryView } from '../session/model';
 import { useAppearance } from '../appearance';
@@ -23,20 +23,25 @@ export interface RoomsScreenProps {
   filter: string;
   onFilterChange: (text: string) => void;
   onSearch: () => void;
+  searchField?: ReactNode;
+  searchResults?: ReactNode;
+  searching?: boolean;
+  headingAction?: ReactNode;
   renderRoomOptions?: (room: RoomSummary) => ReactNode;
 }
 
 /** v4's 714/701 category order and occupancy, using touch-sized rows.
  * v3 keeps its room icon, right-hand (current/capacity), and blue/white chrome;
  * presenting categories on a screen is an adaptation of its favorites overlay.
- * Filtering is local. The original remote Search/Create page flows are separate.
+ * Classic filters loaded categories; Modern embeds original server search.
  */
 export function RoomsScreen({ categories, loading, action, onExpand, onMore, onJoin, onRoomMenu, onRefresh,
-  expandedCategoryIds, onExpandedCategoryIdsChange, filter, onFilterChange, onSearch, renderRoomOptions }: RoomsScreenProps) {
-  const { modern, v3, theme } = useAppearance();
+  expandedCategoryIds, onExpandedCategoryIdsChange, filter, onFilterChange, onSearch, renderRoomOptions,
+  searchField, searchResults, searching = false, headingAction }: RoomsScreenProps) {
+  const { modern, v3, theme, navigationInset } = useAppearance();
   const styles = useStyles();
   const expanded = expandedCategoryIds;
-  const query = filter.trim().toLocaleLowerCase();
+  const query = modern && searchField ? '' : filter.trim().toLocaleLowerCase();
   const Row = modern ? MotionPressable : Pressable;
   function toggle(category: RoomCategoryView) {
     const opening = !expanded.has(category.id);
@@ -46,19 +51,22 @@ export function RoomsScreen({ categories, loading, action, onExpand, onMore, onJ
     if (opening && !category.loaded && !category.loading) onExpand(category.id);
   }
   if (modern) return <ScrollView testID="rooms.screen" style={styles.body} contentContainerStyle={styles.content}
-    keyboardShouldPersistTaps="handled" keyboardDismissMode="on-drag">
-    <ScreenHeading title="Rooms" subtitle="Browse a category or search all rooms."
-      action={<V4Button testID="rooms.search" label="Search" accessibilityLabel="Search all rooms" onPress={onSearch} />} />
-    <View style={styles.modernFilterRow}>
+    keyboardShouldPersistTaps="handled" keyboardDismissMode="on-drag" alwaysBounceVertical
+    refreshControl={<RefreshControl testID="rooms.pull-refresh" refreshing={loading}
+      accessibilityLabel={searching ? 'Refresh search results' : 'Refresh room categories'} tintColor={theme.link} colors={[theme.link]} progressViewOffset={navigationInset}
+      enabled={!action} onRefresh={() => { if (!loading && !action) onRefresh(); }} />}>
+    <ScreenHeading testID="rooms.heading" title="Rooms" subtitle="Browse a category or search all rooms."
+      refreshAction={{ label: searching ? 'Refresh search results' : 'Refresh room categories', busy: loading, disabled: Boolean(action), onRefresh }}
+      action={headingAction ?? (!searchField && <V4Button testID="rooms.search" label="Search" accessibilityLabel="Search all rooms"
+        variant="secondary" systemImage="magnifyingglass" iconOnly style={styles.refreshIcon} onPress={onSearch} />)} />
+    {searchField ?? <View style={styles.modernFilterRow}>
       <V4Field testID="rooms.filter" variant="search" accessibilityLabel="Filter loaded rooms"
         accessibilityHint="Open a category to load its rooms. Use Search to search all rooms."
         placeholder="Filter loaded rooms" value={filter} onChangeText={onFilterChange} autoCapitalize="none"
         autoCorrect={false} clearButtonMode="while-editing" returnKeyType="done"
         containerStyle={styles.modernFilter} />
-      <V4Button testID="rooms.refresh" variant="secondary" systemImage="arrow.clockwise" iconOnly
-        label="Refresh" accessibilityLabel="Refresh room categories" style={styles.refreshIcon}
-        busy={loading} disabled={Boolean(action)} onPress={onRefresh} />
-    </View>
+    </View>}
+    {searching ? searchResults : <>
     {categories.map((category) => {
       const open = expanded.has(category.id);
       const rooms = category.rooms.filter((room) => room.name.toLocaleLowerCase().includes(query));
@@ -96,7 +104,7 @@ export function RoomsScreen({ categories, loading, action, onExpand, onMore, onJ
           })}
           {rooms.length === 0 && <Text style={styles.empty}>{category.loading ? 'Loading rooms…' : !category.loaded ? 'Rooms have not loaded. Try again.'
             : query ? 'No matching rooms in this category.' : category.favorites ? 'No favorite rooms yet.' : 'No rooms in this category.'}</Text>}
-          {category.loaded && category.footer !== '' && <View style={styles.modernFooter}>
+          {category.loaded && category.footer !== '' && !(category.replaceOnMore && category.footer === 'Refresh') && <View style={styles.modernFooter}>
             <V4Button testID={`rooms.category.more.${category.id}`} variant="secondary" label={category.footer}
               accessibilityLabel={`${category.footer}, ${category.name}`} busy={category.loading} disabled={Boolean(action)}
               onPress={() => onMore(category.id)} />
@@ -110,6 +118,7 @@ export function RoomsScreen({ categories, loading, action, onExpand, onMore, onJ
     })}
     {categories.length === 0 && <View style={styles.emptyState}>{loading && <ActivityIndicator color={theme.link} />}
       <Text style={styles.empty}>{loading ? 'Loading chat rooms…' : 'No room categories available.'}</Text></View>}
+    </>}
   </ScrollView>;
   return <ScrollView testID="rooms.screen" style={[styles.body, v3 && styles.v3Frame]}
     contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled" keyboardDismissMode="on-drag">
@@ -209,18 +218,21 @@ export interface RoomParticipantsScreenProps {
  * tapping opens private chat and does not imply a moderation request.
  */
 export function RoomParticipantsScreen({ room, participants, loading, username, onRefresh, onSelect, onOptions, renderParticipantOptions }: RoomParticipantsScreenProps) {
-  const { modern, v3, theme } = useAppearance();
+  const { modern, v3, theme, navigationInset } = useAppearance();
   const styles = useStyles();
   const Row = modern ? MotionPressable : Pressable;
-  return <ScrollView testID="participants.screen" style={[styles.body, v3 && styles.v3Frame]} contentContainerStyle={styles.content}>
+  return <ScrollView testID="participants.screen" style={[styles.body, v3 && styles.v3Frame]} contentContainerStyle={styles.content}
+    alwaysBounceVertical={modern || undefined}
+    refreshControl={modern ? <RefreshControl testID="participants.pull-refresh" refreshing={loading}
+      accessibilityLabel="Refresh participants" tintColor={theme.link} colors={[theme.link]} progressViewOffset={navigationInset}
+      onRefresh={() => { if (!loading) onRefresh(); }} /> : undefined}>
     <View style={styles.introduction}>
-      {modern && <ScreenHeading title="People" subtitle={room} />}
+      {modern && <ScreenHeading testID="participants.heading" title="People" subtitle={room}
+        refreshAction={{ label: 'Refresh participants', busy: loading, onRefresh }} />}
       <View style={styles.participantSummary}>
         <Text style={styles.hint}>{loading ? 'Refreshing participants…' : `${participants.length} ${participants.length === 1 ? 'participant' : 'participants'}`}</Text>
-        <V4Button testID="participants.refresh" variant={modern ? 'secondary' : undefined}
-          systemImage={modern ? 'arrow.clockwise' : undefined} iconOnly={modern}
-          label="Refresh" accessibilityLabel={modern ? 'Refresh participants' : undefined} busy={loading} onPress={onRefresh}
-          style={modern ? styles.refreshIcon : styles.refreshButton} />
+        {!modern && <V4Button testID="participants.refresh" label="Refresh" busy={loading} onPress={onRefresh}
+          style={styles.refreshButton} />}
       </View>
     </View>
     <View style={styles.roomList}>

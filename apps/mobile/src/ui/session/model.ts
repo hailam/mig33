@@ -113,6 +113,36 @@ export function isAvailable(presence: number): boolean {
   return presence === 1 || presence === 3 || presence === 4;
 }
 
+/** Contact.username is exclusively the original402 native-mig33 field12.
+ * Phone/external-service records have no native username and cannot be invited
+ * through751/752. Modern can invite offline peers; Classic keeps its old list.
+ */
+export function inviteContacts(contacts: readonly Contact[], excludedUsernames: readonly string[], includeOffline: boolean): Contact[] {
+  const excluded = new Set(excludedUsernames.map(normalizePeer));
+  return [...new Map(contacts.filter((contact) => normalizePeer(contact.username)
+    && (includeOffline || isAvailable(contact.presence)) && !excluded.has(normalizePeer(contact.username)))
+    .map((contact) => [normalizePeer(contact.username), contact])).values()];
+}
+
+/** A local presentation label, never a group rename or a replacement wire ID.
+ * Keep server participant order and use only identities actually received.
+ */
+export function modernGroupTitle(group: Pick<GroupConversation, 'participants'> | undefined,
+  username: string, contacts: readonly Contact[]): string {
+  const self = normalizePeer(username);
+  const seen = new Set<string>();
+  const names: string[] = [];
+  for (const participant of group?.participants ?? []) {
+    const key = normalizePeer(participant.username);
+    if (!key || key === self || seen.has(key)) continue;
+    seen.add(key);
+    const contact = contacts.find((entry) => normalizePeer(entry.username) === key);
+    names.push(contact?.display.trim() || participant.username.trim());
+  }
+  if (!names.length) return 'Group Chat';
+  return names.slice(0, 2).join(', ') + (names.length > 2 ? ` +${names.length - 2}` : '');
+}
+
 export interface ContactSection {
   id: number;
   name: string;

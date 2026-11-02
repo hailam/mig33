@@ -10,7 +10,7 @@ The Go backend stays in the root module.
 
 Choose **Appearance** in Modern Login's ellipsis menu or a conversation/Friends
 menu; Classic keeps its Login link. Modern uses
-v4's teal/navy/orange palette with spacious controls, grouped preferences,
+v4's teal/navy/orange palette with spacious controls, compact sign-in options,
 clear friend lists and an inline message composer. Classic v4 retains the original
 gradients, compact rows, command bar and separate Write Message screen.
 Classic v3 has blue headers, slanted text tabs, a plain Friends list, gold focus
@@ -36,12 +36,99 @@ controls own their press behavior; content transitions use the native Animated
 driver and respect Reduce Motion. Glass surfaces and their ancestors stay at
 full opacity while the system material handles translucency.
 
+With no open conversations, the fixed Friends/Rooms destinations and actual
+ellipsis menu share a SwiftUI `GlassEffectContainer` and namespace in
+`ModernNavigation.ios.tsx`. On authenticated arrival their measured native
+controls form one compact lens, then stretch and
+separate into their final positions, retaining stable glass identities and real
+button hit targets. The labels can fade inside the
+material; neither the glass nor its ancestors fade. The final navigation width
+is reserved throughout. Ordinary tab changes do not replay this arrival.
+Once conversations are open, their native glass buttons scroll in a SwiftUI
+`ScrollView` whose glass container stays inside the clipped viewport. The fixed
+destinations and menu stay outside that scrolling container. Newly selected
+chats reveal after native layout; user dragging cancels a pending reveal. The
+slot grows with actual content and Dynamic Type and retains unread treatment.
+
+Modern forms the mig33 mark in its Login position using the local
+[`mig33-brand-glass` module](modules/mig33-brand-glass/PROVENANCE.md). Two
+source-derived native SwiftUI shapes share one glass container and namespace.
+A smooth lens stretches a liquid neck, separates, overshoots outward, then
+rebounds slightly inward as the larger body yields. Both spring back into the
+original logo geometry while remaining separate. The original lettering writes
+itself during that motion: `m`, `i`, `g`, the dot, then both `3` glyphs, following
+their bubbles through the rebound. Once the spring finishes, the same glass
+deepens in color. The native material
+remains mounted after formation, including the resting Login and Welcome views.
+There is no final image replacement, gradient overlay, or material transition.
+Glass views and ancestors stay at full opacity.
+Controls enter in parallel, and touching the interface settles
+the introduction immediately.
+
+The native launch storyboard and app preparation view share the same static
+[first-pose artwork](assets/launch-mark.md) against the system light/dark
+background at the Login logo's final anchor.
+Local appearance, accessibility and saved-login state determine readiness; there
+is no minimum splash timer. The native brand view reports readiness only after
+attached positive layout and display-frame coordination. SwiftUI's final native
+animation completion ends formation without replacing the logo. Auto Login keeps the credentials form
+out of view while the real connection runs; failure returns to Login with the
+existing error flow. It retains the preparation poster until local preferences
+resolve, even when saved credentials become available first.
+
+One root `SafeAreaProvider` is seeded with actual `initialWindowMetrics`.
+Modern applies those insets to its content and launch view on their first
+render; Classic retains its existing native safe-area wrapper. This prevents
+the automatic-login destination from first appearing without the status-bar
+inset and then jumping downward. The pinned package follows
+[Expo's initial-metrics guidance](https://docs.expo.dev/versions/latest/sdk/safe-area-context/#optimization)
+and the same three-day dependency policy.
+
+`ModernMotion.tsx` coordinates startup, authentication waiting and the 650ms
+Friends arrival. Manual sign-in has a quiet teal/amber waiting light, driven
+only while the session is actually connecting or authenticating; it is not a
+percentage or a prediction of completion. Successful authentication sends one
+light sweep upward while the auth palette settles into the home background,
+with staggered Friends content. Ordinary content may fade; any subtree with a
+native glass control uses translation only. Once settled, the background is
+quiet. Classic presentation and the original session protocol are unchanged.
+
+The shared clock cancels obsolete callbacks when its phase changes or unmounts.
+Becoming inactive or backgrounded settles startup/arrival once and stops waiting
+motion. Foregrounding cannot replay a settled phase; waiting resumes only if
+the real session is still authenticating. Reduce Motion settles these transitions
+immediately and disables the moving navigation arrival. Reduce Transparency
+uses solid controls, and both it and Increase Contrast suppress decorative
+background light. The brand uses the unchanged static mark for all three
+accessibility settings and on systems without Liquid Glass. The motion does
+not delay authentication or add reconnects.
+
 Text inputs retain UIKit editing, autofill and UTF-16 selection semantics.
 The composer has no inner border; ordinary form fields have one outline and
 a restrained focus color. Friends and Rooms expose visible context menus,
-preserve collapsed groups, expanded categories and the room filter across
-navigation, and use a measured navigation inset for larger text sizes. Refresh
-uses an accessible glass icon button beside the room filter and participant lists.
+preserve collapsed groups and expanded categories across navigation, and use a
+measured navigation inset for larger text sizes. Modern searches people and rooms
+inside those lists, with a 350ms debounce and explicit keyboard/icon submission.
+The adapter fetches the original server form and submits it through unchanged
+922/923 requests; it does not filter only loaded rooms. Room language and keyword
+filters are revealed inline. Results retain server order and actions, obsolete
+replies are discarded, and clearing restores the existing browse state. Classic
+retains its local filter and original page flow. Friends, Rooms, room participants,
+full-screen participant pickers and pages without editable fields support pull to
+refresh and named accessibility actions. Modern omits duplicate refresh buttons
+and built-in refresh menu entries for those lists/pages. Sheets retain explicit
+refresh because dragging changes their detent. Forms retain explicit page refresh
+so a drag cannot discard a draft. Server-added actions, category continuation,
+Back controls and Classic menus retain their existing behavior.
+
+Modern's UX audit also enables private messaging and group invitations for
+offline native friends, names group chats from known participants, confirms
+closing a private chat with an unsent draft, and removes global navigation from
+contact/room context menus. Roster actions use native submenus, checked presence
+and specific Create/Save labels. Vote-kick confirmations describe a vote and
+photo previews identify the recipient. Selected message colors preserve their
+hue with the smallest contrast adjustment instead of becoming the default;
+the draft previews that choice, while wire RGB and Classic colors stay exact.
 Modern Login keeps Remember Login visible. The ellipsis **Sign-in options**
 menu contains checked Auto Login and invisible-sign-in options, Connection
 Settings, and Appearance. The logo leads the screen; Sign in is a smaller heading.
@@ -49,9 +136,19 @@ The transcript reserves composer space in a measured list footer and follows
 new messages only while the reader remains at the bottom.
 
 Modern retains packet-supplied message and sender colors when they meet a
-4.5:1 contrast ratio against their current surface; otherwise it uses the
-theme's readable text color. Classic preserves the original colors, and raw
-protocol values remain unchanged.
+4.5:1 contrast ratio against their current surface; otherwise it adjusts their
+brightness while preserving hue. Classic preserves the original colors, and
+raw protocol values remain unchanged.
+
+The audit leaves these separate workflow improvements open:
+
+| Area | Remaining work |
+| --- | --- |
+| Auxiliary navigation | Replace the bottom Back dock with a navigation stack supporting interactive edge-swipe back. |
+| Long participant/invite lists | Add local name filtering while preserving eligibility and server membership. |
+| Less common actions | Reorganize the catch-all More menu without hiding original or server-added features. |
+| Original service pages | Redesign individual stacked forms and repeated headings; the generic renderer still preserves original form semantics. |
+| Directory discovery | Empty people search restores the roster; browsing the entire directory is not exposed. Community Groups have no search route in this server. |
 
 `src/ui/v3` contains the original 3.08 renderer colors and touch metrics.
 `src/ui/v4` contains source-tagged v4 values and shared native drawing primitives;
@@ -391,10 +488,50 @@ Increase Contrast. After the ellipsis correction and amber-strength adjustment,
 `run-fbkbwsce` passed dark-mode unread acceptance over HTTPS and TLS, including
 stable tab dimensions, tapping during animation, theme retention, clearing and
 real system Reduce Motion. Sequential native captures show changing amber
-intensity beneath readable glass controls. The final mobile suite passed191
+intensity beneath readable glass controls. That mobile suite passed 191
 tests with four optional Java skips, and iOS production export passed. The
 final amber-strength adjustment has native capture evidence in dark mode;
 the light presentation run preceded that adjustment.
+
+The current mobile check passes 208 tests with four optional original-Java
+skips (212 total), including live HTTP/TCP server search outside loaded contacts
+and room categories. The Release motion workflow passes in
+`data/mobile-ui/runs/run-y4rq5x_7`: failed login and retry, inline search,
+pull-to-refresh with browse-state retention, private messaging, remembered
+automatic login, native navigation bounds and real system Reduce Motion.
+Frame review of the light startup confirms overlapping lettering and glass
+separation, the inward rebound, and continuous pigment without a white-body
+flash or a blank native-launch handoff.
+
+The later light Release motion run `run-sakm9870` passed automated acceptance.
+Its separate recording review covers 91 frames of manual arrival and 144 frames
+of automatic arrival: Friends has its final safe-area allocation from the first frame,
+without the previous layout jump or a credential-form flash. That run exposed
+the earlier chat-strip clipping defect and is not scrolling visual acceptance.
+After replacing the strip with native SwiftUI scrolling, `run-gjahxs47` passed
+navigation-only acceptance in 108.18 seconds, including newly selected-chat
+reveal and fixed-control bounds during both drag directions. Its separate
+recording review found labels and glass confined to the viewport in both
+directions and confirmed reopening Bob with the preserved conversation.
+
+The final dark Release unread run `run-yzlinx26` passed over HTTPS and TLS in
+Modern, Classic v4 and Classic v3: unread on/off phases, retention across theme
+changes, clearing on selection and a steady cue with actual system Reduce
+Motion. Review of six sequential Modern captures confirms changing amber
+intensity beneath stable, readable native glass buttons; selected-chat captures
+clear the amber field on both transports, and Reduce Motion retains a steady cue.
+This screenshot review does not certify every frame of the recording.
+
+The expanded Modern HTTPS feature phase completed in `run-bkx23n07`, including
+selecting a nondefault color and choosing an actual system-library image,
+sending both, and checking the recipient's original RGB field and decoded
+full-size photo resource. The combined run then exposed a Classic photo-modal
+presentation race; it was not an overall pass. After fixing presentation to
+wait for actual modal dismissal, the isolated Classic v3 TLS workflow passed
+in `run-xpden3b0`, including colors, outgoing/incoming photos, moderation,
+vote-kick, blocking and private groups. These runs restore simulator appearance
+and temporary Xcode configuration. Recordings and peer evidence remain local
+under ignored `data/mobile-ui/runs/`.
 
 The following results are the **previous plain-transport baseline**, before
 the secure-only migration: iOS prebuild, native build and Metro/Hermes export

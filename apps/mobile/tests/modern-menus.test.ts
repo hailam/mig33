@@ -1,6 +1,22 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { modernChatItems } from '../src/ui/modernMenus.ts';
+import { modernChatItems, modernListItems } from '../src/ui/modernMenus.ts';
+
+test('Modern lists remove only their redundant built-in refresh and retain original handlers', () => {
+  const items = [
+    { id: 'refresh', label: 'Refresh Contact List', onPress: () => {} },
+    { id: 'refresh', label: 'Refresh Rooms', onPress: () => {} },
+    { id: 'refresh', label: 'Refresh', onPress: () => {} },
+    { id: 'more', label: 'Refresh Rooms', onPress: () => {} },
+    { id: 'search', label: 'Search Rooms', disabled: true, onPress: () => {} },
+    { id: 'server:refresh', label: 'Refresh Contact List', onPress: () => {} },
+  ];
+  const snapshot = [...items];
+  assert.deepEqual(modernListItems(items, 'friends'), items.slice(1));
+  assert.deepEqual(modernListItems(items, 'rooms'), [items[0], ...items.slice(2)]);
+  assert.deepEqual(items, snapshot);
+  assert.equal(modernListItems(items, 'friends').at(-1), items.at(-1));
+});
 
 test('Modern menu organization retains every original action, permission and server addition', () => {
   const items = ['participants', 'info', 'favorite', 'profile', 'private', 'add', 'gift', 'call', 'sms', 'credit',

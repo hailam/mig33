@@ -11,9 +11,9 @@ import {
 } from '@expo/ui/swift-ui/modifiers';
 import { useAppearance } from './appearance';
 import type { V4IconName, V4MenuItem } from './v4/primitives';
-import type { NativeAlertProps, NativeMenuAnchorProps, NativeSheetProps } from './NativePresentation';
+import type { NativeAlertProps, NativeMenuAnchorProps, NativeMenuItemsProps, NativeSheetProps } from './NativePresentation';
 
-export type { NativeAlertAction, NativeAlertProps, NativeMenuAnchorProps, NativeSheetProps } from './NativePresentation';
+export type { NativeAlertAction, NativeAlertProps, NativeMenuAnchorProps, NativeMenuItemsProps, NativeSheetProps } from './NativePresentation';
 export const supportsNativePresentation: boolean = true;
 
 type SystemImage = ComponentProps<typeof Button>['systemImage'];
@@ -38,6 +38,11 @@ function menuEntries(items: readonly V4MenuItem[]): React.ReactNode {
   </React.Fragment>);
 }
 
+/** Host-free content: the actual Menu owns its presentation and press target. */
+export function NativeMenuItems({ items, title }: NativeMenuItemsProps) {
+  return title ? <Section title={title}>{menuEntries(items)}</Section> : <>{menuEntries(items)}</>;
+}
+
 /** A real SwiftUI menu owns its label's hit target, placement and dismissal. */
 export function NativeMenuAnchor({ items, title, children, testID, accessibilityLabel: label,
   systemImage, variant = 'plain', disabled: inactive = false }: NativeMenuAnchorProps) {
@@ -50,7 +55,7 @@ export function NativeMenuAnchor({ items, title, children, testID, accessibility
       label={systemImage ? <Label title={name} systemImage={systemImage as SystemImage} modifiers={[
         labelStyle('iconOnly'), frame({ minWidth: labelMinimum, minHeight: labelMinimum }),
       ]} /> : <RNHostView matchContents><View pointerEvents="none" accessible={false} style={styles.menuLabel}>{children}</View></RNHostView>}>
-      {title ? <Section title={title}>{menuEntries(items)}</Section> : menuEntries(items)}
+      <NativeMenuItems items={items} title={title} />
     </Menu>
   </Host>;
 }

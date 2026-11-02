@@ -1,4 +1,5 @@
 import XCTest
+import UIKit
 
 /// Exercises the real React Native controls and native networking modules.
 /// Backend listeners and the Bob echo peer belong to the isolated runner.
@@ -22,6 +23,10 @@ final class Mig33SmokeTests: XCTestCase {
 
     private func relaunch() throws {
         app.terminate()
+        if environment["MIG33_SMOKE_CONFIGURATION"] == "Release" {
+            app.launch()
+            return
+        }
         let link = try XCTUnwrap(environment["MIG33_SMOKE_DEEP_LINK"])
         app.open(try XCTUnwrap(URL(string: link)))
     }
@@ -73,8 +78,9 @@ final class Mig33SmokeTests: XCTestCase {
     }
 
     private let nativeMenuLabels: [String: [String]] = [
+            "chat.close": ["Close Chat"],
             "chat.action.block": ["Block messages"], "chat.action.blocks": ["Blocked Users"],
-            "chat.action.invite": ["Add to Chat"], "chat.action.kick": ["Kick User"],
+            "chat.action.invite": ["Add to Chat"], "chat.action.kick": ["Kick User", "Vote to kick"],
             "chat.action.private": ["Private Chat"], "chat.menu.moderation": ["Moderation"],
             "chat.action.mute": ["Mute / unmute in this room"], "chat.action.info": ["Room Info"],
             "room.participants": ["Participants"], "group.participants": ["Participants"],
@@ -86,6 +92,8 @@ final class Mig33SmokeTests: XCTestCase {
             "login.connection": ["Connection Settings"], "login.auto": ["Auto Login"],
             "login.invisible": ["Login As Invisible"],
             "composer.open.emoticons": ["Insert Emoticon"], "composer.open.colors": ["Change Text Color"],
+            "chat.menu.more": ["More"], "chat.action.photo": ["Share Photo", "Send Photo"],
+            "photo.library": ["Choose from Photos"],
     ]
 
     private func nativeMenuViewport(_ collection: XCUIElement) -> CGRect {
@@ -138,8 +146,10 @@ final class Mig33SmokeTests: XCTestCase {
             let enabled = XCTNSPredicateExpectation(predicate: NSPredicate(format: "enabled == true"), object: control)
             XCTAssertEqual(XCTWaiter.wait(for: [enabled], timeout: 15), .completed, "Control remained disabled: \(id)")
         }
-        reveal(control)
-        waitUntilHittable(control, description: id)
+        let fixedNavigation = element("theme.modern").exists
+            && ["tab.friends", "tab.rooms", "tab.migworld", "command.menu"].contains(id)
+        if !fixedNavigation { reveal(control) }
+        waitUntilHittable(control, description: id, allowReveal: !fixedNavigation)
         if id == "chat.send" && element("theme.classic-v3").exists {
             // XCTest's implicit scroll-to-visible can return {-1,-1} for
             // this fixed React Native footer while the keyboard is present.
@@ -156,15 +166,17 @@ final class Mig33SmokeTests: XCTestCase {
         }
     }
 
-    private func waitUntilHittable(_ control: XCUIElement, description: String) {
+    private func waitUntilHittable(_ control: XCUIElement, description: String, allowReveal: Bool = true) {
         // A reveal can dismiss the software keyboard and relayout a long form.
         // Keep time for stable samples after XCTest's synchronous drag completes.
+        // Fixed navigation uses observation only: scrolling a content viewport
+        // cannot reveal its sibling tab, and a top-edge drag can activate it.
         let deadline = Date().addingTimeInterval(15)
         var previousFrame: CGRect?
         var readySince: Date?
         var revealAttempts = 0
         while Date() < deadline {
-            dismissSystemSavePassword()
+            if allowReveal { dismissSystemSavePassword() }
             if control.exists {
                 let frame = control.frame
                 if control.isHittable {
@@ -180,7 +192,7 @@ final class Mig33SmokeTests: XCTestCase {
                     // Re-evaluate the actual viewport; one scroll step may be
                     // needed even if an earlier sample was already hittable.
                     readySince = nil; previousFrame = nil
-                    if revealAttempts < 3 {
+                    if allowReveal && revealAttempts < 3 {
                         reveal(control, maxScrolls: 1)
                         revealAttempts += 1
                     }
@@ -252,11 +264,44 @@ final class Mig33SmokeTests: XCTestCase {
         let field = secure ? app.secureTextFields[id] : app.textFields[id]
         XCTAssertTrue(field.waitForExistence(timeout: 10), "Missing text field: \(id)")
         reveal(field)
+        let editable = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+            field.exists && field.isEnabled && field.isHittable
+        }, object: nil)
+        XCTAssertEqual(XCTWaiter.wait(for: [editable], timeout: 5), .completed,
+            "Text field is not ready for input: \(id)")
         field.tap()
         if let current = field.value as? String, current != field.placeholderValue {
             field.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: current.count))
         }
-        field.typeText(value)
+        assertFieldValue(field, "", secure: secure)
+        if id == "login.username" {
+            // XCTest's typeText requires keyboard focus. Acknowledging each
+            // character in the actual field also lets UIKit/RN finish its
+            // controlled update before the next event. A lost character must
+            // fail here, not silently authenticate a different username.
+            var entered = ""
+            for character in value {
+                field.typeText(String(character))
+                entered.append(character)
+                assertFieldValue(field, entered)
+            }
+        } else {
+            field.typeText(value)
+        }
+        assertFieldValue(field, value, secure: secure)
+    }
+
+    private func assertFieldValue(_ field: XCUIElement, _ expected: String, secure: Bool = false) {
+        let updated = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+            let raw = field.value as? String ?? ""
+            let actual = raw == field.placeholderValue ? "" : raw
+            // Secure fields expose bullets, never use their value as plaintext
+            // or include a password in the assertion's failure message.
+            return secure ? actual.count == expected.count : actual == expected
+        }, object: nil)
+        XCTAssertEqual(XCTWaiter.wait(for: [updated], timeout: 5), .completed,
+            secure ? "Secure text length did not settle: \(field.identifier)"
+                : "Text field did not retain the entered value: \(field.identifier)")
     }
 
     private func capture(_ name: String) {
@@ -544,7 +589,8 @@ final class Mig33SmokeTests: XCTestCase {
         _ = wait("rooms.room.Lobby")
         _ = wait("rooms.room.Gaming")
         capture("\(mode)-\(theme)-room-catalog")
-        fill("rooms.filter", "lob")
+        fill(theme == "modern" ? "search.rooms.query" : "rooms.filter", "lob")
+        if theme == "modern" { _ = wait("search.rooms.results") }
         _ = wait("rooms.room.Lobby")
         XCTAssertFalse(element("rooms.room.Gaming").exists, "Local room filter did not narrow the loaded category")
         capture("\(mode)-\(theme)-room-filtered")
@@ -667,7 +713,7 @@ final class Mig33SmokeTests: XCTestCase {
         XCTFail("Authoritative707 roster did not show \(name) present=\(present), muted=\(String(describing: muted)) in \(room)")
     }
 
-    private func pageButton(_ label: String) {
+    private func pageSubmit(_ label: String) -> XCUIElement {
         let control = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@ AND label == %@", "page.submit.", label)).firstMatch
         XCTAssertTrue(control.exists || control.waitForExistence(timeout: 15), "Missing original form submit: \(label)")
         if !control.isEnabled {
@@ -676,7 +722,19 @@ final class Mig33SmokeTests: XCTestCase {
         }
         reveal(control)
         waitUntilHittable(control, description: "Original form submit: \(label)")
-        control.tap()
+        return control
+    }
+
+    private func pageButton(_ label: String) {
+        pageSubmit(label).tap()
+    }
+
+    private func assertSearchSubmit(_ label: String) {
+        let control = pageSubmit(label)
+        XCTAssertEqual(control.label, label, "Search icon lost its source-specific accessible name")
+        XCTAssertGreaterThanOrEqual(control.frame.width, 44, "Search icon touch width is too small")
+        XCTAssertGreaterThanOrEqual(control.frame.height, 44, "Search icon touch height is too small")
+        XCTAssertLessThanOrEqual(control.frame.width, 56, "Modern Search reverted to a full-width text button")
     }
 
     private func pageLink(_ label: String) {
@@ -717,13 +775,13 @@ final class Mig33SmokeTests: XCTestCase {
         _ = wait("chat.screen")
     }
 
-    private func selectModeration(_ action: String, user: String) {
+    private func selectModeration(_ action: String, user: String, expectedLabel: String? = nil) {
         tap("command.menu")
         // The recovered Mute picker selects710 when708 marks the target muted.
         tap("chat.action.\(action == "unmute" ? "mute" : action)")
         tap("participant.select.\(user)")
         capture("feature-\(action)-confirmation")
-        XCTAssertEqual(wait("action.confirm").label, action.capitalized)
+        XCTAssertEqual(wait("action.confirm").label, expectedLabel ?? action.capitalized)
         tap("action.confirm")
     }
 
@@ -744,17 +802,54 @@ final class Mig33SmokeTests: XCTestCase {
         if element("notice.dismiss").waitForExistence(timeout: 1) { tap("notice.dismiss") }
     }
 
-    private func exerciseComposer(theme: String) throws {
+    private func assertPickerClosed(_ id: String, stage: String) {
+        let dismissed = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: element(id))
+        XCTAssertEqual(XCTWaiter.wait(for: [dismissed], timeout: 12), .completed, stage)
+    }
+
+    private func exerciseComposer(theme: String, mode: String) throws {
         if theme != "modern" { tap("chat.write") }
         tap("chat.tools"); tap("composer.open.colors")
         _ = wait("composer.colors")
+        // Purple is in the second/third row of the real924 palette. Testing
+        // only Default missed both selection state and lower-sheet hit bounds.
+        let colorID = "composer.color.8388736"
+        let selected = wait(colorID)
+        XCTAssertGreaterThan(selected.frame.minY, wait("composer.color.default").frame.minY + 40,
+            "The non-default swatch must exercise a lower picker row")
+        capture("\(mode)-composer-color-before-selection")
+        tap(colorID)
+        assertPickerClosed("composer.colors", stage: "Tapping a non-default color did not dismiss the picker")
+        tap("chat.tools"); tap("composer.open.colors")
+        XCTAssertTrue(wait(colorID).isSelected, "The selected original924 color was not retained after reopening")
+        capture("\(mode)-composer-color-selection-retained")
+        tap("chat.sheet.close")
+        assertPickerClosed("composer.colors", stage: "Color picker Close did not dismiss")
+        let body = "Selected color from iOS " + mode.uppercased()
+        editor().tap(); editor().typeText(body)
+        tap("chat.send")
+        _ = wait("chat.screen")
+        var deliveredColor = false
+        for _ in 0..<40 {
+            let messages = try peer(["action": "private-received"])["messages"] as? [[String: Any]] ?? []
+            if let message = messages.first(where: { $0["body"] as? String == body }) {
+                XCTAssertEqual(message["color"] as? Int, 8388736, "Selected RGB was absent or changed in received500/tag13")
+                deliveredColor = true; break
+            }
+            pauseForDelivery()
+        }
+        XCTAssertTrue(deliveredColor, "Bob did not receive the explicitly sent colored message")
+        if theme != "modern" { tap("chat.write") }
+        tap("chat.tools"); tap("composer.open.colors")
         tap("composer.color.default")
+        assertPickerClosed("composer.colors", stage: "Default color did not dismiss the picker")
         tap("chat.tools"); tap("composer.open.emoticons")
         _ = wait("composer.emoticons")
         let choice = app.descendants(matching: .any).matching(NSPredicate(format: "identifier BEGINSWITH %@", "composer.emoticon.")).firstMatch
         XCTAssertTrue(choice.waitForExistence(timeout: 15), "Original916 supplied no usable emoticon")
         XCTAssertTrue(choice.isHittable)
         choice.tap()
+        assertPickerClosed("composer.emoticons", stage: "Selecting an emoticon did not dismiss the picker")
         let shortcut = (editor().value as? String ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
         XCTAssertFalse(shortcut.isEmpty, "Selecting an original emoticon did not insert its shortcut")
         let receivedBefore = (try peer(["action": "private-received"])["bodies"] as? [String] ?? []).count
@@ -773,6 +868,52 @@ final class Mig33SmokeTests: XCTestCase {
             pauseForDelivery()
         }
         XCTAssertTrue(delivered, "The original500 recipient did not receive the selected emoticon shortcut")
+    }
+
+    private func exerciseOutgoingPhoto(theme: String, mode: String) throws {
+        let before = try peer(["action": "photo-received"])["count"] as? Int ?? 0
+        tap("command.menu")
+        if theme == "modern" { tap("chat.menu.more") }
+        tap("chat.action.photo")
+        _ = wait("photo.library")
+        capture("\(mode)-photo-source-picker")
+        tap("photo.library")
+        assertPickerClosed("photo.library", stage: "Photo-library choice did not dismiss the source sheet")
+        // PHPicker is a system presentation, not the app's source sheet.
+        // The runner imports only a synthetic24×24 PNG on this dedicated sim.
+        // Current Photos exposes grid assets as AX images, not collection
+        // cells. Match its observed asset identifier, never arbitrary images
+        // from the chat behind the system presentation.
+        let firstPhoto = app.images.matching(identifier: "PXGGridLayout-Info").firstMatch
+        XCTAssertTrue(firstPhoto.waitForExistence(timeout: 20), "Choose from Photos did not open the system photo grid")
+        XCTAssertTrue(app.navigationBars["Photos"].buttons["Cancel"].exists,
+            "System photo picker is missing its Cancel control")
+        waitUntilHittable(firstPhoto, description: "System Photos fixture thumbnail", allowReveal: false)
+        capture("\(mode)-photo-system-library")
+        captureTree("\(mode)-photo-system-library-tree")
+        firstPhoto.tap()
+        _ = wait("photo.preview", timeout: 25)
+        _ = wait("photo.send")
+        capture("\(mode)-photo-outgoing-preview")
+        tap("photo.send")
+        assertPickerClosed("photo.send", stage: "Photo Send did not finish the original500 acknowledgement and close its preview")
+        var delivered = false
+        for _ in 0..<40 {
+            let result = try peer(["action": "photo-received"])
+            if (result["count"] as? Int ?? 0) > before {
+                XCTAssertEqual(result["content"] as? Int, 5, "Backend did not deliver the original photo-reference500")
+                let uri = try XCTUnwrap(result["imageURI"] as? String)
+                XCTAssertTrue(uri.hasPrefix("data:image/jpeg;base64,"), "Native picker did not normalize the outgoing photo to JPEG")
+                let data = try XCTUnwrap(Data(base64Encoded: uri.components(separatedBy: ",").last ?? ""))
+                let image = try XCTUnwrap(UIImage(data: data), "Bob's full original922 photo resource is not a decodable image")
+                XCTAssertEqual(image.size.width, 24, "System picker selected an image other than the seeded fixture")
+                XCTAssertEqual(image.size.height, 24, "System picker selected an image other than the seeded fixture")
+                delivered = true; break
+            }
+            pauseForDelivery()
+        }
+        XCTAssertTrue(delivered, "Bob never received the photo selected and sent by the native app")
+        capture("\(mode)-photo-outgoing-acknowledged")
     }
 
     private func revealTab(_ id: String) {
@@ -1087,15 +1228,17 @@ final class Mig33SmokeTests: XCTestCase {
         openRoomCatalog()
         _ = wait("rooms.room.Lobby")
         capture("modern-room-catalog")
-        fill("rooms.filter", "lob")
+        fill("search.rooms.query", "lob")
+        _ = wait("search.rooms.results")
         XCTAssertFalse(element("rooms.room.Gaming").exists, "Loaded-room filter did not narrow the catalog")
         tap("tab.friends"); _ = wait("friends.screen")
         tap("tab.rooms"); _ = wait("rooms.screen")
-        XCTAssertEqual(app.textFields["rooms.filter"].value as? String, "lob", "Navigation lost the room filter")
-        assertExpanded("rooms.category.1", true)
+        XCTAssertEqual(app.textFields["search.rooms.query"].value as? String, "lob", "Navigation lost the room search")
         _ = wait("rooms.room.Lobby")
         XCTAssertFalse(element("rooms.room.Gaming").exists, "Returning to Rooms lost the active filter")
         capture("modern-room-filter-retained")
+        tap("search.rooms.clear")
+        assertExpanded("rooms.category.1", true)
         tap("rooms.more.Lobby")
         _ = wait("room.join")
         capture("modern-room-native-options")
@@ -1105,6 +1248,9 @@ final class Mig33SmokeTests: XCTestCase {
         assertRoomText("Room reply: Hello room from iOS HTTPS")
         capture("modern-room-reply")
         tap("command.menu"); tap("room.participants")
+        _ = wait("participants.user.bob")
+        XCTAssertFalse(element("participants.refresh").exists, "Modern People retained a redundant refresh button")
+        pullToRefresh("participants.screen", headingID: "participants.heading")
         _ = wait("participants.user.bob")
         capture("modern-room-participants")
         tap("participants.back")
@@ -1256,6 +1402,13 @@ final class Mig33SmokeTests: XCTestCase {
         _ = wait("friends.screen", timeout: 35)
         if theme == "modern" { _ = wait("glass.native") }
 
+        // Check the reported picker failures before unrelated room workflows.
+        tap("friends.contact.bob")
+        try exerciseComposer(theme: theme, mode: mode)
+        try exerciseOutgoingPhoto(theme: theme, mode: mode)
+        tap("command.menu"); tap("chat.close")
+        _ = wait("friends.screen")
+
         let suffix = mode.uppercased()
         let room = "Native " + suffix
         let description = "café & + = 50% — native " + suffix
@@ -1303,10 +1456,18 @@ final class Mig33SmokeTests: XCTestCase {
         // remove Dave immediately; two other real accounts complete the vote.
         let voteRoom = "Vote " + suffix
         _ = try peer(["action": "create-vote", "room": voteRoom])
-        tap("rooms.refresh")
+        if theme == "modern" {
+            XCTAssertFalse(element("rooms.refresh").exists, "Modern Rooms retained a redundant refresh button")
+            // The room did not exist when this catalog loaded. Finding it
+            // after the pull proves a real request, even when loopback replies
+            // finish too quickly for XCTest to sample the busy heading.
+            pullToRefresh("rooms.screen", headingID: "rooms.heading")
+        } else {
+            tap("rooms.refresh")
+        }
         setExpanded("rooms.category.1", true)
         selectRoom(voteRoom)
-        selectModeration("kick", user: "dave")
+        selectModeration("kick", user: "dave", expectedLabel: theme == "modern" ? "Vote to kick" : "Kick")
         try assertMember("dave", in: voteRoom, present: true, actor: "bob")
         dismissActionNotice()
         assertRoomText("A vote to kick dave was started by alice")
@@ -1353,7 +1514,6 @@ final class Mig33SmokeTests: XCTestCase {
         _ = wait("photo.preview")
         capture("\(mode)-feature-original-photo-preview")
         tap("chat.sheet.close")
-        try exerciseComposer(theme: theme)
 
         let previous = Set(try peer(["action": "groups"])["groups"] as? [String] ?? [])
         inviteFeatureUser("carol", theme: theme)
@@ -1372,6 +1532,15 @@ final class Mig33SmokeTests: XCTestCase {
         if theme == "classic-v3" { tap("chat.more") }
         tap("group.participants")
         _ = wait("participant.select.dave")
+        if theme == "modern" {
+            if element("sheet.native").exists {
+                assertModernListIcon("participant.refresh", label: "Refresh participants")
+            } else {
+                XCTAssertFalse(element("participant.refresh").exists, "Full-screen People retained a redundant refresh button")
+                pullToRefresh("participant.picker", headingID: "participant.heading")
+                _ = wait("participant.select.dave")
+            }
+        }
         capture("\(mode)-feature-group-participants")
         tap("participant.back")
         sendFeatureText("Hello group from iOS " + suffix, theme: theme)
@@ -1551,6 +1720,304 @@ final class Mig33SmokeTests: XCTestCase {
         capture("remember-deleted")
     }
 
+    private func setMotionLoginPreference(_ id: String, _ enabled: Bool) {
+        if id == "login.remember" {
+            let control = app.switches[id].firstMatch
+            XCTAssertTrue(control.exists, "Modern Remember Login is not a native switch")
+            if (control.value as? String == "1") != enabled { toggleLoginPreference(id) }
+            return
+        }
+        let control = wait(id)
+        if menuPreferenceState(control) != enabled {
+            toggleLoginPreference(id)
+        } else {
+            // Dismiss the actual native menu through its existing destination.
+            tap("appearance.open"); tap("appearance.back")
+        }
+    }
+
+    private func assertMotionNavigation(_ name: String) {
+        _ = wait("friends.screen", timeout: 35)
+        _ = wait("friends.contact.bob")
+        let settled = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+            !self.element("login.arrival").exists
+        }, object: nil)
+        XCTAssertEqual(XCTWaiter.wait(for: [settled], timeout: 5), .completed,
+            "Login arrival did not settle")
+        for id in ["tab.friends", "tab.rooms", "command.menu"] {
+            let control = wait(id)
+            waitUntilHittable(control, description: "Settled navigation \(id)", allowReveal: false)
+            XCTAssertGreaterThanOrEqual(control.frame.width, 44, "Native destination touch width is too small")
+            XCTAssertGreaterThanOrEqual(control.frame.height, 44, "Native destination touch height is too small")
+        }
+        XCTAssertTrue(element("friends.screen").exists, "Navigation readiness changed the active screen")
+        XCTAssertTrue(wait("tab.friends").isSelected, "Friends lost its native selected trait")
+        capture("\(name)-friends")
+        captureTree("\(name)-navigation-tree")
+        tap("tab.rooms"); _ = wait("rooms.screen")
+        XCTAssertTrue(wait("tab.rooms").isSelected)
+        tap("tab.friends"); _ = wait("friends.screen")
+        tap("command.menu"); _ = wait("appearance.open")
+        capture("\(name)-menu")
+        tap("appearance.open"); _ = wait("appearance.screen")
+        tap("appearance.back"); _ = wait("friends.screen")
+    }
+
+    private func awaitAutomaticMotionLogin() {
+        // launch() waits for native quiescence. These checks cover the state
+        // observable afterward; the continuous simulator recording is needed
+        // to inspect every launch frame for a transient login-form flash.
+        let deadline = Date().addingTimeInterval(45)
+        repeat {
+            for id in ["login.username", "login.password", "login.submit"] {
+                let control = element(id)
+                XCTAssertFalse(control.exists && control.isHittable, "Automatic sign-in exposed an interactive login form: \(id)")
+            }
+            if element("friends.screen").exists { return }
+            RunLoop.current.run(until: Date().addingTimeInterval(0.05))
+        } while Date() < deadline
+        XCTFail("Remembered automatic sign-in did not reach Friends")
+    }
+
+    private func assertModernListIcon(_ id: String, label: String) {
+        let control = app.buttons[id].firstMatch
+        XCTAssertTrue(control.exists || control.waitForExistence(timeout: 10), "List action is not a native button: \(id)")
+        waitUntilHittable(control, description: id)
+        XCTAssertEqual(control.label, label, "Icon action lost its precise accessible name")
+        XCTAssertGreaterThanOrEqual(control.frame.width, 44, "List icon touch width is too small: \(id)")
+        XCTAssertGreaterThanOrEqual(control.frame.height, 44, "List icon touch height is too small: \(id)")
+        XCTAssertLessThanOrEqual(control.frame.width, 56, "List action is no longer a compact icon: \(id)")
+    }
+
+    private func awaitListRefresh(_ headingID: String, screenID: String) {
+        _ = wait(headingID)
+        let finished = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+            let heading = self.element(headingID)
+            return heading.exists && !(heading.value as? String ?? "").localizedCaseInsensitiveContains("Refreshing")
+        }, object: nil)
+        XCTAssertEqual(XCTWaiter.wait(for: [finished], timeout: 20), .completed, "List refresh did not finish")
+        XCTAssertTrue(element(screenID).exists, "Refresh navigated away from its list")
+        XCTAssertFalse(element("dialog.ok").exists, "List refresh presented an error")
+    }
+
+    private func pullToRefresh(_ screenID: String, headingID: String) {
+        awaitListRefresh(headingID, screenID: screenID)
+        let list = wait(screenID)
+        let viewport = list.frame.intersection(app.frame)
+        let navigationBottom = ["tab.friends", "command.menu"].map { element($0) }
+            .filter { $0.exists && $0.isHittable }.map { $0.frame.maxY }.max() ?? viewport.minY
+        let startY = max(viewport.minY + 90, navigationBottom + 60)
+        // UIKit rubber-bands the content; a shallow drag only reveals its
+        // spinner. One bounded full pull must produce fresh server results.
+        let endY = min(viewport.maxY - 30, startY + 500)
+        XCTAssertGreaterThan(endY - startY, 140, "List has insufficient visible space for a refresh gesture")
+        XCTAssertGreaterThan(startY, navigationBottom + 20, "Refresh gesture would cross fixed navigation")
+        let origin = list.coordinate(withNormalizedOffset: .zero)
+        let start = origin.withOffset(CGVector(dx: viewport.midX - list.frame.minX, dy: startY - list.frame.minY))
+        let end = origin.withOffset(CGVector(dx: viewport.midX - list.frame.minX, dy: endY - list.frame.minY))
+        start.press(forDuration: 0.05, thenDragTo: end, withVelocity: .slow, thenHoldForDuration: 0.2)
+        awaitListRefresh(headingID, screenID: screenID)
+    }
+
+    private func exerciseModernListControls() {
+        XCTAssertFalse(element("friends.refresh").exists, "Modern Friends retained a redundant refresh button")
+        fill("search.people.query", "bob")
+        assertModernListIcon("search.people.submit", label: "Search people")
+        app.textFields["search.people.query"].typeText("\n")
+        _ = wait("search.people.results")
+        XCTAssertFalse(element("page.screen").exists, "Search left Friends for a separate page")
+        _ = wait("search.people.result.people:bob")
+        capture("motion-friends-inline-search")
+        tap("search.people.clear")
+        setExpanded("friends.group.1", false)
+        pullToRefresh("friends.screen", headingID: "friends.heading")
+        assertExpanded("friends.group.1", false)
+        XCTAssertFalse(element("friends.contact.bob").exists, "Refresh expanded a collapsed Friends group")
+        capture("motion-friends-refresh-state")
+        setExpanded("friends.group.1", true); _ = wait("friends.contact.bob")
+        tap("command.menu"); _ = wait("appearance.open")
+        XCTAssertFalse(app.buttons.matching(NSPredicate(format: "label == %@", "Refresh Contact List")).firstMatch.exists,
+                       "Modern Friends retained its redundant refresh menu entry")
+        XCTAssertFalse(element("roster.refresh").exists)
+        tap("appearance.open"); tap("appearance.back")
+
+        openRoomCatalog(); _ = wait("rooms.room.Lobby")
+        XCTAssertFalse(element("rooms.refresh").exists, "Modern Rooms retained a redundant refresh button")
+        setExpanded("rooms.category.1", false)
+        fill("search.rooms.query", "Lobby")
+        assertModernListIcon("search.rooms.submit", label: "Search rooms")
+        tap("search.rooms.submit")
+        _ = wait("search.rooms.results"); _ = wait("rooms.room.Lobby")
+        XCTAssertFalse(element("page.screen").exists, "Search left Rooms for a separate page")
+        XCTAssertFalse(element("rooms.room.Gaming").exists, "Server search returned an unrelated room")
+        capture("motion-rooms-inline-search")
+        pullToRefresh("rooms.screen", headingID: "rooms.heading")
+        _ = wait("search.rooms.results"); _ = wait("rooms.room.Lobby")
+        XCTAssertEqual(app.textFields["search.rooms.query"].value as? String, "Lobby", "Refresh discarded the search")
+        tap("search.rooms.clear")
+        assertExpanded("rooms.category.1", false)
+        setExpanded("rooms.category.1", true); _ = wait("rooms.room.Lobby")
+        _ = wait("rooms.room.Gaming")
+        capture("motion-rooms-refresh-state")
+        tap("command.menu"); _ = wait("rooms.create")
+        XCTAssertFalse(app.buttons.matching(NSPredicate(format: "label == %@", "Refresh Rooms")).firstMatch.exists,
+                       "Modern Rooms retained its redundant refresh menu entry")
+        tap("appearance.open"); tap("appearance.back")
+        assertExpanded("rooms.category.1", true)
+
+        selectRoom("Lobby")
+        assertRoomText("Welcome to Lobby.")
+        tap("command.menu"); tap("room.participants")
+        _ = wait("participants.screen")
+        _ = wait("participants.user.alice"); _ = wait("participants.user.bob")
+        XCTAssertFalse(element("participants.refresh").exists, "Modern People retained a redundant refresh button")
+        pullToRefresh("participants.screen", headingID: "participants.heading")
+        _ = wait("participants.user.alice"); _ = wait("participants.user.bob")
+        capture("motion-people-refresh-state")
+        tap("participants.back"); _ = wait("chat.screen")
+        leaveCurrentRoom("Lobby")
+        assertExpanded("rooms.category.1", true)
+        tap("tab.friends"); _ = wait("friends.contact.bob")
+    }
+
+    private func exerciseModernTabScrolling() {
+        // Open enough real conversations to overflow the allocated chat strip.
+        // Offline native friends are valid private-chat destinations too.
+        for username in ["carol", "dave", "hailam"] {
+            tap("tab.friends")
+            tap("friends.contact.\(username)")
+            _ = wait("chat.screen")
+            let selected = wait("tab.peer:\(username)")
+            let visible = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+                let viewport = self.element("tabs.items").frame
+                return viewport.width > 0 && selected.frame.minX >= viewport.minX - 0.5
+                    && selected.frame.maxX <= viewport.maxX + 0.5 && selected.isHittable
+            }, object: nil)
+            XCTAssertEqual(XCTWaiter.wait(for: [visible], timeout: 10), .completed,
+                "Newly selected chat was not revealed by native scrolling: \(username)")
+        }
+        let scroll = wait("tabs.items")
+        let friends = wait("tab.friends"), rooms = wait("tab.rooms"), menu = wait("command.menu")
+        let fixedFrames = [friends.frame, rooms.frame, menu.frame]
+        let viewport = scroll.frame
+        XCTAssertGreaterThan(viewport.width, 70, "Chat strip has no useful drag viewport")
+        XCTAssertGreaterThanOrEqual(viewport.minX, rooms.frame.maxX, "Chat strip overlaps fixed destinations")
+        XCTAssertLessThanOrEqual(viewport.maxX, menu.frame.minX, "Chat strip overlaps the fixed menu")
+        capture("motion-tabs-before-drag")
+        for towardStart in [true, false] {
+            let origin = scroll.coordinate(withNormalizedOffset: .zero)
+            let left = origin.withOffset(CGVector(dx: 12, dy: viewport.height / 2))
+            let right = origin.withOffset(CGVector(dx: viewport.width - 12, dy: viewport.height / 2))
+            (towardStart ? left : right).press(forDuration: 0.1,
+                thenDragTo: towardStart ? right : left, withVelocity: .slow, thenHoldForDuration: 0.3)
+            for (index, control) in [friends, rooms, menu].enumerated() {
+                XCTAssertEqual(control.frame.minX, fixedFrames[index].minX, accuracy: 0.5)
+                XCTAssertEqual(control.frame.width, fixedFrames[index].width, accuracy: 0.5)
+                XCTAssertTrue(control.isHittable, "Dragging chats displaced a fixed navigation control")
+            }
+            capture(towardStart ? "motion-tabs-drag-leading" : "motion-tabs-drag-trailing")
+        }
+        // Frames prove allocation and the video must separately prove that
+        // hosted native ink does not escape it during the continuous drag.
+        revealTab("tab.peer:bob"); tap("tab.peer:bob")
+        _ = wait("chat.screen")
+        capture("motion-tabs-return-bob")
+    }
+
+    private func prepareMotionLogin() {
+        // A failed prior motion run can leave its synthetic Alice credentials
+        // saved against an isolated listener that has since stopped. Handle
+        // only that known native login alert, never arbitrary application or
+        // system dialogs, before Settings causes another process restart.
+        let loaded = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+            self.element("login.username").exists || self.element("friends.screen").exists
+                || self.element("welcome.login").exists
+        }, object: nil)
+        XCTAssertEqual(XCTWaiter.wait(for: [loaded], timeout: 50), .completed, "Motion setup did not reach Login or Friends")
+        if element("friends.screen").exists { logout("motion-bootstrap") }
+        let alert = app.alerts.firstMatch
+        if alert.exists {
+            let alice = app.textFields["login.username"].value as? String == "alice"
+            // Auto Login's native connection error can expose only UIKit's
+            // OK label. Scope recovery to this exact fixture alert rather
+            // than requiring the controlled dialog's optional identifier.
+            let acknowledgment = alert.buttons.matching(NSPredicate(format: "label == %@", "OK"))
+            let loginError = alert.staticTexts["Error"].exists && acknowledgment.count == 1
+            guard alice && loginError else {
+                XCTFail("Unexpected alert during motion setup; only the saved Alice fixture's native login Error may be acknowledged")
+                return
+            }
+            capture("motion-bootstrap-previous-fixture-error")
+            waitUntilHittable(acknowledgment.firstMatch, description: "Previous Alice fixture login error")
+            acknowledgment.firstMatch.tap()
+        }
+        loginScreen()
+        chooseTheme("modern")
+        setMotionLoginPreference("login.remember", false)
+        capture("motion-bootstrap-ready")
+    }
+
+    private func exerciseMotion() throws {
+        prepareMotionLogin()
+        let originalMotion = try setSystemReduceMotion(false)
+        defer { _ = try? setSystemReduceMotion(originalMotion) }
+        // A real process restart records Modern's launch handoff with no
+        // credentials. The native launch screen itself requires Release.
+        try relaunch(); loginScreen()
+        let brandSettled = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+            !self.element("brand.forming").exists
+        }, object: nil)
+        XCTAssertEqual(XCTWaiter.wait(for: [brandSettled], timeout: 5), .completed,
+            "Native brand formation did not complete")
+        capture("motion-startup-login-ready")
+        configure("https", port: try XCTUnwrap(environment["MIG33_SMOKE_HTTPS_PORT"]))
+        setMotionLoginPreference("login.invisible", false)
+        setMotionLoginPreference("login.auto", true)
+        XCTAssertEqual(app.switches["login.remember"].firstMatch.value as? String, "1")
+        fill("login.username", "alice")
+        fill("login.password", "wrong-smoke-password", secure: true)
+        capture("motion-manual-before-authentication")
+        tap("login.submit")
+        _ = wait("dialog.ok", timeout: 30)
+        XCTAssertTrue(app.alerts.firstMatch.exists, "Failed credentials did not show a native error alert")
+        XCTAssertFalse(element("friends.screen").exists, "Rejected credentials reached the signed-in screen")
+        capture("motion-login-error")
+        tap("dialog.ok"); loginScreen()
+        XCTAssertEqual(app.textFields["login.username"].value as? String, "alice", "Login failure discarded the username")
+        fill("login.password", "alice-demo", secure: true)
+        tap("login.submit")
+        assertMotionNavigation("motion-manual-success")
+        exerciseModernListControls()
+        tap("friends.contact.bob"); _ = wait("chat.screen")
+        let message = "Hello from iOS HTTPS"
+        editor().tap(); editor().typeText(message); tap("chat.send")
+        assertReply(message)
+        capture("motion-manual-private-reply")
+        exerciseModernTabScrolling()
+        logout("motion-manual")
+
+        // Correct credentials were saved only by the successful manual retry.
+        // Relaunch performs authentication without typing or pressing Login.
+        try relaunch()
+        awaitAutomaticMotionLogin()
+        assertMotionNavigation("motion-automatic-success")
+        logout("motion-automatic")
+        setMotionLoginPreference("login.remember", false)
+
+        // Settings backgrounds/suspends the application. This is a fresh
+        // process/login, not an assertion that a live connection survives it.
+        _ = try setSystemReduceMotion(true)
+        capture("motion-reduced-startup-login-ready")
+        XCTAssertEqual(app.textFields["login.username"].value as? String ?? "", "", "Remember Login was not deleted")
+        configure("https", port: try XCTUnwrap(environment["MIG33_SMOKE_HTTPS_PORT"]))
+        fill("login.username", "alice")
+        fill("login.password", "alice-demo", secure: true)
+        tap("login.submit")
+        assertMotionNavigation("motion-reduced-success")
+        logout("motion-reduced")
+        capture("motion-logged-out")
+    }
+
     private func exerciseSecureRejections() throws {
         chooseTheme("modern")
         tap("login.connection")
@@ -1580,6 +2047,22 @@ final class Mig33SmokeTests: XCTestCase {
     }
 
     func testOriginalHTTPAndTCP() throws {
+        if environment["MIG33_SMOKE_NAVIGATION_ONLY"] == "1" {
+            prepareMotionLogin()
+            configure("https", port: try XCTUnwrap(environment["MIG33_SMOKE_HTTPS_PORT"]))
+            fill("login.username", "alice"); fill("login.password", "alice-demo", secure: true)
+            tap("login.submit"); _ = wait("friends.screen", timeout: 35)
+            tap("friends.contact.bob"); _ = wait("chat.screen")
+            let message = "Hello from iOS HTTPS"
+            editor().tap(); editor().typeText(message); tap("chat.send"); assertReply(message)
+            exerciseModernTabScrolling()
+            logout("navigation")
+            return
+        }
+        if environment["MIG33_SMOKE_MOTION_ONLY"] == "1" {
+            try exerciseMotion()
+            return
+        }
         loginScreen()
         capture("login")
         if environment["MIG33_SMOKE_SECURE_ONLY"] == "1" { try exerciseSecureRejections() }
@@ -1619,8 +2102,9 @@ final class Mig33SmokeTests: XCTestCase {
             return
         }
         if environment["MIG33_SMOKE_FEATURES_ONLY"] == "1" {
-            try exerciseFeatures("https", theme: "modern")
-            try exerciseFeatures("tls", theme: "classic-v3")
+            let transport = environment["MIG33_SMOKE_FEATURE_TRANSPORT"] ?? "both"
+            if transport != "tls" { try exerciseFeatures("https", theme: "modern") }
+            if transport != "https" { try exerciseFeatures("tls", theme: "classic-v3") }
             capture("features-logged-out")
             return
         }

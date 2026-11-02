@@ -1,7 +1,9 @@
 import React, { useMemo, useRef, type ReactNode } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useAppearance } from '../appearance';
-import { ModernLogo } from '../ModernLogo';
+import { ModernBrand } from '../ModernBrand';
+import { ModernStartupLogo } from '../ModernLaunch';
+import { ModernMotionItem } from '../ModernMotion';
 import type { ConnectionForm } from '../connectionSettings';
 import { V4Button, V4Checkbox, V4ChoiceGroup, V4Field, V4Link, V4Logo, type V4FieldRef } from '../v4/primitives';
 
@@ -26,7 +28,7 @@ export function WelcomeScreen({ onLogin }: { onLogin: () => void }) {
   </ScrollView>;
   if (modern) return <ScrollView contentContainerStyle={[styles.form, styles.welcome]}>
     <View style={styles.welcomeIntro}>
-      <View style={styles.welcomeBrand}><ModernLogo width={176} /></View>
+      <View style={styles.welcomeBrand}><ModernBrand width={176} settled /></View>
       <Text accessibilityRole="header" style={styles.welcomeTitle}>Find your people.</Text>
       <Text style={styles.subtitle}>Friends and conversations, together.</Text>
     </View>
@@ -42,11 +44,13 @@ export function WelcomeScreen({ onLogin }: { onLogin: () => void }) {
 }
 
 /** Form15: original en-US labels and row order; unsupported flows stay disabled. */
-export function LoginScreen({ form, onChange, busy, onLogin, onConnection, onAppearance, showOffline, onShowOfflineChange, menuControl }: {
+export function LoginScreen({ form, onChange, busy, onLogin, onConnection, onAppearance, showOffline, onShowOfflineChange, menuControl, onStartupLayout, onStartupComplete }: {
   form: LoginForm; onChange: (change: Partial<LoginForm>) => void;
   busy: boolean; onLogin: () => void; onConnection: () => void; onAppearance: () => void;
   showOffline: boolean; onShowOfflineChange: (show: boolean) => void;
   menuControl?: ReactNode;
+  onStartupLayout?: () => void;
+  onStartupComplete?: () => void;
 }) {
   const { modern, v3 } = useAppearance();
   const styles = useStyles();
@@ -98,17 +102,20 @@ export function LoginScreen({ form, onChange, busy, onLogin, onConnection, onApp
     keyboardShouldPersistTaps="handled" keyboardDismissMode="on-drag">
     <View style={styles.intro}>
       <View style={styles.brandRow}>
-        <View style={styles.brand}><ModernLogo width={176} /></View>
-        {menuControl}
+        <View style={styles.brand}><ModernStartupLogo onReady={onStartupLayout}
+          onComplete={onStartupComplete} /></View>
+        <ModernMotionItem glass order={1} distance={12}>{menuControl}</ModernMotionItem>
       </View>
-      <Text accessibilityRole="header" style={styles.loginTitle}>Sign in</Text>
-      <Text style={styles.subtitle}>Friends and conversations, together.</Text>
+      <ModernMotionItem range={[.45, .85]}>
+        <Text accessibilityRole="header" style={styles.loginTitle}>Sign in</Text>
+        <Text style={styles.subtitle}>Friends and conversations, together.</Text>
+      </ModernMotionItem>
     </View>
-    <View style={styles.credentials}>{credentials}</View>
-    <View style={styles.preferences}>{rememberPreference}</View>
-    <View style={styles.actions}>
-      <V4Button testID="login.submit" label="Login" onPress={onLogin} busy={busy} style={styles.primaryButton} />
-    </View>
+    <ModernMotionItem glass order={2} style={styles.credentials}>{credentials}</ModernMotionItem>
+    <ModernMotionItem glass order={3} style={styles.preferences}>{rememberPreference}</ModernMotionItem>
+    <ModernMotionItem glass order={4} style={styles.actions}>
+      <V4Button testID="login.submit" label="Sign in" onPress={onLogin} busy={busy} style={styles.primaryButton} />
+    </ModernMotionItem>
   </ScrollView>;
   return <ScrollView testID="login.screen" contentContainerStyle={styles.form} keyboardShouldPersistTaps="handled">
     {credentials}
@@ -183,8 +190,8 @@ function useStyles() {
     v3Spacer: { height: 3 },
     watermark: { ...StyleSheet.absoluteFill, alignItems: 'center', justifyContent: 'center' },
     login: { paddingTop: 16 },
-    intro: { marginBottom: 25 },
-    brandRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 },
+    intro: { marginBottom: 25, zIndex: 1 },
+    brandRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20, zIndex: 1 },
     brand: { marginLeft: -17 },
     loginTitle: { color: theme.text, fontSize: 24, lineHeight: 31, fontWeight: '600', letterSpacing: -.4, marginBottom: 8 },
     title: { color: theme.text, fontSize: 36, lineHeight: 43, fontWeight: '700', letterSpacing: -1.1, marginBottom: 8 },

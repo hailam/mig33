@@ -2,7 +2,7 @@
 """Run native iOS UI smoke tests against isolated original-protocol listeners.
 
 Requires the app's generated iOS workspace, installed Ruby/CocoaPods profile,
-a built Go server, and an existing Metro server. No packages are installed.
+a built Go server, and (for Debug) an existing Metro server. No packages are installed.
 Only this runner's backend/peer processes are stopped. The ignored Xcode project
 is restored afterward; test logs, screenshots and xcresult stay under data/.
 """
@@ -70,6 +70,8 @@ def main():
     parser.add_argument('--device', required=True, help='Installed simulator UDID')
     parser.add_argument('--server-binary', type=Path, default=ROOT / 'data/mobile-integration/server')
     parser.add_argument('--metro-url', default='http://127.0.0.1:8081')
+    parser.add_argument('--configuration', choices=('Debug', 'Release'), default='Debug', help='Release launches the bundled app directly and exercises the native launch screen')
+    parser.add_argument('--record-video', action='store_true', help='Record simulator video from XCTest startup through completion; finalize the MP4 with SIGINT')
     parser.add_argument('--tls-dir', type=Path, default=ROOT / 'data/local-tls', help='Local certificates; trust ca.pem on the dedicated simulator first')
     parser.add_argument('--appearance', choices=('light', 'dark'), help='Temporarily set simulator appearance; restore it afterward')
     content_sizes = ('extra-small', 'small', 'medium', 'large', 'extra-large', 'extra-extra-large', 'extra-extra-extra-large',
@@ -80,11 +82,18 @@ def main():
     scope.add_argument('--v3-only', action='store_true', help='Test Classic v3 over HTTPS and TLS, appearance restart and live switching across all three themes')
     scope.add_argument('--rooms-only', action='store_true', help='Test room catalog, favorites, participants, messaging, drafts, all three themes and leave over HTTPS/TLS')
     scope.add_argument('--features-only', action='store_true', help='Test original room moderation/votes, private blocks, groups and linked page forms over Modern HTTPS and Classic v3 TLS')
+    parser.add_argument('--feature-transport', choices=('https', 'tls'), help='Limit --features-only to Modern HTTPS or Classic v3 TLS; secure acceptance always requires both')
     scope.add_argument('--unread-only', action='store_true', help='Test whole-tab unread phases, theme retention, clearing and real system Reduce Motion over HTTPS/TLS')
     scope.add_argument('--modern-only', action='store_true', help='Test Modern native glass/navigation/menus/alerts/sheet detents, private/room chat and unread over HTTPS')
+    scope.add_argument('--motion-only', action='store_true', help='Test Modern startup, failed/manual/remembered-auto login, settled navigation and real Reduce Motion over HTTPS; use Release and video for native launch review')
+    scope.add_argument('--navigation-only', action='store_true', help='Test Modern HTTPS private reply, automatic selected-chat reveal and overflowing chat-tab drags; record video to review clipping')
     scope.add_argument('--commands-only', action='store_true', help='Test slash suggestions, retained draft/focus, gift completion and explicit private/room action sends over Modern HTTPS and Classic v3 TLS')
     scope.add_argument('--secure-only', action='store_true', help='Reject invalid certificates/redirects, then test real HTTPS/TLS room, private/group, page and photo workflows')
     args = parser.parse_args()
+    if args.feature_transport is not None and (not args.features_only or args.secure_only):
+        parser.error('--feature-transport is allowed only with --features-only, never --secure-only')
+    feature_transports = [args.feature_transport] if args.feature_transport else ['https', 'tls']
+    feature_scope = ' and '.join({'https': 'Modern HTTPS', 'tls': 'Classic v3 TLS'}[transport] for transport in feature_transports)
     args.features_only = args.features_only or args.secure_only
     tls_dir = args.tls_dir.resolve()
     for name in ['ca.pem', 'server.pem', 'server-key.pem'] + ([prefix + suffix for prefix in ('wrong-host', 'expired', 'untrusted') for suffix in ('.pem', '-key.pem')] if args.secure_only else []):
@@ -96,7 +105,7 @@ def main():
     binary = args.server_binary.resolve()
     if not binary.is_file() or not PROJECT_FILE.is_file():
         parser.error('Build cmd/omni and generate/install the iOS project first; see tools/mobile/README.md')
-    if not healthy(args.metro_url.rstrip('/') + '/status'):
+    if args.configuration == 'Debug' and not healthy(args.metro_url.rstrip('/') + '/status'):
         parser.error('Start the existing app-local Metro server before running the smoke test')
     if SCHEME.exists():
         parser.error('Mig33SmokeUITests scheme already exists; review/restore the generated project before continuing')
@@ -127,6 +136,7 @@ def main():
         'test_environment': {
             'MIG33_SMOKE_HTTPS_PORT': str(https_port),
             'MIG33_SMOKE_TLS_PORT': str(tls_port),
+            'MIG33_SMOKE_CONFIGURATION': args.configuration,
             'MIG33_SMOKE_DEEP_LINK': 'exp+mig33-mobile://?' + urllib.parse.urlencode({
                 '__expo_url': args.metro_url,
                 '__expo_disable_fab': '1',
@@ -136,8 +146,11 @@ def main():
             'MIG33_SMOKE_V3_ONLY': '1' if args.v3_only else '0',
             'MIG33_SMOKE_ROOMS_ONLY': '1' if args.rooms_only else '0',
             'MIG33_SMOKE_FEATURES_ONLY': '1' if args.features_only else '0',
+            'MIG33_SMOKE_FEATURE_TRANSPORT': args.feature_transport or 'both',
             'MIG33_SMOKE_UNREAD_ONLY': '1' if args.unread_only else '0',
             'MIG33_SMOKE_MODERN_ONLY': '1' if args.modern_only else '0',
+            'MIG33_SMOKE_MOTION_ONLY': '1' if args.motion_only else '0',
+            'MIG33_SMOKE_NAVIGATION_ONLY': '1' if args.navigation_only else '0',
             'MIG33_SMOKE_COMMANDS_ONLY': '1' if args.commands_only else '0',
             'MIG33_SMOKE_SECURE_ONLY': '1' if args.secure_only else '0',
             'MIG33_SMOKE_CONTROL_URL': f'http://127.0.0.1:{control_port}/' if args.features_only or args.unread_only or args.modern_only else '',
@@ -148,11 +161,16 @@ def main():
         'server_binary': str(binary),
         'appearance': args.appearance,
         'content_size': args.content_size,
+        'configuration': args.configuration,
+        'record_video': args.record_video,
+        'feature_transport': args.feature_transport or 'both',
         'scope': ('Real iOS rejection of wrong-host, expired and untrusted certificates on HTTPS/TLS, and HTTPS-to-HTTP redirects; then original room moderation, private/group chat, pages and photos over both encrypted transports with a plain HTTP compatibility peer.'
-            if args.secure_only else 'Modern HTTPS and Classic v3 TLS slash commands: context filtering, dismiss/reopen, insertion without execution, retained draft/caret/keyboard responder, gift subcommands and explicit private/room action sends; Modern picker geometry. No system accessibility settings changes.'
+            if args.secure_only else 'Modern HTTPS private round trip, four open conversations, automatic selected-chat reveal and bidirectional overflowing chat-tab drags with fixed navigation bounds. Continuous video must separately establish native label clipping. No system accessibility settings or automatic-login checks.'
+            if args.navigation_only else 'Modern HTTPS startup and manual login: real rejected credentials, retry, usable native navigation, Search icon bounds, original Friends keyboard Search and Rooms icon submissions, Friends/Rooms/People pull to refresh with browse-state retention, absence of duplicate refresh buttons/menus, private round trip, and overflowing chat-tab drags with fixed destination bounds; remembered automatic login after process restart with post-launch login-field visibility checks; real Reduce Motion startup/login with restoration. Continuous video is required to assess transient login-form flashes, label clipping during drag, and motion quality. Native launch screen coverage requires Release.'
+            if args.motion_only else 'Modern HTTPS and Classic v3 TLS slash commands: context filtering, dismiss/reopen, insertion without execution, retained draft/caret/keyboard responder, gift subcommands and explicit private/room action sends; Modern picker geometry. No system accessibility settings changes.'
             if args.commands_only else 'Modern HTTPS: original login mark, stable arrival/native glass navigation, private and room round trips, native menus/alerts, medium-to-large sheet drag, text editing, retained browse state and unread on/off/clear; real Reduce Transparency and Increase Contrast passes with restoration. Software-keyboard layout is not verified unless a visible-keyboard geometry capture is recorded. Appearance follows --appearance.'
             if args.modern_only else 'All three themes over HTTPS/TLS: real incoming unread messages, complete-tab on/off phases, steady Reduce Motion rendering, theme retention and clear-on-select. System Reduce Motion is changed through Settings and restored.'
-            if args.unread_only else 'Modern HTTPS and Classic v3 TLS original feature flows: room creation/Unicode forms, moderator mute/unmute/kick, ordinary706 votes, personal block/unblock, private-group creation/invite/participants/message/leave; isolated demo data and real gateway peers.'
+            if args.unread_only else feature_scope + ' original feature flows: room creation/Unicode forms, moderator mute/unmute/kick, ordinary706 votes, personal block/unblock, private-group creation/invite/participants/message/leave, incoming/outgoing photos and composer tools; isolated demo data and real gateway peers. Only the selected transports are verified.'
             if args.features_only else 'Modern HTTPS and Classic v3 TLS rooms: catalog/filter, favorites, join welcome, participants, room round trip, two-room drafts, live switching across all three themes and leave; isolated demo data.'
             if args.rooms_only else 'Modern HTTPS login, native glass Friends, inline chat round trip, menu and logout captures; isolated demo data.'
             if args.visual_only else 'Classic v3 HTTPS/TLS Write Message, restart persistence, live conversation and draft across all three themes; isolated demo data.'
@@ -168,12 +186,35 @@ def main():
     subprocess.run(['mise', '-C', str(ROOT / 'apps/mobile'), 'exec', '--', 'node',
         str(ROOT / 'tools/mobile/test-resources.mjs'), str(resources)], cwd=ROOT, env=env, check=True)
     env['MIG33_RESOURCES_DIRECTORY'] = str(resources)
+    # The dedicated simulator receives one real decodable fixture for the
+    # system PHPicker → normalization → original500 outgoing-photo acceptance.
+    # Reuse synthetic artwork; never import a user's photo or reset Photos.
+    if args.features_only:
+        subprocess.run(['xcrun', 'simctl', 'addmedia', args.device,
+            str(resources / 'default-avatar.png')], check=True)
     backup = PROJECT_FILE.read_bytes()
     (output / 'project.pbxproj.before').write_bytes(backup)
     children = []
     changed_project = False
     previous_appearance = None
     previous_content_size = None
+    video = None
+    video_evidence = {'requested': args.record_video, 'status': 'not_started' if args.record_video else 'not_requested'}
+    def finish_video():
+        if video is None or video_evidence.get('status') == 'finalized':
+            return
+        if video.poll() is None:
+            video.send_signal(signal.SIGINT)
+            try:
+                video.wait(timeout=20)
+            except subprocess.TimeoutExpired:
+                stop(video)
+                video_evidence['status'] = 'finalization_failed'
+        path = output / 'simulator.mp4'
+        video_evidence.update({'returncode': video.returncode, 'bytes': path.stat().st_size if path.exists() else 0})
+        if video_evidence['status'] != 'finalization_failed':
+            video_evidence['status'] = 'finalized' if video.returncode == 0 and video_evidence['bytes'] > 0 else 'failed'
+        (output / 'video.json').write_text(json.dumps(video_evidence, indent=2) + '\n')
     result = output / 'Smoke.xcresult'
     try:
         if args.appearance:
@@ -215,7 +256,7 @@ def main():
             peer_command = ['mise', '-C', str(ROOT / 'apps/mobile'), 'exec', '--', 'node',
                 str(ROOT / 'tools/mobile/smoke-peer.mjs'), '--origin', origin,
                 '--ready', str(ready), '--events', str(output / 'peer-events.jsonl')]
-            if args.rooms_only or args.modern_only or args.commands_only:
+            if args.rooms_only or args.modern_only or args.commands_only or args.motion_only:
                 peer_command.append('--rooms')
             if args.commands_only:
                 peer_command.append('--commands')
@@ -239,15 +280,37 @@ def main():
             print('Building/running XCTest; progress is in xcodebuild.log', flush=True)
             build = spawn(['mise', '-C', str(ROOT / 'apps/mobile'), '-E', 'ios', 'exec', '--',
                 'xcodebuild', 'test', '-workspace', str(ROOT / 'apps/mobile/ios/mig33.xcworkspace'),
-                '-scheme', 'Mig33SmokeUITests', '-configuration', 'Debug',
+                '-scheme', 'Mig33SmokeUITests', '-configuration', args.configuration,
                 '-destination', 'platform=iOS Simulator,id=' + args.device,
                 '-parallel-testing-enabled', 'NO', '-maximum-concurrent-test-simulator-destinations', '1',
                 '-derivedDataPath', str(ROOT / 'data/mobile-ui/DerivedData'),
                 '-resultBundlePath', str(result), 'CODE_SIGNING_ALLOWED=YES',
                 'CODE_SIGN_IDENTITY=-'], 'xcodebuild.log')
-            returncode = build.wait(timeout=1200)
+            # Watch only new log output while Xcode builds. Recording begins
+            # at the test suite, before its app relaunches, not during compilation.
+            deadline = time.monotonic() + 1200
+            with (output / 'xcodebuild.log').open() as build_log:
+                log_tail = ''
+                while build.poll() is None:
+                    log_tail = (log_tail + build_log.read())[-4096:]
+                    if args.record_video and video is None and ('Test Suite ' in log_tail or 'Test Case ' in log_tail):
+                        recording_log = stack.enter_context((output / 'record-video.log').open('w'))
+                        video = subprocess.Popen(['xcrun', 'simctl', 'io', args.device, 'recordVideo',
+                            '--codec=h264', str(output / 'simulator.mp4')], cwd=ROOT,
+                            stdout=recording_log, stderr=subprocess.STDOUT, start_new_session=True)
+                        video_evidence.update({'status': 'recording', 'file': 'simulator.mp4',
+                            'started_at': time.time(), 'trigger': 'XCTest suite/case started',
+                            'review': 'pending', 'native_launch_screen': args.configuration == 'Release'})
+                        (output / 'video.json').write_text(json.dumps(video_evidence, indent=2) + '\n')
+                    if time.monotonic() >= deadline:
+                        raise TimeoutError('XCTest exceeded1200seconds')
+                    time.sleep(0.2)
+            returncode = build.returncode
+            finish_video()
             if returncode:
                 raise RuntimeError(f'XCTest failed ({returncode}); inspect {output / "xcodebuild.log"}')
+            if args.record_video and video_evidence['status'] != 'finalized':
+                raise RuntimeError('Requested simulator video was not finalized; inspect record-video.log and video.json')
             events = [json.loads(line) for line in (output / 'peer-events.jsonl').read_text().splitlines()]
             if args.secure_only:
                 # The fixture drains queued writes before its completion marker.
@@ -268,7 +331,12 @@ def main():
                              'tls-wrong-host', 'tls-expired', 'tls-untrusted', 'tls-plaintext'):
                     if f"Added attachment named 'secure-rejected-{name}'" not in log:
                         raise AssertionError('Missing native certificate rejection: ' + name)
-            transports = ['https'] if args.visual_only or args.modern_only else ['https', 'tls']
+            transports = feature_transports if args.features_only else ['https'] if args.visual_only or args.modern_only or args.motion_only or args.navigation_only else ['https', 'tls']
+            if args.features_only:
+                outgoing_photos = [event for event in events if event.get('event') == 'feature-composer-received'
+                    and event.get('content') == 5 and event.get('photoToken')]
+                if len(outgoing_photos) != len(transports):
+                    raise AssertionError(f'Expected one native outgoing photo per transport; received {len(outgoing_photos)}')
             if args.commands_only:
                 # One explicit private wave and one room wave per transport.
                 # Extra action deliveries would expose completion auto-sending.
@@ -305,6 +373,10 @@ def main():
                 if args.features_only:
                     if not any(event.get('event') == 'feature-photo-send' and event.get('transport') == transport for event in events):
                         raise AssertionError('Missing original500 photo delivery for ' + transport)
+                    if not any(event.get('event') == 'feature-composer-received'
+                        and event.get('body') == 'Selected color from iOS ' + transport.upper()
+                        and event.get('color') == 8388736 for event in events):
+                        raise AssertionError('Missing native selected-color500/tag13 delivery for ' + transport)
                     if not any(event.get('event') == 'replied' and event.get('kind') == 2
                         and event.get('body') == 'Hello group from iOS ' + transport.upper() for event in events):
                         raise AssertionError('Missing acknowledged private-group round trip for ' + transport)
@@ -322,41 +394,60 @@ def main():
                 'content_size': args.content_size,
                 'rooms_only': args.rooms_only, 'native_glass': True,
                 'features_only': args.features_only,
+                'feature_transport': args.feature_transport or 'both',
                 'unread_only': args.unread_only,
                 'modern_only': args.modern_only,
+                'motion_only': args.motion_only,
+                'navigation_only': args.navigation_only,
+                'configuration': args.configuration,
+                'video': video_evidence,
+                'transient_motion_visual_review': 'pending' if args.record_video else 'not_recorded',
                 'commands_only': args.commands_only,
                 'secure_only': args.secure_only,
                 'security_checks': ['https-wrong-host', 'https-expired', 'https-untrusted', 'https-downgrade',
                     'https-plaintext', 'tls-wrong-host', 'tls-expired', 'tls-untrusted', 'tls-plaintext',
                     'zero-rejected-endpoint-payloads'] if args.secure_only else [],
                 'software_keyboard_layout': 'verified' if keyboard_layout_verified else 'not_verified',
-                'themes': ({'https': 'modern', 'tls': 'classic-v3', 'checks': ['slash-context-filtering', 'dismiss-reopen', 'completion-not-execution',
+                'themes': ({'https': 'modern', 'checks': ['private-round-trip', 'selected-chat-auto-reveal',
+                    'overflowing-chat-tabs-drag-fixed-navigation']} if args.navigation_only else
+                    {'https': 'modern', 'checks': ['wrong-password-rejected', 'manual-retry', 'settled-native-navigation',
+                    'search-icon-bounds', 'original-friends-keyboard-search', 'original-rooms-icon-search', 'friends-rooms-people-pull-to-refresh',
+                    'pull-to-refresh-browse-state', 'redundant-refresh-buttons-menus-removed',
+                    'private-round-trip', 'overflowing-chat-tabs-drag-fixed-navigation',
+                    'remembered-auto-login', 'post-launch-login-form-hidden', 'system-reduce-motion-login']} if args.motion_only else
+                    {'https': 'modern', 'tls': 'classic-v3', 'checks': ['slash-context-filtering', 'dismiss-reopen', 'completion-not-execution',
                     'draft-caret-keyboard-responder', 'gift-subcommands', 'picker-geometry', 'original500-content6-explicit-sends']} if args.commands_only else
                     {'https': 'modern', 'checks': ['authentic-login', 'glass-arrival', 'native-menus-alerts', 'sheet-detents', 'text-editing', 'browse-state-retention', 'unread',
                     'reduce-transparency-solid', 'increase-contrast-controls'] + (['software-keyboard-layout'] if keyboard_layout_verified else [])} if args.modern_only else
                     {'https': ['modern', 'classic', 'classic-v3'], 'tls': ['modern', 'classic', 'classic-v3'],
                     'checks': ['unread-on-off', 'unread-theme-retention', 'unread-selected-clear', 'system-reduce-motion-steady']} if args.unread_only else
-                    {'https': 'modern', 'tls': 'classic-v3', 'checks': ['native-feature-actions', 'original-page-forms']} if args.features_only else
+                    {**{transport: {'https': 'modern', 'tls': 'classic-v3'}[transport] for transport in transports},
+                    'checks': ['native-feature-actions', 'original-page-forms']} if args.features_only else
                     {'https': 'modern', 'tls': 'classic-v3', 'checks': ['live-room-conversation', 'per-room-unsent-drafts', 'all-three-themes']} if args.rooms_only else
                     {'https': 'modern', 'checks': []} if args.visual_only else
                     {'https': 'classic-v3', 'tls': 'classic-v3', 'checks': ['restart-persistence', 'live-conversation', 'unsent-draft', 'all-three-themes']} if args.v3_only else
                     {'https': ['modern', 'classic-v3'], 'tls': 'classic', 'checks': ['restart-persistence', 'live-conversation', 'unsent-draft', 'all-three-themes']}),
                 'rooms': ['categories', 'local-filter', 'favorite-add-remove', 'join-welcome', 'participants', 'participant-private-chat', 'round-trip', 'leave'] if args.rooms_only else [],
                 'features': ['room-create-unicode', 'room-info', 'mute-send-rejected', 'unmute-send-accepted', 'kick-membership-removed',
-                    'ordinary-vote-kick', 'block-suppresses-delivery', 'unblock-restores-delivery', 'photo-preview', 'composer-color-emoticon', 'group-create-invite-participants-round-trip-leave'] if args.features_only else [],
-                'keychain': [] if args.visual_only or args.v3_only or args.rooms_only or args.features_only or args.unread_only or args.modern_only or args.commands_only else ['remember', 'restore', 'auto-login', 'delete'],
+                    'ordinary-vote-kick', 'block-suppresses-delivery', 'unblock-restores-delivery', 'incoming-photo-preview',
+                    'system-library-photo-preview-send-ack', 'recipient-photo-resource-decoded', 'composer-color-selection-retained',
+                    'composer-color500-tag13-delivered', 'composer-emoticon-insert-send', 'group-create-invite-participants-round-trip-leave'] if args.features_only else [],
+                'keychain': ['remember', 'auto-login', 'delete'] if args.motion_only else [] if args.visual_only or args.v3_only or args.rooms_only or args.features_only or args.unread_only or args.modern_only or args.commands_only or args.navigation_only else ['remember', 'restore', 'auto-login', 'delete'],
                 'screenshots': 'attachments/', 'xcresult': result.name}, indent=2) + '\n')
             print('PASS native certificate and redirect rejection, plus HTTPS/TLS original moderation, private/group chat, pages and photos' if args.secure_only else
+                'PASS Modern HTTPS private reply, selected-chat reveal and overflowing native chat-tab drags; visual clipping review remains pending' if args.navigation_only else
+                'PASS Modern HTTPS failed/manual/remembered-auto login, native navigation, private round trip and Reduce Motion; transient motion/form-flash video review remains pending' if args.motion_only else
                 'PASS Modern HTTPS and Classic v3 TLS slash completion, retained draft/focus, context filtering and explicit original private/room actions' if args.commands_only else
                 ('PASS Modern HTTPS native presentation, text editing, retained browse state, private/room chat, unread and system accessibility settings; software-keyboard layout '
                 + ('verified with visible-keyboard geometry capture' if keyboard_layout_verified else 'NOT VERIFIED')) if args.modern_only else
                 'PASS native HTTPS/TLS whole-tab unread, all themes, clearing and system Reduce Motion' if args.unread_only else
-                'PASS native HTTPS/TLS moderation, votes, blocks, groups and original page forms' if args.features_only else
+                'PASS ' + feature_scope + ' native moderation, votes, blocks, groups, photos and original page forms' if args.features_only else
                 'PASS native HTTPS/TLS rooms, favorites, participants, drafts and all three themes' if args.rooms_only else
                 'PASS Modern HTTPS visual check' if args.visual_only else 'PASS Classic v3 HTTPS/TLS and all three theme transitions' if args.v3_only
                 else 'PASS native HTTPS/TLS UI, all three themes and Keychain lifecycle', flush=True)
     finally:
         try:
+            finish_video()
             for child in reversed(children):
                 stop(child)
             if changed_project:

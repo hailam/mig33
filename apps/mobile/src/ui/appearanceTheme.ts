@@ -91,8 +91,9 @@ export const modernMetrics: AppearanceMetrics = {
   icon: 22, avatar: 48, pageInset: 20,
 };
 
-/** 68pt navigation dock plus16pt breathing room for content beneath its glass. */
-export const modernNavigationInset = 84;
+// Native navigation reserves48pt controls +20pt vertical padding +12pt gap.
+// Its first asynchronous measurement can grow this for larger text/contents.
+export const modernNavigationInset = 80;
 
 export const appearanceThemes: Readonly<Record<AppearanceMode, AppearanceTheme>> = {
   modern: modernTheme, classic: v4, 'classic-v3': v3Theme,

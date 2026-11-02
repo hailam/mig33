@@ -21,6 +21,7 @@ const client = new Mig33Client(new HTTPTransport(origin.href, { pollIntervalMs: 
 const actors = new Map([['bob', client]]);
 const groupIDs = new Set();
 const receivedPrivate = [];
+const receivedMessages = [];
 let control;
 let replying = Promise.resolve();
 const record = (event) => appendFile(events, JSON.stringify(event) + '\n');
@@ -38,7 +39,16 @@ client.subscribe((event) => {
     // without replying or adding a control endpoint to the application.
     replying = replying.then(() => record({ event: 'command-action', kind, target, body }));
   }
-  if (values.features && kind === 1) receivedPrivate.push(body);
+  if (values.features && kind === 1) {
+    receivedPrivate.push(body);
+    const packet = event.message.packet;
+    const message = { body, content: event.message.content, color: packet.int(13) ?? null,
+      photoToken: packet.text(11)?.split(/\s+/).find((token) => /^\[photo:\d+\]$/.test(token)) ?? null };
+    receivedMessages.push(message);
+    if (message.color !== null || message.photoToken) {
+      replying = replying.then(() => record({ event: 'feature-composer-received', ...message }));
+    }
+  }
   const room = values.rooms && kind === 3 && target === 'Lobby'
     && ['Hello room from iOS HTTPS', 'Hello room from iOS TLS'].includes(body);
   const privateChat = kind === 1 && ['Hello from iOS HTTPS', 'Hello from iOS TLS'].includes(body);
@@ -135,7 +145,22 @@ if (values.features || values.unread) {
         await actor.sendMessage('alice', input.body);
         await record({ event: 'feature-private-send', actor: input.actor ?? 'bob', body: input.body });
         return { accepted: true };
-      case 'private-received': return { bodies: receivedPrivate };
+      case 'private-received': return { bodies: receivedPrivate, messages: receivedMessages };
+      case 'photo-received': {
+        const message = receivedMessages.filter((entry) => entry.photoToken).at(-1);
+        if (!message) return { count: 0 };
+        const asset = await client.getEmoticon(message.photoToken);
+        if (!asset.image || !asset.imageURI) throw new Error('Delivered original500 photo could not be fetched through913/914');
+        //913/914 deliberately returns a PNG thumbnail. Fetch the stored image
+        // through the same original922 path used by the full-size UI viewer.
+        const browser = new LegacyPages(client.requestOriginal, origin.href + 'sites/index.php', () => {});
+        try {
+          const id = message.photoToken.match(/^\[photo:(\d+)\]$/)[1];
+          const imageURI = await browser.loadImage('/assets/photos/' + id);
+          return { count: receivedMessages.filter((entry) => entry.photoToken).length,
+            content: message.content, token: message.photoToken, imageURI };
+        } finally { browser.close(); }
+      }
       case 'photo-send': {
         // Use the backend's real image fixture, as the protocol integration
         // test does; a PNG signature alone is not a decodable photograph.

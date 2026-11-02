@@ -13,6 +13,7 @@ interface Appearance {
   reduceMotion: boolean;
   reduceTransparency: boolean;
   increaseContrast: boolean;
+  preferencesReady: boolean;
   theme: AppearanceTheme;
   metrics: AppearanceMetrics;
   navigationInset: number;
@@ -32,6 +33,7 @@ export function AppearanceProvider({ mode, onChange, children }: {
   const [reduceMotion, setReduceMotion] = useState(true);
   const [reduceTransparency, setReduceTransparency] = useState(true);
   const [increaseContrast, setIncreaseContrast] = useState(false);
+  const [preferencesReady, setPreferencesReady] = useState(false);
   const [navigationInset, setNavigationInset] = useState(modernNavigationInset);
   useEffect(() => {
     let active = true;
@@ -49,23 +51,26 @@ export function AppearanceProvider({ mode, onChange, children }: {
       ? AccessibilityInfo.addEventListener(Platform.OS === 'ios' ? 'darkerSystemColorsChanged' : 'highTextContrastChanged', (enabled) => {
         contrastRevision++; setIncreaseContrast(enabled);
       }) : undefined;
-    void AccessibilityInfo.isReduceMotionEnabled().then((enabled) => {
+    const motionQuery = AccessibilityInfo.isReduceMotionEnabled().then((enabled) => {
       if (active && motionRevision === 0) setReduceMotion(enabled);
     }).catch(() => {});
-    if (Platform.OS === 'ios') void AccessibilityInfo.isReduceTransparencyEnabled().then((enabled) => {
+    const transparencyQuery = Platform.OS === 'ios' ? AccessibilityInfo.isReduceTransparencyEnabled().then((enabled) => {
       if (active && transparencyRevision === 0) setReduceTransparency(enabled);
-    }).catch(() => {});
+    }).catch(() => {}) : Promise.resolve();
     const contrastQuery = Platform.OS === 'ios' ? AccessibilityInfo.isDarkerSystemColorsEnabled()
       : Platform.OS === 'android' ? AccessibilityInfo.isHighTextContrastEnabled() : undefined;
-    void contrastQuery?.then((enabled) => {
+    const contrastResult = contrastQuery?.then((enabled) => {
       if (active && contrastRevision === 0) setIncreaseContrast(enabled);
     }).catch(() => {});
+    void Promise.allSettled([motionQuery, transparencyQuery, contrastResult]).then(() => {
+      if (active) setPreferencesReady(true);
+    });
     return () => { active = false; motion.remove(); transparency?.remove(); contrast?.remove(); };
   }, []);
   const value = useMemo<Appearance>(() => ({ mode, setMode: onChange, modern: mode === 'modern', v3: mode === 'classic-v3', dark,
-    reduceMotion, reduceTransparency, increaseContrast, navigationInset, setNavigationInset,
+    reduceMotion, reduceTransparency, increaseContrast, preferencesReady, navigationInset, setNavigationInset,
     theme: mode === 'modern' ? modernAppearanceTheme(dark, increaseContrast) : appearanceThemes[mode],
-    metrics: appearanceMetrics[mode] }), [mode, onChange, dark, reduceMotion, reduceTransparency, increaseContrast, navigationInset]);
+    metrics: appearanceMetrics[mode] }), [mode, onChange, dark, reduceMotion, reduceTransparency, increaseContrast, preferencesReady, navigationInset]);
   return <AppearanceContext.Provider value={value}>{children}</AppearanceContext.Provider>;
 }
 
