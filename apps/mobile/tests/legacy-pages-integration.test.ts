@@ -59,7 +59,9 @@ for (const kind of ['http', 'tcp'] as const) {
 
       await browser.open(url('chatroom', 'search'));
       await submit(browser, form(browser), { query: 'Lobby' });
+      assert.match(legacyText(page(browser).body), /Results for: Lobby/);
       assert.ok(nodes(page(browser).body).some((node) => node.attributes.href === 'mig33:joinChatroom(Lobby)'));
+      assert.ok(!nodes(page(browser).body).some((node) => node.attributes.href === 'mig33:joinChatroom(Gaming)'));
       const room = `Pages ${kind}`;
       await browser.open(url('chatroom', 'create'));
       await submit(browser, form(browser), { name: room });

@@ -83,7 +83,7 @@ export function ModernButton({ label, onPress, variant = 'secondary', disabled: 
         <Background.Content>
           {/* This is color behind the real native material, not another glass
               layer. Background keeps the button's intrinsic layout unchanged. */}
-          <UnreadAmberField phase={glass ? unreadPhase : 'none'} circle={iconOnly} />
+          <NativeUnreadAmberField phase={glass ? unreadPhase : 'none'} circle={iconOnly} />
         </Background.Content>
       </Background> : button}
     </Host>
@@ -92,7 +92,7 @@ export function ModernButton({ label, onPress, variant = 'secondary', disabled: 
 
 /** SwiftUI moves the background color locally; the glass and its touch target
  * never translate, fade or change style as the shared750ms phase advances. */
-function UnreadAmberField({ phase, circle }: { phase: NonNullable<ModernButtonProps['unreadPhase']>; circle: boolean }) {
+export function NativeUnreadAmberField({ phase, circle }: { phase: NonNullable<ModernButtonProps['unreadPhase']>; circle: boolean }) {
   const { dark, theme, reduceMotion, increaseContrast } = useAppearance();
   const active = phase !== 'none';
   const steady = reduceMotion || phase === 'steady';

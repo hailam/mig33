@@ -23,6 +23,10 @@ const config: ExpoConfig = {
     package: 'com.hailam.mig33',
   },
   plugins: [
+    ['expo-splash-screen', {
+      backgroundColor: '#f5f9fa', image: './assets/mig33-logo.png', imageWidth: 176,
+      dark: { backgroundColor: '#0b151c', image: './assets/mig33-logo.png' },
+    }],
     'expo-dev-client',
     'expo-secure-store',
     ['expo-image-picker', {
@@ -32,6 +36,7 @@ const config: ExpoConfig = {
     }],
     ['expo-build-properties', { android: { usesCleartextTraffic: false } }],
     './plugins/withSecureNetworking.cjs',
+    './plugins/withLaunchScreen.cjs',
   ],
 };
 

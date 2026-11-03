@@ -1,6 +1,7 @@
 # Native iOS UI smoke test
 
-This harness drives the real Expo development app with XCTest. It signs in as
+This harness drives the real Expo app with XCTest, using Debug by default or a
+bundled Release build with `--configuration Release`. It signs in as
 Alice, opens Bob from Friends, writes a message, verifies Bob's network reply,
 opens the menu and logs out, using Modern's inline composer over HTTPS,
 Classic v4's separate Write Message screen over TLS, and Classic v3
@@ -59,7 +60,7 @@ Build the backend from the repository root:
 go build -o data/mobile-integration/server ./cmd/omni
 ```
 
-Keep Metro running in another terminal. Explicit IPv4 resolution avoids Expo's
+For Debug, keep Metro running in another terminal. Explicit IPv4 resolution avoids Expo's
 localhost listener/advertisement mismatch on this Mac:
 
 ```sh
@@ -167,14 +168,22 @@ opens the original Manage Block List page, unblocks him through its form and
 checks resumed delivery. It creates a private group from Bob's conversation,
 invites Carol and Dave, checks original755 membership, exchanges a group
 message and reply, and confirms753 removes Alice's membership and local tab.
-It also delivers a real500 photo from Bob, opens its original full-size page
-resource, checks the composer color picker, and sends a supplied emoticon
-shortcut through500 before verifying the acknowledged draft becomes empty.
+It also delivers a real500 photo from Bob and opens its original full-size page
+resource. For outgoing media, it selects a seeded synthetic image in the real
+system photo library, previews and sends it, then decodes the recipient's
+original full-size JPEG resource. The composer selects a nondefault purple,
+reopens the picker to verify selection, and checks exact500 tag13 delivery.
+A supplied emoticon shortcut is inserted and sent through500 before verifying
+the acknowledged draft becomes empty.
 Screenshots and real peer events accompany each stage. These checks do not
 claim full coverage of every linked service, media source, composer setting or
 historical server policy.
 
-`--features-only` is mutually exclusive with the other focused modes. Its
+`--features-only` is mutually exclusive with the other focused modes. Add
+`--feature-transport https` or `--feature-transport tls` to rerun just its Modern
+HTTPS or Classic v3 TLS phase; the default is both, and recorded scope reflects
+the selected transport. This selector is rejected outside `--features-only`;
+secure acceptance always retains both transports. Its
 fixture control listener binds only to a temporary loopback port and requires
 a random per-run token. It is owned by the harness, never registered in the
 application or backend, and only directs real original-protocol clients.
@@ -238,6 +247,94 @@ captures the system alert, cancels without ending the session, then logs out.
 Keyboard-responder checks prove editing continuity; they do not establish
 software-keyboard geometry when the simulator uses a hardware keyboard.
 
+For startup and authentication motion acceptance, use the bundled Release app
+and record the simulator:
+
+```sh
+uv run --no-project python tools/mobile/ios_smoke.py \
+  --device DEDICATED_SIMULATOR_UDID --tls-dir data/local-tls \
+  --appearance light --motion-only --configuration Release --record-video
+```
+
+`--motion-only` checks Modern over HTTPS. It restarts the process for startup,
+submits an incorrect Alice password and checks the native error, retries with
+the correct password, checks native destination bounds of at least 44pt and
+selected state, and uses Rooms, Friends and the menu after arrival. The
+manual-login pass also checks Search icon labels and touch bounds, submits Friends
+search through the keyboard and Rooms search through its icon without leaving
+their lists. It refreshes the server results, clears search back to the preserved
+category state, pulls to refresh Friends and the joined Lobby's People list,
+and checks collapsed groups/categories survive. Modern must omit duplicate list refresh buttons and
+built-in menu entries. Named heading accessibility actions retain an explicit
+refresh operation for assistive technology. A private
+message must receive the real Bob peer's original-protocol reply. It then
+restarts with saved Auto Login and reaches Friends without entering credentials
+or pressing Login. Finally it deletes the saved login, enables the real system
+Reduce Motion setting, repeats startup/login/navigation, and restores that
+setting. Input helpers acknowledge actual field values before submitting;
+username entry checks each character to catch dropped simulator key events.
+A prior failed run's stale Alice fixture can be recovered only when a
+native Error alert accompanies the exact saved username `alice`; other alerts
+remain failures. This mode does not repeat TLS sockets, rooms messaging,
+moderation, all-theme transitions or the full remembered-password workflow.
+
+For a focused navigation regression, substitute `--navigation-only`. It checks
+Modern HTTPS messaging, four open private conversations, automatic selected-chat
+reveal, and bidirectional dragging while fixed Friends/Rooms/menu controls retain
+their bounds and remain hittable. It does not repeat Auto Login or accessibility
+setting checks. Use `--configuration Release --record-video` to review continuous
+clipping; accessibility frames alone cannot prove that native glass and labels
+stay within the scrolling viewport.
+
+`--configuration Release` launches the installed bundle with `app.launch()`;
+it does not require Metro or use the development deep link. Release is required
+to assess the configured native launch screen. Debug retains the existing
+development-client launch and Metro requirement. `--record-video` is optional
+and works with any mode: it starts `simctl recordVideo` when XCTest begins,
+after compilation, and finalizes `simulator.mp4` with SIGINT during cleanup.
+`video.json` records its start, completion and file size.
+
+Automated assertions cover authentication, stable navigation and the login
+fields observable after relaunch. XCTest waits for launch quiescence, so these
+checks alone cannot exclude a brief login-form flash. Review the recording for
+native-launch handoff, manual and automatic arrival, glass formation, preserved
+readability and reduced-motion behavior. `result.json` marks transient visual
+review as pending when video was recorded, or not recorded otherwise; an
+automated pass does not certify animation quality. The Release motion workflow
+passes in `data/mobile-ui/runs/run-y4rq5x_7`, including inline search and actual
+system Reduce Motion. Light startup frame review confirms overlapping lettering,
+liquid separation/rebound and continuous pigment without a white-body flash or
+blank handoff. Keep manual review findings separate from automated results.
+
+The later light Release motion run `run-sakm9870` passed automated checks. Its
+separate `visual-review.json` records 91 frames of manual arrival and 144 frames
+of automatic arrival with correct safe-area allocation from the first Friends frame,
+no layout jump and no credential-form flash. That same review rejected the old
+chat-strip clipping, so this run is not full scrolling visual acceptance.
+After the native SwiftUI scroll implementation, `run-gjahxs47` passed
+`--navigation-only` acceptance in 108.18 seconds. Its separate recording review passed both
+drag directions and reopening Bob: labels and glass remain within the viewport,
+fixed controls remain unobscured, and the conversation is preserved. This review
+is recorded in the ignored run's `visual-review.json`; the runner's original
+`result.json` keeps its initial pending-review marker.
+
+The final dark Release `--unread-only` run `run-yzlinx26` passed HTTPS and TLS
+with Modern, Classic v4 and Classic v3, including on/off phases, theme retention,
+clearing on selection and actual system Reduce Motion producing a steady cue.
+Six sequential Modern captures show the amber field dimming and brightening
+beneath a stable native rim and label. Selected-chat captures clear the amber
+field on both transports; the Reduce Motion capture retains a steady cue.
+The scoped screenshot review is saved separately in `visual-review.json`; it
+does not certify the entire recording. These results do not extend
+software-keyboard, Android or physical-device coverage.
+
+Expanded Modern HTTPS assertions completed in `run-bkx23n07`; its subsequent
+Classic phase exposed a photo-modal presentation race, so that combined run
+failed. After fixing actual modal-dismissal sequencing, Classic v3 TLS passed
+in the isolated Release run `run-xpden3b0`, including the real photo-library
+selection and recipient resource decode. These feature checks do not certify
+camera input, all historical pages or physical-device behavior.
+
 Run after native prebuild/pod installation with app and repository edits paused
 for the entire test. Metro can refresh even after changes to tests or README
 files; a refresh during a gesture can discard the tap. An earlier recording
@@ -265,8 +362,9 @@ menu check, plus the screen and accessibility tree on failure. These are functio
 smoke captures; compare them with the separately captured original v3/v4 renderer
 before claiming visual fidelity.
 
-The harness uses XCTest's public `XCUIApplication.open(_:)` API to open the
-Expo development URL, so it does not require AppleScript desktop automation.
+In Debug, the harness uses XCTest's public `XCUIApplication.open(_:)` API to
+open the Expo development URL; Release uses `XCUIApplication.launch()`.
+Neither path requires AppleScript desktop automation.
 Expo's launch flags `__expo_disable_fab=1` and `__expo_disable_auto_launch=1`
 hide developer overlays for that process without changing saved preferences.
 The floating tools button otherwise overlaps Modern's navigation menu and can

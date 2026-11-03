@@ -127,7 +127,7 @@ export function useRosterActions(session: Mig33Session, options: RosterActionsOp
   }
   function createContactGroup(returnTo?: Editor) {
     begin({ title: 'Create Contact Group', fields: [{ name: 'name', label: 'Group Name', required: true, limit: 320 }],
-      values: { name: '' }, submitLabel: 'Continue', returnTo, createdGroup: true,
+      values: { name: '' }, submitLabel: modern ? 'Create' : 'Continue', returnTo, createdGroup: true,
       submit: (values) => session.createContactGroup(values.name.trim()) });
   }
   function addFriend() {
@@ -155,9 +155,10 @@ export function useRosterActions(session: Mig33Session, options: RosterActionsOp
     }, successMessage: () => acknowledgement });
   }
   function openStatus() {
-    begin({ title: 'Update Status Msg', fields: [{ name: 'status', label: 'Status Message', multiline: true, limit: 320 }],
-      // Source starts with "is ". Preserve a known status when reopening.
-      values: { status: session.ownStatus || 'is ' }, submitLabel: 'Continue', submit: (values) => session.setStatus(values.status) });
+    begin({ title: modern ? 'Update Status' : 'Update Status Msg', fields: [{ name: 'status', label: 'Status Message', multiline: true, limit: 320 }],
+      // Classic starts with "is ". Modern preserves the actual empty status.
+      values: { status: session.ownStatus || (modern ? '' : 'is ') }, submitLabel: modern ? 'Save' : 'Continue',
+      submit: (values) => session.setStatus(values.status) });
   }
   function openCall(target = '') { options.openPage(legacySelector('call', 'home', { f: 'call', number_to_call: target })); }
   function openSMS(target = '') { options.openPage(legacySelector('sms', 'home', { f: 'sms', to_number: target })); }
@@ -167,7 +168,7 @@ export function useRosterActions(session: Mig33Session, options: RosterActionsOp
       { name: 'username', label: 'mig33 Username', readOnly: true },
       { name: 'mobile', label: 'Mobile Number', keyboard: 'phone-pad', limit: 320 },
     ], values: { display: contact.display, username: contact.username, mobile: contact.packet.text(8) ?? '' },
-    submitLabel: 'Update', submit: (values) => session.updateContact(contact.id, { display: values.display.trim(), mobile: values.mobile.trim() }) });
+    submitLabel: modern ? 'Save' : 'Update', submit: (values) => session.updateContact(contact.id, { display: values.display.trim(), mobile: values.mobile.trim() }) });
   }
   function moveContact(contact: Contact) {
     begin({ title: 'Move Contact To', fields: [], values: {}, groupId: contact.groupId, submitLabel: 'Move',
@@ -176,12 +177,14 @@ export function useRosterActions(session: Mig33Session, options: RosterActionsOp
   function settingsItems(): V4MenuItem[] {
     const page = (id: string, label: string, action: string): V4MenuItem => ({ id, label, testID: `roster.settings.${id}`,
       onPress: () => options.openPage(legacySelector('settings', action)) });
+    const privacy: V4MenuItem[] = [
+      page('profile', 'Profile', 'profile_privacy_settings'), page('updates', 'My Updates', 'view_update_settings'),
+      page('calls', 'Call by Name', 'call_by_name'), page('chat', 'Private Chat', 'chat_privacy'), page('blocks', 'Manage Block List', 'block_list'),
+    ];
     return [
       page('password', 'Change Password', 'change_password'), page('tabs', 'Tab Order', 'change_tab_order'),
-      { id: 'privacy', label: 'Privacy', icon: 'arrowRight', testID: 'roster.settings.privacy', onPress: () => options.showMenu({ title: 'Privacy', items: [
-        page('profile', 'Profile', 'profile_privacy_settings'), page('updates', 'My Updates', 'view_update_settings'),
-        page('calls', 'Call by Name', 'call_by_name'), page('chat', 'Private Chat', 'chat_privacy'), page('blocks', 'Manage Block List', 'block_list'),
-      ] }) },
+      { id: 'privacy', label: 'Privacy', icon: 'arrowRight', testID: 'roster.settings.privacy', children: modern ? privacy : undefined,
+        onPress: () => options.showMenu({ title: 'Privacy', items: privacy }) },
       page('mobile', 'Change Mobile #', 'change_mobile'),
     ];
   }
@@ -191,7 +194,7 @@ export function useRosterActions(session: Mig33Session, options: RosterActionsOp
       { id: 'contact-move', label: 'Move Contact To', icon: 'arrowRight', testID: 'roster.contact.move', onPress: () => moveContact(contact) },
       { id: 'contact-name', label: 'Change Display Name', testID: 'roster.contact.rename', onPress: () => begin({
         title: 'Change Display Name', fields: [{ name: 'display', label: 'Display Name', required: true, limit: 320 }],
-        values: { display: contact.display }, submitLabel: 'Continue',
+        values: { display: contact.display }, submitLabel: modern ? 'Save' : 'Continue',
         submit: (values) => session.updateContact(contact.id, { display: values.display.trim() }),
       }) },
       { id: 'contact-delete', label: v3 ? 'Delete Contact' : 'Delete Friend', testID: 'roster.contact.delete', onPress: () => options.confirm({
@@ -206,7 +209,7 @@ export function useRosterActions(session: Mig33Session, options: RosterActionsOp
     const items: V4MenuItem[] = [
       { id: 'group-rename', label: 'Rename', testID: 'roster.group.rename', onPress: () => begin({
         title: 'Rename Group', fields: [{ name: 'name', label: 'New Group Name', required: true, limit: 320 }],
-        values: { name: group.name }, submitLabel: 'Continue', submit: (values) => session.renameContactGroup(group.id, values.name.trim()),
+        values: { name: group.name }, submitLabel: modern ? 'Save' : 'Continue', submit: (values) => session.renameContactGroup(group.id, values.name.trim()),
       }) },
       { id: 'group-create', label: 'Create Contact Group', testID: 'roster.group.create', onPress: () => createContactGroup() },
       { id: 'group-delete', label: 'Delete', disabled: nonempty, testID: 'roster.group.delete', onPress: () => options.confirm({
@@ -217,19 +220,24 @@ export function useRosterActions(session: Mig33Session, options: RosterActionsOp
     return options.extendMenu?.(items, 5, { groupId: group.id }) ?? items;
   }
   function friendsItems(): V4MenuItem[] {
+    const add: V4MenuItem[] = [
+      { id: 'username', label: 'By Username', testID: 'roster.add.username', onPress: addFriend },
+      { id: 'phone', label: 'By Phone Number', testID: 'roster.add.phone', onPress: openInviteToMig33 },
+    ];
+    const contactGroups = (): V4MenuItem[] => [
+      ...latestSession.current.groups.map((group): V4MenuItem => ({ id: `group:${group.id}`, label: group.name,
+        testID: `roster.group.${group.id}`, icon: 'arrowRight', children: modern ? groupItems(group) : undefined,
+        onPress: () => options.showMenu({ title: group.name, items: groupItems(group) }),
+      })),
+      { id: 'create', label: 'Create Contact Group', testID: 'roster.group.create', onPress: () => createContactGroup() },
+    ];
     return [
-      { id: 'add', label: 'Add Friends', testID: 'roster.add', icon: 'arrowRight', onPress: () => options.showMenu({ title: 'Add Friends', items: [
-        { id: 'username', label: 'By Username', testID: 'roster.add.username', onPress: addFriend },
-        { id: 'phone', label: 'By Phone Number', testID: 'roster.add.phone', onPress: openInviteToMig33 },
-      ] }) },
+      { id: 'add', label: 'Add Friends', testID: 'roster.add', icon: 'arrowRight', children: modern ? add : undefined,
+        onPress: () => options.showMenu({ title: 'Add Friends', items: add }) },
       { id: 'create-contact-group', label: 'Create Contact Group', testID: 'roster.group.create', onPress: () => createContactGroup() },
-      { id: 'contact-groups', label: 'Contact Groups', icon: 'arrowRight', testID: 'roster.groups', onPress: () => options.showMenu({ title: 'Contact Groups', items: [
-        ...latestSession.current.groups.map((group): V4MenuItem => ({ id: `group:${group.id}`, label: group.name,
-          testID: `roster.group.${group.id}`, icon: 'arrowRight',
-          onPress: () => options.showMenu({ title: group.name, items: groupItems(group) }),
-        })),
-        { id: 'create', label: 'Create Contact Group', testID: 'roster.group.create', onPress: () => createContactGroup() },
-      ] }) },
+      { id: 'contact-groups', label: 'Contact Groups', icon: 'arrowRight', testID: 'roster.groups',
+        children: modern ? contactGroups() : undefined,
+        onPress: () => options.showMenu({ title: 'Contact Groups', items: contactGroups() }) },
       { id: 'refresh', label: 'Refresh Contact List', testID: 'roster.refresh', disabled: session.syncing,
         onPress: () => { void session.syncContacts(); } },
     ];
@@ -239,17 +247,26 @@ export function useRosterActions(session: Mig33Session, options: RosterActionsOp
       { value: 1, label: 'Online', icon: 'online' }, { value: 4, label: 'Away', icon: 'away' },
       { value: 3, label: 'Busy', icon: 'busy' }, { value: 99, label: 'Appear Offline', icon: 'offline' },
     ];
+    const presenceItems = (): V4MenuItem[] => presence.map((item) => {
+      const selected = latestSession.current.presence === item.value;
+      const choose = () => { if (!latestSession.current.roomAction) void session.setPresence(item.value); };
+      return { id: String(item.value), label: `${item.label}${!modern && selected ? ' *' : ''}`,
+        icon: modern && selected ? 'check' : item.icon, testID: `roster.presence.${item.value}`,
+        disabled: !!latestSession.current.roomAction, onPress: choose,
+        ...(modern && { checked: selected, onCheckedChange: (checked: boolean) => { if (checked) choose(); } }),
+      };
+    });
+    const settings = (): V4MenuItem[] => {
+      const items = settingsItems();
+      return options.extendMenu?.(items, 6) ?? items;
+    };
     return [
-      { id: 'self-status', label: 'Update Status Msg', testID: 'roster.status', onPress: openStatus },
-      { id: 'presence', label: 'Set Presence', icon: 'arrowRight', testID: 'roster.presence', onPress: () => options.showMenu({ title: 'Set Presence',
-        items: presence.map((item) => ({ id: String(item.value), label: `${item.label}${session.presence === item.value ? ' *' : ''}`,
-          icon: item.icon, testID: `roster.presence.${item.value}`, disabled: !!session.roomAction,
-          onPress: () => { void session.setPresence(item.value); },
-        })),
-      }) },
+      { id: 'self-status', label: modern ? 'Update Status' : 'Update Status Msg', testID: 'roster.status', onPress: openStatus },
+      { id: 'presence', label: 'Set Presence', icon: 'arrowRight', testID: 'roster.presence', children: modern ? presenceItems() : undefined,
+        onPress: () => options.showMenu({ title: 'Set Presence', items: presenceItems() }) },
       { id: 'create-contact-group', label: 'Create Contact Group', testID: 'roster.group.create', onPress: () => createContactGroup() },
       { id: 'settings', label: 'Settings', icon: 'arrowRight', testID: 'roster.settings',
-        onPress: () => { const items = settingsItems(); options.showMenu({ title: 'Settings', items: options.extendMenu?.(items, 6) ?? items }); } },
+        children: modern ? settings() : undefined, onPress: () => options.showMenu({ title: 'Settings', items: settings() }) },
     ];
   }
 

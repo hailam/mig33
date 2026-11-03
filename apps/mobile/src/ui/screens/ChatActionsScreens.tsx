@@ -1,9 +1,9 @@
 import React, { useMemo, useState, type ReactNode } from 'react';
-import { ActivityIndicator, Image, Modal, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, View, useWindowDimensions } from 'react-native';
+import { ActivityIndicator, Image, Modal, Pressable, RefreshControl, SafeAreaView, ScrollView, StyleSheet, Text, View, useWindowDimensions } from 'react-native';
 import type { Contact } from '../../mig33/client';
 import { useAppearance } from '../appearance';
 import { MotionEntrance, MotionPressable } from '../motion';
-import { isAvailable } from '../session/model';
+import { inviteContacts, presenceLabel } from '../session/model';
 import { V4Avatar, V4Button, V4Field, V4Icon } from '../v4/primitives';
 import { v4Gradient } from '../v4/theme';
 import { v3Colors } from '../v3/theme';
@@ -32,19 +32,25 @@ export interface ParticipantPickerScreenProps {
  */
 export function ParticipantPickerScreen({ title, context, participants, username, loading, disabledUsernames = [],
   allowSelf = false, mutedAnnotation = '(Muted)', onSelect, onOptions, renderParticipantOptions, onRefresh, embedded = false }: ParticipantPickerScreenProps) {
-  const { modern, v3, theme } = useAppearance();
+  const { modern, v3, theme, navigationInset } = useAppearance();
   const styles = useStyles();
   const Row = modern ? MotionPressable : Pressable;
   const disabled = new Set(disabledUsernames.map((name) => name.toLowerCase()));
+  const refresh = onRefresh ? () => { if (!loading) onRefresh(); } : undefined;
   return <ScrollView testID="participant.picker" style={[styles.body, v3 && !embedded && styles.v3Frame]}
-    contentContainerStyle={[styles.content, embedded && styles.embeddedContent]} keyboardShouldPersistTaps="handled">
-    {modern && !embedded && <ScreenHeading title={title} subtitle={context} />}
+    contentContainerStyle={[styles.content, embedded && styles.embeddedContent]} keyboardShouldPersistTaps="handled"
+    alwaysBounceVertical={modern && !embedded || undefined}
+    refreshControl={modern && !embedded && refresh ? <RefreshControl testID="participant.pull-refresh"
+      refreshing={loading} accessibilityLabel="Refresh participants" tintColor={theme.link} colors={[theme.link]}
+      progressViewOffset={navigationInset} onRefresh={refresh} /> : undefined}>
+    {modern && !embedded && <ScreenHeading testID="participant.heading" title={title} subtitle={context}
+      refreshAction={refresh ? { label: 'Refresh participants', busy: loading, onRefresh: refresh } : undefined} />}
     {onRefresh && <View style={styles.summary}><Text style={styles.hint}>{loading ? 'Loading participants…' :
       `${participants.length} ${participants.length === 1 ? 'participant' : 'participants'}`}</Text>
-      <V4Button testID="participant.refresh" variant={modern ? 'secondary' : undefined}
+      {(!modern || embedded) && <V4Button testID="participant.refresh" variant={modern ? 'secondary' : undefined}
         systemImage={modern ? 'arrow.clockwise' : undefined} iconOnly={modern}
         label="Refresh" accessibilityLabel={modern ? 'Refresh participants' : undefined} busy={loading} onPress={onRefresh}
-        style={modern ? { width: 48, height: 48 } : undefined} /></View>}
+        style={modern ? { width: 48, height: 48 } : undefined} />}</View>}
     <View style={styles.list}>
       {participants.map((participant) => {
         const own = participant.username.toLowerCase() === username.toLowerCase();
@@ -95,8 +101,7 @@ export function InviteChatScreen({ contacts, excludedUsernames, busy, onInvite, 
   const [validation, setValidation] = useState('');
   const Row = modern ? MotionPressable : Pressable;
   const excluded = new Set(excludedUsernames.map((name) => name.toLowerCase()));
-  const available = [...new Map(contacts.filter((contact) => contact.username && isAvailable(contact.presence)
-    && !excluded.has(contact.username.toLowerCase())).map((contact) => [contact.username.toLowerCase(), contact])).values()];
+  const available = inviteContacts(contacts, excludedUsernames, modern);
   function invite() {
     const name = username.trim().toLowerCase();
     if (!name) return;
@@ -106,29 +111,31 @@ export function InviteChatScreen({ contacts, excludedUsernames, busy, onInvite, 
   return <ScrollView testID="invite.screen" style={[styles.body, v3 && styles.v3Frame]} contentContainerStyle={styles.content}
     keyboardShouldPersistTaps="handled" keyboardDismissMode="on-drag">
     {modern && <ScreenHeading title="Add to chat" subtitle={context} />}
-    {/* The recovered Classic picker offers online friends. Modern also exposes
-        the existing native request's registered-username capability. */}
+    {/* Classic offers online friends. Modern includes native offline contacts,
+        using the same registered-username request and server validation. */}
     {modern && <View style={styles.inviteForm}>
       <V4Field testID="invite.username" label="Username" value={username} onChangeText={(text) => { setUsername(text); setValidation(''); }}
         autoCapitalize="none" autoCorrect={false} editable={!busy} returnKeyType="go" onSubmitEditing={invite} />
       {validation !== '' && <Text accessibilityLiveRegion="polite" style={styles.validation}>{validation}</Text>}
       <V4Button testID="invite.submit" label="Invite" busy={busy} disabled={!username.trim()} onPress={invite} />
     </View>}
-    <Text accessibilityRole="header" style={styles.sectionTitle}>{modern ? 'ONLINE FRIENDS' : 'Invite User'}</Text>
+    <Text accessibilityRole="header" style={styles.sectionTitle}>{modern ? 'FRIENDS' : 'Invite User'}</Text>
     <View style={styles.list}>{available.map((contact) => <Row key={contact.username}
       testID={`invite.contact.${contact.username}`} accessibilityRole="button" accessibilityState={{ disabled: busy }} disabled={busy}
-      accessibilityLabel={`Invite ${contact.display || contact.username}`} onPress={() => onInvite(contact.username)}
+      accessibilityLabel={`Invite ${contact.display || contact.username}${modern ? `, ${presenceLabel(contact.presence)}` : ''}`} onPress={() => onInvite(contact.username)}
       style={({ pressed }) => [styles.row, styles.rowLine, pressed && !v3 && styles.pressed]}>
       {({ pressed }) => <>
-        {modern ? <V4Avatar size={42} label={contact.display || contact.username} /> : <V4Icon name="online" size={v3 ? 16 : 20} />}
+        {modern ? <V4Avatar size={42} label={contact.display || contact.username} presence={contact.presence} /> : <V4Icon name="online" size={v3 ? 16 : 20} />}
         <View style={styles.identity}><Text style={[styles.name, pressed && (v3 ? styles.v3Selected : styles.selectedText)]} numberOfLines={1}>
           {contact.display || contact.username}</Text>
-          {modern && <Text style={styles.detail}>@{contact.username}</Text>}
+          {modern && <Text style={styles.detail}>@{contact.username} · {presenceLabel(contact.presence)}</Text>}
         </View>
         {modern && <V4Icon name="plus" size={16} />}
       </>}
     </Row>)}</View>
-    {available.length === 0 && <Text style={styles.emptyText}>None of your contacts are online and available to invite.</Text>}
+    {available.length === 0 && <Text style={styles.emptyText}>{modern
+      ? 'No other friends to invite. Enter a username above.'
+      : 'None of your contacts are online and available to invite.'}</Text>}
   </ScrollView>;
 }
 
@@ -170,6 +177,8 @@ export function TextColorPicker({ colors, selected, onSelect }: {
   const { fontScale } = useWindowDimensions();
   const styles = useStyles();
   const palette = [...new Set(colors.filter((value) => Number.isInteger(value) && value >= 0 && value <= 0xffffff))];
+  const names: Record<number, string> = { 0: 'Black', 16711680: 'Red', 32768: 'Green', 255: 'Blue',
+    8388736: 'Purple', 16744192: 'Orange', 3368601: 'Steel blue', 10040064: 'Brown', 8421504: 'Gray' };
   return <ScrollView testID="composer.colors" contentContainerStyle={styles.grid}>
     <MotionPressable testID="composer.color.default" accessibilityRole="button" accessibilityLabel="Default text color"
       accessibilityState={{ selected: selected === undefined || selected < 0 }} onPress={() => onSelect(-1)}
@@ -180,11 +189,12 @@ export function TextColorPicker({ colors, selected, onSelect }: {
     </MotionPressable>
     {palette.map((value) => {
       const hex = `#${value.toString(16).padStart(6, '0')}`;
+      const label = modern ? names[value] ?? hex.toUpperCase() : hex.toUpperCase();
       return <MotionPressable key={value} testID={`composer.color.${value}`} accessibilityRole="button"
-        accessibilityLabel={`Text color ${hex}`} accessibilityState={{ selected: selected === value }} onPress={() => onSelect(value)}
+        accessibilityLabel={`Text color ${modern ? label : hex}`} accessibilityState={{ selected: selected === value }} onPress={() => onSelect(value)}
         style={({ pressed }) => [styles.colorCell, modern && fontScale > 1.3 && { width: 132 }, (pressed || selected === value) && styles.colorSelected]}>
         <View style={[styles.colorSwatch, { backgroundColor: hex }]} />
-        <Text style={styles.colorLabel}>{hex.toUpperCase()}</Text>
+        <Text style={styles.colorLabel}>{label}</Text>
         {selected === value && <View style={styles.colorCheck}><V4Icon name="check" size={12} color={theme.link} /></View>}
       </MotionPressable>;
     })}
@@ -230,11 +240,21 @@ function OptionsButton({ testID, username, disabled, onPress }: {
   </MotionPressable>;
 }
 
-export function ScreenHeading({ title, subtitle, action }: { title: string; subtitle?: string; action?: ReactNode }) {
+export function ScreenHeading({ title, subtitle, action, testID, refreshAction }: {
+  title: string; subtitle?: string; action?: ReactNode; testID?: string;
+  refreshAction?: { label: string; busy: boolean; disabled?: boolean; onRefresh: () => void };
+}) {
   const styles = useStyles();
   const { fontScale } = useWindowDimensions();
   return <View style={[styles.heading, !!action && styles.headingWithAction, !!action && fontScale > 1.3 && styles.headingStacked]}>
-    <View style={[styles.headingCopy, !!action && fontScale <= 1.3 && { flex: 1 }]}><Text accessibilityRole="header" style={styles.headingTitle}>{title}</Text>
+    <View style={[styles.headingCopy, !!action && fontScale <= 1.3 && { flex: 1 }]}><Text testID={testID} accessibilityRole="header"
+      accessibilityState={refreshAction ? { busy: refreshAction.busy } : undefined}
+      accessibilityValue={refreshAction?.busy ? { text: 'Refreshing' } : undefined}
+      accessibilityActions={refreshAction && !refreshAction.busy && !refreshAction.disabled
+        ? [{ name: 'refresh', label: refreshAction.label }] : undefined}
+      onAccessibilityAction={(event) => {
+        if (event.nativeEvent.actionName === 'refresh' && refreshAction && !refreshAction.busy && !refreshAction.disabled) refreshAction.onRefresh();
+      }} style={styles.headingTitle}>{title}</Text>
       {subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}</View>
     {action && <View style={styles.headingAction}>{action}</View>}
   </View>;

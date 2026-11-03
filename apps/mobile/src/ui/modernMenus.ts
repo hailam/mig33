@@ -1,5 +1,13 @@
 import type { V4MenuItem } from './v4/primitives';
 
+/** Modern lists expose pull to refresh and an accessible heading action.
+ * Apply to built-in entries before adding the server's menu items;
+ * page refresh and category continuation commands have different behavior. */
+export function modernListItems(items: readonly V4MenuItem[], list: 'friends' | 'rooms'): V4MenuItem[] {
+  const duplicateLabel = list === 'friends' ? 'Refresh Contact List' : 'Refresh Rooms';
+  return items.filter((item) => item.id !== 'refresh' || item.label !== duplicateLabel);
+}
+
 /** Organize the original actions without changing their handlers, rights or
  * server-supplied additions. Unknown additions remain available under More. */
 export function modernChatItems(items: readonly V4MenuItem[], kind: 'private' | 'room' | 'group',

@@ -1,10 +1,11 @@
 import React, { useMemo, type ReactNode } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Pressable, RefreshControl, ScrollView, StyleSheet, Text, View } from 'react-native';
 import type { Contact, ContactGroup } from '../../mig33/client';
 import { contactSections, isAvailable, presenceLabel } from '../session/model';
 import { useAppearance } from '../appearance';
 import { MotionPressable } from '../motion';
-import { V4Avatar, V4Icon, V4Logo, type V4IconName } from '../v4/primitives';
+import { ModernMotionItem } from '../ModernMotion';
+import { V4Avatar, V4Button, V4Icon, V4Logo, type V4IconName } from '../v4/primitives';
 import { v4Gradient } from '../v4/theme';
 import { v3Colors } from '../v3/theme';
 import { ScreenHeading } from './ChatActionsScreens';
@@ -14,15 +15,18 @@ function presenceIcon(presence: number): V4IconName {
 }
 
 export function FriendsScreen({ username, presence, ownStatus = '', contacts, groups, hideOffline, selected, onContact, onSelf, onRooms,
-  collapsedGroupIds, onCollapsedGroupIdsChange, renderContactOptions, renderSelfOptions }: {
+  collapsedGroupIds, onCollapsedGroupIdsChange, renderContactOptions, renderSelfOptions, refreshing, onRefresh, onSearch,
+  searchField, searchResults, searching = false }: {
   username: string; presence: number; ownStatus?: string; contacts: readonly Contact[]; groups: readonly ContactGroup[];
   hideOffline: boolean; selected: number | 'self'; onContact: (contact: Contact, menu: boolean) => void;
   onSelf: () => void;
   onRooms: () => void;
   collapsedGroupIds: ReadonlySet<number>; onCollapsedGroupIdsChange: (ids: ReadonlySet<number>) => void;
   renderContactOptions?: (contact: Contact) => ReactNode; renderSelfOptions?: () => ReactNode;
+  refreshing: boolean; onRefresh: () => void; onSearch: () => void;
+  searchField?: ReactNode; searchResults?: ReactNode; searching?: boolean;
 }) {
-  const { modern, v3 } = useAppearance();
+  const { modern, v3, theme, navigationInset } = useAppearance();
   const styles = useStyles();
   const collapsed = collapsedGroupIds;
   const sections = contactSections(groups, contacts);
@@ -68,9 +72,19 @@ export function FriendsScreen({ username, presence, ownStatus = '', contacts, gr
     </ScrollView>
   </View>;
   if (modern) return <ScrollView testID="friends.screen" style={styles.body} contentContainerStyle={styles.content}
-    keyboardShouldPersistTaps="handled" keyboardDismissMode="on-drag">
-    <ScreenHeading title="Friends" subtitle={`${online} online · ${contacts.length} ${contacts.length === 1 ? 'friend' : 'friends'}`} />
-    <View style={styles.modernSelf}>
+    keyboardShouldPersistTaps="handled" keyboardDismissMode="on-drag" alwaysBounceVertical
+    refreshControl={<RefreshControl testID="friends.pull-refresh" refreshing={refreshing}
+      accessibilityLabel={searching ? 'Refresh search results' : 'Refresh friends'} tintColor={theme.link} colors={[theme.link]} progressViewOffset={navigationInset}
+      onRefresh={() => { if (!refreshing) onRefresh(); }} />}>
+    <ModernMotionItem when="arriving" glass distance={22}>
+      <ScreenHeading testID="friends.heading" title="Friends" subtitle={`${online} online · ${contacts.length} ${contacts.length === 1 ? 'friend' : 'friends'}`}
+        refreshAction={{ label: searching ? 'Refresh search results' : 'Refresh friends', busy: refreshing, onRefresh }}
+        action={!searchField && <V4Button testID="friends.search" label="Search" accessibilityLabel="Search new friends"
+          variant="secondary" systemImage="magnifyingglass" iconOnly style={styles.headingIcon} onPress={onSearch} />} />
+    </ModernMotionItem>
+    {searchField}
+    {searching ? searchResults : <>
+    <ModernMotionItem when="arriving" glass order={1} style={styles.modernSelf}>
       <View accessible accessibilityLabel={`${username}, ${presenceLabel(presence)}${ownStatus ? `, ${ownStatus}` : ''}`}
         style={styles.modernSelfIdentity}>
         <V4Avatar presence={presence} label={username} size={42} />
@@ -79,7 +93,7 @@ export function FriendsScreen({ username, presence, ownStatus = '', contacts, gr
       </View>
       <View style={styles.optionsSlot}>{renderSelfOptions ? renderSelfOptions() :
         <ContactOptions label="Your account options" testID="friends.self" onPress={onSelf} />}</View>
-    </View>
+    </ModernMotionItem>
     {sections.map((section) => {
       const visible = section.contacts.filter((contact) => !hideOffline || isAvailable(contact.presence));
       return <View key={section.id} style={styles.section}>
@@ -95,11 +109,11 @@ export function FriendsScreen({ username, presence, ownStatus = '', contacts, gr
           <V4Icon name={collapsed.has(section.id) ? 'arrowRight' : 'arrowDown'} size={12} />
         </MotionPressable>
         {!collapsed.has(section.id) && <View style={styles.modernList}>
-          {visible.map((contact, index) => <View key={contact.id} style={[styles.modernContactLine,
+          {visible.map((contact, index) => <ModernMotionItem when="arriving" glass order={index + 2} key={contact.id} style={[styles.modernContactLine,
             index > 0 && styles.modernSeparator, selected === contact.id && styles.contactPressed]}>
             <MotionPressable testID={`friends.contact.${contact.username}`} accessibilityRole="button"
               accessibilityLabel={`${contact.display || contact.username}, ${presenceLabel(contact.presence)}${contact.status ? `, ${contact.status}` : ''}`}
-              accessibilityHint={isAvailable(contact.presence) ? 'Open conversation. Contact options are also available.' : 'Open contact options.'}
+              accessibilityHint={contact.username ? 'Open conversation. Contact options are also available.' : 'Open contact options.'}
               accessibilityState={{ selected: selected === contact.id }}
               accessibilityActions={[{ name: 'showOptions', label: 'Contact options' }]}
               onAccessibilityAction={(event) => { if (event.nativeEvent.actionName === 'showOptions') onContact(contact, true); }}
@@ -113,12 +127,13 @@ export function FriendsScreen({ username, presence, ownStatus = '', contacts, gr
             <View style={styles.optionsSlot}>{renderContactOptions ? renderContactOptions(contact) :
               <ContactOptions label={`Options for ${contact.display || contact.username}`} testID={`friends.options.${contact.username}`}
                 onPress={() => onContact(contact, true)} />}</View>
-          </View>)}
+          </ModernMotionItem>)}
           {visible.length === 0 && <Text style={styles.empty}>{hideOffline && section.contacts.length > 0 ? 'No friends online' : 'No friends in this group'}</Text>}
         </View>}
       </View>;
     })}
-    {sections.length === 0 && <Text style={styles.empty}>No friends yet. Add someone from the menu to start a conversation.</Text>}
+    {sections.length === 0 && <Text style={styles.empty}>No friends yet. Search for someone to start a conversation.</Text>}
+    </>}
   </ScrollView>;
   return <ScrollView testID="friends.screen" style={styles.body} contentContainerStyle={styles.content}
     keyboardShouldPersistTaps="handled" keyboardDismissMode="on-drag">
@@ -217,6 +232,7 @@ function useStyles() {
   headingTitle: { color: v4.text, fontSize: 38, lineHeight: 45, fontWeight: '700', letterSpacing: -1.3 },
   headingAccent: { width: 7, height: 7, borderRadius: 4, backgroundColor: v4.focus },
   headingSubtitle: { color: v4.secondaryText, fontSize: 14, marginTop: 7 },
+  headingIcon: { width: 48, height: 48 },
   self: { flexDirection: 'row', alignItems: 'center', gap: modern ? 12 : 7, minHeight: modern ? 68 : 62, padding: modern ? 0 : 5,
     borderTopWidth: modern ? 0 : 3, borderTopColor: v4.border, borderBottomWidth: modern ? 0 : 1, borderBottomColor: v4.groupBorder,
     backgroundColor: modern ? 'transparent' : v4.selected, backgroundImage: modern ? undefined : v4Gradient(v4.selfTop, v4.selfBottom),

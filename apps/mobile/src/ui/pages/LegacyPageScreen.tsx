@@ -1,11 +1,12 @@
 import React, { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
-import { ActivityIndicator, Image, Keyboard, Modal, Pressable, ScrollView, StyleSheet, Text, View, useWindowDimensions, type TextStyle } from 'react-native';
+import { ActivityIndicator, Image, Keyboard, Modal, Pressable, RefreshControl, ScrollView, StyleSheet, Text, View, useWindowDimensions, type TextStyle } from 'react-native';
 import { legacyText, type LegacyControl, type LegacyForm, type LegacyNode, type LegacyValues } from '../../mig33/legacy-pages';
 import { useAppearance } from '../appearance';
 import { V4Button, V4Checkbox, V4ChoiceGroup, V4Field, V4Link, V4Menu } from '../v4/primitives';
 import { supportsNativePresentation } from '../NativePresentation';
 import type { LegacyBrowser } from './useLegacyPages';
 import { pageBaseColors, pageNodeColors, type PageColors } from './pageColors';
+import { canPullRefreshLegacyPage, legacySearchForm } from './pageActions';
 
 const inlineTags = new Set(['b', 'strong', 'i', 'em', 'u', 'span', 'font', 'big', 'small', 'a', 'br', '#text']);
 function color(value: string | undefined): string | undefined {
@@ -153,6 +154,8 @@ export function LegacyPageScreen({ browser, onViewPhoto }: { browser: LegacyBrow
   useEffect(() => { setDrafts({}); }, [browser.open]);
   useEffect(() => { if (!page) setDrafts({}); }, [page]);
   const values: LegacyValues = page ? drafts[page.id] ?? {} : {};
+  const pullRefresh = modern && canPullRefreshLegacyPage(page);
+  function refreshPage() { if (pullRefresh && !browser.loading) void browser.refresh(); }
   const baseColors = pageBaseColors(theme);
   const bodyColors = page ? pageNodeColors(page.body.attributes, baseColors, theme, { body: true }) : baseColors;
   const styles = useMemo(() => StyleSheet.create({
@@ -165,6 +168,7 @@ export function LegacyPageScreen({ browser, onViewPhoto }: { browser: LegacyBrow
       backgroundColor: modern ? theme.dialogBody : theme.body, borderWidth: StyleSheet.hairlineWidth, borderColor: theme.groupBorder },
     link: { color: theme.link, textDecorationLine: 'underline' },
     button: { alignSelf: 'flex-start', marginVertical: 8 },
+    iconButton: { width: 48, height: 48 },
     progress: { padding: 14, flexDirection: 'row', gap: 12, alignItems: 'center' },
     error: { padding: 12, color: theme.text, fontSize: metrics.font },
     rule: { height: StyleSheet.hairlineWidth, backgroundColor: theme.groupBorder, marginVertical: 12 },
@@ -184,9 +188,11 @@ export function LegacyPageScreen({ browser, onViewPhoto }: { browser: LegacyBrow
   }
   function renderControl(control: LegacyControl, form: LegacyForm): ReactNode {
     const disabled = control.disabled || browser.loading;
+    const search = modern && page ? legacySearchForm(form, page.url) : undefined;
     if (control.kind === 'hidden') return null;
     if (control.kind === 'submit') return <V4Button key={control.id} testID={`page.submit.${form.id}.${control.id}`}
-      label={control.value || 'Continue'} disabled={disabled} style={styles.button}
+      label={control.value || 'Continue'} disabled={disabled} style={[styles.button, search && styles.iconButton]}
+      accessibilityLabel={search?.label} systemImage={search ? 'magnifyingglass' : undefined} iconOnly={!!search}
       onPress={() => { Keyboard.dismiss(); void browser.submit(form, values, control.id); }} />;
     if (control.kind === 'file') return <V4Button key={control.id} label="Choose Photo" variant="secondary" disabled={disabled}
       onPress={() => { void browser.follow('mig33:uploadPhotoToScrapbook()'); }} />;
@@ -221,10 +227,13 @@ export function LegacyPageScreen({ browser, onViewPhoto }: { browser: LegacyBrow
       value={String(values[control.id] ?? control.value)} disabled={disabled} onChange={(value) => change(control, value, form)} />;
     if (['button', 'reset'].includes(control.kind)) return null;
     return <V4Field key={control.id} testID={`page.field.${control.name}`} accessibilityLabel={control.label}
+      variant={search?.inputId === control.id ? 'search' : 'form'}
       value={String(values[control.id] ?? control.value)} editable={!disabled}
       onChangeText={(value) => change(control, value, form)} multiline={control.kind === 'textarea'}
       secureTextEntry={control.kind === 'password'} autoCapitalize="none" autoCorrect={control.kind === 'textarea'}
       maxLength={control.maxLength} keyboardType={control.kind === 'number' ? 'numeric' : control.kind === 'email' ? 'email-address' : 'default'}
+      {...(search?.inputId === control.id && { returnKeyType: 'search' as const, submitBehavior: 'submit' as const,
+        onSubmitEditing: () => { if (!disabled) { Keyboard.dismiss(); void browser.submit(form, values, search.submitId); } } })}
       style={control.kind === 'textarea' ? { minHeight: 100, textAlignVertical: 'top' } : undefined} />;
   }
   function paintedText(node: LegacyNode, colors: PageColors): TextStyle {
@@ -283,12 +292,23 @@ export function LegacyPageScreen({ browser, onViewPhoto }: { browser: LegacyBrow
     return <View key={node.id} style={modern && { backgroundColor: colors.localBackground }}>{node.children.map((child) => render(child, form, colors))}</View>;
   }
   return <ScrollView testID="page.screen" style={styles.screen} contentContainerStyle={styles.content}
-    keyboardShouldPersistTaps="handled" keyboardDismissMode="on-drag">
+    keyboardShouldPersistTaps="handled" keyboardDismissMode="on-drag" alwaysBounceVertical={pullRefresh || undefined}
+    refreshControl={pullRefresh ? <RefreshControl testID="page.pull-refresh" refreshing={browser.loading}
+      accessibilityLabel="Refresh page" tintColor={theme.link} colors={[theme.link]} progressViewOffset={navigationInset}
+      onRefresh={refreshPage} /> : undefined}>
     {browser.error !== '' && <Text testID="page.error" accessibilityRole="alert" style={styles.error}>{browser.error}</Text>}
-    {browser.error !== '' && <V4Button label="Reload Page" variant="secondary" onPress={() => { void browser.refresh(); }} disabled={browser.loading} />}
+    {browser.error !== '' && <V4Button testID="page.reload" label="Reload Page" variant="secondary"
+      accessibilityLabel={modern ? 'Reload page' : undefined} systemImage={modern ? 'arrow.clockwise' : undefined}
+      iconOnly={modern} style={modern ? styles.iconButton : undefined}
+      onPress={() => { void browser.refresh(); }} disabled={browser.loading} />}
     {browser.loading && <View style={styles.progress}><ActivityIndicator color={theme.link} /><Text style={styles.text}>Loading…</Text></View>}
     {page && <View key={page.id} style={{ backgroundColor: modern ? bodyColors.background : color(page.body.attributes.bgcolor) }}>
-      {modern && <Text accessibilityRole="header" style={[styles.title, { color: bodyColors.foreground }]}>{page.title}</Text>}
+      {modern && <Text testID="page.heading" accessibilityRole="header"
+        accessibilityState={pullRefresh ? { busy: browser.loading } : undefined}
+        accessibilityValue={pullRefresh && browser.loading ? { text: 'Refreshing' } : undefined}
+        accessibilityActions={pullRefresh && !browser.loading ? [{ name: 'refresh', label: 'Refresh page' }] : undefined}
+        onAccessibilityAction={(event) => { if (event.nativeEvent.actionName === 'refresh') refreshPage(); }}
+        style={[styles.title, { color: bodyColors.foreground }]}>{page.title}</Text>}
       {render(page.body)}
     </View>}
   </ScrollView>;
